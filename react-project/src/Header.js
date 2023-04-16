@@ -11,27 +11,27 @@ const Header = () => {
             <div className="nav">
                 <ul className='ul'>
                     <li className='li'>
-                    <Link  to="/section">بخش ها</Link>
+                    <Link className='link_nav' to="/section">بخش ها</Link>
                     </li>
                     <hr className='vl'/>
                     <li className='li'>
-                    <Link   to="/grades">صنف ها</Link>
+                    <Link className='link_nav'  to="/grades">صنف ها</Link>
                     </li>
                     <hr className='vl'/>
                     <li className='li'>
-                    <Link   to="/books">کتاب ها</Link>
+                    <Link className='link_nav'  to="/books">کتاب ها</Link>
                     </li>
                     <hr className='vl'/>
                     <li className='li'>
-                    <Link  to="/continue">ادامه</Link>
+                    <Link className='link_nav' to="/continue">ادامه</Link>
                     </li>
                     <hr className='vl'/>
                     <li className='li'>
-                    <Link   to="/about">درباره ما</Link>
+                    <Link  className='link_nav' to="/about">درباره ما</Link>
                     </li>
                     <hr className='vl'/>
                     <li className='li'>
-                    <Link cl  to="/contact">نظریات</Link> 
+                    <Link className='link_nav'  to="/contact">نظریات</Link> 
                     </li>
                     <hr className='vi'/>
                     <div className='contact'>
@@ -40,14 +40,14 @@ const Header = () => {
                     </ul>
                     
                     <button className='button'>
-                    <Link   to="/dari">زبان دری</Link> 
+                    <Link  className='link_nav' to="/dari">زبان دری</Link> 
                     </button> 
                     <button className='button'>
-                    <Link  to="/pashto">پښتو ژبه</Link> 
+                    <Link className='link_nav' to="/pashto">پښتو ژبه</Link> 
                     </button>
                 
                     <div className='icon'>
-                     <FaUser/>
+                    <Link  className='link_nav' to=""><FaUser/></Link>
                     </div>
                  
             </div>

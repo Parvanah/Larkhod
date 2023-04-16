@@ -31,19 +31,19 @@ function TenthGrade() {
         <Link   to="./historyi_ten">تاریخ</Link>
         </li>
         <li>
-        <Link  to="./biologyi_ten">(حنفی)تعلیم و تربیت اسلامی</Link>
+        <Link  to="./islamichanafi_ten">(حنفی)تعلیم و تربیت اسلامی</Link>
         </li>
         <li>
-        <Link   to="./islamichanafi_ten">(جعفری)تعلیم و تربیت اسلام</Link>
+        <Link   to="./islamicjafari_ten">(جعفری)تعلیم و تربیت اسلام</Link>
         </li>
         <li>
-        <Link   to="./islamicjafari_ten">ریاضی</Link>
+        <Link   to="./math_ten">ریاضی</Link>
         </li>
         <li>
-        <Link  to="./math_ten">فزیک</Link>
+        <Link  to="./physic_ten">فزیک</Link>
         </li>
         <li>
-        <Link   to="./pashto_ten">تفسیر</Link>
+        <Link   to="./tafseer_ten">تفسیر</Link>
         </li>
         <li>
         <Link   to="./dari_ten">دری</Link>

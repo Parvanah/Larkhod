@@ -27,25 +27,25 @@ const TwelfthGrade = () => {
         <Link   to="./historyi_twelve">تاریخ</Link>
         </li>
         <li>
-        <Link  to="./biologyi_twelve">(حنفی)تعلیم و تربیت اسلامی</Link>
+        <Link  to="./islamichanafi_twelve">(حنفی)تعلیم و تربیت اسلامی</Link>
         </li>
         <li>
-        <Link   to="./islamichanafi_twelve">(جعفری)تعلیم و تربیت اسلام</Link>
+        <Link   to="./islamicjafari_twelve">(جعفری)تعلیم و تربیت اسلام</Link>
         </li>
         <li>
-        <Link   to="./islamicjafari_twelve">ریاضی</Link>
+        <Link   to="./math_twelve">ریاضی</Link>
         </li>
         <li>
-        <Link  to="./math_twelve">فزیک</Link>
+        <Link  to="./physic_twelve">فزیک</Link>
         </li>
         <li>
-        <Link   to="./pashto_twelve">تفسیر</Link>
+        <Link   to="./tafseer_twelve">تفسیر</Link>
         </li>
         <li>
         <Link   to="./dari_twelve">دری</Link>
         </li>
         <li>
-        <Link   to="./dari_twelve">پشتو</Link>
+        <Link   to="./pashto_twelve">پشتو</Link>
         </li>
     </ul> 
     </div>

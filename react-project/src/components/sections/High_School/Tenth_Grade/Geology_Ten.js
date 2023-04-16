@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 
-const Geology = () => {
+const Geology_Ten = () => {
   return (
     <div>
     <ul>
@@ -40,4 +40,4 @@ const Geology = () => {
   )
 }
 
-export default Geology
+export default Geology_Ten
