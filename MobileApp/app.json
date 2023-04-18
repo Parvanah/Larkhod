@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "R_Project",
+    "slug": "R_Project",
+    "version": "1.0.0",
+    "orientation": "portriat",
+    "icon": "./App/assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./App/assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./App/assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "favicon": "./App/assets/favicon.png"
+    }
+  }
+}
