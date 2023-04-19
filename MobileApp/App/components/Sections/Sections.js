@@ -9,6 +9,8 @@ import high from "../../assets/high.png";
 import SeatchBar from "../../screens/SearchBar";
 import { useNavigation } from "@react-navigation/native";
 import gradeLogo from "../../assets/Group_211_y.png";
+import classNine from "../grade_9_dari.json";
+import classTwo from "../grade_2_dari.json";
 
 const Sections = () => {
   const navigation = useNavigation();
@@ -32,31 +34,37 @@ const Sections = () => {
                 {
                   grade: "صنف اول",
                   img: require("../../assets/Group_211_y.png"),
+                  subjects: classTwo.dari_curriculum.subjects,
                   id: 1,
                 },
                 {
                   grade: "صنف دوم",
                   img: require("../../assets/Group_211_y.png"),
+                  subjects: classTwo.dari_curriculum.subjects,
                   id: 2,
                 },
                 {
                   grade: "صنف سوم",
                   img: require("../../assets/Group_211_y.png"),
+                  subjects: classTwo.dari_curriculum.subjects,
                   id: 3,
                 },
                 {
                   grade: "صنف چهارم",
                   img: require("../../assets/Group_211_y.png"),
+                  subjects: classTwo.dari_curriculum.subjects,
                   id: 4,
                 },
                 {
                   grade: "صنف پنجم",
                   img: require("../../assets/Group_211_y.png"),
+                  subjects: classTwo.dari_curriculum.subjects,
                   id: 5,
                 },
                 {
                   grade: "صنف ششم",
                   img: require("../../assets/Group_211_y.png"),
+                  subjects: classTwo.dari_curriculum.subjects,
                   id: 6,
                 },
               ],
@@ -74,16 +82,19 @@ const Sections = () => {
                 {
                   grade: "صنف هفتم",
                   img: require("../../assets/Group_211_y.png"),
+                  subjects: classNine.dari_curriculum.subjects,
                   id: 1,
                 },
                 {
                   grade: "صنف هشتم",
                   img: require("../../assets/Group_211_y.png"),
+                  subjects: classNine.dari_curriculum.subjects,
                   id: 2,
                 },
                 {
                   grade: "صنف نهم",
                   img: require("../../assets/Group_211_y.png"),
+                  subjects: classNine.dari_curriculum.subjects,
                   id: 3,
                 },
               ],
@@ -101,17 +112,20 @@ const Sections = () => {
                 {
                   grade: "صنف دهم",
                   img: require("../../assets/Group_211_y.png"),
+                  subjects: classNine.dari_curriculum.subjects,
                   id: 1,
                   subject: [{}, {}, {}],
                 },
                 {
                   grade: "صنف یازدهم",
                   img: require("../../assets/Group_211_y.png"),
+                  subjects: classNine.dari_curriculum.subjects,
                   id: 2,
                 },
                 {
                   grade: "صنف دوازدهم",
                   img: require("../../assets/Group_211_y.png"),
+                  subjects: classNine.dari_curriculum.subjects,
                   id: 3,
                 },
               ],

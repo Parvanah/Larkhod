@@ -27,6 +27,7 @@ const Grades = () => {
         onPress={() =>
           navigation.navigate("Books", {
             grade: item.grade,
+            subjects: item.subjects,
             params: {
               id: item.id,
               name: item.name,
