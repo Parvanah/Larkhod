@@ -1,10 +1,21 @@
-import React from 'react'
-import { Link } from "react-router-dom";
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const Books = () => {
+  const location = useLocation();
+  const locationData = location.state;
+  const subjects = locationData.subjects;
+
   return (
-    <div> 
-     <ul>
+    <div>
+      {subjects.map((item) => {
+        return (
+          <Link to="/unit" state={{ units: item.parts }}>
+            <p>{item.label}</p>
+          </Link>
+        );
+      })}
+      {/* <ul>
     <li>
     <Link  to="./art_first">هنر</Link>
     </li>
@@ -29,9 +40,9 @@ const Books = () => {
     <li>
     <Link   to="./math_first">ریاضی</Link>
     </li>
-</ul> 
-</div>
-  )
-}
+</ul>  */}
+    </div>
+  );
+};
 
-export default Books
+export default Books;
