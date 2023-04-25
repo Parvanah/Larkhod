@@ -16,13 +16,13 @@ const Header = () => {
             </li>
             <hr className="vl" />
             <li className="li">
-              <Link className="link_nav" to="/grades">
+              <Link className="link_nav" to="/grad">
                 صنف ها
               </Link>
             </li>
             <hr className="vl" />
             <li className="li">
-              <Link className="link_nav" to="/books">
+              <Link className="link_nav" to="/book">
                 کتاب ها
               </Link>
             </li>
@@ -60,7 +60,7 @@ const Header = () => {
           </button>
 
           <div className="icon">
-            <Link className="link_nav" to="">
+            <Link className="link_nav" to="profile">
               <FaUser />
             </Link>
           </div>
