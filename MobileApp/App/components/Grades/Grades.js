@@ -49,7 +49,7 @@ const Grades = () => {
         >
           <Image source={arrow} />
         </TouchableOpacity>
-        <Text style={styleSection.userName}>Khatima Sajadi</Text>
+
         <View style={styleSection.imageWrapper}>
           <Image source={user} style={styleSection.img} />
         </View>
