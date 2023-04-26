@@ -9,6 +9,8 @@ import Sections from "./App/components/Sections/Sections";
 import Books from "./App/components/Books/Books";
 import Units from "./App/components/Units/Units";
 import Grades from "./App/components/Grades/Grades";
+import Lessons from "./App/components/Lessons/Lessons";
+import BookPages from "./App/components/BookPages/Bookpages";
 
 const Stack = createNativeStackNavigator();
 const StackNaigator = () => {
@@ -25,6 +27,8 @@ const StackNaigator = () => {
         <Stack.Screen name="Grades" component={Grades} />
         <Stack.Screen name="Books" component={Books} />
         <Stack.Screen name="Units" component={Units} />
+        <Stack.Screen name="Lessons" component={Lessons} />
+        <Stack.Screen name="BookPages" component={BookPages} />
       </Stack.Group>
     </Stack.Navigator>
   );

@@ -121,7 +121,7 @@ const Section = () => {
           </Link>
         </li>
         <li>
-          <Link
+        <Link
             to="/grades"
             state={{
               grades: [
@@ -144,7 +144,7 @@ const Section = () => {
             }}
           >
             بخش لیسه
-          </Link>
+        </Link>
         </li>
       </ul>
     </div>
