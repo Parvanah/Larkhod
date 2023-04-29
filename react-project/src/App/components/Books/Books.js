@@ -1,13 +1,13 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-
-const Books = () => {
+import "./Books.css";
+const Books = (props) => {
   const location = useLocation();
   const locationData = location.state;
   const subjects = locationData.subjects;
-
+  
   return (
-    <div>
+    <div className="books">
       {subjects.map((item) => {
         return (
           <Link to="/unit" state={{ units: item.parts }}>
