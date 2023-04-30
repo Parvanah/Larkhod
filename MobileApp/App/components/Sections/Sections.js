@@ -1,6 +1,12 @@
 import React from "react";
 import { View, Text, Image, TouchableOpacity, TextInput } from "react-native";
-import Svg, { Defs, LinearGradient, Stop, Path } from "react-native-svg";
+import Svg, {
+  Defs,
+  LinearGradient,
+  Stop,
+  Path,
+  ForeignObject,
+} from "react-native-svg";
 
 import user from "../../assets/user.png";
 import styles from "./Section.Style";
@@ -52,7 +58,13 @@ const Sections = (props) => {
               <Image source={user} style={styles.img} />
             </View>
           </View>
-          <View style={styles.circle}>
+          <ForeignObject
+            width={100}
+            height={100}
+            x={170}
+            y={134}
+            style={styles.circle}
+          >
             <Svg
               xmlns="http://www.w3.org/2000/svg"
               width={97.309}
@@ -68,7 +80,7 @@ const Sections = (props) => {
                 opacity={0.25}
               />
             </Svg>
-          </View>
+          </ForeignObject>
           <Svg
             xmlns="http://www.w3.org/2000/svg"
             width={331.258}

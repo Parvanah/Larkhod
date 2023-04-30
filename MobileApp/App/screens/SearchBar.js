@@ -1,18 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { StyleSheet, TextInput, View, Keyboard, Button } from "react-native";
 
 import { Feather, Entypo } from "@expo/vector-icons";
 
-const SearchBar = ({ clicked, searchPhrase, setSearchPhrase }) => {
+const SearchBar = () => {
   return (
     <View style={styles.container}>
-      <View
+      {/* <View
         style={
           clicked ? styles.searchBar__clicked : styles.searchBar__unclicked
         }
-      >
-        {/* Input field */}
-        <TextInput
+      > */}
+      {/* Input field */}
+      {/* <TextInput
           style={styles.input}
           placeholder="جستجو"
           value={searchPhrase}
@@ -20,17 +20,17 @@ const SearchBar = ({ clicked, searchPhrase, setSearchPhrase }) => {
           onFocus={() => {
             setClicked(true);
           }}
-        />
-        {/* search Icon */}
-        <Feather
+        /> */}
+      {/* search Icon */}
+      {/* <Feather
           name="search"
           size={15}
           color="black"
           style={{ marginRight: 1 }}
-        />
+        /> */}
 
-        {/* cross Icon, depending on whether the search bar is clicked or not */}
-        {clicked && (
+      {/* cross Icon, depending on whether the search bar is clicked or not */}
+      {/* {clicked && (
           <Entypo
             name="cross"
             size={15}
@@ -41,9 +41,9 @@ const SearchBar = ({ clicked, searchPhrase, setSearchPhrase }) => {
             }}
           />
         )}
-      </View>
+      </View> */}
       {/* cancel button, depending on whether the search bar is clicked or not */}
-      {clicked && (
+      {/* {clicked && (
         <View>
           <Button
             title="Cancel"
@@ -53,7 +53,9 @@ const SearchBar = ({ clicked, searchPhrase, setSearchPhrase }) => {
             }}
           ></Button>
         </View>
-      )}
+      )} */}
+
+      <TextInput placeholder="جستجو" style={styles.searchBar__unclicked} />
     </View>
   );
 };
@@ -75,6 +77,7 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(212,228,232,1)",
     borderRadius: 10,
     alignItems: "center",
+    textAlign: "right",
   },
   searchBar__clicked: {
     padding: 10,
