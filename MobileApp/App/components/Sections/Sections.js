@@ -14,12 +14,17 @@ import classTwo from "../grade_2_dari.json";
 
 const Sections = () => {
   const navigation = useNavigation();
+  const onSubmit =()=>{
+    navigation.navigate("ChangeInfo");
+ }
   return (
     <View style={styles.container}>
       <View style={styles.top}>
         <Text style={styles.userName}>Khatima Sajadi</Text>
-        <View style={styles.imageWrapper}>
+        <View style={styles.imageWrapper} >
+        <TouchableOpacity onPress={onSubmit}>
           <Image source={user} style={styles.img} />
+          </TouchableOpacity>
         </View>
       </View>
       <View style={styles.middle}>

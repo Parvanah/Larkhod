@@ -6,68 +6,69 @@ import {
   Image,
   TextInput,
   TouchableOpacity,
-  StyleSheet
+  StyleSheet,
+  
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import logo from "../../assets/White_PNG_Format_z.png";
-import styles from "./SignUp.style";
 import user from "../../assets/user.png";
-import arrow from "../../assets/Group_158_a.png";
-
+import arrow from "../../assets/Group_158.png";
 
 const ChangeInfo = () => {
 
   const navigation = useNavigation();
-    function required(inputtx) 
-    {
-      if (inputtx.value.length == 0)
-       { 
-          alert("message");  	
-          return false; 
-       }  	
-       return navigation.navigate("Sections"); 
-     } 
+  const onSubmit =()=>{
+     navigation.navigate("Sections");
+  }
   return (
     <SafeAreaView style={styles.outContainer}>
-      <Image source={logo} style={styles.imgStyle} />
-      <View style={styles.InContainer}>
-      <TouchableOpacity
+           <TouchableOpacity
           style={styles.arrowStyle}
           onPress={() => navigation.navigate("SignUp")}
         >
         <Image source={arrow} />
         </TouchableOpacity>
-        <View style={styles.imageWrapper}>
+       <View style={styles.imageWrapper}>
           <Image source={user} style={styles.img} />
+          <Text style={styles.usertext}>تغییر عکس نمایه</Text>
         </View>
+      <View style={styles.InContainer}>
         <View style={styles.form}>       
                <TextInput
                   name="firstName"
                   placeholder=" تغییر نام "
+                  style={styles.input}
                 />
                 <TextInput
                   name="lastName"
                   placeholder=" تغییر تخلص "
+                  style={styles.input}
                 />
                 <TextInput
                   name="fullName"
-                  placeholder=" تغییر نام کاربری  "
+                  placeholder="تغییر نام کاربری "
+                  style={styles.input}
                 />
                 <TextInput
                   name="email"
-                  placeholder=" تغییر ایمیل آدرس"
+                  placeholder="تغییر ایمیل ادرس"
                   keyboardType="email-address"
+                  style={styles.input}
                 />
                 <TextInput
                   name="age"
                   placeholder="تغییر سن"
+                  keyboardType="numeric"
+                  style={styles.input}
                 />
                 <TextInput
                   name="class"
                   placeholder="تغییر صنف"
+                  keyboardType="numeric"
+                  style={styles.input}
                 />
-          <TouchableOpacity style={styles.submitBtn}  onPress={required}  >
-            <Text style={styles.submitText}>ایجاد حساب</Text>
+          <TouchableOpacity style={styles.submitBtn}  onPress={onSubmit}  >
+            <Text style={styles.submitText}>ذخیره کردن </Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -76,44 +77,41 @@ const ChangeInfo = () => {
 };
 const styles = StyleSheet.create({
   outContainer: {
-    backgroundColor: "rgba(60,152,189,1)",
+    backgroundColor: "#fff",
     flex: 1,
-
     justifyContent: "center",
     alignItems: "center",
   },
-  imgStyle: {
-    height: 90,
-    width: 90,
-    marginVertical: 20,
-  },
   InContainer: {
-    borderTopRightRadius: 55,
-    borderTopLeftRadius: 55,
-    backgroundColor: "#fff",
+    borderTopRightRadius: 100,
+    borderTopLeftRadius: 100,
+    backgroundColor: "rgba(60,152,189,1)",
     flex: 3,
     width: "100%",
     justifyContent: "flex-start",
     alignItems: "center",
-    paddingHorizontal: 30,
+    paddingHorizontal: "15%",
+    paddingVertical: "20%"
   },
-  userName: {
-    fontSize: 20,
+  usertext: {
+    fontSize: 14,
     fontWeight: "bold",
-    color: "#fff",
-    marginHorizontal: 20,
+    color: "lightgray",
+    marginHorizontal: 10,
   },
   img: {
-    height: 40,
-    width: 40,
+    height: 60,
+    width: 60,
   },
   arrowStyle: {
-    marginBottom: "30%",
+    marginTop: "10%",
+    alignSelf: "flex-start",
+    marginLeft: "10%"
   },
   form: { width: "100%" },
   input: {
-    borderBottomColor: "lightgray",
-    borderBottomWidth: 1,
+    borderTopColor: "#fff",
+    borderTopWidth: 1,
     width: "100%",
     height: 40,
     flexDirection: "row-reverse",
@@ -122,7 +120,7 @@ const styles = StyleSheet.create({
     textAlign: "right",
   },
   submitBtn: {
-    backgroundColor: "rgba(60,152,189,1)",
+    backgroundColor: "white",
     width: "100%",
     marginVertical: 30,
     height: 40,
@@ -133,20 +131,19 @@ const styles = StyleSheet.create({
   submitText: {
     fontSize: 15,
     fontWeight: "bold",
-    color: "white",
+    color: "rgba(60,152,189,1)",
   },
-  border: {
-    borderBottomColor: "lightgray",
-    borderBottomWidth: 2,
-  },
+  // border: {
+  //   borderBottomColor: "#fff",
+  //   borderBottomWidth: 2,
+  // },
   imageWrapper: {
     backgroundColor: "#fff",
-    height: 70,
-    width: 70,
+    height: "20%",
+    width: "30%",
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 50,
-    marginHorizontal: 20,
   },
 });
 export default ChangeInfo;

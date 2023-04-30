@@ -3,16 +3,17 @@ import { useNavigation } from "@react-navigation/native";
 import {
   View,
   Text,
-  
   Image,
   TextInput,
   TouchableOpacity,
-  StyleSheet
+  StyleSheet,
+  
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import logo from "../../assets/White_PNG_Format_z.png";
 import user from "../../assets/user.png";
-import arrow from "../../assets/Group_158_a.png";
+import arrow from "../../assets/Group_158.png";
+
 
 
 const Information = () => {
@@ -23,46 +24,53 @@ const Information = () => {
   }
   return (
     <SafeAreaView style={styles.outContainer}>
-      <Image source={logo} style={styles.imgStyle} />
-      <View style={styles.InContainer}>
-      <TouchableOpacity
+           <TouchableOpacity
           style={styles.arrowStyle}
           onPress={() => navigation.navigate("SignUp")}
         >
         <Image source={arrow} />
         </TouchableOpacity>
-
-        <View style={styles.imageWrapper}>
+       <View style={styles.imageWrapper}>
           <Image source={user} style={styles.img} />
+          <Text style={styles.usertext}>اپلود عکس نمایه</Text>
         </View>
+      <View style={styles.InContainer}>
         <View style={styles.form}>       
                <TextInput
                   name="firstName"
                   placeholder=" نام "
+                  style={styles.input}
                 />
                 <TextInput
                   name="lastName"
                   placeholder=" تخلص "
+                  style={styles.input}
                 />
                 <TextInput
                   name="fullName"
                   placeholder=" نام کاربری "
+                  style={styles.input}
                 />
                 <TextInput
                   name="email"
                   placeholder=" ایمیل ادرس"
                   keyboardType="email-address"
+                  style={styles.input}
                 />
                 <TextInput
                   name="age"
                   placeholder="سن"
+                  keyboardType="numeric"
+                  style={styles.input}
                 />
                 <TextInput
                   name="class"
                   placeholder="صنف"
+                  keyboardType="numeric"
+                  style={styles.input}
                 />
           <TouchableOpacity style={styles.submitBtn}  onPress={onSubmit}  >
-            <Text style={styles.submitText}>ایجاد حساب</Text>
+            <Text style={styles.submitText}>ذخیره کردن </Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -71,43 +79,40 @@ const Information = () => {
 };
 const styles = StyleSheet.create({
   outContainer: {
-    backgroundColor: "rgba(60,152,189,1)",
+    backgroundColor: "#fff",
     flex: 1,
-
     justifyContent: "center",
     alignItems: "center",
   },
-  imgStyle: {
-    height: 90,
-    width: 90,
-    marginVertical: 20,
-  },
   InContainer: {
-    borderTopRightRadius: 55,
-    borderTopLeftRadius: 55,
-    backgroundColor: "#fff",
+    borderTopRightRadius: 100,
+    borderTopLeftRadius: 100,
+    backgroundColor: "rgba(60,152,189,1)",
     flex: 3,
     width: "100%",
     justifyContent: "flex-start",
     alignItems: "center",
-    paddingHorizontal: 30,
+    paddingHorizontal: "15%",
+    paddingVertical: "15%"
   },
-  userName: {
-    fontSize: 20,
+  usertext: {
+    fontSize: 14,
     fontWeight: "bold",
-    color: "#fff",
-    marginHorizontal: 20,
+    color: "lightgray",
+    marginHorizontal: 10,
   },
   img: {
-    height: 40,
-    width: 40,
+    height: 60,
+    width: 60,
   },
   arrowStyle: {
-    marginBottom: "30%",
+    marginTop: "10%",
+    alignSelf: "flex-start",
+    marginLeft: "10%"
   },
-  form: { width: "100%" },
+  form: { width: "100%"},
   input: {
-    borderBottomColor: "lightgray",
+    borderBottomColor: "#fff",
     borderBottomWidth: 1,
     width: "100%",
     height: 40,
@@ -117,7 +122,7 @@ const styles = StyleSheet.create({
     textAlign: "right",
   },
   submitBtn: {
-    backgroundColor: "rgba(60,152,189,1)",
+    backgroundColor: "white",
     width: "100%",
     marginVertical: 30,
     height: 40,
@@ -128,20 +133,19 @@ const styles = StyleSheet.create({
   submitText: {
     fontSize: 15,
     fontWeight: "bold",
-    color: "white",
+    color: "rgba(60,152,189,1)",
   },
-  border: {
-    borderBottomColor: "lightgray",
-    borderBottomWidth: 2,
-  },
+  // border: {
+  //   borderBottomColor: "#fff",
+  //   borderBottomWidth: 2,
+  // },
   imageWrapper: {
     backgroundColor: "#fff",
-    height: 70,
-    width: 70,
+    height: "20%",
+    width: "30%",
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 50,
-    marginHorizontal: 20,
   },
 });
 export default Information;

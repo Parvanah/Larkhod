@@ -9,6 +9,7 @@ import {
   Button,
   TouchableOpacity,
   Alert,
+  ScrollView,
 } from "react-native";
 import google from "../../assets/google.png";
 import facebook from "../..//assets/facebook.png";
@@ -25,25 +26,34 @@ const SignUp = () => {
   const signUpValidationSchema = Yup.object().shape({
     fullName: Yup
       .string()
-      .matches(/(\w.+\s).+/, 'Enter at least 2 names')
-      .required('Full name is required'),
+      .matches(/(\w.+\s).+/, 'حداقل دو نام وارد کنید')
+      .required('نام کامل الزامی است'),
     email: Yup
       .string()
-      .email("Please enter valid email")
-      .required('Email is required'),
+      .email("لطفا آیمیل متعتبر تان را وارد کنید")
+      .required('ایمیل ادرس الزامی است'),
     password: Yup
       .string()
-      .matches(/\w*[a-z]\w*/,  "Password must have a small letter")
-      .matches(/\w*[A-Z]\w*/,  "Password must have a capital letter")
-      .matches(/\d/, "Password must have a number")
-      .matches(/[!@#$%^&*()\-_"=+{}; :,<.>]/, "Password must have a special character")
-      .min(8, ({ min }) => `Password must be at least ${min} characters`)
-      .required('Password is required'),
+      .matches(/\w*[a-z]\w*/,  " رمز عبور باید یک حرف کوچک داشته باشد")
+      .matches(/\w*[A-Z]\w*/,  " رمز عبور باید یک حرف بزرگ داشته باشد")
+      .matches(/\d/, "رمز عبور باید یک عدد داشته باش")
+      .matches(/[!@#$%^&*()\-_"=+{}; :,<.>]/, " رمز عبور باید یک کاراکتر خاص داشته باش")
+      .min(8, ({ min }) => `  رمز عبور باید حداقل ${min} کارکتر باشد `)
+      .required('رمز عبور الزامی است'),
     confirmPassword: Yup
       .string()
-      .oneOf([Yup.ref('password')], 'Passwords do not match')
-      .required('Confirm password is required'),
+      .oneOf([Yup.ref('password')], 'رمز عبور مطابقت ندارد')
+      .required('تایید رمز عبور لازم است'),
   })
+  const onSubmit = (values) => {
+    
+    if(!values){
+      Alert("please fill the form")
+    }
+    else{
+      navigation.navigate("Information");
+    }
+  };
 
   const navigation = useNavigation();
   const [seenVariable, setSeenVariable] = useState(true);
@@ -54,28 +64,12 @@ const SignUp = () => {
       setSeenVariable(true);
     }
   };
-  const SubmitLog =() =>{
-    navigation.navigate("LogIn");
-  }
-  const onSubmit =()=>{
-     navigation.navigate("Information");
-  }
-  // function required(fullName) 
-  // {
-  //   if (fullName == 0)
-  //    { 
-  //       alert("please fill the form");  	
-  //       return false; 
-  //    }  	
-  //    return navigation.navigate("Sections"); 
-  //   return true
-  //  } 
   return (
-    <SafeAreaView style={Styles.outContainer}>
+    <ScrollView style={Styles.outContainer}>
       <Image source={logo} style={Styles.imgStyle} />
       <View style={Styles.InContainer}>
         <View style={styles.navContainer}>
-          <Pressable style={styles.btnSI}  onPress={SubmitLog}>
+          <Pressable style={styles.btnSI}  onPress={() => navigation.navigate("LogIn")}>
             <Text style={styles.btnTextSI}>ورود به حساب</Text>
           </Pressable>
           <Pressable style={styles.btnSO} >
@@ -90,6 +84,8 @@ const SignUp = () => {
               password: '',
               confirmPassword: '',
             }} 
+            onSubmit={values => onSubmit(values)}
+
             
           > 
             {({  
@@ -114,7 +110,7 @@ const SignUp = () => {
                   onBlur={handleBlur('email')}
                   value={values.email}
                 />
-                {/* <View style={styles.input}> */}
+                 {/* <View style={styles.input}>  */}
                 <Field
                   component={CustomInput}
                   name="password"
@@ -124,8 +120,8 @@ const SignUp = () => {
                   onBlur={handleBlur('password')}
                   value={values.password}
                 />
-            {/* </View> */}
-            {/* <View style={styles.input}> */}
+             {/* </View> 
+             <View style={styles.input}>  */}
              <Field
                   component={CustomInput}
                   name="confirmPassword"
@@ -135,11 +131,11 @@ const SignUp = () => {
                   onBlur={handleBlur('confirmPassword')}
                   value={values.confirmPassword}
                 />
-            {/* <TouchableOpacity onPress={() => SeenPassword()}>
+             {/* <TouchableOpacity onPress={() => SeenPassword()}>
               <Image source={seen} style={styles.seen}/>
-            </TouchableOpacity> */}
-            {/* </View> */}
-          <TouchableOpacity style={styles.submitBtn}  onPress={onSubmit}  disabled={!isValid} >
+            </TouchableOpacity>  
+            </View>  */}
+          <TouchableOpacity style={styles.submitBtn}  onPress={handleSubmit}  disabled={!isValid} >
             <Text style={styles.submitText}>ایجاد حساب</Text>
           </TouchableOpacity>
            </>
@@ -160,7 +156,7 @@ const SignUp = () => {
           </TouchableOpacity>
         </View>
       </View>
-    </SafeAreaView>
+    </ScrollView>
   );
 };
 export default SignUp;

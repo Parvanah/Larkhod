@@ -5,14 +5,13 @@ const Styles = StyleSheet.create({
   outContainer: {
     backgroundColor: "rgba(60,152,189,1)",
     flex: 1,
-
     justifyContent: "center",
     alignItems: "center",
   },
   imgStyle: {
     height: 90,
     width: 90,
-    marginVertical: 20,
+    marginVertical: 40,
   },
   InContainer: {
     borderTopRightRadius: 55,
@@ -70,7 +69,6 @@ const Styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     textAlign: "right",
-
   },
   submitBtn: {
     backgroundColor: "rgba(60,152,189,1)",

@@ -14,18 +14,25 @@ const loginValidationSchema = Yup.object().shape({
   email: Yup
     .string()
     .email("Please enter valid email")
-    .required('Email Address is Required'),
+    .required('ایمیل ادرس الزامی است'),
   password: Yup
     .string()
     .min(8, ({ min }) => `Password must be at least ${min} characters`)
-    .required('Password is required'),
+    .required('رمز عبور الزامی است'),
 })
 
 const LogIn = () => {
   const navigation = useNavigation();
-  const OnSubmit = () => {
-    navigation.navigate("Sections");
+  const OnSubmit = (values) => {
+    
+    if(!values){
+      Alert("please fill the form")
+    }
+    else{
+      navigation.navigate("Sections");
+    }
   };
+
     return (     
       <SafeAreaView style={Styles.outContainer}>
                 <TouchableOpacity
@@ -38,18 +45,19 @@ const LogIn = () => {
         <View style={Styles.InContainer}>
 
           <View style={styles.navContainer}>
-            <TouchableOpacity style={styles.btnSI}> 
+            <TouchableOpacity style={styles.btnSI} > 
               <Text style={styles.btnTextSI}>ورود به حساب</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.btnSO}>
+            <TouchableOpacity style={styles.btnSO} onPress={() => navigation.navigate("SignUp")}>
               <Text style={styles.btnTextSO}>ایجاد حساب</Text>
             </TouchableOpacity>
           </View>
 
             <View style={styles.form}>
             <Formik  validationSchema={loginValidationSchema}
-             initialValues={{ email: '', password: '' }}
+             initialValues={{ email: '', password: '' }}     onSubmit={values => OnSubmit(values)}
              >
+             
             {({
             handleChange,
             handleBlur,
@@ -96,7 +104,7 @@ const LogIn = () => {
 
            <Text style={styles.afterPass}> رمز عبوری تان را فراموش کرده اید؟</Text> 
            <TouchableOpacity style={styles.submitBtn}  
-             onPress={ OnSubmit}
+             onPress={ handleSubmit}
              disabled={!isValid} 
               >
                 <Text style={styles.submitText}>وارد شدن </Text>
