@@ -1,0 +1,394 @@
+/*profile style*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+#Artboard__3 {
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    background-color: rgba(255,255,255,1);
+    overflow: hidden;
+}
+#Rectangle_267_u {
+    fill: url(#Rectangle_267_u);
+    stroke: rgba(112,112,112,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.Rectangle_267_u {
+    position: absolute;
+    overflow: visible;
+    width: 1920px;
+    height: 636px;
+    left: 0px;
+    top: 240px;
+}
+#Ellipse_20 {
+    fill: rgba(255,255,255,1);
+    stroke: rgba(112,112,112,1);
+    stroke-width: 6px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.Ellipse_20 {
+    position: absolute;
+    overflow: visible;
+    width: 258px;
+    height: 258px;
+    left: 551px;
+    top: -20px;
+}
+#Group_6 {
+    position: absolute;
+    width: 121px;
+    height: 136px;
+    left: 899.999px;
+    top: 152px;
+    overflow: visible;
+}
+#Group_10 {
+    position: absolute;
+    width: 121px;
+    height: 136px;
+    left: 0.001px;
+    top: 0px;
+    overflow: visible;
+}
+#nm {
+    left: 580px;
+    top: 180px;
+    position: absolute;
+    overflow: visible;
+    width: 204px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Bahij Helvetica Neue;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    color: rgba(112,112,112,1);
+}
+#Path_1010 {
+    fill: rgba(0,0,0,0);
+    stroke: rgba(60,152,189,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-dasharray: 4.026000022888184 4.026000022888184;
+    stroke-dashoffset: 0;
+    stroke-miterlimit: 10;
+    shape-rendering: auto;
+}
+.Path_1010 {
+    overflow: visible;
+    position: absolute;
+    width: 1282.474px;
+    height: 218.265px;
+    left: 30.077px;
+    top: 20.717px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#Path_1013 {
+    fill: rgba(15,83,161,1);
+}
+.Path_1013 {
+    overflow: visible;
+    position: absolute;
+    width: 115.999px;
+    height: 49.452px;
+    left: 618.085px;
+    top: 302.015px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#Path_1014 {
+    fill: rgba(60,152,189,1);
+}
+.Path_1014 {
+    overflow: visible;
+    position: absolute;
+    width: 95.333px;
+    height: 62.985px;
+    left: 637.751px;
+    top: 302.015px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#Path_1015 {
+    fill: rgba(60,152,189,1);
+}
+.Path_1015 {
+    overflow: visible;
+    position: absolute;
+    width: 140.021px;
+    height: 28.396px;
+    left: 527.064px;
+    top: 309.015px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#Text {
+    left: 1292.651px;
+    top: 606.045px;
+    position: absolute;
+    overflow: visible;
+    width: 431px;
+    height: 27px;
+    line-height: 25px;
+    margin-top: -2.5px;
+    text-align: right;
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(255,255,255,1);
+    letter-spacing: -0.4px;
+}
+#n_ {
+    left: 1292.651px;
+    top: 762px;
+    position: absolute;
+    overflow: visible;
+    width: 431px;
+    height: 27px;
+    line-height: 25px;
+    margin-top: -2.5px;
+    text-align: right;
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(255,255,255,1);
+    letter-spacing: -0.4px;
+}
+#Text_ {
+    left: 744.649px;
+    top: 606.045px;
+    position: absolute;
+    overflow: visible;
+    width: 431px;
+    height: 27px;
+    line-height: 25px;
+    margin-top: -2.5px;
+    text-align: right;
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(255,255,255,1);
+    letter-spacing: -0.4px;
+}
+#Text_ba {
+    left: 744.649px;
+    top: 762px;
+    position: absolute;
+    overflow: visible;
+    width: 431px;
+    height: 27px;
+    line-height: 25px;
+    margin-top: -2.5px;
+    text-align: right;
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(255,255,255,1);
+    letter-spacing: -0.4px;
+}
+#n__ba {
+    left: 196.646px;
+    top: 606.045px;
+    position: absolute;
+    overflow: visible;
+    width: 431px;
+    height: 27px;
+    line-height: 25px;
+    margin-top: -2.5px;
+    text-align: right;
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(255,255,255,1);
+    letter-spacing: -0.4px;
+}
+#Text_bb {
+    left: 196.646px;
+    top: 762px;
+    position: absolute;
+    overflow: visible;
+    width: 431px;
+    height: 27px;
+    line-height: 25px;
+    margin-top: -2.5px;
+    text-align: right;
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(255,255,255,1);
+    letter-spacing: -0.4px;
+}
+#Line_78 {
+    fill: transparent;
+    stroke: rgba(255,255,255,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.Line_78 {
+    overflow: visible;
+    position: absolute;
+    width: 430.382px;
+    height: 1px;
+    left: 1292.973px;
+    top: 647.955px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#Line_81 {
+    fill: transparent;
+    stroke: rgba(255,255,255,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.Line_81 {
+    overflow: visible;
+    position: absolute;
+    width: 430.382px;
+    height: 1px;
+    left: 1292.973px;
+    top: 803.91px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#Line_79 {
+    fill: transparent;
+    stroke: rgba(255,255,255,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.Line_79 {
+    overflow: visible;
+    position: absolute;
+    width: 430.382px;
+    height: 1px;
+    left: 744.97px;
+    top: 647.955px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#Line_82 {
+    fill: transparent;
+    stroke: rgba(255,255,255,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.Line_82 {
+    overflow: visible;
+    position: absolute;
+    width: 430.382px;
+    height: 1px;
+    left: 744.97px;
+    top: 803.91px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#Line_80 {
+    fill: transparent;
+    stroke: rgba(255,255,255,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.Line_80 {
+    overflow: visible;
+    position: absolute;
+    width: 430.382px;
+    height: 1px;
+    left: 196.967px;
+    top: 647.955px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#Line_83 {
+    fill: transparent;
+    stroke: rgba(255,255,255,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.Line_83 {
+    overflow: visible;
+    position: absolute;
+    width: 430.382px;
+    height: 1px;
+    left: 196.967px;
+    top: 803.91px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#Rectangle_268 {
+    fill: rgba(255,255,255,1);
+}
+.Rectangle_268 {
+    position: absolute;
+    overflow: visible;
+    width: 430px;
+    height: 43px;
+    left: 745px;
+    top: 918px;
+    --web-animation: fadein undefineds undefined;
+    --web-action-type: page;
+    --web-action-target: 0.html;
+    cursor: pointer;
+}
+#n__bg {
+    left: 885px;
+    top: 915px;
+    position: absolute;
+    overflow: visible;
+    width: 150px;
+    height: 56px;
+    text-align: center;
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgba(60,152,189,1);
+    letter-spacing: -0.4px;
+}
+#Group_412 {
+    position: absolute;
+    width: 36px;
+    height: 22px;
+    left: 140px;
+    top: 100px;
+    overflow: visible;
+    --web-animation: fadein undefineds undefined;
+    --web-action-type: page;
+    --web-action-target: Artboard___2.html;
+    cursor: pointer;
+}
+#Group_158 {
+    position: absolute;
+    width: 36px;
+    height: 22px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}

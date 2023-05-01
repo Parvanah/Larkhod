@@ -3,7 +3,7 @@ import { StyleSheet, TextInput, View, Keyboard, Button } from "react-native";
 
 import { Feather, Entypo } from "@expo/vector-icons";
 
-const SearchBar = ({ clicked, searchPhrase, setSearchPhrase }) => {
+const SearchBar = ({ clicked, searchPhrase, setSearchPhrase, setClicked }) => {
   return (
     <View style={styles.container}>
       <View
@@ -17,9 +17,9 @@ const SearchBar = ({ clicked, searchPhrase, setSearchPhrase }) => {
           placeholder="جستجو"
           value={searchPhrase}
           onChangeText={setSearchPhrase}
-          onFocus={() => {
-            setClicked(true);
-          }}
+          // onFocus={() => {
+          //   setClicked(true);
+          // }}
         />
         {/* search Icon */}
         <Feather
@@ -30,7 +30,7 @@ const SearchBar = ({ clicked, searchPhrase, setSearchPhrase }) => {
         />
 
         {/* cross Icon, depending on whether the search bar is clicked or not */}
-        {clicked && (
+        {/* {clicked && (
           <Entypo
             name="cross"
             size={15}
@@ -40,20 +40,20 @@ const SearchBar = ({ clicked, searchPhrase, setSearchPhrase }) => {
               setSearchPhrase("");
             }}
           />
-        )}
+        )} */}
       </View>
       {/* cancel button, depending on whether the search bar is clicked or not */}
-      {clicked && (
+      {/* {clicked && (
         <View>
           <Button
             title="Cancel"
-            onPress={() => {
-              Keyboard.dismiss();
-              setClicked(false);
-            }}
+            // onPress={() => {
+            //   Keyboard.dismiss();
+            //   // setClicked(false);
+            // }}
           ></Button>
         </View>
-      )}
+      )} */}
     </View>
   );
 };
@@ -91,3 +91,16 @@ const styles = StyleSheet.create({
     width: "90%",
   },
 });
+
+// import react, {Component} from 'react';
+// import {View, Text, StyleSheet} from 'react-native';
+// import { SearchBar } from 'react-native-elements';
+// export default class App extends React.Component{ state = {search: '',};
+// updateSearch = search => {this.setState({search});};
+// render(){
+//   const {search} = this.state;
+//   return(
+//     <SearchBar  placeholder="type here" onChangeText={this.updateSearch} value={search} />
+//   );
+// }
+// }
