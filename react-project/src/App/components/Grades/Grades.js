@@ -6,44 +6,12 @@ import { Link, useLocation } from "react-router-dom";
 <link rel="stylesheet" href="index.css" />;
 
 const Grads = () => {
-  // const [grads , setGrads] = useState([
-  //   { title: 'صنف اول', body:'....', id:1, gard:1},
-  //   { title: 'صنف دوم', body:'....', id:2 , gard:1},
-  //   { title: 'صنف سوم', body:'....', id:3 , gard:1},
-  //   { title: 'صنف چهارم', body:'....', id:4 , gard:1},
-  //   { title: 'صنف پنجم', body:'....', id:5 , gard:1},
-  //   { title: 'صنف ششم', body:'....', id:6 , gard:2}
-  //  ]
-  //  [
-  //   { title: 'صنف هفتم', body:'....', id:7 , gard:2},
-  //   { title: 'صنف هشتم', body:'....', id:8 , gard:3},
-  //   { title: 'صنف نهم', body:'....', id:9 , gard:4}
-  //  ]
-  //  [
-  //   { title: 'صنف دهم', body:'....', id:10 , gard:5},
-  //   { title: 'صنف یازدهم', body:'....', id:11 , gard:4},
-  //   { title: 'صنف دوازدهم', body:'....', id:12 , gard:5}
-  //  ]);
   const location = useLocation();
   const locationData = location.state;
-
   const grades = locationData.grades;
 
   return (
     <div>
-      {/* <div>
- <div className="grads-list">
-    {grads.map((grad)=>(
-     <div className="grads-preview" key={grad.id}>
-     <Link to={`/grads/${grad.id}`}>
-     <h2>{grad.title}</h2>
-     </Link>
-     </div>
-    ))}
-  </div>
-
-   </div> */}
-      {/* style="transform-origin: 0px 0px;" */}
       <div id="n_">
         <svg className="Path_534" viewBox="1920.661 2305.786 1 1">
           <path id="Path_534" d="M 1920.660522460938 2305.78564453125"></path>
@@ -88,32 +56,6 @@ const Grads = () => {
             );
           })}
         </div>
-        {/* <ul className="ul_high_school">
-          <Link className="link_high_school" to="./first_grade">
-            <img className="sanaf" src={sanaf} />
-            <li className="li_high_school">صنف اول</li>
-          </Link>
-          <Link className="link_high_school" to="./second_grade">
-            <img className="sanaf" src={sanaf} />
-            <li className="li_high_school">صنف دوم</li>
-          </Link>
-          <Link className="link_high_school" to="./third_grade">
-            <img className="sanaf" src={sanaf} />
-            <li className="li_high_school">صنف سوم </li>
-          </Link>
-          <Link className="link_high_school" to="./fourth_grade">
-            <img className="sanaf" src={sanaf} />
-            <li className="li_high_school">صنف چهارم</li>
-          </Link>
-          <Link className="link_high_school" to="./fifth_grade">
-            <img className="sanaf" src={sanaf} />
-            <li className="li_high_school">صنف پنجم</li>
-          </Link>
-          <Link className="link_high_school" to="./sixth_grade">
-            <img className="sanaf" src={sanaf} />
-            <li className="li_high_school">صنف ششم </li>
-          </Link>
-        </ul> */}
         <svg className="Subtraction_3" viewBox="139.5 0 484.883 429.713">
           <path
             id="Subtraction_3"
