@@ -22,15 +22,15 @@ const SearchBar = ({ clicked, searchPhrase, setSearchPhrase, setClicked }) => {
           // }}
         />
         {/* search Icon */}
-        <Feather
-          name="search"
-          size={15}
-          color="black"
-          style={{ marginRight: 1 }}
-        /> 
+      <Feather
+        name="search"
+        size={15}
+        color="black"
+        style={{ marginRight: 1 }}
+      />
 
-        {/* cross Icon, depending on whether the search bar is clicked or not */}
-        {/* {clicked && (
+      {/* cross Icon, depending on whether the search bar is clicked or not */}
+      {/* {clicked && (
           <Entypo
             name="cross"
             size={15}
@@ -42,7 +42,6 @@ const SearchBar = ({ clicked, searchPhrase, setSearchPhrase, setClicked }) => {
           />
         )} */}
     </View>
-      
   );
 };
 export default SearchBar;
