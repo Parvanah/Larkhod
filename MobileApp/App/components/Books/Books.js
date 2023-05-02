@@ -45,7 +45,30 @@ const Books = () => {
         data={route.params.subjects}
         renderItem={({ item }) => {
           return (
-            <TouchableOpacity style={style.bookItem}>
+            <TouchableOpacity
+              style={style.bookItem}
+              onPress={() => {
+                if (item.unitCheck == "false") {
+                  return navigation.navigate("Lessons", {
+                    lessons: item.parts,
+                    title: "مضمون " + item.label,
+                    params: {
+                      id: item.id,
+                      name: item.name,
+                    },
+                  });
+                } else {
+                  navigation.navigate("Units", {
+                    units: item.parts,
+                    subject: item.label,
+                    params: {
+                      id: item.id,
+                      name: item.name,
+                    },
+                  });
+                }
+              }}
+            >
               <Image source={photo1} />
               <Text style={style.bootItemText}>{item.label}</Text>
             </TouchableOpacity>

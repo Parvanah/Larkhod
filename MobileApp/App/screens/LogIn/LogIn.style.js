@@ -11,10 +11,11 @@ const Styles = StyleSheet.create({
   imgStyle: {
     height: 90,
     width: 90,
-    marginVertical: 40,
+    marginTop: 10,
+    marginBottom: 60
   },
   InContainer: {
-    borderTopRightRadius: 55,
+    borderTopRightRadius: 55, 
     borderTopLeftRadius: 55,
     backgroundColor: "#fff",
     flex: 3,
@@ -37,13 +38,14 @@ const Styles = StyleSheet.create({
   btnSI: {
     paddingVertical: 11,
     paddingHorizontal: 26,
+    backgroundColor: "rgba(60,152,189,1)",
+    borderRadius: 20,
+    width: "59%",
   },
   btnSO: {
     // borderColor: "lightgray",
     // borderStyle: "solid",
     // borderWidth: 1,
-    width: "57%",
-    backgroundColor: "rgba(60,152,189,1)",
     paddingVertical: 11,
     paddingHorizontal: 26,
     borderRadius: 20,
@@ -51,13 +53,14 @@ const Styles = StyleSheet.create({
   btnTextSO: {
     fontSize: 15,
     fontWeight: "bold",
-    color: "white",
+    color: "rgba(60,152,189,1)",
     textAlign: "center",
   },
   btnTextSI: {
     fontSize: 15,
     fontWeight: "bold",
-    color: "rgba(60,152,189,1)",
+    color: "white",
+    textAlign: "center",
   },
   form: { width: "100%" },
   input: {
@@ -65,15 +68,12 @@ const Styles = StyleSheet.create({
     borderBottomWidth: 1,
     width: "100%",
     height: 40,
-    flexDirection: "row-reverse",
-    justifyContent: "space-between",
-    alignItems: "center",
-    textAlign: "right",
+    marginTop: 10
   },
   submitBtn: {
     backgroundColor: "rgba(60,152,189,1)",
     width: "100%",
-    marginVertical: 30,
+    marginVertical: 25,
     height: 40,
     alignItems: "center",
     justifyContent: "center",
@@ -84,40 +84,48 @@ const Styles = StyleSheet.create({
     fontWeight: "bold",
     color: "white",
   },
+  afterSubmit: {
+    flexDirection: "row",
+  },
   border: {
     borderBottomColor: "lightgray",
     borderBottomWidth: 2,
   },
-  linkedBtnWrapper: {
-    justifyContent: "center",
-    alignItems: "center",
-    width: "85%",
-    marginVertical: 10,
-  },
-  linkBtn: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    height: 40,
-    marginTop: 10,
-    width: "100%",
-    paddingHorizontal: 20,
-    borderColor: "lightgray",
-    borderWidth: 1,
-    borderStyle: "solid",
-    borderRadius: 25,
-  },
-  linkBtnText: {
+ linkedBtnWrapper:{
+  justifyContent: "center",
+  alignItems: "center",
+  width: "85%",
+  marginVertical: 10,
+ },
+ linkBtn:{
+  flexDirection: "row",
+  justifyContent: "space-between",
+  alignItems: "center",
+  height: 40,
+  marginTop: 10,
+  width: "100%",
+  paddingHorizontal: 20,
+  borderColor: "lightgray",
+  borderWidth: 1,
+  borderStyle: "solid",
+  borderRadius: 25,
+ },
+ linkBtnText: {
+  color: "lightgray",
+ },
+  afterPass:{
+    fontSize: 12,
     color: "lightgray",
-  }
-  
-  // errorText: {
-  //   fontSize: 10,
-  //   color: 'red',
-  // },
-  // errorInput: {
-  //   borderColor: 'red',
-  // }
-  
+    marginRight: 130
+  },
+  errorText: {
+    fontSize: 10,
+    color: 'red',
+  },
+  arrowStyle: {
+    marginTop: "10%",
+    alignSelf: "flex-start",
+    marginLeft: "10%"
+  },
 });
 export default Styles;

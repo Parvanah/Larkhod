@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import {SafeAreaView, View, Text, Image, Pressable, TextInput, Button, TouchableOpacity } from "react-native";
 import Styles from "./LogIn.style";
 import styles from "../LogIn/LogIn.style";
-import logo from "../../assets/White_PNG_Format_z.png";
-import google from "../../assets/google.png";
-import facebook from "../..//assets/facebook.png";
-import arrow from "../../assets/Group_158_a.png";
+import logo from "../assets/White_PNG_Format_z.png";
+import google from "../assets/google.png";
+import facebook from "../assets/facebook.png";
+import arrow from "../assets/Group_158_a.png";
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { useNavigation } from "@react-navigation/native";
@@ -14,25 +14,18 @@ const loginValidationSchema = Yup.object().shape({
   email: Yup
     .string()
     .email("Please enter valid email")
-    .required('ایمیل ادرس الزامی است'),
+    .required('Email Address is Required'),
   password: Yup
     .string()
     .min(8, ({ min }) => `Password must be at least ${min} characters`)
-    .required('رمز عبور الزامی است'),
+    .required('Password is required'),
 })
 
 const LogIn = () => {
   const navigation = useNavigation();
-  const OnSubmit = (values) => {
-    
-    if(!values){
-      Alert("please fill the form")
-    }
-    else{
-      navigation.navigate("Sections");
-    }
+  const OnSubmit = () => {
+    navigation.navigate("Sections");
   };
-
     return (     
       <SafeAreaView style={Styles.outContainer}>
                 <TouchableOpacity
@@ -45,19 +38,18 @@ const LogIn = () => {
         <View style={Styles.InContainer}>
 
           <View style={styles.navContainer}>
-            <TouchableOpacity style={styles.btnSI} > 
+            <TouchableOpacity style={styles.btnSI}> 
               <Text style={styles.btnTextSI}>ورود به حساب</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.btnSO} onPress={() => navigation.navigate("SignUp")}>
+            <TouchableOpacity style={styles.btnSO}>
               <Text style={styles.btnTextSO}>ایجاد حساب</Text>
             </TouchableOpacity>
           </View>
 
             <View style={styles.form}>
             <Formik  validationSchema={loginValidationSchema}
-             initialValues={{ email: '', password: '' }}     onSubmit={values => OnSubmit(values)}
+             initialValues={{ email: '', password: '' }}
              >
-             
             {({
             handleChange,
             handleBlur,
@@ -104,7 +96,7 @@ const LogIn = () => {
 
            <Text style={styles.afterPass}> رمز عبوری تان را فراموش کرده اید؟</Text> 
            <TouchableOpacity style={styles.submitBtn}  
-             onPress={ handleSubmit}
+             onPress={ OnSubmit}
              disabled={!isValid} 
               >
                 <Text style={styles.submitText}>وارد شدن </Text>
