@@ -7,7 +7,7 @@ import { Route, Routes } from "react-router-dom";
 import Header from "./Header";
 import Home from "./App/screens/Home";
 import LogIn from "./App/screens/Login/LogIn"
-import SinUp from "./App/screens/SinUp/SinUp"
+import SinUP from "./App/screens/SinUp/SinUP"
 import Section from "./App/components/Sections/Section";
 import Grades from "./App/components/Grades/Grades";
 import Books from "./App/components/Books/Books";
@@ -31,6 +31,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/login" element={<LogIn />} />
+        <Route exact path="/sinup" element={<SinUP />} />
         <Route path="/section" element={<Section />} />
         <Route path="/grades" element={<Grades />} />
         <Route path="/books" element={<Books />} />
