@@ -3,6 +3,16 @@ import React from "react";
 import { StyleSheet } from "react-native";
 
 const Styles = StyleSheet.create({
+  circle: {
+    marginTop: 15,
+    marginLeft: 180,
+  },
+  line: {
+    // marginTop: 30,
+  },
+  svgWrapper: {
+    marginTop: -10,
+  },
   container: {
     justifyContent: "space-between",
     backgroundColor: "#fff",
@@ -10,15 +20,10 @@ const Styles = StyleSheet.create({
     alignItems: "center",
   },
   top: {
-    backgroundColor: "rgba(60, 152, 189, 1)",
+    marginTop: 50,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    paddingHorizontal: 20,
-    height: "25%",
-    borderBottomLeftRadius: 90,
-    borderBottomRightRadius: 90,
-    width: "100%",
   },
   userName: {
     fontSize: 20,
