@@ -1,4 +1,4 @@
-import "./SinUp.css"
+import "./SinUP.css"
 import { FaGoogle } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import img1 from '../../assets/mg.png';
