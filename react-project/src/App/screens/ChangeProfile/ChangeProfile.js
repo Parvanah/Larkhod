@@ -1,10 +1,10 @@
-import "./Profile.css"
+import "./ChangeProfile.css"
 import React, { useEffect } from 'react'
 import { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
-<link rel="stylesheet" href="Profile.css" />;
+<link rel="stylesheet" href="ChangeProfile.css" />;
 
-const Profile = () => {
+const ChangeProfile = () => {
 	const initialValues = {name:"", lastname:"", username: "", email: "", age: "", senf:""};
 	const [formValues, setFormValues] = useState(initialValues);
 	const [formErrors, setFormErrors] = useState({});
@@ -77,7 +77,7 @@ const Profile = () => {
 	
 	</div>
 	<button id="nm">
-	آپلود عکس نمایه
+	تغییر عکس نمایه
 	</button>
 	<svg class="Path_1010" viewBox="188.817 59.877 1281.845 407.283">
 		<path id="Path_1010" d="M 1470.662231445312 467.1603088378906 C 1413.939086914062 453.2845764160156 1351.286376953125 393.6935119628906 1316.156494140625 357.1451416015625 C 1278.387817382812 317.8435363769531 1249.279541015625 267.7673034667969 1245.332641601562 213.4049682617188 C 1243.601440429688 189.5474395751953 1247.116577148438 164.4300079345703 1260.587158203125 144.6602935791016 C 1274.053344726562 124.8861846923828 1298.985717773438 111.8561630249023 1322.296997070312 117.2390975952148 C 1340.044555664062 121.3401641845703 1354.123291015625 134.9824829101562 1364.518920898438 149.9463195800781 C 1379.046630859375 170.861328125 1388.345825195312 196.5646362304688 1384.702880859375 221.7700805664062 C 1377.910278320312 268.8113403320312 1326.7900390625 299.6728210449219 1279.282104492188 298.2411804199219 C 1231.778198242188 296.8051452636719 1188.538696289062 270.846435546875 1151.16650390625 241.4781036376953 C 1086.681518554688 190.8072509765625 1032.609985351562 137.4757080078125 955.5442504882812 105.9005432128906 C 880.6853637695312 75.23283386230469 799.5096435546875 60.95619201660156 718.7920532226562 59.99588012695312 C 612.344970703125 58.72724914550781 499.6823425292969 67.22894287109375 397.723876953125 104.072509765625 C 294.8403015136719 141.2552032470703 119.5603332519531 256.39794921875 217.6644134521484 383.5972290039062 C 273.2601318359375 455.6808471679688 377.636962890625 468.032470703125 456.9448852539062 432.0126953125 C 477.4238586425781 422.7137145996094 492.8809509277344 408.5296325683594 508.1883239746094 393.336669921875">
@@ -110,21 +110,21 @@ const Profile = () => {
 
 			<div className='information-one'>
             <input
-			id='inputt'
+            id='input'
 			className="username"
               type="text"
               name="username"
-              placeholder="نام کاربری"
+              placeholder="تغییر نام کاربری"
               value={formValues.username}
               onChange={handleChange}
             />
 			<p className='error'>{formErrors.username}</p>
 			<input
-			id='inputt'
+            id='input'
 			className="senf"
               type="text"
               name="senf"
-              placeholder="صنف"
+              placeholder="تغییر صنف"
               value={formValues.senf}
               onChange={handleChange}
             />
@@ -136,22 +136,22 @@ const Profile = () => {
 
          <div className="information-two">
 		 <input
-		 id='inputt'
+         id='input'
 		className='lastname'
               type="text"
               name="lastname"
-              placeholder="تخلص"
+              placeholder="تغییر تخلص"
               value={formValues.lastname}
               onChange={handleChange}
             />
 			<p className='error'>{formErrors.lastname}</p>
             
             <input
-			id='inputt'
+            id='input'
 			className="age"
               type="text"
               name="age"
-              placeholder="سن"
+              placeholder="تغییر سن"
               value={formValues.age}
               onChange={handleChange}
             />
@@ -160,21 +160,21 @@ const Profile = () => {
 		  </div>
 		  <div className='information-three'>
 		  <input
-		  id='inputt'
+          id='input'
 		className='name'
               type="text"
               name="name"
-              placeholder="نام"
+              placeholder="تغییر نام"
               value={formValues.name}
               onChange={handleChange}
             />
 			 <p className='error'>{formErrors.name}</p>
 		  <input
-		  id='inputt'
+          id='input'
 			 className="email"
               type="text"
               name="email"
-              placeholder="ایمیل"
+              placeholder=" تغییر ایمیل"
               value={formValues.email}
               onChange={handleChange}
             />
@@ -190,4 +190,6 @@ const Profile = () => {
   )
 }
 
-export default Profile
+
+
+export default ChangeProfile

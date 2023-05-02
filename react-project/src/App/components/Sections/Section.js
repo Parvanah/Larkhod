@@ -1,8 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
-import { Route, Routes } from "react-router-dom";
 import { Link } from "react-router-dom";
-import Grads from "../Grades/Grades";
 import gradeTwo from "../../Json Files/grade_2_dari.json";
 import gradeNine from "../../Json Files/grade_9_dari.json";
 

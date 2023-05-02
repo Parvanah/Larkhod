@@ -1,7 +1,8 @@
+import "./Header.css";
 import React, { Component } from "react";
 import { FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
-<link rel="stylesheet" href="./components/index.css" />;
+<link rel="stylesheet" href="./Header.css" />;
 const Header = () => {
   return (
     <div className="full">
@@ -40,12 +41,12 @@ const Header = () => {
             </li>
             <hr className="vl" />
             <li className="li">
-              <Link className="link_nav" to="/contact">
+              <Link className="link_nav" to="/Suggestion">
                 نظریات
               </Link>
             </li>
             <hr className="vi" />
-            <div className="contact"></div>
+            {/* <div className="contact"></div> */}
           </ul>
 
           <button className="button">
@@ -60,7 +61,7 @@ const Header = () => {
           </button>
 
           <div className="icon">
-            <Link className="link_nav" to="profile">
+            <Link className="link_nav" to="/changeprofile">
               <FaUser />
             </Link>
           </div>

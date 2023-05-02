@@ -1,0 +1,90 @@
+/*home style////////////////////////////////////////////////////////*/
+.home{
+	
+    background-image: linear-gradient(to right,  rgb(45, 132, 167),   rgba(60,152,189,1));
+    height: 550px;
+}
+.imgone{
+    margin-top: 30px;
+    width: 250px;
+}
+.images_paragraph{
+align-items: center;
+text-align: center;
+}
+.paragraph{
+    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.2));
+    overflow: hidden;
+    line-height: 92px;
+    font-family: Bahij Helvetica Neue;
+    font-size: 60px;
+    color: rgba(255,255,255,1);
+    letter-spacing: -0.4px;
+	position: relative;
+	top: -20px;
+  
+}
+.paragraph_1{
+	position: relative;
+	top: -40px;
+	filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.2));
+    overflow: hidden;
+    line-height: 92px;
+    font-family: Bahij Helvetica Neue;
+   font-style: normal;
+   font-weight: bold;
+   font-size: 60px;
+   color: rgba(255,255,255,1);
+   letter-spacing: -0.4px;
+}
+.space{
+	width: 30px;
+	background-color: red;
+}
+#Path_7 {
+	fill: rgba(255,255,255,1);
+	
+}
+
+	#Path_39 {
+		fill: rgba(60,152,189,1);
+	}
+	.Path_39 {
+		overflow: visible;
+		position: absolute;
+		width: 20.158px;
+		height: 16.435px;
+		left: 670.195px;
+		bottom: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	
+.Login_button{
+	font-size: 20px;
+	font-family: Bahij Helvetica Neue;
+    font-style: normal;
+    font-weight: normal;
+	box-sizing: border-box;
+    border: none;
+	cursor: pointer;
+    text-align: center;
+	position: relative;
+	left: 530px;
+	bottom: 140px;
+	color: rgba(60,152,189,1);
+	background-color: white;
+	padding: 7px 60px 7px 60px;
+	border-radius: 50px;
+}
+.imggg{
+position: relative;
+top: 200px;
+left: 250px;
+display: inline-block;
+}
+.imgg{
+	position: relative;
+	top: 180px;
+    left: -200px;
+	display: inline-block;
+}
