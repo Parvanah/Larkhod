@@ -1,9 +1,6 @@
-
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
-import './Books.css'
-import * as React from "react"
-import bookicon from '../../assets/Group_360.png'
+import "./Books.css";
 const Books = (props) => {
   const location = useLocation();
   const locationData = location.state;

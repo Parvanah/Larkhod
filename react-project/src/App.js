@@ -6,6 +6,7 @@ import "./App/index.css";
 import Header from "./Header";
 import Home from "./App/screens/Home";
 import LogIn from "./App/screens/Login/LogIn"
+import SinUp from "./App/screens//SinUP/SinUP"
 import Section from "./App/components/Sections/Section";
 import Grades from "./App/components/Grades/Grades";
 import Books from "./App/components/Books/Books";
@@ -25,6 +26,7 @@ function App() {
     <Router>
       <Header />
       <Routes>
+
         <Route exact path="/" element={<Home />} />
         <Route exact path="/login" element={<LogIn />} />
         <Route path="/section" element={<Section />} />
