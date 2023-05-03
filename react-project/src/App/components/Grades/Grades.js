@@ -1,11 +1,9 @@
-import "./Grades.css"
 import { useEffect, useState } from "react";
 import sanaf from "../../assets/sanaf.png";
 import images from "../../assets/images.png";
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-<link rel="stylesheet" href="Grades.css" />;
-
+<link rel="stylesheet" href="index.css" />;
 
 const Grads = () => {
   const location = useLocation();
