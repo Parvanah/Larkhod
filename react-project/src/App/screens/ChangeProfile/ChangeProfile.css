@@ -1,11 +1,11 @@
-/*profile style*/
-/* * {
+/*ChangeProfile style*/
+* {
     text-decoration: none;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     border: none;
-} */
+}
 #Artboard__3 {
     position: absolute;
     width: 100%;
@@ -200,24 +200,25 @@
     
 }
 
-#inputt{
+#input{
     display: inline-block;
     background: none;
     width: 300px;
     padding: 10px 0px;
     margin: 15px 0;
-    border-bottom: 2px solid #ccc;
+    border-top: 2px solid #ccc;
     box-sizing: border-box;
     text-align: right;
     fill: transparent;
   outline: none;
     
 }
-
+::placeholder{
+    color: white;
+ 
+}
 .error{
-    color: rgb(241, 26, 26);
+    color: red;
     font-weight: bold;
     font-style: normal;
-    /* display: inline-block; */
-
 }
