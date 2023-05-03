@@ -1,11 +1,10 @@
 /*profile style*/
-/* * {
-    text-decoration: none;
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     border: none;
-} */
+}
 #Artboard__3 {
     position: absolute;
     width: 100%;
@@ -64,8 +63,6 @@
     overflow: visible;
 }
 #nm {
-    background-color: white;
-    cursor: pointer;
     left: 580px;
     top: 180px;
     position: absolute;
@@ -135,89 +132,263 @@
     top: 309.015px;
     transform: matrix(1,0,0,1,0,0);
 }
-.container{
-    display: inline-block;
-    position: relative;
-    top: 310px;
-    left: 150px;
-    color: white;
-    width: 1040px;
-    display: flex;
-    justify-content: space-between;
-}
-.save-button{
-    display: inline-block;
-    position: relative;
-    top: 340px;
-    left: 535px;
-    width: 20%;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    font-size: 20px;
-	font-family: Bahij Helvetica Neue;
-    font-style: normal;
-    font-weight: normal;
-	cursor: pointer;
-    text-align: center;
-	color: rgba(60,152,189,1);
-	background-color: white;
-	border-radius: 50px;
-}
-
-
-.information-one{
-
-   display: inline-block;
-}
-.information-two{
-   
-   display: inline-block;
-   
-}
-.information-three{
-    display: inline-block;
-}
-.name{
-}
-
-.lastname{
-   
-}
-
-.username{
- 
-}
-.email{
-  
-}
-
-.age{
-   
-
-}
-
-.senf{
-    
-}
-
-#inputt{
-    display: inline-block;
-    background: none;
-    width: 300px;
-    padding: 10px 0px;
-    margin: 15px 0;
-    border-bottom: 2px solid #ccc;
-    box-sizing: border-box;
+#Text {
+    left: 1292.651px;
+    top: 606.045px;
+    position: absolute;
+    overflow: visible;
+    width: 431px;
+    height: 27px;
+    line-height: 25px;
+    margin-top: -2.5px;
     text-align: right;
-    fill: transparent;
-  outline: none;
-    
-}
-
-.error{
-    color: rgb(241, 26, 26);
-    font-weight: bold;
+    font-family: Gotham;
     font-style: normal;
-    /* display: inline-block; */
-
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(255,255,255,1);
+    letter-spacing: -0.4px;
+}
+#n_ {
+    left: 1292.651px;
+    top: 762px;
+    position: absolute;
+    overflow: visible;
+    width: 431px;
+    height: 27px;
+    line-height: 25px;
+    margin-top: -2.5px;
+    text-align: right;
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(255,255,255,1);
+    letter-spacing: -0.4px;
+}
+#Text_ {
+    left: 744.649px;
+    top: 606.045px;
+    position: absolute;
+    overflow: visible;
+    width: 431px;
+    height: 27px;
+    line-height: 25px;
+    margin-top: -2.5px;
+    text-align: right;
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(255,255,255,1);
+    letter-spacing: -0.4px;
+}
+#Text_ba {
+    left: 744.649px;
+    top: 762px;
+    position: absolute;
+    overflow: visible;
+    width: 431px;
+    height: 27px;
+    line-height: 25px;
+    margin-top: -2.5px;
+    text-align: right;
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(255,255,255,1);
+    letter-spacing: -0.4px;
+}
+#n__ba {
+    left: 196.646px;
+    top: 606.045px;
+    position: absolute;
+    overflow: visible;
+    width: 431px;
+    height: 27px;
+    line-height: 25px;
+    margin-top: -2.5px;
+    text-align: right;
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(255,255,255,1);
+    letter-spacing: -0.4px;
+}
+#Text_bb {
+    left: 196.646px;
+    top: 762px;
+    position: absolute;
+    overflow: visible;
+    width: 431px;
+    height: 27px;
+    line-height: 25px;
+    margin-top: -2.5px;
+    text-align: right;
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(255,255,255,1);
+    letter-spacing: -0.4px;
+}
+#Line_78 {
+    fill: transparent;
+    stroke: rgba(255,255,255,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.Line_78 {
+    overflow: visible;
+    position: absolute;
+    width: 430.382px;
+    height: 1px;
+    left: 1292.973px;
+    top: 647.955px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#Line_81 {
+    fill: transparent;
+    stroke: rgba(255,255,255,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.Line_81 {
+    overflow: visible;
+    position: absolute;
+    width: 430.382px;
+    height: 1px;
+    left: 1292.973px;
+    top: 803.91px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#Line_79 {
+    fill: transparent;
+    stroke: rgba(255,255,255,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.Line_79 {
+    overflow: visible;
+    position: absolute;
+    width: 430.382px;
+    height: 1px;
+    left: 744.97px;
+    top: 647.955px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#Line_82 {
+    fill: transparent;
+    stroke: rgba(255,255,255,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.Line_82 {
+    overflow: visible;
+    position: absolute;
+    width: 430.382px;
+    height: 1px;
+    left: 744.97px;
+    top: 803.91px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#Line_80 {
+    fill: transparent;
+    stroke: rgba(255,255,255,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.Line_80 {
+    overflow: visible;
+    position: absolute;
+    width: 430.382px;
+    height: 1px;
+    left: 196.967px;
+    top: 647.955px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#Line_83 {
+    fill: transparent;
+    stroke: rgba(255,255,255,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.Line_83 {
+    overflow: visible;
+    position: absolute;
+    width: 430.382px;
+    height: 1px;
+    left: 196.967px;
+    top: 803.91px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#Rectangle_268 {
+    fill: rgba(255,255,255,1);
+}
+.Rectangle_268 {
+    position: absolute;
+    overflow: visible;
+    width: 430px;
+    height: 43px;
+    left: 745px;
+    top: 918px;
+    --web-animation: fadein undefineds undefined;
+    --web-action-type: page;
+    --web-action-target: 0.html;
+    cursor: pointer;
+}
+#n__bg {
+    left: 885px;
+    top: 915px;
+    position: absolute;
+    overflow: visible;
+    width: 150px;
+    height: 56px;
+    text-align: center;
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgba(60,152,189,1);
+    letter-spacing: -0.4px;
+}
+#Group_412 {
+    position: absolute;
+    width: 36px;
+    height: 22px;
+    left: 140px;
+    top: 100px;
+    overflow: visible;
+    --web-animation: fadein undefineds undefined;
+    --web-action-type: page;
+    --web-action-target: Artboard___2.html;
+    cursor: pointer;
+}
+#Group_158 {
+    position: absolute;
+    width: 36px;
+    height: 22px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
 }
