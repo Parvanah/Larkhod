@@ -7,7 +7,7 @@ import { Route, Routes } from "react-router-dom";
 import Header from "./Header";
 import Home from "./App/screens/Home";
 import LogIn from "./App/screens/Login/LogIn"
-import SinUP from "./App/screens/SinUp/SinUP"
+import SinUP from "./App/screens/SinUP/SinUP"
 import Section from "./App/components/Sections/Section";
 import Grades from "./App/components/Grades/Grades";
 import Books from "./App/components/Books/Books";
