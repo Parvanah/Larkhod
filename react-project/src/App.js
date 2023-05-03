@@ -6,10 +6,6 @@ import "./App/index.css";
 import Header from "./Header";
 import Home from "./App/screens/Home";
 import LogIn from "./App/screens/Login/LogIn"
-<<<<<<< HEAD
-import SinUP from "./App/screens/SinUP/SinUP"
-=======
->>>>>>> book-unit-pages-react
 import Section from "./App/components/Sections/Section";
 import Grades from "./App/components/Grades/Grades";
 import Books from "./App/components/Books/Books";
