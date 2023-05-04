@@ -1,5 +1,12 @@
 import React from "react";
-import { View, Text, Image, TouchableOpacity, TextInput } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+  TextInput,
+  ScrollView,
+} from "react-native";
 import Svg, {
   Defs,
   LinearGradient,
@@ -22,6 +29,9 @@ import classTwo from "../grade_2_dari.json";
 
 const Sections = (props) => {
   const navigation = useNavigation();
+  const onSubmit = () => {
+    navigation.navigate("ChangeInfo");
+  };
   return (
     <View style={styles.container}>
       <View style={styles.svgWrapper}>
@@ -52,12 +62,6 @@ const Sections = (props) => {
             fill="url(#a)"
           />
 
-          <View style={styles.top}>
-            <Text style={styles.userName}>Khatima Sajadi</Text>
-            <View style={styles.imageWrapper}>
-              <Image source={user} style={styles.img} />
-            </View>
-          </View>
           <ForeignObject
             width={100}
             height={100}
@@ -97,12 +101,18 @@ const Sections = (props) => {
             />
           </Svg>
         </Svg>
+        <View style={styles.top}>
+          <Text style={styles.userName}>Khatima Sajadi</Text>
+          <TouchableOpacity style={styles.imageWrapper} onPress={onSubmit}>
+            <Image source={user} style={styles.img} />
+          </TouchableOpacity>
+        </View>
       </View>
 
       <View style={styles.middle}>
         <SeatchBar />
       </View>
-      <View style={styles.bottom}>
+      <ScrollView contentContainerStyle={styles.bottom}>
         <TouchableOpacity
           style={styles.bottomBtn}
           onPress={() =>
@@ -212,7 +222,7 @@ const Sections = (props) => {
           <Text style={styles.btnText}>بخش لیسه</Text>
           <Image source={high} />
         </TouchableOpacity>
-      </View>
+      </ScrollView>
     </View>
   );
 };

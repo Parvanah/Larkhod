@@ -1,0 +1,122 @@
+.section {
+    background-color: white;
+    color: rgb(81, 187, 228);
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    align-items: center;
+    color: rgba(60, 152, 189, 1);
+}
+
+.title h1 {
+    font-weight: bold;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    color: rgba(60, 152, 189, 1);
+    margin-top: -60px;
+}
+
+.title p {
+    color: rgba(60, 152, 189, 1);
+    font-size: 30px;
+}
+
+#ul-section {
+    display: flex;
+    color: rgba(60, 152, 189, 1);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#ul-section img {
+    height: 200px;
+    width: 200px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 6vh;
+    margin-right: px;
+    padding-left: 60px;
+}
+
+#ul-section h1 {
+    color: rgba(60, 152, 189, 1);
+    font-size: 30px;
+    margin-left: 100px;
+    margin-top: 2vh;
+    margin-right: 30px;
+}
+
+#ul-section p {
+    color: rgba(60, 152, 189, 1);
+    align-items: center;
+    justify-content: center;
+    margin-left: 80px;
+    margin-top: 2vh;
+    margin-right: 50px;
+    font-size: 22px;
+    display: flex;
+}
+
+.section .prevuse img {
+    padding-left: 0px;
+    padding-right: 1260px;
+    padding-top: 0px;
+    /* margin-left: 5px;
+    margin-top: 20px;
+    margin-right: 1250px; */
+    height: 15px;
+    width: 30px;
+}
+
+.section .svg {
+    height: 10px;
+    width: 10x;
+    margin-left: 0px;
+    padding-top: 20px;
+    padding-right: 950px;
+    margin: 12px;
+}
+
+.section .svg1 {
+    padding-left: 1080px;
+    height: 10px;
+    width: 10x;
+    padding-top: -30px;
+    padding-bottom: 85px;
+    padding-right: 0px;
+    margin-top: px;
+}
+
+.section .svg2 {
+    height: 10px;
+    width: 10x;
+    top: 580px;
+    position: fixed;
+    margin-left: 0px;
+    padding-top: -30px;
+    padding-right: 950px;
+    padding-bottom: 40px;
+    display: inline-flex;
+    margin: 0px;
+}
+
+.section .svg3 {
+    height: 10px;
+    width: 10x;
+    position: fixed;
+    margin-left: 2000px;
+    margin-bottom: 30px;
+    top: 550px;
+    padding-top: 20px;
+    padding-right: 0px;
+    padding-bottom: 80px;
+    padding-right: 970px;
+    display: inline-flex;
+    margin: px;
+}

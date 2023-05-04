@@ -147,10 +147,10 @@ const SignUp = () => {
             <Image source={google} />
             <Text style={styles.linkBtnText}>با حساب گوگل خود وارد شوید</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.linkBtn}>
+          {/* <TouchableOpacity style={styles.linkBtn}>
             <Image source={facebook} />
             <Text style={styles.linkBtnText}>با حساب فیسبوک خود وارد شوید</Text>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </View>
       </View>
     </ScrollView>

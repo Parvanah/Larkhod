@@ -1,6 +1,7 @@
 import React from "react";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
 import { NavigationContainer, useNavigation } from "@react-navigation/native";
+
 import {
   View,
   Text,
@@ -9,29 +10,29 @@ import {
   Image,
   Alert,
   Button,
-  Pressable,
 } from "react-native";
 import styles from "./FirstPaage.style";
 import logo from "../../assets/White_PNG_Format_z.png";
 
-export default function FirstPage() {
+export default function FirstPage(props) {
   const navigation = useNavigation();
   return (
     <SafeAreaView style={styles.container}>
       <Image source={logo} style={styles.imgStyle} />
+
       <View style={styles.btnWrapper}>
-        <Pressable
+        <TouchableOpacity
           style={styles.btn}
           onPress={() => navigation.navigate("SignUp")}
         >
           <Text style={styles.btnText}>زبان دری</Text>
-        </Pressable>
-        <Pressable
+        </TouchableOpacity>
+        <TouchableOpacity
           style={styles.btn}
           onPress={() => navigation.navigate("SignUp")}
         >
           <Text style={styles.btnText}>پښتو ژبه</Text>
-        </Pressable>
+        </TouchableOpacity>
       </View>
       <View style={styles.textWrapper}>
         <Text style={styles.text}>به لارښود خوش آمدید</Text>

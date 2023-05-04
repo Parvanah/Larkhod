@@ -14,7 +14,7 @@ import unitIcon from "../../assets/Group_161.png";
 import SearchBar from "../../screens/SearchBar";
 import { useNavigation } from "@react-navigation/native";
 import { useRoute } from "@react-navigation/native";
-
+import styleSection from "../Sections/Section.Style";
 const Units = () => {
   const navigation = useNavigation();
   const route = useRoute();
@@ -35,7 +35,7 @@ const Units = () => {
           </Text>
         </View>
       </View>
-      <View style={style.middle}>
+      <View style={styleSection.middle}>
         <SearchBar />
       </View>
       <FlatList
@@ -134,15 +134,15 @@ const style = StyleSheet.create({
     backgroundColor: "#fff",
     flex: 1,
     justifyContent: "space-between",
-    alignItems: "stretch",
+    alignItems: "center",
   },
   top: {
-    height: "25%",
+    height: 200,
     width: "100%",
     justifyContent: "space-between",
     alignItems: "center",
     padding: 20,
-    marginBottom: 0,
+    marginBottom: -20,
     position: "relative",
   },
   arrowStyle: {

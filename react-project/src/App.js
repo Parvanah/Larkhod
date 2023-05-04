@@ -3,11 +3,10 @@ import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
 
-
 import Header from "./Header";
 import Home from "./App/screens/Home";
 import LogIn from "./App/screens/Login/LogIn";
-import SinUP from "./App/screens/SinUp/SinUP";
+import SinUP from "./App/screens/SinUP/SinUP";
 import Section from "./App/components/Sections/Section";
 import Grades from "./App/components/Grades/Grades";
 import Books from "./App/components/Books/Books";
@@ -15,14 +14,11 @@ import Units from "./App/components/Units/Units";
 import Lessons from "./App/components/Lessons/Lessons";
 
 import Grad from "./App/Grad";
-import Book from "./App/Book"
+import Book from "./App/Book";
 import Continue from "./App/Continue";
 import About from "./App/About";
 import Suggestion from "./App/Suggestion";
 import Profile from "./App/screens/Profile/Profile";
-
-
-
 
 function App() {
   return (

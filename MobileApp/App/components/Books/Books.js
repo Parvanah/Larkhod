@@ -16,6 +16,7 @@ import SearchBar from "../../screens/SearchBar";
 import photo1 from "../../assets/Group_133.png";
 import photo2 from "../../assets/Group_143_em.png";
 import photo3 from "../../assets/Group_153.png";
+import middleStyle from "../Sections/Section.Style";
 
 const Books = () => {
   const navigation = useNavigation();
@@ -35,7 +36,7 @@ const Books = () => {
           <Text style={style.BooksText}>کتاب های {route.params.grade} </Text>
         </View>
       </View>
-      <View style={style.middle}>
+      <View style={middleStyle.middle}>
         <SearchBar />
       </View>
 
@@ -48,7 +49,7 @@ const Books = () => {
             <TouchableOpacity
               style={style.bookItem}
               onPress={() => {
-                if (item.unitCheck == "false") {
+                if (item.parts[0].lessons == undefined) {
                   return navigation.navigate("Lessons", {
                     lessons: item.parts,
                     title: "مضمون " + item.label,
@@ -84,9 +85,10 @@ const style = StyleSheet.create({
     backgroundColor: "#fff",
     flex: 1,
     // alignItems: "center",
+    // alignItems: "center",
   },
   top: {
-    height: "25%",
+    height: 130,
     width: "100%",
     justifyContent: "space-between",
     alignItems: "center",
@@ -98,7 +100,7 @@ const style = StyleSheet.create({
   },
   books: {
     backgroundColor: "rgba(60, 152, 189, 1)",
-    width: "95%",
+    width: "87%",
     justifyContent: "center",
     alignItems: "center",
     padding: 10,

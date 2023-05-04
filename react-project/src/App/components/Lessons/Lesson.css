@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.lesson {
+    margin-top: -13px;
+    display: flex;
+    flex-direction: row;
+    /* height: 70px; */
+    overflow-y: hidden;
+    /* padding-left: 20px; */
+}
+
+.sidebar {
+    /* position: fixed;
+    top: 0%;
+    left: 0%;
+    bottom: 0%; */
+    /* background-color: #3c98bd; */
+    /* width: 200px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0;
+    padding: 10px;
+    margin: 20px;
+    margin-bottom: 0px;
+    padding: 0px 30px;
+    height: 70vh;
+    overflow-y: scroll;
+}
+
+.sidebar .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.sidebar .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar .header img {
+    width: 50px;
+    height: 50px;
+
+}
+
+.sidebar .sidebar h3 {
+    padding-bottom: 50px;
+    text-align: center;
+}
+.sidebar .sidebar-lessons{
+    /* overflow-y: scroll; */
+}
+
+.sidebar h3,
+.sidebar .sidebar-lessons div {
+    color: white;
+
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.sidebar .sidebar-lessons div .titles {
+    margin-left: 60px;
+
+}
+
+.sidebar .sidebar-lessons div {
+    padding: 10px;
+    text-align: right;
+
+}
+
+.sidebar .sidebar-lessons div:hover {
+    cursor: pointer;
+}
+
+.showLesson {
+    width: 100%;
+    padding: 20px 50px 0px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.showLesson .title {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.showLesson .title h1 {
+    font-size: 40px;
+    padding: 0;
+    margin: 5px;
+
+}
+
+.showLesson .title div {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+.showLesson .title img {
+    height: 60px;
+    width: 60px;
+    margin-bottom: -15px;
+}
+
+.showLesson .title div p {
+    font-size: 40px;
+    margin: 10px;
+
+}
+
+.showLesson .bottom {
+    width: 100%;
+    margin: 0px;
+    
+}
+
+.showLesson .bottom .img {
+    width: 70%;
+    height: 400px;
+    /* margin-top: 10px; */
+    overflow-y: scroll;
+    border: 4px dashed #3c98bd;
+   
+}
+
+.showLesson .bottom .img img {
+    width: 100%;
+}
+
+.showLesson .midlle {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    /* padding:20px; */
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.showLesson .midlle img {
+    height: 50px;
+    width: 50px;
+    margin-left: 50px;
+    margin-top: 0px;
+}
+
+.showLesson .midlle p {
+    font-size: 30px;
+    color: #707070;
+}

@@ -20,6 +20,9 @@ import { useRoute } from "@react-navigation/native";
 const Grades = (props) => {
   const route = useRoute();
   const navigation = useNavigation();
+  const onSubmit = () => {
+    navigation.navigate("ChangeInfo");
+  };
   const Renderitem = ({ item }) => {
     return (
       <TouchableOpacity
@@ -75,14 +78,13 @@ const Grades = (props) => {
           transform="translate(-36.137 -50.39)"
           fill="url(#a)"
         />
-        <View style={styleSection.top}>
-          <Text style={styleSection.userName}>Khatima Sajadi</Text>
-          <View style={styleSection.imageWrapper}>
-            <Image source={user} style={styleSection.img} />
-          </View>
-        </View>
       </Svg>
-
+      <View style={styleSection.top}>
+        <Text style={styleSection.userName}>Khatima Sajadi</Text>
+        <TouchableOpacity style={styleSection.imageWrapper} onPress={onSubmit}>
+          <Image source={user} style={styleSection.img} />
+        </TouchableOpacity>
+      </View>
       <View style={styleSection.middle}>
         <SearchBar />
       </View>
@@ -171,8 +173,8 @@ const style = StyleSheet.create({
     // marginBottom: "30%",
 
     marginRight: 200,
-    marginLeft: -40,
-    marginTop: -5,
+    marginLeft: -60,
+    marginTop: -10,
     marginBottom: -50,
 
     zIndex: 100,

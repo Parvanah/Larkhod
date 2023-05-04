@@ -7,7 +7,6 @@ import {
   TextInput,
   TouchableOpacity,
   StyleSheet,
-  
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import logo from "../../assets/White_PNG_Format_z.png";
@@ -15,59 +14,58 @@ import user from "../../assets/user.png";
 import arrow from "../../assets/Group_158.png";
 
 const ChangeInfo = () => {
-
   const navigation = useNavigation();
-  const onSubmit =()=>{
-     navigation.navigate("Sections");
-  }
+  const onSubmit = () => {
+    navigation.navigate("Sections");
+  };
   return (
     <SafeAreaView style={styles.outContainer}>
-           <TouchableOpacity
-          style={styles.arrowStyle}
-          onPress={() => navigation.navigate("SignUp")}
-        >
+      <TouchableOpacity
+        style={styles.arrowStyle}
+        onPress={() => navigation.goBack()}
+      >
         <Image source={arrow} />
-        </TouchableOpacity>
-       <View style={styles.imageWrapper}>
-          <Image source={user} style={styles.img} />
-          <Text style={styles.usertext}>تغییر عکس نمایه</Text>
-        </View>
+      </TouchableOpacity>
+      <View style={styles.imageWrapper}>
+        <Image source={user} style={styles.img} />
+        <Text style={styles.usertext}>تغییر عکس نمایه</Text>
+      </View>
       <View style={styles.InContainer}>
-        <View style={styles.form}>       
-               <TextInput
-                  name="firstName"
-                  placeholder=" تغییر نام "
-                  style={styles.input}
-                />
-                <TextInput
-                  name="lastName"
-                  placeholder=" تغییر تخلص "
-                  style={styles.input}
-                />
-                <TextInput
-                  name="fullName"
-                  placeholder="تغییر نام کاربری "
-                  style={styles.input}
-                />
-                <TextInput
-                  name="email"
-                  placeholder="تغییر ایمیل ادرس"
-                  keyboardType="email-address"
-                  style={styles.input}
-                />
-                <TextInput
-                  name="age"
-                  placeholder="تغییر سن"
-                  keyboardType="numeric"
-                  style={styles.input}
-                />
-                <TextInput
-                  name="class"
-                  placeholder="تغییر صنف"
-                  keyboardType="numeric"
-                  style={styles.input}
-                />
-          <TouchableOpacity style={styles.submitBtn}  onPress={onSubmit}  >
+        <View style={styles.form}>
+          <TextInput
+            name="firstName"
+            placeholder=" تغییر نام "
+            style={styles.input}
+          />
+          <TextInput
+            name="lastName"
+            placeholder=" تغییر تخلص "
+            style={styles.input}
+          />
+          <TextInput
+            name="fullName"
+            placeholder="تغییر نام کاربری "
+            style={styles.input}
+          />
+          <TextInput
+            name="email"
+            placeholder="تغییر ایمیل ادرس"
+            keyboardType="email-address"
+            style={styles.input}
+          />
+          <TextInput
+            name="age"
+            placeholder="تغییر سن"
+            keyboardType="numeric"
+            style={styles.input}
+          />
+          <TextInput
+            name="class"
+            placeholder="تغییر صنف"
+            keyboardType="numeric"
+            style={styles.input}
+          />
+          <TouchableOpacity style={styles.submitBtn} onPress={onSubmit}>
             <Text style={styles.submitText}>ذخیره کردن </Text>
           </TouchableOpacity>
         </View>
@@ -91,7 +89,7 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
     alignItems: "center",
     paddingHorizontal: "15%",
-    paddingVertical: "20%"
+    paddingVertical: "20%",
   },
   usertext: {
     fontSize: 14,
@@ -106,7 +104,7 @@ const styles = StyleSheet.create({
   arrowStyle: {
     marginTop: "10%",
     alignSelf: "flex-start",
-    marginLeft: "10%"
+    marginLeft: "10%",
   },
   form: { width: "100%" },
   input: {
@@ -147,17 +145,3 @@ const styles = StyleSheet.create({
   },
 });
 export default ChangeInfo;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
