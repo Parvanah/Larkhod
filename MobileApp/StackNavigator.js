@@ -9,9 +9,10 @@ import Sections from "./App/components/Sections/Sections";
 import Books from "./App/components/Books/Books";
 import Units from "./App/components/Units/Units";
 import Grades from "./App/components/Grades/Grades";
-import Information from "./App/screens/Information/Information"
-import ChangeInfo from "./App/screens/ChangeInfo/ChangeInfo"
-
+import Information from "./App/screens/Information/Information";
+import ChangeInfo from "./App/screens/ChangeInfo/ChangeInfo";
+import ForgotPassword from "./App/screens/ForgotPassword/ForgotPassword";
+import SignUpVerification from "./App/screens/SignUpVerification/SignUpVerification"
 
 
 const Stack = createNativeStackNavigator();
@@ -24,8 +25,10 @@ const StackNaigator = () => {
       <Stack.Group>
         <Stack.Screen name="FirstPage" component={FirstPage} />
         <Stack.Screen name="SignUp" component={SignUp} />
+        <Stack.Screen name="SignUpVerification" component={SignUpVerification} />
+        <Stack.Screen name="Information" component={Information} /> 
         <Stack.Screen name="LogIn" component={LogIn} />
-        <Stack.Screen name="Information"  component={Information} />
+        <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
         <Stack.Screen name="Sections" component={Sections} />
         <Stack.Screen name="ChangeInfo" component={ChangeInfo} />
         <Stack.Screen name="Grades" component={Grades} />

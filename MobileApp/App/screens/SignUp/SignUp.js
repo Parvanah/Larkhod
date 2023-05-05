@@ -9,7 +9,6 @@ import {
   Button,
   TouchableOpacity,
   Alert,
-  ScrollView,
 } from "react-native";
 import google from "../../assets/google.png";
 import facebook from "../..//assets/facebook.png";
@@ -24,20 +23,16 @@ import CustomInput from "./CustomInput";
 
 const SignUp = () => {
   const signUpValidationSchema = Yup.object().shape({
-    fullName: Yup
-      .string()
-      .matches(/(\w.+\s).+/, 'حداقل دو نام وارد کنید')
-      .required('نام کامل الزامی است'),
     email: Yup
       .string()
-      .email("لطفا آیمیل متعتبر تان را وارد کنید")
-      .required('ایمیل ادرس الزامی است'),
+      .email("لطفا ایمیل متعتبر تان را وارد کنید")
+      .required('ایمیل آدرس الزامی است'),
     password: Yup
       .string()
       .matches(/\w*[a-z]\w*/,  " رمز عبور باید یک حرف کوچک داشته باشد")
       .matches(/\w*[A-Z]\w*/,  " رمز عبور باید یک حرف بزرگ داشته باشد")
       .matches(/\d/, "رمز عبور باید یک عدد داشته باش")
-      .matches(/[!@#$%^&*()\-_"=+{}; :,<.>]/, " رمز عبور باید یک کاراکتر خاص داشته باش")
+      .matches(/[!@#$%^&*()\-_"=+{}; :,<.>]/, "  عبور باید یک کارکتر خاص داشته یاشد")
       .min(8, ({ min }) => `  رمز عبور باید حداقل ${min} کارکتر باشد `)
       .required('رمز عبور الزامی است'),
     confirmPassword: Yup
@@ -49,9 +44,9 @@ const SignUp = () => {
     
     if(!values){
       Alert("please fill the form")
-    }
+    }   
     else{
-      navigation.navigate("Information");
+      navigation.navigate("SignUpVerification");
     }
   };
 
@@ -65,7 +60,7 @@ const SignUp = () => {
     }
   };
   return (
-    <ScrollView style={Styles.outContainer}>
+    <SafeAreaView style={Styles.outContainer}>
       <Image source={logo} style={Styles.imgStyle} />
       <View style={Styles.InContainer}>
         <View style={styles.navContainer}>
@@ -79,14 +74,11 @@ const SignUp = () => {
         <View style={styles.form}>
         <Formik  validationSchema={signUpValidationSchema}
              initialValues={{
-              fullName: '',
               email: '',
               password: '',
               confirmPassword: '',
             }} 
-            onSubmit={values => onSubmit(values)}
-
-            
+            onSubmit={values => onSubmit(values)}  
           > 
             {({  
             handleChange,
@@ -96,11 +88,6 @@ const SignUp = () => {
             isValid,
            }) => (
               <>
-               <Field
-                  component={CustomInput}
-                  name="fullName"
-                  placeholder=" نام کاربری"
-                />
                 <Field
                   component={CustomInput}
                   name="email"
@@ -150,16 +137,13 @@ const SignUp = () => {
             <Image source={google} />
             <Text style={styles.linkBtnText}>با حساب گوگل خود وارد شوید</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.linkBtn}>
-            <Image source={facebook} />
-            <Text style={styles.linkBtnText}>با حساب فیسبوک خود وارد شوید</Text>
-          </TouchableOpacity>
         </View>
       </View>
-    </ScrollView>
+    </SafeAreaView>
   );
 };
 export default SignUp;
+
 
 
 

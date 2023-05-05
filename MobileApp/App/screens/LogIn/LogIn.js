@@ -4,17 +4,17 @@ import Styles from "./LogIn.style";
 import styles from "../LogIn/LogIn.style";
 import logo from "../../assets/White_PNG_Format_z.png";
 import google from "../../assets/google.png";
-import facebook from "../..//assets/facebook.png";
 import arrow from "../../assets/Group_158_a.png";
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { useNavigation } from "@react-navigation/native";
+import ForgotPassword from "../ForgotPassword/ForgotPassword";
 
 const loginValidationSchema = Yup.object().shape({
   email: Yup
     .string()
     .email("Please enter valid email")
-    .required('ایمیل ادرس الزامی است'),
+    .required('ایمیل آدرس الزامی است'),
   password: Yup
     .string()
     .min(8, ({ min }) => `Password must be at least ${min} characters`)
@@ -24,7 +24,6 @@ const loginValidationSchema = Yup.object().shape({
 const LogIn = () => {
   const navigation = useNavigation();
   const OnSubmit = (values) => {
-    
     if(!values){
       Alert("please fill the form")
     }
@@ -32,6 +31,9 @@ const LogIn = () => {
       navigation.navigate("Sections");
     }
   };
+  const handle = () =>{
+    navigation.navigate(ForgotPassword);
+  }
 
     return (     
       <SafeAreaView style={Styles.outContainer}>
@@ -71,15 +73,11 @@ const LogIn = () => {
             <TextInput
              name="email"
              placeholder=" ایمیل آدرس"
-            //  style={styles.textInput}
              onChangeText={handleChange('email')}
              onBlur={handleBlur('email')}
              value={values.email}
              keyboardType="email-address"
-              // onBlur={() => emailValidator()}
               variant="rounded"
-              // marginX={10}
-              // marginY={5}
               style={styles.input}
             />
              {(errors.email && touched.email) &&
@@ -88,21 +86,19 @@ const LogIn = () => {
             <TextInput
               name="password"
               placeholder="رمز عبور"
-              // style={styles.textInput}
               onChangeText={handleChange('password')}
               onBlur={handleBlur('password')}
               value={values.password}
               secureTextEntry
-            variant="rounded"
-            // marginX={10}
+              variant="rounded"
               style={styles.input}
-            //   textContentType="password
             />
              {(errors.password && touched.password) &&
                   <Text style={styles.errorText}>{errors.password}</Text>
             }
-
-           <Text style={styles.afterPass}> رمز عبوری تان را فراموش کرده اید؟</Text> 
+          <TouchableOpacity onPress={handle}>
+            <Text style={styles.afterPass}> رمز عبوری تان را فراموش کرده اید؟ </Text>
+          </TouchableOpacity> 
            <TouchableOpacity style={styles.submitBtn}  
              onPress={ handleSubmit}
              disabled={!isValid} 
@@ -123,10 +119,6 @@ const LogIn = () => {
           <TouchableOpacity style={styles.linkBtn}>
             <Image source={google} />
           <Text style={styles.linkBtnText}>با حساب گوگل خود وارد شوید  </Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.linkBtn}>
-            <Image source={facebook} />
-          <Text style={styles.linkBtnText}>با حساب فیسبوک خود وارد شوید  </Text>
           </TouchableOpacity>
           </View>
         </View>

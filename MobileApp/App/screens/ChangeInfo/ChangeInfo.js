@@ -45,17 +45,6 @@ const ChangeInfo = () => {
                   style={styles.input}
                 />
                 <TextInput
-                  name="fullName"
-                  placeholder="تغییر نام کاربری "
-                  style={styles.input}
-                />
-                <TextInput
-                  name="email"
-                  placeholder="تغییر ایمیل ادرس"
-                  keyboardType="email-address"
-                  style={styles.input}
-                />
-                <TextInput
                   name="age"
                   placeholder="تغییر سن"
                   keyboardType="numeric"
