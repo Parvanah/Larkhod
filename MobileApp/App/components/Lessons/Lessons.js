@@ -132,7 +132,7 @@ const style = StyleSheet.create({
   },
   topTitle: {
     color: "rgba(60,152,189,1)",
-    fontSize: 20,
+    fontSize: 18,
     marginTop: 10,
     textAlign: "center",
   },
