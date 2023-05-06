@@ -9,7 +9,6 @@
                   {   
                       "subject_path":"/dari_subject/",
                       "label": "دری",
-                      "unitCheck": "false",
                       "parts": 
                       [
                         {
@@ -472,7 +471,6 @@
                   {
                     "subject_path":"/art_subject/",
                     "label": "هنر رسامی",
-                    "unitCheck": "false",
                     "parts": 
                     [
                       {   
@@ -706,7 +704,6 @@
                   { 
                     "subject_path":"/hand_writting_subject/",
                     "label": "حسن خط",
-                    "unitCheck": "false",
                     "parts":
                     [
                       {   
@@ -727,7 +724,7 @@
                             ]
                         },
                         {
-                          "label": "ترکیب حروف (ب) با ( س ـ فس)",
+                          "label": " (ترکیب حرف ( ب ) با ( س - ف",
                           "paths":
                           [
                             "/lessons/lesson_3/lesson3.1.jpg"
@@ -1053,7 +1050,6 @@
                   { 
                     "subject_path":"/islamic_study_hanafi_subject/",
                     "label": "(مذهب حنفی)تعليم وتربيۀ اسلامی",
-                    "unitCheck": "false",
                     "parts":
                     [
                       {   
@@ -1359,7 +1355,6 @@
                   { 
                     "subject_path":"/slamic_study_jafari_subject/",
                     "label": "(مذهب جعفری)تعليم وتربيۀ اسلامی",
-                    "unitCheck": "true",
                     "parts":
                     [
                       {
@@ -1669,7 +1664,6 @@
                   {
                     "subject_path":"/life_skill_subject/",
                     "label": "مهارت های زنده ګی",
-                    "unitCheck": "false",
                     "parts":
                     [
                       [
@@ -1904,7 +1898,6 @@
                   {
                     "subject_path":"/math_subject/",
                     "label": "ریاضی",
-                    "unitCheck": "true",
                     "parts":
                     [
                       {
@@ -2475,7 +2468,6 @@
                   {
                     "subject_path":"/quran_subject/",
                     "label": "آموزش قرآن کریم",
-                    "unitCheck": "false",
                     "parts":
                     [
                       {

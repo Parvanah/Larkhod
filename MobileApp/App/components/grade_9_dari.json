@@ -9,7 +9,6 @@
               {
               "subject_path":"/arabic_subject/",
               "label": "عربی",
-              "unitCheck": "false",
               "parts":
               [   
                     {
@@ -359,7 +358,6 @@
               {
               "subject_path":"/art_subject/",
               "label": "هنــــــــر",
-              "unitCheck": "false",
               "parts":
               [
                 {
@@ -535,7 +533,6 @@
               {
                 "subject_path":"/biology_subject/",
                 "label": "بيولوژي",
-                "unitCheck": "true",
                 "parts":
                 [
                 {
@@ -1053,7 +1050,6 @@
               {
                 "subject_path":"/chemistry_subject/",
                 "label": "کــيـمـيـا",
-                "unitCheck": "true",
                 "parts":
                 [
                 {
@@ -1363,7 +1359,6 @@
               {
                 "subject_path":"/civic_subject/",
                 "label": "تعليمات مدني",
-                "unitCheck": "true",
                 "parts":
                 [
                 {
@@ -1546,7 +1541,6 @@
               {
                 "subject_path":"/dari_subject/",
                 "label": "زبان و ادبيات درى",
-                "unitCheck": "false",
                 "parts":
                 [   
                     {
@@ -1917,7 +1911,6 @@
               {
                 "subject_path":"/english_subject/",
                 "label": "English",
-                "unitCheck": "true",
                 "parts":
                 [
                 {
@@ -2682,7 +2675,6 @@
               {
                 "subject_path":"/geography_subject/",
                 "label": "جغرافيه",
-                "unitCheck": "true",
                 "parts":
                 [
                 {
@@ -3000,7 +2992,6 @@
               {
                 "subject_path":"/history_subject/",
                 "label": "تاريخ",
-                "unitCheck": "true",
                 "parts":
                 [
                 {
@@ -3314,7 +3305,6 @@
               {
                 "subject_path":"/islamic_hanafi_subject/",
                 "label": "تعليم و تربيه اسلامی (مذهب حنفی)",
-                "unitCheck": "false",
                 "parts":
                 [
                 {   
@@ -3715,7 +3705,6 @@
               {
                 "subject_path":"/islamic_jafari_subject/",
                 "label": "تعليم و تربية اسلامى(مذهب جعفرى)",
-                "unitCheck": "true",
                 "parts":
                 [
                 {
@@ -4050,7 +4039,6 @@
               {
                 "subject_path":"/math_subject/",
                 "label": "رياضى",
-                "unitCheck": "true",
                 "parts":
                 [
                 {
@@ -4928,7 +4916,6 @@
               {
                 "subject_path":"/pashto_subject/",
                 "label": "پښتو(دري ژبو لپاره)",
-                "unitCheck": "false",
                 "parts":
                 [   
                     {
@@ -5235,7 +5222,6 @@
               {
                 "subject_path":"/physic_subject/",
                 "label": "فزيــــــك",
-                "unitCheck": "true",
                 "parts":
                 [
                 {
@@ -5566,7 +5552,6 @@
               {
                 "subject_path":"/profissions_subject/",
                 "label": "حرفه",
-                "unitCheck": "true",
                 "parts":
                 [
                 {
@@ -5941,7 +5926,6 @@
               {
                 "subject_path":"/tajweed_subject/",
                 "label":"تعلیم قرآنکریم",
-                "unitCheck": "false",
                 "parts":
                 [
                     {
@@ -5995,7 +5979,6 @@
               {
                 "subject_path":"/watan_dosti_subject/",
                 "label": "وطن دوستی",
-                "unitCheck": "false",
                 "parts":
                 [   
                     {

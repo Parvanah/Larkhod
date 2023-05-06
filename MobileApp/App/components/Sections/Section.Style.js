@@ -3,17 +3,6 @@ import React from "react";
 import { StyleSheet } from "react-native";
 
 const Styles = StyleSheet.create({
-  circle: {
-    marginTop: 15,
-    marginLeft: 180,
-  },
-  line: {
-    // marginTop: 30,
-  },
-  svgWrapper: {
-    marginTop: -10,
-    marginBottom: 50,
-  },
   container: {
     justifyContent: "space-between",
     backgroundColor: "#fff",
@@ -21,10 +10,15 @@ const Styles = StyleSheet.create({
     alignItems: "center",
   },
   top: {
-    marginTop: -120,
+    backgroundColor: "rgba(60, 152, 189, 1)",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
+    paddingHorizontal: 20,
+    height: "25%",
+    borderBottomLeftRadius: 90,
+    borderBottomRightRadius: 90,
+    width: "100%",
   },
   userName: {
     fontSize: 20,
@@ -40,7 +34,6 @@ const Styles = StyleSheet.create({
     alignItems: "center",
     borderRadius: 50,
     marginHorizontal: 20,
-    // marginTop: -20,
   },
   img: {
     height: 40,
@@ -53,30 +46,24 @@ const Styles = StyleSheet.create({
     // marginTop: 20,
     // padding: 10,
     // borderRadius: 10,
-    height: 50,
+    height: 40,
     alignItems: "center",
     justifyContent: "center",
-    marginVertical: 10,
-    // marginBottom: -10,
-    width: "100%",
-    // backgroundColor: "green",
   },
   bottom: {
     backgroundColor: "#fff",
-    height: "100%",
+    height: "60%",
     justifyContent: "center",
     alignItems: "center",
     marginBottom: 30,
     width: "100%",
-    marginTop: 0,
   },
   bottomBtn: {
     backgroundColor: "rgba(60, 152, 189, 1)",
     padding: 20,
     margin: 10,
-
-    width: 280,
-    height: 130,
+    width: "70%",
+    height: "30%",
     borderRadius: 20,
     justifyContent: "space-between",
     alignItems: "center",

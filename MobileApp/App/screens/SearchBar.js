@@ -1,29 +1,59 @@
-import React, { useState } from "react";
+import React from "react";
 import { StyleSheet, TextInput, View, Keyboard, Button } from "react-native";
-import Svg, { Rect, Path, Ellipse } from "react-native-svg";
+
 import { Feather, Entypo } from "@expo/vector-icons";
 
-const SearchBar = (props) => {
+const SearchBar = ({ clicked, searchPhrase, setSearchPhrase, setClicked }) => {
   return (
     <View style={styles.container}>
-      {/* <TextInput style={styles.searchbar} placeholder="جستجو">
+      <View
+        style={
+          clicked ? styles.searchBar__clicked : styles.searchBar__unclicked
+        }
+      >
+        {/* Input field */}
+        <TextInput
+          style={styles.input}
+          placeholder="جستجو"
+          value={searchPhrase}
+          onChangeText={setSearchPhrase}
+          // onFocus={() => {
+          //   setClicked(true);
+          // }}
+        />
+        {/* search Icon */}
         <Feather
           name="search"
           size={15}
           color="black"
           style={{ marginRight: 1 }}
         />
-      </TextInput> */}
 
-      <View style={styles.searchbar}>
-        <Feather
-          name="search"
-          size={15}
-          color="black"
-          style={{ marginRight: 1 }}
-        />
-        <TextInput placeholder="جستجو" style={styles.serachText} />
+        {/* cross Icon, depending on whether the search bar is clicked or not */}
+        {/* {clicked && (
+          <Entypo
+            name="cross"
+            size={15}
+            color="black"
+            style={{ padding: 1 }}
+            onPress={() => {
+              setSearchPhrase("");
+            }}
+          />
+        )} */}
       </View>
+      {/* cancel button, depending on whether the search bar is clicked or not */}
+      {/* {clicked && (
+        <View>
+          <Button
+            title="Cancel"
+            // onPress={() => {
+            //   Keyboard.dismiss();
+            //   // setClicked(false);
+            // }}
+          ></Button>
+        </View>
+      )} */}
     </View>
   );
 };
@@ -31,27 +61,12 @@ export default SearchBar;
 
 // styles
 const styles = StyleSheet.create({
-  searchbar: {
-    backgroundColor: "rgba(212,228,232,1)",
-    width: "80%",
-    height: 40,
-    padding: 10,
-    display: "flex",
-    flexDirection: "row-reverse",
-    color: "red",
-    borderRadius: 20,
-  },
-  serachText: {
-    width: "90%",
-    textAlign: "right",
-    marginRight: 10,
-  },
   container: {
     justifyContent: "flex-start",
     alignItems: "center",
     flexDirection: "row",
-    // width: "100%",
-    // height: 35,
+    width: "95%",
+    height: 35,
   },
   searchBar__unclicked: {
     padding: 10,
@@ -60,7 +75,6 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(212,228,232,1)",
     borderRadius: 10,
     alignItems: "center",
-    textAlign: "right",
   },
   searchBar__clicked: {
     padding: 10,
