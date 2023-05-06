@@ -12,10 +12,10 @@ const Styles = StyleSheet.create({
     height: 90,
     width: 90,
     marginTop: 10,
-    marginBottom: 60
+    marginBottom: 60,
   },
   InContainer: {
-    borderTopRightRadius: 55, 
+    borderTopRightRadius: 55,
     borderTopLeftRadius: 55,
     backgroundColor: "#fff",
     flex: 3,
@@ -68,7 +68,7 @@ const Styles = StyleSheet.create({
     borderBottomWidth: 1,
     width: "100%",
     height: 40,
-    marginTop: 10
+    marginTop: 10,
   },
   submitBtn: {
     backgroundColor: "rgba(60,152,189,1)",
@@ -91,41 +91,41 @@ const Styles = StyleSheet.create({
     borderBottomColor: "lightgray",
     borderBottomWidth: 2,
   },
- linkedBtnWrapper:{
-  justifyContent: "center",
-  alignItems: "center",
-  width: "85%",
-  marginVertical: 10,
- },
- linkBtn:{
-  flexDirection: "row",
-  justifyContent: "space-between",
-  alignItems: "center",
-  height: 40,
-  marginTop: 10,
-  width: "100%",
-  paddingHorizontal: 20,
-  borderColor: "lightgray",
-  borderWidth: 1,
-  borderStyle: "solid",
-  borderRadius: 25,
- },
- linkBtnText: {
-  color: "lightgray",
- },
-  afterPass:{
+  linkedBtnWrapper: {
+    justifyContent: "center",
+    alignItems: "center",
+    width: "85%",
+    marginVertical: 10,
+  },
+  linkBtn: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    height: 40,
+    marginTop: 10,
+    width: "100%",
+    paddingHorizontal: 20,
+    borderColor: "lightgray",
+    borderWidth: 1,
+    borderStyle: "solid",
+    borderRadius: 25,
+  },
+  linkBtnText: {
+    color: "lightgray",
+  },
+  afterPass: {
     fontSize: 12,
     color: "lightgray",
-    marginRight: 130
+    marginRight: 130,
   },
   errorText: {
     fontSize: 10,
-    color: 'red',
+    color: "red",
   },
   arrowStyle: {
     marginTop: "10%",
     alignSelf: "flex-start",
-    marginLeft: "10%"
+    marginLeft: "10%",
   },
 });
 export default Styles;

@@ -13,27 +13,57 @@ import Logo from "../../assets/PNG_Format_e.png";
 import unitIcon from "../../assets/Group_161.png";
 import SearchBar from "../../screens/SearchBar";
 import { useNavigation } from "@react-navigation/native";
-
+import { useRoute } from "@react-navigation/native";
+import styleSection from "../Sections/Section.Style";
 const Units = () => {
   const navigation = useNavigation();
+  const route = useRoute();
+
   return (
-    <ScrollView contentContainerStyle={style.container}>
+    <View style={style.container}>
       <View style={style.top}>
         <TouchableOpacity
           style={style.arrowStyle}
-          onPress={() => navigation.navigate("Books")}
+          onPress={() => navigation.goBack()}
         >
           <Image source={arrow} />
         </TouchableOpacity>
         <Image source={Logo} />
         <View style={style.Units}>
-          <Text style={style.UnitsText}>دورس کتاب دری</Text>
+          <Text style={style.UnitsText}>
+            فصل های مضمون {route.params.subject}
+          </Text>
         </View>
       </View>
-      <View style={style.middle}>
+      <View style={styleSection.middle}>
         <SearchBar />
       </View>
-      <ScrollView contentContainerStyle={style.scrolling}>
+      <FlatList
+        data={route.params.units}
+        numColumns={2}
+        contentContainerStyle={style.scrolling}
+        renderItem={({ item }) => {
+          return (
+            <TouchableOpacity
+              style={style.unitItem}
+              onPress={() =>
+                navigation.navigate("Lessons", {
+                  lessons: item.lessons,
+                  title: "فصل " + item.label,
+                  params: {
+                    id: item.id,
+                    name: item.name,
+                  },
+                })
+              }
+            >
+              <Image source={unitIcon} style={{ position: "relative" }} />
+              <Text style={style.unitTitle}>{item.label}</Text>
+            </TouchableOpacity>
+          );
+        }}
+      />
+      {/* <ScrollView contentContainerStyle={style.scrolling}>
         <View style={style.twoUnit}>
           <TouchableOpacity style={style.unitItem}>
             <Image source={unitIcon} style={{ position: "relative" }} />
@@ -94,8 +124,8 @@ const Units = () => {
             <Text style={style.unitTitle}>درس دوازدهم</Text>
           </TouchableOpacity>
         </View>
-      </ScrollView>
-    </ScrollView>
+      </ScrollView> */}
+    </View>
   );
 };
 
@@ -104,15 +134,15 @@ const style = StyleSheet.create({
     backgroundColor: "#fff",
     flex: 1,
     justifyContent: "space-between",
-    alignItems: "stretch",
+    alignItems: "center",
   },
   top: {
-    height: "25%",
+    height: 200,
     width: "100%",
     justifyContent: "space-between",
     alignItems: "center",
     padding: 20,
-    marginBottom: 0,
+    marginBottom: -20,
     position: "relative",
   },
   arrowStyle: {

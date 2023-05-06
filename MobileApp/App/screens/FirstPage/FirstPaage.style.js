@@ -17,12 +17,13 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     borderColor: "#fff",
     borderStyle: "solid",
-    borderWidth: 1,
+    borderWidth: 2,
     borderRadius: 20,
   },
   btnText: {
     color: "#fff",
     fontSize: 18,
+    zIndex: 100,
   },
   imgStyle: {
     marginBottom: 80,
