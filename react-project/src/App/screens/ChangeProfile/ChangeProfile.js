@@ -1,8 +1,10 @@
+import ig from '../../assets/Group_158_jr@2x.png';
 import "./ChangeProfile.css"
 import React, { useEffect } from 'react'
 import { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 <link rel="stylesheet" href="ChangeProfile.css" />;
+
 
 const ChangeProfile = () => {
 	const initialValues = {name:"", lastname:"", username: "", email: "", age: "", senf:""};
@@ -65,7 +67,7 @@ const ChangeProfile = () => {
 			<stop offset="0" stop-color="#3c98bd" stop-opacity="1"></stop>
 			<stop offset="1" stop-color="#0f53a1" stop-opacity="1"></stop>
 		</linearGradient>
-		<rect id="Rectangle_267_u" rx="200" ry="200" x="0" y="0" width="1350" height="536">
+		<rect id="Rectangle_267_u" rx="200" ry="200" x="0" y="0"  width="1366" height="566">
 		</rect>
 	</svg>
 	<svg className='Ellipse_20'>
@@ -96,6 +98,7 @@ const ChangeProfile = () => {
 		</path>
 	</svg>
 	</div>
+	
 	<div >
       {Object.keys(formErrors).length === 0 && isSubmit ? (
         <div className="ui message success">{navigate('/')}</div>
@@ -185,6 +188,7 @@ const ChangeProfile = () => {
 		<button className="save-button">ذخیره کردن</button>
       </form>
     </div>
+	<Link to="/header"><img className='ig' src={ig}/></Link> 
 </div>
     </div>
   )

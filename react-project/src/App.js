@@ -1,12 +1,13 @@
-import ChangeProfile from "./App/screens/ChangeProfile/ChangeProfile";
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
-
+ 
 import Header from "./Header";
-import Home from "./App/screens/Home";
-import LogIn from "./App/screens/Login/LogIn";
-import SinUP from "./App/screens/SinUP/SinUP";
+import SingUp from "./App/screens/SingUp/SingUp";
+import LogIn from "./App/screens/LogIn/LogIn";
+import ForgotPassword from "./App/screens/ForgotPassword/ForgotPassword";
+import SendCode from "./App/screens/SendCode/SendCode";
+import NewPassword from "./App/screens/NewPassword/NewPassword";
 import Section from "./App/components/Sections/Section";
 import Grades from "./App/components/Grades/Grades";
 import Books from "./App/components/Books/Books";
@@ -14,26 +15,28 @@ import Units from "./App/components/Units/Units";
 import Lessons from "./App/components/Lessons/Lessons";
 
 import Grad from "./App/Grad";
-import Book from "./App/Book";
+import Book from "./App/Book"
 import Continue from "./App/Continue";
 import About from "./App/About";
 import Suggestion from "./App/Suggestion";
 import Profile from "./App/screens/Profile/Profile";
+import ChangeProfile from "./App/screens/ChangeProfile/ChangeProfile"
 
 function App() {
   return (
     <Router>
-      <Header />
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route exact path="/header" element={<Header  />} />
+        <Route exact path="/" element={<SingUp />} />
         <Route exact path="/login" element={<LogIn />} />
-        <Route exact path="/sinup" element={<SinUP />} />
+        <Route exact path="/forgotpassword" element={<ForgotPassword />} />
+        <Route exact path="/sendcode" element={<SendCode />} />
+        <Route exact path="/newpassword" element={<NewPassword />} />
         <Route path="/section" element={<Section />} />
         <Route path="/grades" element={<Grades />} />
         <Route path="/books" element={<Books />} />
         <Route path="/unit" element={<Units />} />
         <Route path="/lessons" element={<Lessons />} />
-
         <Route path="/grad" element={<Grad />} />
         <Route path="/book" element={<Book />} />
         <Route path="/continue" element={<Continue />} />
@@ -47,3 +50,4 @@ function App() {
 }
 
 export default App;
+// users
