@@ -10,6 +10,19 @@ const styles = StyleSheet.create({
     fontStyle: "normal",
     // marginTop: 30,
   },
+  scrollcontainer: {
+    backgroundColor: " rgba(60,152,189,1)",
+    justifyContent: "center",
+    alignItems: "center",
+    color: "#fff",
+    // flex: 1,
+
+    // marginTop: 30,
+    width: 200,
+    // marginTop: 80,
+    // paddingBottom: 80,
+    paddingVertical: "20%",
+  },
   btnWrapper: {},
   btn: {
     margin: 5,
@@ -27,6 +40,7 @@ const styles = StyleSheet.create({
   },
   imgStyle: {
     marginBottom: 80,
+    marginTop: "30%",
   },
   text: {
     color: "#fff",
@@ -36,6 +50,7 @@ const styles = StyleSheet.create({
     marginTop: 30,
     justifyContent: "center",
     alignItems: "center",
+    margibBottom: 30,
   },
 });
 export default styles;

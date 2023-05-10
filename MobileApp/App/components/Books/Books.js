@@ -17,6 +17,7 @@ import photo1 from "../../assets/Group_133.png";
 import photo2 from "../../assets/Group_143_em.png";
 import photo3 from "../../assets/Group_153.png";
 import middleStyle from "../Sections/Section.Style";
+import CustomText from "../../CustomText";
 
 const Books = () => {
   const navigation = useNavigation();
@@ -33,49 +34,53 @@ const Books = () => {
         </TouchableOpacity>
         <Image source={Logo} />
         <View style={style.books}>
-          <Text style={style.BooksText}>کتاب های {route.params.grade} </Text>
+          <CustomText style={style.BooksText}>
+            کتاب های {route.params.grade}{" "}
+          </CustomText>
         </View>
       </View>
-      <View style={middleStyle.middle}>
+      <View style={style.middle}>
         <SearchBar />
       </View>
 
-      <FlatList
-        // key={Array.array.id}
-        contentContainerStyle={style.scrolling}
-        data={route.params.subjects}
-        renderItem={({ item }) => {
-          return (
-            <TouchableOpacity
-              style={style.bookItem}
-              onPress={() => {
-                if (item.parts[0].lessons === undefined) {
-                  return navigation.navigate("Lessons", {
-                    lessons: item.parts,
-                    title: "مضمون " + item.label,
-                    params: {
-                      id: item.id,
-                      name: item.name,
-                    },
-                  });
-                } else {
-                  navigation.navigate("Units", {
-                    units: item.parts,
-                    subject: item.label,
-                    params: {
-                      id: item.id,
-                      name: item.name,
-                    },
-                  });
-                }
-              }}
-            >
-              <Image source={photo1} />
-              <Text style={style.bootItemText}>{item.label}</Text>
-            </TouchableOpacity>
-          );
-        }}
-      />
+      <View style={{ marginTop: 60, paddingBottom: 20 }}>
+        <FlatList
+          // key={Array.array.id}
+          contentContainerStyle={style.scrolling}
+          data={route.params.subjects}
+          renderItem={({ item }) => {
+            return (
+              <TouchableOpacity
+                style={style.bookItem}
+                onPress={() => {
+                  if (item.parts[0].lessons === undefined) {
+                    return navigation.navigate("Lessons", {
+                      lessons: item.parts,
+                      title: "مضمون " + item.label,
+                      params: {
+                        id: item.id,
+                        name: item.name,
+                      },
+                    });
+                  } else {
+                    navigation.navigate("Units", {
+                      units: item.parts,
+                      subject: item.label,
+                      params: {
+                        id: item.id,
+                        name: item.name,
+                      },
+                    });
+                  }
+                }}
+              >
+                <Image source={photo1} />
+                <CustomText style={style.bootItemText}>{item.label}</CustomText>
+              </TouchableOpacity>
+            );
+          }}
+        />
+      </View>
     </View>
   );
 };
@@ -88,7 +93,7 @@ const style = StyleSheet.create({
     // alignItems: "center",
   },
   top: {
-    height: 130,
+    height: 140,
     width: "100%",
     justifyContent: "space-between",
     alignItems: "center",
@@ -105,35 +110,43 @@ const style = StyleSheet.create({
     alignItems: "center",
     padding: 10,
     borderRadius: 30,
+    marginTop: 10,
   },
   BooksText: {
     color: "#fff",
     fontSize: 20,
-    fontWeight: "bold",
+    // fontWeight: "bold",
   },
 
   middle: {
     marginTop: 0,
     height: "5%",
     alignItems: "center",
-    padding: 20,
+    // padding: 20,
     justifyContent: "center",
+    position: "absolute",
+    top: 160,
+    zIndex: 100,
+    width: "100%",
   },
   bookItem: {
     backgroundColor: "rgba(60, 152, 189, 1)",
     marginVertical: 5,
-    padding: 35,
-    width: 300,
+    paddingVertical: 40,
+    paddingHorizontal: 20,
+    width: "80%",
     borderRadius: 30,
+    height: 150,
     alignItems: "center",
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "center",
   },
   bootItemText: {
     color: "#fff",
     fontSize: 22,
-    fontWeight: "bold",
-    width: 130,
+    // fontWeight: "bold",
+    width: 200,
+    // marginLeft: 20,
   },
   scrolling: {
     // width: "100%",
@@ -141,7 +154,8 @@ const style = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     marginBottom: 5,
-    width: "100%",
+    // width: "100%",
+    paddingBottom: 150,
   },
 });
 export default Books;

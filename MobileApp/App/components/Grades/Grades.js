@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   View,
   Text,
@@ -17,6 +17,8 @@ import user from "../../assets/user.png";
 import arrow from "../../assets/Group_158_a.png";
 import { useNavigation } from "@react-navigation/native";
 import { useRoute } from "@react-navigation/native";
+import Styles from "../Sections/Section.Style";
+import CustomText from "../../CustomText";
 const Grades = (props) => {
   const route = useRoute();
   const navigation = useNavigation();
@@ -27,7 +29,7 @@ const Grades = (props) => {
     return (
       <TouchableOpacity
         key={item.id}
-        style={style.grades}
+        style={{ width: "100%" }}
         onPress={() =>
           navigation.navigate("Books", {
             grade: item.grade,
@@ -39,13 +41,16 @@ const Grades = (props) => {
           })
         }
       >
-        <Text style={style.gradesText}>{item.grade}</Text>
-        <Image source={item.img} />
+        <View style={style.grades}>
+          <CustomText style={style.gradesText}>{item.grade}</CustomText>
+          <Image source={item.img} style={{ margin: 0 }} />
+        </View>
       </TouchableOpacity>
     );
   };
+  var [inputSearch, setInputSearch] = useState("");
   return (
-    <View style={styleSection.container}>
+    <View style={style.container}>
       <TouchableOpacity
         style={style.arrowStyle}
         onPress={() => navigation.navigate("Sections")}
@@ -54,8 +59,9 @@ const Grades = (props) => {
       </TouchableOpacity>
       <Svg
         xmlns="http://www.w3.org/2000/svg"
-        width={360}
+        width={"100%"}
         height={162.314}
+        preserveAspectRatio="none"
         viewBox="0 0 360 162.314"
         {...props}
       >
@@ -80,71 +86,104 @@ const Grades = (props) => {
         />
       </Svg>
       <View style={styleSection.top}>
-        <Text style={styleSection.userName}>Khatima Sajadi</Text>
-        <TouchableOpacity style={styleSection.imageWrapper} onPress={onSubmit}>
-          <Image source={user} style={styleSection.img} />
+        <CustomText style={style.userName}>Khatima Sajadi</CustomText>
+        <TouchableOpacity style={style.imageWrapper} onPress={onSubmit}>
+          <Image source={user} style={style.img} />
         </TouchableOpacity>
       </View>
-      <View style={styleSection.middle}>
+      <View style={style.middle}>
         <SearchBar />
       </View>
 
       <View style={style.bottom}>
         <View style={style.select}>
-          <Text style={style.selectText}>صنف تان را انتخاب کنید</Text>
+          <CustomText style={style.selectText}>
+            صنف تان را انتخاب کنید
+          </CustomText>
         </View>
         <FlatList
-          style={{ width: "90%" }}
+          contentContainerStyle={{
+            width: "100%",
+            marginVertical: 5,
+            paddingBottom: 20,
+
+            // flex: 1,
+            alignItems: "center",
+            // // justifyContent: "center",
+            // paddingTop: 0,
+          }}
           data={route.params.classes}
           renderItem={({ item }) => {
             return <Renderitem item={item} />;
           }}
         />
-        {/* <TouchableOpacity
-          style={style.grades}
-          onPress={() => navigation.navigate()}
-        >
-          <Text style={style.gradesText}>{route.params.grade1}</Text>
-          <Image source={route.params.gradeimg1.img} />
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={style.grades}
-          onPress={() => navigation.navigate()}
-        >
-          <Text style={style.gradesText}>{route.params.grade2}</Text>
-          <Image source={route.params.gradeimg2.img} />
-        </TouchableOpacity>
-        <TouchableOpacity style={style.grades}>
-          <Text style={style.gradesText}>{route.params.grade3}</Text>
-          <Image source={route.params.gradeimg3.img} />
-        </TouchableOpacity>
-        <TouchableOpacity style={style.grades}>
-          <Text style={style.gradesText}>{route.params.grade4}</Text>
-          <Image source={route.params.gradeimg4.img} />
-        </TouchableOpacity>
-        <TouchableOpacity style={style.grades}>
-          <Text style={style.gradesText}>{route.params.grade5}</Text>
-          <Image source={route.params.gradeimg5.img} />
-        </TouchableOpacity>
-        <TouchableOpacity style={style.grades}>
-          <Text style={style.gradesText}>{route.params.grade6}</Text>
-          <Image source={route.params.gradeimg6.img} />
-        </TouchableOpacity> */}
       </View>
     </View>
   );
 };
 const style = StyleSheet.create({
-  bottom: {
-    // justifyContent: "center",
-    alignItems: "center",
-    height: "66%",
+  container: {
+    // justifyContent: "space-between",
+    // alignItems: "center",
+    // backgroundColor: "#fff",
+    flex: 1,
+    // alignItems: "center",
+    // width: "100%",
+    // paddingHorizontal: 20,
     backgroundColor: "#fff",
+  },
+  top: {
+    marginTop: -120,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  userName: {
+    fontSize: 20,
+
+    color: "#fff",
+    marginHorizontal: 20,
+  },
+  imageWrapper: {
+    backgroundColor: "#fff",
+    height: 70,
+    width: 70,
+    justifyContent: "space-between",
+    alignItems: "center",
+    borderRadius: 50,
+    marginHorizontal: 20,
+    // marginTop: -20,
+  },
+  img: {
+    marginTop: 8,
+    height: 40,
+    width: 40,
+  },
+  middle: {
+    height: "10%",
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: "15%",
+    position: "absolute",
+    top: 165,
+    // left: 20,
+    zIndex: 100,
     width: "100%",
+  },
+  bottom: {
+    justifyContent: "center",
+    alignItems: "center",
+    // height: "66%",
+    // backgroundColor: "#fff",
+    width: "100%",
+    marginTop: 130,
+    // position: "absolute",
+
+    flex: 1,
   },
   select: {
     backgroundColor: "rgba(60, 152, 189, 1)",
-    width: "85%",
+    width: "80%",
     padding: 10,
     borderRadius: 50,
     alignItems: "center",
@@ -152,31 +191,34 @@ const style = StyleSheet.create({
   selectText: {
     color: "#fff",
     fontSize: 20,
-    fontWeight: "bold",
   },
   grades: {
-    width: "100%",
+    width: "90%",
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 50,
     backgroundColor: "rgba(212,228,232,1)",
     marginVertical: 5,
-    justifyContent: "space-between",
+    justifyContent: "center",
     alignItems: "center",
     flexDirection: "row-reverse",
+    // flex: 1,
   },
   gradesText: {
     color: "rgba(60, 152, 189, 1)",
     fontSize: 20,
+    marginLeft: 100,
+    // marginRight: "7%",
+    width: 100,
   },
   arrowStyle: {
     // marginBottom: "30%",
 
     marginRight: 200,
-    marginLeft: -60,
-    marginTop: -10,
-    marginBottom: -50,
-
+    marginLeft: 20,
+    marginTop: 20,
+    marginBottom: -60,
+    // backgroundColor: "red",
     zIndex: 100,
     padding: 10,
   },

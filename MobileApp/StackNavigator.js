@@ -15,6 +15,8 @@ import Information from "./App/screens/Information/Information";
 import ChangeInfo from "./App/screens/ChangeInfo/ChangeInfo";
 import ForgotPassword from "./App/screens/ForgotPassword/ForgotPassword";
 import SignUpVerification from "./App/screens/SignUpVerification/SignUpVerification";
+import AboutUs from "./App/screens/AboutUs/AboutUs";
+import FeedBack from "./App/screens/FeedBack/FeedBack";
 const Stack = createNativeStackNavigator();
 const StackNaigator = () => {
   return (
@@ -39,6 +41,8 @@ const StackNaigator = () => {
         <Stack.Screen name="Units" component={Units} />
         <Stack.Screen name="Lessons" component={Lessons} />
         <Stack.Screen name="BookPages" component={BookPages} />
+        <Stack.Screen name="AboutUs" component={AboutUs} />
+        <Stack.Screen name="FeedBack" component={FeedBack} />
       </Stack.Group>
     </Stack.Navigator>
   );

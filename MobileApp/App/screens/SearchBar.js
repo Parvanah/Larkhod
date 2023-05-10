@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
     flexDirection: "row-reverse",
     color: "red",
     borderRadius: 20,
+    // marginVertical: "20%",
   },
   serachText: {
     width: "90%",
@@ -76,6 +77,7 @@ const styles = StyleSheet.create({
     marginRight: 5,
     width: "90%",
   },
+  onFocusStyle: {},
 });
 
 // import react, {Component} from 'react';

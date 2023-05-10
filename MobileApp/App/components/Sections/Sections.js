@@ -26,6 +26,7 @@ import { useNavigation } from "@react-navigation/native";
 import gradeLogo from "../../assets/Group_211_y.png";
 import classNine from "../grade_9_dari.json";
 import classTwo from "../grade_2_dari.json";
+import CustomText from "../../CustomText";
 
 const Sections = (props) => {
   const navigation = useNavigation();
@@ -37,8 +38,9 @@ const Sections = (props) => {
       <View style={styles.svgWrapper}>
         <Svg
           xmlns="http://www.w3.org/2000/svg"
-          width={360}
+          width={"100%"}
           height={165.069}
+          preserveAspectRatio="none"
           viewBox="0 0 360 165.069"
           {...props}
         >
@@ -102,15 +104,28 @@ const Sections = (props) => {
           </Svg>
         </Svg>
         <View style={styles.top}>
-          <Text style={styles.userName}>Khatima Sajadi</Text>
+          <CustomText style={styles.userName}>Khatima Sajadi</CustomText>
           <TouchableOpacity style={styles.imageWrapper} onPress={onSubmit}>
             <Image source={user} style={styles.img} />
           </TouchableOpacity>
         </View>
       </View>
 
-      <View style={styles.middle}>
-        <SeatchBar />
+      <View style={styles.sectionMiddle}>
+        <TouchableOpacity
+          style={styles.sectionMiddleBtn}
+          onPress={() => navigation.navigate("FeedBack")}
+        >
+          <CustomText style={styles.sectionMiddleBtnText}>نظریات</CustomText>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.sectionMiddleBtn}
+          onPress={() => navigation.navigate("AboutUs")}
+        >
+          <CustomText style={styles.sectionMiddleBtnText}>
+            در باره ما
+          </CustomText>
+        </TouchableOpacity>
       </View>
       <ScrollView contentContainerStyle={styles.bottom}>
         <TouchableOpacity
@@ -158,7 +173,7 @@ const Sections = (props) => {
             })
           }
         >
-          <Text style={styles.btnText}>بخش ابتداییه</Text>
+          <CustomText style={styles.btnText}>بخش ابتداییه</CustomText>
           <Image source={primary} />
         </TouchableOpacity>
         <TouchableOpacity
@@ -188,7 +203,7 @@ const Sections = (props) => {
             })
           }
         >
-          <Text style={styles.btnText}>بخش متوسطه</Text>
+          <CustomText style={styles.btnText}>بخش متوسطه</CustomText>
           <Image source={secondary} />
         </TouchableOpacity>
         <TouchableOpacity
@@ -219,7 +234,7 @@ const Sections = (props) => {
             })
           }
         >
-          <Text style={styles.btnText}>بخش لیسه</Text>
+          <CustomText style={styles.btnText}>بخش لیسه</CustomText>
           <Image source={high} />
         </TouchableOpacity>
       </ScrollView>

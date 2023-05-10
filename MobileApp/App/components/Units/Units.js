@@ -15,6 +15,7 @@ import SearchBar from "../../screens/SearchBar";
 import { useNavigation } from "@react-navigation/native";
 import { useRoute } from "@react-navigation/native";
 import styleSection from "../Sections/Section.Style";
+import CustomText from "../../CustomText";
 const Units = () => {
   const navigation = useNavigation();
   const route = useRoute();
@@ -30,12 +31,22 @@ const Units = () => {
         </TouchableOpacity>
         <Image source={Logo} />
         <View style={style.Units}>
-          <Text style={style.UnitsText}>
+          <CustomText style={style.UnitsText}>
             فصل های مضمون {route.params.subject}
-          </Text>
+          </CustomText>
         </View>
       </View>
-      <View style={styleSection.middle}>
+      <View
+        style={{
+          marginTop: 20,
+          height: "5%",
+          backgroundColo: "red",
+          padding: 20,
+          justifyContent: "center",
+          alignItems: "center",
+          width: "120%",
+        }}
+      >
         <SearchBar />
       </View>
       <FlatList
@@ -58,73 +69,11 @@ const Units = () => {
               }
             >
               <Image source={unitIcon} style={{ position: "relative" }} />
-              <Text style={style.unitTitle}>{item.label}</Text>
+              <CustomText style={style.unitTitle}>{item.label}</CustomText>
             </TouchableOpacity>
           );
         }}
       />
-      {/* <ScrollView contentContainerStyle={style.scrolling}>
-        <View style={style.twoUnit}>
-          <TouchableOpacity style={style.unitItem}>
-            <Image source={unitIcon} style={{ position: "relative" }} />
-            <Text style={style.unitTitle}>درس اول</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={style.unitItem}>
-            <Image source={unitIcon} />
-            <Text style={style.unitTitle}>درس دوم</Text>
-          </TouchableOpacity>
-        </View>
-        <View style={style.twoUnit}>
-          <TouchableOpacity style={style.unitItem}>
-            <Image source={unitIcon} />
-            <Text style={style.unitTitle}>درس سوم</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={style.unitItem}>
-            <Image source={unitIcon} />
-            <Text style={style.unitTitle}>درس چهارم</Text>
-          </TouchableOpacity>
-        </View>
-        <View style={style.twoUnit}>
-          <TouchableOpacity style={style.unitItem}>
-            <Image source={unitIcon} />
-            <Text style={style.unitTitle}>درس پنجم</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={style.unitItem}>
-            <Image source={unitIcon} />
-            <Text style={style.unitTitle}>درس ششم</Text>
-          </TouchableOpacity>
-        </View>
-        <View style={style.twoUnit}>
-          <TouchableOpacity style={style.unitItem}>
-            <Image source={unitIcon} />
-            <Text style={style.unitTitle}>درس هفتم</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={style.unitItem}>
-            <Image source={unitIcon} />
-            <Text style={style.unitTitle}>درس هشتم</Text>
-          </TouchableOpacity>
-        </View>
-        <View style={style.twoUnit}>
-          <TouchableOpacity style={style.unitItem}>
-            <Image source={unitIcon} />
-            <Text style={style.unitTitle}>درس نهم</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={style.unitItem}>
-            <Image source={unitIcon} />
-            <Text style={style.unitTitle}>درس دهم</Text>
-          </TouchableOpacity>
-        </View>
-        <View style={style.twoUnit}>
-          <TouchableOpacity style={style.unitItem}>
-            <Image source={unitIcon} />
-            <Text style={style.unitTitle}>درس یازدهم</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={style.unitItem}>
-            <Image source={unitIcon} />
-            <Text style={style.unitTitle}>درس دوازدهم</Text>
-          </TouchableOpacity>
-        </View>
-      </ScrollView> */}
     </View>
   );
 };
@@ -148,6 +97,7 @@ const style = StyleSheet.create({
   arrowStyle: {
     marginRight: "85%",
   },
+
   Units: {
     backgroundColor: "rgba(60, 152, 189, 1)",
     width: "95%",
@@ -155,16 +105,16 @@ const style = StyleSheet.create({
     alignItems: "center",
     padding: 10,
     borderRadius: 30,
+    marginTop: 20,
   },
   UnitsText: {
     color: "#fff",
     fontSize: 20,
-    fontWeight: "bold",
   },
   middle: {
     marginTop: 0,
     height: "5%",
-
+    backgroundColo: "red",
     padding: 20,
     justifyContent: "center",
     alignItems: "center",
@@ -184,15 +134,15 @@ const style = StyleSheet.create({
     margin: 10,
     padding: 35,
     borderRadius: 25,
-    width: 140,
+    width: 150,
     alignItems: "center",
     justifyContent: "center",
     height: 200,
   },
   unitTitle: {
     color: "#fff",
-    fontSize: 18,
-    fontWeight: "bold",
+    fontSize: 12,
+
     width: 90,
     textAlign: "center",
   },
