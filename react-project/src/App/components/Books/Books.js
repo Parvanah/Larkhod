@@ -21,7 +21,7 @@ const Books = (props) => {
     <div className="Books" id="Books">
       <div className="top">
         <div className="first-svgs">
-          <div className="arrowSvg" onClick={() => navigate("/")}>
+          <div className="arrowSvg" onClick={() => navigate("/grades")}>
             {" "}
             <svg
               xmlns="http://www.w3.org/2000/svg"

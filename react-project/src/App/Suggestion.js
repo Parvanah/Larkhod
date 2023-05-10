@@ -1,7 +1,7 @@
 
 import { FaFacebookF, FaInstagram ,FaYoutube ,FaTwitter} from "react-icons/fa";
 import "./Suggestion.css"
-
+import ig from './assets/Group_158_jr@2x.png';
 import React, { useEffect } from 'react'
 import { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
@@ -62,11 +62,13 @@ const Suggestion = () => {
     return ( 
         <div className="suggestion">
        <div className="send-suggestion">
+      <Link to="/header"><img id="ig" src={ig}/></Link> 
+      
         <h1 className="title">ارسال نظر</h1>
         <p className="para">پیشنهادات و نظریات خود را جهت بهبود روند درس ها از این دریچه باما به اشتراک بگزارید</p>
         <div >
       {Object.keys(formErrors).length === 0 && isSubmit ? (
-        <div>{navigate('/')}</div>
+        <div>{navigate('/header')}</div>
       ) 
 	  : (
         <pre></pre>
@@ -79,7 +81,7 @@ const Suggestion = () => {
 			<div className="oo">
                 	<input
 			 id='infut-first'
-			className="senf"
+       className='senf-of-person'
               type="text"
               name="senf"
               placeholder="صنف"
@@ -90,7 +92,7 @@ const Suggestion = () => {
 			
             <input
 			 id='infut-first'
-			className="city"
+       className='city-of-person'
               type="city"
               name="city"
               placeholder="شهر"
@@ -106,7 +108,7 @@ const Suggestion = () => {
          <div className="oo">
          <input
 		   id='infut-first'
-		className='name'
+		className='name-of-person'
               type="text"
               name="name"
               placeholder="نام"
@@ -118,7 +120,7 @@ const Suggestion = () => {
             
             <input
 			 id='infut-first'
-			className="phone"
+       className='phone-of-person'
               type="phone"
               name="phone"
               placeholder="نمبر تماس"
@@ -132,7 +134,7 @@ const Suggestion = () => {
 		  <div className='section-two-input'>
           <input
 		   id='infut-second'
-			 className="email"
+       className='email-of-person'
               type="text"
               name="email"
               placeholder="ایمیل آدرس"
@@ -143,7 +145,7 @@ const Suggestion = () => {
            
 		   <input
 		 id='infut-second'
-		className='message'
+     className='message-of-person'
               type="message"
               name="message"
               placeholder="پیام"

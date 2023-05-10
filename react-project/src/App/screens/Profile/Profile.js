@@ -1,3 +1,4 @@
+import ig from '../../assets/Group_158_jr@2x.png';
 import "./Profile.css"
 import React, { useEffect } from 'react'
 import { useState } from 'react';
@@ -58,14 +59,14 @@ const Profile = () => {
 	};
   return (
     <div>
-		<div>
+		<div >
 <div id="Artboard__3">
 	<svg className='Rectangle_267_u'>
 		<linearGradient id="Rectangle_267_u" spreadMethod="pad" x1="0.22" x2="0.905" y1="-0.035" y2="1.793">
 			<stop offset="0" stop-color="#3c98bd" stop-opacity="1"></stop>
 			<stop offset="1" stop-color="#0f53a1" stop-opacity="1"></stop>
 		</linearGradient>
-		<rect id="Rectangle_267_u" rx="200" ry="200" x="0" y="0" width="1350" height="536">
+		<rect id="Rectangle_267_u" rx="200" ry="200" x="0" y="0" width="1366" height="566">
 		</rect>
 	</svg>
 	<svg className='Ellipse_20'>
@@ -98,7 +99,7 @@ const Profile = () => {
 	</div>
 	<div >
       {Object.keys(formErrors).length === 0 && isSubmit ? (
-        <div className="ui message success">{navigate('/')}</div>
+        <div className="ui message success">{navigate('/header')}</div>
       ) 
 	  : (
         <pre></pre>
@@ -170,8 +171,8 @@ const Profile = () => {
             />
 			 <p className='error'>{formErrors.name}</p>
 		  <input
-		  id='inputt'
-			 className="email"
+		      id='inputt'
+			  className="email"
               type="text"
               name="email"
               placeholder="ایمیل"
@@ -185,6 +186,7 @@ const Profile = () => {
 		<button className="save-button">ذخیره کردن</button>
       </form>
     </div>
+	<Link to="/"><img className='ig' src={ig}/></Link> 
 </div>
     </div>
   )

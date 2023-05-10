@@ -1,32 +1,19 @@
-/*profile style*/
-/* * {
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border: none;
-} */
 #Artboard__3 {
     position: absolute;
     width: 100%;
-    height: 90%;
+    height: 100%;
     background-color: rgba(255,255,255,1);
     overflow: hidden;
 }
 #Rectangle_267_u {
     fill: url(#Rectangle_267_u);
     stroke: rgba(112,112,112,1);
-    stroke-width: 1px;
-    stroke-linejoin: miter;
-    stroke-linecap: butt;
-    stroke-miterlimit: 4;
-    shape-rendering: auto;
+
 }
 .Rectangle_267_u {
     position: absolute;
-    overflow: visible;
     width: 1920px;
-    height: 636px;
+    height: 836px;
     left: 0px;
     top: 240px;
 }
@@ -46,22 +33,6 @@
     height: 258px;
     left: 551px;
     top: -20px;
-}
-#Group_6 {
-    position: absolute;
-    width: 121px;
-    height: 136px;
-    left: 899.999px;
-    top: 152px;
-    overflow: visible;
-}
-#Group_10 {
-    position: absolute;
-    width: 121px;
-    height: 136px;
-    left: 0.001px;
-    top: 0px;
-    overflow: visible;
 }
 #nm {
     background-color: white;
@@ -166,7 +137,6 @@
 
 
 .information-one{
-
    display: inline-block;
 }
 .information-two{
@@ -177,27 +147,13 @@
 .information-three{
     display: inline-block;
 }
-.name{
-}
-
-.lastname{
-   
-}
-
-.username{
- 
-}
-.email{
-  
-}
-
-.age{
-   
-
-}
-
+.name,
+.lastname,
+.username,
+.email,
+.age,
 .senf{
-    
+    color: white;
 }
 
 #inputt{
@@ -205,8 +161,9 @@
     background: none;
     width: 300px;
     padding: 10px 0px;
-    margin: 15px 0;
-    border-bottom: 2px solid #ccc;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border-bottom: 1px solid #ccc;
     box-sizing: border-box;
     text-align: right;
     fill: transparent;
@@ -220,4 +177,11 @@
     font-style: normal;
     /* display: inline-block; */
 
+}
+.ig{
+    display: inline-block;
+ position: relative;
+ top: -150px;
+ left: 70px;
+ z-index: 1000;
 }

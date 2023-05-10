@@ -2,6 +2,149 @@
 .ul_high_school{ 
     display: inline-block;
     position: relative;
+    top: 232px;
+    left: 200px;
+
+}
+.li_high_school{
+ margin-right: 18px;
+ font-size: 20px;
+ color: rgba(16,84,162,1);
+ letter-spacing: -0.4px;
+}
+.sanaf{
+    width: 22px;
+    height: 25px;
+    margin-left: 18px;
+}
+.link_high_school{
+    width: 530px;
+    height: 34px;
+    background-color:rgba(212,228,232,1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    border-radius: 32px;
+    text-align: center;
+    align-items: center;
+}	
+	#n_ {
+        transform-origin: 0px 0px;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(255,255,255,1);
+		overflow: hidden;
+		
+	}
+	#Path_534 {
+		fill: transparent;
+		stroke: rgba(112,112,112,1);
+		/* stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto; */
+	}
+	.Path_534 {
+		overflow: visible;
+		position: absolute;
+		left: 0.661px;
+		top: 144.786px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Union_1_dg {
+		fill: url(#Union_1_dg);
+	}
+	.Union_1_dg {
+		overflow: visible;
+		position: absolute;
+		left: 0px;
+		top: 1.436px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Group_356 {
+		position: absolute;
+		left: 939.687px;
+		top: 334.045px;
+		overflow: visible;
+	}
+	#Group_355 {
+		position: absolute;
+		width: 580.313px;
+		height: 450.955px;
+		left: -154px;
+		top: -160.287px;
+		overflow: visible;
+	}
+    #nn{
+       font-family:Bahij Helvetica Neue;
+       font-style:normal;
+       font-weight:normal;
+    }
+    #n_____________{
+        font-style:normal;font-weight:lighter; font-size:25px; 
+        left: 110.208px;
+		top: 192px;
+		position: absolute;
+		overflow: hidden;
+		width: 695px;
+		height: 230px;
+		line-height: 79px;
+		text-align: center;
+		font-family: Bahij Helvetica Neue;
+		font-style: normal;
+		color: rgba(255,255,255,1);
+		letter-spacing: -0.4px;
+    }
+	#n_________ {
+		left: 110.208px;
+		top: 152px;
+		position: absolute;
+		overflow: hidden;
+		width: 695px;
+		height: 230px;
+		line-height: 79px;
+		text-align: center;
+		font-family: Bahij Helvetica Neue;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 35px;
+		color: rgba(255,255,255,1);
+		letter-spacing: -0.4px;
+	}
+	#Subtraction_3 {
+		opacity: 0.52;
+		fill: rgba(255,255,255,1);
+	
+	}
+	.Subtraction_3 {
+	
+		position: absolute;
+		width: 385.886px;
+		height: 300.713px;
+		left: -24px;
+		top: 325.287px;
+		
+		transform: matrix(1,0,0,1,0,0);
+	}
+
+.image{
+	margin: 0px;
+	padding: 0px;
+	display: inline-block;
+	position: relative;
+	top: 80px;
+	left: 80px;
+	z-index: 100pz;
+}
+
+
+/* primary,secondary,high_school page
+.ul_high_school{ 
+    display: inline-block;
+    position: relative;
     top: 242px;
     left: 200px;
 
@@ -137,4 +280,4 @@
 		transform: matrix(1,0,0,1,0,0);
 	}
 
-
+ */
