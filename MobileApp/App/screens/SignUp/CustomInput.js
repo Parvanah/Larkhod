@@ -1,5 +1,6 @@
 import React from 'react'
 import { Text, TextInput, StyleSheet } from 'react-native'
+import CustomText from '../../CustomText'
 
 const CustomInput = (props) => {
   const {
@@ -25,7 +26,7 @@ const CustomInput = (props) => {
         }}
         {...inputProps}
       />
-      {hasError && <Text style={styles.errorText}>{errors[name]}</Text>}
+      {hasError && <CustomText style={styles.errorText}>{errors[name]}</CustomText>}
     </>
   )
 }
@@ -42,8 +43,9 @@ const styles = StyleSheet.create({
     textAlign: "right",
   },
   errorText: {
-    fontSize: 10,
+    fontSize: 15,
     color: 'red',
+    textAlign:"right"
   },
   errorInput: {
     borderColor: 'red',

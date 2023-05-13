@@ -13,6 +13,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import logo from "../../assets/White_PNG_Format_z.png";
 import user from "../../assets/user.png";
 import arrow from "../../assets/Group_158.png";
+import CustomText from "../../CustomText";
 
 const ChangeInfo = () => {
 
@@ -24,13 +25,13 @@ const ChangeInfo = () => {
     <SafeAreaView style={styles.outContainer}>
            <TouchableOpacity
           style={styles.arrowStyle}
-          onPress={() => navigation.navigate("SignUp")}
+          onPress={() => navigation.navigate("Sections")}
         >
         <Image source={arrow} />
         </TouchableOpacity>
        <View style={styles.imageWrapper}>
           <Image source={user} style={styles.img} />
-          <Text style={styles.usertext}>تغییر عکس نمایه</Text>
+          <CustomText style={styles.usertext}>تغییر عکس نمایه</CustomText>
         </View>
       <View style={styles.InContainer}>
         <View style={styles.form}>       
@@ -57,7 +58,7 @@ const ChangeInfo = () => {
                   style={styles.input}
                 />
           <TouchableOpacity style={styles.submitBtn}  onPress={onSubmit}  >
-            <Text style={styles.submitText}>ذخیره کردن </Text>
+            <CustomText style={styles.submitText}>ذخیره کردن </CustomText>
           </TouchableOpacity>
         </View>
       </View>
@@ -70,32 +71,32 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    paddingVertical: 10
   },
   InContainer: {
     borderTopRightRadius: 100,
     borderTopLeftRadius: 100,
     backgroundColor: "rgba(60,152,189,1)",
-    flex: 3,
+    flex: 3.5,
     width: "100%",
     justifyContent: "flex-start",
     alignItems: "center",
-    paddingHorizontal: "15%",
-    paddingVertical: "20%"
+    paddingHorizontal: 35,
+    paddingVertical: 80
   },
   usertext: {
     fontSize: 14,
     fontWeight: "bold",
     color: "lightgray",
-    marginHorizontal: 10,
   },
   img: {
     height: 60,
     width: 60,
   },
   arrowStyle: {
-    marginTop: "10%",
+    marginTop: 40,
     alignSelf: "flex-start",
-    marginLeft: "10%"
+    marginLeft: 30
   },
   form: { width: "100%" },
   input: {
@@ -128,11 +129,12 @@ const styles = StyleSheet.create({
   // },
   imageWrapper: {
     backgroundColor: "#fff",
-    height: "20%",
-    width: "30%",
+    height: 100,
+    width: "100%",
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 50,
+    marginBottom: 10
   },
 });
 export default ChangeInfo;

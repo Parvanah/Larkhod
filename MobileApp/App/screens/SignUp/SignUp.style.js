@@ -1,12 +1,12 @@
 import React from "react";
 import { StyleSheet } from "react-native";
-
 const Styles = StyleSheet.create({
   outContainer: {
     backgroundColor: "rgba(60,152,189,1)",
-    flex: 1,
+    flex: 3,
     justifyContent: "center",
     alignItems: "center",
+    paddingTop: 50
   },
   imgStyle: {
     height: 90,
@@ -21,13 +21,13 @@ const Styles = StyleSheet.create({
     width: "100%",
     justifyContent: "flex-start",
     alignItems: "center",
-    paddingHorizontal: 30,
+    paddingHorizontal: 40,
   },
   navContainer: {
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",
-    marginTop: 40,
+    marginTop: 70,
     borderColor: "lightgray",
     borderStyle: "solid",
     borderWidth: 1,
@@ -36,16 +36,17 @@ const Styles = StyleSheet.create({
   },
   btnSI: {
     paddingVertical: 11,
-    paddingHorizontal: 26,
+    // paddingHorizontal: 26,
+    width: "50%",
   },
   btnSO: {
     // borderColor: "lightgray",
     // borderStyle: "solid",
     // borderWidth: 1,
-    width: "57%",
+    width: "50%",
     backgroundColor: "rgba(60,152,189,1)",
     paddingVertical: 11,
-    paddingHorizontal: 26,
+    // paddingHorizontal: 26,
     borderRadius: 20,
   },
   btnTextSO: {
@@ -58,8 +59,9 @@ const Styles = StyleSheet.create({
     fontSize: 15,
     fontWeight: "bold",
     color: "rgba(60,152,189,1)",
+    textAlign: "center",
   },
-  form: { width: "100%" },
+  form: { width: "100%", paddingTop: 15 },
   input: {
     borderBottomColor: "lightgray",
     borderBottomWidth: 1,
@@ -110,14 +112,5 @@ const Styles = StyleSheet.create({
   linkBtnText: {
     color: "lightgray",
   }
-  
-  // errorText: {
-  //   fontSize: 10,
-  //   color: 'red',
-  // },
-  // errorInput: {
-  //   borderColor: 'red',
-  // }
-  
 });
 export default Styles;

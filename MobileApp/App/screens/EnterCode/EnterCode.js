@@ -7,11 +7,10 @@ import {
   Image,
   TextInput,
   TouchableOpacity,
-  StyleSheet,
-  ScrollView
+  StyleSheet
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import logo from "../../assets/White_PNG_Format_z.png";
+import Logo from "../../assets/logo.png";
 import arrow from "../../assets/Group_158_a.png";
 import {
   CodeField,
@@ -21,7 +20,7 @@ import {
 } from 'react-native-confirmation-code-field';
 import CustomText from "../../CustomText";
 const CELL_COUNT = 6;
-const SignUpVerification = () => {
+const EnterCode = () => {
   const [value, setValue] = useState('');
   const ref = useBlurOnFulfill({ value, cellCount: CELL_COUNT });
   const [props, getCellOnLayoutHandler] = useClearByFocusCell({
@@ -30,18 +29,17 @@ const SignUpVerification = () => {
   });
   const navigation = useNavigation();
   return (
-    <ScrollView contentContainerStyle={styles.outContainer}>
+    <SafeAreaView style={styles.outContainer}>
       <TouchableOpacity
         style={styles.arrowStyle}
         onPress={() => navigation.navigate("SignUp")}>
         <Image source={arrow} />
       </TouchableOpacity>
-      <Image source={logo} style={styles.imgStyle} />
       <View style={styles.textView} >
-        <CustomText style={styles.text}> {t("SignUpVerification.1")} </CustomText>
-        <CustomText style={styles.text}> {t("SignUpVerification.2")} </CustomText>
-        <CustomText style={styles.text}> {t("SignUpVerification.3")} </CustomText>
-        {/* <CustomText style={styles.text}> وارد نمایید </CustomText> */}
+        <CustomText style={styles.text}> ما یک کد شش  </CustomText>
+        <CustomText style={styles.text}> رقمی را به ایمیل   </CustomText>
+        <CustomText style={styles.text}>  شما ارسال کردیم   </CustomText>
+        <CustomText style={styles.text1}>  لطفا کد را اینجا وارد نمایید </CustomText>
       </View>
       <View style={styles.InContainer}>
         <CodeField
@@ -64,50 +62,49 @@ const SignUpVerification = () => {
             </View>
           )}
         />
-        <TouchableOpacity style={styles.submitBtn} onPress={() => navigation.navigate("Information")}>
-          <CustomText style={styles.submitText}>{t("SignUpVerification.5")} </CustomText>
+        <TouchableOpacity style={styles.submitBtn} onPress={() => navigation.navigate("NewPassword")}>
+          <CustomText style={styles.submitText} > تایید کردن</CustomText>
         </TouchableOpacity>
-        <TouchableOpacity>
-          <CustomText style={styles.title}> {t("SignUpVerification.6")} </CustomText>
-        </TouchableOpacity>
+        <Image source={Logo} style={styles.imgStyle} />
       </View>
-      </ScrollView>
+    </SafeAreaView>
   );
 };
 const styles = StyleSheet.create({
-  title: {
-    fontSize: 14,
-    color: '#ccc',
-    paddingTop: 10
-  },
   text: {
-    textAlign: 'center',
-    fontSize: 24,
+    fontSize: 35,
     color: "#fff",
-  },
-  textView: {
-    justifyContent: "center",
-    alignItems: "center",
-    marginBottom: 10,
-    marginTop: 20
-  },
+    fontWeight: "bold"
+},
+  text1:{
+  fontSize: 16,
+  color: "#fff",
+  paddingTop: 10
+},
+textView:{
+ justifyContent: "flex-end",
+ alignItems: "flex-end",
+ marginVertical: 40
+},
   codeFieldRoot: {
+    marginTop: 50,
     width: 300,
     marginLeft: 'auto',
     marginRight: 'auto',
   },
   cellRoot: {
     width: 40,
-    height: 50,
+    height: 40,
     justifyContent: 'center',
     alignItems: 'center',
     borderBottomColor: '#ccc',
-    borderBottomWidth: 2,
+    borderBottomWidth: 1,
   },
   cellText: {
     color: '#000',
     fontSize: 18,
     textAlign: 'center',
+    
   },
   focusCell: {
     borderBottomColor: '#007AFF',
@@ -118,35 +115,32 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    paddingTop: 50
   },
   imgStyle: {
-    height: 90,
-    width: 90,
-    marginTop: 40
+    marginTop:  50,
+    alignSelf: "center"
   },
   arrowStyle: {
     marginTop: 40,
     alignSelf: "flex-start",
-    marginLeft: 40,
+    marginLeft: 30,
   },
   InContainer: {
     borderTopRightRadius: 55,
     borderTopLeftRadius: 55,
     backgroundColor: "#fff",
-    width: "100%",
     flex: 3,
+    width: "100%",
     justifyContent: "flex-start",
     alignItems: "center",
     paddingHorizontal: 30,
-    paddingTop: 70,
     padding: 10,
     minHeight: 300
   },
   submitBtn: {
     backgroundColor: "rgba(60,152,189,1)",
     width: "100%",
-    marginTop: 30,
+    marginTop: 20,
     height: 40,
     alignItems: "center",
     justifyContent: "center",
@@ -156,7 +150,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontWeight: "bold",
     color: "white",
-  },
+  }
 });
 
-export default SignUpVerification;
+export default EnterCode;

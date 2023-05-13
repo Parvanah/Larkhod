@@ -7,8 +7,8 @@ import {
   Pressable,
   TextInput,
   Button,
+  ScrollView,
   TouchableOpacity,
-  Alert,
 } from "react-native";
 import google from "../../assets/google.png";
 import facebook from "../..//assets/facebook.png";
@@ -20,57 +20,69 @@ import seen from "../../assets/Group_8.png";
 import { Formik, Field } from 'formik'
 import * as Yup from "yup";
 import CustomInput from "./CustomInput";
+import CustomText from "../../CustomText";
+import { useTranslation } from "react-i18next";
+const SignUp = () =>{
+  // constructor(props){
+  //   super(props);
+  //   this.state = {
+  //     showSignUp: true,
+  //   };
+  // }
+  // handlePress = () =>{
+  //   this.setState({showSignUp: !this.state.showSignUp});
+  // };
+  // render(){
+    const {t, i18n}= useTranslation(); 
+    const signUpValidationSchema = Yup.object().shape({
+      email: Yup
+        .string()
+        .email("لطفا ایمیل متعتبر تان را وارد نمایید")
+        .required('ایمیل آدرس لازمی است'),
+      password: Yup
+        .string()
+        .matches(/\w*[a-z]\w*/,  " رمز عبور باید یک حرف کوچک داشته باشد")
+        .matches(/\w*[A-Z]\w*/,  " رمز عبور باید یک حرف بزرگ داشته باشد")
+        .matches(/\d/, "رمز عبور باید یک عدد داشته باشد ")
+        .matches(/[!@#$%^&*()\-_"=+{}; :,<.>]/, "  عبور باید یک کارکتر خاص داشته یاشد")
+        .min(8, ({ min }) => `  رمز عبور باید حداقل ${min} کارکتر باشد `)
+        .required('رمز عبور لازمی است'),
+      confirmPassword: Yup
+        .string()
+        .oneOf([Yup.ref('password')], 'رمز عبور مطابقت ندارد')
+        .required('تایید رمز عبور لازمی است'),
+    })
+    const navigation = useNavigation();
+    const onSubmit = () => {
+        navigation.navigate("SignUpVerification");
+    };
+    const [seenVariable, setSeenVariable] = useState(true);
+    const SeenPassword = () => {
+      if (seenVariable == true) {
+        setSeenVariable(false);
+      } else {
+        setSeenVariable(true);
+      }
+    };
 
-const SignUp = () => {
-  const signUpValidationSchema = Yup.object().shape({
-    email: Yup
-      .string()
-      .email("لطفا ایمیل متعتبر تان را وارد کنید")
-      .required('ایمیل آدرس الزامی است'),
-    password: Yup
-      .string()
-      .matches(/\w*[a-z]\w*/,  " رمز عبور باید یک حرف کوچک داشته باشد")
-      .matches(/\w*[A-Z]\w*/,  " رمز عبور باید یک حرف بزرگ داشته باشد")
-      .matches(/\d/, "رمز عبور باید یک عدد داشته باش")
-      .matches(/[!@#$%^&*()\-_"=+{}; :,<.>]/, "  عبور باید یک کارکتر خاص داشته یاشد")
-      .min(8, ({ min }) => `  رمز عبور باید حداقل ${min} کارکتر باشد `)
-      .required('رمز عبور الزامی است'),
-    confirmPassword: Yup
-      .string()
-      .oneOf([Yup.ref('password')], 'رمز عبور مطابقت ندارد')
-      .required('تایید رمز عبور لازم است'),
-  })
-  const onSubmit = (values) => {
-    
-    if(!values){
-      Alert("please fill the form")
-    }   
-    else{
-      navigation.navigate("SignUpVerification");
-    }
-  };
-
-  const navigation = useNavigation();
-  const [seenVariable, setSeenVariable] = useState(true);
-  const SeenPassword = () => {
-    if (seenVariable == true) {
-      setSeenVariable(false);
-    } else {
-      setSeenVariable(true);
-    }
-  };
   return (
-    <SafeAreaView style={Styles.outContainer}>
+  //   moveToSlideFromRight = () => {
+  //     this.props.navigation.navigate('SlideFromRight');
+  // },
+    <ScrollView contentContainerStyle={styles.outContainer}>
       <Image source={logo} style={Styles.imgStyle} />
       <View style={Styles.InContainer}>
-        <View style={styles.navContainer}>
-          <Pressable style={styles.btnSI}  onPress={() => navigation.navigate("LogIn")}>
-            <Text style={styles.btnTextSI}>ورود به حساب</Text>
-          </Pressable>
-          <Pressable style={styles.btnSO} >
-            <Text style={styles.btnTextSO}>ایجاد حساب</Text>
-          </Pressable>
-        </View>
+      <View style={styles.navContainer}>
+            <TouchableOpacity style={styles.btnSI} 
+            onPress={() => navigation.navigate("LogIn")}
+            // onPress={this.moveToSlideFromRight}
+            > 
+              <CustomText style={styles.btnTextSI}>{t("SignUp.2")} </CustomText>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.btnSO} >
+              <CustomText style={styles.btnTextSO}> {t("SignUp.1")}</CustomText>
+            </TouchableOpacity>
+          </View>
         <View style={styles.form}>
         <Formik  validationSchema={signUpValidationSchema}
              initialValues={{
@@ -78,7 +90,7 @@ const SignUp = () => {
               password: '',
               confirmPassword: '',
             }} 
-            onSubmit={values => onSubmit(values)}  
+            onSubmit={onSubmit}  
           > 
             {({  
             handleChange,
@@ -88,10 +100,11 @@ const SignUp = () => {
             isValid,
            }) => (
               <>
+              
                 <Field
                   component={CustomInput}
                   name="email"
-                  placeholder=" ایمیل ادرس"
+                  placeholder= {t("SignUp.3")}
                   keyboardType="email-address"
                   onChangeText={handleChange('email')}
                   onBlur={handleBlur('email')}
@@ -101,7 +114,7 @@ const SignUp = () => {
                 <Field
                   component={CustomInput}
                   name="password"
-                  placeholder="رمز عبور"
+                  placeholder= {t("SignUp.4")}
                   secureTextEntry
                   onChangeText={handleChange('password')}
                   onBlur={handleBlur('password')}
@@ -112,7 +125,7 @@ const SignUp = () => {
              <Field
                   component={CustomInput}
                   name="confirmPassword"
-                  placeholder=" تکرار رمز عبور"
+                  placeholder= {t("SignUp.5")}
                   secureTextEntry
                   onChangeText={handleChange('confirmPassword')}
                   onBlur={handleBlur('confirmPassword')}
@@ -123,26 +136,29 @@ const SignUp = () => {
             </TouchableOpacity>  
             </View>  */}
           <TouchableOpacity style={styles.submitBtn}  onPress={handleSubmit}  disabled={!isValid} >
-            <Text style={styles.submitText}>ایجاد حساب</Text>
+            <CustomText style={styles.submitText}> {t("SignUp.1")}</CustomText>
           </TouchableOpacity>
            </>
            )}
          </Formik>
         </View>
         <Text style={{ color: "lightgray" }}>
-          _______________ویا_______________
+          _______________{t("SignUp.6")}______________
         </Text>
         <View style={styles.linkedBtnWrapper}>
           <TouchableOpacity style={styles.linkBtn}>
             <Image source={google} />
-            <Text style={styles.linkBtnText}>با حساب گوگل خود وارد شوید</Text>
+            <CustomText style={styles.linkBtnText}>{t("SignUp.7")}</CustomText>
           </TouchableOpacity>
-        </View>
-      </View>
-    </SafeAreaView>
+        </View> 
+      </View> 
+    </ScrollView>
+    
   );
-};
+
+}
 export default SignUp;
+
 
 
 

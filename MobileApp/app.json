@@ -3,7 +3,7 @@
     "name": "R_Project",
     "slug": "R_Project",
     "version": "1.0.0",
-    "orientation": "portriat",
+    "orientation": "default",
     "icon": "./App/assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
@@ -17,9 +17,17 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "ios": {
-      "supportsTablet": true
+    "ios":{
+      "requireFullScreen": true
     },
+    "plugins": [
+      [
+      "expo-screen-orientation",
+      {
+        "initialOrientation": "DEFAULT"
+      }
+    ]
+  ],
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./App/assets/adaptive-icon.png",

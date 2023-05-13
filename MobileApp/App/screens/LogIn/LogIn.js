@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {SafeAreaView, View, Text, Image, Pressable, TextInput, Button, TouchableOpacity } from "react-native";
+import {SafeAreaView, View, Text, Image, Pressable, TextInput, Button, TouchableOpacity, ScrollView } from "react-native";
 import Styles from "./LogIn.style";
 import styles from "../LogIn/LogIn.style";
 import logo from "../../assets/White_PNG_Format_z.png";
@@ -9,34 +9,30 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { useNavigation } from "@react-navigation/native";
 import ForgotPassword from "../ForgotPassword/ForgotPassword";
-
+import CustomText from "../../CustomText";
+import { t } from "i18next";
 const loginValidationSchema = Yup.object().shape({
   email: Yup
     .string()
-    .email("Please enter valid email")
-    .required('ایمیل آدرس الزامی است'),
+    .email(" ایمیل آدرس معتبر تان را وارد کنید")
+    .required('ایمیل آدرس لازمی است'),
   password: Yup
     .string()
-    .min(8, ({ min }) => `Password must be at least ${min} characters`)
-    .required('رمز عبور الزامی است'),
+    .min(8, ({ min }) => `  رمز عبور باید حداقل ${min} کارکتر باشد `)
+    .required('رمز عبور لازمی است'),
 })
 
 const LogIn = () => {
   const navigation = useNavigation();
-  const OnSubmit = (values) => {
-    if(!values){
-      Alert("please fill the form")
-    }
-    else{
+  const OnSubmit = () => {
       navigation.navigate("Sections");
-    }
   };
   const handle = () =>{
     navigation.navigate(ForgotPassword);
   }
 
     return (     
-      <SafeAreaView style={Styles.outContainer}>
+      <ScrollView contentContainerStyle={styles.outContainer}>
                 <TouchableOpacity
           style={styles.arrowStyle}
           onPress={() => navigation.navigate("FirstPage")}
@@ -48,10 +44,10 @@ const LogIn = () => {
 
           <View style={styles.navContainer}>
             <TouchableOpacity style={styles.btnSI} > 
-              <Text style={styles.btnTextSI}>ورود به حساب</Text>
+              <CustomText style={styles.btnTextSI}> {t("Login.2")} </CustomText>
             </TouchableOpacity>
             <TouchableOpacity style={styles.btnSO} onPress={() => navigation.navigate("SignUp")}>
-              <Text style={styles.btnTextSO}>ایجاد حساب</Text>
+              <CustomText style={styles.btnTextSO}>{t("Login.1")} </CustomText>
             </TouchableOpacity>
           </View>
 
@@ -72,7 +68,7 @@ const LogIn = () => {
            <>
             <TextInput
              name="email"
-             placeholder=" ایمیل آدرس"
+             placeholder= {t("Login.3")}
              onChangeText={handleChange('email')}
              onBlur={handleBlur('email')}
              value={values.email}
@@ -81,11 +77,11 @@ const LogIn = () => {
               style={styles.input}
             />
              {(errors.email && touched.email) &&
-                  <Text style={styles.errorText}>{errors.email}</Text>
+                  <CustomText style={styles.errorText}>{errors.email}</CustomText>
                 }
             <TextInput
               name="password"
-              placeholder="رمز عبور"
+              placeholder= {t("Login.4")}
               onChangeText={handleChange('password')}
               onBlur={handleBlur('password')}
               value={values.password}
@@ -94,35 +90,34 @@ const LogIn = () => {
               style={styles.input}
             />
              {(errors.password && touched.password) &&
-                  <Text style={styles.errorText}>{errors.password}</Text>
+                  <CustomText style={styles.errorText}>{errors.password}</CustomText>
             }
           <TouchableOpacity onPress={handle}>
-            <Text style={styles.afterPass}> رمز عبوری تان را فراموش کرده اید؟ </Text>
+            <CustomText style={styles.afterPass}> {t("Login.5")} </CustomText>
           </TouchableOpacity> 
            <TouchableOpacity style={styles.submitBtn}  
              onPress={ handleSubmit}
              disabled={!isValid} 
               >
-                <Text style={styles.submitText}>وارد شدن </Text>
+                <CustomText style={styles.submitText}> {t("Login.2")} </CustomText>
             </TouchableOpacity>
             </>
             )}
           </Formik>
-
           </View>
           <View style={styles.afterSubmit}>
-            <Text style={{ color: "lightgray" }}>
-              ___________و یا______________
-            </Text>
+            <CustomText style={{ color: "lightgray" }}>
+              ___________{t("Login.6")}_____________
+            </CustomText>
           </View>
           <View style={styles.linkedBtnWrapper}>
           <TouchableOpacity style={styles.linkBtn}>
             <Image source={google} />
-          <Text style={styles.linkBtnText}>با حساب گوگل خود وارد شوید  </Text>
+          <CustomText style={styles.linkBtnText}>{t("Login.7")}</CustomText>
           </TouchableOpacity>
           </View>
         </View>
-      </SafeAreaView>
+      </ScrollView>
     );
   };
   export default LogIn;
