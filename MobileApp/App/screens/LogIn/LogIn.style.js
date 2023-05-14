@@ -64,13 +64,17 @@ const Styles = StyleSheet.create({
     color: "white",
     textAlign: "center",
   },
-  form: { width: "100%" },
+  form: { width: "100%", paddingTop:15},
   input: {
     borderBottomColor: "lightgray",
     borderBottomWidth: 1,
+    width: "100%",
     height: 40,
-    marginTop: 10,
-    textAlign: "right"
+    flexDirection: "row-reverse",
+    justifyContent: "space-between",
+    alignItems: "center",
+    textAlign: "right",
+    
   },
   submitBtn: {
     backgroundColor: "rgba(60,152,189,1)",

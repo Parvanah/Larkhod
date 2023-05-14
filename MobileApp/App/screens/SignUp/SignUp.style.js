@@ -22,6 +22,7 @@ const Styles = StyleSheet.create({
     justifyContent: "flex-start",
     alignItems: "center",
     paddingHorizontal: 40,
+    marginTop: 40
   },
   navContainer: {
     justifyContent: "center",
@@ -71,6 +72,7 @@ const Styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     textAlign: "right",
+    marginTop: 10
   },
   submitBtn: {
     backgroundColor: "rgba(60,152,189,1)",

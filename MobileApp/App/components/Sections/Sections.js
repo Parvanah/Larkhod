@@ -27,12 +27,15 @@ import gradeLogo from "../../assets/Group_211_y.png";
 import classNine from "../grade_9_dari.json";
 import classTwo from "../grade_2_dari.json";
 import CustomText from "../../CustomText";
+import { useTranslation } from "react-i18next";
+
 
 const Sections = (props) => {
   const navigation = useNavigation();
   const onSubmit = () => {
     navigation.navigate("ChangeInfo");
   };
+  const {t, i18n}= useTranslation(); 
   return (
     <View style={styles.container}>
       <View style={styles.svgWrapper}>
@@ -123,7 +126,7 @@ const Sections = (props) => {
           onPress={() => navigation.navigate("AboutUs")}
         >
           <CustomText style={styles.sectionMiddleBtnText}>
-            در باره ما
+            {t("Sections.1")}
           </CustomText>
         </TouchableOpacity>
       </View>

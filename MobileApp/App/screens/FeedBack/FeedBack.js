@@ -23,10 +23,11 @@ import { Formik, Field } from "formik";
 import * as Yup from "yup";
 import CustomInput from "../SignUp/CustomInput";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useTranslation } from "react-i18next";
 
 const FeedBack = (props) => {
   const navigation = useNavigation();
-
+  const {t, i18n}= useTranslation(); 
   const FeedBackSchema = Yup.object().shape({
     name: Yup.string()
       .min(2, "نام باید بالاتر از دو حرف باشد")
@@ -80,11 +81,8 @@ const FeedBack = (props) => {
         </Svg>
       </View>
       <View style={Style.top}>
-        <Text style={Style.title}>ارسال نظر</Text>
-        <Text style={Style.description}>
-          پیشنهادات و نظریات خود را جهت بهبود روند درس‌ها از این دریچه با ما به
-          اشتراک بگذارید
-        </Text>
+        <Text style={Style.title}> {t("FeedBack.12")} </Text>
+        <Text style={Style.description}> {t("FeedBack.13")} </Text>
       </View>
 
       <ScrollView contentContainerStyle={Style.svgWrapperFeedBack}>
@@ -103,7 +101,7 @@ const FeedBack = (props) => {
             <SafeAreaView style={Style.form}>
               <Field
                 component={CustomInput}
-                placeholder="نام"
+                placeholder= {t("FeedBack.14")}
                 placeholderTextColor="#fff"
                 keyboardType="ascii-capable"
                 style={Style.input}
@@ -115,7 +113,7 @@ const FeedBack = (props) => {
 
               <Field
                 component={CustomInput}
-                placeholder="شماره تماس"
+                placeholder= {t("FeedBack.15")}
                 placeholderTextColor="#fff"
                 keyboardType="ascii-capable"
                 style={Style.input}
@@ -126,7 +124,7 @@ const FeedBack = (props) => {
               />
               <Field
                 component={CustomInput}
-                placeholder="صنف"
+                placeholder= {t("FeedBack.16")}
                 placeholderTextColor="lightgray"
                 keyboardType="decimal-pad"
                 style={Style.input}
@@ -137,7 +135,7 @@ const FeedBack = (props) => {
               />
               <Field
                 component={CustomInput}
-                placeholder="ایمیل آدرس"
+                placeholder= {t("FeedBack.17")}
                 placeholderTextColor="#fff"
                 keyboardType="email-address"
                 style={Style.input}
@@ -149,7 +147,7 @@ const FeedBack = (props) => {
 
               <Field
                 component={CustomInput}
-                placeholder="درج پیام ..."
+                placeholder = {t("FeedBack.18")}
                 placeholderTextColor="black"
                 style={Style.inputMessege}
                 editable
@@ -167,7 +165,7 @@ const FeedBack = (props) => {
                 disabled={!isValid}
                 style={Style.SubmitBtn}
               >
-                <Text>ارسال نظر</Text>
+                <Text> {t("FeedBack.19")} </Text>
               </TouchableOpacity>
             </SafeAreaView>
           )}

@@ -20,6 +20,8 @@ import {
   useClearByFocusCell,
 } from 'react-native-confirmation-code-field';
 import CustomText from "../../CustomText";
+import { useTranslation } from "react-i18next";
+
 const CELL_COUNT = 6;
 const SignUpVerification = () => {
   const [value, setValue] = useState('');
@@ -29,6 +31,7 @@ const SignUpVerification = () => {
     setValue,
   });
   const navigation = useNavigation();
+  const {t, i18n}= useTranslation(); 
   return (
     <ScrollView contentContainerStyle={styles.outContainer}>
       <TouchableOpacity
@@ -38,10 +41,10 @@ const SignUpVerification = () => {
       </TouchableOpacity>
       <Image source={logo} style={styles.imgStyle} />
       <View style={styles.textView} >
-        <CustomText style={styles.text}> {t("SignUpVerification.1")} </CustomText>
+        {/* <CustomText style={styles.text}> {t("SignUpVerification.1")} </CustomText>
         <CustomText style={styles.text}> {t("SignUpVerification.2")} </CustomText>
-        <CustomText style={styles.text}> {t("SignUpVerification.3")} </CustomText>
-        {/* <CustomText style={styles.text}> وارد نمایید </CustomText> */}
+        <CustomText style={styles.text}> {t("SignUpVerification.3")} </CustomText> */}
+        <CustomText style={styles.text}> {t("SignUpVerification.3")}  </CustomText>
       </View>
       <View style={styles.InContainer}>
         <CodeField
@@ -65,10 +68,10 @@ const SignUpVerification = () => {
           )}
         />
         <TouchableOpacity style={styles.submitBtn} onPress={() => navigation.navigate("Information")}>
-          <CustomText style={styles.submitText}>{t("SignUpVerification.5")} </CustomText>
+          <CustomText style={styles.submitText}>{t("SignUpVerification.1")} </CustomText>
         </TouchableOpacity>
         <TouchableOpacity>
-          <CustomText style={styles.title}> {t("SignUpVerification.6")} </CustomText>
+          <CustomText style={styles.title}> {t("SignUpVerification.2")} </CustomText>
         </TouchableOpacity>
       </View>
       </ScrollView>
@@ -89,7 +92,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     marginBottom: 10,
-    marginTop: 20
+    marginTop: 20,
+    width: "70=%"
   },
   codeFieldRoot: {
     width: 300,

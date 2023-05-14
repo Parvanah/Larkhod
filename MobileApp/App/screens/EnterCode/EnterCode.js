@@ -7,7 +7,8 @@ import {
   Image,
   TextInput,
   TouchableOpacity,
-  StyleSheet
+  StyleSheet,
+  ScrollView
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import Logo from "../../assets/logo.png";
@@ -19,6 +20,8 @@ import {
   useClearByFocusCell,
 } from 'react-native-confirmation-code-field';
 import CustomText from "../../CustomText";
+import { useTranslation } from "react-i18next";
+
 const CELL_COUNT = 6;
 const EnterCode = () => {
   const [value, setValue] = useState('');
@@ -28,18 +31,19 @@ const EnterCode = () => {
     setValue,
   });
   const navigation = useNavigation();
+  const {t, i18n}= useTranslation(); 
   return (
-    <SafeAreaView style={styles.outContainer}>
+    <ScrollView contentContainerStyle={styles.outContainer}>
       <TouchableOpacity
         style={styles.arrowStyle}
         onPress={() => navigation.navigate("SignUp")}>
         <Image source={arrow} />
       </TouchableOpacity>
       <View style={styles.textView} >
-        <CustomText style={styles.text}> ما یک کد شش  </CustomText>
-        <CustomText style={styles.text}> رقمی را به ایمیل   </CustomText>
-        <CustomText style={styles.text}>  شما ارسال کردیم   </CustomText>
-        <CustomText style={styles.text1}>  لطفا کد را اینجا وارد نمایید </CustomText>
+        <CustomText style={styles.text}> {t("EnterCode.1")}  </CustomText>
+         {/* <CustomText style={styles.text}>  {t("EnterCode.2")} </CustomText>
+        <CustomText style={styles.text}>   {t("EnterCode.3")}    </CustomText> */}
+        <CustomText style={styles.text1}>  {t("EnterCode.2")} </CustomText> 
       </View>
       <View style={styles.InContainer}>
         <CodeField
@@ -63,28 +67,32 @@ const EnterCode = () => {
           )}
         />
         <TouchableOpacity style={styles.submitBtn} onPress={() => navigation.navigate("NewPassword")}>
-          <CustomText style={styles.submitText} > تایید کردن</CustomText>
+          <CustomText style={styles.submitText} > {t("EnterCode.3")} </CustomText>
         </TouchableOpacity>
         <Image source={Logo} style={styles.imgStyle} />
       </View>
-    </SafeAreaView>
+    </ScrollView>
   );
 };
 const styles = StyleSheet.create({
   text: {
     fontSize: 35,
     color: "#fff",
-    fontWeight: "bold"
+    fontWeight: "bold",
+    textAlign:"right"
 },
   text1:{
   fontSize: 16,
   color: "#fff",
-  paddingTop: 10
+  paddingTop: 10,
+  textAlign:"right"
 },
 textView:{
  justifyContent: "flex-end",
  alignItems: "flex-end",
- marginVertical: 40
+ marginVertical: 40,
+ width: "80%",
+ marginBottom: 20,
 },
   codeFieldRoot: {
     marginTop: 50,
@@ -115,6 +123,7 @@ textView:{
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    paddingTop: 50
   },
   imgStyle: {
     marginTop:  50,

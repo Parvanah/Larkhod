@@ -17,8 +17,11 @@ import { useNavigation } from "@react-navigation/native";
 import arrow from "../../assets/Group_158_a.png";
 import Logo from "../../assets/logo.png";
 import CustomText from "../../CustomText";
+import { useTranslation } from "react-i18next";
+
   
 const NewPassword = () => {
+  const {t, i18n}= useTranslation(); 
     const EnterCodeValidationSchema = Yup.object().shape({
         password: Yup
           .string()
@@ -141,7 +144,7 @@ textView:{
     alignItems: "center",
     paddingHorizontal: 30,
   },
-  form: { width: "100%", paddingVertical: 70 },
+  form: { width: "100%", paddingVertical: 50 },
   input: {
     borderBottomColor: "lightgray",
     borderBottomWidth: 1,

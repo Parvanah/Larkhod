@@ -10,7 +10,7 @@ import * as Yup from 'yup';
 import { useNavigation } from "@react-navigation/native";
 import ForgotPassword from "../ForgotPassword/ForgotPassword";
 import CustomText from "../../CustomText";
-import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 const loginValidationSchema = Yup.object().shape({
   email: Yup
     .string()
@@ -30,7 +30,7 @@ const LogIn = () => {
   const handle = () =>{
     navigation.navigate(ForgotPassword);
   }
-
+  const {t, i18n}= useTranslation(); 
     return (     
       <ScrollView contentContainerStyle={styles.outContainer}>
                 <TouchableOpacity
@@ -44,10 +44,10 @@ const LogIn = () => {
 
           <View style={styles.navContainer}>
             <TouchableOpacity style={styles.btnSI} > 
-              <CustomText style={styles.btnTextSI}> {t("Login.2")} </CustomText>
+              <CustomText style={styles.btnTextSI}> {t("LogIn.2")} </CustomText>
             </TouchableOpacity>
             <TouchableOpacity style={styles.btnSO} onPress={() => navigation.navigate("SignUp")}>
-              <CustomText style={styles.btnTextSO}>{t("Login.1")} </CustomText>
+              <CustomText style={styles.btnTextSO}>{t("LogIn.1")} </CustomText>
             </TouchableOpacity>
           </View>
 
@@ -68,7 +68,7 @@ const LogIn = () => {
            <>
             <TextInput
              name="email"
-             placeholder= {t("Login.3")}
+             placeholder= {t("LogIn.3")}
              onChangeText={handleChange('email')}
              onBlur={handleBlur('email')}
              value={values.email}
@@ -81,7 +81,7 @@ const LogIn = () => {
                 }
             <TextInput
               name="password"
-              placeholder= {t("Login.4")}
+              placeholder= {t("LogIn.4")}
               onChangeText={handleChange('password')}
               onBlur={handleBlur('password')}
               value={values.password}
@@ -93,13 +93,13 @@ const LogIn = () => {
                   <CustomText style={styles.errorText}>{errors.password}</CustomText>
             }
           <TouchableOpacity onPress={handle}>
-            <CustomText style={styles.afterPass}> {t("Login.5")} </CustomText>
+            <CustomText style={styles.afterPass}> {t("LogIn.5")} </CustomText>
           </TouchableOpacity> 
            <TouchableOpacity style={styles.submitBtn}  
              onPress={ handleSubmit}
              disabled={!isValid} 
               >
-                <CustomText style={styles.submitText}> {t("Login.2")} </CustomText>
+                <CustomText style={styles.submitText}> {t("LogIn.2")} </CustomText>
             </TouchableOpacity>
             </>
             )}
@@ -107,13 +107,13 @@ const LogIn = () => {
           </View>
           <View style={styles.afterSubmit}>
             <CustomText style={{ color: "lightgray" }}>
-              ___________{t("Login.6")}_____________
+              ___________{t("LogIn.6")}_____________
             </CustomText>
           </View>
           <View style={styles.linkedBtnWrapper}>
           <TouchableOpacity style={styles.linkBtn}>
             <Image source={google} />
-          <CustomText style={styles.linkBtnText}>{t("Login.7")}</CustomText>
+          <CustomText style={styles.linkBtnText}>{t("LogIn.7")}</CustomText>
           </TouchableOpacity>
           </View>
         </View>

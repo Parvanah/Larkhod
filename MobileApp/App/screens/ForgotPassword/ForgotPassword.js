@@ -17,6 +17,7 @@ import {
   import { Formik } from 'formik';
 import * as Yup from 'yup';
 import CustomText from "../../CustomText"
+import { useTranslation } from "react-i18next";
 const emailValidationSchema = Yup.object().shape({
   email: Yup
     .string()
@@ -24,6 +25,7 @@ const emailValidationSchema = Yup.object().shape({
     .required('ایمیل آدرس لازمی است'),
 })
 const ForgotPassword = () => {
+  const {t, i18n}= useTranslation(); 
     const [email, setEmail] = useState('');
     const doUser = async function(){
         const emailValue = email;
@@ -36,7 +38,7 @@ const ForgotPassword = () => {
     const navigation = useNavigation();
     const OnSubmit = () => {
 
-        navigation.navigate("NewPassword");
+        navigation.navigate("EnterCode");
     
     };
     return (
@@ -49,10 +51,10 @@ const ForgotPassword = () => {
     </TouchableOpacity>
     <View style={styles.textView} >
            <CustomText style={styles.text}> {t("ForgotPassword.1")}  </CustomText>
-           <CustomText style={styles.text}>  {t("ForgotPassword.2")} </CustomText>
-           <CustomText style={styles.text}> {t("ForgotPassword.3")}  </CustomText>
-           <CustomText style={styles.text1}> {t("ForgotPassword.4")} </CustomText>
+           {/* <CustomText style={styles.text}>  {t("ForgotPassword.2")} </CustomText> */}
+           <CustomText style={styles.text1}> {t("ForgotPassword.2")}  </CustomText>
     </View>
+    
     <View style={styles.InContainer}>
     <View style={styles.form}>
     <Formik  validationSchema={emailValidationSchema}
@@ -70,7 +72,7 @@ const ForgotPassword = () => {
            <>
      <TextInput
              name="email"
-             placeholder= {t("ForgotPassword.9")}
+             placeholder= {t("ForgotPassword.6")}
              onChangeText={handleChange('email')}
              onBlur={handleBlur('email')}
              value={values.email}
@@ -82,7 +84,7 @@ const ForgotPassword = () => {
                   <CustomText style={styles.errorText}>{errors.email}</CustomText>
                 }
   <TouchableOpacity style={styles.submitBtn} onPress={ handleSubmit}  disabled={!isValid} >
-    <CustomText style={styles.submitText}>{t("ForgotPassword.10")} </CustomText>
+    <CustomText style={styles.submitText}>{t("ForgotPassword.7")} </CustomText>
   </TouchableOpacity> 
   </>
     )}
@@ -98,16 +100,20 @@ const styles = StyleSheet.create({
     fontSize: 40,
     color: "#fff",
     fontWeight: "bold",
+    textAlign:"right",
 },
   text1:{
   fontSize: 18,
   color: "#fff",
+  textAlign:"right",
+
 },
 textView:{
- justifyContent: "flex-end",
+ justifyContent: "flex-start",
  alignItems: "flex-end",
- marginBottom: 10,
- marginTop: 30
+ marginBottom: 20,
+ marginTop: 30,
+ width: "80%",
 },
   outContainer: {
     backgroundColor: "rgba(60,152,189,1)",

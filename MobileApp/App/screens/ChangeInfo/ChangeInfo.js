@@ -14,6 +14,8 @@ import logo from "../../assets/White_PNG_Format_z.png";
 import user from "../../assets/user.png";
 import arrow from "../../assets/Group_158.png";
 import CustomText from "../../CustomText";
+import { useTranslation } from "react-i18next";
+
 
 const ChangeInfo = () => {
 
@@ -21,6 +23,7 @@ const ChangeInfo = () => {
   const onSubmit =()=>{
      navigation.navigate("Sections");
   }
+  const {t, i18n}= useTranslation(); 
   return (
     <SafeAreaView style={styles.outContainer}>
            <TouchableOpacity
@@ -31,34 +34,34 @@ const ChangeInfo = () => {
         </TouchableOpacity>
        <View style={styles.imageWrapper}>
           <Image source={user} style={styles.img} />
-          <CustomText style={styles.usertext}>تغییر عکس نمایه</CustomText>
+          <CustomText style={styles.usertext}> {t("ChangeInfo.1")} </CustomText>
         </View>
       <View style={styles.InContainer}>
         <View style={styles.form}>       
                <TextInput
                   name="firstName"
-                  placeholder=" تغییر نام "
+                  placeholder= {t("ChangeInfo.2")}
                   style={styles.input}
                 />
                 <TextInput
                   name="lastName"
-                  placeholder=" تغییر تخلص "
+                  placeholder= {t("ChangeInfo.2")}  
                   style={styles.input}
                 />
                 <TextInput
                   name="age"
-                  placeholder="تغییر سن"
+                  placeholder= {t("ChangeInfo.4")}
                   keyboardType="numeric"
                   style={styles.input}
                 />
                 <TextInput
                   name="class"
-                  placeholder="تغییر صنف"
+                  placeholder= {t("ChangeInfo.5")}
                   keyboardType="numeric"
                   style={styles.input}
                 />
           <TouchableOpacity style={styles.submitBtn}  onPress={onSubmit}  >
-            <CustomText style={styles.submitText}>ذخیره کردن </CustomText>
+            <CustomText style={styles.submitText}>{t("ChangeInfo.6")}  </CustomText>
           </TouchableOpacity>
         </View>
       </View>

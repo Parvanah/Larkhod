@@ -16,8 +16,10 @@ import Svg, {
 } from "react-native-svg";
 import Style from "./AboutUs.style";
 import CustomText from "../../CustomText";
+import { useTranslation } from "react-i18next";
 
 const AboutUs = (props) => {
+  const {t, i18n}= useTranslation(); 
   const navigation = useNavigation();
   return (
     <View style={Style.containerAboutUS}>
@@ -82,9 +84,9 @@ const AboutUs = (props) => {
       </View>
       <ScrollView contentContainerStyle={Style.svgWrapperAboutUs}>
         <View style={Style.mainContentText}>
-          <CustomText style={Style.title}>درباره ما </CustomText>
+          <CustomText style={Style.title}> {t("AboutUs.1")}  </CustomText>
           <CustomText style={Style.description}>
-            لارشود یک پلتفورم آموزش آنلاین است که به دلیل وضعیت نا مناسب تعلیم و
+            {/* لارشود یک پلتفورم آموزش آنلاین است که به دلیل وضعیت نا مناسب تعلیم و
             تحصیل برای قشر اناث در افغانستان ایجاد شده است تا دختران این سرزمین
             از حق تعلیم و تحصیل محروم نباشند. لارشود یک پلتفورم آموزش آنلاین است
             که به دلیل وضعیت نا مناسب تعلیم و تحصیل برای قشر اناث در افغانستان
@@ -99,7 +101,8 @@ const AboutUs = (props) => {
             دختران این سرزمین از حق تعلیم و تحصیل محروم نباشند.لارشود یک پلتفورم
             آموزش آنلاین است که به دلیل وضعیت نا مناسب تعلیم و تحصیل برای قشر
             اناث در افغانستان ایجاد شده است تا دختران این سرزمین از حق تعلیم و
-            تحصیل محروم نباشند..
+            تحصیل محروم نباشند.. */}
+            {t("AboutUs.2")} 
           </CustomText>
         </View>
         <View style={Style.svg}>

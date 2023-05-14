@@ -16,6 +16,7 @@ import arrow from "../../assets/Group_158.png";
 import CustomText from "../../CustomText";
 import { Formik } from 'formik';
 import * as Yup from 'yup';
+import { useTranslation } from "react-i18next";
 
 
 const InfoValidationSchema = Yup.object().shape({
@@ -44,6 +45,8 @@ const Information = () => {
   const onSubmit =()=>{
      navigation.navigate("Sections");
   }
+ 
+const {t, i18n}= useTranslation(); 
   return (
     <ScrollView contentContainerStyle={styles.outContainer}>
            <TouchableOpacity

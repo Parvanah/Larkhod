@@ -22,7 +22,7 @@ const CustomText = (props) => {
   }
 
   return (
-    <Text style={{ ...props.style, fontFamily: "custom-font" }}>
+    <Text style={{ ...props.style, fontFamily: "custom-font"}}>
       {props.children}
     </Text>
   );

@@ -18,6 +18,7 @@ import NewPassword from "./App/screens/NewPassword/NewPassword";
 import AboutUs from "./App/screens/AboutUs/AboutUs";
 import FeedBack from "./App/screens/FeedBack/FeedBack";
 import TranslateApp from "./App/screens/TranslateApp";
+import EnterCode from "./App/screens/EnterCode/EnterCode";
 const Stack = createNativeStackNavigator();
 const StackNaigator = () => {
   return (
@@ -35,6 +36,7 @@ const StackNaigator = () => {
         <Stack.Screen name="TranslateApp" component={TranslateApp} />
         <Stack.Screen name="LogIn" component={LogIn} />
         <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
+        <Stack.Screen name="EnterCode" component={EnterCode} />
         <Stack.Screen name="Information" component={Information} />
         <Stack.Screen name="NewPassword" component={NewPassword} />
         <Stack.Screen name="Sections" component={Sections} />
