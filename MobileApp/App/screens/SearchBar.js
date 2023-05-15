@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { StyleSheet, TextInput, View, Keyboard, Button } from "react-native";
 import Svg, { Rect, Path, Ellipse } from "react-native-svg";
 import { Feather, Entypo } from "@expo/vector-icons";
+import { useTranslation } from "react-i18next";
 
 const SearchBar = (props) => {
+  const {t, i18n}= useTranslation(); 
   return (
     <View style={styles.container}>
       {/* <TextInput style={styles.searchbar} placeholder="جستجو">
@@ -22,7 +24,7 @@ const SearchBar = (props) => {
           color="black"
           style={{ marginRight: 1 }}
         />
-        <TextInput placeholder="جستجو" style={styles.serachText} />
+        <TextInput placeholder={t("SearchBar.1")} style={styles.serachText} />
       </View>
     </View>
   );

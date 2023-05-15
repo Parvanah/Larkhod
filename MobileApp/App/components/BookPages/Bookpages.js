@@ -23,10 +23,13 @@ import lesson from "../../assets/lesson12.1.jpg";
 import pdfIcon from "../../assets/Group_408.png";
 import { useNavigation } from "@react-navigation/native";
 import { useRoute } from "@react-navigation/native";
+import { useTranslation } from "react-i18next";
+
 function BookPages(props) {
   const path = "../../assets";
   const navigation = useNavigation();
   const route = useRoute();
+  const {t, i18n}= useTranslation();
   return (
     <View style={Style.cotainer}>
       <TouchableOpacity style={Style.arrowStyle}>
@@ -83,7 +86,7 @@ function BookPages(props) {
         <View style={Style.interContainer}>
           <Image source={Icon} style={Style.img} />
 
-          <Text style={Style.Title}> درس {route.params.lessonTitle}</Text>
+          <Text style={Style.Title}> {t("BookPages.2")} {route.params.lessonTitle}</Text>
         </View>
       </Svg>
       <ScrollView contentContainerStyle={Style.scrollOption}>
@@ -119,7 +122,7 @@ function BookPages(props) {
         </View>
         <TouchableOpacity style={Style.pdf} activeOpacity={0.5}>
           <Image source={require(path + "/Group_408.png")} />
-          <Text style={Style.pdfText}>دانلود فایل پی دی ایف </Text>
+          <Text style={Style.pdfText}> {t("BookPages.1")} </Text>
         </TouchableOpacity>
       </ScrollView>
     </View>

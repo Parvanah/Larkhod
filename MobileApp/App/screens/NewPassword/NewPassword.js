@@ -25,16 +25,15 @@ const NewPassword = () => {
     const EnterCodeValidationSchema = Yup.object().shape({
         password: Yup
           .string()
-          .matches(/\w*[a-z]\w*/,  " رمز عبور باید یک حرف کوچک داشته باشد")
-          .matches(/\w*[A-Z]\w*/,  " رمز عبور باید یک حرف بزرگ داشته باشد")
-          .matches(/\d/, "رمز عبور باید یک عدد داشته باش")
-          .matches(/[!@#$%^&*()\-_"=+{}; :,<.>]/, "  عبور باید یک کارکتر خاص داشته یاشد")
-          .min(8, ({ min }) => `  رمز عبور باید حداقل ${min} کارکتر باشد `)
-          .required('رمز عبور الزامی است'),
+          .matches(/\w*[a-z]\w*/,  (t("NewPassword.1")))
+          .matches(/\w*[A-Z]\w*/, (t("NewPassword.2")))
+          .matches(/\d/, (t("NewPassword.3")))
+          .matches(/[!@#$%^&*()\-_"=+{}; :,<.>]/, (t("NewPassword.4")))
+          .required(t("NewPassword.5")),
         confirmPassword: Yup
           .string()
-          .oneOf([Yup.ref('password')], 'رمز عبور مطابقت ندارد')
-          .required('تایید رمز عبور لازم است'),
+          .oneOf([Yup.ref('password')], (t("NewPassword.6")))
+          .required(t("NewPassword.7")),
       })
     const navigation = useNavigation();
     const onSubmit = (values) => {
@@ -50,9 +49,9 @@ const NewPassword = () => {
         <Image source={arrow} />
     </TouchableOpacity>
     <View style={styles.textView} >
-           <CustomText style={styles.text}>  {t("NewPassword.10")}  </CustomText>
-           <CustomText style={styles.text}>  {t("NewPassword.11")}   </CustomText>
-           <CustomText style={styles.text1}> {t("NewPassword.12")} </CustomText>
+           <CustomText style={styles.text}>  {t("NewPassword.8")}  </CustomText>
+           <CustomText style={styles.text}>  {t("NewPassword.9")}   </CustomText>
+           <CustomText style={styles.text1}> {t("NewPassword.10")} </CustomText>
     </View>
     <View style={styles.InContainer}>
     <View style={styles.form}>
@@ -74,7 +73,7 @@ const NewPassword = () => {
     <Field
      component={CustomInput}
      name="password"
-     placeholder= {t("NewPassword.13")}
+     placeholder= {t("NewPassword.11")}
      secureTextEntry
      onChangeText={handleChange('password')}
      onBlur={handleBlur('password')}
@@ -83,14 +82,14 @@ const NewPassword = () => {
     <Field
      component={CustomInput}
      name="confirmPassword"
-     placeholder= {t("NewPassword.14")}
+     placeholder= {t("NewPassword.12")}
      secureTextEntry
      onChangeText={handleChange('confirmPassword')}
      onBlur={handleBlur('confirmPassword')}
      value={values.confirmPassword}
     />
   <TouchableOpacity style={styles.submitBtn} onPress={handleSubmit}  disabled={!isValid}>
-    <CustomText style={styles.submitText}> {t("NewPassword.15")} </CustomText>
+    <CustomText style={styles.submitText}> {t("NewPassword.13")} </CustomText>
   </TouchableOpacity> 
   </>
     )}

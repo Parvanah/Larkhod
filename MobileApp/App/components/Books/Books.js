@@ -18,10 +18,12 @@ import photo2 from "../../assets/Group_143_em.png";
 import photo3 from "../../assets/Group_153.png";
 import middleStyle from "../Sections/Section.Style";
 import CustomText from "../../CustomText";
+import { useTranslation } from "react-i18next";
 
 const Books = () => {
   const navigation = useNavigation();
   const route = useRoute();
+  const {t, i18n}= useTranslation();
 
   return (
     <View style={style.container}>
@@ -35,7 +37,7 @@ const Books = () => {
         <Image source={Logo} />
         <View style={style.books}>
           <CustomText style={style.BooksText}>
-            کتاب های {route.params.grade}{" "}
+            {t("Books.2")}  {route.params.grade}{" "}
           </CustomText>
         </View>
       </View>
@@ -56,7 +58,7 @@ const Books = () => {
                   if (item.parts[0].lessons === undefined) {
                     return navigation.navigate("Lessons", {
                       lessons: item.parts,
-                      title: "مضمون " + item.label,
+                      title: (t("Books.1")) + item.label,
                       params: {
                         id: item.id,
                         name: item.name,

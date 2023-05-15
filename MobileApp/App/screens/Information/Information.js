@@ -17,36 +17,34 @@ import CustomText from "../../CustomText";
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { useTranslation } from "react-i18next";
-
-
-const InfoValidationSchema = Yup.object().shape({
-  firstName: Yup.string()
-  .min(2, "نام باید بالاتر از دو حرف باشد")
-  .max(50, "نام باید کمتر از ۵۰ حرف باشد")
-  .required("نام ضروری است"),
-  lastName: Yup.string()
-  .min(2, "تخلص باید بالاتر از دو حرف باشد")
-  .max(50, "تخلص باید کمتر از ۵۰ حرف باشد")
-  .required("تخلص ضروری است"),
-  email: Yup.string()
-  .email(" ایمیل آدرس معتبر تان را وارد نمایید")
-  .required('ایمیل آدرس لازمی است'),
-  class: Yup.number()
-  .min(1, "صنف تان  درست نیست")
-  .max(12, "صنف تان  درست نیست")
-  .required("صنف ضروری است"),
-  age: Yup.number()
-  .min(12, "سن تان  درست نیست")
-  .max(50, "سن تان  درست نیست")
-  .required("سن ضروری است"),
-})
 const Information = () => {
+  const {t, i18n}= useTranslation(); 
+  const InfoValidationSchema = Yup.object().shape({
+    
+    firstName: Yup.string()
+    .min(2, (t("Information.1")))
+    .max(50, (t("Information.2")))
+    .required(t("Information.3")),
+    lastName: Yup.string()
+    .min(2, (t("Information.4")))
+    .max(50, (t("Information.5")))
+    .required(t("Information.6")),
+    email: Yup.string()
+    .email(t("Information.7"))
+    .required(t("Information.8")),
+    class: Yup.number()
+    .min(1, (t("Information.9")))
+    .max(12, (t("Information.9")))
+    .required(t("Information.10")),
+    age: Yup.number()
+    .min(12, (t("Information.11")))
+    .max(50, (t("Information.11")))
+    .required(t("Information.12")),
+  })
   const navigation = useNavigation();
   const onSubmit =()=>{
      navigation.navigate("Sections");
   }
- 
-const {t, i18n}= useTranslation(); 
   return (
     <ScrollView contentContainerStyle={styles.outContainer}>
            <TouchableOpacity

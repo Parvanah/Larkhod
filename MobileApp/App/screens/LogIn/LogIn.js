@@ -11,18 +11,20 @@ import { useNavigation } from "@react-navigation/native";
 import ForgotPassword from "../ForgotPassword/ForgotPassword";
 import CustomText from "../../CustomText";
 import { useTranslation } from "react-i18next";
-const loginValidationSchema = Yup.object().shape({
-  email: Yup
-    .string()
-    .email(" ایمیل آدرس معتبر تان را وارد کنید")
-    .required('ایمیل آدرس لازمی است'),
-  password: Yup
-    .string()
-    .min(8, ({ min }) => `  رمز عبور باید حداقل ${min} کارکتر باشد `)
-    .required('رمز عبور لازمی است'),
-})
 
 const LogIn = () => {
+  const {t, i18n}= useTranslation(); 
+  const loginValidationSchema = Yup.object().shape({
+    email: Yup
+      .string()
+      .email(t("LogIn.8"))
+      .required(t("LogIn.9")),
+    password: Yup
+      .string()
+      .required(t("LogIn.10")),
+  })
+  
+
   const navigation = useNavigation();
   const OnSubmit = () => {
       navigation.navigate("Sections");
@@ -30,7 +32,6 @@ const LogIn = () => {
   const handle = () =>{
     navigation.navigate(ForgotPassword);
   }
-  const {t, i18n}= useTranslation(); 
     return (     
       <ScrollView contentContainerStyle={styles.outContainer}>
                 <TouchableOpacity
@@ -99,7 +100,7 @@ const LogIn = () => {
              onPress={ handleSubmit}
              disabled={!isValid} 
               >
-                <CustomText style={styles.submitText}> {t("LogIn.2")} </CustomText>
+                <CustomText style={styles.submitText}> {t("LogIn.11")} </CustomText>
             </TouchableOpacity>
             </>
             )}

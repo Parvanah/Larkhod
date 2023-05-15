@@ -37,20 +37,19 @@ const SignUp = () =>{
     const signUpValidationSchema = Yup.object().shape({
       email: Yup
         .string()
-        .email("لطفا ایمیل متعتبر تان را وارد نمایید")
-        .required('ایمیل آدرس لازمی است'),
+        .email(t("SignUp.8"))
+        .required (t("SignUp.9")),
       password: Yup
         .string()
-        .matches(/\w*[a-z]\w*/,  " رمز عبور باید یک حرف کوچک داشته باشد")
-        .matches(/\w*[A-Z]\w*/,  " رمز عبور باید یک حرف بزرگ داشته باشد")
-        .matches(/\d/, "رمز عبور باید یک عدد داشته باشد ")
-        .matches(/[!@#$%^&*()\-_"=+{}; :,<.>]/, "  عبور باید یک کارکتر خاص داشته یاشد")
-        .min(8, ({ min }) => `  رمز عبور باید حداقل ${min} کارکتر باشد `)
-        .required('رمز عبور لازمی است'),
+        .matches(/\w*[a-z]\w*/,  (t("SignUp.10")))
+        .matches(/\w*[A-Z]\w*/,  (t("SignUp.11")))
+        .matches(/\d/,  (t("SignUp.12")))
+        .matches(/[!@#$%^&*()\-_"=+{}; :,<.>]/,  (t("SignUp.13")))
+        .required(t("SignUp.14")),
       confirmPassword: Yup
         .string()
-        .oneOf([Yup.ref('password')], 'رمز عبور مطابقت ندارد')
-        .required('تایید رمز عبور لازمی است'),
+        .oneOf([Yup.ref('password')], (t("SignUp.15")))
+        .required(t("SignUp.16")),
     })
     const navigation = useNavigation();
     const onSubmit = () => {

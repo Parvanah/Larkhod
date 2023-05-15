@@ -18,19 +18,20 @@ import {
 import * as Yup from 'yup';
 import CustomText from "../../CustomText"
 import { useTranslation } from "react-i18next";
-const emailValidationSchema = Yup.object().shape({
-  email: Yup
-    .string()
-    .email("ایمیل آدرس معتبر تان را وارد نمایید")
-    .required('ایمیل آدرس لازمی است'),
-})
 const ForgotPassword = () => {
   const {t, i18n}= useTranslation(); 
+  const emailValidationSchema = Yup.object().shape({
+    email: Yup
+      .string()
+      .email(t("ForgotPassword.3"))
+      .required(t("ForgotPassword.4"))
+  })
+
     const [email, setEmail] = useState('');
     const doUser = async function(){
         const emailValue = email;
         Parse.User.requestPasswordReset(emailValue).then(()=>{
-          Alert.alert("ایمیل تان را چیک کنید")
+          Alert.alert(t("ForgotPassword.5"))
         }).catch((error) => {
             Alert.alert("Errors" * error.message)
         }) 
@@ -165,7 +166,7 @@ textView:{
     color: "white",
   },
   errorText: {
-    fontSize: 10,
+    fontSize: 15,
     color: 'red',
     textAlign: "right"
   },

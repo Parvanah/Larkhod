@@ -119,7 +119,7 @@ const Sections = (props) => {
           style={styles.sectionMiddleBtn}
           onPress={() => navigation.navigate("FeedBack")}
         >
-          <CustomText style={styles.sectionMiddleBtnText}>نظریات</CustomText>
+          <CustomText style={styles.sectionMiddleBtnText}>{t("Sections.2")}</CustomText>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.sectionMiddleBtn}
@@ -137,37 +137,37 @@ const Sections = (props) => {
             navigation.navigate("Grades", {
               classes: [
                 {
-                  grade: "صنف اول",
+                  grade: (t("Sections.3")),
                   img: require("../../assets/Group_211_y.png"),
                   subjects: classTwo.dari_curriculum.subjects,
                   id: 1,
                 },
                 {
-                  grade: "صنف دوم",
+                  grade: (t("Sections.4")),
                   img: require("../../assets/Group_211_y.png"),
                   subjects: classTwo.dari_curriculum.subjects,
                   id: 2,
                 },
                 {
-                  grade: "صنف سوم",
+                  grade: (t("Sections.5")),
                   img: require("../../assets/Group_211_y.png"),
                   subjects: classTwo.dari_curriculum.subjects,
                   id: 3,
                 },
                 {
-                  grade: "صنف چهارم",
+                  grade: (t("Sections.6")),
                   img: require("../../assets/Group_211_y.png"),
                   subjects: classTwo.dari_curriculum.subjects,
                   id: 4,
                 },
                 {
-                  grade: "صنف پنجم",
+                  grade: (t("Sections.7")),
                   img: require("../../assets/Group_211_y.png"),
                   subjects: classTwo.dari_curriculum.subjects,
                   id: 5,
                 },
                 {
-                  grade: "صنف ششم",
+                  grade: (t("Sections.8")),
                   img: require("../../assets/Group_211_y.png"),
                   subjects: classTwo.dari_curriculum.subjects,
                   id: 6,
@@ -176,7 +176,7 @@ const Sections = (props) => {
             })
           }
         >
-          <CustomText style={styles.btnText}>بخش ابتداییه</CustomText>
+          <CustomText style={styles.btnText}>{t("Sections.9")} </CustomText>
           <Image source={primary} />
         </TouchableOpacity>
         <TouchableOpacity
@@ -185,19 +185,19 @@ const Sections = (props) => {
             navigation.navigate("Grades", {
               classes: [
                 {
-                  grade: "صنف هفتم",
+                  grade: (t("Sections.10")),
                   img: require("../../assets/Group_211_y.png"),
                   subjects: classNine.dari_curriculum.subjects,
                   id: 1,
                 },
                 {
-                  grade: "صنف هشتم",
+                  grade: (t("Sections.11")),
                   img: require("../../assets/Group_211_y.png"),
                   subjects: classNine.dari_curriculum.subjects,
                   id: 2,
                 },
                 {
-                  grade: "صنف نهم",
+                  grade: (t("Sections.12")),
                   img: require("../../assets/Group_211_y.png"),
                   subjects: classNine.dari_curriculum.subjects,
                   id: 3,
@@ -206,7 +206,7 @@ const Sections = (props) => {
             })
           }
         >
-          <CustomText style={styles.btnText}>بخش متوسطه</CustomText>
+          <CustomText style={styles.btnText}>{t("Sections.13")}</CustomText>
           <Image source={secondary} />
         </TouchableOpacity>
         <TouchableOpacity
@@ -215,20 +215,20 @@ const Sections = (props) => {
             navigation.navigate("Grades", {
               classes: [
                 {
-                  grade: "صنف دهم",
+                  grade: (t("Sections.14")),
                   img: require("../../assets/Group_211_y.png"),
                   subjects: classNine.dari_curriculum.subjects,
                   id: 1,
                   subject: [{}, {}, {}],
                 },
                 {
-                  grade: "صنف یازدهم",
+                  grade: (t("Sections.15")),
                   img: require("../../assets/Group_211_y.png"),
                   subjects: classNine.dari_curriculum.subjects,
                   id: 2,
                 },
                 {
-                  grade: "صنف دوازدهم",
+                  grade: (t("Sections.16")),
                   img: require("../../assets/Group_211_y.png"),
                   subjects: classNine.dari_curriculum.subjects,
                   id: 3,
@@ -237,7 +237,7 @@ const Sections = (props) => {
             })
           }
         >
-          <CustomText style={styles.btnText}>بخش لیسه</CustomText>
+          <CustomText style={styles.btnText}>{t("Sections.17")} </CustomText>
           <Image source={high} />
         </TouchableOpacity>
       </ScrollView>

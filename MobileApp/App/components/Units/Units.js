@@ -16,10 +16,11 @@ import { useNavigation } from "@react-navigation/native";
 import { useRoute } from "@react-navigation/native";
 import styleSection from "../Sections/Section.Style";
 import CustomText from "../../CustomText";
+import { useTranslation } from "react-i18next";
 const Units = () => {
   const navigation = useNavigation();
   const route = useRoute();
-
+  const {t, i18n}= useTranslation(); 
   return (
     <View style={style.container}>
       <View style={style.top}>
@@ -32,7 +33,7 @@ const Units = () => {
         <Image source={Logo} />
         <View style={style.Units}>
           <CustomText style={style.UnitsText}>
-            فصل های مضمون {route.params.subject}
+             {t("Units.1")}  {route.params.subject}
           </CustomText>
         </View>
       </View>
@@ -60,7 +61,7 @@ const Units = () => {
               onPress={() =>
                 navigation.navigate("Lessons", {
                   lessons: item.lessons,
-                  title: "فصل " + item.label,
+                  title: (t("Units.2")) + item.label,
                   params: {
                     id: item.id,
                     name: item.name,

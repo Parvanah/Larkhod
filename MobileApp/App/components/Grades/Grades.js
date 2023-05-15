@@ -19,7 +19,9 @@ import { useNavigation } from "@react-navigation/native";
 import { useRoute } from "@react-navigation/native";
 import Styles from "../Sections/Section.Style";
 import CustomText from "../../CustomText";
+import { useTranslation } from "react-i18next";
 const Grades = (props) => {
+  const {t, i18n}= useTranslation();
   const route = useRoute();
   const navigation = useNavigation();
   const onSubmit = () => {
@@ -98,7 +100,7 @@ const Grades = (props) => {
       <View style={style.bottom}>
         <View style={style.select}>
           <CustomText style={style.selectText}>
-            صنف تان را انتخاب کنید
+            {t("Grades.1")}
           </CustomText>
         </View>
         <FlatList
