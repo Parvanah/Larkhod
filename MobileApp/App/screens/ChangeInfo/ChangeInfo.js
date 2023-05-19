@@ -8,10 +8,16 @@ import {
   TouchableOpacity,
   StyleSheet,
 } from "react-native";
+import {
+  horizontalScale,
+  verticalScale,
+  moderateScale,
+} from "../../Resonsive/Matrix";
 import { SafeAreaView } from "react-native-safe-area-context";
 import logo from "../../assets/White_PNG_Format_z.png";
 import user from "../../assets/user.png";
 import arrow from "../../assets/Group_158.png";
+import CustomText from "../../CustomText";
 
 const ChangeInfo = () => {
   const navigation = useNavigation();
@@ -22,13 +28,13 @@ const ChangeInfo = () => {
     <SafeAreaView style={styles.outContainer}>
       <TouchableOpacity
         style={styles.arrowStyle}
-        onPress={() => navigation.goBack()}
+        onPress={() => navigation.navigate("Sections")}
       >
         <Image source={arrow} />
       </TouchableOpacity>
       <View style={styles.imageWrapper}>
         <Image source={user} style={styles.img} />
-        <Text style={styles.usertext}>تغییر عکس نمایه</Text>
+        <CustomText style={styles.usertext}>تغییر عکس نمایه</CustomText>
       </View>
       <View style={styles.InContainer}>
         <View style={styles.form}>
@@ -55,7 +61,7 @@ const ChangeInfo = () => {
             style={styles.input}
           />
           <TouchableOpacity style={styles.submitBtn} onPress={onSubmit}>
-            <Text style={styles.submitText}>ذخیره کردن </Text>
+            <CustomText style={styles.submitText}>ذخیره کردن </CustomText>
           </TouchableOpacity>
         </View>
       </View>
@@ -68,39 +74,39 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    paddingVertical: verticalScale(10),
   },
   InContainer: {
-    borderTopRightRadius: 100,
-    borderTopLeftRadius: 100,
+    borderTopRightRadius: moderateScale(100),
+    borderTopLeftRadius: moderateScale(100),
     backgroundColor: "rgba(60,152,189,1)",
-    flex: 3,
+    flex: 3.5,
     width: "100%",
     justifyContent: "flex-start",
     alignItems: "center",
-    paddingHorizontal: "15%",
-    paddingVertical: "20%",
+    paddingHorizontal: horizontalScale(35),
+    paddingVertical: verticalScale(80),
   },
   usertext: {
-    fontSize: 14,
+    fontSize: moderateScale(14),
     fontWeight: "bold",
     color: "lightgray",
-    marginHorizontal: 10,
   },
   img: {
-    height: 60,
-    width: 60,
+    height: verticalScale(60),
+    width: horizontalScale(60),
   },
   arrowStyle: {
-    marginTop: "10%",
+    marginTop: verticalScale(40),
     alignSelf: "flex-start",
-    marginLeft: "10%",
+    marginLeft: horizontalScale(30),
   },
   form: { width: "100%" },
   input: {
     borderTopColor: "#fff",
     borderTopWidth: 1,
     width: "100%",
-    height: 40,
+    height: verticalScale(40),
     flexDirection: "row-reverse",
     justifyContent: "space-between",
     alignItems: "center",
@@ -109,15 +115,15 @@ const styles = StyleSheet.create({
   submitBtn: {
     backgroundColor: "white",
     width: "100%",
-    marginVertical: 30,
-    height: 40,
+    marginVertical: verticalScale(30),
+    height: verticalScale(40),
     alignItems: "center",
     justifyContent: "center",
-    borderRadius: 25,
+    borderRadius: moderateScale(25),
   },
   submitText: {
-    fontSize: 15,
-    fontWeight: "bold",
+    fontSize: moderateScale(15),
+
     color: "rgba(60,152,189,1)",
   },
   // border: {
@@ -126,11 +132,12 @@ const styles = StyleSheet.create({
   // },
   imageWrapper: {
     backgroundColor: "#fff",
-    height: "20%",
-    width: "30%",
+    height: verticalScale(100),
+    width: "100%",
     justifyContent: "center",
     alignItems: "center",
-    borderRadius: 50,
+    borderRadius: moderateScale(50),
+    marginBottom: verticalScale(10),
   },
 });
 export default ChangeInfo;

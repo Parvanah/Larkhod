@@ -2,11 +2,16 @@ import React from "react";
 import { StyleSheet } from "react-native";
 
 const Styles = StyleSheet.create({
+  container: {
+    justifyContent: "center",
+    alignItems: "center",
+  },
   outContainer: {
     backgroundColor: "rgba(60,152,189,1)",
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    paddingTop: 50,
   },
   imgStyle: {
     height: 90,
@@ -22,13 +27,13 @@ const Styles = StyleSheet.create({
     width: "100%",
     justifyContent: "flex-start",
     alignItems: "center",
-    paddingHorizontal: 30,
+    paddingHorizontal: 40,
   },
   navContainer: {
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",
-    marginTop: 40,
+    marginTop: 70,
     borderColor: "lightgray",
     borderStyle: "solid",
     borderWidth: 1,
@@ -37,18 +42,19 @@ const Styles = StyleSheet.create({
   },
   btnSI: {
     paddingVertical: 11,
-    paddingHorizontal: 26,
+    // paddingHorizontal: 26,
     backgroundColor: "rgba(60,152,189,1)",
     borderRadius: 20,
-    width: "59%",
+    width: "50%",
   },
   btnSO: {
     // borderColor: "lightgray",
     // borderStyle: "solid",
     // borderWidth: 1,
     paddingVertical: 11,
-    paddingHorizontal: 26,
+    // paddingHorizontal: 26,
     borderRadius: 20,
+    width: "50%",
   },
   btnTextSO: {
     fontSize: 15,
@@ -66,14 +72,14 @@ const Styles = StyleSheet.create({
   input: {
     borderBottomColor: "lightgray",
     borderBottomWidth: 1,
-    width: "100%",
     height: 40,
     marginTop: 10,
+    textAlign: "right",
   },
   submitBtn: {
     backgroundColor: "rgba(60,152,189,1)",
     width: "100%",
-    marginVertical: 25,
+    marginVertical: 30,
     height: 40,
     alignItems: "center",
     justifyContent: "center",
@@ -86,12 +92,20 @@ const Styles = StyleSheet.create({
   },
   afterSubmit: {
     flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
   },
   border: {
     borderBottomColor: "lightgray",
     borderBottomWidth: 2,
   },
   linkedBtnWrapper: {
+    justifyContent: "center",
+    alignItems: "center",
+    width: "85%",
+    marginVertical: 10,
+  },
+  linkedGoogle: {
     justifyContent: "center",
     alignItems: "center",
     width: "85%",
@@ -114,18 +128,19 @@ const Styles = StyleSheet.create({
     color: "lightgray",
   },
   afterPass: {
-    fontSize: 12,
+    fontSize: 14,
     color: "lightgray",
-    marginRight: 130,
+    textAlign: "left",
   },
   errorText: {
-    fontSize: 10,
+    fontSize: 15,
     color: "red",
+    textAlign: "right",
   },
   arrowStyle: {
-    marginTop: "10%",
+    marginTop: 40,
     alignSelf: "flex-start",
-    marginLeft: "10%",
+    marginLeft: 30,
   },
 });
 export default Styles;

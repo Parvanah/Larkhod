@@ -1,31 +1,35 @@
-import React from "react";
-import { Text, TextInput, StyleSheet } from "react-native";
+import React from 'react'
+import { Text, TextInput, StyleSheet } from 'react-native'
+import CustomText from '../../CustomText'
 
 const CustomInput = (props) => {
   const {
     field: { name, onBlur, onChange, value },
     form: { errors, touched, setFieldTouched },
     ...inputProps
-  } = props;
+  } = props
 
-  const hasError = errors[name] && touched[name];
+  const hasError = errors[name] && touched[name]
 
   return (
     <>
       <TextInput
-        style={[styles.textInput, hasError && styles.errorInput]}
+        style={[
+          styles.textInput,
+          hasError && styles.errorInput
+        ]}
         value={value}
         onChangeText={(text) => onChange(name)(text)}
         onBlur={() => {
-          setFieldTouched(name);
-          onBlur(name);
+          setFieldTouched(name)
+          onBlur(name)
         }}
         {...inputProps}
       />
-      {hasError && <Text style={styles.errorText}>{errors[name]}</Text>}
+      {hasError && <CustomText style={styles.errorText}>{errors[name]}</CustomText>}
     </>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   textInput: {
@@ -40,11 +44,12 @@ const styles = StyleSheet.create({
   },
   errorText: {
     fontSize: 15,
-    color: "red",
+    color: 'red',
+    textAlign:"right"
   },
   errorInput: {
-    borderColor: "red",
-  },
-});
+    borderColor: 'red',
+  }
+})
 
-export default CustomInput;
+export default CustomInput

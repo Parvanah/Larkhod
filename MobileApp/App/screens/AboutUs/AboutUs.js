@@ -3,6 +3,11 @@ import { ScrollView, View, Text } from "react-native";
 import logo from "../../assets/White_PNG_Format.png";
 import arrow from "../../assets/Group_158_a.png";
 import { useNavigation } from "@react-navigation/native";
+import {
+  horizontalScale,
+  verticalScale,
+  moderateScale,
+} from "../../Resonsive/Matrix";
 import Svg, {
   Image,
   Defs,
@@ -16,17 +21,18 @@ import Svg, {
 } from "react-native-svg";
 import Style from "./AboutUs.style";
 import CustomText from "../../CustomText";
-
+import { useTranslation } from "react-i18next";
 const AboutUs = (props) => {
+  const { t, i18n } = useTranslation();
   const navigation = useNavigation();
   return (
-    <View style={Style.containerAboutUS}>
+    <ScrollView style={Style.containerAboutUS}>
       <View style={Style.arrow}>
         <Svg
           data-name="Group 197"
           xmlns="http://www.w3.org/2000/svg"
-          width={16}
-          height={10}
+          width={horizontalScale(16)}
+          height={verticalScale(15)}
           viewBox="0 0 16 10"
           {...props}
           onPress={() => navigation.goBack()}
@@ -50,7 +56,7 @@ const AboutUs = (props) => {
         <Svg
           xmlns="http://www.w3.org/2000/svg"
           width={"100%"}
-          height={165.069}
+          height={verticalScale(200.069)}
           preserveAspectRatio="none"
           viewBox="0 0 360 165.069"
           {...props}
@@ -82,9 +88,9 @@ const AboutUs = (props) => {
       </View>
       <ScrollView contentContainerStyle={Style.svgWrapperAboutUs}>
         <View style={Style.mainContentText}>
-          <CustomText style={Style.title}>درباره ما </CustomText>
+          <CustomText style={Style.title}>{t("AboutUs.1")}</CustomText>
           <CustomText style={Style.description}>
-            لارشود یک پلتفورم آموزش آنلاین است که به دلیل وضعیت نا مناسب تعلیم و
+            {/* لارشود یک پلتفورم آموزش آنلاین است که به دلیل وضعیت نا مناسب تعلیم و
             تحصیل برای قشر اناث در افغانستان ایجاد شده است تا دختران این سرزمین
             از حق تعلیم و تحصیل محروم نباشند. لارشود یک پلتفورم آموزش آنلاین است
             که به دلیل وضعیت نا مناسب تعلیم و تحصیل برای قشر اناث در افغانستان
@@ -99,15 +105,16 @@ const AboutUs = (props) => {
             دختران این سرزمین از حق تعلیم و تحصیل محروم نباشند.لارشود یک پلتفورم
             آموزش آنلاین است که به دلیل وضعیت نا مناسب تعلیم و تحصیل برای قشر
             اناث در افغانستان ایجاد شده است تا دختران این سرزمین از حق تعلیم و
-            تحصیل محروم نباشند..
+            تحصیل محروم نباشند.. */}
+            {t("AboutUs.2")}
           </CustomText>
         </View>
         <View style={Style.svg}>
           <Svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
-            width={400}
-            height={369}
+            width={"70%"}
+            height={verticalScale(380)}
             viewBox="0 0 425 369"
             {...props}
           >
@@ -121,7 +128,7 @@ const AboutUs = (props) => {
           </Svg>
         </View>
       </ScrollView>
-    </View>
+    </ScrollView>
   );
 };
 

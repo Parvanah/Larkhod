@@ -7,7 +7,19 @@ import {
   ScrollView,
   FlatList,
 } from "react-native";
-import Svg, { Defs, LinearGradient, Stop, Path } from "react-native-svg";
+import {
+  horizontalScale,
+  verticalScale,
+  moderateScale,
+} from "../../Resonsive/Matrix";
+import Svg, {
+  Defs,
+  LinearGradient,
+  Stop,
+  Path,
+  ClipPath,
+  G,
+} from "react-native-svg";
 import classLogo from "../../assets/Group_211_y.png";
 import styleSection from "../Sections/Section.Style";
 import SearchBar from "../../screens/SearchBar";
@@ -19,48 +31,96 @@ import { useNavigation } from "@react-navigation/native";
 import { useRoute } from "@react-navigation/native";
 import Styles from "../Sections/Section.Style";
 import CustomText from "../../CustomText";
+import { useTranslation } from "react-i18next";
+import { SafeAreaView } from "react-native-safe-area-context";
+
 const Grades = (props) => {
   const route = useRoute();
   const navigation = useNavigation();
+  var [inputSearch, setInputSearch] = useState("");
+
+  const { t, i18n } = useTranslation();
   const onSubmit = () => {
     navigation.navigate("ChangeInfo");
   };
   const Renderitem = ({ item }) => {
-    return (
-      <TouchableOpacity
-        key={item.id}
-        style={{ width: "100%" }}
-        onPress={() =>
-          navigation.navigate("Books", {
-            grade: item.grade,
-            subjects: item.subjects,
-            params: {
-              id: item.id,
-              name: item.name,
-            },
-          })
-        }
-      >
-        <View style={style.grades}>
-          <CustomText style={style.gradesText}>{item.grade}</CustomText>
-          <Image source={item.img} style={{ margin: 0 }} />
-        </View>
-      </TouchableOpacity>
-    );
+    if (inputSearch == "") {
+      return (
+        <TouchableOpacity
+          key={item.id}
+          style={{ width: "100%" }}
+          onPress={() =>
+            navigation.navigate("Books", {
+              grade: item.label,
+              subjects: item.subjects,
+              params: {
+                id: item.id,
+                name: item.name,
+              },
+            })
+          }
+        >
+          <View style={style.grades}>
+            <CustomText style={style.gradesText}>{item.label}</CustomText>
+            <Image source={classLogo} style={style.gradeLogo} />
+          </View>
+        </TouchableOpacity>
+      );
+    } else if (item.label.includes(inputSearch)) {
+      return (
+        <TouchableOpacity
+          key={item.id}
+          style={{ width: "100%" }}
+          onPress={() =>
+            navigation.navigate("Books", {
+              grade: item.label,
+              subjects: item.subjects,
+              params: {
+                id: item.id,
+                name: item.name,
+              },
+            })
+          }
+        >
+          <View style={style.grades}>
+            <CustomText style={style.gradesText}>{item.label}</CustomText>
+            <Image source={classLogo} style={style.gradeLogo} />
+          </View>
+        </TouchableOpacity>
+      );
+    }
   };
-  var [inputSearch, setInputSearch] = useState("");
   return (
-    <View style={style.container}>
-      <TouchableOpacity
-        style={style.arrowStyle}
-        onPress={() => navigation.navigate("Sections")}
-      >
-        <Image source={arrow} />
-      </TouchableOpacity>
+    <SafeAreaView style={style.container}>
+      <View style={style.arrow}>
+        <Svg
+          data-name="Group 197"
+          xmlns="http://www.w3.org/2000/svg"
+          width={horizontalScale(16)}
+          height={verticalScale(15)}
+          viewBox="0 0 16 10"
+          {...props}
+          onPress={() => navigation.goBack()}
+        >
+          <Defs>
+            <ClipPath id="a">
+              <Path data-name="Rectangle 85" fill="#fff" d="M0 0H16V10H0z" />
+            </ClipPath>
+          </Defs>
+          <G data-name="Group 158" clipPath="url(#a)">
+            <Path
+              data-name="Path 433"
+              d="M3.247 6l2.48 2.294a.99.99 0 010 1.414 1.023 1.023 0 01-1.432 0L.445 6.059A1.465 1.465 0 010 5a1.483 1.483 0 01.444-1.06L4.294.293a1.025 1.025 0 011.434 0 .992.992 0 010 1.414L3.248 4H15a1 1 0 010 2H3.247z"
+              fill="#fff"
+              fillRule="evenodd"
+            />
+          </G>
+        </Svg>
+      </View>
       <Svg
         xmlns="http://www.w3.org/2000/svg"
         width={"100%"}
-        height={162.314}
+        height={verticalScale(170.069)}
         preserveAspectRatio="none"
         viewBox="0 0 360 162.314"
         {...props}
@@ -92,20 +152,18 @@ const Grades = (props) => {
         </TouchableOpacity>
       </View>
       <View style={style.middle}>
-        <SearchBar />
+        <SearchBar setInputSearch={(value) => setInputSearch(value)} />
       </View>
 
       <View style={style.bottom}>
         <View style={style.select}>
-          <CustomText style={style.selectText}>
-            صنف تان را انتخاب کنید
-          </CustomText>
+          <CustomText style={style.selectText}>{t("Grades.1")}</CustomText>
         </View>
         <FlatList
           contentContainerStyle={{
-            width: "100%",
-            marginVertical: 5,
-            paddingBottom: 20,
+            width: "70%",
+            marginVertical: verticalScale(0),
+            paddingBottom: verticalScale(20),
 
             // flex: 1,
             alignItems: "center",
@@ -118,10 +176,17 @@ const Grades = (props) => {
           }}
         />
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 const style = StyleSheet.create({
+  arrow: {
+    // backgroundColor: "red",
+    marginBottom: verticalScale(-40),
+    paddingTop: verticalScale(15),
+    zIndex: 100,
+    marginLeft: horizontalScale(20),
+  },
   container: {
     // justifyContent: "space-between",
     // alignItems: "center",
@@ -133,39 +198,40 @@ const style = StyleSheet.create({
     backgroundColor: "#fff",
   },
   top: {
-    marginTop: -120,
+    marginTop: verticalScale(-120),
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
   },
   userName: {
-    fontSize: 20,
+    fontSize: moderateScale(20),
 
     color: "#fff",
     marginHorizontal: 20,
   },
   imageWrapper: {
     backgroundColor: "#fff",
-    height: 70,
-    width: 70,
-    justifyContent: "space-between",
+    height: verticalScale(60),
+    width: verticalScale(60),
+    flexDirection: "column",
+    justifyContent: "center",
     alignItems: "center",
-    borderRadius: 50,
-    marginHorizontal: 20,
+    borderRadius: moderateScale(50),
+    marginHorizontal: horizontalScale(20),
     // marginTop: -20,
   },
   img: {
-    marginTop: 8,
-    height: 40,
-    width: 40,
+    // marginTop: verticalScale(8),
+    height: verticalScale(30),
+    width: horizontalScale(30),
   },
   middle: {
-    height: "10%",
+    height: verticalScale(110),
     alignItems: "center",
     justifyContent: "center",
-    marginBottom: "15%",
+    // marginBottom: verticalScale(20),
     position: "absolute",
-    top: 165,
+    top: verticalScale(140),
     // left: 20,
     zIndex: 100,
     width: "100%",
@@ -176,7 +242,7 @@ const style = StyleSheet.create({
     // height: "66%",
     // backgroundColor: "#fff",
     width: "100%",
-    marginTop: 130,
+    marginTop: verticalScale(130),
     // position: "absolute",
 
     flex: 1,
@@ -184,43 +250,51 @@ const style = StyleSheet.create({
   select: {
     backgroundColor: "rgba(60, 152, 189, 1)",
     width: "80%",
-    padding: 10,
-    borderRadius: 50,
+    paddingHorizontal: horizontalScale(10),
+    paddingVertical: verticalScale(10),
+    borderRadius: moderateScale(50),
     alignItems: "center",
+    marginTop: verticalScale(10),
+    marginBottom: verticalScale(10),
   },
   selectText: {
     color: "#fff",
-    fontSize: 20,
+    fontSize: moderateScale(20),
   },
   grades: {
-    width: "90%",
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-    borderRadius: 50,
+    width: "85%",
+    paddingHorizontal: horizontalScale(30),
+    paddingVertical: verticalScale(10),
+    borderRadius: moderateScale(50),
     backgroundColor: "rgba(212,228,232,1)",
-    marginVertical: 5,
-    justifyContent: "center",
+    marginVertical: verticalScale(5),
+    justifyContent: "space-between",
     alignItems: "center",
     flexDirection: "row-reverse",
     // flex: 1,
   },
   gradesText: {
     color: "rgba(60, 152, 189, 1)",
-    fontSize: 20,
-    marginLeft: 100,
+    fontSize: moderateScale(20),
+    // marginLeft: horizontalScale(100),
     // marginRight: "7%",
-    width: 100,
+    width: horizontalScale(200),
+  },
+  gradeLogo: {
+    width: horizontalScale(25),
+    height: verticalScale(25),
   },
   arrowStyle: {
     // marginBottom: "30%",
 
-    marginRight: 200,
-    marginLeft: 20,
-    marginTop: 20,
-    marginBottom: -60,
+    marginRight: horizontalScale(200),
+    marginLeft: verticalScale(20),
+    marginTop: verticalScale(20),
+    marginBottom: verticalScale(-60),
     // backgroundColor: "red",
     zIndex: 100,
-    padding: 10,
+    paddingVertical: verticalScale(5),
+    paddingHorizontal: horizontalScale(10),
   },
 });
 

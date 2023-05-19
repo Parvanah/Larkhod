@@ -1,5 +1,10 @@
 import * as React from "react";
 import { StyleSheet } from "react-native";
+import {
+  horizontalScale,
+  verticalScale,
+  moderateScale,
+} from "../../Resonsive/Matrix";
 const Style = StyleSheet.create({
   containerAboutUS: {
     width: "100%",
@@ -13,11 +18,11 @@ const Style = StyleSheet.create({
     // backgroundColor: "gray",
     justifyContent: "center",
     // padding: 40,
-    marginBottom: 30,
+    marginBottom: verticalScale(30),
     marginTop: "-10%",
   },
   image: {
-    marginTop: 40,
+    marginTop: verticalScale(40),
 
     justifyContent: "center",
     alignItems: "center",
@@ -25,10 +30,10 @@ const Style = StyleSheet.create({
   topSvg: {},
   arrow: {
     // backgroundColor: "red",
-    marginBottom: -40,
-    paddingTop: 15,
+    marginBottom: verticalScale(-40),
+    paddingTop: verticalScale(15),
     zIndex: 100,
-    marginLeft: 20,
+    marginLeft: horizontalScale(20),
   },
   mainContentText: {
     // marginLeft: -100,
@@ -41,30 +46,31 @@ const Style = StyleSheet.create({
     // justifyContent: "space-between",
     // alignItems: "center",
     width: "77%",
-    marginHorizontal: 20,
+    marginHorizontal: horizontalScale(20),
     // marginTop: -300,
-    marginBottom: -400,
-    // marginTop: 20,
-    height: 650,
+    marginBottom: verticalScale(-250),
+    marginTop: verticalScale(-20),
+    height: verticalScale(700),
   },
   title: {
-    fontSize: 20,
+    fontSize: moderateScale(20),
     // fontWeight: "bold",
     color: "#3C98BD",
-    marginBottom: 10,
+    marginBottom: verticalScale(10),
     marginTop: "30%",
   },
   description: {
     color: "#707070",
+    fontSize: moderateScale(14),
   },
   svg: {
     // marginTop: -80,
     // backgroundColor: "green",
-    // height: 600,
+    height: verticalScale(500),
     margin: 0,
     // borderWidth: 2,
     width: "100%",
-    marginTop: "-20%",
+    marginTop: verticalScale(-260),
     marginBottom: "10%",
   },
 });
