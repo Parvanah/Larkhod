@@ -1,6 +1,10 @@
 import React from "react";
 import { StyleSheet } from "react-native";
-
+import {
+  horizontalScale,
+  verticalScale,
+  moderateScale,
+} from "../../Resonsive/Matrix";
 const Style = StyleSheet.create({
   FeedBackContainer: {
     width: "100%",
@@ -9,8 +13,8 @@ const Style = StyleSheet.create({
     // flex: 1,
   },
   arrow: {
-    marginTop: 20,
-    marginLeft: 30,
+    marginTop: verticalScale(20),
+    marginLeft: horizontalScale(30),
   },
   top: {
     marginTop: 30,
@@ -19,22 +23,22 @@ const Style = StyleSheet.create({
   },
   title: {
     fontSize: 40,
-    fontWeight: "bold",
+
     color: "#3C98BD",
   },
   description: {
-    fontSize: 12,
-    fontWeight: "bold",
+    fontSize: moderateScale(12),
+
     color: "#707070",
     textAlign: "center",
-    width: 240,
+    width: horizontalScale(240),
   },
   svgWrapperFeedBack: {
-    // marginTop: 50,
+    marginTop: verticalScale(10),
     // zIndex: 2,
     margin: 0,
     padding: 0,
-    height: 730,
+    height: verticalScale(730),
     // width: "100%",
     // aspectRatio: 1,
     // flex: 1,
@@ -44,46 +48,52 @@ const Style = StyleSheet.create({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    // backgroundColor: "red",
   },
 
   form: {
-    marginBottom: -700,
+    marginBottom: verticalScale(-720),
     // marginRight: 20,
     // backgroundColor: "pink",
     zIndex: 100,
     width: "90%",
     marginHorizontal: "10%",
     height: "100%",
-    paddingHorizontal: 30,
+    paddingHorizontal: horizontalScale(30),
     display: "flex",
     flexDirection: "column",
     // justifyContent: 'sc',
     // alignItems: "flex-start",
     // marginTop: 50,
-    paddingTop: 40,
+    paddingTop: verticalScale(40),
   },
   input: {
     color: "#fff",
-    fontWeight: "bold",
+
     borderBottomColor: "#fff",
-    borderBottomWidth: 1,
-    height: 40,
+    borderBottomWidth: horizontalScale(1),
+    height: verticalScale(40),
     textAlign: "right",
+    fontSize: moderateScale(15),
   },
   inputMessege: {
-    marginTop: 20,
+    marginTop: verticalScale(20),
     backgroundColor: "#fff",
     // height: 100,
     // justifyContent: "flex-start",
     // alignItems: "flex-start",
-    borderRadius: 15,
+    borderRadius: moderateScale(15),
     // height: 120,
-    padding: 10,
+    paddingHorizontal: horizontalScale(10),
+    paddingVertical: verticalScale(10),
+    fontSize: moderateScale(15),
+    textAlign: "right",
   },
   SubmitBtn: {
     backgroundColor: "#fff",
-    marginTop: 10,
-    padding: 10,
+    marginTop: verticalScale(10),
+    paddingHorizontal: horizontalScale(10),
+    paddingVertical: verticalScale(10),
     borderRadius: 15,
     alignItems: "center",
   },

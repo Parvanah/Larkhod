@@ -1,5 +1,4 @@
 import React from "react";
-
 import { View, Text } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import FirstPage from "./App/screens/FirstPage/FirstPage";
@@ -15,8 +14,11 @@ import Information from "./App/screens/Information/Information";
 import ChangeInfo from "./App/screens/ChangeInfo/ChangeInfo";
 import ForgotPassword from "./App/screens/ForgotPassword/ForgotPassword";
 import SignUpVerification from "./App/screens/SignUpVerification/SignUpVerification";
+import NewPassword from "./App/screens/NewPassword/NewPassword";
 import AboutUs from "./App/screens/AboutUs/AboutUs";
 import FeedBack from "./App/screens/FeedBack/FeedBack";
+import TranslateApp from "./App/screens/TranslateApp";
+import NewSignUp from "./App/screens/NewSignUp/NewSignUp";
 const Stack = createNativeStackNavigator();
 const StackNaigator = () => {
   return (
@@ -31,9 +33,11 @@ const StackNaigator = () => {
           name="SignUpVerification"
           component={SignUpVerification}
         />
+        <Stack.Screen name="TranslateApp" component={TranslateApp} />
         <Stack.Screen name="LogIn" component={LogIn} />
         <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
         <Stack.Screen name="Information" component={Information} />
+        <Stack.Screen name="NewPassword" component={NewPassword} />
         <Stack.Screen name="Sections" component={Sections} />
         <Stack.Screen name="ChangeInfo" component={ChangeInfo} />
         <Stack.Screen name="Grades" component={Grades} />
@@ -43,6 +47,7 @@ const StackNaigator = () => {
         <Stack.Screen name="BookPages" component={BookPages} />
         <Stack.Screen name="AboutUs" component={AboutUs} />
         <Stack.Screen name="FeedBack" component={FeedBack} />
+        <Stack.Screen name="NewSignUp" component={NewSignUp} />
       </Stack.Group>
     </Stack.Navigator>
   );
