@@ -14,7 +14,11 @@ import Svg, {
   Path,
   ForeignObject,
 } from "react-native-svg";
-
+import {
+  horizontalScale,
+  verticalScale,
+  moderateScale,
+} from "../../Resonsive/Matrix";
 import user from "../../assets/user.png";
 import styles from "./Section.Style";
 import White from "../../assets/background.png";
@@ -26,20 +30,31 @@ import { useNavigation } from "@react-navigation/native";
 import gradeLogo from "../../assets/Group_211_y.png";
 import classNine from "../grade_9_dari.json";
 import classTwo from "../grade_2_dari.json";
+import JsonFiles from "../SchoolSubjects.json";
 import CustomText from "../../CustomText";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { useTranslation } from "react-i18next";
 
 const Sections = (props) => {
   const navigation = useNavigation();
   const onSubmit = () => {
     navigation.navigate("ChangeInfo");
   };
+  const { t, i18n } = useTranslation();
+  var data;
+  if (t("Sections.lang") == "Dari") {
+    data = JsonFiles.dari_curriculum;
+  } else {
+    data = JsonFiles.pashto_curriculum;
+  }
+  console.log(t("Sections.lang") == "Dari");
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <View style={styles.svgWrapper}>
         <Svg
           xmlns="http://www.w3.org/2000/svg"
           width={"100%"}
-          height={165.069}
+          height={verticalScale(170.069)}
           preserveAspectRatio="none"
           viewBox="0 0 360 165.069"
           {...props}
@@ -113,132 +128,63 @@ const Sections = (props) => {
 
       <View style={styles.sectionMiddle}>
         <TouchableOpacity
+          activeOpacity={0.7}
           style={styles.sectionMiddleBtn}
           onPress={() => navigation.navigate("FeedBack")}
         >
-          <CustomText style={styles.sectionMiddleBtnText}>نظریات</CustomText>
+          <CustomText style={styles.sectionMiddleBtnText}>
+            {t("Sections.2")}
+          </CustomText>
         </TouchableOpacity>
         <TouchableOpacity
+          activeOpacity={0.7}
           style={styles.sectionMiddleBtn}
           onPress={() => navigation.navigate("AboutUs")}
         >
           <CustomText style={styles.sectionMiddleBtnText}>
-            در باره ما
+            {t("Sections.1")}
           </CustomText>
         </TouchableOpacity>
       </View>
       <ScrollView contentContainerStyle={styles.bottom}>
         <TouchableOpacity
+          activeOpacity={0.7}
           style={styles.bottomBtn}
           onPress={() =>
             navigation.navigate("Grades", {
-              classes: [
-                {
-                  grade: "صنف اول",
-                  img: require("../../assets/Group_211_y.png"),
-                  subjects: classTwo.dari_curriculum.subjects,
-                  id: 1,
-                },
-                {
-                  grade: "صنف دوم",
-                  img: require("../../assets/Group_211_y.png"),
-                  subjects: classTwo.dari_curriculum.subjects,
-                  id: 2,
-                },
-                {
-                  grade: "صنف سوم",
-                  img: require("../../assets/Group_211_y.png"),
-                  subjects: classTwo.dari_curriculum.subjects,
-                  id: 3,
-                },
-                {
-                  grade: "صنف چهارم",
-                  img: require("../../assets/Group_211_y.png"),
-                  subjects: classTwo.dari_curriculum.subjects,
-                  id: 4,
-                },
-                {
-                  grade: "صنف پنجم",
-                  img: require("../../assets/Group_211_y.png"),
-                  subjects: classTwo.dari_curriculum.subjects,
-                  id: 5,
-                },
-                {
-                  grade: "صنف ششم",
-                  img: require("../../assets/Group_211_y.png"),
-                  subjects: classTwo.dari_curriculum.subjects,
-                  id: 6,
-                },
-              ],
+              classes: data.primary.grades,
             })
           }
         >
-          <CustomText style={styles.btnText}>بخش ابتداییه</CustomText>
-          <Image source={primary} />
+          <CustomText style={styles.btnText}>{t("Sections.9")} </CustomText>
+          <Image source={primary} style={styles.icon} />
         </TouchableOpacity>
         <TouchableOpacity
+          activeOpacity={0.7}
           style={styles.bottomBtn}
           onPress={() =>
             navigation.navigate("Grades", {
-              classes: [
-                {
-                  grade: "صنف هفتم",
-                  img: require("../../assets/Group_211_y.png"),
-                  subjects: classNine.dari_curriculum.subjects,
-                  id: 1,
-                },
-                {
-                  grade: "صنف هشتم",
-                  img: require("../../assets/Group_211_y.png"),
-                  subjects: classNine.dari_curriculum.subjects,
-                  id: 2,
-                },
-                {
-                  grade: "صنف نهم",
-                  img: require("../../assets/Group_211_y.png"),
-                  subjects: classNine.dari_curriculum.subjects,
-                  id: 3,
-                },
-              ],
+              classes: data.secondary.grades,
             })
           }
         >
-          <CustomText style={styles.btnText}>بخش متوسطه</CustomText>
-          <Image source={secondary} />
+          <CustomText style={styles.btnText}>{t("Sections.13")}</CustomText>
+          <Image source={secondary} style={styles.icon} />
         </TouchableOpacity>
         <TouchableOpacity
+          activeOpacity={0.7}
           style={styles.bottomBtn}
           onPress={() =>
             navigation.navigate("Grades", {
-              classes: [
-                {
-                  grade: "صنف دهم",
-                  img: require("../../assets/Group_211_y.png"),
-                  subjects: classNine.dari_curriculum.subjects,
-                  id: 1,
-                  subject: [{}, {}, {}],
-                },
-                {
-                  grade: "صنف یازدهم",
-                  img: require("../../assets/Group_211_y.png"),
-                  subjects: classNine.dari_curriculum.subjects,
-                  id: 2,
-                },
-                {
-                  grade: "صنف دوازدهم",
-                  img: require("../../assets/Group_211_y.png"),
-                  subjects: classNine.dari_curriculum.subjects,
-                  id: 3,
-                },
-              ],
+              classes: data.high_school.grades,
             })
           }
         >
-          <CustomText style={styles.btnText}>بخش لیسه</CustomText>
-          <Image source={high} />
+          <CustomText style={styles.btnText}>{t("Sections.17")} </CustomText>
+          <Image source={high} style={styles.icon} />
         </TouchableOpacity>
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 };
 

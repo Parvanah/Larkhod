@@ -18,15 +18,22 @@ import Svg, {
   G,
   ForeignObject,
 } from "react-native-svg";
+import {
+  horizontalScale,
+  verticalScale,
+  moderateScale,
+} from "../../Resonsive/Matrix";
 import Style from "./FeedBack.style";
 import { Formik, Field } from "formik";
 import * as Yup from "yup";
 import CustomInput from "../SignUp/CustomInput";
 import { SafeAreaView } from "react-native-safe-area-context";
+import CustomText from "../../CustomText";
+import { useTranslation } from "react-i18next";
 
 const FeedBack = (props) => {
   const navigation = useNavigation();
-
+  const { t, i18n } = useTranslation();
   const FeedBackSchema = Yup.object().shape({
     name: Yup.string()
       .min(2, "نام باید بالاتر از دو حرف باشد")
@@ -57,13 +64,13 @@ const FeedBack = (props) => {
     }
   };
   return (
-    <View style={Style.FeedBackContainer}>
+    <SafeAreaView style={Style.FeedBackContainer}>
       <View style={Style.arrow}>
         <Svg
           data-name="Group 197"
           xmlns="http://www.w3.org/2000/svg"
-          width={16}
-          height={10}
+          width={horizontalScale(16)}
+          height={verticalScale(10)}
           viewBox="0 0 16 10"
           {...props}
           onPress={() => navigation.goBack()}
@@ -84,11 +91,8 @@ const FeedBack = (props) => {
         </Svg>
       </View>
       <View style={Style.top}>
-        <Text style={Style.title}>ارسال نظر</Text>
-        <Text style={Style.description}>
-          پیشنهادات و نظریات خود را جهت بهبود روند درس‌ها از این دریچه با ما به
-          اشتراک بگذارید
-        </Text>
+        <CustomText style={Style.title}>{t("FeedBack.12")} </CustomText>
+        <CustomText style={Style.description}> {t("FeedBack.13")}</CustomText>
       </View>
 
       <ScrollView contentContainerStyle={Style.svgWrapperFeedBack}>
@@ -107,7 +111,7 @@ const FeedBack = (props) => {
             <SafeAreaView style={Style.form}>
               <Field
                 component={CustomInput}
-                placeholder="نام"
+                placeholder={t("FeedBack.14")}
                 placeholderTextColor="#fff"
                 keyboardType="ascii-capable"
                 style={Style.input}
@@ -119,7 +123,7 @@ const FeedBack = (props) => {
 
               <Field
                 component={CustomInput}
-                placeholder="شماره تماس"
+                placeholder={t("FeedBack.15")}
                 placeholderTextColor="#fff"
                 keyboardType="ascii-capable"
                 style={Style.input}
@@ -130,7 +134,7 @@ const FeedBack = (props) => {
               />
               <Field
                 component={CustomInput}
-                placeholder="صنف"
+                placeholder={t("FeedBack.16")}
                 placeholderTextColor="lightgray"
                 keyboardType="decimal-pad"
                 style={Style.input}
@@ -141,7 +145,7 @@ const FeedBack = (props) => {
               />
               <Field
                 component={CustomInput}
-                placeholder="ایمیل أدرس"
+                placeholder={t("FeedBack.17")}
                 placeholderTextColor="#fff"
                 keyboardType="email-address"
                 style={Style.input}
@@ -153,7 +157,7 @@ const FeedBack = (props) => {
 
               <Field
                 component={CustomInput}
-                placeholder="درج پیام ..."
+                placeholder={t("FeedBack.18")}
                 placeholderTextColor="black"
                 style={Style.inputMessege}
                 editable
@@ -171,7 +175,9 @@ const FeedBack = (props) => {
                 disabled={!isValid}
                 style={Style.SubmitBtn}
               >
-                <Text>ارسال نظر</Text>
+                <CustomText style={{ fontSize: moderateScale(15) }}>
+                  {t("FeedBack.19")}
+                </CustomText>
               </TouchableOpacity>
             </SafeAreaView>
           )}
@@ -179,35 +185,33 @@ const FeedBack = (props) => {
         <Svg
           xmlns="http://www.w3.org/2000/svg"
           width={"100%"}
-          height={540}
+          height={verticalScale(720.886)}
           preserveAspectRatio="none"
-          viewBox="0 0 360 516.377"
+          viewBox="0 0 360 482.886"
           {...props}
         >
-          <View>
-            <Defs>
-              <LinearGradient
-                id="a"
-                x1={0.892}
-                y1={1.259}
-                x2={0.152}
-                y2={-0.169}
-                gradientUnits="objectBoundingBox"
-              >
-                <Stop offset={0} stopColor="#3c98bd" />
-                <Stop offset={1} stopColor="#1054a2" />
-              </LinearGradient>
-            </Defs>
-          </View>
+          <Defs>
+            <LinearGradient
+              id="a"
+              x1={0.892}
+              y1={1.259}
+              x2={0.152}
+              y2={-0.169}
+              gradientUnits="objectBoundingBox"
+            >
+              <Stop offset={0} stopColor="#3c98bd" />
+              <Stop offset={1} stopColor="#1054a2" />
+            </LinearGradient>
+          </Defs>
           <Path
             data-name="Path 1076"
-            d="M396.137 566.767V126.725L378.6 100.067l-20.723-31.5a46.29 46.29 0 00-3.08-4.163c-.437-.545-.893-1.046-1.349-1.548a37.434 37.434 0 00-20.248-11.79 31.9 31.9 0 00-6.6-.676H105.669c-12.211 0-23.73 6.692-31.276 18.179l-8.256 12.556-1.258 1.9-28.742 43.7v440.042z"
+            d="M396.137 533.276v-411.5L378.6 96.845 357.881 67.39a43.6 43.6 0 00-3.081-3.89c-.437-.51-.893-.978-1.349-1.447A38.084 38.084 0 00333.2 51.022a34.029 34.029 0 00-6.6-.632H105.669c-12.211 0-23.73 6.258-31.276 17l-8.256 11.741-1.258 1.769-28.742 40.87v411.5z"
             transform="translate(-36.137 -50.39)"
             fill="url(#a)"
           />
         </Svg>
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 };
 
