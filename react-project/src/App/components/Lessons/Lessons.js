@@ -15,11 +15,12 @@ const Lessons = (props) => {
   const unit = locationData.title;
   const [title, setTitle] = useState("");
   return (
-    <div className="lesson">
+    <div>
+      <div className="lesson">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width={500}
-        height={620}
+        width={450}
+        height={690}
         {...props}
       >
         <defs>
@@ -81,7 +82,6 @@ const Lessons = (props) => {
         </div>
         <div className="bottom">
           <div className="img">
-            {" "}
             <img src={photo2}></img>
           </div>
         </div>
@@ -90,6 +90,10 @@ const Lessons = (props) => {
           <p>دانلود فایل پی دی اف</p>
         </div>
       </div>
+    </div>
+    <div className="mobileLesson">
+
+    </div>
     </div>
   );
 };

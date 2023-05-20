@@ -13,7 +13,6 @@ import image3 from "../../assets/Group_205@2x.png";
 // import { useNavigation } from "react-router-dom";
 const Section = (props) => {
   // const navigate = useNavigation();
-  const pic =
     "C:\\UsersKhatima Sadat/Documents/LarkhodeStructure/school_subjectsdari_curriculamprimarysecond_gradeart_subjectlessonslesson_1";
   return (
     <div className="section">
@@ -53,7 +52,7 @@ const Section = (props) => {
       <div className="prevuse">
         <img src={image4} />
       </div>
-      <div className="title">
+      <div id="title">
         <h1>بخش هاي مكتب</h1>
         <p>از اینجا شما میتوانید صنف خود را مطابق بخش که هستید انتخاب کنید</p>
       </div>
