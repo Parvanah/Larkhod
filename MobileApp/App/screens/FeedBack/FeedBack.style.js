@@ -8,9 +8,6 @@ import {
 const Style = StyleSheet.create({
   FeedBackContainer: {
     width: "100%",
-    // height: 1000,
-    // aspectRatio: 1,
-    // flex: 1,
   },
   arrow: {
     marginTop: verticalScale(20),
@@ -68,7 +65,7 @@ const Style = StyleSheet.create({
     paddingTop: verticalScale(40),
   },
   input: {
-    color: "#fff",
+    color: "#000",
 
     borderBottomColor: "#fff",
     borderBottomWidth: horizontalScale(1),

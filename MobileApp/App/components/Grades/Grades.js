@@ -226,13 +226,10 @@ const style = StyleSheet.create({
     width: horizontalScale(30),
   },
   middle: {
-    height: verticalScale(110),
     alignItems: "center",
     justifyContent: "center",
-    // marginBottom: verticalScale(20),
     position: "absolute",
-    top: verticalScale(140),
-    // left: 20,
+    top: verticalScale(170),
     zIndex: 100,
     width: "100%",
   },
@@ -279,6 +276,7 @@ const style = StyleSheet.create({
     // marginLeft: horizontalScale(100),
     // marginRight: "7%",
     width: horizontalScale(200),
+    textAlign: "right",
   },
   gradeLogo: {
     width: horizontalScale(25),

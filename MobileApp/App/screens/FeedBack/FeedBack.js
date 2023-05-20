@@ -26,7 +26,7 @@ import {
 import Style from "./FeedBack.style";
 import { Formik, Field } from "formik";
 import * as Yup from "yup";
-import CustomInput from "../SignUp/CustomInput";
+import CustomInput from "../NewSignUp/CustomInput";
 import { SafeAreaView } from "react-native-safe-area-context";
 import CustomText from "../../CustomText";
 import { useTranslation } from "react-i18next";

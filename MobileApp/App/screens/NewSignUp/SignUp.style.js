@@ -8,10 +8,18 @@ import {
 const Styles = StyleSheet.create({
   outContainer: {
     // backgroundColor: "rgba(60,152,189,1)",
-    flex: 3,
+    // flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    paddingTop: verticalScale(50),
+    // paddingTop: verticalScale(50),
+    width: "100%",
+
+    paddingBottom: horizontalScale(100),
+  },
+  container: {
+    justifyContent: "center",
+    alignItems: "center",
+    marginHorizontal: horizontalScale(20),
   },
   imgStyle: {
     height: verticalScale(90),
@@ -64,10 +72,10 @@ const Styles = StyleSheet.create({
     color: "rgba(60,152,189,1)",
     textAlign: "center",
   },
-  form: { width: "100%", paddingTop: verticalScale(15) },
+  form: { width: "95%", paddingTop: verticalScale(15) },
   input: {
     borderBottomColor: "lightgray",
-    borderBottomWidth: 1,
+    borderBottomWidth: horizontalScale(1),
     width: "100%",
     height: verticalScale(40),
     flexDirection: "row-reverse",
@@ -77,7 +85,7 @@ const Styles = StyleSheet.create({
   },
   submitBtn: {
     backgroundColor: "rgba(60,152,189,1)",
-    width: "100%",
+    // width: "90%",
     marginVertical: verticalScale(30),
     height: verticalScale(40),
     alignItems: "center",
@@ -101,7 +109,7 @@ const Styles = StyleSheet.create({
   linkedBtnWrapper: {
     justifyContent: "center",
     alignItems: "center",
-    // width: "85%",
+    width: "95%",
     marginVertical: verticalScale(20),
   },
   linkBtn: {
@@ -110,8 +118,9 @@ const Styles = StyleSheet.create({
     alignItems: "center",
     height: verticalScale(40),
     marginTop: verticalScale(10),
-    width: "100%",
+    width: "95%",
     paddingHorizontal: horizontalScale(20),
+    marginHorizontal: horizontalScale(20),
     borderColor: "lightgray",
     borderWidth: horizontalScale(1),
     borderStyle: "solid",
