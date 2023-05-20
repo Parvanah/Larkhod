@@ -7,7 +7,7 @@ import {
 import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "rgba(60,152,189,1)",
+    backgroundColor: "#3C98BD",
     justifyContent: "center",
     alignItems: "center",
     color: "#fff",
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     paddingVertical: "20%",
   },
   btnWrapper: {
-    marginTop: verticalScale(40),
+    marginTop: verticalScale(60),
   },
   btn: {
     marginVertical: verticalScale(5),
@@ -46,7 +46,6 @@ const styles = StyleSheet.create({
   btnText: {
     color: "#fff",
     fontSize: moderateScale(18),
-    zIndex: 100,
   },
   imgStyle: {
     marginBottom: verticalScale(50),

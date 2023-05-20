@@ -182,13 +182,6 @@ const style = StyleSheet.create({
     height: verticalScale(15),
   },
   books: {
-    // backgroundColor: "rgba(60, 152, 189, 1)",
-    // width: "87%",
-    // justifyContent: "center",
-    // alignItems: "center",
-    // padding: 10,
-    // borderRadius: 30,
-    // marginTop: 10,
     backgroundColor: "rgba(60, 152, 189, 1)",
     width: "85%",
     paddingHorizontal: horizontalScale(10),
@@ -205,12 +198,12 @@ const style = StyleSheet.create({
 
   middle: {
     marginTop: 0,
-    height: "5%",
+    // height: "5%",
     alignItems: "center",
     // padding: 20,
     justifyContent: "center",
     position: "absolute",
-    top: verticalScale(210),
+    top: verticalScale(200),
     zIndex: 100,
     width: "100%",
   },

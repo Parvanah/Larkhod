@@ -47,7 +47,7 @@ const Sections = (props) => {
   } else {
     data = JsonFiles.pashto_curriculum;
   }
-  console.log(t("Sections.lang") == "Dari");
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.svgWrapper}>

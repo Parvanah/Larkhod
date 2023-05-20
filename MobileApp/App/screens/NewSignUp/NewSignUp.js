@@ -60,10 +60,7 @@ const NewSignUp = () => {
   };
 
   return (
-    //   moveToSlideFromRight = () => {
-    //     this.props.navigation.navigate('SlideFromRight');
-    // },
-    <ScrollView>
+    <ScrollView contentContainerStyle={styles.outContainer}>
       <View style={styles.form}>
         <Formik
           validationSchema={signUpValidationSchema}
@@ -125,9 +122,9 @@ const NewSignUp = () => {
         </Formik>
       </View>
       <View style={styles.afterSubmit}>
-        <Text style={{ color: "lightgray" }}>
+        <CustomText style={{ color: "lightgray" }}>
           _______________{t("SignUp.6")}______________
-        </Text>
+        </CustomText>
       </View>
       <View style={styles.linkedBtnWrapper}>
         <TouchableOpacity style={styles.linkBtn}>

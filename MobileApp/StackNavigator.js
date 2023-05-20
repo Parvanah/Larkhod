@@ -19,6 +19,7 @@ import AboutUs from "./App/screens/AboutUs/AboutUs";
 import FeedBack from "./App/screens/FeedBack/FeedBack";
 import TranslateApp from "./App/screens/TranslateApp";
 import NewSignUp from "./App/screens/NewSignUp/NewSignUp";
+import EnterCode from "./App/screens/EnterCode/EnterCode";
 const Stack = createNativeStackNavigator();
 const StackNaigator = () => {
   return (
@@ -48,6 +49,7 @@ const StackNaigator = () => {
         <Stack.Screen name="AboutUs" component={AboutUs} />
         <Stack.Screen name="FeedBack" component={FeedBack} />
         <Stack.Screen name="NewSignUp" component={NewSignUp} />
+        <Stack.Screen name="EnterCode" component={EnterCode} />
       </Stack.Group>
     </Stack.Navigator>
   );
