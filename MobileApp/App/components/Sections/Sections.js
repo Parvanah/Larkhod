@@ -47,9 +47,9 @@ const Sections = (props) => {
   } else {
     data = JsonFiles.pashto_curriculum;
   }
-  console.log(t("Sections.lang") == "Dari");
+
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <View style={styles.svgWrapper}>
         <Svg
           xmlns="http://www.w3.org/2000/svg"
@@ -184,7 +184,7 @@ const Sections = (props) => {
           <Image source={high} style={styles.icon} />
         </TouchableOpacity>
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };
 

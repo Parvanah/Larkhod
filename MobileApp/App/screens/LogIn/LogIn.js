@@ -34,83 +34,89 @@ const LogIn = () => {
     navigation.navigate("Sections");
   };
   const handle = () => {
-    navigation.navigate(ForgotPassword);
+    navigation.navigate("ForgotPassword");
   };
   return (
-    <View style={styles.container}>
-      <View style={styles.form}>
-        <Formik
-          validationSchema={loginValidationSchema}
-          initialValues={{ email: "", password: "" }}
-          onSubmit={(values) => OnSubmit(values)}
-        >
-          {({
-            handleChange,
-            handleBlur,
-            handleSubmit,
-            values,
-            errors,
-            touched,
-            isValid,
-          }) => (
-            <>
-              <TextInput
-                name="email"
-                placeholder={t("LogIn.3")}
-                onChangeText={handleChange("email")}
-                onBlur={handleBlur("email")}
-                value={values.email}
-                keyboardType="email-address"
-                variant="rounded"
-                style={styles.input}
-              />
-              {errors.email && touched.email && (
-                <CustomText style={styles.errorText}>{errors.email}</CustomText>
-              )}
-              <TextInput
-                name="password"
-                placeholder={t("LogIn.4")}
-                onChangeText={handleChange("password")}
-                onBlur={handleBlur("password")}
-                value={values.password}
-                secureTextEntry
-                variant="rounded"
-                style={styles.input}
-              />
-              {errors.password && touched.password && (
-                <CustomText style={styles.errorText}>
-                  {errors.password}
-                </CustomText>
-              )}
-              <TouchableOpacity onPress={handle}>
-                <CustomText style={styles.afterPass}>{t("LogIn.5")}</CustomText>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={styles.submitBtn}
-                onPress={handleSubmit}
-                disabled={!isValid}
-              >
-                <CustomText style={styles.submitText}>
-                  {" "}
-                  {t("LogIn.11")}{" "}
-                </CustomText>
-              </TouchableOpacity>
-            </>
-          )}
-        </Formik>
+    <ScrollView contentContainerStyle={styles.outContainer}>
+      <View style={styles.container}>
+        <View style={styles.form}>
+          <Formik
+            validationSchema={loginValidationSchema}
+            initialValues={{ email: "", password: "" }}
+            onSubmit={(values) => OnSubmit(values)}
+          >
+            {({
+              handleChange,
+              handleBlur,
+              handleSubmit,
+              values,
+              errors,
+              touched,
+              isValid,
+            }) => (
+              <>
+                <TextInput
+                  name="email"
+                  placeholder={t("LogIn.3")}
+                  onChangeText={handleChange("email")}
+                  onBlur={handleBlur("email")}
+                  value={values.email}
+                  keyboardType="email-address"
+                  variant="rounded"
+                  style={styles.input}
+                />
+                {errors.email && touched.email && (
+                  <CustomText style={styles.errorText}>
+                    {errors.email}
+                  </CustomText>
+                )}
+                <TextInput
+                  name="password"
+                  placeholder={t("LogIn.4")}
+                  onChangeText={handleChange("password")}
+                  onBlur={handleBlur("password")}
+                  value={values.password}
+                  secureTextEntry
+                  variant="rounded"
+                  style={styles.input}
+                />
+                {errors.password && touched.password && (
+                  <CustomText style={styles.errorText}>
+                    {errors.password}
+                  </CustomText>
+                )}
+                <TouchableOpacity onPress={handle}>
+                  <CustomText style={styles.afterPass}>
+                    {t("LogIn.5")}
+                  </CustomText>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  style={styles.submitBtn}
+                  onPress={handleSubmit}
+                  disabled={!isValid}
+                >
+                  <CustomText style={styles.submitText}>
+                    {" "}
+                    {t("LogIn.11")}{" "}
+                  </CustomText>
+                </TouchableOpacity>
+              </>
+            )}
+          </Formik>
+        </View>
+        <View style={styles.afterSubmit}>
+          <CustomText style={{ color: "lightgray" }}>
+            ___________{t("LogIn.6")}_____________
+          </CustomText>
+        </View>
+        <View style={styles.linkedGoogle}>
+          <TouchableOpacity style={styles.linkBtn}>
+            <Image source={google} />
+            <CustomText style={styles.linkBtnText}>{t("LogIn.7")}</CustomText>
+          </TouchableOpacity>
+        </View>
       </View>
-      <View style={styles.afterSubmit}>
-        <CustomText style={{ color: "lightgray" }}>
-          ___________{t("LogIn.6")}_____________
-        </CustomText>
-      </View>
-      <View style={styles.linkedGoogle}>
-        <TouchableOpacity style={styles.linkBtn}>
-          <Image source={google} />
-          <CustomText style={styles.linkBtnText}>{t("LogIn.7")}</CustomText>
-        </TouchableOpacity>
-      </View>
-    </View>
+    </ScrollView>
   );
 };
 export default LogIn;

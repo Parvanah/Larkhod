@@ -50,6 +50,7 @@ const StackNaigator = () => {
         <Stack.Screen name="AboutUs" component={AboutUs} />
         <Stack.Screen name="FeedBack" component={FeedBack} />
         <Stack.Screen name="NewSignUp" component={NewSignUp} />
+        <Stack.Screen name="EnterCode" component={EnterCode} />
       </Stack.Group>
     </Stack.Navigator>
   );
