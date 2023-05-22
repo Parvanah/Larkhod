@@ -1,4 +1,6 @@
 import React from "react";
+// import React, {useContext} from 'react';
+import { AuthContext } from "./App/context/AuthContext";
 import { View, Text } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import FirstPage from "./App/screens/FirstPage/FirstPage";
@@ -22,11 +24,13 @@ import NewSignUp from "./App/screens/NewSignUp/NewSignUp";
 import EnterCode from "./App/screens/EnterCode/EnterCode";
 const Stack = createNativeStackNavigator();
 const StackNaigator = () => {
+  // const {userInfo} = useContext(AuthContext);
   return (
     <Stack.Navigator
       screenOptions={{ headerShown: false }}
       initialRouteName="FirstPage"
     >
+      {/* {userInfo.access_token ? '' : ''} */}
       <Stack.Group>
         <Stack.Screen name="FirstPage" component={FirstPage} />
         <Stack.Screen name="SignUp" component={SignUp} />

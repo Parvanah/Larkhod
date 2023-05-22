@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useContext, useState} from 'react';
 import { useNavigation } from "@react-navigation/native";
 import {
   View,
@@ -22,17 +22,14 @@ import * as Yup from "yup";
 import CustomInput from "./CustomInput";
 import CustomText from "../../CustomText";
 import { useTranslation } from "react-i18next";
+import Spinner from 'react-native-loading-spinner-overlay';
+import { AuthContext } from "../../context/AuthContext";
 const NewSignUp = () => {
-  // constructor(props){
-  //   super(props);
-  //   this.state = {
-  //     showSignUp: true,
-  //   };
-  // }
-  // handlePress = () =>{
-  //   this.setState({showSignUp: !this.state.showSignUp});
-  // };
-  // render(){
+  const [email, setEmail] = useState(null);
+  const [password, setPassword] = useState(null);
+  const [confirmPassword, setconfirmPassword] = useState(null);
+  const {isLoading, register} = useContext(AuthContext);
+
   const { t, i18n } = useTranslation();
   const signUpValidationSchema = Yup.object().shape({
     email: Yup.string().email(t("SignUp.8")).required(t("SignUp.9")),
@@ -73,6 +70,7 @@ const NewSignUp = () => {
         >
           {({ handleChange, handleBlur, handleSubmit, values, isValid }) => (
             <>
+              <Spinner visible={isLoading} />
               <Field
                 component={CustomInput}
                 name="email"
@@ -109,7 +107,10 @@ const NewSignUp = () => {
             </View>  */}
               <TouchableOpacity
                 style={styles.submitBtn}
-                onPress={handleSubmit}
+                // onPress={handleSubmit}
+                onPress={() => {
+                  register(email, password, confirmPassword), {handleSubmit}
+                }}
                 disabled={!isValid}
               >
                 <CustomText style={styles.submitText}>

@@ -10,7 +10,7 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import logo from "../../assets/White_PNG_Format_z.png";
-import telegram from "../../tele.png";
+import telegram from "../../assets/Tele.png";
 import user from "../../assets/user.png";
 import arrow from "../../assets/Group_158.png";
 import CustomText from "../../CustomText";
@@ -24,8 +24,18 @@ import {
   verticalScale,
   moderateScale,
 } from "../../Resonsive/Matrix";
+import React, { useContext, useState } from "react";
+import Spinner from 'react-native-loading-spinner-overlay';
+import { AuthContext } from "../../context/AuthContext";
 
 const Information = (props) => {
+  const [firstName, setfirstName] = useState(null);
+  const [lastName, setlastName] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [age, setAge] = useState(null);
+  const [grade, setGrade] = useState(null);
+  const {isLoading, information} = useContext(AuthContext);
+
   const { t, i18n } = useTranslation();
   const InfoValidationSchema = Yup.object().shape({
     firstName: Yup.string()
@@ -37,7 +47,7 @@ const Information = (props) => {
       .max(50, t("Information.5"))
       .required(t("Information.6")),
     email: Yup.string().email(t("Information.7")).required(t("Information.8")),
-    class: Yup.number()
+    grade: Yup.number()
       .min(1, t("Information.9"))
       .max(12, t("Information.9"))
       .required(t("Information.10")),
@@ -90,7 +100,7 @@ const Information = (props) => {
       <ScrollView contentContainerStyle={styles.svgWrapper}>
         <Formik
           validationSchema={InfoValidationSchema}
-          initialValues={{ name: "", lastName: "", email: "", class: "" }}
+          initialValues={{ name: "", lastName: "", email: "", grade: "", age:"" }}
           onSubmit={onSubmit}
         >
           {({
@@ -103,6 +113,7 @@ const Information = (props) => {
             isValid,
           }) => (
             <View style={styles.form}>
+              <Spinner visible={isLoading} />
               <TextInput
                 name="firstName"
                 placeholder={t("Information.14")}
@@ -158,19 +169,24 @@ const Information = (props) => {
               )}
               <TextInput
                 placeholder={t("Information.18")}
-                name="class"
-                onChangeText={handleChange("class")}
-                onBlur={handleBlur("class")}
+                name="grade"
+                onChangeText={handleChange("grade")}
+                onBlur={handleBlur("grade")}
                 keyboardType="decimal-pad"
                 value={values.class}
                 style={styles.input}
               />
-              {errors.class && touched.class && (
-                <CustomText style={styles.errorText}>{errors.class}</CustomText>
+              {errors.grade && touched.grade && (
+                <CustomText style={styles.errorText}>{errors.grade}</CustomText>
               )}
               <TouchableOpacity
                 style={styles.submitBtn}
-                onPress={handleSubmit}
+                // onPress={handleSubmit}
+                onPress={()=> {information(firstName,
+                  lastName,
+                  email,
+                  age,
+                  grade)}}
                 disabled={!isValid}
               >
                 <CustomText style={styles.submitText}>
