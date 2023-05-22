@@ -35,7 +35,7 @@ const Books = (props) => {
   var [inputSearch, setInputSearch] = useState("");
 
   return (
-    <SafeAreaView style={style.container}>
+    <View style={style.container}>
       <View style={style.top}>
         <TouchableOpacity
           style={style.arrowStyle}
@@ -149,7 +149,7 @@ const Books = (props) => {
           }
         }}
       />
-    </SafeAreaView>
+    </View>
   );
 };
 
@@ -167,7 +167,7 @@ const style = StyleSheet.create({
     alignItems: "center",
     paddingHorizontal: horizontalScale(20),
     paddingVertical: verticalScale(20),
-    marginBottom: verticalScale(90),
+    marginBottom: verticalScale(5),
   },
   logo: {
     width: horizontalScale(80),
@@ -197,15 +197,16 @@ const style = StyleSheet.create({
   },
 
   middle: {
-    marginTop: 0,
+    marginTop: verticalScale(0),
     // height: "5%",
     alignItems: "center",
     // padding: 20,
     justifyContent: "center",
-    position: "absolute",
-    top: verticalScale(200),
+    // position: "absolute",
+    // top: verticalScale(200),
     zIndex: 100,
     width: "100%",
+    marginBottom: verticalScale(10),
   },
   FlatListStyle: {
     width: "100%",
@@ -233,6 +234,7 @@ const style = StyleSheet.create({
     fontSize: moderateScale(22),
     // fontWeight: "bold",
     width: horizontalScale(200),
+    textAlign: "right",
     // marginLeft: 20,
   },
   scrolling: {

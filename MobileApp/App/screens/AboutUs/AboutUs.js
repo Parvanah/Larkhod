@@ -28,7 +28,7 @@ const AboutUs = (props) => {
   const { t, i18n } = useTranslation();
   const navigation = useNavigation();
   return (
-    <SafeAreaView style={Style.containerAboutUS}>
+    <View style={Style.containerAboutUS}>
       <View style={Style.arrow}>
         <Svg
           data-name="Group 197"
@@ -140,7 +140,7 @@ const AboutUs = (props) => {
           </Svg>
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };
 

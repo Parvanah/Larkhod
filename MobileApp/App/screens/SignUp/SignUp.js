@@ -79,7 +79,7 @@ const SignUp = () => {
     },
   });
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <View style={{ flex: 1 }}>
       <ScrollView contentContainerStyle={styles.outContainer}>
         <Image source={logo} style={Styles.imgStyle} />
         <View style={Styles.InContainer}>
@@ -106,7 +106,7 @@ const SignUp = () => {
           </View>
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };
 

@@ -37,7 +37,7 @@ export default function FirstPage(props) {
     navigation.navigate("SignUp");
   };
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollcontainer}>
         <View>
           <Image source={logo} style={styles.imgStyle} />
@@ -62,6 +62,6 @@ export default function FirstPage(props) {
           <CustomText style={styles.text}>لارښود ته ښه راغلاست</CustomText>
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 }

@@ -91,7 +91,7 @@ const Grades = (props) => {
     }
   };
   return (
-    <SafeAreaView style={style.container}>
+    <View style={style.container}>
       <View style={style.arrow}>
         <Svg
           data-name="Group 197"
@@ -176,7 +176,7 @@ const Grades = (props) => {
           }}
         />
       </View>
-    </SafeAreaView>
+    </View>
   );
 };
 const style = StyleSheet.create({
@@ -228,8 +228,9 @@ const style = StyleSheet.create({
   middle: {
     alignItems: "center",
     justifyContent: "center",
-    position: "absolute",
-    top: verticalScale(170),
+    // position: "absolute",
+    // top: verticalScale(170),
+    marginTop: verticalScale(70),
     zIndex: 100,
     width: "100%",
   },
@@ -239,7 +240,7 @@ const style = StyleSheet.create({
     // height: "66%",
     // backgroundColor: "#fff",
     width: "100%",
-    marginTop: verticalScale(130),
+    marginTop: verticalScale(10),
     // position: "absolute",
 
     flex: 1,
