@@ -7,6 +7,7 @@ import photo2 from "../../assets/lesson_1.jpg";
 import photo3 from "../../assets/Group_408.png";
 import photo4 from "../../assets/Group_404.png";
 import photo5 from "../../assets/Group_158_a@2x.png";
+import photo6 from "../../assets/Group_406.png";
 const Lessons = (props) => {
   var [num, setNum] = useState(1);
   const location = useLocation();
@@ -16,9 +17,9 @@ const Lessons = (props) => {
   const [title, setTitle] = useState("");
   
   return (
-    <div>
+    <body> 
       <div className="lesson">
-
+      
         <svg xmlns="http://www.w3.org/2000/svg" width={403} height={675} {...props}>
     <defs>
       <linearGradient
@@ -35,9 +36,9 @@ const Lessons = (props) => {
     </defs>
     <path fill="url(#a)" d="M0 0h403v1080H0z" data-name="Rectangle 237" />
     <foreignObject
-          width={"100%"}
-          height={"100%"}
-          x={6}
+          width={"80%"}
+          height={"90%"}
+          x={40}
           y={50}
           className="sidebar"
         >
@@ -67,7 +68,7 @@ const Lessons = (props) => {
               })}
             </div>
           </div>
-        </foreignObject>
+    </foreignObject>
         </svg>
       <div className="showLesson">
         <div className="title">
@@ -90,7 +91,18 @@ const Lessons = (props) => {
         </div>
       </div>
       </div>
-    </div>
+      <div className="mobile">
+        <div className="mobileTop">
+        <img src={photo6} className="imgTop"></img>
+        </div>
+       
+
+<div>
+
+</div>
+      </div>
+      
+    </body>
   );
 };
 

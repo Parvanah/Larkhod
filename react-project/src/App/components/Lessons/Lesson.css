@@ -1,42 +1,46 @@
+.mobile{
+    display: none;
+}
+.mobileSvg{
+    display: none;
+}
 *{
     margin: 0;
     padding: 0;
-}
-.svgSmall{
-    display: none;
 }
 .lesson {
     margin-top: 0px;
     display: flex;
     flex-direction: row;
     /* height: 70px; */
-    overflow-y: hidden;
-    padding-left: 30px;
-    height: 100%;
+    /* overflow-y: scroll; */
+    padding-left: 5%;
+    /* height: 100%; */
 }
 .sidebar {
     /* position: fixed;
     top: 0%;
     left: 0%;
     bottom: 0%; */
-    
-    
-    width: 350px;
-    position: absolute;
+    /* background-color: #bd4f3c; */
+    /* width: 350px; */
+    /* position: absolute;
     top: 0px;
-    left: 10%;
+    left: 10%; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     overflow-y: scroll;
-    padding: 0px;
+    /* padding: 0px; */
     margin: 0px ;
     margin-bottom: 0px;  
-    padding: 0px 0px;
-    height: 100%;
+    /* padding: 0px 0px; */
+    /* height: 100%; */
     padding-left: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 70px;
+    background-color: blue;
+
 }
 .sidebar .text{
     display: flex;
@@ -62,13 +66,11 @@
     align-items: center;
     padding: 0;
     margin: 0;
-    
 
 }
 .sidebar h3{
     padding-bottom: 50px;
     text-align: center;
-    
 }
 .sidebar h3, .sidebar .sidebar-lessons div{
     color: white;
@@ -157,6 +159,10 @@
     overflow-y: scroll;
     border: 4px dashed #3c98bd;
     border-radius: 15px;
+    
+}
+.showLesson .bottom .img img {
+    width: 100%;
 }
 .showLesson .midlle{
     display: flex;
@@ -188,6 +194,9 @@
         margin: 0;
         padding: 0;
     }
+    .mobile{
+        display: none;
+    }
     .lesson {
         width: 1200px;
         margin-top: -13px;
@@ -210,11 +219,8 @@
         justify-content: space-between;
         align-items: center;
         overflow: scroll;
-        padding-left: 0;
         padding: 10px;
         margin: 20px ;
-        margin-bottom: 0px;  
-        padding: 0px 30px;
     }
     .sidebar .text{
         display: flex;
@@ -303,26 +309,27 @@
     }
     .showLesson .bottom{
         width: 60%;
-        margin: 0px;
+        margin-right: 5%;
     }
     .showLesson .bottom .img{
-        width: 60%;
-        height: 67%;
-        position: absolute;
-        right: -100px;
+        /* width: 60%;
+        height: 67%; */
+        /* position: absolute; */
+        /* right: -100px;
         /* padding-right: 100px; */
-        left: 400px;
-        top: 130px;
+        /*left: 400px;
+        top: 130px; */
         /* margin-top: 10px; */
         overflow-y: scroll;
         border: 4px dashed #3c98bd;
         border-radius: 15px;
+        margin-right: 20%;
     }
     .showLesson .midlle{
         display: flex;
-        position: absolute;
+        /* position: absolute;
         top: 590px;
-        right: -100px;
+        right: -100px; */
         flex-direction: row-reverse;
         justify-content: flex-start;
         align-items: center;
@@ -350,6 +357,12 @@
     *{
         margin: 0;
         padding: 0;
+    }
+    .mobile{
+        display: none;
+    }
+    .mobileSvg{
+        display: none;
     }
     .lesson {
         width:992px;
@@ -471,29 +484,30 @@
         margin: 0px;
     }
     .showLesson .bottom .img{
-        width: 50%;
-        height: 67%;
-        position: absolute;
+        /* width: 50%;
+        height: 67%; */
+        /* position: absolute;
         right: -100px;
         left: 380px;
-        top: 130px;
+        top: 130px; */
         /* margin-top: 10px; */
-        overflow-y: scroll;
+        /* overflow-y: scroll; */
         border: 4px dashed #3c98bd;
         border-radius: 15px;
     }
     .showLesson .midlle{
         display: flex;
-        position: absolute;
-        top: 580px;
-        right: -100px;
+        /* position: absolute;
+        top: 0px;
+        right: -100px; */
         flex-direction: row-reverse;
         justify-content: flex-start;
         align-items: center;
         width: 100%;
         padding-right: 162px;    /* padding:20px; */
         padding-bottom:0px;
-        margin-bottom: 30px;
+        /* margin-bottom: 30px; */
+        background-color: rgb(153, 121, 51);
     }
     .showLesson .midlle img{
         height: 50px;
@@ -509,336 +523,77 @@
         display: none;
     }
 }
-@media only screen and (max-width: 576px ) and (min-width:360px){}
 @media only screen and (max-width: 768px ) and (min-width:576px){
-    .svgSmall{
-        display: block;
-    }
-    .svgBig{
+   
+    .lesson{
         display: none;
-    }
-    *{
-        margin: 0;
-        padding: 0;
-    }
-    .lesson {
-        display: none;
-        width:768px;
-        margin-top: 0px;
+    }  
+    .mobile{
         display: flex;
-        flex-direction: row;
-        height: 70px;
-        overflow-y: hidden;
-        overflow-x: hidden;
-        padding-left: 0px;
-        padding-right: 0px;
-    }
-    .sidebar {
-        display: flex;
-        position: fixed;
-        top: 0%;
-        left: 0%;
-        bottom: 0%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        overflow: scroll;
-        padding-left: 0;
-        padding: 5px;
-        margin: 20px ;
-        margin-bottom: 0px;  
-        padding: 0px 30px;
-    }
-    .sidebar .text{
-        display: none;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 20px;
-    }
-    .sidebar .header{
-        display: none;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .sidebar .header img{
-        width: 50px;
-        height: 50px;
-    
-    }
-    .sidebar h3{
-        padding-bottom: 50px;
-        text-align: center;
-    }
-    .sidebar h3, .sidebar .sidebar-lessons div{
-        color: white;
-        display: none;
-        font-size: 20px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
         
+        height: 100%;
     }
-    .sidebar .sidebar-lessons div .titles{
-        margin-left: 60px ;
-    
-    }
-    .sidebar .sidebar-lessons div {
-        padding: 10px;
-        text-align: right;
-       
-    }
-    .sidebar .sidebar-lessons div:hover{
-        cursor: pointer;
-    }
-    .showLesson{
+    .mobile .mobileTop{
         width: 100%;
-        padding: 20px 50px 0px 50px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
+        height: 166.076px;
+        background-color: #3C98BD;
+        background-image: linear-gradient( #3C98BD, #0F53A1);
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 100px;
         
+
     }
-    .showLesson .title{
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        width: 100%;
-        padding-right: 175px;
-    }
-    .showLesson .title h1{
-        font-size: 30px;
-        padding: 0;
-        margin: 5px;
-    
-    }
-    .showLesson .title div{
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: flex-end;
-        align-items: center;
-    
-    }
-    .showLesson .title img{
-        height: 60px;
-        width: 60px;
-        margin-bottom: -15px;
-        padding-left: -60px;
-        position: absolute;
-        left: 370px;
-        bottom: 550px;
-    }
-    .showLesson .title div p{
-        font-size: 30px;
-        margin: 10px;
-        
-    }
-    .showLesson .bottom{
-        width: 60%;
-        margin: 0px;
-    }
-    .showLesson .bottom .img{
-        width: 50%;
-        height: 67%;
-        position: absolute;
-        right: -100px;
-        left: 380px;
-        top: 130px;
-        /* margin-top: 10px; */
-        overflow-y: scroll;
-        border: 4px dashed #3c98bd;
-        border-radius: 15px;
-    }
-    .showLesson .midlle{
-        display: flex;
-        position: absolute;
-        top: 580px;
-        right: -100px;
-        flex-direction: row-reverse;
-        justify-content: flex-start;
-        align-items: center;
-        width: 100%;
-        padding-right: 162px;    /* padding:20px; */
-        padding-bottom:0px;
-        margin-bottom: 30px;
-    }
-    .showLesson .midlle img{
-        height: 50px;
-        width: 50px;
-        margin-left: 50px;
-        margin-top: 0px;
-    }
-    .showLesson .midlle p {
-        font-size: 25px;
-        color: #707070;
-    }
-    .mobileLesson{
-        width: 300px;
-        height: 150px;
-        resize: both;
-        overflow: auto;
-    }
-    svg{
-        width: 95%;
-        height: 95%;
-    }    
+
+
+
 }
-@media only screen and (max-width: 360px) and (min-width: 100px){
-    *{
-        margin: 0;
-        padding: 0;
-    }
-    .lesson {
-        margin-top: -13px;
+@media only screen and (max-width: 576px ) and (min-width:360px){
+    .lesson{
+        display: none;
+    }  
+    .mobile{
         display: flex;
-        flex-direction: row;
-        /* height: 70px; */
-        overflow-y: hidden;
+       
+        height: 100%;
+    }
+    .mobile .mobileTop{
+        display: flex;
+        width: 100%;
+        height: 166.076px;
+        
+        background-image: linear-gradient( #3C98BD, #0F53A1);
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+    }
+
+    .mobile .mobileTop img{
+        display: flex;
         padding-left: 50px;
     }
-    .sidebar {
-        /* position: fixed;
-        top: 0%;
-        left: 0%;
-        bottom: 0%; */
-        /* background-color: #3c98bd; */
-        /* width: 200px; */
+
+}
+
+@media only screen and (max-width: 360px) and (min-width: 100px){
+    .lesson{
+        display: none;
+    }  
+    .mobile{
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        overflow: scroll;
-        padding-left: 0;
-        padding: 10px;
-        margin: 20px ;
-        margin-bottom: 0px;  
-        padding: 0px 30px;
+       
+        height: 100%;
     }
-    .sidebar .text{
+    .mobile .mobileTop{
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 20px;
-    }
-    .sidebar .header{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .sidebar .header img{
-        width: 50px;
-        height: 50px;
-    
-    }
-    .sidebar h3{
-        padding-bottom: 50px;
-        text-align: center;
-    }
-    .sidebar h3, .sidebar .sidebar-lessons div{
-        color: white;
+        width: 100%;
+        height: 166.076px;
+        background-color: red;
+        background-image: linear-gradient( #3C98BD, #0F53A1);
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 100px;
         
-        font-size: 20px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        
+
     }
-    .sidebar .sidebar-lessons div .titles{
-        margin-left: 60px ;
-    
-    }
-    .sidebar .sidebar-lessons div {
-        padding: 10px;
-        text-align: right;
+    .mobile .mobileTop .imgTop{
        
     }
-    .sidebar .sidebar-lessons div:hover{
-        cursor: pointer;
-    }
-    .showLesson{
-        width: 100%;
-        padding: 20px 50px 0px 50px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        
-    }
-    .showLesson .title{
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        width: 100%;
-        padding-right: 30px;
-    }
-    .showLesson .title h1{
-        font-size: 40px;
-        padding: 0;
-        margin: 5px;
-    
-    }
-    .showLesson .title div{
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: flex-end;
-        align-items: center;
-    
-    }
-    .showLesson .title img{
-        height: 70px;
-        width: 70px;
-        margin-bottom: -15px;
-        padding-left: -60px;
-        position: absolute;
-        left: 500px;
-        border-radius: 15px;
-    }
-    .showLesson .title div p{
-        font-size: 40px;
-        margin: 10px;
-        
-    }
-    .showLesson .bottom{
-        width: 70%;
-        margin: 0px;
-    }
-    .showLesson .bottom .img{
-        width: 60%;
-        height: 67%;
-        position: absolute;
-        right: -40px;
-        left: 500px;
-        top: 130px;
-        /* margin-top: 10px; */
-        overflow-y: scroll;
-        border: 4px dashed #3c98bd;
-    }
-    .showLesson .midlle{
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: flex-start;
-        align-items: center;
-        width: 100%;
-        padding-right: 30px;    /* padding:20px; */
-        padding-bottom:-10px;
-        margin-bottom: 30px;
-    }
-    .showLesson .midlle img{
-        height: 50px;
-        width: 50px;
-        margin-left: 50px;
-        margin-top: 0px;
-    }
-    .showLesson .midlle p {
-        font-size: 30px;
-        color: #707070;
-    }
-    
 }
