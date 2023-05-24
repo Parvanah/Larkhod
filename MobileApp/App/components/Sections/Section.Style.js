@@ -9,7 +9,7 @@ import { StyleSheet } from "react-native";
 const Styles = StyleSheet.create({
   sectionMiddle: {
     flexDirection: "row",
-    height: verticalScale(80),
+    height: verticalScale(60),
     // marginTop: 20,
     justifyContent: "space-between",
     alignItems: "center",
@@ -75,8 +75,8 @@ const Styles = StyleSheet.create({
     // marginTop: -20,
   },
   img: {
-    height: verticalScale(40),
-    width: horizontalScale(40),
+    height: 40,
+    width: 40,
   },
   middle: {
     // backgroundColor: "rgba(212,228,232,1)",
@@ -134,8 +134,8 @@ const Styles = StyleSheet.create({
     marginLeft: "20%",
   },
   icon: {
-    width: horizontalScale(63),
-    height: verticalScale(65),
+    width: 70,
+    height: 70,
   },
 });
 

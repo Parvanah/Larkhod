@@ -92,35 +92,10 @@ const Grades = (props) => {
   };
   return (
     <View style={style.container}>
-      <View style={style.arrow}>
-        <Svg
-          data-name="Group 197"
-          xmlns="http://www.w3.org/2000/svg"
-          width={horizontalScale(16)}
-          height={verticalScale(15)}
-          viewBox="0 0 16 10"
-          {...props}
-          onPress={() => navigation.goBack()}
-        >
-          <Defs>
-            <ClipPath id="a">
-              <Path data-name="Rectangle 85" fill="#fff" d="M0 0H16V10H0z" />
-            </ClipPath>
-          </Defs>
-          <G data-name="Group 158" clipPath="url(#a)">
-            <Path
-              data-name="Path 433"
-              d="M3.247 6l2.48 2.294a.99.99 0 010 1.414 1.023 1.023 0 01-1.432 0L.445 6.059A1.465 1.465 0 010 5a1.483 1.483 0 01.444-1.06L4.294.293a1.025 1.025 0 011.434 0 .992.992 0 010 1.414L3.248 4H15a1 1 0 010 2H3.247z"
-              fill="#fff"
-              fillRule="evenodd"
-            />
-          </G>
-        </Svg>
-      </View>
       <Svg
         xmlns="http://www.w3.org/2000/svg"
         width={"100%"}
-        height={verticalScale(170.069)}
+        height={verticalScale(190.069)}
         preserveAspectRatio="none"
         viewBox="0 0 360 162.314"
         {...props}
@@ -146,6 +121,31 @@ const Grades = (props) => {
         />
       </Svg>
       <View style={styleSection.top}>
+        <View style={style.arrow}>
+          <Svg
+            data-name="Group 197"
+            xmlns="http://www.w3.org/2000/svg"
+            width={horizontalScale(16)}
+            height={verticalScale(15)}
+            viewBox="0 0 16 10"
+            {...props}
+            onPress={() => navigation.goBack()}
+          >
+            <Defs>
+              <ClipPath id="a">
+                <Path data-name="Rectangle 85" fill="#fff" d="M0 0H16V10H0z" />
+              </ClipPath>
+            </Defs>
+            <G data-name="Group 158" clipPath="url(#a)">
+              <Path
+                data-name="Path 433"
+                d="M3.247 6l2.48 2.294a.99.99 0 010 1.414 1.023 1.023 0 01-1.432 0L.445 6.059A1.465 1.465 0 010 5a1.483 1.483 0 01.444-1.06L4.294.293a1.025 1.025 0 011.434 0 .992.992 0 010 1.414L3.248 4H15a1 1 0 010 2H3.247z"
+                fill="#fff"
+                fillRule="evenodd"
+              />
+            </G>
+          </Svg>
+        </View>
         <CustomText style={style.userName}>Khatima Sajadi</CustomText>
         <TouchableOpacity style={style.imageWrapper} onPress={onSubmit}>
           <Image source={user} style={style.img} />
@@ -182,8 +182,9 @@ const Grades = (props) => {
 const style = StyleSheet.create({
   arrow: {
     // backgroundColor: "red",
-    marginBottom: verticalScale(-40),
-    paddingTop: verticalScale(15),
+    marginBottom: verticalScale(60),
+
+    // paddingBottom: verticalScale(40),
     zIndex: 100,
     marginLeft: horizontalScale(20),
   },
@@ -201,7 +202,8 @@ const style = StyleSheet.create({
     marginTop: verticalScale(-120),
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "space-between",
+    backgroundColor: "red",
   },
   userName: {
     fontSize: moderateScale(20),

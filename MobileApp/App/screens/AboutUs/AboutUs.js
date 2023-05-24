@@ -83,12 +83,18 @@ const AboutUs = (props) => {
             fill="url(#a)"
           />
 
-          <ForeignObject height={100} width={100} x={140} y={50}>
+          <ForeignObject
+            // height={verticalScale(100)}
+            width={horizontalScale(100)}
+            x={130}
+            y={50}
+          >
             <Svg
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"
-              width={horizontalScale(84)}
-              height={verticalScale(74)}
+              width={84}
+              height={74}
+              preserveAspectRatio="XMINYMIN slice"
               viewBox="0 0 84 74"
               {...props}
             >
