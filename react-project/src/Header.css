@@ -1,3 +1,8 @@
+@font-face{
+    font-family: "Bahij helvetica";
+    src: local("Bahij Helvetica"),
+    url("./Fonts/Bahij\ Helvetica\ Neue\ 45\ Light.ttf") format("truetype");
+}
 *{
     margin: 0;
     padding: 0;
@@ -8,6 +13,8 @@
     color: white;
     width: 100%;
     height: 100%;
+    font-family: "Bahij helvetica";
+    font-weight: bold;
 }
 .header{
     display: flex;
@@ -88,7 +95,7 @@ text-align: center;
     filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.2));
     overflow: hidden;
     line-height: 92px;
-    font-family: Bahij Helvetica Neue;
+    font-family: "Bahij helvetica";
     font-size: 60px;
     color: rgba(255,255,255,1);
     letter-spacing: -0.4px;
@@ -102,7 +109,7 @@ text-align: center;
 	filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.2));
     overflow: hidden;
     line-height: 92px;
-    font-family: Bahij Helvetica Neue;
+    font-family: "Bahij helvetica";
    font-style: normal;
    font-weight: bold;
    font-size: 60px;

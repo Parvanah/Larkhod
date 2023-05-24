@@ -28,19 +28,19 @@
     transform-origin: center;
 }
 
-#button-next {
+/* #button-next {
     margin-top: 12px;
     width: 140px;
     height: 35px;
     cursor: pointer;
-    font-family: Gotham;
+    font-family: "Bahij helvetica";
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
     color: rgb(39, 115, 138);
     letter-spacing: -0.4px;
     border-radius: 50px;
-}
+} */
 #n____ {
     left: 800px;
     top: 100px;
@@ -49,7 +49,7 @@
     height: 250px;
     line-height: 117px;
     text-align: right;
-    font-family: Gotham;
+    font-family: "Bahij helvetica";
     font-style: normal;
     font-weight: 12px;
     font-size: 60px;
@@ -64,7 +64,7 @@
     overflow: hidden;
     line-height: 117px;
     text-align: right;
-    font-family: Gotham;
+    font-family: "Bahij helvetica";
     font-style: normal;
     font-weight:12px;
     font-size: 60px;
@@ -78,7 +78,7 @@
     overflow: hidden;
     line-height: 117px;
     text-align: right;
-    font-family: Gotham;
+    font-family: "Bahij helvetica";
     font-style: normal;
     font-weight:12px;
     font-size: 60px;
@@ -95,7 +95,7 @@
     line-height: 117px;
     margin-top: -48.5px;
     text-align: right;
-    font-family: Gotham;
+    font-family: "Bahij helvetica";
     font-style: normal;
     font-weight: 18px;
     font-size: 20px;

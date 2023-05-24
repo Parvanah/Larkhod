@@ -11,7 +11,6 @@
     align-items: center;
     color: rgba(60, 152, 189, 1);
 }
-
 .title h1 {
     font-weight: bold;
     font-size: 40px;
@@ -19,11 +18,15 @@
     justify-content: center;
     color: rgba(60, 152, 189, 1);
     margin-top: -60px;
+    font-family: "Bahij helvetica";
+    font-weight: bold;
+
 }
 
 .title p {
     color: rgba(60, 152, 189, 1);
     font-size: 30px;
+    font-family: "Bahij helvetica";
 }
 
 #ul-section {
@@ -50,10 +53,12 @@
     margin-left: 100px;
     margin-top: 2vh;
     margin-right: 30px;
+    font-family: "Bahij helvetica";
 }
 
 #ul-section p {
     color: rgba(60, 152, 189, 1);
+    font-family: "Bahij helvetica";
     align-items: center;
     justify-content: center;
     margin-left: 80px;

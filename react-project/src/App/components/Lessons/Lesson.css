@@ -64,13 +64,12 @@
 .sidebar h3,
 .sidebar .sidebar-lessons div {
     color: white;
-
     font-size: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
+    font-family: "Bahij helvetica";
 }
 
 .sidebar .sidebar-lessons div .titles {
@@ -171,5 +170,7 @@
 
 .showLesson .midlle p {
     font-size: 30px;
+    font-family: "Bahij helvetica";
+    font-weight: bold;
     color: #707070;
 }

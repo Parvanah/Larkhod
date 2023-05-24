@@ -11,6 +11,8 @@
  font-size: 20px;
  color: rgba(16,84,162,1);
  letter-spacing: -0.4px;
+ font-family: "Bahij helvetica";
+ font-weight: bold;
 }
 .sanaf{
     width: 22px;
@@ -93,7 +95,7 @@
 		height: 230px;
 		line-height: 79px;
 		text-align: center;
-		font-family: Bahij Helvetica Neue;
+		font-family: "Bahij helvetica";
 		font-style: normal;
 		color: rgba(255,255,255,1);
 		letter-spacing: -0.4px;
@@ -107,7 +109,7 @@
 		height: 230px;
 		line-height: 79px;
 		text-align: center;
-		font-family: Bahij Helvetica Neue;
+		font-family: "Bahij helvetica";
 		font-style: normal;
 		font-weight: bold;
 		font-size: 35px;

@@ -73,7 +73,7 @@ ChangeProfile style
     width: 204px;
     white-space: nowrap;
     text-align: center;
-    font-family: Bahij Helvetica Neue;
+    font-family: "Bahij helvetica";
     font-style: normal;
     font-weight: normal;
     font-size: 25px;
@@ -154,7 +154,7 @@ ChangeProfile style
     border: 1px solid #ccc;
     box-sizing: border-box;
     font-size: 20px;
-	font-family: Bahij Helvetica Neue;
+    font-family: "Bahij helvetica";
     font-style: normal;
     font-weight: normal;
 	cursor: pointer;
@@ -194,6 +194,7 @@ ChangeProfile style
     margin-bottom: 30px;
     margin-top: 30px;
     border-top: 1px solid #ccc;
+    font-family: "Bahij helvetica";
     box-sizing: border-box;
     text-align: right;
     fill: transparent;
