@@ -10,7 +10,7 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import logo from "../../assets/White_PNG_Format_z.png";
-import telegram from "../../assets/tele.png";
+import telegram from "../../assets/Tele.png";
 import user from "../../assets/user.png";
 import arrow from "../../assets/Group_158.png";
 import CustomText from "../../CustomText";
@@ -21,8 +21,18 @@ import {
   verticalScale,
   moderateScale,
 } from "../../Resonsive/Matrix";
+import React, {useContext, useState} from 'react';
+import Spinner from 'react-native-loading-spinner-overlay';
+import { AuthContext } from "../../context/AuthContext";
 
 const ChangeInfo = (props) => {
+  const [firstName, setfirstName] = useState(null);
+  const [lastName, setlastName] = useState(null);
+  const [age, setAge] = useState(null);
+  const [grade, setGrade] = useState(null);
+  
+  const {isLoading, changeInfo} = useContext(AuthContext);
+
   const { t, i18n } = useTranslation();
   const navigation = useNavigation();
   const onSubmit = () => {
@@ -62,35 +72,38 @@ const ChangeInfo = (props) => {
           <Image source={user} style={styles.img} />
         </View>
         <TouchableOpacity style={styles.textUserWapper}>
-          <CustomText style={styles.usertext}>{t("Information.13")}</CustomText>
+          <CustomText style={styles.usertext}>{t("ChangeInfo.1")}</CustomText>
         </TouchableOpacity>
       </View>
       <ScrollView contentContainerStyle={styles.svgWrapper}>
         <View style={styles.form}>
+        <Spinner visible={isLoading} />
           <TextInput
             name="firstName"
-            placeholder=" تغییر نام "
+            placeholder= {t("ChangeInfo.2")}
             style={styles.input}
           />
           <TextInput
             name="lastName"
-            placeholder=" تغییر تخلص "
+            placeholder= {t("ChangeInfo.3")}
             style={styles.input}
           />
           <TextInput
             name="age"
-            placeholder="تغییر سن"
+            placeholder= {t("ChangeInfo.4")}
             keyboardType="numeric"
             style={styles.input}
           />
           <TextInput
-            name="class"
-            placeholder="تغییر صنف"
+            name="garde"
+            placeholder= {t("ChangeInfo.5")}
             keyboardType="numeric"
             style={styles.input}
           />
-          <TouchableOpacity style={styles.submitBtn} onPress={onSubmit}>
-            <CustomText style={styles.submitText}>ذخیره کردن </CustomText>
+          <TouchableOpacity style={styles.submitBtn}
+           onPress={onSubmit}>
+          {/* onPress={()=> {changeInfo(firstName, lastName, age, grade)}} > */}
+            <CustomText style={styles.submitText}> {t("ChangeInfo.6")} </CustomText>
           </TouchableOpacity>
         </View>
         <Svg
