@@ -181,12 +181,13 @@ const Information = (props) => {
               )}
               <TouchableOpacity
                 style={styles.submitBtn}
-                // onPress={handleSubmit}
-                onPress={()=> {information(firstName,
-                  lastName,
-                  email,
-                  age,
-                  grade)}}
+                onPress={handleSubmit}
+                // onPress={()=> {information(firstName,
+                //   lastName,
+                //   email,
+                //   age,
+                //   grade)}}
+               
                 disabled={!isValid}
               >
                 <CustomText style={styles.submitText}>

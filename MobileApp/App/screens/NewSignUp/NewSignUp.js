@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+
 import { useNavigation } from "@react-navigation/native";
 import {
   View,
@@ -24,11 +24,14 @@ import CustomText from "../../CustomText";
 import { useTranslation } from "react-i18next";
 import Spinner from 'react-native-loading-spinner-overlay';
 import { AuthContext } from "../../context/AuthContext";
+
+import React, {useContext, useState} from 'react';
 const NewSignUp = () => {
-  const [email, setEmail] = useState(null);
-  const [password, setPassword] = useState(null);
-  const [confirmPassword, setconfirmPassword] = useState(null);
-  const {isLoading, register} = useContext(AuthContext);
+    const [name, setName] = useState(null);
+    const [email, setEmail] = useState(null);
+    const [password, setPassword] = useState(null);
+    const [confirmPassword, setConfirmPassword] = useState(null);
+    const {isLoading, register} = useContext(AuthContext);
 
   const { t, i18n } = useTranslation();
   const signUpValidationSchema = Yup.object().shape({
@@ -57,7 +60,10 @@ const NewSignUp = () => {
   };
 
   return (
-    <ScrollView contentContainerStyle={styles.outContainer}>
+
+    <ScrollView>
+      <Spinner visible={isLoading} />
+
       <View style={styles.form}>
         <Formik
           validationSchema={signUpValidationSchema}
@@ -108,9 +114,8 @@ const NewSignUp = () => {
               <TouchableOpacity
                 style={styles.submitBtn}
                 // onPress={handleSubmit}
-                onPress={() => {
-                  register(email, password, confirmPassword), {handleSubmit}
-                }}
+                // onPress={() => {
+                  onPress={()=> {register(email, password)}} 
                 disabled={!isValid}
               >
                 <CustomText style={styles.submitText}>

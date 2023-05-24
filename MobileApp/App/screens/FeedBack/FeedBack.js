@@ -64,7 +64,7 @@ const FeedBack = (props) => {
     }
   };
   return (
-    <SafeAreaView style={Style.FeedBackContainer}>
+    <View style={Style.FeedBackContainer}>
       <View style={Style.arrow}>
         <Svg
           data-name="Group 197"
@@ -211,7 +211,7 @@ const FeedBack = (props) => {
           />
         </Svg>
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };
 

@@ -38,7 +38,7 @@ function BookPages(props) {
   const route = useRoute();
   const { t, i18n } = useTranslation();
   return (
-    <SafeAreaView style={Style.cotainer}>
+    <View style={Style.cotainer}>
       <View
         style={{
           width: "100%",
@@ -125,7 +125,7 @@ function BookPages(props) {
           </View>
         </ScrollView>
       </View>
-    </SafeAreaView>
+    </View>
   );
 }
 const Style = StyleSheet.create({

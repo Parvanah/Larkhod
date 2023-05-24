@@ -38,7 +38,7 @@ const Lessons = (props) => {
   const { t, i18n } = useTranslation();
   const path = "../../assets";
   return (
-    <SafeAreaView style={style.container}>
+    <View style={style.container}>
       <TouchableOpacity style={style.arrowStyle}>
         <Svg
           data-name="Group 275"
@@ -128,7 +128,7 @@ const Lessons = (props) => {
           }}
         />
       </View>
-    </SafeAreaView>
+    </View>
   );
 };
 const style = StyleSheet.create({

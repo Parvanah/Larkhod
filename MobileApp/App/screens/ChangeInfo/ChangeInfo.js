@@ -101,8 +101,8 @@ const ChangeInfo = (props) => {
             style={styles.input}
           />
           <TouchableOpacity style={styles.submitBtn}
-          //  onPress={onSubmit}>
-          onPress={()=> {changeInfo(firstName, lastName, age, grade)}} >
+           onPress={onSubmit}>
+          {/* onPress={()=> {changeInfo(firstName, lastName, age, grade)}} > */}
             <CustomText style={styles.submitText}> {t("ChangeInfo.6")} </CustomText>
           </TouchableOpacity>
         </View>

@@ -48,7 +48,7 @@ const ForgotPassword = (props) => {
     navigation.navigate("EnterCode");
   };
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "#FFF" }}>
+    <View style={{ flex: 1, backgroundColor: "#FFF" }}>
       <ScrollView contentContainerStyle={styles.outContainer}>
         <Svg
           xmlns="http://www.w3.org/2000/svg"
@@ -148,7 +148,7 @@ const ForgotPassword = (props) => {
           </View>
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };
 const styles = StyleSheet.create({

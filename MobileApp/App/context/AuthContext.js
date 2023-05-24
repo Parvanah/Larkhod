@@ -1,7 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from 'axios';
 import React, {createContext, useEffect, useState} from 'react';
-import {BASE_URL} from '../config';
+import config, {BASE_URL} from '../config';
 
 
 export const AuthContext = createContext();
@@ -65,7 +65,7 @@ export const AuthProvider = ({children}) => {
     const changeInfo = async(firstName, lastName, age, grade) => {
       try{
         setIsLoading(true);
-        const response = await 
+        const response = await fetch(BASE_URL);
         axios.post(`${BASE_URL}/changeInfo`, {
         firstName:
         lastName,
@@ -132,4 +132,3 @@ export const AuthProvider = ({children}) => {
         </AuthContext.Provider>
       );
     };
-    

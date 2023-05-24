@@ -24,7 +24,7 @@ import NewSignUp from "./App/screens/NewSignUp/NewSignUp";
 import EnterCode from "./App/screens/EnterCode/EnterCode";
 const Stack = createNativeStackNavigator();
 const StackNaigator = () => {
-  // const {userInfo} = useContext(AuthContext);
+  // const {userInfo} = useContext(AuthContext);z
   return (
     <Stack.Navigator
       screenOptions={{ headerShown: false }}
@@ -41,6 +41,7 @@ const StackNaigator = () => {
         <Stack.Screen name="TranslateApp" component={TranslateApp} />
         <Stack.Screen name="LogIn" component={LogIn} />
         <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
+        <Stack.Screen name="EnterCode" component={EnterCode} />
         <Stack.Screen name="Information" component={Information} />
         <Stack.Screen name="NewPassword" component={NewPassword} />
         <Stack.Screen name="Sections" component={Sections} />
@@ -53,7 +54,6 @@ const StackNaigator = () => {
         <Stack.Screen name="AboutUs" component={AboutUs} />
         <Stack.Screen name="FeedBack" component={FeedBack} />
         <Stack.Screen name="NewSignUp" component={NewSignUp} />
-        <Stack.Screen name="EnterCode" component={EnterCode} />
       </Stack.Group>
     </Stack.Navigator>
   );
