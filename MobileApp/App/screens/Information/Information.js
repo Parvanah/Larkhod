@@ -10,7 +10,7 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import logo from "../../assets/White_PNG_Format_z.png";
-import telegram from "../../assets/Tele.png";
+import telegram from "../../assets/tele.png";
 import user from "../../assets/user.png";
 import arrow from "../../assets/Group_158.png";
 import CustomText from "../../CustomText";
@@ -25,7 +25,7 @@ import {
   moderateScale,
 } from "../../Resonsive/Matrix";
 import React, { useContext, useState } from "react";
-import Spinner from 'react-native-loading-spinner-overlay';
+import Spinner from "react-native-loading-spinner-overlay";
 import { AuthContext } from "../../context/AuthContext";
 
 const Information = (props) => {
@@ -34,7 +34,7 @@ const Information = (props) => {
   const [email, setEmail] = useState(null);
   const [age, setAge] = useState(null);
   const [grade, setGrade] = useState(null);
-  const {isLoading, information} = useContext(AuthContext);
+  const { isLoading, information } = useContext(AuthContext);
 
   const { t, i18n } = useTranslation();
   const InfoValidationSchema = Yup.object().shape({
@@ -100,7 +100,13 @@ const Information = (props) => {
       <ScrollView contentContainerStyle={styles.svgWrapper}>
         <Formik
           validationSchema={InfoValidationSchema}
-          initialValues={{ name: "", lastName: "", email: "", grade: "", age:"" }}
+          initialValues={{
+            name: "",
+            lastName: "",
+            email: "",
+            grade: "",
+            age: "",
+          }}
           onSubmit={onSubmit}
         >
           {({
@@ -187,7 +193,7 @@ const Information = (props) => {
                 //   email,
                 //   age,
                 //   grade)}}
-               
+
                 disabled={!isValid}
               >
                 <CustomText style={styles.submitText}>
