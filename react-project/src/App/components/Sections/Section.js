@@ -1,3 +1,5 @@
+import i18next from 'i18next';
+import { useTranslation } from 'react-i18next';
 import React from "react";
 import { BrowserRouter as Router, useNavigate } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
@@ -5,6 +7,7 @@ import { Link } from "react-router-dom";
 import Grads from "../Grades/Grades";
 import gradeTwo from "../../Json Files/grade_2_dari.json";
 import gradeNine from "../../Json Files/grade_9_dari.json";
+import SchoolSubjects from "../../Json Files/SchoolSubjects.json";
 import "./Sections.css";
 import image4 from "../../assets/Group_158_bu.png";
 import image1 from "../../assets/Group_201_ww@2x.png";
@@ -12,6 +15,13 @@ import image2 from "../../assets/Group_203@2x.png";
 import image3 from "../../assets/Group_205@2x.png";
 // import { useNavigation } from "react-router-dom";
 const Section = (props) => {
+  const { t } = useTranslation();
+
+  function handleClick(lang) {
+    i18next.changeLanguage(lang)
+  }
+
+  
   // const navigate = useNavigation();
   const pic =
     "C:\\UsersKhatima Sadat/Documents/LarkhodeStructure/school_subjectsdari_curriculamprimarysecond_gradeart_subjectlessonslesson_1";
@@ -54,8 +64,8 @@ const Section = (props) => {
         <img src={image4} />
       </div>
       <div className="title">
-        <h1>بخش هاي مكتب</h1>
-        <p>از اینجا شما میتوانید صنف خود را مطابق بخش که هستید انتخاب کنید</p>
+        <h1>{t("section.1")}</h1>
+        <p>{t("section.2")}</p>
       </div>
       <ul id="ul-section">
         <li>
@@ -99,10 +109,9 @@ const Section = (props) => {
             }}
           >
             <img src={image1} />
-            <h1>بخش ابتدائیه</h1>
+            <h1>{t("section.3")}</h1>
             <p>
-              صنف مورد نظر خودرا <br />
-              از بخش ابتداییه انتخاب کنید
+            {t("section.4")}
             </p>
           </Link>
         </li>
@@ -130,10 +139,9 @@ const Section = (props) => {
             }}
           >
             <img src={image2} />
-            <h1>بخش متوسطه</h1>
+            <h1>{t("section.5")} </h1>
             <p>
-              صنف مورد نظر خود را
-              <br /> از بخش متوسطه انتخاب کنید
+             {t("section.6")}
             </p>
           </Link>
         </li>
@@ -161,10 +169,10 @@ const Section = (props) => {
             }}
           >
             <img src={image3} />
-            <h1>بخش لیسه</h1>
+            <h1>{t("section.7")} </h1>
             <p>
-              صنف مورد نظر خود را <br />
-              از بخش لیسه انتخاب کنید
+            {t("section.8")}
+             
             </p>
             <p></p>
           </Link>

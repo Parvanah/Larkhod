@@ -1,9 +1,25 @@
+import i18next from 'i18next';
+import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./Books.css";
 import * as React from "react";
 import bookicon from "../../assets/Group_360.png";
+
+
 const Books = (props) => {
+ 
+
+
+
+  const { t } = useTranslation();
+
+  function handleClick(lang) {
+    i18next.changeLanguage(lang)
+  }
+
+
+
   const location = useLocation();
   const locationData = location.state;
   const subjects = locationData.subjects;
@@ -68,8 +84,8 @@ const Books = (props) => {
         </div>
         <div className="first-section">
           {" "}
-          <h1>کتاب های موجود دراین صنف</h1>
-          <p>از اینجا شما میتوانید کتاب های مورد نیاز خود راانتخاب نمایید</p>
+          <h1>{t("books.1")}</h1>
+          <p> {t("books.2")}</p>
         </div>
         <div className="third-section">
           <svg
@@ -168,7 +184,7 @@ const Books = (props) => {
         </div>
         <div className="p-section">
           {" "}
-          <p>این کتاب ها به فصل های جداگانه تقسیم شده است</p>
+          <p>{t("books.3")}</p>
         </div>
 
         <div className="last-svg">

@@ -1,8 +1,11 @@
+import { BrowserRouter as Router } from "react-router-dom";
+import i18next from 'i18next';
+import { useTranslation } from 'react-i18next';
+// import Translation from '../../../db.json';
 import "./SingUp.css"
 import { FaGoogle } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import img1 from '../../assets/mg.png';
-// import image from "../../assets/Group_158_a@2x.png";
 import React from 'react'
 import { Link, useNavigate } from "react-router-dom";
 <link rel="stylesheet" href="SingUp.css" />;
@@ -10,7 +13,18 @@ import { Link, useNavigate } from "react-router-dom";
 
 
 
+
 const SingUp = () => {
+  const { t } = useTranslation();
+
+  function handleClick(lang) {
+    i18next.changeLanguage(lang)
+  }
+
+
+
+
+
   const initialValues = { username: "", email: "", password: "", repeatpassword: "" };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
@@ -58,111 +72,106 @@ const SingUp = () => {
     
     return errors;
   };
+  
+
   return (
     <div>
      
-<div id="Artboard__2" >  
-<div id="Group_398">
-		<svg class="Path_1008_v" viewBox="0 0 1921.728 880.675">
-			<linearGradient id="Path_1008_v" spreadMethod="pad" x1="0.835" x2="0.274" y1="0" y2="1.305">
+<div id="all_singup" >  
+<div id="Group_singup">
+		<svg class="Path_singup" viewBox="0 0 1921.728 880.675">
+			<linearGradient id="Path_singup" spreadMethod="pad" x1="0.835" x2="0.274" y1="0" y2="1.305">
 				<stop offset="0" stop-color="#3c98bd" stop-opacity="1"></stop>
 				<stop offset="1" stop-color="#0f53a1" stop-opacity="1"></stop>
 			</linearGradient>
-			<path id="Path_1008_v" d="M 1921.7275390625 965.675048828125 L 403.7140502929688 965.675048828125 C 174.1283569335938 937.8496704101562 0 718.1124877929688 0 456.2157287597656 L 0 0 L 2721.7275390625 0 L 2721.7275390625 965.675048828125 Z">
+			<path id="Path_singup" d="M 1921.7275390625 965.675048828125 L 403.7140502929688 965.675048828125 C 174.1283569335938 937.8496704101562 0 718.1124877929688 0 456.2157287597656 L 0 0 L 2721.7275390625 0 L 2721.7275390625 965.675048828125 Z">
 			</path>
 		</svg>
 
-    <img id='imgg' src={img1}/>
-    <button id="button">
-            <Link className="link_nav" to="/dari">
-              زبان دری
-            </Link>
-          </button>
-          <button id="button">
-            <Link className="link_nav" to="/pashto">
-              پښتو ژبه
-            </Link>
-          </button>
-		<div id="Group_400">
-		</div>
+         <img id='imgg_singup' src={img1}/>
+           <button className="button_singup" onClick={()=>handleClick('dari')} >
+            زبان دری
+           </button>
+           <button className="button_singup" onClick={()=>handleClick('pashto')} >
+             پشتو ژبه
+           </button>
+
+
+  
 	</div>
 <button id="login-button">
-<Link className="up" to="/login">ورود به حساب</Link>
-  <div className="in"> ایجاد حساب</div>
+<Link  className="up_singup" to="/login">{t("singup.1")}</Link>
+  <div className="in_singup">{t("singup.2")}</div>
 </button>
-<div id="cantainer">
+<div id="cantainer_singup">
 
       {Object.keys(formErrors).length === 0 && isSubmit ? (
-        <div className="ui message success">{navigate('/profile')}</div>
+        <div>{navigate('/profile')}</div>
       ) : (
         <pre></pre>
       )}
 
       <form onSubmit={handleSubmit}>
-        <div className="ui divider"></div>
-        <div className="ui form">
-          
+        <div>
             <input
-            id="inputlogin"
+            id="input_singup"
               type="text"
               name="username"
-              placeholder="نام کاربری"
+              placeholder={t("singup.3")}
               value={formValues.username}
               onChange={handleChange}
             />
-            <p className="errorr">{formErrors.username}</p>
+            <p className="error_singup">{formErrors.username}</p>
           
           
           <div className="field">
             <input
-            id="inputlogin"
+            id="input_singup"
               type="text"
               name="email"
-              placeholder="آدرس ایمیل"
+              placeholder={t("singup.4")}
               value={formValues.email}
               onChange={handleChange}
             />
-            <p  className="errorr">{formErrors.email}</p>
+            <p  className="error_singup">{formErrors.email}</p>
           </div>
           
           <div className="field">
             <input
-            id="inputlogin"
+            id="input_singup"
               type="password"
               name="password"
-              placeholder="رمزعبور"
+              placeholder={t("singup.5")}
               value={formValues.password}
               onChange={handleChange}
             />
-            <p  className="errorr">{formErrors.password}</p>
+            <p  className="error_singup">{formErrors.password}</p>
           </div>
           
           <div className="field">
             <input
-            id="inputlogin"
+            id="input_singup"
               type="password"
               name="repeatpassword"
-              placeholder="تکرار رمزعبور"
+              placeholder={t("singup.6")}
               value={formValues.repeatpassword}
               onChange={handleChange}
             />
-             <p  className="errorr">{formErrors.repeatpassword}</p>
+             <p  className="error_singup">{formErrors.repeatpassword}</p>
           </div>
          
          
         </div>
-         <button className="acount-button">ایجاد حساب</button>
+         <button className="acount_button_singuo">{t("singup.1")}</button>
       </form>
-      <h4 className="po">و یا</h4>
+      <h4 className="p_singup">{t("singup.7")}</h4>
       <Link to="google.com">
-      <button className="google-button">
-      <FaGoogle className="google-icon" />
-        <div className="google-p">با حساب گوگل خود وارد شوید</div>
-</button>
-  
+      <button className="google_button_singup">
+      <FaGoogle className="google_icon_singup" />
+        <div className="google_p_singup">{t("singup.8")}</div>
+      </button>
       </Link>
     </div>
-    {/* <Link to="/section"><img className="image" src={image} /></Link>  */}
 </div>
 
     </div>

@@ -1,23 +1,23 @@
-#Artboard__3 {
+#profile_svg {
     position: absolute;
     width: 100%;
     height: 100%;
     background-color: rgba(255,255,255,1);
     overflow: hidden;
 }
-#Rectangle_267_u {
-    fill: url(#Rectangle_267_u);
+#Rectangle_profile {
+    fill: url(#Rectangle_profile);
     stroke: rgba(112,112,112,1);
 
 }
-.Rectangle_267_u {
+.Rectangle_profile {
     position: absolute;
     width: 1920px;
     height: 836px;
     left: 0px;
     top: 240px;
 }
-#Ellipse_20 {
+#Ellipse_profile {
     fill: rgba(255,255,255,1);
     stroke: rgba(112,112,112,1);
     stroke-width: 6px;
@@ -26,7 +26,7 @@
     stroke-miterlimit: 4;
     shape-rendering: auto;
 }
-.Ellipse_20 {
+.Ellipse_profile{
     position: absolute;
     overflow: visible;
     width: 258px;
@@ -34,7 +34,7 @@
     left: 551px;
     top: -20px;
 }
-#nm {
+#nm_profile {
     background-color: white;
     cursor: pointer;
     left: 580px;
@@ -50,7 +50,7 @@
     font-size: 25px;
     color: rgba(112,112,112,1);
 }
-#Path_1010 {
+#Path_profile {
     fill: rgba(0,0,0,0);
     stroke: rgba(60,152,189,1);
     stroke-width: 1px;
@@ -61,7 +61,7 @@
     stroke-miterlimit: 10;
     shape-rendering: auto;
 }
-.Path_1010 {
+.Path_profile {
     overflow: visible;
     position: absolute;
     width: 1282.474px;
@@ -70,10 +70,10 @@
     top: 20.717px;
     transform: matrix(1,0,0,1,0,0);
 }
-#Path_1013 {
+#Path_1013_profile {
     fill: rgba(15,83,161,1);
 }
-.Path_1013 {
+.Path_1013_profile {
     overflow: visible;
     position: absolute;
     width: 115.999px;
@@ -82,10 +82,10 @@
     top: 302.015px;
     transform: matrix(1,0,0,1,0,0);
 }
-#Path_1014 {
+#Path_1014_profile {
     fill: rgba(60,152,189,1);
 }
-.Path_1014 {
+.Path_1014_profile {
     overflow: visible;
     position: absolute;
     width: 95.333px;
@@ -94,10 +94,10 @@
     top: 302.015px;
     transform: matrix(1,0,0,1,0,0);
 }
-#Path_1015 {
+#Path_1015_profile {
     fill: rgba(60,152,189,1);
 }
-.Path_1015 {
+.Path_1015_profile {
     overflow: visible;
     position: absolute;
     width: 140.021px;
@@ -106,20 +106,37 @@
     top: 309.015px;
     transform: matrix(1,0,0,1,0,0);
 }
-.container{
+.container_profile{
     display: inline-block;
     position: relative;
-    top: 310px;
+    top: 290px;
     left: 150px;
     color: white;
     width: 1040px;
     display: flex;
     justify-content: space-between;
 }
-.save-button{
+.information_one_profile{
+    display: inline-block;
+ }
+ #input_profile{
+    display: inline-block;
+    background: none;
+    width: 300px;
+    padding: 10px 0px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    text-align: right;
+    fill: transparent;
+  outline: none;
+    
+}
+.save_button_profile{
     display: inline-block;
     position: relative;
-    top: 340px;
+    top: 320px;
     left: 535px;
     width: 20%;
     border: 1px solid #ccc;
@@ -136,52 +153,38 @@
 }
 
 
-.information-one{
-   display: inline-block;
-}
-.information-two{
+
+.information_two_profile{
    
    display: inline-block;
    
 }
-.information-three{
+.information_three_profile{
     display: inline-block;
 }
-.name,
-.lastname,
-.username,
-.email,
-.age,
-.senf{
+.name_profile,
+.lastname_profile,
+.username_profile,
+.email_profile,
+.age_profile,
+.senf_profile{
     color: white;
 }
 
-#inputt{
-    display: inline-block;
-    background: none;
-    width: 300px;
-    padding: 10px 0px;
-    margin-bottom: 30px;
-    margin-top: 30px;
-    border-bottom: 1px solid #ccc;
-    box-sizing: border-box;
-    text-align: right;
-    fill: transparent;
-  outline: none;
-    
-}
 
-.error{
+
+.error_profile{
     color: rgb(241, 26, 26);
     font-weight: bold;
     font-style: normal;
     /* display: inline-block; */
 
 }
-.ig{
+.ig_profile{
     display: inline-block;
  position: relative;
- top: -150px;
+ top: 50px;
  left: 70px;
  z-index: 1000;
+ overflow: hidden;
 }

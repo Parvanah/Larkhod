@@ -1,10 +1,11 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     border: none;
 }
-#forgot_password {
+#send_code {
     position: absolute;
     width: 100%;
     height:  100%;
@@ -13,11 +14,11 @@
 
 }
 
-#Rectangle_279_z {
-    fill: url(#Rectangle_279_z);
+#background_svg_send_code_1{
+    fill: url(#background_svg_send_code_1);
     stroke: rgba(112,112,112,1);
 }
-#background-svg {
+#background_svg_send_code {
     width: 910px;
     height: 154px;
     position: absolute;
@@ -28,7 +29,7 @@
     transform-origin: center;
 }
 
-#button-next {
+#button_next_send_code {
     margin-top: 12px;
     width: 140px;
     height: 35px;
@@ -41,56 +42,31 @@
     letter-spacing: -0.4px;
     border-radius: 50px;
 }
-#n____ {
-    left: 800px;
+#para_first_send_code{
+    left: 770px;
     top: 100px;
     position: absolute;
     overflow: hidden;
+    width: 466px;
     height: 250px;
     line-height: 117px;
     text-align: right;
     font-family: Gotham;
     font-style: normal;
     font-weight: 12px;
-    font-size: 60px;
+    font-size: 50px;
     color: rgba(255,255,255,1);
     letter-spacing: -0.4px;
+    line-height: 70px;
     
 }
-.u______{
-    left: 810px;
-    top: 160px;
-    position: absolute;
-    overflow: hidden;
-    line-height: 117px;
-    text-align: right;
-    font-family: Gotham;
-    font-style: normal;
-    font-weight:12px;
-    font-size: 60px;
-    color: rgba(255,255,255,1);
-    letter-spacing: -0.4px;
-}
-.u__{
-    left: 1130px;
-    top: 220px;
-    position: absolute;
-    overflow: hidden;
-    line-height: 117px;
-    text-align: right;
-    font-family: Gotham;
-    font-style: normal;
-    font-weight:12px;
-    font-size: 60px;
-    color: rgba(255,255,255,1);
-    letter-spacing: -0.4px;
-}
-#n______ {
-    left: 430px;
-    top: 320px;
+
+#para_second_send_code {
+    left: 527px;
+    top: 270px;
     position: absolute;
     overflow: visible;
-    width: 806px;
+    width: 706px;
     height: 53px;
     line-height: 117px;
     margin-top: -48.5px;
@@ -102,7 +78,7 @@
     color: rgba(255,255,255,1);
     letter-spacing: 2.4px;
 }
-#input_next {
+#input_next_send_code {
 
     color: white;
     display: inline-block;
@@ -116,15 +92,12 @@
     fill: transparent;
   outline: none;
 }
-.input_next{
-
-}
-#ooo{
+#form_send_code{
     position: relative;
-    top: 370px;
+    top: 330px;
     left: 800px;
 }
-#logoo {
+#logoo_send_code{
     position: absolute;
     width: 36px;
     height: 22px;
@@ -133,12 +106,825 @@
     overflow: visible;
     cursor: pointer;
 }
-#logo{
+#logo_send_code{
     width: 350px;
     height: 300px;
 }
-#img{
+#img_send_code{
     position: relative;
     top: 40px;
     left: 70px;
+}
+#imgg_send_code{
+    position: relative;
+    top: 40px;
+    left: 70px;
+    display: none;
+}
+#imggg_send_code{
+    position: relative;
+    top: 40px;
+    left: 70px;
+    display: none;
+}
+.error_send_code{
+    margin: 0;padding: 0;
+    color: rgb(241, 26, 26);
+    font-weight: bold;
+    font-style: normal;
+}
+#mobile_svg_send_code {
+    fill: url(#mobile_svg_send_code);
+}
+
+.mobile_svg_send_code {
+    width: 360px;
+    height: 358px;
+    position: absolute;
+    overflow: visible;
+    transform: translate(-132.517px, 160.426px) matrix(1,0,0,1,132.5166,-160.426) rotate(180deg);
+    transform-origin: center;
+    display: none;
+}
+
+
+
+@media screen and (max-width:360px)and (min-width:100px){
+    #mobile_svg_send_code {
+        fill: url(#mobile_svg_send_code);
+    }
+
+    .mobile_svg_send_code {
+        width: 360px;
+        height: 358px;
+        position: absolute;
+        top: -70px;
+        overflow: visible;
+        transform: translate(-132.517px, 160.426px) matrix(1,0,0,1,132.5166,-160.426) rotate(180deg);
+        transform-origin: center;
+        display: block;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border: none;
+    }
+    #send_code{
+        position: absolute;
+        width: 100%;
+        height:  100%;
+        background-color: rgba(255,255,255,1);
+        overflow: hidden;
+    
+    }
+
+    #background_svg_send_code_1{
+        fill: url(#background_svg_forgot_password_1);
+        stroke: rgba(112,112,112,1);
+    }
+    #background_svg_send_code {
+        width: 910px;
+        height: 154px;
+        position: absolute;
+        left: -550px;
+        top: 130px;
+        overflow: visible;
+        transform: matrix(1,0,0,1,803,-37) rotate(-90deg);
+        transform-origin: center;
+        display: none;
+    }
+
+    #button_next_send_code {
+        position: relative;
+        top: -5px;
+        left: 2px;
+        margin-top: 12px;
+        width: 270px;
+        height: 35px;
+        cursor: pointer;
+        font-family: Gotham;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        color: white;
+        letter-spacing: -0.4px;
+        border-radius: 50px;
+        background-color: rgb(39, 115, 138);
+    }
+    #para_first_send_code{
+        top: 70px;
+        left: 30px;
+        position: absolute;
+        overflow: hidden;
+        width: 270px;
+        height: 250px;
+        line-height: 117px;
+        text-align: right;
+        font-family: Gotham;
+        font-style: normal;
+        font-weight:lighter;
+        font-size: 38px;
+        color: rgba(255,255,255,1);
+        letter-spacing: -0.4px;
+        line-height: 40px;
+        
+    }
+    
+    #para_second_send_code {
+        top: 220px;
+        left: -403px;
+        position: absolute;
+        overflow: visible;
+        width: 706px;
+        height: 53px;
+        line-height: 110px;
+        margin-top: -48.5px;
+        text-align: right;
+        font-family: Gotham;
+        font-style: normal;
+        font-weight: 18px;
+        font-size: 20px;
+        color: rgba(255,255,255,1);
+        letter-spacing: 0.1px;
+    }
+    #input_next_send_code{
+     
+    
+        color: white;
+        display: inline-block;
+        background: none;
+        width: 260px;
+        padding-bottom: 8px ;
+        margin: 8px ;
+        border-bottom: 1px solid rgb(92, 90, 90);
+        box-sizing: border-box;
+        text-align: right;
+        fill: transparent;
+      outline: none;
+    }
+    #form_send_code{
+        position: relative;
+        left: 40px;
+        top: 300px;
+    }
+    #logoo_send_code {
+        position: absolute;
+        width: 36px;
+        height: 22px;
+        left: 130px;
+        top: 460px;
+        overflow: visible;
+        cursor: pointer;
+    }
+    #logo_send_code{
+        width: 110px;
+        height: 100px;
+    }
+    #img_send_code{
+        position: relative;
+        top: 20px;
+        left: 30px;
+        overflow: visible;
+    display: none;
+    }
+    #imgg_send_code{
+        position: relative;
+        width: 20px;
+        height: 15px;
+        top: 20px;
+        left: 30px;
+        overflow: visible;
+        display: block;
+    }
+    #imggg_send_code{
+        width: 62px;
+        height: 62px;
+        position: relative;
+        top: -565px;
+        left: -134px;
+        display: block;
+    }
+    .error_send_code{
+        margin: 0;padding: 0;
+        color: rgb(241, 26, 26);
+        font-weight: bold;
+        font-style: normal;
+    }
+}
+
+@media screen and (max-width:576px)and (min-width:360px){
+    #mobile_svg_send_code {
+        fill: url(#mobile_svg_send_code);
+        width: 576px;
+        height: 358px;
+    }
+
+    .mobile_svg_send_code {
+        width: 576px;
+        height: 358px;
+        position: absolute;
+        top: -70px;
+        overflow: visible;
+        transform: translate(-132.517px, 160.426px) matrix(1,0,0,1,132.5166,-160.426) rotate(180deg);
+        transform-origin: center;
+        display: block;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border: none;
+    }
+    #send_code {
+        position: absolute;
+        width: 100%;
+        height:  100%;
+        background-color: rgba(255,255,255,1);
+        overflow: hidden;
+    
+    }
+
+    #background_svg_send_code_1{
+        fill: url(#background_svg_send_code_1);
+        stroke: rgba(112,112,112,1);
+    }
+    #background_svg_send_code {
+        width: 910px;
+        height: 154px;
+        position: absolute;
+        left: -550px;
+        top: 130px;
+        overflow: hidden;
+        transform: matrix(1,0,0,1,803,-37) rotate(-90deg);
+        transform-origin: center;
+        display: none;
+    }
+
+    #button_next_send_code {
+        position: relative;
+        top: -5px;
+        left: 2px;
+        margin-top: 12px;
+        width: 410px;
+        height: 35px;
+        cursor: pointer;
+        font-family: Gotham;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        color: white;
+        letter-spacing: -0.4px;
+        border-radius: 50px;
+        background-color: rgb(39, 115, 138);
+    }
+    #para_first_send_code{
+        /* position: relative; */
+        top: 50px;
+        left: 110px;
+        position: absolute;
+        overflow: hidden;
+        width: 350px;
+        height: 250px;
+        line-height: 117px;
+        text-align: right;
+        font-family: Gotham;
+        font-style: normal;
+        font-weight: 62px;
+        font-size: 51px;
+        color: rgba(255,255,255,1);
+        letter-spacing: -0.4px;
+        line-height: 50px;
+        
+    }
+    
+    #para_second_send_code {
+        top: 220px;
+        left: -250px;
+        position: absolute;
+        overflow: visible;
+        width: 706px;
+        height: 53px;
+        line-height: 110px;
+        margin-top: -48.5px;
+        text-align: right;
+        font-family: Gotham;
+        font-style: normal;
+        font-weight: 18px;
+        font-size: 20px;
+        color: rgba(255,255,255,1);
+        letter-spacing: 0.1px;
+    }
+    #input_next_send_code {
+     
+    
+        color: white;
+        display: inline-block;
+        background: none;
+        width: 400px;
+        padding-bottom: 8px ;
+        margin: 8px ;
+        border-bottom: 1px solid rgb(92, 90, 90);
+        box-sizing: border-box;
+        text-align: right;
+        fill: transparent;
+      outline: none;
+    }
+    #form_send_code{
+        position: relative;
+        left: 80px;
+        top: 300px;
+    }
+    #logoo_send_code {
+        position: absolute;
+        width: 36px;
+        height: 22px;
+        left: 220px;
+        top: 440px;
+        overflow: visible;
+        cursor: pointer;
+    }
+    #logo_send_code{
+        width: 160px;
+        height: 150px;
+    }
+    #img_send_code{
+        position: relative;
+        top: 40px;
+        left: 30px;
+        overflow: visible;
+        display: none;
+    }
+    #imgg_send_code{
+        position: relative;
+        width: 20px;
+        height: 15px;
+        top: 30px;
+        left: 40px;
+        overflow: visible;
+        display: block;
+    }
+    #imggg_send_code{
+        width: 82px;
+        height: 82px;
+        position: relative;
+        top: -614px;
+        left: -223px;
+        display: block;
+    }
+    .error_send_code{
+        margin: 0;padding: 0;
+        color: rgb(241, 26, 26);
+        font-weight: bold;
+        font-style: normal;
+    }
+}
+
+@media screen and (max-width:768px)and (min-width:576px){
+    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+#send_code {
+    position: absolute;
+    width: 100%;
+    height:  100%;
+    background-color: rgba(255,255,255,1);
+    overflow: hidden;
+
+}
+
+#background_svg_send_code_1{
+    fill: url(#background_svg_send_code_1);
+    stroke: rgba(112,112,112,1);
+}
+#background_svg_send_code {
+    width: 910px;
+		height: 154px;
+		position: absolute;
+		left: -880px;
+		top: 130px;
+		overflow: visible;
+		transform: matrix(1,0,0,1,803,-37) rotate(-90deg);
+		transform-origin: center;
+}
+
+#button_next_send_code {
+    margin-top: 12px;
+    width: 140px;
+    height: 35px;
+    cursor: pointer;
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(39, 115, 138);
+    letter-spacing: -0.4px;
+    border-radius: 50px;
+}
+#para_first_send_code{
+    left: 300px;
+    top: 120px;
+    position: absolute;
+    overflow: hidden;
+    width: 406px;
+    height: 250px;
+  
+    text-align: right;
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: 12px;
+    font-size: 40px;
+    color: rgba(255,255,255,1);
+    letter-spacing: -0.4px;
+    line-height: 60px;
+    
+}
+
+#para_second_send_code {
+    left: -1px;
+    top: 270px;
+    position: absolute;
+    overflow: visible;
+    width: 706px;
+    height: 53px;
+    line-height: 117px;
+    margin-top: -48.5px;
+    text-align: right;
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: 18px;
+    font-size: 20px;
+    color: rgba(255,255,255,1);
+    letter-spacing: 1.4px;
+}
+#input_next_send_code {
+    color: white;
+    display: inline-block;
+    background: none;
+    width: 325px;
+    padding-bottom: 8px ;
+    margin: 8px ;
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+    text-align: right;
+    fill: transparent;
+  outline: none;
+}
+#form_send_code{
+    position: relative;
+		top: 330px;
+		left: 370px;
+}
+#logoo_send_code{
+	position: absolute;
+		width: 36px;
+		height: 22px;
+		left: 68px;
+		top: 230px;
+		overflow: visible;
+		cursor: pointer;
+}
+#logo_send_code{
+    width: 200px;
+    height: 150px;
+}
+#img_send_code{
+    position: relative;
+    top: 40px;
+    left: 70px;
+}
+#imgg_send_code{
+    position: relative;
+    top: 40px;
+    left: 70px;
+    display: none;
+}
+#imggg_send_code{
+    position: relative;
+    top: 40px;
+    left: 70px;
+    display: none;
+}
+.error_send_code{
+    margin: 0;padding: 0;
+    color: rgb(241, 26, 26);
+    font-weight: bold;
+    font-style: normal;
+}
+#mobile_svg_send_code {
+    fill: url(#mobile_svg_send_code);
+}
+
+.mobile_svg_send_code {
+    width: 360px;
+    height: 358px;
+    position: absolute;
+    overflow: visible;
+    transform: translate(-132.517px, 160.426px) matrix(1,0,0,1,132.5166,-160.426) rotate(180deg);
+    transform-origin: center;
+    display: none;
+}
+
+}
+
+
+@media screen and (max-width:992px)and (min-width:768px){
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border: none;
+    }
+    #send_code {
+        position: absolute;
+        width: 100%;
+        height:  100%;
+        background-color: rgba(255,255,255,1);
+        overflow: hidden;
+    
+    }
+    
+    #background_svg_send_code_1{
+        fill: url(#background_svg_send_code_1);
+        stroke: rgba(112,112,112,1);
+    }
+    #background_svg_send_code {
+        width: 910px;
+		height: 154px;
+		position: absolute;
+		left: -780px;
+		top: 130px;
+		overflow: visible;
+		transform: matrix(1,0,0,1,803,-37) rotate(-90deg);
+		transform-origin: center;
+    }
+    
+    #button_next_send_code {
+        margin-top: 12px;
+        width: 140px;
+        height: 35px;
+        cursor: pointer;
+        font-family: Gotham;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        color: rgb(39, 115, 138);
+        letter-spacing: -0.4px;
+        border-radius: 50px;
+    }
+    #para_first_send_code{
+        left: 500px;
+		top: 120px;
+		position: absolute;
+		overflow: hidden;
+		width: 426px;
+		height: 250px;
+		line-height: 117px;
+		text-align: right;
+		font-family: Gotham;
+		font-style: normal;
+		font-weight: 12px;
+		font-size: 45px;
+		color: rgba(255,255,255,1);
+		letter-spacing: -0.4px;
+		line-height: 60px;
+        
+    }
+    
+    #para_second_send_code {
+        left: 200px;
+		top: 270px;
+		position: absolute;
+		overflow: visible;
+		width: 706px;
+		height: 53px;
+		line-height: 117px;
+		margin-top: -48.5px;
+		text-align: right;
+		font-family: Gotham;
+		font-style: normal;
+		font-weight: 18px;
+		font-size: 20px;
+		color: rgba(255,255,255,1);
+		letter-spacing: 1.4px;
+    }
+    #input_next_send_code {
+        color: white;
+		display: inline-block;
+		background: none;
+		width: 355px;
+		padding-bottom: 8px ;
+		margin: 8px ;
+		border-bottom: 1px solid white;
+		box-sizing: border-box;
+		text-align: right;
+		fill: transparent;
+	  outline: none;
+    }
+    #form_send_code{
+        position: relative;
+		top: 330px;
+		left: 540px;
+    }
+    #logoo_send_code{
+        position: absolute;
+		width: 36px;
+		height: 22px;
+		left: 68px;
+		top: 220px;
+		overflow: visible;
+		cursor: pointer;
+    }
+    #logo_send_code{
+        width: 280px;
+		height: 200px;
+    }
+    #img_send_code{
+        position: relative;
+        top: 40px;
+        left: 70px;
+    }
+    #imgg_send_code{
+        position: relative;
+        top: 40px;
+        left: 70px;
+        display: none;
+    }
+    #imggg_send_code{
+        position: relative;
+        top: 40px;
+        left: 70px;
+        display: none;
+    }
+    .error_send_code{
+        margin: 0;padding: 0;
+        color: rgb(241, 26, 26);
+        font-weight: bold;
+        font-style: normal;
+    }
+    #mobile_svg_send_code {
+        fill: url(#mobile_svg_send_code);
+    }
+    
+    .mobile_svg_send_code {
+        width: 360px;
+        height: 358px;
+        position: absolute;
+        overflow: visible;
+        transform: translate(-132.517px, 160.426px) matrix(1,0,0,1,132.5166,-160.426) rotate(180deg);
+        transform-origin: center;
+        display: none;
+    }
+}
+@media screen and (max-width:1200px)and (min-width:992px){
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border: none;
+    }
+    #send_code {
+        position: absolute;
+        width: 100%;
+        height:  100%;
+        background-color: rgba(255,255,255,1);
+        overflow: hidden;
+    
+    }
+    
+    #background_svg_send_code_1{
+        fill: url(#background_svg_send_code_1);
+        stroke: rgba(112,112,112,1);
+    }
+    #background_svg_send_code {
+        width: 910px;
+		height: 154px;
+		position: absolute;
+		left: -660px;
+		top: 130px;
+		overflow: visible;
+		transform: matrix(1,0,0,1,803,-37) rotate(-90deg);
+		transform-origin: center;
+    }
+    
+    #button_next_send_code {
+        margin-top: 12px;
+        width: 140px;
+        height: 35px;
+        cursor: pointer;
+        font-family: Gotham;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        color: rgb(39, 115, 138);
+        letter-spacing: -0.4px;
+        border-radius: 50px;
+    }
+    #para_first_send_code{
+        left: 600px;
+		top: 100px;
+		position: absolute;
+		overflow: hidden;
+		width: 506px;
+		height: 250px;
+		line-height: 117px;
+		text-align: right;
+		font-family: Gotham;
+		font-style: normal;
+		font-weight: 12px;
+		font-size: 50px;
+		color: rgba(255,255,255,1);
+		letter-spacing: -0.4px;
+		line-height: 80px;
+        
+    }
+    
+    #para_second_send_code {
+        left: 400px;
+		top: 270px;
+		position: absolute;
+		overflow: visible;
+		width: 706px;
+		height: 53px;
+		line-height: 117px;
+		margin-top: -48.5px;
+		text-align: right;
+		font-family: Gotham;
+		font-style: normal;
+		font-weight: 18px;
+		font-size: 20px;
+		color: rgba(255,255,255,1);
+		letter-spacing: 1.4px;
+    }
+    #input_next_send_code {
+        color: white;
+		display: inline-block;
+		background: none;
+		width: 425px;
+		padding-bottom: 8px ;
+		margin: 8px ;
+		border-bottom: 1px solid white;
+		box-sizing: border-box;
+		text-align: right;
+		fill: transparent;
+	  outline: none;
+    }
+    #form_send_code{
+            position: relative;
+            top: 330px;
+            left: 670px;
+    }
+    #logoo_send_code{
+        position: absolute;
+		width: 36px;
+		height: 22px;
+		left: 110px;
+		top: 200px;
+		overflow: visible;
+		cursor: pointer;
+    }
+    #logo_send_code{
+        width: 300px;
+		height: 250px;
+    }
+    #img_send_code{
+        position: relative;
+        top: 40px;
+        left: 70px;
+    }
+    #imgg_send_code{
+        position: relative;
+        top: 40px;
+        left: 70px;
+        display: none;
+    }
+    #imggg_send_code{
+        position: relative;
+        top: 40px;
+        left: 70px;
+        display: none;
+    }
+    .error_send_code{
+        margin: 0;padding: 0;
+        color: rgb(241, 26, 26);
+        font-weight: bold;
+        font-style: normal;
+    }
+    #mobile_svg_send_code {
+        fill: url(#mobile_svg_send_code);
+    }
+    
+    .mobile_svg_send_code {
+        width: 360px;
+        height: 358px;
+        position: absolute;
+        overflow: visible;
+        transform: translate(-132.517px, 160.426px) matrix(1,0,0,1,132.5166,-160.426) rotate(180deg);
+        transform-origin: center;
+        display: none;
+    }
 }
