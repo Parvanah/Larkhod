@@ -21,6 +21,7 @@ export const AuthProvider = ({children}) => {
         email,
         password,
         confirmPassword});
+        setIsLoading(false);
         console.log(response.data);
       }catch(error){
         console.log(error);

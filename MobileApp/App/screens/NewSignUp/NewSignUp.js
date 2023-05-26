@@ -26,8 +26,8 @@ import Spinner from 'react-native-loading-spinner-overlay';
 import { AuthContext } from "../../context/AuthContext";
 
 import React, {useContext, useState} from 'react';
+import axios from "axios";
 const NewSignUp = () => {
-    const [name, setName] = useState(null);
     const [email, setEmail] = useState(null);
     const [password, setPassword] = useState(null);
     const [confirmPassword, setConfirmPassword] = useState(null);
@@ -113,9 +113,9 @@ const NewSignUp = () => {
             </View>  */}
               <TouchableOpacity
                 style={styles.submitBtn}
-                // onPress={handleSubmit}
+                onPress={handleSubmit}
                 // onPress={() => {
-                  onPress={()=> {register(email, password)}} 
+                  // onPress={()=> {register(email, password, confirmPassword)}} 
                 disabled={!isValid}
               >
                 <CustomText style={styles.submitText}>
