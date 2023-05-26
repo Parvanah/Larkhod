@@ -18,8 +18,11 @@ export const AuthProvider = ({ children }) => {
         password,
       });
       console.log(response.data);
+      setIsLoading(false);
     } catch (error) {
-      console.log(error);
+      console.log(email);
+      console.log(password);
+      console.log(error.response.data);
       setIsLoading(false);
     }
   };
@@ -28,12 +31,13 @@ export const AuthProvider = ({ children }) => {
     try {
       setIsLoading(true);
       const response = await axios.post(`${BASE_URL}/auth/login`, {
-        data: email,
+        email,
         password,
       });
       console.log(response.data);
+      setIsLoading(false);
     } catch (error) {
-      console.log(error);
+      console.log(error.response.data);
       setIsLoading(false);
     }
   };
@@ -61,11 +65,13 @@ export const AuthProvider = ({ children }) => {
       setIsLoading(true);
       const response = await fetch(BASE_URL);
       axios.post(`${BASE_URL}/changeInfo`, {
-        firstName: lastName,
+        firstName,
+        lastName,
         age,
         grade,
       });
       console.log(response.data);
+      setIsLoading(false);
     } catch (error) {
       console.log(error);
       setIsLoading(false);
@@ -76,13 +82,14 @@ export const AuthProvider = ({ children }) => {
     try {
       setIsLoading(true);
       const response = await axios.post(`${BASE_URL}/information`, {
-        data: firstName,
+        firstName,
         lastName,
         email,
         age,
         grade,
       });
       console.log(response.data);
+      setIsLoading(false);
     } catch (error) {
       console.log(error);
       setIsLoading(false);

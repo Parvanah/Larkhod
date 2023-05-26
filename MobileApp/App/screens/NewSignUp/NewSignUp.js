@@ -46,7 +46,8 @@ const NewSignUp = () => {
       .required(t("SignUp.16")),
   });
   const navigation = useNavigation();
-  const onSubmit = () => {
+  const onSubmit = (values) => {
+    register(values.email, values.password);
     navigation.navigate("SignUpVerification");
   };
   const [seenVariable, setSeenVariable] = useState(true);
@@ -70,7 +71,7 @@ const NewSignUp = () => {
             password: "",
             confirmPassword: "",
           }}
-          onSubmit={onSubmit}
+          onSubmit={(values) => onSubmit(values)}
         >
           {({ handleChange, handleBlur, handleSubmit, values, isValid }) => (
             <>
@@ -113,9 +114,7 @@ const NewSignUp = () => {
                 style={styles.submitBtn}
                 // onPress={handleSubmit}
                 // onPress={() => {
-                onPress={() => {
-                  register(email, password, confirmPassword);
-                }}
+                onPress={handleSubmit}
                 disabled={!isValid}
               >
                 <CustomText style={styles.submitText}>

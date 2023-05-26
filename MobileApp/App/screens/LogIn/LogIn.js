@@ -10,7 +10,7 @@ import {
   TouchableOpacity,
   ScrollView,
 } from "react-native";
-import Spinner from 'react-native-loading-spinner-overlay';
+import Spinner from "react-native-loading-spinner-overlay";
 import Styles from "./LogIn.style";
 import styles from "../LogIn/LogIn.style";
 import logo from "../../assets/White_PNG_Format_z.png";
@@ -27,7 +27,7 @@ import { AuthContext } from "../../context/AuthContext";
 const LogIn = () => {
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
-  const {isLoading, login} = useContext(AuthContext);
+  const { isLoading, login } = useContext(AuthContext);
   const { t, i18n } = useTranslation();
   const loginValidationSchema = Yup.object().shape({
     email: Yup.string().email(t("LogIn.8")).required(t("LogIn.9")),
@@ -35,7 +35,8 @@ const LogIn = () => {
   });
 
   const navigation = useNavigation();
-  const OnSubmit = () => {
+  const OnSubmit = (values) => {
+    login(values.email, values.password);
     navigation.navigate("Sections");
   };
   const handle = () => {
@@ -60,7 +61,7 @@ const LogIn = () => {
               isValid,
             }) => (
               <>
-              <Spinner visible={isLoading} />
+                <Spinner visible={isLoading} />
                 <TextInput
                   name="email"
                   placeholder={t("LogIn.3")}
@@ -99,7 +100,7 @@ const LogIn = () => {
                 <TouchableOpacity
                   style={styles.submitBtn}
                   // onPress={handleSubmit}
-                  onPress={()=> {login(email, password)}}
+                  onPress={handleSubmit}
                   disabled={!isValid}
                 >
                   <CustomText style={styles.submitText}>
