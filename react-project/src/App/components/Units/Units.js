@@ -1,3 +1,5 @@
+import i18next from 'i18next';
+import { useTranslation } from 'react-i18next';
 import * as React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -6,6 +8,13 @@ import sectionicon from "../../assets/Group_374.png";
 // import {HiChevronLeft,HiChevronRight } from "react-icons/hi";
 import photo3 from "../../assets/Group_158.png";
 const Units = (props) => {
+  const { t } = useTranslation();
+
+  function handleClick(lang) {
+    i18next.changeLanguage(lang)
+  }
+
+
   // getting props that passed from Books to Unit
   const location = useLocation();
   const locationData = location.state;
@@ -46,8 +55,8 @@ const Units = (props) => {
             </g>
           </svg>
         </div>
-        <h1>کتاب مورد نظر شما در فصل های ذیل تقسیم شده است</h1>
-        <p>فصل های تقسیم شدۀ کتاب را انتخاب نموده و مطالعه نمایید</p>
+        <h1>{t("units.1")}</h1>
+        <p>{t("units.2")}</p>
       </div>
       <div className="unitWrapper">
         <div onClick={() => slidLeft()} className="arrow">
@@ -97,7 +106,7 @@ const Units = (props) => {
         </div>
       </div>
       <div className="last">
-        <h4>فصل ها را به دقت مطالعه نموده و تمرین ها راانجام دهید</h4>
+        <h4>{t("units.3")}</h4>
         <div className="svg">
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -1,36 +1,35 @@
-/*primary,secondary,high_school page*/
-.ul_high_school{ 
-    display: inline-block;
-    position: relative;
-    top: 232px;
-    left: 200px;
+.button-grade{ 
+	display: inline-block;
+	position: relative;
+	top: 232px;
+	left: 200px;
 
 }
-.li_high_school{
+.li-grade{
  margin-right: 18px;
  font-size: 20px;
  color: rgba(16,84,162,1);
  letter-spacing: -0.4px;
 }
-.sanaf{
-    width: 22px;
-    height: 25px;
-    margin-left: 18px;
+.sanaf-grade{
+	width: 22px;
+	height: 25px;
+	margin-left: 18px;
 }
-.link_high_school{
-    width: 530px;
-    height: 34px;
-    background-color:rgba(212,228,232,1);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 12px;
-    border-radius: 32px;
-    text-align: center;
-    align-items: center;
+.link-grade{
+	width: 530px;
+	height: 34px;
+	background-color:rgba(212,228,232,1);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 12px;
+	border-radius: 32px;
+	text-align: center;
+	align-items: center;
 }	
-	#n_ {
-        transform-origin: 0px 0px;
+	.all-grade {
+		transform-origin: 0px 0px;
 		position: absolute;
 		width: 100%;
 		height: 100%;
@@ -38,54 +37,33 @@
 		overflow: hidden;
 		
 	}
-	#Path_534 {
-		fill: transparent;
-		stroke: rgba(112,112,112,1);
-		/* stroke-width: 1px;
-		stroke-linejoin: miter;
-		stroke-linecap: butt;
-		stroke-miterlimit: 4;
-		shape-rendering: auto; */
+
+	#svg-backgroung-grade {
+		fill: url(#svg-backgroung-grade);
 	}
-	.Path_534 {
-		overflow: visible;
-		position: absolute;
-		left: 0.661px;
-		top: 144.786px;
-		transform: matrix(1,0,0,1,0,0);
-	}
-	#Union_1_dg {
-		fill: url(#Union_1_dg);
-	}
-	.Union_1_dg {
+	.svg-backgroung-grade {
 		overflow: visible;
 		position: absolute;
 		left: 0px;
 		top: 1.436px;
 		transform: matrix(1,0,0,1,0,0);
 	}
-	#Group_356 {
+	#image-grade {
 		position: absolute;
-		left: 939.687px;
-		top: 334.045px;
+		left: 785.687px;
+		top: 175.045px;
 		overflow: visible;
+		
 	}
-	#Group_355 {
-		position: absolute;
+	.image-grade {
 		width: 580.313px;
 		height: 450.955px;
-		left: -154px;
-		top: -160.287px;
-		overflow: visible;
+		
 	}
-    #nn{
-       font-family:Bahij Helvetica Neue;
-       font-style:normal;
-       font-weight:normal;
-    }
-    #n_____________{
-        font-style:normal;font-weight:lighter; font-size:25px; 
-        left: 110.208px;
+  
+	.p-two-grade{
+		font-style:normal;font-weight:lighter; font-size:25px; 
+		left: 110.208px;
 		top: 192px;
 		position: absolute;
 		overflow: hidden;
@@ -94,11 +72,10 @@
 		line-height: 79px;
 		text-align: center;
 		font-family: Bahij Helvetica Neue;
-		font-style: normal;
-		color: rgba(255,255,255,1);
+		color: rgb(255, 255, 255);
 		letter-spacing: -0.4px;
-    }
-	#n_________ {
+	}
+	.p-one-grade{
 		left: 110.208px;
 		top: 152px;
 		position: absolute;
@@ -114,12 +91,12 @@
 		color: rgba(255,255,255,1);
 		letter-spacing: -0.4px;
 	}
-	#Subtraction_3 {
+	#svg-grade {
 		opacity: 0.52;
 		fill: rgba(255,255,255,1);
 	
 	}
-	.Subtraction_3 {
+	.svg-grade {
 	
 		position: absolute;
 		width: 385.886px;
@@ -130,154 +107,751 @@
 		transform: matrix(1,0,0,1,0,0);
 	}
 
-.image{
+.flesh-image-grade{
 	margin: 0px;
 	padding: 0px;
 	display: inline-block;
 	position: relative;
 	top: 80px;
 	left: 80px;
-	z-index: 100pz;
 }
 
 
-/* primary,secondary,high_school page
-.ul_high_school{ 
-    display: inline-block;
-    position: relative;
-    top: 242px;
-    left: 200px;
-
-}
-.li_high_school{
- margin-right: 18px;
- font-size: 20px;
- color: rgba(16,84,162,1);
- letter-spacing: -0.4px;
-}
-.sanaf{
-    width: 22px;
-    height: 25px;
-    margin-left: 18px;
-}
-.link_high_school{
-    width: 584px;
-    height: 34px;
-    background-color:rgba(212,228,232,1);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 12px;
-    border-radius: 32px;
-    text-align: center;
-    align-items: center;
-}	
-	#n_ {
-        transform-origin: 0px 0px;
-		position: absolute;
-		width: 1366px;
-		height: 555px;
-		background-color: rgba(255,255,255,1);
-		overflow: hidden;
-		--web-view-name: 2;
-		--web-view-id: n_;
-		--web-scale-on-resize: true;
-		--web-enable-deep-linking: true;
+@media screen and (max-width:360px)and (min-width:100px){
+	.button-grade{ 
+		display: inline-block;
+		position: relative;
+		top: 190px;
+		left: 55px;
+	
 	}
-	#Path_534 {
-		fill: transparent;
-		stroke: rgba(112,112,112,1);
-		stroke-width: 1px;
-		stroke-linejoin: miter;
-		stroke-linecap: butt;
-		stroke-miterlimit: 4;
-		shape-rendering: auto;
+	.li-grade{
+	 margin-right: 15px;
+	 font-size: 15px;
+	 color: rgba(16,84,162,1);
+	 letter-spacing: -0.4px;
 	}
-	.Path_534 {
-		overflow: visible;
-		position: absolute;
-		left: 0.661px;
-		top: 144.786px;
-		transform: matrix(1,0,0,1,0,0);
+	.sanaf-grade{
+		width: 13px;
+		height: 15px;
+		margin-left: 15px;
 	}
-	#Union_1_dg {
-		fill: url(#Union_1_dg);
-	}
-	.Union_1_dg {
-		overflow: visible;
-		position: absolute;
-		left: 0px;
-		top: 1.436px;
-		transform: matrix(1,0,0,1,0,0);
-	}
-	#Group_356 {
-		position: absolute;
-		left: 1016.687px;
-		top: 320.045px;
-		overflow: visible;
-	}
-	#Group_355 {
-		position: absolute;
-		width: 503.313px;
-		height: 399.955px;
-		left: -154px;
-		top: -160.287px;
-		overflow: visible;
-	}
-    #nn{
-       font-family:Bahij Helvetica Neue;
-       font-style:normal;
-       font-weight:normal;
-    }
-    #n_____________{
-        font-style:normal;font-weight:lighter; font-size:25px; 
-        left: 130.208px;
-		top: 182px;
-		position: absolute;
-		overflow: hidden;
-		width: 695px;
-		height: 230px;
-		line-height: 79px;
+	.link-grade{
+		width: 250px;
+		height: 25px;
+		background-color:rgba(212,228,232,1);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-bottom: 6px;
+		border-radius: 32px;
 		text-align: center;
-		font-family: Bahij Helvetica Neue;
-		font-style: normal;
-		color: rgba(255,255,255,1);
-		letter-spacing: -0.4px;
-    }
-	#n_________ {
-		left: 130.208px;
-		top: 142px;
-		position: absolute;
-		overflow: hidden;
-		width: 695px;
-		height: 230px;
-		line-height: 79px;
-		text-align: center;
-		font-family: Bahij Helvetica Neue;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 35px;
-		color: rgba(255,255,255,1);
-		letter-spacing: -0.4px;
+		align-items: center;
+	}	
+		.all-grade {
+			transform-origin: 0px 0px;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(255,255,255,1);
+			overflow: hidden;
+			
+		}
+	
+		#svg-backgroung-grade {
+			fill: url(#svg-backgroung-grade);
+		}
+		.svg-backgroung-grade {
+			overflow: visible;
+			position: absolute;
+			left: 0px;
+			top: 1.436px;
+			transform: matrix(1,0,0,1,0,0);
+		}
+		#image-grade {
+			position: absolute;
+			left: 110.687px;
+			top: 400.045px;
+			overflow: visible;
+			
+		}
+		.image-grade {
+			width: 250.313px;
+			height: 210.955px;
+			
+		}
+		#svg-grade {
+			opacity: 0.52;
+			fill: rgba(255,255,255,1);
+		
+		}
+		.svg-grade {
+		
+			position: absolute;
+			width: 140.886px;
+			height: 90.713px;
+			left: -20px;
+			top: 518.045px;
+			
+			transform: matrix(1,0,0,1,0,0);
+		}
+	  
+		.p-two-grade{
+			font-style:normal;font-weight:lighter; font-size:20px; 
+			left: -167px;
+			top: 142px;
+			position: absolute;
+			overflow: hidden;
+			width: 695px;
+			height: 230px;
+			line-height: 79px;
+			text-align: center;
+			font-family: Bahij Helvetica Neue;
+			color: rgb(255, 255, 255);
+			letter-spacing: -0.4px;
+		}
+		.p-one-grade{
+			left: -167px;
+			top: 102px;
+			position: absolute;
+			overflow: hidden;
+			width: 695px;
+			height: 230px;
+			line-height: 79px;
+			text-align: center;
+			font-family: Bahij Helvetica Neue;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 30px;
+			color: rgba(255,255,255,1);
+			letter-spacing: -0.4px;
+		}
+		
+	
+	.flesh-image-grade{
+		margin: 0px;
+		padding: 0px;
+		width: 22px;
+		display: inline-block;
+		position: relative;
+		top: 40px;
+		left: 40px;
 	}
-	#Subtraction_3 {
-		opacity: 0.52;
-		fill: rgba(255,255,255,1);
-		stroke: rgba(0,0,0,0);
-		stroke-width: 1px;
-		stroke-linejoin: miter;
-		stroke-linecap: butt;
-		stroke-miterlimit: 4;
-		shape-rendering: auto;
-	}
-	.Subtraction_3 {
-		overflow: visible;
-		position: absolute;
-		width: 285.886px;
-		height: 430.713px;
-		left: 0px;
-		top: 225.287px;
-		transform: matrix(1,0,0,1,0,0);
-	}
+}
 
- */
+@media screen and (max-width:576px)and (min-width:360px){
+	.button-grade{ 
+		display: inline-block;
+		position: relative;
+		top: 190px;
+		left: 100px;
+	
+	}
+	.li-grade{
+	 margin-right: 18px;
+	 font-size: 19px;
+	 color: rgba(16,84,162,1);
+	 letter-spacing: -0.4px;
+	}
+	.sanaf-grade{
+		width: 19px;
+		height: 20px;
+		margin-left: 18px;
+	}
+	.link-grade{
+		width: 370px;
+		height: 30px;
+		background-color:rgba(212,228,232,1);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-bottom: 12px;
+		border-radius: 32px;
+		text-align: center;
+		align-items: center;
+	}	
+		.all-grade {
+			transform-origin: 0px 0px;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(255,255,255,1);
+			overflow: hidden;
+			
+		}
+	
+		#svg-backgroung-grade {
+			fill: url(#svg-backgroung-grade);
+		}
+		.svg-backgroung-grade {
+			overflow: visible;
+			position: absolute;
+			left: 0px;
+			top: 1.436px;
+			transform: matrix(1,0,0,1,0,0);
+		}
+		#image-grade {
+			position: absolute;
+			left: 277.687px;
+			top: 390.045px;
+			overflow: visible;
+			
+		}
+		.image-grade {
+			width: 300.313px;
+			height: 230.955px;
+			
+		}
+		#svg-grade {
+			opacity: 0.52;
+			fill: rgba(255,255,255,1);
+		
+		}
+		.svg-grade {
+		
+			position: absolute;
+			width: 200.886px;
+			height: 150.713px;
+			left: -16px;
+			top: 470.045px;
+			
+			transform: matrix(1,0,0,1,0,0);
+		}
+	  
+		.p-two-grade{
+			font-style:normal;font-weight:lighter; font-size:25px; 
+			left: -63px;
+			top: 142px;
+			position: absolute;
+			overflow: hidden;
+			width: 695px;
+			height: 230px;
+			line-height: 79px;
+			text-align: center;
+			font-family: Bahij Helvetica Neue;
+			color: rgb(255, 255, 255);
+			letter-spacing: -0.4px;
+		}
+		.p-one-grade{
+			left: -63px;
+			top: 102px;
+			position: absolute;
+			overflow: hidden;
+			width: 695px;
+			height: 230px;
+			line-height: 79px;
+			text-align: center;
+			font-family: Bahij Helvetica Neue;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 35px;
+			color: rgba(255,255,255,1);
+			letter-spacing: -0.4px;
+		}
+		
+	
+	.flesh-image-grade{
+		margin: 0px;
+		padding: 0px;
+		width: 22px;
+		display: inline-block;
+		position: relative;
+		top: 50px;
+		left: 50px;
+	}
+}
+
+
+
+
+/* @media screen and (max-width:360px)and (min-width:100px){
+	.button-grade{ 
+		display: inline-block;
+		position: relative;
+		top: 190px;
+		left: 55px;
+	
+	}
+	.li-grade{
+	 margin-right: 15px;
+	 font-size: 15px;
+	 color: rgba(16,84,162,1);
+	 letter-spacing: -0.4px;
+	}
+	.sanaf-grade{
+		width: 13px;
+		height: 15px;
+		margin-left: 15px;
+	}
+	.link-grade{
+		width: 250px;
+		height: 25px;
+		background-color:rgba(212,228,232,1);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-bottom: 6px;
+		border-radius: 32px;
+		text-align: center;
+		align-items: center;
+	}	
+		.all-grade {
+			transform-origin: 0px 0px;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(255,255,255,1);
+			overflow: hidden;
+			
+		}
+	
+		#svg-backgroung-grade {
+			fill: url(#svg-backgroung-grade);
+		}
+		.svg-backgroung-grade {
+			overflow: visible;
+			position: absolute;
+			left: 0px;
+			top: 1.436px;
+			transform: matrix(1,0,0,1,0,0);
+		}
+		#image-grade {
+			position: absolute;
+			left: 110.687px;
+			top: 400.045px;
+			overflow: visible;
+			
+		}
+		.image-grade {
+			width: 250.313px;
+			height: 210.955px;
+			
+		}
+		#svg-grade {
+			opacity: 0.52;
+			fill: rgba(255,255,255,1);
+		
+		}
+		.svg-grade {
+		
+			position: absolute;
+			width: 140.886px;
+			height: 90.713px;
+			left: -20px;
+			top: 518.045px;
+			
+			transform: matrix(1,0,0,1,0,0);
+		}
+	  
+		.p-two-grade{
+			font-style:normal;font-weight:lighter; font-size:20px; 
+			left: -167px;
+			top: 142px;
+			position: absolute;
+			overflow: hidden;
+			width: 695px;
+			height: 230px;
+			line-height: 79px;
+			text-align: center;
+			font-family: Bahij Helvetica Neue;
+			color: rgb(255, 255, 255);
+			letter-spacing: -0.4px;
+		}
+		.p-one-grade{
+			left: -167px;
+			top: 102px;
+			position: absolute;
+			overflow: hidden;
+			width: 695px;
+			height: 230px;
+			line-height: 79px;
+			text-align: center;
+			font-family: Bahij Helvetica Neue;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 30px;
+			color: rgba(255,255,255,1);
+			letter-spacing: -0.4px;
+		}
+		
+	
+	.flesh-image-grade{
+		margin: 0px;
+		padding: 0px;
+		width: 22px;
+		display: inline-block;
+		position: relative;
+		top: 40px;
+		left: 40px;
+	}
+} */
+
+@media screen and (max-width:768px)and (min-width:576px){
+	.button-grade{ 
+		display: inline-block;
+		position: relative;
+		top: 190px;
+		left: 150px;
+	
+	}
+	.li-grade{
+	 margin-right: 18px;
+	 font-size: 19px;
+	 color: rgba(16,84,162,1);
+	 letter-spacing: -0.4px;
+	}
+	.sanaf-grade{
+		width: 19px;
+		height: 20px;
+		margin-left: 18px;
+	}
+	.link-grade{
+		width: 480px;
+		height: 30px;
+		background-color:rgba(212,228,232,1);;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-bottom: 12px;
+		border-radius: 32px;
+		text-align: center;
+		align-items: center;
+	}	
+		.all-grade {
+			transform-origin: 0px 0px;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(255,255,255,1);
+			overflow: hidden;
+			
+		}
+	
+		#svg-backgroung-grade {
+			fill: url(#svg-backgroung-grade);
+		}
+		.svg-backgroung-grade {
+			overflow: visible;
+			position: absolute;
+			left: 0px;
+			top: 1.436px;
+			transform: matrix(1,0,0,1,0,0);
+		}
+		#image-grade {
+			position: absolute;
+			left: 338.687px;
+			top: 360.045px;
+			overflow: visible;
+			
+		}
+		.image-grade {
+			width: 430.313px;
+			height: 270.955px;
+			
+		}
+		#svg-grade {
+			opacity: 0.52;
+			fill: rgba(255,255,255,1);
+		
+		}
+		.svg-grade {
+		
+			position: absolute;
+			width: 230.886px;
+			height: 180.713px;
+			left: -20px;
+			top: 450.045px;
+			
+			transform: matrix(1,0,0,1,0,0);
+		}
+	  
+		.p-two-grade{
+			font-style:normal;font-weight:lighter; font-size:25px; 
+			left: 43px;
+			top: 142px;
+			position: absolute;
+			overflow: hidden;
+			width: 695px;
+			height: 230px;
+			line-height: 79px;
+			text-align: center;
+			font-family: Bahij Helvetica Neue;
+			color: rgb(255, 255, 255);
+			letter-spacing: -0.4px;
+		}
+		.p-one-grade{
+			left: 43px;
+			top: 102px;
+			position: absolute;
+			overflow: hidden;
+			width: 695px;
+			height: 230px;
+			line-height: 79px;
+			text-align: center;
+			font-family: Bahij Helvetica Neue;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 35px;
+			color: rgba(255,255,255,1);
+			letter-spacing: -0.4px;
+		}
+		
+	
+	.flesh-image-grade{
+		margin: 0px;
+		padding: 0px;
+		width: 25px;
+		display: inline-block;
+		position: relative;
+		top: 50px;
+		left: 50px;
+	}
+}
+
+
+
+
+@media screen and (max-width:992px)and (min-width:768px){
+	.button-grade{ 
+		display: inline-block;
+		position: relative;
+		top: 232px;
+		left: 100px;
+	
+	}
+	.li-grade{
+	 margin-right: 18px;
+	 font-size: 22px;
+	 color: rgba(16,84,162,1);
+	 letter-spacing: -0.4px;
+	}
+	.sanaf-grade{
+		width: 22px;
+		height: 25px;
+		margin-left: 18px;
+	}
+	.link-grade{
+		width: 430px;
+		height: 34px;
+		background-color:rgba(212,228,232,1);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-bottom: 12px;
+		border-radius: 32px;
+		text-align: center;
+		align-items: center;
+	}	
+		.all-grade {
+			transform-origin: 0px 0px;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(255,255,255,1);
+			overflow: hidden;
+			
+		}
+	
+		#svg-backgroung-grade {
+			fill: url(#svg-backgroung-grade);
+		}
+		.svg-backgroung-grade {
+			overflow: visible;
+			position: absolute;
+			left: 0px;
+			top: 1.436px;
+			transform: matrix(1,0,0,1,0,0);
+		}
+		#image-grade {
+			position: absolute;
+			left: 515.687px;
+			top: 275.045px;
+			overflow: visible;
+			
+		}
+		.image-grade {
+			width: 480.313px;
+			height: 350.955px;
+			
+		}
+	  
+		.p-two-grade{
+			font-style:normal;font-weight:lighter; font-size:25px; 
+			left: -30.208px;
+			top: 192px;
+			position: absolute;
+			overflow: hidden;
+			width: 695px;
+			height: 230px;
+			line-height: 79px;
+			text-align: center;
+			font-family: Bahij Helvetica Neue;
+			color: rgb(255, 255, 255);
+			letter-spacing: -0.4px;
+		}
+		.p-one-grade{
+			left: -30.208px;
+			top: 152px;
+			position: absolute;
+			overflow: hidden;
+			width: 695px;
+			height: 230px;
+			line-height: 79px;
+			text-align: center;
+			font-family: Bahij Helvetica Neue;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 35px;
+			color: rgba(255,255,255,1);
+			letter-spacing: -0.4px;
+		}
+		#svg-grade {
+			opacity: 0.52;
+			fill: rgba(255,255,255,1);
+		
+		}
+		.svg-grade {
+		
+			position: absolute;
+			width: 350.886px;
+			height: 230.713px;
+			left: -50px;
+			top: 394.287px;
+			
+			transform: matrix(1,0,0,1,0,0);
+		}
+	
+	.flesh-image-grade{
+		margin: 0px;
+		padding: 0px;
+		display: inline-block;
+		position: relative;
+		top: 80px;
+		left: 80px;
+	}
+}
+
+
+
+
+
+
+@media screen and (max-width:1200px)and (min-width:992px){
+	.button-grade{ 
+		display: inline-block;
+		position: relative;
+		top: 232px;
+		left: 130px;
+	
+	}
+	.li-grade{
+	 margin-right: 18px;
+	 font-size: 22px;
+	 color: rgba(16,84,162,1);
+	 letter-spacing: -0.4px;
+	}
+	.sanaf-grade{
+		width: 22px;
+		height: 25px;
+		margin-left: 18px;
+	}
+	.link-grade{
+		width: 480px;
+		height: 34px;
+		background-color:rgba(212,228,232,1);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-bottom: 12px;
+		border-radius: 32px;
+		text-align: center;
+		align-items: center;
+	}	
+		.all-grade {
+			transform-origin: 0px 0px;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(255,255,255,1);
+			overflow: hidden;
+			
+		}
+	
+		#svg-backgroung-grade {
+			fill: url(#svg-backgroung-grade);
+		}
+		.svg-backgroung-grade {
+			overflow: visible;
+			position: absolute;
+			left: 0px;
+			top: 1.436px;
+			transform: matrix(1,0,0,1,0,0);
+		}
+		#image-grade {
+			position: absolute;
+			left: 650.687px;
+			top: 195.045px;
+			overflow: visible;
+			
+		}
+		.image-grade {
+			width: 560.313px;
+			height: 430.955px;
+			
+		}
+	  
+		.p-two-grade{
+			font-style:normal;font-weight:lighter; font-size:25px; 
+			left: 10.208px;
+			top: 192px;
+			position: absolute;
+			overflow: hidden;
+			width: 695px;
+			height: 230px;
+			line-height: 79px;
+			text-align: center;
+			font-family: Bahij Helvetica Neue;
+			color: rgb(255, 255, 255);
+			letter-spacing: -0.4px;
+		}
+		.p-one-grade{
+			left: 10.208px;
+			top: 152px;
+			position: absolute;
+			overflow: hidden;
+			width: 695px;
+			height: 230px;
+			line-height: 79px;
+			text-align: center;
+			font-family: Bahij Helvetica Neue;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 35px;
+			color: rgba(255,255,255,1);
+			letter-spacing: -0.4px;
+		}
+		#svg-grade {
+			opacity: 0.52;
+			fill: rgba(255,255,255,1);
+		
+		}
+		.svg-grade {
+		
+			position: absolute;
+			width: 335.886px;
+			height: 250.713px;
+			left: -28px;
+			top: 372.287px;
+			
+			transform: matrix(1,0,0,1,0,0);
+		}
+	
+	.flesh-image-grade{
+		margin: 0px;
+		padding: 0px;
+		display: inline-block;
+		position: relative;
+		top: 80px;
+		left: 80px;
+	}
+}

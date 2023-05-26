@@ -1,3 +1,5 @@
+import i18next from 'i18next';
+import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from "react-router-dom";
 import * as React from "react";
 import "./Lesson.css";
@@ -8,6 +10,13 @@ import photo3 from "../../assets/Group_408.png";
 import photo4 from "../../assets/Group_404.png";
 import photo5 from "../../assets/Group_158_a@2x.png";
 const Lessons = (props) => {
+  const { t } = useTranslation();
+
+  function handleClick(lang) {
+    i18next.changeLanguage(lang)
+  }
+
+  
   var [num, setNum] = useState(1);
   const location = useLocation();
   const locationData = location.state;
@@ -50,7 +59,7 @@ const Lessons = (props) => {
             <img src={photo4} />
           </div>
           <div className="text">
-            <h3> درس های {unit}</h3>
+            <h3> {t("lessons.1")}{unit}</h3>
             <div className="sidebar-lessons">
               {lessons.map((item) => {
                 return (
@@ -75,7 +84,7 @@ const Lessons = (props) => {
         <div className="title">
           <div>
             <h1> {unit}</h1>
-            <p>درس {title}</p>
+            <p>{t("lessons.2")} {title}</p>
           </div>
           <img src={photo1}></img>
         </div>
@@ -87,7 +96,7 @@ const Lessons = (props) => {
         </div>
         <div className="midlle">
           <img src={photo3}></img>
-          <p>دانلود فایل پی دی اف</p>
+          <p>{t("lessons.3")}</p>
         </div>
       </div>
     </div>

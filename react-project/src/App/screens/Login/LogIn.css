@@ -5,13 +5,24 @@
     box-sizing: border-box;
     border: none;
 }
-.cantainer{
+#all_login {
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    background-color: rgba(255,255,255,1);
+    overflow: hidden;
+    --web-view-name: Artboard – 2;
+    --web-view-id: Artboard__2;
+    --web-scale-on-resize: true;
+    --web-enable-deep-linking: true;
+}
+.cantainer_login{
     position: relative;
     top: 100px;
     left: 250px;
     z-index: 100;
 }
-#inputlogin{
+#input_login{
     position: relative;
    color: white;
     display: inline-block;
@@ -26,7 +37,7 @@
   outline: none;
 }
 
-.acount-button{
+.acount_button_login{
     position: relative;
     top: 30px;
     left: -15px;
@@ -40,7 +51,7 @@
     font-weight: 12px;
   
 }
-.google-button{
+.google_button_login{
     position: relative;
     top: 50px;
     left: 8px;
@@ -54,20 +65,20 @@
     display: flex;
     justify-content: space-between;
 }
-.google-icon{
+.google_icon_login{
     color: rgb(148, 144, 144);
     width: 30px;
     height: 30px;
     margin:5px 0px 0px 10px;
 }
-.google-p{
+.google_p_login{
     margin:10px 12px 0px 0px;
     font-size: large;
     font-weight: 12px;
     color: rgb(148, 144, 144);
 }
 
-.login-button{
+.button_login{
     position: relative;
     top: 90px;
     left: 235px;
@@ -82,7 +93,7 @@
 }
 
 
-.inn{
+.inn_login{
 
     padding: 10px 40px 0 0px;
     color: rgba(60,152,189,1);
@@ -93,7 +104,7 @@
 
   
 }
-.upp{
+.upp_login{
     padding-top: 10px;
    align-items: center;
     border-radius: 50px;
@@ -106,24 +117,14 @@
     display: inline-block;
     padding-right: 12px;
 }
-.img{
+.img_login{
    
     position: relative;
     top: 60px;
     left: 300px;
 }
-#Artboard__2 {
-    position: absolute;
-    width: 100%;
-    height: 90%;
-    background-color: rgba(255,255,255,1);
-    overflow: hidden;
-    --web-view-name: Artboard – 2;
-    --web-view-id: Artboard__2;
-    --web-scale-on-resize: true;
-    --web-enable-deep-linking: true;
-}
-#Group_398 {
+
+#svg_login{
     position: absolute;
     width: 1921.645px;
     height: 985.429px;
@@ -132,10 +133,10 @@
     overflow: visible;
     padding: 0px 195px 19px 433px;
 }
-#Path_1008_v {
-    fill: url(#Path_1008_v);
+#Path_login {
+    fill: url(#Path_login);
 }
-.Path_1008_v {
+.Path_login {
     overflow: visible;
     position: absolute;
     
@@ -147,7 +148,7 @@
     
     transform: matrix(1,0,0,1,0,0);
 }
-.errorr{
+.error_login{
  color: red;
 
 }
@@ -169,7 +170,7 @@ h4 {
     margin: auto 10px;
     border-bottom: 2px solid #ccc;
   }
-.po{
+.p_login{
     
     color: white;
     z-index: 100;
@@ -177,12 +178,12 @@ h4 {
     top: 40px;
     left: -6px;
 }
-.forgetpassword{
+.forgetpassword_login{
     color: white;
     position: relative;
     top: 12px;
 }
-#button{
+/* #button_login{
     position: relative;
     top: 100px;
     right: 65px;
@@ -195,4 +196,4 @@ h4 {
     font-size: 20px;
     font-weight: bold;
     box-shadow: 0px 0px 5px #aaaaaa;
-}
+} */

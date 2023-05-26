@@ -1,12 +1,23 @@
+import i18next from 'i18next';
+import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from '../../assets/PNG_Format.png';
 import img1 from '../../assets/Group_158.png';
+import img2 from '../../assets/Group_158_a.png';
+import img3 from '../../assets/svg_phone.png';
 import "./SendCode.css"
 import React from 'react'
 <link rel="stylesheet" href="SendCode.css" />;
 
 const SendCode = () => {
+	const { t } = useTranslation();
+
+	function handleClick(lang) {
+	  i18next.changeLanguage(lang)
+	}
+
+
 	const initialValues = { code: "" };
 	const [formValues, setFormValues] = useState(initialValues);
 	const [formErrors, setFormErrors] = useState({});
@@ -46,46 +57,57 @@ const SendCode = () => {
 	};
   return (
     <div>
-<div id="forgot_password" >
-	<svg id="background-svg">
-		<linearGradient id="Rectangle_279_z" spreadMethod="pad" x1="0.22" x2="0.105" y1="-0.035" y2="1.793">
+<div id="send_code" >
+	<svg id="background_svg_send_code">
+		<linearGradient id="background_svg_send_code_1" spreadMethod="pad" x1="0.22" x2="0.105" y1="-0.035" y2="1.793">
 			<stop offset="0" stop-color="#3c98bd" stop-opacity="1"></stop>
 			<stop offset="1" stop-color="#0f53a1" stop-opacity="1"></stop>
 		</linearGradient>
-		<rect id="Rectangle_279_z" rx="200" ry="200" x="0" y="0" width="630" height="930">
+		<rect id="background_svg_send_code_1" rx="200" ry="200" x="0" y="0" width="630" height="930">
 		</rect>
 	</svg>
-	<div id="n____">
-	ما یک کد شش رقمی به 
+	<svg class="mobile_svg_send_code">
+			<linearGradient id="mobile_svg_send_code" spreadMethod="pad" x1="0.22" x2="0.905" y1="-0.035" y2="1.793">
+				<stop offset="0" stop-color="#3c98bd" stop-opacity="1"></stop>
+				<stop offset="1" stop-color="#0f53a1" stop-opacity="1"></stop>
+			</linearGradient>
+			<rect id="mobile_svg_send_code" rx="70" ry="70" x="0" y="0" width="360" height="358">
+			</rect>
+		</svg>
+
+	<div id="para_first_send_code">
+	{t("sendcode.1")}
 	</div>
-	<div className="u______">ایمیل آدرس شما ارسال </div>
-    <div className="u__">کردیم </div>
-	<div id="n______">
-لطفا کد را اینجا وارد نمایید
+	{/* <div className="u______">{t("sendcode.2")}</div>
+    <div className="u__">{t("sendcode.3")} </div> */}
+	<div id="para_second_send_code">
+	{t("sendcode.2")}
 	</div>
-	<div id="logoo">
-	<img id="logo" src={logo}/>
+	<div id="logoo_send_code">
+	<img id="logo_send_code" src={logo}/>
+	<img id='imggg_send_code' src={img3}/>
 	</div>
-  <Link to='/forgotpassword' ><img id='img' src={img1}/></Link>
+  <Link to='/forgotpassword' ><img id='imgg_send_code' src={img2}/></Link>
+  <Link to='/forgotpassword' ><img id='img_send_code' src={img1}/></Link>
 {Object.keys(formErrors).length === 0 && isSubmit ? (
-  <div className="ui message success">{navigate('/newpassword')}</div>
+  <div >{navigate('/newpassword')}</div>
 ) : (
   <pre></pre>
 )}
-<div id="ooo">
+<div id="form_send_code">
 <form onSubmit={handleSubmit}>
 	{/* <div className="input_next"> */}
 	<input
-	  id="input_next"
+	  id="input_next_send_code"
 		type="code"
 		name="code"
-		placeholder="کد"
+		placeholder={t("sendcode.3")}
 		value={formValues.code}
 		onChange={handleChange}
 	  />
-	  <p  className="errorr">{formErrors.code}</p>
+	  <p  className="error_send_code">{formErrors.code}</p>
 	{/* </div> */}
-   <button id="button-next">تائید</button>
+   <button id="button_next_send_code">{t("sendcode.4")}</button>
 </form>
 </div>
 	

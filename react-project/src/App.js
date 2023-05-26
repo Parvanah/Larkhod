@@ -1,8 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
- 
-import Header from "./Header";
+import Header from "./App/components/Header/Header";
 import SingUp from "./App/screens/SingUp/SingUp";
 import LogIn from "./App/screens/LogIn/LogIn";
 import ForgotPassword from "./App/screens/ForgotPassword/ForgotPassword";
@@ -13,14 +12,13 @@ import Grades from "./App/components/Grades/Grades";
 import Books from "./App/components/Books/Books";
 import Units from "./App/components/Units/Units";
 import Lessons from "./App/components/Lessons/Lessons";
-
 import Grad from "./App/Grad";
-import Book from "./App/Book"
+import Book from "./App/Book";
 import Continue from "./App/Continue";
 import About from "./App/About";
 import Suggestion from "./App/Suggestion";
 import Profile from "./App/screens/Profile/Profile";
-import ChangeProfile from "./App/screens/ChangeProfile/ChangeProfile"
+import ChangeProfile from "./App/screens/ChangeProfile/ChangeProfile";
 
 function App() {
   return (
