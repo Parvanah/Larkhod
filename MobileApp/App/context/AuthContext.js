@@ -17,8 +17,11 @@ export const AuthProvider = ({ children }) => {
         email,
         password,
       });
-      console.log(response.data);
+      let userInfo = response.data;
+      setUserInfo(userInfo);
+      AsyncStorage.setItem("userInfo", JSON.stringify(userInfo));
       setIsLoading(false);
+      console.log(userInfo);
     } catch (error) {
       console.log(email);
       console.log(password);
@@ -34,8 +37,11 @@ export const AuthProvider = ({ children }) => {
         email,
         password,
       });
-      console.log(response.data);
+      let userInfo = response.data;
+      setUserInfo(userInfo);
+      AsyncStorage.setItem("userInfo", JSON.stringify(userInfo));
       setIsLoading(false);
+      console.log(userInfo);
     } catch (error) {
       console.log(error.response.data);
       setIsLoading(false);
@@ -91,7 +97,7 @@ export const AuthProvider = ({ children }) => {
       console.log(response.data);
       setIsLoading(false);
     } catch (error) {
-      console.log(error);
+      console.log(error.response.data);
       setIsLoading(false);
     }
   };
