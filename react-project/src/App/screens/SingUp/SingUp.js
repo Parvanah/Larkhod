@@ -2,8 +2,10 @@ import "./SingUp.css"
 import { FaGoogle } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import img1 from '../../assets/mg.png';
+
 // import image from "../../assets/Group_158_a@2x.png";
-import React from 'react'
+import React from "react";
+
 import { Link, useNavigate } from "react-router-dom";
 <link rel="stylesheet" href="SingUp.css" />;
 
@@ -60,7 +62,6 @@ const SingUp = () => {
   };
   return (
     <div>
-     
 <div id="Artboard__2" >  
 <div id="Group_398">
 		<svg class="Path_1008_v" viewBox="0 0 1921.728 880.675">
@@ -163,9 +164,9 @@ const SingUp = () => {
       </Link>
     </div>
     {/* <Link to="/section"><img className="image" src={image} /></Link>  */}
-</div>
 
-    </div>
+</div>
+</div>
   )
 }
 

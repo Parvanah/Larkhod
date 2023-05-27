@@ -235,7 +235,6 @@ const Books = (props) => {
         <div className="p-section">
           <p>این کتاب ها به فصل های جداگانه تقسیم شده است</p>
         </div>
-
         <div className="last-svg">
           <div className="mobile-last">
             <svg

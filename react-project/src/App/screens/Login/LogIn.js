@@ -2,14 +2,16 @@ import "./LogIn.css"
 import { FaGoogle } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import img1 from '../../assets/mg.png';
-import React from 'react'
+import img2 from '../../assets/logo_3.png';
+import * as React from "react"
+// import React from 'react'
 import { Link, useNavigate } from "react-router-dom";
 <link rel="stylesheet" href="LogIn.css" />;
 
 
 
 
-const LogIn = () => {
+const LogIn = (prpos) => {
   const initialValues = { email: "", password: "", };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
@@ -51,8 +53,7 @@ const LogIn = () => {
   };
   return (
     <div>
-      
-<div id="Artboard__2" >
+  <div id="Artboard__2" >
 <div id="Group_398">
 		<svg class="Path_1008_v" viewBox="0 0 1921.728 880.675">
 			<linearGradient id="Path_1008_v" spreadMethod="pad" x1="0.835" x2="0.274" y1="0" y2="1.305">
@@ -127,11 +128,15 @@ const LogIn = () => {
 </button>
   
       </Link>
-      
     </div>
 </div>
+<div className="Mobile-R">
+  <div>
+    <p>helllo</p>
+  </div>
 
-    </div>
+</div>
+ </div>
   )
 }
 
