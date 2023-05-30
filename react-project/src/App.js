@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
+// import './App.css';
 import Header from "./App/components/Header/Header";
 import SingUp from "./App/screens/SingUp/SingUp";
 import LogIn from "./App/screens/Login/LogIn";
