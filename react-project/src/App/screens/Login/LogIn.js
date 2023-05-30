@@ -4,14 +4,16 @@ import "./LogIn.css"
 import { FaGoogle } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import img1 from '../../assets/mg.png';
-import React from 'react'
+import img3 from '../../assets/logo_3.png'
+// import React from 'react'
+import * as React from "react"
 import { Link, useNavigate } from "react-router-dom";
 <link rel="stylesheet" href="LogIn.css" />;
 
 
 
 
-const LogIn = () => {
+const LogIn = (props) => {
   const { t } = useTranslation();
 
   function handleClick(lang) {
@@ -121,7 +123,7 @@ const LogIn = () => {
       </form>
       <h4 className="p_login">{t("login.7")} </h4>
       <Link to="google.com">
-      <button className="google_button_login">
+      <button className="google_button_singup">
       <FaGoogle className="google_icon_login" />
         <div className="google_p_login">{t("login.8")}</div>
         
@@ -131,6 +133,80 @@ const LogIn = () => {
       </Link>
       
     </div>
+</div>
+<div className='Mobile_lr'>
+ <div className="M-img">
+<div id="M-arrow">
+ <Link to="/SingUp"> <svg xmlns="http://www.w3.org/2000/svg" width={16} height={10} {...props} className='M-arrow'>
+    <defs>
+      <clipPath id="a">
+        <path fill="#fff" d="M0 0h16v10H0z" data-name="Rectangle 85" />
+      </clipPath>
+    </defs>
+    <g clipPath="url(#a)" data-name="Group 158">
+      <path
+        fill="#fff"
+        fillRule="evenodd"
+        d="m3.247 6 2.48 2.294a.99.99 0 0 1 0 1.414 1.023 1.023 0 0 1-1.432 0L.445 6.059A1.465 1.465 0 0 1 0 5a1.483 1.483 0 0 1 .444-1.06L4.294.293a1.025 1.025 0 0 1 1.434 0 .992.992 0 0 1 0 1.414L3.248 4H15a1 1 0 0 1 0 2H3.247Z"
+        data-name="Path 433"
+      />
+    </g>
+  </svg></Link>
+  <img src={img3} className="img3"/>
+ </div>
+</div>
+<div id='Mobile-bottom'>
+ <button className="button_login">
+<div className="upp_login" >{t("login.1")}</div>
+  <Link to="/" className="inn_login">{t("login.2")}</Link>
+</button>
+<div className="cantainer_login">
+      {Object.keys(formErrors).length === 0 && isSubmit ? (
+        <div className="ui message success">{navigate('/header')}</div>
+      ) : (
+        <pre></pre>
+      )}
+
+      <form onSubmit={handleSubmit}>
+        <div className="ui divider"></div>
+        <div className="ui form">
+          <div className="field">
+            <input
+            id="input_login"
+              type="text"
+              name="email"
+              placeholder={t("login.3")}
+              value={formValues.email}
+              onChange={handleChange}
+            />
+            <p  className="error_login">{formErrors.email}</p>
+          </div>
+          
+          <div className="field">
+            <input
+            id="input_login"
+              type="password"
+              name="password"
+              placeholder={t("login.4")}
+              value={formValues.password}
+              onChange={handleChange}
+            />
+            <p  className="error_login">{formErrors.password}</p>
+          </div>
+          <Link className="forgotpassword_login" to="/forgotpassword"> {t("login.5")}</Link>
+        </div>
+         <button className="acount_button_login">{t("login.6")}</button>
+      </form>
+      <h4 className="p_login">{t("login.7")} </h4>
+      <Link to="google.com">
+      <button className="google_button_login">
+      <FaGoogle className="google_icon_login" />
+        <div className="google_p_login">{t("login.8")}</div>
+</button>
+      </Link>
+    </div>
+ </div>
+
 </div>
 
     </div>
