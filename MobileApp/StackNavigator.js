@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 // import React, {useContext} from 'react';
 import { AuthContext } from "./App/context/AuthContext";
 import { View, Text } from "react-native";
@@ -22,29 +22,37 @@ import FeedBack from "./App/screens/FeedBack/FeedBack";
 import TranslateApp from "./App/screens/TranslateApp";
 import NewSignUp from "./App/screens/NewSignUp/NewSignUp";
 import EnterCode from "./App/screens/EnterCode/EnterCode";
+
 const Stack = createNativeStackNavigator();
 const StackNaigator = () => {
   // const {userInfo} = useContext(AuthContext);z
+  const { userInfo } = useContext(AuthContext);
   return (
     <Stack.Navigator
       screenOptions={{ headerShown: false }}
       initialRouteName="FirstPage"
     >
-      {/* {userInfo.access_token ? '' : ''} */}
       <Stack.Group>
         <Stack.Screen name="FirstPage" component={FirstPage} />
+        {userInfo.token ? (
+          <Stack.Screen name="Sections" component={Sections} />
+        ) : (
+          <>
+            <Stack.Screen name="NewPassword" component={NewPassword} />
+            <Stack.Screen name="LogIn" component={LogIn} />
+          </>
+        )}
         <Stack.Screen name="SignUp" component={SignUp} />
         <Stack.Screen
           name="SignUpVerification"
           component={SignUpVerification}
         />
         <Stack.Screen name="TranslateApp" component={TranslateApp} />
-        <Stack.Screen name="LogIn" component={LogIn} />
+
         <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
         <Stack.Screen name="EnterCode" component={EnterCode} />
         <Stack.Screen name="Information" component={Information} />
-        <Stack.Screen name="NewPassword" component={NewPassword} />
-        <Stack.Screen name="Sections" component={Sections} />
+
         <Stack.Screen name="ChangeInfo" component={ChangeInfo} />
         <Stack.Screen name="Grades" component={Grades} />
         <Stack.Screen name="Books" component={Books} />

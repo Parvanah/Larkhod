@@ -4,47 +4,91 @@ import React, { createContext, useEffect, useState } from "react";
 import config, { BASE_URL } from "../config";
 
 export const AuthContext = createContext();
+axios.defaults.baseURL = "http://192.168.43.81:8000/api/v1";
+axios.defaults.timeout = 3000;
+axios.defaults.headers.common["Authorization"] = "Token";
 
 export const AuthProvider = ({ children }) => {
-  const [userInfo, setUserInfo] = useState({});
+  const [userInfo, setUserInfo] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [splashLoading, setSplashLoading] = useState(false);
-
-  const register = async (email, password, confirmPassword) => {
+  const [statusCode, setStatusCode] = useState(null);
+  const [password, setPassword] = useState(null);
+  const [email, setEmail] = useState(null);
+  const Authorization = async (status, token, errorMessage) => {
     try {
+      const res = await axios
+        .get(`/auth/user`, {
+          headers: { Authorization: `bearer ${token}` },
+        })
+        .then((res) => {
+          console.log("get");
+          let userInformation = res.data;
+          AsyncStorage.setItem("userInfo", JSON.stringify(userInformation));
+          setUserInfo(userInformation);
+
+          setIsLoading(false);
+        });
+    } catch (e) {
       setIsLoading(true);
-      const response = await axios.post(`${BASE_URL}/auth/register`, {
-        email,
-        password,
-      });
-      console.log(response.data);
-      setIsLoading(false);
-    } catch (error) {
-      console.log(email);
-      console.log(password);
-      console.log(error.response.data);
+      setUserInfo(null);
+      console.log("getError");
+      console.log(e);
       setIsLoading(false);
     }
+  };
+
+  const register = (emailOutside, passwordOutside) => {
+    setEmail(emailOutside);
+    setPassword(passwordOutside);
+    console.log(email);
+    console.log(password);
+    setIsLoading(false);
+
+    // try {
+    //   setIsLoading(true);
+    //   email = emailOutside;
+    //   password = passwordOutside;
+    // } catch (error) {
+    //   // console.log(email);
+    //   console.log(error);
+    //   // console.log(error.response.data);
+    //   setIsLoading(false);
+    // }
   };
 
   const login = async (email, password) => {
     try {
       setIsLoading(true);
-      const response = await axios.post(`${BASE_URL}/auth/login`, {
+      const response = await axios.post(`/auth/login`, {
         email,
         password,
       });
-      console.log(response.data);
+      // console.log(response.status);
+      // let userInformation = response.data;
+      // // setUserInfo(userInfo);
+      // // AsyncStorage.setItem("userInfo", JSON.stringify(userInfo));
+      // setIsLoading(false);
+      // var accsess_token = userInformation.token;
+      const statusCode = response.status;
+
+      console.log(userInfo);
+      console.log("done");
+      Authorization(statusCode, response.data.token, "Successfully");
       setIsLoading(false);
     } catch (error) {
       console.log(error.response.data);
+      setUserInfo(null);
+      console.log(error.response.status);
+      setStatusCode(error.response.status);
+
       setIsLoading(false);
     }
   };
 
   // const changeInfo = (firstName, lastName, age) =>{
   //   setIsLoading(true);
-  //   axios.post(`${BASE_URL}/changeInfo` ,{
+  //   axios.post(`/changeInfo` ,{
   //     firstName,
   //     lastName,
   //     age
@@ -64,7 +108,7 @@ export const AuthProvider = ({ children }) => {
     try {
       setIsLoading(true);
       const response = await fetch(BASE_URL);
-      axios.post(`${BASE_URL}/changeInfo`, {
+      axios.post(`/changeInfo`, {
         firstName,
         lastName,
         age,
@@ -78,20 +122,21 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  const information = async (firstName, lastName, email, age, grade) => {
+  const information = async (name, lastName, age, grade) => {
     try {
       setIsLoading(true);
-      const response = await axios.post(`${BASE_URL}/information`, {
-        firstName,
-        lastName,
+      console.log(name + lastName + email + age + grade + password);
+      const response = await axios.post(`/auth/register`, {
         email,
-        age,
-        grade,
+        password,
       });
       console.log(response.data);
+      setUserInfo(response.data);
+      AsyncStorage.setItem("userInfo", JSON.stringify(userInfo));
+
       setIsLoading(false);
     } catch (error) {
-      console.log(error);
+      console.log(error.response.data);
       setIsLoading(false);
     }
   };
@@ -111,6 +156,16 @@ export const AuthProvider = ({ children }) => {
       console.log(`isLogged in error ${e}`);
     }
   };
+  const Loggout = () => {
+    try {
+      setIsLoading(true);
+      AsyncStorage.removeItem("userInfo");
+      setUserInfo(null);
+      setIsLoading(false);
+    } catch (e) {
+      console.log(`loggout error${e}`);
+    }
+  };
   useEffect(() => {
     isLoggedIn();
   }, []);
@@ -125,6 +180,10 @@ export const AuthProvider = ({ children }) => {
         changeInfo,
         information,
         isLoggedIn,
+        Authorization,
+        Loggout,
+        password,
+        email,
       }}
     >
       {children}
