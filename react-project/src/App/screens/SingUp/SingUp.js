@@ -1,3 +1,7 @@
+
+import Spinner from "react-dom";
+import { AuthContext } from '../../context/AuthContext';
+import { useContext } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
@@ -7,14 +11,26 @@ import { FaGoogle } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import img1 from '../../assets/mg.png';
 import React from 'react'
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate ,useNavigation} from "react-router-dom";
 <link rel="stylesheet" href="SingUp.css" />;
 
 
 
-
-
 const SingUp = () => {
+ 
+    // const [name, setName] = useState(null);
+    // const [email, setEmail] = useState(null);
+    // const [password, setPassword] = useState(null);
+    // const [confirmPassword, setConfirmPassword] = useState(null);
+
+    const { isLoading, register } = useContext(AuthContext);
+    // const navigation = useNavigation();
+    // const onSubmit = (values) => {
+    
+    //   navigate("SignUpVerification");
+    // };
+
+
   const { t } = useTranslation();
 
   function handleClick(lang) {
@@ -25,7 +41,7 @@ const SingUp = () => {
 
 
 
-  const initialValues = { username: "", email: "", password: "", repeatpassword: "" };
+  const initialValues = { username: "", email: "", password: "", confirmpassword: "" };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
@@ -39,6 +55,7 @@ const SingUp = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormErrors(validate(formValues));
+    register(formValues.email, formValues.password);
     setIsSubmit(true);
   };
 
@@ -64,10 +81,10 @@ const SingUp = () => {
     } else if (values.password.length < 4) {
       errors.password = "!رمزعبور باید بیشتر از چهار حرف باشد";
     }
-    if (!values.repeatpassword) {
-      errors.repeatpassword = "!رمزعبور را تکرار کنید";
-    }else if(values.repeatpassword !== values.password){
-      errors.repeatpassword = "!تکرار رمز عبور باید با رمزعبور مطابقت داشته باشد";
+    if (!values.confirmpassword) {
+      errors.confirmpassword = "!رمزعبور را تکرار کنید";
+    }else if(values.confirmpassword !== values.password){
+      errors.confirmpassword = "!تکرار رمز عبور باید با رمزعبور مطابقت داشته باشد";
     }
     
     return errors;
@@ -152,12 +169,12 @@ const SingUp = () => {
             <input
             id="input_singup"
               type="password"
-              name="repeatpassword"
+              name="confirmpassword"
               placeholder={t("singup.6")}
-              value={formValues.repeatpassword}
+              value={formValues.confirmpassword}
               onChange={handleChange}
             />
-             <p  className="error_singup">{formErrors.repeatpassword}</p>
+             <p  className="error_singup">{formErrors.confirmpassword}</p>
           </div>
          
          
