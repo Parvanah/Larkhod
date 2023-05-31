@@ -5,7 +5,6 @@ import StackNaigator from "./StackNavigator";
 import i18next from "./App/screens/languages/i18n";
 import { AuthProvider } from "./App/context/AuthContext";
 import { AuthContext } from "./App/context/AuthContext";
-import StackNaigatorApp from "./StackNavigatorApp";
 
 export default function App() {
   return (
