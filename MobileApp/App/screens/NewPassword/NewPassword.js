@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useContext, useState } from "react";
 import {
   View,
   Text,
@@ -24,6 +24,8 @@ import arrow from "../../assets/Group_158_a.png";
 import Logo from "../../assets/logo.png";
 import CustomText from "../../CustomText";
 import { useTranslation } from "react-i18next";
+import Spinner from "react-native-loading-spinner-overlay";
+import { AuthContext } from "../../context/AuthContext";
 
 const NewPassword = (props) => {
   const { t, i18n } = useTranslation();
@@ -39,7 +41,9 @@ const NewPassword = (props) => {
       .required(t("NewPassword.7")),
   });
   const navigation = useNavigation();
+  const { isLoading, changePassword } = useContext(AuthContext);
   const onSubmit = (values) => {
+    changePassword(values.password, values.confirmPassword);
     navigation.navigate("Sections");
   };
   return (
@@ -96,7 +100,7 @@ const NewPassword = (props) => {
                 password: "",
                 confirmPassword: "",
               }}
-              onSubmit={onSubmit}
+              onSubmit={(values) => onSubmit(values)}
             >
               {({
                 handleChange,
@@ -125,6 +129,7 @@ const NewPassword = (props) => {
                   onBlur={handleBlur("confirmPassword")}
                   value={values.confirmPassword}
                 />{" "} */}
+                <Spinner visible={isLoading} />
                   <Field
                     component={CustomInput}
                     name="password"

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {   useContext, useState } from "react";
 import {
   View,
   Text,
@@ -24,6 +24,9 @@ import {
   verticalScale,
   moderateScale,
 } from "../../Resonsive/Matrix";
+import Spinner from "react-native-loading-spinner-overlay";
+import { AuthContext } from "../../context/AuthContext";
+
 const ForgotPassword = (props) => {
   const { t, i18n } = useTranslation();
   const emailValidationSchema = Yup.object().shape({
@@ -31,22 +34,13 @@ const ForgotPassword = (props) => {
       .email(t("ForgotPassword.3"))
       .required(t("ForgotPassword.4")),
   });
-
-  const [email, setEmail] = useState("");
-  const doUser = async function () {
-    const emailValue = email;
-    Parse.User.requestPasswordReset(emailValue)
-      .then(() => {
-        Alert.alert(t("ForgotPassword.5"));
-      })
-      .catch((error) => {
-        Alert.alert("Errors" * error.message);
-      });
-  };
   const navigation = useNavigation();
-  const OnSubmit = () => {
-    navigation.navigate("EnterCode");
-  };
+  const { isLoading, forgotPassword } = useContext(AuthContext);
+    const onSubmit = (values) => {
+      forgotPassword(values.email);
+      navigation.navigate("EnterCode");
+    };
+
   return (
     <View style={{ flex: 1, backgroundColor: "#FFF" }}>
       <ScrollView contentContainerStyle={styles.outContainer}>
@@ -105,7 +99,7 @@ const ForgotPassword = (props) => {
             <Formik
               validationSchema={emailValidationSchema}
               initialValues={{ email: "" }}
-              onSubmit={OnSubmit}
+               onSubmit={(values) => onSubmit(values)}
             >
               {({
                 handleChange,
@@ -117,6 +111,7 @@ const ForgotPassword = (props) => {
                 isValid,
               }) => (
                 <>
+                 <Spinner visible={isLoading} />
                   <TextInput
                     name="email"
                     placeholder={t("ForgotPassword.6")}

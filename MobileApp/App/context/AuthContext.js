@@ -4,7 +4,7 @@ import React, { createContext, useEffect, useState } from "react";
 import config, { BASE_URL } from "../config";
 
 export const AuthContext = createContext();
-axios.defaults.baseURL = "http://192.168.43.81:8000/api/v1";
+axios.defaults.baseURL = "http://172.20.10.4:8000/api/v1";
 axios.defaults.timeout = 3000;
 
 export const AuthProvider = ({ children }) => {
@@ -70,6 +70,47 @@ export const AuthProvider = ({ children }) => {
       // // AsyncStorage.setItem("userInfo", JSON.stringify(userInfo));
       // setIsLoading(false);
       // var accsess_token = userInformation.token;
+      const statusCode = response.status;
+      console.log(userInfo);
+      console.log("done");
+      Authorization(statusCode, response.data.token, "Successfully");
+      setIsLoading(false);
+    } catch (error) {
+      console.log(error.response.data);
+      setUserInfo(null);
+      console.log(error.response.status);
+      setStatusCode(error.response.status);
+
+      setIsLoading(false);
+    }
+  };
+  const forgotPassword = async (email) => {
+    try {
+      setIsLoading(true);
+      const response = await axios.post(`/auth/forgotPassword`, {
+        email
+      });
+      const statusCode = response.status;
+      console.log(userInfo);
+      console.log("done");
+      Authorization(statusCode, response.data.token, "Successfully");
+      setIsLoading(false);
+    } catch (error) {
+      console.log(error.response.data);
+      setUserInfo(null);
+      console.log(error.response.status);
+      setStatusCode(error.response.status);
+
+      setIsLoading(false);
+    }
+  };
+  const changePassword = async (password, confirmPassword) => {
+    try {
+      setIsLoading(true);
+      const response = await axios.post(`/auth/changePassword`, {
+        password, 
+        confirmPassword
+      });
       const statusCode = response.status;
       console.log(userInfo);
       console.log("done");
@@ -168,6 +209,7 @@ export const AuthProvider = ({ children }) => {
   };
   useEffect(() => {
     isLoggedIn();
+    
   }, []);
   return (
     <AuthContext.Provider
@@ -184,6 +226,8 @@ export const AuthProvider = ({ children }) => {
         Loggout,
         password,
         email,
+        forgotPassword,
+        changePassword
       }}
     >
       {children}
