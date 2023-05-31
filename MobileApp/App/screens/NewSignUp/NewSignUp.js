@@ -23,7 +23,6 @@ import CustomText from "../../CustomText";
 import { useTranslation } from "react-i18next";
 import Spinner from "react-native-loading-spinner-overlay";
 import { AuthContext } from "../../context/AuthContext";
-
 import React, { useContext, useState } from "react";
 const NewSignUp = () => {
   const [name, setName] = useState(null);

@@ -6,7 +6,6 @@ import config, { BASE_URL } from "../config";
 export const AuthContext = createContext();
 axios.defaults.baseURL = "http://192.168.43.81:8000/api/v1";
 axios.defaults.timeout = 3000;
-axios.defaults.headers.common["Authorization"] = "Token";
 
 export const AuthProvider = ({ children }) => {
   const [userInfo, setUserInfo] = useState(null);
@@ -15,6 +14,7 @@ export const AuthProvider = ({ children }) => {
   const [statusCode, setStatusCode] = useState(null);
   const [password, setPassword] = useState(null);
   const [email, setEmail] = useState(null);
+  // const [name, setName] = useState(null);
   const Authorization = async (status, token, errorMessage) => {
     try {
       const res = await axios
@@ -39,12 +39,12 @@ export const AuthProvider = ({ children }) => {
   };
 
   const register = (emailOutside, passwordOutside) => {
+    setIsLoading(true);
     setEmail(emailOutside);
     setPassword(passwordOutside);
     console.log(email);
     console.log(password);
     setIsLoading(false);
-
     // try {
     //   setIsLoading(true);
     //   email = emailOutside;
@@ -71,7 +71,6 @@ export const AuthProvider = ({ children }) => {
       // setIsLoading(false);
       // var accsess_token = userInformation.token;
       const statusCode = response.status;
-
       console.log(userInfo);
       console.log("done");
       Authorization(statusCode, response.data.token, "Successfully");
@@ -125,10 +124,11 @@ export const AuthProvider = ({ children }) => {
   const information = async (name, lastName, age, grade) => {
     try {
       setIsLoading(true);
-      console.log(name + lastName + email + age + grade + password);
+      console.log(name);
       const response = await axios.post(`/auth/register`, {
-        email,
-        password,
+        name: name,
+        email: email,
+        password: password,
       });
       console.log(response.data);
       setUserInfo(response.data);
