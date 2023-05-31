@@ -31,7 +31,7 @@ import { AuthContext } from "../../context/AuthContext";
 const Information = (props) => {
   const [firstName, setfirstName] = useState(null);
   const [lastName, setlastName] = useState(null);
-  const [email, setEmail] = useState(null);
+
   const [age, setAge] = useState(null);
   const [grade, setGrade] = useState(null);
   const { isLoading, information } = useContext(AuthContext);
@@ -57,8 +57,8 @@ const Information = (props) => {
       .required(t("Information.12")),
   });
   const navigation = useNavigation();
-  const onSubmit = () => {
-    navigation.navigate("Sections");
+  const onSubmit = (values) => {
+    information(values.firstName, values.lastName, values.age, values.grade);
   };
   return (
     <SafeAreaView style={styles.mainContainer}>
@@ -101,13 +101,13 @@ const Information = (props) => {
         <Formik
           validationSchema={InfoValidationSchema}
           initialValues={{
-            name: "",
+            firstName: "",
             lastName: "",
             email: "",
             grade: "",
             age: "",
           }}
-          onSubmit={onSubmit}
+          onSubmit={(values) => onSubmit(values)}
         >
           {({
             handleChange,
@@ -179,7 +179,7 @@ const Information = (props) => {
                 onChangeText={handleChange("grade")}
                 onBlur={handleBlur("grade")}
                 keyboardType="decimal-pad"
-                value={values.class}
+                value={values.grade}
                 style={styles.input}
               />
               {errors.grade && touched.grade && (
