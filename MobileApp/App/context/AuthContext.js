@@ -4,8 +4,6 @@ import React, { createContext, useEffect, useState } from "react";
 import config, { BASE_URL } from "../config";
 
 export const AuthContext = createContext();
-axios.defaults.baseURL = "http://192.168.43.81:8000/api/v1";
-axios.defaults.timeout = 3000;
 
 export const AuthProvider = ({ children }) => {
   const [userInfo, setUserInfo] = useState(null);
@@ -14,7 +12,11 @@ export const AuthProvider = ({ children }) => {
   const [statusCode, setStatusCode] = useState(null);
   const [password, setPassword] = useState(null);
   const [email, setEmail] = useState(null);
-  // const [name, setName] = useState(null);
+  // const [user, setUser] = useState(userInfo.user);
+  axios.defaults.baseURL = "http://192.168.43.81:8000/api/v1";
+  axios.defaults.timeout = 3000;
+  axios.defaults.headers.common["Authorization"] = "token";
+
   const Authorization = async (status, token, errorMessage) => {
     try {
       const res = await axios
@@ -103,20 +105,23 @@ export const AuthProvider = ({ children }) => {
   //     setIsLoading(false);
   //   });
   // }
-  const changeInfo = async (firstName, lastName, age, grade) => {
+  const changeInfo = async (name) => {
     try {
       setIsLoading(true);
-      const response = await fetch(BASE_URL);
-      axios.post(`/changeInfo`, {
-        firstName,
-        lastName,
-        age,
-        grade,
+      setUserInfo({ ...userInfo, user: { ...userInfo.user, name: name } });
+      console.log(userInfo);
+      const response = await axios.put(`/user/${userInfo.user._id}`, {
+        name,
+        email: userInfo.user.email,
       });
+      console.log("put");
       console.log(response.data);
+
+      // AsyncStorage.setItem("userInfo", JSON.stringify(response.data));
+      // setUserInfo(response.data);
       setIsLoading(false);
     } catch (error) {
-      console.log(error);
+      console.log(error.response.data);
       setIsLoading(false);
     }
   };
@@ -132,7 +137,7 @@ export const AuthProvider = ({ children }) => {
       });
       console.log(response.data);
       setUserInfo(response.data);
-      AsyncStorage.setItem("userInfo", JSON.stringify(userInfo));
+      AsyncStorage.setItem("userInfo", JSON.stringify(response.data));
 
       setIsLoading(false);
     } catch (error) {
@@ -146,7 +151,7 @@ export const AuthProvider = ({ children }) => {
       setSplashLoading(true);
       let userInfo = await AsyncStorage.getItem("userInfo");
       userInfo = JSON.parse(userInfo);
-
+      // AsyncStorage.removeItem("userInfo");
       if (userInfo) {
         setUserInfo(userInfo);
       }
@@ -167,7 +172,8 @@ export const AuthProvider = ({ children }) => {
     }
   };
   useEffect(() => {
-    isLoggedIn();
+    // isLoggedIn();
+    Loggout();
   }, []);
   return (
     <AuthContext.Provider

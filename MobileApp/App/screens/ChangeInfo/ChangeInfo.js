@@ -36,6 +36,7 @@ const ChangeInfo = (props) => {
   const { t, i18n } = useTranslation();
   const navigation = useNavigation();
   const onSubmit = () => {
+    changeInfo(firstName);
     navigation.goBack();
   };
   return (
@@ -82,6 +83,7 @@ const ChangeInfo = (props) => {
             name="firstName"
             placeholder={t("ChangeInfo.2")}
             style={styles.input}
+            onChangeText={(value) => setfirstName(value)}
           />
           <TextInput
             name="lastName"

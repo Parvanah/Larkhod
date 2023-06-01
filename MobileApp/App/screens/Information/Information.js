@@ -46,7 +46,11 @@ const Information = (props) => {
       .min(2, t("Information.4"))
       .max(50, t("Information.5"))
       .required(t("Information.6")),
-    email: Yup.string().email(t("Information.7")).required(t("Information.8")),
+    // email: Yup.string().email(t("Information.7")).required(t("Information.8")),
+    phonNumber: Yup.string().matches(
+      /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
+      "شماره تیلفون اشتباه است"
+    ),
     grade: Yup.number()
       .min(1, t("Information.9"))
       .max(12, t("Information.9"))
@@ -58,7 +62,13 @@ const Information = (props) => {
   });
   const navigation = useNavigation();
   const onSubmit = (values) => {
-    information(values.firstName, values.lastName, values.age, values.grade);
+    information(
+      values.firstName,
+      values.lastName,
+      values.age,
+      values.grade,
+      values.phonNumber
+    );
   };
   return (
     <SafeAreaView style={styles.mainContainer}>
@@ -103,7 +113,7 @@ const Information = (props) => {
           initialValues={{
             firstName: "",
             lastName: "",
-            email: "",
+            phonNumber: "",
             grade: "",
             age: "",
           }}
@@ -150,12 +160,12 @@ const Information = (props) => {
                 </CustomText>
               )}
               <TextInput
-                name="email"
+                name="phonNumber"
                 placeholder={t("Information.16")}
-                onChangeText={handleChange("email")}
-                onBlur={handleBlur("email")}
-                value={values.email}
-                keyboardType="email-address"
+                onChangeText={handleChange("phonNumber")}
+                onBlur={handleBlur("phonNumber")}
+                value={values.phonNumber}
+                keyboardType="phone-pad"
                 style={styles.input}
               />
               {errors.email && touched.email && (
