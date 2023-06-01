@@ -108,7 +108,7 @@ export const AuthProvider = ({ children }) => {
   const changeInfo = async (name) => {
     try {
       setIsLoading(true);
-      setUserInfo({ ...userInfo, user: { ...userInfo.user, name: name } });
+
       console.log(userInfo);
       const response = await axios.put(`/user/${userInfo.user._id}`, {
         name,
@@ -117,8 +117,11 @@ export const AuthProvider = ({ children }) => {
       console.log("put");
       console.log(response.data);
 
-      // AsyncStorage.setItem("userInfo", JSON.stringify(response.data));
-      // setUserInfo(response.data);
+      AsyncStorage.setItem(
+        "userInfo",
+        JSON.stringify({ ...userInfo, user: response.data })
+      );
+      setUserInfo({ ...userInfo, user: response.data });
       setIsLoading(false);
     } catch (error) {
       console.log(error.response.data);
@@ -126,7 +129,7 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  const information = async (name, lastName, age, grade) => {
+  const information = async (name, lastName, age, grade, phoneNumber) => {
     try {
       setIsLoading(true);
       console.log(name);
@@ -134,6 +137,7 @@ export const AuthProvider = ({ children }) => {
         name: name,
         email: email,
         password: password,
+        phone: phoneNumber,
       });
       console.log(response.data);
       setUserInfo(response.data);
@@ -172,8 +176,8 @@ export const AuthProvider = ({ children }) => {
     }
   };
   useEffect(() => {
-    // isLoggedIn();
-    Loggout();
+    isLoggedIn();
+    // Loggout();
   }, []);
   return (
     <AuthContext.Provider
