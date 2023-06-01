@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
 import Header from "./App/components/Header/Header";
 import SingUp from "./App/screens/SingUp/SingUp";
-import LogIn from "./App/screens/LogIn/LogIn";
+import LogIn from "./App/screens/Login/LogIn";
 import ForgotPassword from "./App/screens/ForgotPassword/ForgotPassword";
 import SendCode from "./App/screens/SendCode/SendCode";
 import NewPassword from "./App/screens/NewPassword/NewPassword";
@@ -24,7 +24,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path="/header" element={<Header  />} />
+        <Route exact path="/header" element={<Header />} />
         <Route exact path="/" element={<SingUp />} />
         <Route exact path="/login" element={<LogIn />} />
         <Route exact path="/forgotpassword" element={<ForgotPassword />} />

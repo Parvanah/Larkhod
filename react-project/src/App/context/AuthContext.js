@@ -1,8 +1,8 @@
 // import AsyncStorage from "@react-native-async-storage/async-storage";
-import {AsyncStorage} from "react";
+import { AsyncStorage } from "react";
 import axios from "axios";
 import React, { createContext, useEffect, useState } from "react";
-import config, { BASE_URL } from "../config";
+import { BASE_URL } from "../config";
 
 export const AuthContext = createContext();
 
@@ -11,12 +11,13 @@ export const AuthProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [splashLoading, setSplashLoading] = useState(false);
 
-  const register = async (email, password, confirmPassword) => {
+  const register = async (name, email, password) => {
     try {
       setIsLoading(true);
       const response = await axios.post(`${BASE_URL}/auth/register`, {
         email,
         password,
+        name,
       });
       console.log(response.data);
       setIsLoading(false);
