@@ -29,7 +29,7 @@ const NewSignUp = () => {
   // const [email, setEmail] = useState(null);
   // const [password, setPassword] = useState(null);
   const [confirmPassword, setConfirmPassword] = useState(null);
-  const { isLoading, register } = useContext(AuthContext);
+  const { isLoading, verifyEmail } = useContext(AuthContext);
 
   const { t, i18n } = useTranslation();
   const signUpValidationSchema = Yup.object().shape({
@@ -46,7 +46,7 @@ const NewSignUp = () => {
   });
   const navigation = useNavigation();
   const onSubmit = (values) => {
-    register(values.email, values.password);
+    verifyEmail(values.email);
     navigation.navigate("SignUpVerification");
   };
   const [seenVariable, setSeenVariable] = useState(true);
@@ -60,9 +60,10 @@ const NewSignUp = () => {
 
   return (
     <ScrollView>
-      <Spinner visible={isLoading} />
-
+     
+     <Spinner visible={isLoading} />
       <View style={styles.form}>
+      
         <Formik
           validationSchema={signUpValidationSchema}
           initialValues={{

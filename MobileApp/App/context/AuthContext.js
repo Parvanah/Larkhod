@@ -73,13 +73,13 @@ export const AuthProvider = ({ children }) => {
       const statusCode = response.status;
       console.log(userInfo);
       console.log("done");
-      Authorization(statusCode, response.data.token, "Successfully");
+      Authorization(statusCode, response?.data?.token, "Successfully");
       setIsLoading(false);
     } catch (error) {
-      console.log(error.response.data);
+      console.log(error?.response?.data);
       setUserInfo(null);
-      console.log(error.response.status);
-      setStatusCode(error.response.status);
+      console.log(error?.response?.status);
+      setStatusCode(error?.response?.status);
 
       setIsLoading(false);
     }
@@ -96,10 +96,10 @@ export const AuthProvider = ({ children }) => {
       Authorization(statusCode, response.data.token, "Successfully");
       setIsLoading(false);
     } catch (error) {
-      console.log(error.response.data);
+      console.log(error?.response?.data);
       setUserInfo(null);
-      console.log(error.response.status);
-      setStatusCode(error.response.status);
+      console.log(error?.response?.status);
+      setStatusCode(error?.response?.status);
 
       setIsLoading(false);
     }
@@ -117,10 +117,10 @@ export const AuthProvider = ({ children }) => {
       Authorization(statusCode, response.data.token, "Successfully");
       setIsLoading(false);
     } catch (error) {
-      console.log(error.response.data);
+      console.log(error?.response?.data);
       setUserInfo(null);
-      console.log(error.response.status);
-      setStatusCode(error.response.status);
+      console.log(error?.response?.status);
+      setStatusCode(error?.response?.status);
 
       setIsLoading(false);
     }
@@ -154,7 +154,7 @@ export const AuthProvider = ({ children }) => {
         age,
         grade,
       });
-      console.log(response.data);
+      console.log(response?.data);
       setIsLoading(false);
     } catch (error) {
       console.log(error);
@@ -171,13 +171,53 @@ export const AuthProvider = ({ children }) => {
         email: email,
         password: password,
       });
-      console.log(response.data);
-      setUserInfo(response.data);
+      console.log(response?.data);
+      setUserInfo(response?.data);
       AsyncStorage.setItem("userInfo", JSON.stringify(userInfo));
 
       setIsLoading(false);
     } catch (error) {
-      console.log(error.response.data);
+      console.log(error?.response?.data);
+      setIsLoading(false);
+    }
+  };
+  // const verifyEmail = async (cellCount) => {
+  //   try {
+  //     setIsLoading(true);
+  //     const response = await axios.post(`/auth/verifyEmail`, {
+  //       cellCount
+  //     });
+  //     const statusCode = response.status;
+  //     console.log(userInfo);
+  //     console.log("done");
+  //     Authorization(statusCode, response.data.token, "Successfully");
+  //     setIsLoading(false);
+  //   } catch (error) {
+  //     console.log(error?.response?.data);
+  //     setUserInfo(null);
+  //     console.log(error.response.status);
+  //     setStatusCode(error.response.status);
+
+  //     setIsLoading(false);
+  //   }
+  // };
+  const verifyEmail = async (email) => {
+    try {
+      setIsLoading(true);
+      const response = await axios.post(`/auth/verifyEmail`, {
+        email
+      });
+      const statusCode = response.status;
+      console.log(userInfo);
+      console.log("done");
+      Authorization(statusCode, response.data.token, "Successfully");
+      setIsLoading(false);
+    } catch (error) {
+      console.log(error?.response?.data);
+      setUserInfo(null);
+      console.log(error?.response?.status);
+      setStatusCode(error?.response?.status);
+
       setIsLoading(false);
     }
   };
@@ -227,7 +267,8 @@ export const AuthProvider = ({ children }) => {
         password,
         email,
         forgotPassword,
-        changePassword
+        changePassword,
+        verifyEmail
       }}
     >
       {children}
