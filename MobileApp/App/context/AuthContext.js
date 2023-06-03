@@ -1,10 +1,9 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import axios from "axios";
 import React, { createContext, useEffect, useState } from "react";
-import config, { BASE_URL } from "../config";
 
 export const AuthContext = createContext();
-axios.defaults.baseURL = "http://172.20.10.4:8000/api/v1";
+axios.defaults.baseURL = "http://192.168.43.81:8000/api/v1";
 axios.defaults.timeout = 3000;
 
 export const AuthProvider = ({ children }) => {
@@ -45,16 +44,6 @@ export const AuthProvider = ({ children }) => {
     console.log(email);
     console.log(password);
     setIsLoading(false);
-    // try {
-    //   setIsLoading(true);
-    //   email = emailOutside;
-    //   password = passwordOutside;
-    // } catch (error) {
-    //   // console.log(email);
-    //   console.log(error);
-    //   // console.log(error.response.data);
-    //   setIsLoading(false);
-    // }
   };
 
   const login = async (email, password) => {
@@ -70,7 +59,7 @@ export const AuthProvider = ({ children }) => {
       // // AsyncStorage.setItem("userInfo", JSON.stringify(userInfo));
       // setIsLoading(false);
       // var accsess_token = userInformation.token;
-      const statusCode = response.status;
+      const statusCode = response?.status;
       console.log(userInfo);
       console.log("done");
       Authorization(statusCode, response?.data?.token, "Successfully");
@@ -88,12 +77,12 @@ export const AuthProvider = ({ children }) => {
     try {
       setIsLoading(true);
       const response = await axios.post(`/auth/forgotPassword`, {
-        email
+        email,
       });
-      const statusCode = response.status;
+      const statusCode = response?.status;
       console.log(userInfo);
       console.log("done");
-      Authorization(statusCode, response.data.token, "Successfully");
+      Authorization(statusCode, response?.data.token, "Successfully");
       setIsLoading(false);
     } catch (error) {
       console.log(error?.response?.data);
@@ -108,10 +97,10 @@ export const AuthProvider = ({ children }) => {
     try {
       setIsLoading(true);
       const response = await axios.post(`/auth/changePassword`, {
-        password, 
-        confirmPassword
+        password,
+        confirmPassword,
       });
-      const statusCode = response.status;
+      const statusCode = response?.status;
       console.log(userInfo);
       console.log("done");
       Authorization(statusCode, response.data.token, "Successfully");
@@ -144,20 +133,26 @@ export const AuthProvider = ({ children }) => {
   //     setIsLoading(false);
   //   });
   // }
-  const changeInfo = async (firstName, lastName, age, grade) => {
+  const changeInfo = async (name) => {
     try {
       setIsLoading(true);
-      const response = await fetch(BASE_URL);
-      axios.post(`/changeInfo`, {
-        firstName,
-        lastName,
-        age,
-        grade,
+
+      console.log(userInfo);
+      const response = await axios.put(`/user/${userInfo.user._id}`, {
+        name,
+        email: userInfo.user.email,
       });
-      console.log(response?.data);
+      console.log("put");
+      console.log(response.data);
+
+      AsyncStorage.setItem(
+        "userInfo",
+        JSON.stringify({ ...userInfo, user: response?.data })
+      );
+      setUserInfo({ ...userInfo, user: response?.data });
       setIsLoading(false);
     } catch (error) {
-      console.log(error);
+      console.log(error.response?.data);
       setIsLoading(false);
     }
   };
@@ -205,7 +200,7 @@ export const AuthProvider = ({ children }) => {
     try {
       setIsLoading(true);
       const response = await axios.post(`/auth/verifyEmail`, {
-        email
+        email,
       });
       const statusCode = response.status;
       console.log(userInfo);
@@ -249,7 +244,6 @@ export const AuthProvider = ({ children }) => {
   };
   useEffect(() => {
     isLoggedIn();
-    
   }, []);
   return (
     <AuthContext.Provider
@@ -268,7 +262,7 @@ export const AuthProvider = ({ children }) => {
         email,
         forgotPassword,
         changePassword,
-        verifyEmail
+        verifyEmail,
       }}
     >
       {children}

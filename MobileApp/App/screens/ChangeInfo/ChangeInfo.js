@@ -10,7 +10,7 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import logo from "../../assets/White_PNG_Format_z.png";
-import telegram from "../../assets/Tele.png";
+import telegram from "../../assets/tele.png";
 import user from "../../assets/user.png";
 import arrow from "../../assets/Group_158.png";
 import CustomText from "../../CustomText";
@@ -36,8 +36,10 @@ const ChangeInfo = (props) => {
   const { t, i18n } = useTranslation();
   const navigation = useNavigation();
   const onSubmit = () => {
+    changeInfo(firstName);
     navigation.goBack();
   };
+
   return (
     <SafeAreaView style={styles.mainContainer}>
       <View style={styles.top}>
@@ -82,6 +84,7 @@ const ChangeInfo = (props) => {
             name="firstName"
             placeholder={t("ChangeInfo.2")}
             style={styles.input}
+            onChangeText={(value) => setfirstName(value)}
           />
           <TextInput
             name="lastName"

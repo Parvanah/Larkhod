@@ -11,7 +11,7 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import logo from "../../assets/White_PNG_Format_z.png";
-import telegram from "../../assets/Tele.png";
+import telegram from "../../assets/tele.png";
 import user from "../../assets/user.png";
 import arrow from "../../assets/Group_158.png";
 import CustomText from "../../CustomText";
@@ -30,13 +30,13 @@ import Spinner from "react-native-loading-spinner-overlay";
 import { AuthContext } from "../../context/AuthContext";
 
 const Information = (props) => {
-//  const handlePress =() =>{
-//   ImagePicker.openPicker({
-//     multiple: true
-//   }).then(images => {
-//     console.log(images);
-//   });
-//  }
+  //  const handlePress =() =>{
+  //   ImagePicker.openPicker({
+  //     multiple: true
+  //   }).then(images => {
+  //     console.log(images);
+  //   });
+  //  }
   const { isLoading, information } = useContext(AuthContext);
   const { t, i18n } = useTranslation();
   const InfoValidationSchema = Yup.object().shape({
@@ -92,7 +92,7 @@ const Information = (props) => {
           </Svg>
           <Image source={telegram} style={styles.telegram} />
         </View>
-        <View style={styles.imageWrapper} >
+        <View style={styles.imageWrapper}>
           <Image source={user} style={styles.img} />
         </View>
         <TouchableOpacity style={styles.textUserWapper}>

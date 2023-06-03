@@ -1,4 +1,4 @@
-import React, {useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import {
   View,
   Text,
@@ -44,7 +44,7 @@ const NewPassword = (props) => {
   const { isLoading, changePassword } = useContext(AuthContext);
   const onSubmit = (values) => {
     changePassword(values.password, values.confirmPassword);
-    navigation.navigate("Sections");
+    navigation.navigate("SignUp");
   };
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#FFF" }}>
@@ -129,7 +129,7 @@ const NewPassword = (props) => {
                   onBlur={handleBlur("confirmPassword")}
                   value={values.confirmPassword}
                 />{" "} */}
-                <Spinner visible={isLoading} />
+                  <Spinner visible={isLoading} />
                   <Field
                     component={CustomInput}
                     name="password"

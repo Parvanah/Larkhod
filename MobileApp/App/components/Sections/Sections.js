@@ -39,7 +39,7 @@ import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
 
 const Sections = (props) => {
-  const { Loggout } = useContext(AuthContext);
+  const { Loggout, userInfo } = useContext(AuthContext);
   const navigation = useNavigation();
   const onSubmit = () => {
     navigation.navigate("ChangeInfo");
@@ -124,7 +124,9 @@ const Sections = (props) => {
         </Svg>
         <View style={styles.top}>
           <View>
-            <CustomText style={styles.userName}>Khatima Sajadi</CustomText>
+            <CustomText style={styles.userName}>
+              {userInfo.user.name}
+            </CustomText>
             <TouchableOpacity onPress={Loggout}>
               <CustomText style={styles.userName}>Log Out</CustomText>
             </TouchableOpacity>
