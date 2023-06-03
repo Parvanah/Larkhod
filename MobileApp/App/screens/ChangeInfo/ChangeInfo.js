@@ -26,10 +26,30 @@ import Spinner from "react-native-loading-spinner-overlay";
 import { AuthContext } from "../../context/AuthContext";
 
 const ChangeInfo = (props) => {
-  const [firstName, setfirstName] = useState(null);
-  const [lastName, setlastName] = useState(null);
-  const [age, setAge] = useState(null);
-  const [grade, setGrade] = useState(null);
+  const InformationValidationSchema = Yup.object().shape({
+    firstName: Yup.string()
+      .min(2, t("ChangeInfo.7"))
+      .max(50, t("ChangeInfo.8"))
+      .required(t("ChangeInfo.9")),
+    lastName: Yup.string()
+      .min(2, t("ChangeInfo.10"))
+      .max(50, t("ChangeInfo.11"))
+      .required(t("ChangeInfo.12")),
+    grade: Yup.number()
+      .min(1, t("ChangeInfo.13"))
+      .max(12, t("ChangeInfo.13"))
+      .required(t("ChangeInfo.14")),
+    age: Yup.number()
+      .min(12, t("ChangeInfo.15"))
+      .max(50, t("ChangeInfo.15"))
+      .required(t("ChangeInfo.16")),
+      phonNumber: Yup.string()
+      .matches(
+        /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
+        t("ChangeInfo.18")
+      )
+      .required(t("ChangeInfo.16")),
+  });
 
   const { isLoading, changeInfo } = useContext(AuthContext);
 
@@ -76,9 +96,29 @@ const ChangeInfo = (props) => {
         </TouchableOpacity>
       </View>
       <ScrollView contentContainerStyle={styles.svgWrapper}>
+      <Formik
+          validationSchema={InformationValidationSchema}
+          initialValues={{
+            firstName: "",
+            lastName: "",
+            grade: "",
+            age: "",
+            phonNumbe: "",
+          }}
+          onSubmit={() => onSubmit()}
+        >
+          {({
+            handleChange,
+            handleBlur,
+            handleSubmit,
+            values,
+            errors,
+            touched,
+            isValid,
+          }) => (
         <View style={styles.form}>
           <Spinner visible={isLoading} />
-          <TextInput
+          {/* <TextInput
             name="firstName"
             placeholder={t("ChangeInfo.2")}
             style={styles.input}
@@ -99,8 +139,74 @@ const ChangeInfo = (props) => {
             placeholder={t("ChangeInfo.5")}
             keyboardType="numeric"
             style={styles.input}
-          />
-          <TouchableOpacity style={styles.submitBtn} onPress={onSubmit}>
+          /> */}
+          <TextInput
+                name="firstName"
+                placeholder={t("ChangeInfo.2")}
+                onChangeText={handleChange("firstName")}
+                onBlur={handleBlur("firstName")}
+                value={values.firstName}
+                keyboardType="first-name"
+                variant="rounded"
+                style={styles.input}
+              />
+              {errors.firstName && touched.firstName && (
+                <CustomText style={styles.errorText}>
+                  {errors.firstName}
+                </CustomText>
+              )}
+              <TextInput
+                name="lastName"
+                placeholder={t("ChangeInfo.3")}
+                onChangeText={handleChange("lastName")}
+                onBlur={handleBlur("lastName")}
+                value={values.lastName}
+                keyboardType="last-name"
+                style={styles.input}
+              />
+              {errors.lastName && touched.lastName && (
+                <CustomText style={styles.errorText}>
+                  {errors.lastName}
+                </CustomText>
+              )}
+              <TextInput
+                placeholder={t("ChangeInfo.4")}
+                name="age"
+                onChangeText={handleChange("age")}
+                onBlur={handleBlur("age")}
+                keyboardType="numeric"
+                value={values.age}
+                style={styles.input}
+              />
+              {errors.age && touched.age && (
+                <CustomText style={styles.errorText}>{errors.age}</CustomText>
+              )}
+              <TextInput
+                placeholder={t("ChangeInfo.5")}
+                name="grade"
+                onChangeText={handleChange("grade")}
+                onBlur={handleBlur("grade")}
+                keyboardType="decimal-pad"
+                value={values.grade}
+                style={styles.input}
+              />
+              {errors.grade && touched.grade && (
+                <CustomText style={styles.errorText}>{errors.grade}</CustomText>
+              )}
+              <TextInput
+                placeholder={t("ChangeInfo.17")}
+                name="phonNumber"
+                onChangeText={handleChange("phonNumber")}
+                onBlur={handleBlur("phonNumber")}
+                keyboardType="decimal-pad"
+                value={values.phonNumber}
+                style={styles.input}
+              />
+              {errors.phonNumber && touched.phonNumber && (
+                <CustomText style={styles.errorText}>{errors.phonNumber}</CustomText>
+              )}
+           
+          <TouchableOpacity style={styles.submitBtn} onPress={handleSubmit}>
             {/* onPress={()=> {changeInfo(firstName, lastName, age, grade)}} > */}
             <CustomText style={styles.submitText}>
               {" "}
@@ -108,6 +214,8 @@ const ChangeInfo = (props) => {
             </CustomText>
           </TouchableOpacity>
         </View>
+         )}
+         </Formik>
         <Svg
           xmlns="http://www.w3.org/2000/svg"
           width={"100%"}

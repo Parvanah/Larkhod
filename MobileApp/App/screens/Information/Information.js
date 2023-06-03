@@ -28,15 +28,31 @@ import {
 import React, { useContext, useEffect, useState } from "react";
 import Spinner from "react-native-loading-spinner-overlay";
 import { AuthContext } from "../../context/AuthContext";
+import ImagePicker from "react-native";
 
 const Information = (props) => {
-//  const handlePress =() =>{
-//   ImagePicker.openPicker({
-//     multiple: true
-//   }).then(images => {
-//     console.log(images);
-//   });
-//  }
+  // const requesPermission = async () =>{
+  //   const { granted } = await ImagePicker?.requestCameraRollPermission
+  //   if(!granted)
+  //   alert('you need to enable permission to access the library'); 
+  // }
+  // useEffect(()=>{
+  //   requesPermission();
+  // }, [])
+  const handleChoosePhoto = () => {
+ const options = {
+  noData: true
+ };
+ ImagePicker.launchImageLibrary(options, response => {
+  console.log("response", response);
+  if(response.uri){
+    this.setState({photo: response});
+  }
+ });
+  };
+  const {photo} = this.state;
+
+
   const { isLoading, information } = useContext(AuthContext);
   const { t, i18n } = useTranslation();
   const InfoValidationSchema = Yup.object().shape({
@@ -57,10 +73,16 @@ const Information = (props) => {
       .min(12, t("Information.11"))
       .max(50, t("Information.11"))
       .required(t("Information.12")),
+      phonNumber: Yup.string()
+      .matches(
+        /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
+        t("Information.22")
+      )
+      .required(t("Information.21")),
   });
   const navigation = useNavigation();
   const onSubmit = (values) => {
-    information(values.firstName, values.lastName, values.age, values.grade);
+    information(values.firstName, values.lastName, values.age, values.grade, values.phonNumber);
   };
   return (
     <SafeAreaView style={styles.mainContainer}>
@@ -92,9 +114,9 @@ const Information = (props) => {
           </Svg>
           <Image source={telegram} style={styles.telegram} />
         </View>
-        <View style={styles.imageWrapper} >
+        <TouchableOpacity style={styles.imageWrapper} onPress={handleChoosePhoto}>
           <Image source={user} style={styles.img} />
-        </View>
+        </TouchableOpacity>
         <TouchableOpacity style={styles.textUserWapper}>
           <CustomText style={styles.usertext}>{t("Information.13")}</CustomText>
         </TouchableOpacity>
@@ -108,6 +130,7 @@ const Information = (props) => {
             email: "",
             grade: "",
             age: "",
+            phonNumber:"",
           }}
           onSubmit={(values) => onSubmit(values)}
         >
@@ -186,6 +209,18 @@ const Information = (props) => {
               />
               {errors.grade && touched.grade && (
                 <CustomText style={styles.errorText}>{errors.grade}</CustomText>
+              )}
+              <TextInput
+                placeholder={t("Information.20")}
+                name="phonNumber"
+                onChangeText={handleChange("phonNumber")}
+                onBlur={handleBlur("phonNumber")}
+                keyboardType="decimal-pad"
+                value={values.phonNumber}
+                style={styles.input}
+              />
+              {errors.phonNumber && touched.phonNumber && (
+                <CustomText style={styles.errorText}>{errors.phonNumber}</CustomText>
               )}
               <TouchableOpacity
                 style={styles.submitBtn}
