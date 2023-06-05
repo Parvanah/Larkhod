@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useContext, useState } from "react";
 import {
   View,
   Text,
@@ -27,6 +27,8 @@ import {
 } from "react-native-confirmation-code-field";
 import CustomText from "../../CustomText";
 import { useTranslation } from "react-i18next";
+// import Spinner from "react-native-loading-spinner-overlay";
+// import { AuthContext } from "../../context/AuthContext";
 
 const CELL_COUNT = 6;
 const SignUpVerification = () => {
@@ -38,6 +40,11 @@ const SignUpVerification = () => {
     setValue,
   });
   const navigation = useNavigation();
+  // const { isLoading, verifyEmail } = useContext(AuthContext);
+  const handleSubmit = (value)=> {
+    navigation.navigate("Information");
+    // verifyEmail(value.cellCount);
+  }
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#FFF" }}>
       <ScrollView contentContainerStyle={styles.outContainer}>
@@ -95,6 +102,7 @@ const SignUpVerification = () => {
           </View>
         </View>
         <View style={styles.InContainer}>
+        {/* <Spinner visible={isLoading} /> */}
           <CodeField
             ref={ref}
             {...props}
@@ -118,7 +126,7 @@ const SignUpVerification = () => {
           />
           <TouchableOpacity
             style={styles.submitBtn}
-            onPress={() => navigation.navigate("Information")}
+            onPress={handleSubmit}
           >
             <CustomText style={styles.submitText}>
               {t("SignUpVerification.1")}

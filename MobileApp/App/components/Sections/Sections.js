@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   TextInput,
   ScrollView,
+  Alert,
 } from "react-native";
 import Svg, {
   Defs,
@@ -34,8 +35,11 @@ import JsonFiles from "../SchoolSubjects.json";
 import CustomText from "../../CustomText";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useTranslation } from "react-i18next";
+import { AuthContext } from "../../context/AuthContext";
+import { useContext } from "react";
 
 const Sections = (props) => {
+  const { Loggout, userInfo } = useContext(AuthContext);
   const navigation = useNavigation();
   const onSubmit = () => {
     navigation.navigate("ChangeInfo");
@@ -119,7 +123,14 @@ const Sections = (props) => {
           </Svg>
         </Svg>
         <View style={styles.top}>
-          <CustomText style={styles.userName}>Khatima Sajadi</CustomText>
+          <View>
+            <CustomText style={styles.userName}>
+              {userInfo.user.name}
+            </CustomText>
+            <TouchableOpacity onPress={Loggout}>
+              <CustomText style={styles.userName}>Log Out</CustomText>
+            </TouchableOpacity>
+          </View>
           <TouchableOpacity style={styles.imageWrapper} onPress={onSubmit}>
             <Image source={user} style={styles.img} />
           </TouchableOpacity>

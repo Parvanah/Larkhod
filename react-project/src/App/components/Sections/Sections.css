@@ -1,6 +1,7 @@
 .section {
     background-color: white;
     color: rgb(81, 187, 228);
+    font-family: "Bahij Helvetica";
     height: 100px;
     display: flex;
     flex-direction: column;
@@ -23,6 +24,7 @@
 #title p {
     color: rgba(60, 152, 189, 1);
     font-size: 30px;
+    font-family: "Bahij Helvetica";
 }
 #ul-section {
     display: flex;

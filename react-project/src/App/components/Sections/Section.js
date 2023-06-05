@@ -172,7 +172,7 @@ const Section = (props) => {
       </ul>
       <div className="svg2">
         <foreignObject width={"40%"} height={"40%"} x={5} y={5}>
-          <svg
+        <svg
             xmlns="http://www.w3.org/2000/svg"
             width={95.444}
             height={83.662}

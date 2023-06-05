@@ -23,14 +23,13 @@ import CustomText from "../../CustomText";
 import { useTranslation } from "react-i18next";
 import Spinner from "react-native-loading-spinner-overlay";
 import { AuthContext } from "../../context/AuthContext";
-
 import React, { useContext, useState } from "react";
 const NewSignUp = () => {
   const [name, setName] = useState(null);
-  const [email, setEmail] = useState(null);
-  const [password, setPassword] = useState(null);
+  // const [email, setEmail] = useState(null);
+  // const [password, setPassword] = useState(null);
   const [confirmPassword, setConfirmPassword] = useState(null);
-  const { isLoading, register } = useContext(AuthContext);
+  const { isLoading, verifyEmail, register } = useContext(AuthContext);
 
   const { t, i18n } = useTranslation();
   const signUpValidationSchema = Yup.object().shape({
@@ -62,7 +61,6 @@ const NewSignUp = () => {
   return (
     <ScrollView>
       <Spinner visible={isLoading} />
-
       <View style={styles.form}>
         <Formik
           validationSchema={signUpValidationSchema}

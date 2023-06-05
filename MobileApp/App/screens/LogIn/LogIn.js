@@ -27,7 +27,7 @@ import { AuthContext } from "../../context/AuthContext";
 const LogIn = () => {
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
-  const { isLoading, login } = useContext(AuthContext);
+  const { isLoading, login, nav, userInfo } = useContext(AuthContext);
   const { t, i18n } = useTranslation();
   const loginValidationSchema = Yup.object().shape({
     email: Yup.string().email(t("LogIn.8")).required(t("LogIn.9")),
@@ -37,7 +37,6 @@ const LogIn = () => {
   const navigation = useNavigation();
   const OnSubmit = (values) => {
     login(values.email, values.password);
-    navigation.navigate("Sections");
   };
   const handle = () => {
     navigation.navigate("ForgotPassword");

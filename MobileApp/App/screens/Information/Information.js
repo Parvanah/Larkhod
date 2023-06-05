@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   StyleSheet,
   ScrollView,
+  ImagePicker,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import logo from "../../assets/White_PNG_Format_z.png";
@@ -24,18 +25,19 @@ import {
   verticalScale,
   moderateScale,
 } from "../../Resonsive/Matrix";
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Spinner from "react-native-loading-spinner-overlay";
 import { AuthContext } from "../../context/AuthContext";
 
 const Information = (props) => {
-  const [firstName, setfirstName] = useState(null);
-  const [lastName, setlastName] = useState(null);
-  const [email, setEmail] = useState(null);
-  const [age, setAge] = useState(null);
-  const [grade, setGrade] = useState(null);
+  //  const handlePress =() =>{
+  //   ImagePicker.openPicker({
+  //     multiple: true
+  //   }).then(images => {
+  //     console.log(images);
+  //   });
+  //  }
   const { isLoading, information } = useContext(AuthContext);
-
   const { t, i18n } = useTranslation();
   const InfoValidationSchema = Yup.object().shape({
     firstName: Yup.string()
@@ -57,8 +59,8 @@ const Information = (props) => {
       .required(t("Information.12")),
   });
   const navigation = useNavigation();
-  const onSubmit = () => {
-    navigation.navigate("Sections");
+  const onSubmit = (values) => {
+    information(values.firstName, values.lastName, values.age, values.grade);
   };
   return (
     <SafeAreaView style={styles.mainContainer}>
@@ -101,13 +103,13 @@ const Information = (props) => {
         <Formik
           validationSchema={InfoValidationSchema}
           initialValues={{
-            name: "",
+            firstName: "",
             lastName: "",
             email: "",
             grade: "",
             age: "",
           }}
-          onSubmit={onSubmit}
+          onSubmit={(values) => onSubmit(values)}
         >
           {({
             handleChange,
@@ -179,7 +181,7 @@ const Information = (props) => {
                 onChangeText={handleChange("grade")}
                 onBlur={handleBlur("grade")}
                 keyboardType="decimal-pad"
-                value={values.class}
+                value={values.grade}
                 style={styles.input}
               />
               {errors.grade && touched.grade && (
