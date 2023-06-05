@@ -47,25 +47,25 @@ const ChangeProfile = () => {
 	  const errors = {};
 	  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 	  if (!values.name) {
-		errors.name = "!نام ضروری است";
+		errors.name = <>{t("changeprofile.9")}</>;
 	  }
 		if (!values.lastname) {
-			errors.lastname = "!تخلص ضروری است";
+			errors.lastname = <>{t("changeprofile.10")}</>;
 		}
 
 	  if (!values.username) {
-		errors.username = "!نام کاربری ضروری است";
+		errors.username =<>{t("changeprofile.11")}</>;
 	  }
 	  if (!values.email) {
-		errors.email = "!ایمیل ضروری است";
+		errors.email = <>{t("changeprofile.12")}</>;
 	  } else if (!regex.test(values.email)) {
-		errors.email = "!این ایمیل معتبر نیست";
+		errors.email = <>{t("changeprofile.13")}</>;
 	  }
 	  if (!values.age) {
-		errors.age = "!سن ضروری است";
+		errors.age = <>{t("changeprofile.14")}</>;
 	 }
 	 if (!values.senf) {
-		errors.senf = "!صنف ضروری است";
+		errors.senf = <>{t("changeprofile.15")}</>;
 	 }
 	  return errors;
 	};

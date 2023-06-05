@@ -1,3 +1,6 @@
+import Spinner from "react-dom";
+import { AuthContext } from "../App/context/AuthContext";
+import { useContext } from "react";
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 import { FaFacebookF, FaInstagram ,FaYoutube ,FaTwitter} from "react-icons/fa";
@@ -9,6 +12,7 @@ import { Link, useNavigate } from "react-router-dom";
 <link rel="stylesheet" href="./Suggestion.css" />;
 
 const Suggestion = () => {
+  const { isLoading, register } = useContext(AuthContext);
   const { t } = useTranslation();
 
     function handleClick(lang) {
@@ -32,6 +36,8 @@ const Suggestion = () => {
 	const handleSubmit = (e) => {
 	  e.preventDefault();
 	  setFormErrors(validate(formValues));
+    console.log( formValues.name, formValues.senf,formValues.phone,formValues.city, formValues.email, formValues.massege);
+    register( formValues.name, formValues.senf,formValues.phone,formValues.city, formValues.email, formValues.massege);
 	  setIsSubmit(true);
 	  
 	};
@@ -46,25 +52,25 @@ const Suggestion = () => {
 	  const errors = {};
 	  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 	  if (!values.name) {
-		errors.name = "!نام ضروری است";
+		errors.name =<>{t("suggestion.10")}</>;
 	  }
 		if (!values.message) {
-			errors.message = "!پیام ضروری است";
+			errors.message = <>{t("suggestion.11")}</>;
 		}
 
 	  if (!values.city) {
-		errors.city = "!نام شهر ضروری است";
+		errors.city =<>{t("suggestion.12")}</>;
 	  }
 	  if (!values.email) {
-		errors.email = "!ایمیل ضروری است";
+		errors.email = <>{t("suggestion.13")}</>;
 	  } else if (!regex.test(values.email)) {
-		errors.email = "!این ایمیل معتبر نیست";
+		errors.email = <>{t("suggestion.14")}</>;
 	  }
 	  if (!values.phone) {
-		errors.phone = "!نمبر تماس ضروری است";
+		errors.phone = <>{t("suggestion.15")}</>;
 	 }
 	 if (!values.senf) {
-		errors.senf = "!صنف ضروری است";
+		errors.senf =<>{t("suggestion.16")}</>;
 	 }
 	  return errors;
 	};
@@ -105,7 +111,7 @@ const Suggestion = () => {
               name="name"
               placeholder={t("suggestion.3")}
               value={formValues.name}
-              onChange={handleChange}
+              onChange={(e) => handleChange(e)}
             />
 			 <p id='error-suggestion' className='er-suggestion'>{formErrors.name}</p>
 		
@@ -117,7 +123,7 @@ const Suggestion = () => {
               name="phone"
               placeholder={t("suggestion.5")}
               value={formValues.phone}
-              onChange={handleChange}
+              onChange={(e) => handleChange(e)}
             />
           <p id='error-suggestion' className='er-suggestion'>{formErrors.phone}</p>
   </div>
@@ -129,7 +135,7 @@ const Suggestion = () => {
               name="senf"
               placeholder={t("suggestion.4")}
               value={formValues.senf}
-              onChange={handleChange}
+              onChange={(e) => handleChange(e)}
             />
           <p id='error-suggestion' className="er-suggestion">{formErrors.senf}</p>
 			
@@ -140,7 +146,7 @@ const Suggestion = () => {
               name="city"
               placeholder={t("suggestion.6")}
               value={formValues.city}
-              onChange={handleChange}
+              onChange={(e) => handleChange(e)}
             />
 			<p id='error-suggestion' className="er-suggestion">{formErrors.city}</p>
 		
@@ -155,7 +161,7 @@ const Suggestion = () => {
               name="email"
               placeholder={t("suggestion.7")}
               value={formValues.email}
-              onChange={handleChange}
+              onChange={(e) => handleChange(e)}
             />
 			<p id='er-email-message-suggestion' className='er-suggestion'>{formErrors.email}</p>
            
@@ -166,7 +172,7 @@ const Suggestion = () => {
               name="message"
               placeholder={t("suggestion.8")}
               value={formValues.message}
-              onChange={handleChange}
+              onChange={(e) => handleChange(e)}
             />
 			<p id='er-email-message-suggestion' className='er-suggestion'>{formErrors.message}</p>
 			

@@ -44,25 +44,25 @@ const Profile = () => {
 	  const errors = {};
 	  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 	  if (!values.name) {
-		errors.name = "!نام ضروری است";
+		errors.name = <>{t("profile.9")}</>;
 	  }
 		if (!values.lastname) {
-			errors.lastname = "!تخلص ضروری است";
+			errors.lastname =  <>{t("profile.10")}</>;
 		}
 
 	  if (!values.username) {
-		errors.username = "!نام کاربری ضروری است";
+		errors.username =  <>{t("profile.11")}</>;
 	  }
 	  if (!values.email) {
-		errors.email = "!ایمیل ضروری است";
+		errors.email =  <>{t("profile.12")}</>;
 	  } else if (!regex.test(values.email)) {
-		errors.email = "!این ایمیل معتبر نیست";
+		errors.email =  <>{t("profile.13")}</>;
 	  }
 	  if (!values.age) {
-		errors.age = "!سن ضروری است";
+		errors.age =  <>{t("profile.14")}</>;
 	 }
 	 if (!values.senf) {
-		errors.senf = "!صنف ضروری است";
+		errors.senf =  <>{t("profile.15")}</>;
 	 }
 	  return errors;
 	};
@@ -137,7 +137,7 @@ const Profile = () => {
               value={formValues.senf}
               onChange={handleChange}
             />
-          <p className='error'>{formErrors.senf}</p>
+          <p className='error_profile'>{formErrors.senf}</p>
 			
           </div>
 

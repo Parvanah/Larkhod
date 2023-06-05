@@ -1,8 +1,11 @@
+import Spinner from "react-dom";
+import { AuthContext } from "../../context/AuthContext";
+import { useContext } from "react";
+import { Link, useNavigate, useNavigation } from "react-router-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
 import logo from '../../assets/PNG_Format.png';
 import img1 from '../../assets/Group_158.png';
 import img2 from '../../assets/Group_158_a.png';
@@ -11,7 +14,9 @@ import "./ForgotPassword.css"
 import React from 'react'
 <link rel="stylesheet" href="ForgotPassword.css" />;
 
+
 const ForgotPassword = () => {
+	const { isLoading, register } = useContext(AuthContext);
 	const { t } = useTranslation();
 
 	function handleClick(lang) {
@@ -34,6 +39,8 @@ const ForgotPassword = () => {
 	const handleSubmit = (e) => {
 	  e.preventDefault();
 	  setFormErrors(validate(formValues));
+	  console.log( formValues.email);
+	  register( formValues.email);
 	  setIsSubmit(true);
 	};
   
@@ -47,9 +54,9 @@ const ForgotPassword = () => {
 	  const errors = {};
 	  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 	  if (!values.email) {
-		errors.email = "!ایمیل ضروری است";
+		errors.email =<>{t("forgotpassword.5")}</>;
 	  } else if (!regex.test(values.email)) {
-		errors.email = "!این ایمیل آدرس معتبر نیست";
+		errors.email = <>{t("forgotpassword.6")}</>;
 		// (t("grads.1"))
 	  }
 	  return errors;
@@ -101,7 +108,7 @@ const ForgotPassword = () => {
 		name="email"
 		placeholder={t("forgotpassword.3")}
 		value={formValues.email}
-		onChange={handleChange}
+		onChange={(e) => handleChange(e)}
 	  />
 	  <p  className="error_forgot_password">{formErrors.email}</p>
    <button id="button-next_forgot_password">{t("forgotpassword.4")}</button>

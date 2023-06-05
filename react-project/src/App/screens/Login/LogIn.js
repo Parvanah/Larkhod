@@ -1,3 +1,7 @@
+import Spinner from "react-dom";
+import { AuthContext } from "../../context/AuthContext";
+import { useContext } from "react";
+import { Link, useNavigate, useNavigation } from "react-router-dom";
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 import "./LogIn.css"
@@ -5,24 +9,27 @@ import { FaGoogle } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import img1 from '../../assets/mg.png';
 import React from 'react'
-import { Link, useNavigate } from "react-router-dom";
 <link rel="stylesheet" href="LogIn.css" />;
 
 
 
 
 const LogIn = () => {
-  const { t } = useTranslation();
+  const { isLoading, register } = useContext(AuthContext);
 
+
+
+  const { t } = useTranslation();
   function handleClick(lang) {
     i18next.changeLanguage(lang)
   }
 
 
 
-
-
-  const initialValues = { email: "", password: "", };
+  const initialValues = {
+    email: "",
+    password: "",
+  };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
@@ -36,8 +43,28 @@ const LogIn = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormErrors(validate(formValues));
+    console.log( formValues.email, formValues.password);
+    register( formValues.email, formValues.password);
     setIsSubmit(true);
   };
+
+
+  // const initialValues = { email: "", password: "", };
+  // const [formValues, setFormValues] = useState(initialValues);
+  // const [formErrors, setFormErrors] = useState({});
+  // const [isSubmit, setIsSubmit] = useState(false);
+  // const navigate = useNavigate();
+
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setFormValues({ ...formValues, [name]: value });
+  // };
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   setFormErrors(validate(formValues));
+  //   setIsSubmit(true);
+  // };
 
   useEffect(() => {
     console.log(formErrors);
@@ -49,14 +76,14 @@ const LogIn = () => {
     const errors = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
     if (!values.email) {
-      errors.email = "!ایمیل ضروری است";
+      errors.email = <>{t("login.9")}</>;
     } else if (!regex.test(values.email)) {
-      errors.email = "!این ایمیل آدرس معتبر نیست";
+      errors.email = <>{t("login.10")}</>;
     }
     if (!values.password) {
-      errors.password = "!رمز عبور ضروری است";
-    } else if (values.password.length < 4) {
-      errors.password = "!رمزعبور باید بیشتر از چهار حرف باشد";
+      errors.password =  <>{t("login.11")}</>;
+    } else if (values.password.length < 8) {
+      errors.password =  <>{t("login.12")}</>;
     }
     
     return errors;
@@ -99,7 +126,7 @@ const LogIn = () => {
               name="email"
               placeholder={t("login.3")}
               value={formValues.email}
-              onChange={handleChange}
+              onChange={(e) => handleChange(e)}
             />
             <p  className="error_login">{formErrors.email}</p>
           </div>
@@ -111,7 +138,7 @@ const LogIn = () => {
               name="password"
               placeholder={t("login.4")}
               value={formValues.password}
-              onChange={handleChange}
+              onChange={(e) => handleChange(e)}
             />
             <p  className="error_login">{formErrors.password}</p>
           </div>
