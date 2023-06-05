@@ -82,10 +82,17 @@ const SingUp = () => {
       errors.password = <>{t("singup.13")}</>;
     }
     if (!values.confirmpassword) {
+
       errors.confirmpassword = <>{t("singup.14")}</>;
     } else if (values.confirmpassword !== values.password) {
       errors.confirmpassword =
       <>{t("singup.15")}</>;
+
+      errors.confirmpassword = "!رمزعبور را تکرار کنید";
+    } else if (values.confirmpassword !== values.password) {
+      errors.confirmpassword =
+        "!تکرار رمز عبور باید با رمزعبور مطابقت داشته باشد";
+
     }
 
     return errors;
@@ -136,6 +143,7 @@ const SingUp = () => {
           ) : (
             <pre></pre>
           )}
+
 
           <form onSubmit={handleSubmit}>
             <div>
@@ -399,3 +407,69 @@ export default SingUp;
 // }
 
 // export default SingUp
+
+
+//           <form onSubmit={handleSubmit}>
+//             <div>
+//               <input
+//                 id="input_singup"
+//                 type="text"
+//                 name="username"
+//                 placeholder={t("singup.3")}
+//                 value={formValues.username}
+//                 onChange={(e) => handleChange(e)}
+//               />
+//               <p className="error_singup">{formErrors.username}</p>
+
+//               <div className="field">
+//                 <input
+//                   id="input_singup"
+//                   type="text"
+//                   name="email"
+//                   placeholder={t("singup.4")}
+//                   value={formValues.email}
+//                   onChange={(e) => handleChange(e)}
+//                 />
+//                 <p className="error_singup">{formErrors.email}</p>
+//               </div>
+
+//               <div className="field">
+//                 <input
+//                   id="input_singup"
+//                   type="password"
+//                   name="password"
+//                   placeholder={t("singup.5")}
+//                   value={formValues.password}
+//                   onChange={(e) => handleChange(e)}
+//                 />
+//                 <p className="error_singup">{formErrors.password}</p>
+//               </div>
+
+//               <div className="field">
+//                 <input
+//                   id="input_singup"
+//                   type="password"
+//                   name="confirmpassword"
+//                   placeholder={t("singup.6")}
+//                   value={formValues.confirmpassword}
+//                   onChange={(e) => handleChange(e)}
+//                 />
+//                 <p className="error_singup">{formErrors.confirmpassword}</p>
+//               </div>
+//             </div>
+//             <button className="acount_button_singuo">{t("singup.1")}</button>
+//           </form>
+//           <h4 className="p_singup">{t("singup.7")}</h4>
+//           <Link to="google.com">
+//             <button className="google_button_singup">
+//               <FaGoogle className="google_icon_singup" />
+//               <div className="google_p_singup">{t("singup.8")}</div>
+//             </button>
+//           </Link>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default SingUp;

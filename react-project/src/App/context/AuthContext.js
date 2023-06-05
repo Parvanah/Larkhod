@@ -4,6 +4,8 @@ import axios from "axios";
 import React, {setStatusCode, Authorization, createContext, useEffect, useState } from "react";
 axios.defaults.baseURL = "http://192.168.43.29:8000/api/v1";
 axios.defaults.timeout = 3000;
+
+// import AsyncStorage from "@react-native-async-storage/async-storage";
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
@@ -276,6 +278,7 @@ export const AuthProvider = ({ children }) => {
     </AuthContext.Provider>
   );
 };
+
 // import {AsyncStorage} from "react";
 // import axios from "axios";
 // import React, { createContext, useEffect, useState } from "react";
@@ -410,3 +413,4 @@ export const AuthProvider = ({ children }) => {
 //     </AuthContext.Provider>
 //   );
 // };
+

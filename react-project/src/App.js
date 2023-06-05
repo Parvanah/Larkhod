@@ -24,7 +24,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path="/header" element={<Header  />} />
+        <Route exact path="/header" element={<Header />} />
         <Route exact path="/" element={<SingUp />} />
         <Route exact path="/login" element={<LogIn />} />
         <Route exact path="/forgotpassword" element={<ForgotPassword />} />
