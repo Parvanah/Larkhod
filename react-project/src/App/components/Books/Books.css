@@ -809,3 +809,9 @@
     }
 
 }
+/* Mobile 1 Responsive */
+@media screen and (max-width:360px) and (min-width:100px){
+    #Books {
+        display:none;
+    }
+}

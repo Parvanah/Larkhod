@@ -3,6 +3,7 @@
     padding: 0;
     text-decoration: none;
     list-style-type: none;
+    font-family: "Bahij Helvetica";
 }
 .full_header{
     color: white;
@@ -116,7 +117,7 @@
     filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.2));
     overflow: hidden;
     line-height: 92px;
-    font-family: Bahij Helvetica Neue;
+	font-family: "Bahij Helvetica";
     font-size: 60px;
     color: rgba(255,255,255,1);
     letter-spacing: -0.4px;
@@ -130,7 +131,7 @@
 	filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.2));
     overflow: hidden;
     line-height: 92px;
-    font-family: Bahij Helvetica Neue;
+    font-family: "Bahij Helvetica";
    font-style: normal;
    font-weight: bold;
    font-size: 60px;

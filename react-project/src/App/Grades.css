@@ -1,0 +1,874 @@
+.button-grade-grade{ 
+	display: inline-block;
+	/* position: relative;
+	top: 150px;
+	left: 200px; */
+	z-index: 100;
+}
+.li-grade-n{
+ margin-right: 18px;
+ font-size: 20px;
+ color: rgba(16,84,162,1);
+ font-family: "Bahij Helvetica";
+ letter-spacing: -0.4px;
+}
+.sanaf-grade-n{
+	width: 22px;
+	height: 25px;
+	margin-left: 18px;
+}
+.link-grade-n{
+	overflow-x: hidden;
+	width: 530px;
+	height: 34px;
+	background-color:rgba(212,228,232,1);
+	/* background-color: red; */
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 12px;
+	border-radius: 32px;
+	text-align: center;
+	align-items: center;
+
+}	
+	.all-grade-n {
+		transform-origin: 0px 0px;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(255,255,255,1);
+		overflow: hidden;
+		
+	}
+
+	#svg-backgroung-grade-n{
+		fill: url(#svg-backgroung-grade);
+		
+	}
+	.svg-backgroung-grade-n{
+		overflow: visible;
+		position: absolute;
+		left: 0px;
+		top: 1.436px;
+		transform: matrix(1,0,0,1,0,0);
+		
+	}
+	#image-grade-n{
+		position: absolute;
+		left:850.687px;
+		top: 200.045px;
+		overflow: visible;
+
+	}
+	.image-grade-n{
+		width: 580.313px;
+		height: 450.955px;	
+	}
+  
+	.p-two-grade-n{
+		font-style:normal;font-weight:lighter; font-size:25px; 
+		left: 110.208px;
+		top: 192px;
+		position: absolute;
+		overflow: hidden;
+		width: 695px;
+		height: 230px;
+		line-height: 79px;
+		text-align: center;
+		font-family: Bahij Helvetica Neue;
+		/* background-color: red; */
+		color: rgb(255, 255, 255);
+		letter-spacing: -0.4px;
+		font-family: "Bahij Helvetica";
+	}
+	.p-one-grade-n{
+		left: 110.208px;
+		top: 152px;
+		position: absolute;
+		overflow: hidden;
+		width: 695px;
+		height: 230px;
+		line-height: 79px;
+		text-align: center;
+		font-family: "Bahij Helvetica";
+		font-style: normal;
+		font-weight: bold;
+		font-size: 35px;
+		color: rgba(255,255,255,1);
+		letter-spacing: -0.4px;
+	}
+	#svg-grade-n{
+		opacity: 0.52;
+		fill: rgba(255,255,255,1);
+	
+	}
+	.svg-grade-n{
+	
+		position: absolute;
+		width: 385.886px;
+		height: 300.713px;
+		left:-40px;
+		top: 400.287px;
+		/* background-color: red; */
+		transform: matrix(1,0,0,1,0,0);
+	}
+
+.flesh-image-grade-n{
+	margin: 0px;
+	padding: 0px;
+	display: inline-block;
+	position: relative;
+	top: 80px;
+	left: 80px;
+}
+#class-container-n{
+	display: flex;
+	flex-direction: column;
+	height:300px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	margin-top: 200px;
+	z-index: 200;
+	padding-top:-100px;
+
+}
+
+@media screen and (max-width:360px)and (min-width:100px){
+	.button-grade{ 
+		display: inline-block;
+		position: relative;
+		top: 190px;
+		left: 55px;
+	
+	}
+	.li-grade{
+	 margin-right: 15px;
+	 font-size: 15px;
+	 color: rgba(16,84,162,1);
+	 letter-spacing: -0.4px;
+	}
+	.sanaf-grade{
+		width: 13px;
+		height: 15px;
+		margin-left: 15px;
+	}
+	.link-grade{
+		width: 250px;
+		height: 25px;
+		background-color:rgba(212,228,232,1);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-bottom: 6px;
+		border-radius: 32px;
+		text-align: center;
+		align-items: center;
+	}	
+		.all-grade {
+			transform-origin: 0px 0px;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(255,255,255,1);
+			overflow: hidden;
+			
+		}
+	
+		#svg-backgroung-grade {
+			fill: url(#svg-backgroung-grade);
+		}
+		.svg-backgroung-grade {
+			overflow: visible;
+			position: absolute;
+			left: 0px;
+			top: 1.436px;
+			transform: matrix(1,0,0,1,0,0);
+		}
+		#image-grade {
+			position: absolute;
+			left: 110.687px;
+			top: 400.045px;
+			overflow: visible;
+			
+		}
+		.image-grade {
+			width: 250.313px;
+			height: 210.955px;
+			
+		}
+		#svg-grade {
+			opacity: 0.52;
+			fill: rgba(255,255,255,1);
+		
+		}
+		.svg-grade {
+		
+			position: absolute;
+			width: 140.886px;
+			height: 90.713px;
+			left: -20px;
+			top: 518.045px;
+			
+			transform: matrix(1,0,0,1,0,0);
+		}
+	  
+		.p-two-grade{
+			font-style:normal;font-weight:lighter; font-size:20px; 
+			left: -167px;
+			top: 142px;
+			position: absolute;
+			overflow: hidden;
+			width: 695px;
+			height: 230px;
+			line-height: 79px;
+			text-align: center;
+			font-family: Bahij Helvetica Neue;
+			color: rgb(255, 255, 255);
+			letter-spacing: -0.4px;
+		}
+		.p-one-grade{
+			left: -167px;
+			top: 102px;
+			position: absolute;
+			overflow: hidden;
+			width: 695px;
+			height: 230px;
+			line-height: 79px;
+			text-align: center;
+			font-family: Bahij Helvetica Neue;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 30px;
+			color: rgba(255,255,255,1);
+			letter-spacing: -0.4px;
+		}
+		
+	
+	.flesh-image-grade{
+		margin: 0px;
+		padding: 0px;
+		width: 22px;
+		display: inline-block;
+		position: relative;
+		top: 40px;
+		left: 40px;
+	}
+}
+
+@media screen and (max-width:576px)and (min-width:360px){
+	.button-grade{ 
+		display: inline-block;
+		position: relative;
+		top: 190px;
+		left: 100px;
+	
+	}
+	.li-grade{
+	 margin-right: 18px;
+	 font-size: 19px;
+	 color: rgba(16,84,162,1);
+	 letter-spacing: -0.4px;
+	}
+	.sanaf-grade{
+		width: 19px;
+		height: 20px;
+		margin-left: 18px;
+	}
+	.link-grade{
+		width: 370px;
+		height: 30px;
+		background-color:rgba(212,228,232,1);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-bottom: 12px;
+		border-radius: 32px;
+		text-align: center;
+		align-items: center;
+	}	
+		.all-grade {
+			transform-origin: 0px 0px;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(255,255,255,1);
+			overflow: hidden;
+			
+		}
+	
+		#svg-backgroung-grade {
+			fill: url(#svg-backgroung-grade);
+		}
+		.svg-backgroung-grade {
+			overflow: visible;
+			position: absolute;
+			left: 0px;
+			top: 1.436px;
+			transform: matrix(1,0,0,1,0,0);
+		}
+		#image-grade {
+			position: absolute;
+			left: 277.687px;
+			top: 390.045px;
+			overflow: visible;
+			
+		}
+		.image-grade {
+			width: 300.313px;
+			height: 230.955px;
+			
+		}
+		#svg-grade {
+			opacity: 0.52;
+			fill: rgba(255,255,255,1);
+		
+		}
+		.svg-grade {
+		
+			position: absolute;
+			width: 200.886px;
+			height: 150.713px;
+			left: -16px;
+			top: 470.045px;
+			
+			transform: matrix(1,0,0,1,0,0);
+		}
+	  
+		.p-two-grade{
+			font-style:normal;font-weight:lighter; font-size:25px; 
+			left: -63px;
+			top: 142px;
+			position: absolute;
+			overflow: hidden;
+			width: 695px;
+			height: 230px;
+			line-height: 79px;
+			text-align: center;
+			font-family: Bahij Helvetica Neue;
+			color: rgb(255, 255, 255);
+			letter-spacing: -0.4px;
+		}
+		.p-one-grade{
+			left: -63px;
+			top: 102px;
+			position: absolute;
+			overflow: hidden;
+			width: 695px;
+			height: 230px;
+			line-height: 79px;
+			text-align: center;
+			font-family: Bahij Helvetica Neue;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 35px;
+			color: rgba(255,255,255,1);
+			letter-spacing: -0.4px;
+		}
+		
+	
+	.flesh-image-grade{
+		margin: 0px;
+		padding: 0px;
+		width: 22px;
+		display: inline-block;
+		position: relative;
+		top: 50px;
+		left: 50px;
+	}
+}
+
+
+
+
+/* @media screen and (max-width:360px)and (min-width:100px){
+	.button-grade{ 
+		display: inline-block;
+		position: relative;
+		top: 190px;
+		left: 55px;
+	
+	}
+	.li-grade{
+	 margin-right: 15px;
+	 font-size: 15px;
+	 color: rgba(16,84,162,1);
+	 letter-spacing: -0.4px;
+	}
+	.sanaf-grade{
+		width: 13px;
+		height: 15px;
+		margin-left: 15px;
+	}
+	.link-grade{
+		width: 250px;
+		height: 25px;
+		background-color:rgba(212,228,232,1);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-bottom: 6px;
+		border-radius: 32px;
+		text-align: center;
+		align-items: center;
+	}	
+		.all-grade {
+			transform-origin: 0px 0px;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(255,255,255,1);
+			overflow: hidden;
+			
+		}
+	
+		#svg-backgroung-grade {
+			fill: url(#svg-backgroung-grade);
+		}
+		.svg-backgroung-grade {
+			overflow: visible;
+			position: absolute;
+			left: 0px;
+			top: 1.436px;
+			transform: matrix(1,0,0,1,0,0);
+		}
+		#image-grade {
+			position: absolute;
+			left: 110.687px;
+			top: 400.045px;
+			overflow: visible;
+			
+		}
+		.image-grade {
+			width: 250.313px;
+			height: 210.955px;
+			
+		}
+		#svg-grade {
+			opacity: 0.52;
+			fill: rgba(255,255,255,1);
+		
+		}
+		.svg-grade {
+		
+			position: absolute;
+			width: 140.886px;
+			height: 90.713px;
+			left: -20px;
+			top: 518.045px;
+			
+			transform: matrix(1,0,0,1,0,0);
+		}
+	  
+		.p-two-grade{
+			font-style:normal;font-weight:lighter; font-size:20px; 
+			left: -167px;
+			top: 142px;
+			position: absolute;
+			overflow: hidden;
+			width: 695px;
+			height: 230px;
+			line-height: 79px;
+			text-align: center;
+			font-family: Bahij Helvetica Neue;
+			color: rgb(255, 255, 255);
+			letter-spacing: -0.4px;
+		}
+		.p-one-grade{
+			left: -167px;
+			top: 102px;
+			position: absolute;
+			overflow: hidden;
+			width: 695px;
+			height: 230px;
+			line-height: 79px;
+			text-align: center;
+			font-family: Bahij Helvetica Neue;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 30px;
+			color: rgba(255,255,255,1);
+			letter-spacing: -0.4px;
+		}
+		
+	
+	.flesh-image-grade{
+		margin: 0px;
+		padding: 0px;
+		width: 22px;
+		display: inline-block;
+		position: relative;
+		top: 40px;
+		left: 40px;
+	}
+} */
+
+@media screen and (max-width:768px)and (min-width:576px){
+	.button-grade{ 
+		display: inline-block;
+		position: relative;
+		top: 190px;
+		left: 150px;
+	
+	}
+	.li-grade{
+	 margin-right: 18px;
+	 font-size: 19px;
+	 color: rgba(16,84,162,1);
+	 letter-spacing: -0.4px;
+	}
+	.sanaf-grade{
+		width: 19px;
+		height: 20px;
+		margin-left: 18px;
+	}
+	.link-grade{
+		width: 480px;
+		height: 30px;
+		background-color:rgba(212,228,232,1);;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-bottom: 12px;
+		border-radius: 32px;
+		text-align: center;
+		align-items: center;
+	}	
+		.all-grade {
+			transform-origin: 0px 0px;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(255,255,255,1);
+			overflow: hidden;
+			
+		}
+	
+		#svg-backgroung-grade {
+			fill: url(#svg-backgroung-grade);
+		}
+		.svg-backgroung-grade {
+			overflow: visible;
+			position: absolute;
+			left: 0px;
+			top: 1.436px;
+			transform: matrix(1,0,0,1,0,0);
+		}
+		#image-grade {
+			position: absolute;
+			left: 338.687px;
+			top: 360.045px;
+			overflow: visible;
+			
+		}
+		.image-grade {
+			width: 430.313px;
+			height: 270.955px;
+			
+		}
+		#svg-grade {
+			opacity: 0.52;
+			fill: rgba(255,255,255,1);
+		
+		}
+		.svg-grade {
+		
+			position: absolute;
+			width: 230.886px;
+			height: 180.713px;
+			left: -20px;
+			top: 450.045px;
+			
+			transform: matrix(1,0,0,1,0,0);
+		}
+	  
+		.p-two-grade{
+			font-style:normal;font-weight:lighter; font-size:25px; 
+			left: 43px;
+			top: 142px;
+			position: absolute;
+			overflow: hidden;
+			width: 695px;
+			height: 230px;
+			line-height: 79px;
+			text-align: center;
+			font-family: Bahij Helvetica Neue;
+			color: rgb(255, 255, 255);
+			letter-spacing: -0.4px;
+		}
+		.p-one-grade{
+			left: 43px;
+			top: 102px;
+			position: absolute;
+			overflow: hidden;
+			width: 695px;
+			height: 230px;
+			line-height: 79px;
+			text-align: center;
+			font-family: Bahij Helvetica Neue;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 35px;
+			color: rgba(255,255,255,1);
+			letter-spacing: -0.4px;
+		}
+		
+	
+	.flesh-image-grade{
+		margin: 0px;
+		padding: 0px;
+		width: 25px;
+		display: inline-block;
+		position: relative;
+		top: 50px;
+		left: 50px;
+	}
+}
+
+
+
+
+@media screen and (max-width:992px)and (min-width:768px){
+	.button-grade{ 
+		display: inline-block;
+		position: relative;
+		top: 232px;
+		left: 100px;
+	
+	}
+	.li-grade{
+	 margin-right: 18px;
+	 font-size: 22px;
+	 color: rgba(16,84,162,1);
+	 letter-spacing: -0.4px;
+	}
+	.sanaf-grade{
+		width: 22px;
+		height: 25px;
+		margin-left: 18px;
+	}
+	.link-grade{
+		width: 430px;
+		height: 34px;
+		background-color:rgba(212,228,232,1);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-bottom: 12px;
+		border-radius: 32px;
+		text-align: center;
+		align-items: center;
+	}	
+		.all-grade {
+			transform-origin: 0px 0px;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(255,255,255,1);
+			overflow: hidden;
+			
+		}
+	
+		#svg-backgroung-grade {
+			fill: url(#svg-backgroung-grade);
+		}
+		.svg-backgroung-grade {
+			overflow: visible;
+			position: absolute;
+			left: 0px;
+			top: 1.436px;
+			transform: matrix(1,0,0,1,0,0);
+		}
+		#image-grade {
+			position: absolute;
+			left: 515.687px;
+			top: 275.045px;
+			overflow: visible;
+			
+		}
+		.image-grade {
+			width: 480.313px;
+			height: 350.955px;
+			
+		}
+	  
+		.p-two-grade{
+			font-style:normal;font-weight:lighter; font-size:25px; 
+			left: -30.208px;
+			top: 192px;
+			position: absolute;
+			overflow: hidden;
+			width: 695px;
+			height: 230px;
+			line-height: 79px;
+			text-align: center;
+			font-family: Bahij Helvetica Neue;
+			color: rgb(255, 255, 255);
+			letter-spacing: -0.4px;
+		}
+		.p-one-grade{
+			left: -30.208px;
+			top: 152px;
+			position: absolute;
+			overflow: hidden;
+			width: 695px;
+			height: 230px;
+			line-height: 79px;
+			text-align: center;
+			font-family: Bahij Helvetica Neue;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 35px;
+			color: rgba(255,255,255,1);
+			letter-spacing: -0.4px;
+		}
+		#svg-grade {
+			opacity: 0.52;
+			fill: rgba(255,255,255,1);
+		
+		}
+		.svg-grade {
+		
+			position: absolute;
+			width: 350.886px;
+			height: 230.713px;
+			left: -50px;
+			top: 394.287px;
+			
+			transform: matrix(1,0,0,1,0,0);
+		}
+	
+	.flesh-image-grade{
+		margin: 0px;
+		padding: 0px;
+		display: inline-block;
+		position: relative;
+		top: 80px;
+		left: 80px;
+	}
+}
+
+
+
+
+
+
+@media screen and (max-width:1200px)and (min-width:992px){
+	.button-grade{ 
+		display: inline-block;
+		position: relative;
+		top: 232px;
+		left: 130px;
+	
+	}
+	.li-grade{
+	 margin-right: 18px;
+	 font-size: 22px;
+	 color: rgba(16,84,162,1);
+	 letter-spacing: -0.4px;
+	}
+	.sanaf-grade{
+		width: 22px;
+		height: 25px;
+		margin-left: 18px;
+	}
+	.link-grade{
+		width: 480px;
+		height: 34px;
+		background-color:rgba(212,228,232,1);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-bottom: 12px;
+		border-radius: 32px;
+		text-align: center;
+		align-items: center;
+	}	
+		.all-grade {
+			transform-origin: 0px 0px;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(255,255,255,1);
+			overflow: hidden;
+			
+		}
+	
+		#svg-backgroung-grade {
+			fill: url(#svg-backgroung-grade);
+		}
+		.svg-backgroung-grade {
+			overflow: visible;
+			position: absolute;
+			left: 0px;
+			top: 1.436px;
+			transform: matrix(1,0,0,1,0,0);
+		}
+		#image-grade {
+			position: absolute;
+			left: 650.687px;
+			top: 195.045px;
+			overflow: visible;
+			
+		}
+		.image-grade {
+			width: 560.313px;
+			height: 430.955px;
+			
+		}
+	  
+		.p-two-grade{
+			font-style:normal;font-weight:lighter; font-size:25px; 
+			left: 10.208px;
+			top: 192px;
+			position: absolute;
+			overflow: hidden;
+			width: 695px;
+			height: 230px;
+			line-height: 79px;
+			text-align: center;
+			font-family: Bahij Helvetica Neue;
+			color: rgb(255, 255, 255);
+			letter-spacing: -0.4px;
+		}
+		.p-one-grade{
+			left: 10.208px;
+			top: 152px;
+			position: absolute;
+			overflow: hidden;
+			width: 695px;
+			height: 230px;
+			line-height: 79px;
+			text-align: center;
+			font-family: Bahij Helvetica Neue;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 35px;
+			color: rgba(255,255,255,1);
+			letter-spacing: -0.4px;
+		}
+		#svg-grade {
+			opacity: 0.52;
+			fill: rgba(255,255,255,1);
+		
+		}
+		.svg-grade {
+		
+			position: absolute;
+			width: 335.886px;
+			height: 250.713px;
+			left: -28px;
+			top: 372.287px;
+			
+			transform: matrix(1,0,0,1,0,0);
+		}
+	
+	.flesh-image-grade{
+		margin: 0px;
+		padding: 0px;
+		display: inline-block;
+		position: relative;
+		top: 80px;
+		left: 80px;
+	}
+}
