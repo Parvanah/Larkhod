@@ -9,7 +9,12 @@ import {
   Alert,
   ScrollView,
 } from "react-native";
-
+import CustomText from "../../CustomText";
+import {
+  horizontalScale,
+  verticalScale,
+  moderateScale,
+} from "../../Resonsive/Matrix";
 import arrow from "../../assets/Group_158.png";
 import bookicon from "../../assets/Group_404.png";
 import { useNavigation } from "@react-navigation/native";
@@ -23,22 +28,25 @@ import Svg, {
   Stop,
   LinearGradient,
 } from "react-native-svg";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { useTranslation } from "react-i18next";
+
 const Lessons = (props) => {
   const navigation = useNavigation();
   const route = useRoute();
   var [num, setNum] = useState(1);
-
+  const { t, i18n } = useTranslation();
+  const path = "../../assets";
   return (
     <View style={style.container}>
       <TouchableOpacity style={style.arrowStyle}>
         <Svg
           data-name="Group 275"
           xmlns="http://www.w3.org/2000/svg"
-          width={"100%"}
+          width={16}
           height={10}
           viewBox="0 0 16 10"
           {...props}
-          onPress={() => navigation.goBack()}
         >
           <Defs>
             <ClipPath id="a">
@@ -58,7 +66,8 @@ const Lessons = (props) => {
       <Svg
         xmlns="http://www.w3.org/2000/svg"
         width={"100%"}
-        height={170.069}
+        height={verticalScale(170.069)}
+        preserveAspectRatio="none"
         viewBox="0 0 360 165.069"
         {...props}
       >
@@ -73,15 +82,31 @@ const Lessons = (props) => {
           <TouchableOpacity>
             <Image source={bookicon} />
           </TouchableOpacity>
-          <Text style={style.topTitle}>درس های {route.params.title} </Text>
+          <CustomText style={style.topTitle}>
+            {t("Lesson.1")}
+            {route.params.title}
+          </CustomText>
         </View>
       </Svg>
-      <FlatList
-        contentContainerStyle={style.bottom}
-        data={route.params.lessons}
-        renderItem={({ item }) => {
-          return (
-            <View>
+      <View style={style.pdfWrapper}>
+        <TouchableOpacity style={style.pdf} activeOpacity={0.5}>
+          <Image source={require(path + "/Group_408.png")} />
+          <CustomText style={style.pdfText}>{t("Lesson.2")}</CustomText>
+        </TouchableOpacity>
+      </View>
+      <View
+        style={{
+          width: "100%",
+          alignItems: "center",
+          justifyContent: "center",
+          paddingBottom: verticalScale(245),
+        }}
+      >
+        <FlatList
+          contentContainerStyle={style.bottom}
+          data={route.params.lessons}
+          renderItem={({ item }) => {
+            return (
               <TouchableOpacity
                 style={style.lessonBtn}
                 onPress={() =>
@@ -94,27 +119,32 @@ const Lessons = (props) => {
                   })
                 }
               >
-                <Text style={style.lessonBtnText}>0{num}</Text>
-                <Text style={style.lessonBtnText}>{item.label}</Text>
+                <CustomText style={style.lessonBtnText}>0{num}</CustomText>
+                <CustomText style={style.lessonBtnText}>
+                  {item.label}
+                </CustomText>
               </TouchableOpacity>
-            </View>
-          );
-        }}
-      />
+            );
+          }}
+        />
+      </View>
     </View>
   );
 };
 const style = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection: "column",
     backgroundColor: "#3C98BD",
+    alignItems: "center",
+    width: "100%",
   },
   top: {
     // backgroundColor: "#fff",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 30,
+    marginTop: verticalScale(30),
     // paddingHorizontal: 20,
     // height: 200,
     // borderBottomLeftRadius: 90,
@@ -122,35 +152,74 @@ const style = StyleSheet.create({
     // width: "100%",
   },
   arrowStyle: {
-    marginRight: 200,
-    marginLeft: -40,
-    marginTop: 10,
-    marginBottom: -50,
-
+    marginRight: "60%",
+    marginLeft: verticalScale(-100),
+    marginTop: verticalScale(0),
+    marginBottom: verticalScale(-40),
+    paddingTop: verticalScale(20),
     zIndex: 100,
-    padding: 10,
+    // paddingVertical: verticalScale(10),
+    paddingHorizontal: horizontalScale(10),
+    // backgroundColor: "red",
   },
   topTitle: {
     color: "rgba(60,152,189,1)",
-    fontSize: 18,
-    marginTop: 10,
+    fontSize: moderateScale(15),
+    marginTop: verticalScale(10),
     textAlign: "center",
+    width: horizontalScale(300),
   },
   bottom: {
-    paddingTop: 20,
+    paddingTop: verticalScale(0),
+    flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
+
+    width: "60%",
+
+    // marginHorizontal: "20%",
   },
   lessonBtn: {
     backgroundColor: "#fff",
-    width: 300,
-    marginVertical: 3,
-    padding: 15,
-    borderRadius: 40,
+    width: "80%",
+    marginVertical: verticalScale(3),
+    paddingVertical: verticalScale(15),
+    paddingHorizontal: horizontalScale(15),
+    borderRadius: moderateScale(40),
     alignItems: "center",
     justifyContent: "space-between",
     flexDirection: "row",
   },
-  lessonBtnText: { color: "rgba(60,152,189,1)", fontSize: 17 },
+  lessonBtnText: {
+    color: "rgba(60,152,189,1)",
+    fontSize: moderateScale(17),
+    width: "100%",
+  },
+  pdfWrapper: {
+    backgroundColor: "#FFF",
+    width: "90%",
+    flexDirection: "row-reverse",
+    alignItems: "center",
+    justifyContent: "center",
+    // marginHorizontal: "40%",
+    marginVertical: verticalScale(10),
+    paddingVertical: verticalScale(10),
+    // paddingHorizontal: horizontalScale(20),
+    borderRadius: moderateScale(50),
+  },
+  pdf: {
+    flexDirection: "row-reverse",
+    justifyContent: "space-between",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "80%",
+    // marginRight: horizontalScale(10),
+    height: verticalScale(43),
+  },
+  pdfText: {
+    marginHorizontal: 10,
+    fontSize: moderateScale(15),
+    color: "rgba(60,152,189,1)",
+  },
 });
 export default Lessons;

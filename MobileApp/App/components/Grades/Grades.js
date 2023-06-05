@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   View,
   Text,
@@ -7,7 +7,19 @@ import {
   ScrollView,
   FlatList,
 } from "react-native";
-import Svg, { Defs, LinearGradient, Stop, Path } from "react-native-svg";
+import {
+  horizontalScale,
+  verticalScale,
+  moderateScale,
+} from "../../Resonsive/Matrix";
+import Svg, {
+  Defs,
+  LinearGradient,
+  Stop,
+  Path,
+  ClipPath,
+  G,
+} from "react-native-svg";
 import classLogo from "../../assets/Group_211_y.png";
 import styleSection from "../Sections/Section.Style";
 import SearchBar from "../../screens/SearchBar";
@@ -17,45 +29,74 @@ import user from "../../assets/user.png";
 import arrow from "../../assets/Group_158_a.png";
 import { useNavigation } from "@react-navigation/native";
 import { useRoute } from "@react-navigation/native";
+import Styles from "../Sections/Section.Style";
+import CustomText from "../../CustomText";
+import { useTranslation } from "react-i18next";
+import { SafeAreaView } from "react-native-safe-area-context";
+
 const Grades = (props) => {
   const route = useRoute();
   const navigation = useNavigation();
+  var [inputSearch, setInputSearch] = useState("");
+
+  const { t, i18n } = useTranslation();
   const onSubmit = () => {
     navigation.navigate("ChangeInfo");
   };
   const Renderitem = ({ item }) => {
-    return (
-      <TouchableOpacity
-        key={item.id}
-        style={style.grades}
-        onPress={() =>
-          navigation.navigate("Books", {
-            grade: item.grade,
-            subjects: item.subjects,
-            params: {
-              id: item.id,
-              name: item.name,
-            },
-          })
-        }
-      >
-        <Text style={style.gradesText}>{item.grade}</Text>
-        <Image source={item.img} />
-      </TouchableOpacity>
-    );
+    if (inputSearch == "") {
+      return (
+        <TouchableOpacity
+          key={item.id}
+          style={{ width: "100%" }}
+          onPress={() =>
+            navigation.navigate("Books", {
+              grade: item.label,
+              subjects: item.subjects,
+              params: {
+                id: item.id,
+                name: item.name,
+              },
+            })
+          }
+        >
+          <View style={style.grades}>
+            <CustomText style={style.gradesText}>{item.label}</CustomText>
+            <Image source={classLogo} style={style.gradeLogo} />
+          </View>
+        </TouchableOpacity>
+      );
+    } else if (item.label.includes(inputSearch)) {
+      return (
+        <TouchableOpacity
+          key={item.id}
+          style={{ width: "100%" }}
+          onPress={() =>
+            navigation.navigate("Books", {
+              grade: item.label,
+              subjects: item.subjects,
+              params: {
+                id: item.id,
+                name: item.name,
+              },
+            })
+          }
+        >
+          <View style={style.grades}>
+            <CustomText style={style.gradesText}>{item.label}</CustomText>
+            <Image source={classLogo} style={style.gradeLogo} />
+          </View>
+        </TouchableOpacity>
+      );
+    }
   };
   return (
-    <View style={styleSection.container}>
-      <TouchableOpacity
-        style={style.arrowStyle}
-        onPress={() => navigation.navigate("Sections")}
-      >
-        <Image source={arrow} />
-      </TouchableOpacity>
+    <View style={style.container}>
       <Svg
         xmlns="http://www.w3.org/2000/svg"
-        width={360}
-        height={162.314}
+        width={"100%"}
+        height={verticalScale(190.069)}
+        preserveAspectRatio="none"
         viewBox="0 0 360 162.314"
         {...props}
       >
@@ -80,105 +121,181 @@ const Grades = (props) => {
         />
       </Svg>
       <View style={styleSection.top}>
-        <Text style={styleSection.userName}>Khatima Sajadi</Text>
-        <TouchableOpacity style={styleSection.imageWrapper} onPress={onSubmit}>
-          <Image source={user} style={styleSection.img} />
+        <View style={style.arrow}>
+          <Svg
+            data-name="Group 197"
+            xmlns="http://www.w3.org/2000/svg"
+            width={horizontalScale(16)}
+            height={verticalScale(15)}
+            viewBox="0 0 16 10"
+            {...props}
+            onPress={() => navigation.goBack()}
+          >
+            <Defs>
+              <ClipPath id="a">
+                <Path data-name="Rectangle 85" fill="#fff" d="M0 0H16V10H0z" />
+              </ClipPath>
+            </Defs>
+            <G data-name="Group 158" clipPath="url(#a)">
+              <Path
+                data-name="Path 433"
+                d="M3.247 6l2.48 2.294a.99.99 0 010 1.414 1.023 1.023 0 01-1.432 0L.445 6.059A1.465 1.465 0 010 5a1.483 1.483 0 01.444-1.06L4.294.293a1.025 1.025 0 011.434 0 .992.992 0 010 1.414L3.248 4H15a1 1 0 010 2H3.247z"
+                fill="#fff"
+                fillRule="evenodd"
+              />
+            </G>
+          </Svg>
+        </View>
+        <CustomText style={style.userName}>Khatima Sajadi</CustomText>
+        <TouchableOpacity style={style.imageWrapper} onPress={onSubmit}>
+          <Image source={user} style={style.img} />
         </TouchableOpacity>
       </View>
-      <View style={styleSection.middle}>
-        <SearchBar />
+      <View style={style.middle}>
+        <SearchBar setInputSearch={(value) => setInputSearch(value)} />
       </View>
 
       <View style={style.bottom}>
         <View style={style.select}>
-          <Text style={style.selectText}>صنف تان را انتخاب کنید</Text>
+          <CustomText style={style.selectText}>{t("Grades.1")}</CustomText>
         </View>
         <FlatList
-          style={{ width: "90%" }}
+          contentContainerStyle={{
+            width: "70%",
+            marginVertical: verticalScale(0),
+            paddingBottom: verticalScale(20),
+
+            // flex: 1,
+            alignItems: "center",
+            // // justifyContent: "center",
+            // paddingTop: 0,
+          }}
           data={route.params.classes}
           renderItem={({ item }) => {
             return <Renderitem item={item} />;
           }}
         />
-        {/* <TouchableOpacity
-          style={style.grades}
-          onPress={() => navigation.navigate()}
-        >
-          <Text style={style.gradesText}>{route.params.grade1}</Text>
-          <Image source={route.params.gradeimg1.img} />
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={style.grades}
-          onPress={() => navigation.navigate()}
-        >
-          <Text style={style.gradesText}>{route.params.grade2}</Text>
-          <Image source={route.params.gradeimg2.img} />
-        </TouchableOpacity>
-        <TouchableOpacity style={style.grades}>
-          <Text style={style.gradesText}>{route.params.grade3}</Text>
-          <Image source={route.params.gradeimg3.img} />
-        </TouchableOpacity>
-        <TouchableOpacity style={style.grades}>
-          <Text style={style.gradesText}>{route.params.grade4}</Text>
-          <Image source={route.params.gradeimg4.img} />
-        </TouchableOpacity>
-        <TouchableOpacity style={style.grades}>
-          <Text style={style.gradesText}>{route.params.grade5}</Text>
-          <Image source={route.params.gradeimg5.img} />
-        </TouchableOpacity>
-        <TouchableOpacity style={style.grades}>
-          <Text style={style.gradesText}>{route.params.grade6}</Text>
-          <Image source={route.params.gradeimg6.img} />
-        </TouchableOpacity> */}
       </View>
     </View>
   );
 };
 const style = StyleSheet.create({
-  bottom: {
-    // justifyContent: "center",
-    alignItems: "center",
-    height: "66%",
+  arrow: {
+    // backgroundColor: "red",
+    marginBottom: verticalScale(60),
+
+    // paddingBottom: verticalScale(40),
+    zIndex: 100,
+    marginLeft: horizontalScale(20),
+  },
+  container: {
+    // justifyContent: "space-between",
+    // alignItems: "center",
+    // backgroundColor: "#fff",
+    flex: 1,
+    // alignItems: "center",
+    // width: "100%",
+    // paddingHorizontal: 20,
     backgroundColor: "#fff",
+  },
+  top: {
+    marginTop: verticalScale(-120),
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    backgroundColor: "red",
+  },
+  userName: {
+    fontSize: moderateScale(20),
+
+    color: "#fff",
+    marginHorizontal: 20,
+  },
+  imageWrapper: {
+    backgroundColor: "#fff",
+    height: verticalScale(60),
+    width: verticalScale(60),
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: moderateScale(50),
+    marginHorizontal: horizontalScale(20),
+    // marginTop: -20,
+  },
+  img: {
+    // marginTop: verticalScale(8),
+    height: verticalScale(30),
+    width: horizontalScale(30),
+  },
+  middle: {
+    alignItems: "center",
+    justifyContent: "center",
+    // position: "absolute",
+    // top: verticalScale(170),
+    marginTop: verticalScale(70),
+    zIndex: 100,
     width: "100%",
+  },
+  bottom: {
+    justifyContent: "center",
+    alignItems: "center",
+    // height: "66%",
+    // backgroundColor: "#fff",
+    width: "100%",
+    marginTop: verticalScale(10),
+    // position: "absolute",
+
+    flex: 1,
   },
   select: {
     backgroundColor: "rgba(60, 152, 189, 1)",
-    width: "85%",
-    padding: 10,
-    borderRadius: 50,
+    width: "80%",
+    paddingHorizontal: horizontalScale(10),
+    paddingVertical: verticalScale(10),
+    borderRadius: moderateScale(50),
     alignItems: "center",
+    marginTop: verticalScale(10),
+    marginBottom: verticalScale(10),
   },
   selectText: {
     color: "#fff",
-    fontSize: 20,
-    fontWeight: "bold",
+    fontSize: moderateScale(20),
   },
   grades: {
-    width: "100%",
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-    borderRadius: 50,
+    width: "85%",
+    paddingHorizontal: horizontalScale(30),
+    paddingVertical: verticalScale(10),
+    borderRadius: moderateScale(50),
     backgroundColor: "rgba(212,228,232,1)",
-    marginVertical: 5,
+    marginVertical: verticalScale(5),
     justifyContent: "space-between",
     alignItems: "center",
     flexDirection: "row-reverse",
+    // flex: 1,
   },
   gradesText: {
     color: "rgba(60, 152, 189, 1)",
-    fontSize: 20,
+    fontSize: moderateScale(20),
+    // marginLeft: horizontalScale(100),
+    // marginRight: "7%",
+    width: horizontalScale(200),
+    textAlign: "right",
+  },
+  gradeLogo: {
+    width: horizontalScale(25),
+    height: verticalScale(25),
   },
   arrowStyle: {
     // marginBottom: "30%",
 
-    marginRight: 200,
-    marginLeft: -60,
-    marginTop: -10,
-    marginBottom: -50,
-
+    marginRight: horizontalScale(200),
+    marginLeft: verticalScale(20),
+    marginTop: verticalScale(20),
+    marginBottom: verticalScale(-60),
+    // backgroundColor: "red",
     zIndex: 100,
-    padding: 10,
+    paddingVertical: verticalScale(5),
+    paddingHorizontal: horizontalScale(10),
   },
 });
 

@@ -2,8 +2,15 @@ import React, { useState } from "react";
 import { StyleSheet, TextInput, View, Keyboard, Button } from "react-native";
 import Svg, { Rect, Path, Ellipse } from "react-native-svg";
 import { Feather, Entypo } from "@expo/vector-icons";
+import {
+  horizontalScale,
+  verticalScale,
+  moderateScale,
+} from "../Resonsive/Matrix";
+import { useTranslation } from "react-i18next";
 
-const SearchBar = (props) => {
+const SearchBar = ({ setInputSearch }) => {
+  const { t, i18n } = useTranslation();
   return (
     <View style={styles.container}>
       {/* <TextInput style={styles.searchbar} placeholder="جستجو">
@@ -18,11 +25,16 @@ const SearchBar = (props) => {
       <View style={styles.searchbar}>
         <Feather
           name="search"
-          size={15}
+          size={verticalScale(25)}
           color="black"
           style={{ marginRight: 1 }}
         />
-        <TextInput placeholder="جستجو" style={styles.serachText} />
+        <TextInput
+          placeholder={t("SearchBar.1")}
+          style={styles.serachText}
+          onChangeText={(value) => setInputSearch(value)}
+          returnKeyType="search"
+        />
       </View>
     </View>
   );
@@ -34,17 +46,22 @@ const styles = StyleSheet.create({
   searchbar: {
     backgroundColor: "rgba(212,228,232,1)",
     width: "80%",
-    height: 40,
-    padding: 10,
+    height: verticalScale(53),
+    paddingVertical: verticalScale(10),
+    paddingHorizontal: horizontalScale(10),
     display: "flex",
     flexDirection: "row-reverse",
+    justifyContent: "flex-end",
+    alignItems: "center",
     color: "red",
-    borderRadius: 20,
+    borderRadius: moderateScale(30),
+    // marginVertical: "20%",
   },
   serachText: {
     width: "90%",
     textAlign: "right",
-    marginRight: 10,
+    marginRight: horizontalScale(10),
+    fontSize: moderateScale(15),
   },
   container: {
     justifyContent: "flex-start",
@@ -76,6 +93,7 @@ const styles = StyleSheet.create({
     marginRight: 5,
     width: "90%",
   },
+  onFocusStyle: {},
 });
 
 // import react, {Component} from 'react';

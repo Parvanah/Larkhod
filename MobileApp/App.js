@@ -1,13 +1,18 @@
-import React from "react";
-import { View, Text, StatusBar } from "react-native";
+import React, { useContext } from "react";
+import { View, Text, StatusBar, StyleSheet } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import StackNaigator from "./StackNavigator";
+import i18next from "./App/screens/languages/i18n";
+import { AuthProvider } from "./App/context/AuthContext";
+import { AuthContext } from "./App/context/AuthContext";
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <StackNaigator />
-      <StatusBar barStyle={"default"} />
-    </NavigationContainer>
+    <AuthProvider>
+      <NavigationContainer>
+        <StackNaigator />
+        <StatusBar barStyle="dark-content" backgroundColor="#fff" />
+      </NavigationContainer>
+    </AuthProvider>
   );
 }

@@ -3,13 +3,14 @@
     "name": "R_Project",
     "slug": "R_Project",
     "version": "1.0.0",
-    "orientation": "portriat",
+    "orientation": "default",
     "icon": "./App/assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./App/assets/splash.png",
+      "image": "./App/assets/splas h.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+        "backgroundColor": "#ffffff"
+    
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -17,9 +18,17 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "ios": {
-      "supportsTablet": true
+    "ios":{
+      "requireFullScreen": true
     },
+    "plugins": [
+      [
+      "expo-screen-orientation",
+      {
+        "initialOrientation": "DEFAULT"
+      }
+    ]
+  ],
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./App/assets/adaptive-icon.png",

@@ -14,10 +14,6 @@ const ChangeProfile = () => {
 	function handleClick(lang) {
 	  i18next.changeLanguage(lang)
 	}
-
-
-
-
 	const initialValues = {name:"", lastname:"", username: "", email: "", age: "", senf:""};
 	const [formValues, setFormValues] = useState(initialValues);
 	const [formErrors, setFormErrors] = useState({});

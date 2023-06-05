@@ -14,6 +14,8 @@ import { useState, useEffect } from "react";
 import img1 from "../../assets/mg.png";
 import React from "react";
 import { Link, useNavigate, useNavigation } from "react-router-dom";
+import img2 from '../../assets/logo_3.png';
+// import React from 'react'
 <link rel="stylesheet" href="SingUp.css" />;
 
 const SingUp = () => {
@@ -29,18 +31,13 @@ const SingUp = () => {
   //   navigate("SignUpVerification");
   // };
 
+const SingUp = (props) => {
   const { t } = useTranslation();
 
   function handleClick(lang) {
     i18next.changeLanguage(lang);
   }
-
-  const initialValues = {
-    username: "",
-    email: "",
-    password: "",
-    confirmpassword: "",
-  };
+  const initialValues = { username: "", email: "", password: "", repeatpassword: "" };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
@@ -350,7 +347,7 @@ export default SingUp;
 //               onChange={(e)=> handleChange(e)}
 //             />
 //             <p className="error_singup">{formErrors.username}</p>
-          
+
           
 //           <div className="field">
 //             <input
@@ -389,6 +386,7 @@ export default SingUp;
 //           </div>
          
          
+
 //         </div>
 //          <button className="acount_button_singuo">{t("singup.1")}</button>
 //       </form>
@@ -471,5 +469,3 @@ export default SingUp;
 //     </div>
 //   );
 // };
-
-// export default SingUp;
