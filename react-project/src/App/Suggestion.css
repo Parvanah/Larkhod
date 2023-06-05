@@ -1,4 +1,6 @@
-
+.suggestion{
+   
+}
 *{
     margin: 0;
     padding: 0;
@@ -15,11 +17,9 @@
 .para-suggestion{
     font-size: large;
     margin-bottom: 32px;
-    text-align: center;
+    
     color:  #ccc;
-}
-.suggestion{
-   
+    margin-left: 410px;
 }
 .sendd-suggestion{
 width: 100%;
@@ -104,7 +104,7 @@ display: inline-block;
     width: 100%;
     height: 250px;
     background-color: rgb(113, 124, 120);
-    text-align: center;
+    
 }
 .all-icons-suggestion{
     position: relative;
@@ -158,6 +158,7 @@ display: inline-block;
 .Copyright-suggestion{
     color: white;
     padding-top: 110px;
+    margin-left: 500px;
 }
 .Larkhod-suggestion{
     color: rgba(60,152,189,1);
@@ -190,6 +191,15 @@ h5 {
 .senf-of-person-suggestion{
 color: #ccc;
 }
+#name-phone-suggestion{
+position: relative;
+left: 570px;
+
+}
+#sanf-city-suggestion{
+position: relative;
+left: -570px;
+}
 
 #svg-suggestion {
     fill: url(#svg-suggestion);
@@ -206,6 +216,15 @@ color: #ccc;
 }
 
 @media screen and (max-width:360px)and (min-width:100px){
+    #name-phone-suggestion{
+        position: relative;
+        left: 0px;
+        
+        }
+        #sanf-city-suggestion{
+        position: relative;
+        left: 0px;
+        }
 #svg-suggestion {
  
 }
@@ -369,6 +388,15 @@ color: #ccc;
 
 }
 @media screen and (max-width: 576px)and (min-width:360px){
+    #name-phone-suggestion{
+        position: relative;
+        left: 0px;
+        
+        }
+        #sanf-city-suggestion{
+        position: relative;
+        left: 0px;
+        }
     #svg-suggestion {
        
            height: 632px;
@@ -535,7 +563,713 @@ color: #ccc;
     
     }
 
-    @media screen and (max-width:768px)and (min-width:576px){}
-    @media screen and (max-width:992px)and (min-width:768px){}
-    @media screen and (max-width:1200px)and (min-width:992px){}
+    @media screen and (max-width:768px)and (min-width:576px){
+        .suggestion{
+   width: 768px;
+   overflow: hidden;
+        }
+        *{
+
+            margin: 0;
+            padding: 0;
+        }
+        .title-suggestion{
+            margin-top: 50px;
+            margin-bottom: 12px;
+           color: rgba(60,152,189,1) ;
+           font-size: 50px;
+           margin-left: 300px;
+        
+        
+        }
+        .para-suggestion{
+            font-size: large;
+            margin-bottom: 32px;
+           
+            color:  #ccc;
+            margin-left: 110px;
+        }
+        .sendd-suggestion{
+        width: 100%;
+        height: 625px;
+        background-color: rgb(255, 255, 255);
+        }
+        
+        .all-input-suggestion{
+            
+            position: relative;
+            left: 80px;
+            width: 768px;
+            /* display: inline-block; */
+           
+         
+        }
+        /* #all-input-suggestion{
+            display: inline-block;
+        } */
+        #infut-first-suggestion{
+       
+            margin-right: 92px;
+            background: none;
+            width: 200px;
+            padding: 10px 0px;
+            margin: 15px 0;
+            border-bottom: 2px solid #ccc;
+            box-sizing: border-box;
+            text-align: right;
+            fill: transparent;
+          outline: none;
+
+        }
+        
+        #infut-second-suggestion{
+        
+            background: none;
+            width: 590px;
+            padding: 10px 0px;
+            margin: 15px 0;
+            border-bottom: 2px solid #ccc;
+            box-sizing: border-box;
+            text-align: right;
+            fill: transparent;
+          outline: none;
+     
+        }
+        
+        .oo-suggestion{
+        display: inline-block;
+        }
+        
+        .er-suggestion{
+           margin: 0;padding: 0;
+            color: rgb(241, 26, 26);
+            font-weight: bold;
+            font-style: normal;
+            height: 1px;
+        }
+        .section-one-input-suggestion{
+            display: flex;
+            justify-content: space-between;
+            width: 768px;
+         /* overflow: hidden; */
+     
+        }
+        .section-tow-input-suggestion{
+           width: 768px;
+           /* overflow: hidden; */
+        }
+        ::placeholder{
+            color: rgb(177, 174, 174) !important;
+            margin-right: 0;
+            padding-right: 0;
+         
+        }
+        
+        .send-button-suggestion{
+            margin-top: 30px;
+            margin-left: 340px;
+            display: inline-block;
+           
+          
+        }
+        .send-suggestion{
+            font-size: large;
+            width: 100px;
+            height: 30px;
+            border-radius: 50px;
+            color: white;
+            background-color:rgba(60,152,189,1) ;
+        }
+        
+        
+        
+        .contect-suggestion{
+            width: 100%;
+            height: 250px;
+            background-color: rgb(113, 124, 120);
+        
+        }
+        .all-icons-suggestion{
+            position: relative;
+            top: 70px;
+            left: 280px;
+            width: 200px;
+            display: flex;
+            justify-content: space-between;
+           overflow: hidden;
+        }
+        .icons-suggestion{
+            padding: 5px 7px 5px 7px;
+            background-color: rgb(70, 83, 83);
+            border-radius: 100px;
+        }
+        
+        #facebook-suggestion{
+            position: relative;
+            top: 9px;
+            width: 25px;
+            height: 25px;
+            color: white;
+            border-radius: 100px;
+           
+            
+        }
+        
+        #instagram-suggestion{
+            position: relative;
+            top: 2px;
+            width: 25px;
+            height: 25px;
+            color: white;
+            border-radius: 100px;
+        }
+        #twitter-suggestion{
+            position: relative;
+            top: 3px;
+            width: 25px;
+            height: 25px;
+            color: white;
+            border-radius: 100px; 
+        }
+        #youtube-suggestion{
+            position: relative;
+            top: 2px;
+            width: 25px;
+            height: 25px;
+            color: white;
+            border-radius: 100px; 
+        }
+        .Copyright-suggestion{
+            color: white;
+            padding-top: 110px;
+            margin-left: 195px;
+        }
+        .Larkhod-suggestion{
+            color: rgba(60,152,189,1);
+        }
+        
+        h5 {
+         
+          position: relative;
+          top: 90px;
+          left: 90px;
+          content: "";
+          display: block;
+          width: 550px;
+          height: 1px;
+          margin: auto 10px;
+          border-bottom: 2px solid #ccc;
+        }
+        #ig-suggestion{
+            display: inline-block;
+         position: relative;
+         top: 60px;
+         left: 70px;
+         z-index: 1000;
+        }
+        .message-of-person-suggestion,
+        .email-of-person-suggestion,
+        .phone-of-person-suggestion,
+        .name-of-person-suggestion,
+        .city-of-person-suggestion,
+        .senf-of-person-suggestion{
+        color: #ccc;
+        }
+        #name-phone-suggestion{
+        position: relative;
+        left: 390px;
+        
+        }
+        #sanf-city-suggestion{
+        position: relative;
+        left: -570px;
+        }
+        
+        #svg-suggestion {
+            fill: url(#svg-suggestion);
+        }
+        .svg-suggestion {
+            /* overflow: visible;
+            position: absolute;
+            width: 360px;
+            height: 482.885px;
+            left: 0px;
+            top: 157.115px;
+            transform: matrix(1,0,0,1,0,0); */
+            display: none;
+        }
+    }
+  
+    @media screen and (max-width:992px)and (min-width:768px){
+        .suggestion{
+            /* width: 992px; */
+            overflow: hidden;
+                 }
+                 *{
+         
+                     margin: 0;
+                     padding: 0;
+                 }
+                 .title-suggestion{
+                     margin-top: 50px;
+                     margin-bottom: 12px;
+                    color: rgba(60,152,189,1) ;
+                    font-size: 50px;
+                    margin-left: 420px;
+                 
+                 
+                 }
+                 .para-suggestion{
+                     font-size: large;
+                     margin-bottom: 32px;
+                     margin-left: 240px;
+                     color:  #ccc;
+                 }
+                 .sendd-suggestion{
+                 width: 100%;
+                 height: 625px;
+                 background-color: rgb(255, 255, 255);
+                 }
+                 
+                 .all-input-suggestion{
+                     
+                     position: relative;
+                     left: 110px;
+                     width: 768px;
+                     /* display: inline-block; */
+                    
+                  
+                 }
+                 /* #all-input-suggestion{
+                     display: inline-block;
+                 } */
+                 #infut-first-suggestion{
+                
+                     margin-right: 92px;
+                     background: none;
+                     width: 310px;
+                     padding: 10px 0px;
+                     margin: 15px 0;
+                     border-bottom: 2px solid #ccc;
+                     box-sizing: border-box;
+                     text-align: right;
+                     fill: transparent;
+                   outline: none;
+         
+                 }
+                 
+                 #infut-second-suggestion{
+                 
+                     background: none;
+                     width: 760px;
+                     padding: 10px 0px;
+                     margin: 15px 0;
+                     border-bottom: 2px solid #ccc;
+                     box-sizing: border-box;
+                     text-align: right;
+                     fill: transparent;
+                   outline: none;
+              
+                 }
+                 
+                 .oo-suggestion{
+                 display: inline-block;
+                 }
+                 
+                 .er-suggestion{
+                    margin: 0;padding: 0;
+                     color: rgb(241, 26, 26);
+                     font-weight: bold;
+                     font-style: normal;
+                     height: 1px;
+                 }
+                 .section-one-input-suggestion{
+                     display: flex;
+                     justify-content: space-between;
+                     /* width: 768px; */
+                  /* overflow: hidden; */
+              
+                 }
+                 .section-tow-input-suggestion{
+                    /* width: 768px; */
+                    /* overflow: hidden; */
+                 }
+                 ::placeholder{
+                     color: rgb(177, 174, 174) !important;
+                     margin-right: 0;
+                     padding-right: 0;
+                  
+                 }
+                 
+                 .send-button-suggestion{
+                     margin-top: 30px;
+                     margin-left: 440px;
+                     display: inline-block;
+                    
+                   
+                 }
+                 .send-suggestion{
+                     font-size: large;
+                     width: 100px;
+                     height: 30px;
+                     border-radius: 50px;
+                     color: white;
+                     background-color:rgba(60,152,189,1) ;
+                 }
+                 
+                 
+                 
+                 .contect-suggestion{
+                     width: 100%;
+                     height: 250px;
+                     background-color: rgb(113, 124, 120);
+               
+                 }
+                 .all-icons-suggestion{
+                     position: relative;
+                     top: 70px;
+                     left: 390px;
+                     width: 200px;
+                     display: flex;
+                     justify-content: space-between;
+                    overflow: hidden;
+                 }
+                 .icons-suggestion{
+                     padding: 5px 7px 5px 7px;
+                     background-color: rgb(70, 83, 83);
+                     border-radius: 100px;
+                 }
+                 
+                 #facebook-suggestion{
+                     position: relative;
+                     top: 9px;
+                     width: 25px;
+                     height: 25px;
+                     color: white;
+                     border-radius: 100px;
+                    
+                     
+                 }
+                 
+                 #instagram-suggestion{
+                     position: relative;
+                     top: 2px;
+                     width: 25px;
+                     height: 25px;
+                     color: white;
+                     border-radius: 100px;
+                 }
+                 #twitter-suggestion{
+                     position: relative;
+                     top: 3px;
+                     width: 25px;
+                     height: 25px;
+                     color: white;
+                     border-radius: 100px; 
+                 }
+                 #youtube-suggestion{
+                     position: relative;
+                     top: 2px;
+                     width: 25px;
+                     height: 25px;
+                     color: white;
+                     border-radius: 100px; 
+                 }
+                 .Copyright-suggestion{
+                    margin-left: 320px;
+                     color: white;
+                     padding-top: 110px;
+                    
+                 }
+                 .Larkhod-suggestion{
+                     color: rgba(60,152,189,1);
+                 }
+                 
+                 h5 {
+                  
+                   position: relative;
+                   top: 90px;
+                   left: 90px;
+                   content: "";
+                   display: block;
+                   width: 780px;
+                   height: 1px;
+                   margin: auto 10px;
+                   border-bottom: 2px solid #ccc;
+                 }
+                 #ig-suggestion{
+                     display: inline-block;
+                  position: relative;
+                  top: 60px;
+                  left: 70px;
+                  z-index: 1000;
+                 }
+                 .message-of-person-suggestion,
+                 .email-of-person-suggestion,
+                 .phone-of-person-suggestion,
+                 .name-of-person-suggestion,
+                 .city-of-person-suggestion,
+                 .senf-of-person-suggestion{
+                 color: #ccc;
+                 }
+                 #name-phone-suggestion{
+                 position: relative;
+                 left: 450px;
+                 
+                 }
+                 #sanf-city-suggestion{
+                 position: relative;
+                 left: -460px;
+                 }
+                 
+                 #svg-suggestion {
+                     fill: url(#svg-suggestion);
+                 }
+                 .svg-suggestion {
+                     /* overflow: visible;
+                     position: absolute;
+                     width: 360px;
+                     height: 482.885px;
+                     left: 0px;
+                     top: 157.115px;
+                     transform: matrix(1,0,0,1,0,0); */
+                     display: none;
+                 }
+    }
+    @media screen and (max-width:1200px)and (min-width:992px){ .suggestion{
+        /* width: 992px; */
+        overflow: hidden;
+             }
+             *{
+             
+                 margin: 0;
+                 padding: 0;
+             }
+             .title-suggestion{
+                 margin-top: 50px;
+                 margin-bottom: 12px;
+                color: rgba(60,152,189,1) ;
+                font-size: 50px;
+                margin-left: 510px;
+             
+             
+             }
+             .para-suggestion{
+              
+                 font-size: large;
+                 margin-bottom: 32px;
+                 margin-left: 320px;
+                
+                 color:  #ccc;
+             }
+             .sendd-suggestion{
+             width: 100%;
+             height: 625px;
+             background-color: rgb(255, 255, 255);
+             }
+             
+             .all-input-suggestion{
+                 
+                 position: relative;
+                 left: 150px;
+                 width: 768px;
+                 /* display: inline-block; */
+                
+              
+             }
+             /* #all-input-suggestion{
+                 display: inline-block;
+             } */
+             #infut-first-suggestion{
+            
+                 margin-right: 92px;
+                 background: none;
+                 width: 340px;
+                 padding: 10px 0px;
+                 margin: 15px 0;
+                 border-bottom: 2px solid #ccc;
+                 box-sizing: border-box;
+                 text-align: right;
+                 fill: transparent;
+               outline: none;
+     
+             }
+             
+             #infut-second-suggestion{
+             
+                 background: none;
+                 width: 880px;
+                 padding: 10px 0px;
+                 margin: 15px 0;
+                 border-bottom: 2px solid #ccc;
+                 box-sizing: border-box;
+                 text-align: right;
+                 fill: transparent;
+               outline: none;
+          
+             }
+             
+             .oo-suggestion{
+             display: inline-block;
+             }
+             
+             .er-suggestion{
+                margin: 0;padding: 0;
+                 color: rgb(241, 26, 26);
+                 font-weight: bold;
+                 font-style: normal;
+                 height: 1px;
+             }
+             .section-one-input-suggestion{
+                 display: flex;
+                 justify-content: space-between;
+                 /* width: 768px; */
+              /* overflow: hidden; */
+          
+             }
+             .section-tow-input-suggestion{
+                /* width: 768px; */
+                /* overflow: hidden; */
+             }
+             ::placeholder{
+                 color: rgb(177, 174, 174) !important;
+                 margin-right: 0;
+                 padding-right: 0;
+              
+             }
+             
+             .send-button-suggestion{
+                 margin-top: 30px;
+                 margin-left: 550px;
+                 display: inline-block;
+                
+               
+             }
+             .send-suggestion{
+                 font-size: large;
+                 width: 100px;
+                 height: 30px;
+                 border-radius: 50px;
+                 color: white;
+                 background-color:rgba(60,152,189,1) ;
+             }
+             
+             
+             
+             .contect-suggestion{
+                 width: 100%;
+                 height: 250px;
+                 background-color: rgb(113, 124, 120);
+                 
+             }
+             .all-icons-suggestion{
+                 position: relative;
+                 top: 70px;
+                 left: 500px;
+                 width: 200px;
+                 display: flex;
+                 justify-content: space-between;
+                overflow: hidden;
+             }
+             .icons-suggestion{
+                 padding: 5px 7px 5px 7px;
+                 background-color: rgb(70, 83, 83);
+                 border-radius: 100px;
+             }
+             
+             #facebook-suggestion{
+                 position: relative;
+                 top: 9px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px;
+                
+                 
+             }
+             
+             #instagram-suggestion{
+                 position: relative;
+                 top: 2px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px;
+             }
+             #twitter-suggestion{
+                 position: relative;
+                 top: 3px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px; 
+             }
+             #youtube-suggestion{
+                 position: relative;
+                 top: 2px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px; 
+             }
+             .Copyright-suggestion{
+                 color: white;
+                 padding-top: 110px;
+                 margin-left: 1px;
+                 margin-left: 415px;
+             }
+             .Larkhod-suggestion{
+                 color: rgba(60,152,189,1);
+             }
+             
+             h5 {
+              
+               position: relative;
+               top: 90px;
+               left: 90px;
+               content: "";
+               display: block;
+               width: 980px;
+               height: 1px;
+               margin: auto 10px;
+               border-bottom: 2px solid #ccc;
+             }
+             #ig-suggestion{
+                 display: inline-block;
+              position: relative;
+              top: 60px;
+              left: 70px;
+              z-index: 1000;
+             }
+             .message-of-person-suggestion,
+             .email-of-person-suggestion,
+             .phone-of-person-suggestion,
+             .name-of-person-suggestion,
+             .city-of-person-suggestion,
+             .senf-of-person-suggestion{
+             color: #ccc;
+             }
+             #name-phone-suggestion{
+             position: relative;
+             left: 540px;
+             
+             }
+             #sanf-city-suggestion{
+             position: relative;
+             left: -430px;
+             }
+             
+             #svg-suggestion {
+                 fill: url(#svg-suggestion);
+             }
+             .svg-suggestion {
+                 /* overflow: visible;
+                 position: absolute;
+                 width: 360px;
+                 height: 482.885px;
+                 left: 0px;
+                 top: 157.115px;
+                 transform: matrix(1,0,0,1,0,0); */
+                 display: none;
+             }}
     
