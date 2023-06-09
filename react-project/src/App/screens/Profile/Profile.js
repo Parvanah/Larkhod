@@ -15,7 +15,7 @@ const Profile = () => {
 	}
 
 
-	const initialValues = {name:"", lastname:"", username: "", email: "", age: "", senf:""};
+	const initialValues = {name:"", lastname:"", age: "", senf:""};
 	const [formValues, setFormValues] = useState(initialValues);
 	const [formErrors, setFormErrors] = useState({});
 	const [isSubmit, setIsSubmit] = useState(false);
@@ -49,15 +49,6 @@ const Profile = () => {
 		if (!values.lastname) {
 			errors.lastname =  <>{t("profile.10")}</>;
 		}
-
-	  if (!values.username) {
-		errors.username =  <>{t("profile.11")}</>;
-	  }
-	  if (!values.email) {
-		errors.email =  <>{t("profile.12")}</>;
-	  } else if (!regex.test(values.email)) {
-		errors.email =  <>{t("profile.13")}</>;
-	  }
 	  if (!values.age) {
 		errors.age =  <>{t("profile.14")}</>;
 	 }
@@ -117,32 +108,6 @@ const Profile = () => {
       <form onSubmit={handleSubmit}>
         <div className="container_profile">
 
-			<div className='information_one_profile'>
-            <input
-			id='input_profile'
-			className="username_profile"
-              type="text"
-              name="username"
-              placeholder={t("profile.4")}
-              value={formValues.username}
-              onChange={handleChange}
-            />
-			<p className='error_profile'>{formErrors.username}</p>
-			<input
-			id='input_profile'
-			className="senf_profile"
-              type="text"
-              name="senf"
-              placeholder={t("profile.7")}
-              value={formValues.senf}
-              onChange={handleChange}
-            />
-          <p className='error_profile'>{formErrors.senf}</p>
-			
-          </div>
-
-    
-
          <div className="information_two_profile">
 		 <input
 		 id='input_profile'
@@ -178,16 +143,16 @@ const Profile = () => {
               onChange={handleChange}
             />
 			 <p className='error_profile'>{formErrors.name}</p>
-		  <input
-		      id='input_profile'
-			  className="email_profile"
+			 <input
+			id='input_profile'
+			className="senf_profile"
               type="text"
-              name="email"
-              placeholder={t("profile.5")}
-              value={formValues.email}
+              name="senf"
+              placeholder={t("profile.7")}
+              value={formValues.senf}
               onChange={handleChange}
             />
-			<p className='error_profile'>{formErrors.email}</p>
+          <p className='error_profile'>{formErrors.senf}</p>
 			
 		  </div>
         </div>

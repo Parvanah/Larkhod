@@ -116,13 +116,10 @@
     display: flex;
     justify-content: space-between;
 }
-.information_one_profile{
-    display: inline-block;
- }
  #input_profile{
     display: inline-block;
     background: none;
-    width: 300px;
+    width: 350px;
     padding: 10px 0px;
     margin-bottom: 30px;
     margin-top: 30px;
@@ -157,10 +154,12 @@
 .information_two_profile{
    
    display: inline-block;
+   margin-left: 70px;
    
 }
 .information_three_profile{
     display: inline-block;
+    margin-right: 70px;
 }
 .name_profile,
 .lastname_profile,

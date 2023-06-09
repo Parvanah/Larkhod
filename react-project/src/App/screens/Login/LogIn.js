@@ -17,12 +17,11 @@ import img3 from '../../assets/logo_3.png'
 
 
 
-const LogIn = () => {
+const LogIn = (props) => {
   const { isLoading, register } = useContext(AuthContext);
 
   const { t } = useTranslation();
 
-  const { t } = useTranslation();
   function handleClick(lang) {
     i18next.changeLanguage(lang)
   }

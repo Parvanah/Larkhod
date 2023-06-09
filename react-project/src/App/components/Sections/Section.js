@@ -1,4 +1,7 @@
-
+import i18next from 'i18next';
+import { useTranslation } from 'react-i18next';
+import SchoolSubjects from "../../Json Files/SchoolSubjects.json";
+import JsonFiles from "../../Json Files/SchoolSubjects.json";
 import React from "react";
 import { BrowserRouter as Router, useNavigate } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
@@ -11,10 +14,30 @@ import image4 from "../../assets/Group_158_bu.png";
 import image1 from "../../assets/Group_201_ww@2x.png";
 import image2 from "../../assets/Group_203@2x.png";
 import image3 from "../../assets/Group_205@2x.png";
-// import { useNavigation } from "react-router-dom";
+import { useNavigation } from "react-router-dom";
+
 const Section = (props) => {
   // const navigate = useNavigation();
     "C:\\UsersKhatima Sadat/Documents/LarkhodeStructure/school_subjectsdari_curriculamprimarysecond_gradeart_subjectlessonslesson_1";
+      const navigate = useNavigate();
+  // const navigation = useNavigation();
+
+  const { t } = useTranslation();
+
+  function handleClick(lang) {
+    i18next.changeLanguage(lang)
+  }
+
+  
+  // const navigate = useNavigation();
+  const pic =
+    "C:\\UsersKhatima Sadat/Documents/LarkhodeStructure/school_subjectsdari_curriculamprimarysecond_gradeart_subjectlessonslesson_1";
+    var data;
+  if (t("section.lang") == "dari") {
+    data = JsonFiles.dari_curriculum;
+  } else {
+    data = JsonFiles.pashto_curriculum;
+  }
   return (
     <div className="section">
       <div className="svg">
@@ -54,55 +77,21 @@ const Section = (props) => {
         <img src={image4} />
       </div>
       <div id="title">
-        <h1>بخش هاي مكتب</h1>
-        <p>از اینجا شما میتوانید صنف خود را مطابق بخش که هستید انتخاب کنید</p>
+        <h1>{t("section.1")}</h1>
+        <p>{t("section.2")}</p>
       </div>
       <ul id="ul-section">
         <li>
           <Link
             to="/grades"
-            state={{
-              grades: [
-                {
-                  grade: "صنف اول",
-                  id: 1,
-                  subjects: gradeTwo.dari_curriculum.subjects,
-                  lessonsPic:
-                    "C:UsersKhatima SadatDocumentsLarkhodeStructureschool_subjectsdari_curriculamprimarysecond_grade",
-                },
-                {
-                  grade: "صنف دوم",
-                  id: 2,
-                  subjects: gradeTwo.dari_curriculum.subjects,
-                },
-                {
-                  grade: "صنف سوم",
-                  id: 3,
-                  subjects: gradeTwo.dari_curriculum.subjects,
-                },
-                {
-                  grade: "صنف چهارم",
-                  id: 4,
-                  subjects: gradeTwo.dari_curriculum.subjects,
-                },
-                {
-                  grade: "صنف پنجم",
-                  id: 5,
-                  subjects: gradeTwo.dari_curriculum.subjects,
-                },
-                {
-                  grade: "صنف ششم",
-                  id: 6,
-                  subjects: gradeTwo.dari_curriculum.subjects,
-                },
-              ],
-            }}
+              state={{
+              grades: data.primary.grades,
+                    }}
           >
             <img src={image1} />
-            <h1>بخش ابتدائیه</h1>
+            <h1>{t("section.3")}</h1>
             <p>
-              صنف مورد نظر خودرا <br />
-              از بخش ابتداییه انتخاب کنید
+             {t("section.4")}
             </p>
           </Link>
         </li>
@@ -110,30 +99,13 @@ const Section = (props) => {
           <Link
             to="/grades"
             state={{
-              grades: [
-                {
-                  grade: "صنف هفتم",
-                  id: 1,
-                  subjects: gradeNine.dari_curriculum.subjects,
-                },
-                {
-                  grade: "صنف هشتم",
-                  id: 2,
-                  subjects: gradeNine.dari_curriculum.subjects,
-                },
-                {
-                  grade: "صنف نهم",
-                  id: 3,
-                  subjects: gradeNine.dari_curriculum.subjects,
-                },
-              ],
-            }}
+                 grades: data.secondary.grades,
+                  }}
           >
             <img src={image2} />
-            <h1>بخش متوسطه</h1>
+            <h1>{t("section.5")} </h1>
             <p>
-              صنف مورد نظر خود را
-              <br /> از بخش متوسطه انتخاب کنید
+            {t("section.6")}
             </p>
           </Link>
         </li>
@@ -141,30 +113,14 @@ const Section = (props) => {
           <Link
             to="/grades"
             state={{
-              grades: [
-                {
-                  grade: "صنف دهم",
-                  id: 1,
-                  subjects: gradeNine.dari_curriculum.subjects,
-                },
-                {
-                  grade: "صنف یازدهم",
-                  id: 2,
-                  subjects: gradeNine.dari_curriculum.subjects,
-                },
-                {
-                  grade: "صنف دوازدهم",
-                  id: 3,
-                  subjects: gradeNine.dari_curriculum.subjects,
-                },
-              ],
-            }}
+                  grades: data.high_school.grades,
+                   }}
+       
           >
             <img src={image3} />
-            <h1>بخش لیسه</h1>
+            <h1>{t("section.7")} </h1>
             <p>
-              صنف مورد نظر خود را <br />
-              از بخش لیسه انتخاب کنید
+            {t("section.8")}
             </p>
             <p></p>
           </Link>
@@ -207,6 +163,16 @@ const Section = (props) => {
   );
 };
 export default Section;
+
+
+
+
+
+
+
+
+
+
 
 
 

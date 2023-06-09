@@ -14,7 +14,7 @@ const ChangeProfile = () => {
 	function handleClick(lang) {
 	  i18next.changeLanguage(lang)
 	}
-	const initialValues = {name:"", lastname:"", username: "", email: "", age: "", senf:""};
+	const initialValues = {name:"", lastname:"", age: "", senf:""};
 	const [formValues, setFormValues] = useState(initialValues);
 	const [formErrors, setFormErrors] = useState({});
 	const [isSubmit, setIsSubmit] = useState(false);
@@ -48,15 +48,6 @@ const ChangeProfile = () => {
 		if (!values.lastname) {
 			errors.lastname = <>{t("changeprofile.10")}</>;
 		}
-
-	  if (!values.username) {
-		errors.username =<>{t("changeprofile.11")}</>;
-	  }
-	  if (!values.email) {
-		errors.email = <>{t("changeprofile.12")}</>;
-	  } else if (!regex.test(values.email)) {
-		errors.email = <>{t("changeprofile.13")}</>;
-	  }
 	  if (!values.age) {
 		errors.age = <>{t("changeprofile.14")}</>;
 	 }
@@ -118,32 +109,6 @@ const ChangeProfile = () => {
       <form onSubmit={handleSubmit}>
         <div className="container_change_profile">
 
-			<div className='information_one_change_profile'>
-            <input
-            id='input_change_profile'
-			className="username_change_profile"
-              type="text"
-              name="username"
-              placeholder={t("changeprofile.4")}
-              value={formValues.username}
-              onChange={handleChange}
-            />
-			<p className='error_change_profile'>{formErrors.username}</p>
-			<input
-            id='input_change_profile'
-			className="senf_change_profile"
-              type="text"
-              name="senf"
-              placeholder={t("changeprofile.7")}
-              value={formValues.senf}
-              onChange={handleChange}
-            />
-          <p className='error_change_profile'>{formErrors.senf}</p>
-			
-          </div>
-
-    
-
          <div className="information_two_change_profile">
 		 <input
          id='input_change_profile'
@@ -179,16 +144,16 @@ const ChangeProfile = () => {
               onChange={handleChange}
             />
 			 <p className='error_change_profile'>{formErrors.name}</p>
-		  <input
-          id='input_change_profile'
-			 className="email_change_profile"
+			 <input
+            id='input_change_profile'
+			className="senf_change_profile"
               type="text"
-              name="email"
-              placeholder={t("changeprofile.5")}
-              value={formValues.email}
+              name="senf"
+              placeholder={t("changeprofile.7")}
+              value={formValues.senf}
               onChange={handleChange}
             />
-			<p className='error_change_profile'>{formErrors.email}</p>
+          <p className='error_change_profile'>{formErrors.senf}</p>
 		  </div>
         </div>
 		<button className="save_button_change_profile"> {t("changeprofile.8")}</button>

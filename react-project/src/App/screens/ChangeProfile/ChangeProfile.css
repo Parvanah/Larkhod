@@ -163,16 +163,16 @@
 	background-color: white;
 	border-radius: 50px;
 }
-.information_one_change_profile{
-   display: inline-block;
-}
+
 .information_two_change_profile{
    
    display: inline-block;
+   margin-left: 70px;
    
 }
 .information_three_change_profile{
     display: inline-block;
+    margin-right: 70px;
 }
 .name_change_profile,
 .lastname_change_profile,
@@ -185,7 +185,7 @@
 #input_change_profile{
     display: inline-block;
     background: none;
-    width: 300px;
+    width: 350px;
     padding: 10px 0px;
     margin-bottom: 30px;
     margin-top: 30px;
