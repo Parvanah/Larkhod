@@ -101,6 +101,9 @@ const Styles = StyleSheet.create({
     borderBottomColor: "lightgray",
     borderBottomWidth: moderateScale(2),
   },
+  placeholder: {
+    color: "red",
+  },
   afterSubmit: {
     display: "flex",
     justifyContent: "center",

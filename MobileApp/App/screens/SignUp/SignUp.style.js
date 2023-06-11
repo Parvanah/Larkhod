@@ -14,8 +14,8 @@ const Styles = StyleSheet.create({
     paddingTop: verticalScale(50),
   },
   imgStyle: {
-    height: verticalScale(90),
-    width: horizontalScale(90),
+    height: 110,
+    width: 110,
     marginBottom: verticalScale(20),
     marginTop: verticalScale(0),
   },

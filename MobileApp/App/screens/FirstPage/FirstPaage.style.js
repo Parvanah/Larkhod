@@ -49,8 +49,8 @@ const styles = StyleSheet.create({
   },
   imgStyle: {
     marginBottom: verticalScale(50),
-    width: horizontalScale(150),
-    height: verticalScale(150),
+    width: 150,
+    height: 150,
     marginTop: verticalScale(30),
   },
   text: {

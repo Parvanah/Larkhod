@@ -166,6 +166,10 @@
     },
     "SearchBar": {
       "1": "جستجو"
+    },
+    "BackendError": {
+      "No User Found": "هیچ حسابی با این ایمیل موجود نیست",
+      "Incorrect email or password": "ایمیل یا رمز عبور اشتباه است"
     }
   }
 }

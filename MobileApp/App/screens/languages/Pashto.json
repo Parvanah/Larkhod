@@ -166,6 +166,10 @@
     },
     "SearchBar": {
       "1": "پلټنه"
+    },
+    "BackendError": {
+      "No User Found": "د دې بریښنالیک سره هیڅ حساب نشته",
+      "Incorrect email or password": "برېښنالیک یا پټنوم غلط دی"
     }
   }
 }
