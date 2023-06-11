@@ -44,7 +44,7 @@ const NewPassword = (props) => {
   const { isLoading, changePassword } = useContext(AuthContext);
   const onSubmit = (values) => {
     changePassword(values.password, values.confirmPassword);
-    navigation.navigate("SignUp");
+    // navigation.navigate("SignUp");
   };
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#FFF" }}>

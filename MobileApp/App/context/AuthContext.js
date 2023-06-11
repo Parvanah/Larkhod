@@ -141,6 +141,7 @@ export const AuthProvider = ({ children }) => {
       const response = await axios.put(`/user/${userInfo.user._id}`, {
         name,
         email: userInfo.user.email,
+        image: userInfo.user.image,
       });
       console.log("put");
       console.log(response.data);
@@ -157,7 +158,7 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  const information = async (name, lastName, age, grade) => {
+  const information = async (name, lastName, age, grade, image) => {
     try {
       setIsLoading(true);
       console.log(name);
@@ -165,6 +166,7 @@ export const AuthProvider = ({ children }) => {
         name: name,
         email: email,
         password: password,
+        image: image,
       });
       console.log(response?.data);
       setUserInfo(response?.data);
