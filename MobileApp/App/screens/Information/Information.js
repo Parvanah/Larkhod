@@ -7,11 +7,10 @@ import {
   TouchableOpacity,
   StyleSheet,
   ScrollView,
-  ImagePicker,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import logo from "../../assets/White_PNG_Format_z.png";
-import telegram from "../../assets/tele.png";
+import telegram from "../../assets/Tele.png";
 import user from "../../assets/user.png";
 import arrow from "../../assets/Group_158.png";
 import CustomText from "../../CustomText";
@@ -19,6 +18,8 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import { useTranslation } from "react-i18next";
 import Svg, { Path, Defs, LinearGradient, Stop } from "react-native-svg";
+import * as ImagePicker from "expo-image-picker";
+import * as Permissions from 'expo-permissions';
 
 import {
   horizontalScale,
@@ -30,13 +31,26 @@ import Spinner from "react-native-loading-spinner-overlay";
 import { AuthContext } from "../../context/AuthContext";
 
 const Information = (props) => {
-  //  const handlePress =() =>{
-  //   ImagePicker.openPicker({
-  //     multiple: true
-  //   }).then(images => {
-  //     console.log(images);
-  //   });
-  //  }
+  const [imageUri, setImageUri] = useState();
+  const requestPermission = async () =>{
+    const { granted } = await ImagePicker.requestCameraPermissionsAsync();
+    if(!granted)
+    alert('you need to enable permission to access the library');
+  }
+   useEffect(() => {
+    requestPermission();
+   },[]);
+   const handlePhoto = async () => {
+    try {
+      const result = await ImagePicker.launchImageLibraryAsync();
+      if (!result.canceled)
+      setImageUri(result.uri);
+    } catch (error){ 
+      console.log('error reading an image', error);
+    }
+  
+   }
+
   const { isLoading, information } = useContext(AuthContext);
   const { t, i18n } = useTranslation();
   const InfoValidationSchema = Yup.object().shape({
@@ -57,10 +71,16 @@ const Information = (props) => {
       .min(12, t("Information.11"))
       .max(50, t("Information.11"))
       .required(t("Information.12")),
+      phonNumber: Yup.string()
+      .matches(
+        /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
+        t("Information.22")
+      )
+      .required(t("Information.21")),
   });
   const navigation = useNavigation();
   const onSubmit = (values) => {
-    information(values.firstName, values.lastName, values.age, values.grade);
+    information(values.firstName, values.lastName, values.age, values.grade, values.phonNumber);
   };
   return (
     <SafeAreaView style={styles.mainContainer}>
@@ -92,9 +112,10 @@ const Information = (props) => {
           </Svg>
           <Image source={telegram} style={styles.telegram} />
         </View>
-        <View style={styles.imageWrapper}>
-          <Image source={user} style={styles.img} />
-        </View>
+        <TouchableOpacity style={styles.imageWrapper} onPress={handlePhoto}>
+          {/* <Image source={user} style={styles.img} /> */}
+          <Image  source={{ uri: imageUri}} style={styles.img} />
+        </TouchableOpacity>
         <TouchableOpacity style={styles.textUserWapper}>
           <CustomText style={styles.usertext}>{t("Information.13")}</CustomText>
         </TouchableOpacity>
@@ -102,12 +123,13 @@ const Information = (props) => {
       <ScrollView contentContainerStyle={styles.svgWrapper}>
         <Formik
           validationSchema={InfoValidationSchema}
-          initialValues={{
+          initialValues={{ 
             firstName: "",
             lastName: "",
             email: "",
             grade: "",
             age: "",
+            phonNumber:"",
           }}
           onSubmit={(values) => onSubmit(values)}
         >
@@ -186,6 +208,18 @@ const Information = (props) => {
               />
               {errors.grade && touched.grade && (
                 <CustomText style={styles.errorText}>{errors.grade}</CustomText>
+              )}
+               <TextInput
+                placeholder={t("Information.20")}
+                name="phonNumber"
+                onChangeText={handleChange("phonNumber")}
+                onBlur={handleBlur("phonNumber")}
+                keyboardType="decimal-pad"
+                value={values.phonNumber}
+                style={styles.input}
+              />
+              {errors.phonNumber && touched.phonNumber && (
+                <CustomText style={styles.errorText}>{errors.phonNumber}</CustomText>
               )}
               <TouchableOpacity
                 style={styles.submitBtn}
@@ -290,8 +324,13 @@ const styles = StyleSheet.create({
     marginHorizontal: horizontalScale(10),
   },
   img: {
-    height: verticalScale(50),
-    width: horizontalScale(50),
+    // height: verticalScale(50),
+    // width: horizontalScale(50),
+    height: verticalScale(100),
+    width: horizontalScale(100),
+    // marginBottom: verticalScale(10),
+    borderWidth: horizontalScale(2),
+    borderRadius: moderateScale(50),
   },
   arrowStyle: {
     marginTop: verticalScale(20),
@@ -364,9 +403,9 @@ const styles = StyleSheet.create({
     width: horizontalScale(100),
     justifyContent: "center",
     alignItems: "center",
-    borderRadius: moderateScale(50),
     marginBottom: verticalScale(10),
     borderWidth: horizontalScale(2),
+    borderRadius: moderateScale(50),
     borderColor: "gray",
   },
   errorText: {

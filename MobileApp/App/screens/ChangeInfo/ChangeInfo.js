@@ -10,7 +10,7 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import logo from "../../assets/White_PNG_Format_z.png";
-import telegram from "../../assets/tele.png";
+import telegram from "../../assets/Tele.png";
 import user from "../../assets/user.png";
 import arrow from "../../assets/Group_158.png";
 import CustomText from "../../CustomText";
@@ -24,12 +24,53 @@ import {
 import React, { useContext, useState } from "react";
 import Spinner from "react-native-loading-spinner-overlay";
 import { AuthContext } from "../../context/AuthContext";
+import * as ImagePicker from "expo-image-picker";
+import * as Permissions from 'expo-permissions';
 
 const ChangeInfo = (props) => {
-  const [firstName, setfirstName] = useState(null);
-  const [lastName, setlastName] = useState(null);
-  const [age, setAge] = useState(null);
-  const [grade, setGrade] = useState(null);
+  const [imageUri, setImageUri] = useState();
+  const requestPermission = async () =>{
+    const { granted } = await ImagePicker.requestCameraPermissionsAsync();
+    if(!granted)
+    alert('you need to enable permission to access the library');
+  }
+   useEffect(() => {
+    requestPermission();
+   },[]);
+   const handlePhoto = async () => {
+    try {
+      const result = await ImagePicker.launchImageLibraryAsync();
+      if (!result.canceled)
+      setImageUri(result.uri);
+    } catch (error){ 
+      console.log('error reading an image', error);
+    }
+  
+   }
+  const ChangeInfoValidationSchema = Yup.object().shape({
+    firstName: Yup.string()
+      .min(2, t("ChangeInfo.7"))
+      .max(50, t("ChangeInfo.8"))
+      .required(t("ChangeInfo.9")),
+    lastName: Yup.string()
+      .min(2, t("ChangeInfo.10"))
+      .max(50, t("ChangeInfo.11"))
+      .required(t("ChangeInfo.12")),
+    grade: Yup.number()
+      .min(1, t("ChangeInfo.13"))
+      .max(12, t("ChangeInfo.13"))
+      .required(t("ChangeInfo.14")),
+    age: Yup.number()
+      .min(12, t("ChangeInfo.15"))
+      .max(50, t("ChangeInfo.15"))
+      .required(t("ChangeInfo.16")),
+      phonNumber: Yup.string()
+      .matches(
+        /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
+        t("ChangeInfo.18")
+      )
+      .required(t("ChangeInfo.19")),
+  });
 
   const { isLoading, changeInfo } = useContext(AuthContext);
 
@@ -70,39 +111,102 @@ const ChangeInfo = (props) => {
           </Svg>
           <Image source={telegram} style={styles.telegram} />
         </View>
-        <View style={styles.imageWrapper}>
-          <Image source={user} style={styles.img} />
-        </View>
+        <TouchableOpacity style={styles.imageWrapper} onPress={handlePhoto}>
+          {/* <Image source={user} style={styles.img} /> */}
+          <Image  source={{ uri: imageUri}} style={styles.img} />
+        </TouchableOpacity>
         <TouchableOpacity style={styles.textUserWapper}>
           <CustomText style={styles.usertext}>{t("ChangeInfo.1")}</CustomText>
         </TouchableOpacity>
       </View>
       <ScrollView contentContainerStyle={styles.svgWrapper}>
+      <Formik
+          validationSchema={ChangeInfoValidationSchema}
+          initialValues={{
+            firstName: "",
+            lastName: "",
+            grade: "",
+            age: "",
+            phonNumbe: "",
+          }}
+          onSubmit={() => onSubmit()}
+        >
+          {({
+            handleChange,
+            handleBlur,
+            handleSubmit,
+            values,
+            errors,
+            touched,
+            isValid,
+          }) => (
         <View style={styles.form}>
           <Spinner visible={isLoading} />
-          <TextInput
-            name="firstName"
-            placeholder={t("ChangeInfo.2")}
-            style={styles.input}
-            onChangeText={(value) => setfirstName(value)}
-          />
-          <TextInput
-            name="lastName"
-            placeholder={t("ChangeInfo.3")}
-            style={styles.input}
-          />
-          <TextInput
-            name="age"
-            placeholder={t("ChangeInfo.4")}
-            keyboardType="numeric"
-            style={styles.input}
-          />
-          <TextInput
-            name="garde"
-            placeholder={t("ChangeInfo.5")}
-            keyboardType="numeric"
-            style={styles.input}
-          />
+         <TextInput
+                name="firstName"
+                placeholder={t("ChangeInfo.2")}
+                onChangeText={(value) => setfirstName(value)}
+                onBlur={handleBlur("firstName")}
+                value={values.firstName}
+                keyboardType="first-name"
+                variant="rounded"
+                style={styles.input}
+              />
+              {errors.firstName && touched.firstName && (
+                <CustomText style={styles.errorText}>
+                  {errors.firstName}
+                </CustomText>
+              )}
+              <TextInput
+                name="lastName"
+                placeholder={t("ChangeInfo.3")}
+                onChangeText={handleChange("lastName")}
+                onBlur={handleBlur("lastName")}
+                value={values.lastName}
+                keyboardType="last-name"
+                style={styles.input}
+              />
+              {errors.lastName && touched.lastName && (
+                <CustomText style={styles.errorText}>
+                  {errors.lastName}
+                </CustomText>
+              )}
+              <TextInput
+                placeholder={t("ChangeInfo.4")}
+                name="age"
+                onChangeText={handleChange("age")}
+                onBlur={handleBlur("age")}
+                keyboardType="numeric"
+                value={values.age}
+                style={styles.input}
+              />
+              {errors.age && touched.age && (
+                <CustomText style={styles.errorText}>{errors.age}</CustomText>
+              )}
+              <TextInput
+                placeholder={t("ChangeInfo.5")}
+                name="grade"
+                onChangeText={handleChange("grade")}
+                onBlur={handleBlur("grade")}
+                keyboardType="decimal-pad"
+                value={values.grade}
+                style={styles.input}
+              />
+              {errors.grade && touched.grade && (
+                <CustomText style={styles.errorText}>{errors.grade}</CustomText>
+              )}
+              <TextInput
+                placeholder={t("ChangeInfo.17")}
+                name="phonNumber"
+                onChangeText={handleChange("phonNumber")}
+                onBlur={handleBlur("phonNumber")}
+                keyboardType="decimal-pad"
+                value={values.phonNumber}
+                style={styles.input}
+              />
+              {errors.phonNumber && touched.phonNumber && (
+                <CustomText style={styles.errorText}>{errors.phonNumber}</CustomText>
+              )}
           <TouchableOpacity style={styles.submitBtn} onPress={onSubmit}>
             {/* onPress={()=> {changeInfo(firstName, lastName, age, grade)}} > */}
             <CustomText style={styles.submitText}>
@@ -111,6 +215,8 @@ const ChangeInfo = (props) => {
             </CustomText>
           </TouchableOpacity>
         </View>
+          )}
+          </Formik>
         <Svg
           xmlns="http://www.w3.org/2000/svg"
           width={"100%"}
@@ -196,8 +302,13 @@ const styles = StyleSheet.create({
     marginHorizontal: horizontalScale(10),
   },
   img: {
-    height: verticalScale(50),
-    width: horizontalScale(50),
+      // height: verticalScale(50),
+    // width: horizontalScale(50),
+    height: verticalScale(100),
+    width: horizontalScale(100),
+    // marginBottom: verticalScale(10),
+    borderWidth: horizontalScale(2),
+    borderRadius: moderateScale(50),
   },
   arrowStyle: {
     marginTop: verticalScale(20),

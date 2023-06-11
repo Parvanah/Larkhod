@@ -36,29 +36,29 @@ const FeedBack = (props) => {
   const { t, i18n } = useTranslation();
   const FeedBackSchema = Yup.object().shape({
     name: Yup.string()
-      .min(2, "نام باید بالاتر از دو حرف باشد")
-      .max(50, "نام باید کمتر از ۵۰ حرف باشد")
-      .required("نام ضروری است"),
+      .min(2, t("FeedBack.1"))
+      .max(50, t("FeedBack.2"))
+      .required(t("FeedBack.3")),
     phonNumber: Yup.string()
       .matches(
         /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
-        "شماره تیلفون اشتباه است"
+        t("FeedBack.4")
       )
-      .required("شماره ضروری است"),
+      .required(t("FeedBack.5")),
     email: Yup.string()
-      .email("لطفا ایمیل متعتبر تان را وارد کنید")
-      .required("ایمیل آدرس الزامی است"),
+      .email(t("FeedBack.6"))
+      .required(t("FeedBack.7")),
     message: Yup.string()
-      .min(4, "پیام خود را مکمل وارد کنید")
-      .required("پیام ضروری است"),
+      .min(4, t("FeedBack.8"))
+      .required(t("FeedBack.9")),
     class: Yup.number()
-      .min(1, "صنف تان  درست نیست")
-      .max(12, "صنف تان  درست نیست")
-      .required("صنف ضروری است"),
+      .min(1, t("FeedBack.10"))
+      .max(12, t("FeedBack.10"))
+      .required(t("FeedBack.11")),
   });
   const onSubmitt = (values) => {
     if (!values) {
-      Alert.alert("لطفأ تمام موارد را پر کنید");
+      Alert.alert(t("FeedBack.20"));
     } else {
       navigation.goBack();
     }
