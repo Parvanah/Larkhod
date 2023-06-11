@@ -27,13 +27,16 @@ import { AuthContext } from "../../context/AuthContext";
 const LogIn = () => {
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
-  const { isLoading, login, nav, userInfo } = useContext(AuthContext);
+  const { isLoading, login, nav, userInfo, backendError, setBackendError } =
+    useContext(AuthContext);
   const { t, i18n } = useTranslation();
   const loginValidationSchema = Yup.object().shape({
     email: Yup.string().email(t("LogIn.8")).required(t("LogIn.9")),
     password: Yup.string().required(t("LogIn.10")),
   });
-
+  // if (navigation.goBack() === true) {
+  //   setBackendError("");
+  // }
   const navigation = useNavigation();
   const OnSubmit = (values) => {
     login(values.email, values.password);
@@ -70,6 +73,7 @@ const LogIn = () => {
                   keyboardType="email-address"
                   variant="rounded"
                   style={styles.input}
+                  onFocus={() => setBackendError("")}
                 />
                 {errors.email && touched.email && (
                   <CustomText style={styles.errorText}>
@@ -85,6 +89,7 @@ const LogIn = () => {
                   secureTextEntry
                   variant="rounded"
                   style={styles.input}
+                  onFocus={() => setBackendError("")}
                 />
                 {errors.password && touched.password && (
                   <CustomText style={styles.errorText}>
@@ -96,6 +101,9 @@ const LogIn = () => {
                     {t("LogIn.5")}
                   </CustomText>
                 </TouchableOpacity>
+                <CustomText style={styles.backendError}>
+                  {backendError}
+                </CustomText>
                 <TouchableOpacity
                   style={styles.submitBtn}
                   // onPress={handleSubmit}
@@ -118,7 +126,7 @@ const LogIn = () => {
         </View>
         <View style={styles.linkedGoogle}>
           <TouchableOpacity style={styles.linkBtn}>
-            <Image source={google} />
+            <Image source={google} style={styles.google} />
             <CustomText style={styles.linkBtnText}>{t("LogIn.7")}</CustomText>
           </TouchableOpacity>
         </View>

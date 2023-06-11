@@ -103,6 +103,7 @@ const NewSignUp = () => {
                 onChangeText={handleChange("confirmPassword")}
                 onBlur={handleBlur("confirmPassword")}
                 value={values.confirmPassword}
+                // style={styles.placeholder}
               />
               {/* <TouchableOpacity onPress={() => SeenPassword()}>
               <Image source={seen} style={styles.seen}/>
