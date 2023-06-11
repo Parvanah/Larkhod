@@ -19,7 +19,7 @@ import * as Yup from "yup";
 import { useTranslation } from "react-i18next";
 import Svg, { Path, Defs, LinearGradient, Stop } from "react-native-svg";
 import * as ImagePicker from "expo-image-picker";
-import * as Permissions from 'expo-permissions';
+import * as Permissions from "expo-permissions";
 
 import {
   horizontalScale,
@@ -32,24 +32,22 @@ import { AuthContext } from "../../context/AuthContext";
 
 const Information = (props) => {
   const [imageUri, setImageUri] = useState();
-  const requestPermission = async () =>{
+
+  const requestPermission = async () => {
     const { granted } = await ImagePicker.requestCameraPermissionsAsync();
-    if(!granted)
-    alert('you need to enable permission to access the library');
-  }
-   useEffect(() => {
+    if (!granted) alert("you need to enable permission to access the library");
+  };
+  useEffect(() => {
     requestPermission();
-   },[]);
-   const handlePhoto = async () => {
+  }, []);
+  const handlePhoto = async () => {
     try {
       const result = await ImagePicker.launchImageLibraryAsync();
-      if (!result.canceled)
-      setImageUri(result.uri);
-    } catch (error){ 
-      console.log('error reading an image', error);
+      if (!result.canceled) setImageUri(result.uri);
+    } catch (error) {
+      console.log("error reading an image", error);
     }
-  
-   }
+  };
 
   const { isLoading, information } = useContext(AuthContext);
   const { t, i18n } = useTranslation();
@@ -71,7 +69,7 @@ const Information = (props) => {
       .min(12, t("Information.11"))
       .max(50, t("Information.11"))
       .required(t("Information.12")),
-      phonNumber: Yup.string()
+    phonNumber: Yup.string()
       .matches(
         /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
         t("Information.22")
@@ -80,7 +78,13 @@ const Information = (props) => {
   });
   const navigation = useNavigation();
   const onSubmit = (values) => {
-    information(values.firstName, values.lastName, values.age, values.grade, values.phonNumber);
+    information(
+      values.firstName,
+      values.lastName,
+      values.age,
+      values.grade,
+      values.phonNumber
+    );
   };
   return (
     <SafeAreaView style={styles.mainContainer}>
@@ -114,7 +118,7 @@ const Information = (props) => {
         </View>
         <TouchableOpacity style={styles.imageWrapper} onPress={handlePhoto}>
           {/* <Image source={user} style={styles.img} /> */}
-          <Image  source={{ uri: imageUri}} style={styles.img} />
+          <Image source={{ uri: imageUri }} style={styles.img} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.textUserWapper}>
           <CustomText style={styles.usertext}>{t("Information.13")}</CustomText>
@@ -123,13 +127,13 @@ const Information = (props) => {
       <ScrollView contentContainerStyle={styles.svgWrapper}>
         <Formik
           validationSchema={InfoValidationSchema}
-          initialValues={{ 
+          initialValues={{
             firstName: "",
             lastName: "",
             email: "",
             grade: "",
             age: "",
-            phonNumber:"",
+            phonNumber: "",
           }}
           onSubmit={(values) => onSubmit(values)}
         >
@@ -209,7 +213,7 @@ const Information = (props) => {
               {errors.grade && touched.grade && (
                 <CustomText style={styles.errorText}>{errors.grade}</CustomText>
               )}
-               <TextInput
+              <TextInput
                 placeholder={t("Information.20")}
                 name="phonNumber"
                 onChangeText={handleChange("phonNumber")}
@@ -219,7 +223,9 @@ const Information = (props) => {
                 style={styles.input}
               />
               {errors.phonNumber && touched.phonNumber && (
-                <CustomText style={styles.errorText}>{errors.phonNumber}</CustomText>
+                <CustomText style={styles.errorText}>
+                  {errors.phonNumber}
+                </CustomText>
               )}
               <TouchableOpacity
                 style={styles.submitBtn}
