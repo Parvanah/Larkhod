@@ -1,3 +1,6 @@
+import Spinner from "react-dom";
+import { AuthContext } from "../../context/AuthContext";
+import { useContext } from "react";
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from "react";
@@ -11,6 +14,7 @@ import React from 'react'
 <link rel="stylesheet" href="NewPassword.css" />;
 
 const  NewPassword = () => {
+	const { isLoading, register } = useContext(AuthContext);
 	const { t } = useTranslation();
 
 	function handleClick(lang) {
@@ -20,7 +24,7 @@ const  NewPassword = () => {
 
 
 
-	const initialValues = {password: "", repeatpassword: ""};
+	const initialValues = {password: "", confirmpassword: ""};
 	const [formValues, setFormValues] = useState(initialValues);
 	const [formErrors, setFormErrors] = useState({});
 	const [isSubmit, setIsSubmit] = useState(false);
@@ -34,6 +38,8 @@ const  NewPassword = () => {
 	const handleSubmit = (e) => {
 	  e.preventDefault();
 	  setFormErrors(validate(formValues));
+	  console.log( formValues.password, formValues.confirmpassword);
+	  register(formValues.password, formValues.confirmpassword);
 	  setIsSubmit(true);
 	};
   
@@ -51,10 +57,10 @@ const  NewPassword = () => {
 	  } else if (values.password.length < 4) {
 		errors.password = "!رمزعبور باید بیشتر از چهار حرف باشد";
 	  }
-	  if (!values.repeatpassword) {
-		errors.repeatpassword = "!رمزعبور را تکرار کنید";
-	  }else if(values.repeatpassword !== values.password){
-		errors.repeatpassword = "!تکرار رمز عبور باید با رمزعبور مطابقت داشته باشد";
+	  if (!values.confirmpassword) {
+		errors.confirmpassword = "!رمزعبور را تکرار کنید";
+	  }else if(values.confirmpassword !== values.password){
+		errors.confirmpassword = "!تکرار رمز عبور باید با رمزعبور مطابقت داشته باشد";
 	  }
 	  
 	  return errors;
@@ -105,18 +111,18 @@ const  NewPassword = () => {
               name="password"
               placeholder={t("newpassword.3")}
               value={formValues.password}
-              onChange={handleChange}
+			  onChange={(e) => handleChange(e)}
             />
             <p  className="error_new_password">{formErrors.password}</p>
 			<input
             id="input_nextt_new_password"
               type="password"
-              name="repeatpassword"
+              name="confirmpassword"
               placeholder={t("newpassword.4")}
-              value={formValues.repeatpassword}
-              onChange={handleChange}
+              value={formValues.confirmpassword}
+              onChange={(e) => handleChange(e)}
             />
-             <p  className="error_new_password">{formErrors.repeatpassword}</p>
+             <p  className="error_new_password">{formErrors.confirmpassword}</p>
 	{/* </div> */}
    <button id="button_next_new_password">{t("newpassword.5")}</button>
 </form>

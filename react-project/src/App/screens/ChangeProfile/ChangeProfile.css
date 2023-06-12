@@ -1,5 +1,5 @@
 /* ChangeProfile style */
-* {
+*{
     text-decoration: none;
     margin: 0;
     padding: 0;
@@ -76,13 +76,13 @@
     font-family: Bahij Helvetica Neue;
     font-style: normal;
     font-weight: normal;
-    font-size: 25px;
+    font-size: 30px;
     color: rgba(112,112,112,1);
 }
 #Path_change_profile {
     fill: rgba(0,0,0,0);
     stroke: rgba(60,152,189,1);
-    stroke-width: 1px;
+    stroke-width: 1.5px;
     stroke-linejoin: miter;
     stroke-linecap: butt;
     stroke-dasharray: 4.026000022888184 4.026000022888184;
@@ -164,20 +164,16 @@
 	border-radius: 50px;
 }
 
-
-.information_one_change_profile{
-
-   display: inline-block;
-}
 .information_two_change_profile{
    
    display: inline-block;
+   margin-left: 70px;
    
 }
 .information_three_change_profile{
     display: inline-block;
+    margin-right: 70px;
 }
-
 .name_change_profile,
 .lastname_change_profile,
 .username_change_profile,
@@ -189,7 +185,7 @@
 #input_change_profile{
     display: inline-block;
     background: none;
-    width: 300px;
+    width: 350px;
     padding: 10px 0px;
     margin-bottom: 30px;
     margin-top: 30px;
@@ -197,7 +193,7 @@
     box-sizing: border-box;
     text-align: right;
     fill: transparent;
-  outline: none;
+    outline: none;
     
 }
 ::placeholder{
@@ -211,8 +207,223 @@
 }
 .ig_change_profile{
     display: inline-block;
- position: relative;
- top: 50px;
- left: 70px;
- z-index: 1000;
+    position: relative;
+    top: 50px;
+    left: 70px;
+    z-index: 1000;
+}
+@media only screen and (max-width: 1200px ) and (min-width: 992px){
+    *{
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border: none;
+    }
+    #change_profile_svg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255,255,255,1);
+        overflow: hidden;
+    }
+    #Rectangle_change_profile {
+        fill: url(#Rectangle_change_profile);
+        stroke: rgba(112,112,112,1);
+        stroke-width: 1px;
+        stroke-linejoin: miter;
+        stroke-linecap: butt;
+        stroke-miterlimit: 4;
+        shape-rendering: auto;
+    }
+    .Rectangle_change_profile {
+        position: absolute;
+        overflow: visible;
+        width: 1200px;
+        height: 636px;
+        left: 0px;
+        right: 0px;
+        top: 240px;
+    }
+    #Ellipse_change_profile {
+        fill: rgba(255,255,255,1);
+        stroke: rgba(112,112,112,1);
+        stroke-width: 6px;
+        stroke-linejoin: miter;
+        stroke-linecap: butt;
+        stroke-miterlimit: 4;
+        shape-rendering: auto;
+    }
+    .Ellipse_change_profile {
+        position: absolute;
+        overflow: visible;
+        width: 258px;
+        height: 258px;
+        left: 551px;
+        top: -20px;
+    }
+    #Group_change_profile{
+        position: absolute;
+        width: 121px;
+        height: 136px;
+        left: 899.999px;
+        top: 152px;
+        overflow: visible;
+    }
+    .Group_change_profile {
+        position: absolute;
+        width: 121px;
+        height: 136px;
+        left: 0.001px;
+        top: 0px;
+        overflow: visible;
+    }
+    #nm_change_profile {
+        background-color: white;
+        cursor: pointer;
+        left: 580px;
+        top: 180px;
+        position: absolute;
+        overflow: visible;
+        width: 204px;
+        white-space: nowrap;
+        text-align: center;
+        font-family: Bahij Helvetica Neue;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 25px;
+        color: rgba(112,112,112,1);
+    }
+    #Path_change_profile {
+        fill: rgba(0,0,0,0);
+        stroke: rgba(60,152,189,1);
+        stroke-width: 1px;
+        stroke-linejoin: miter;
+        stroke-linecap: butt;
+        stroke-dasharray: 4.026000022888184 4.026000022888184;
+        stroke-dashoffset: 0;
+        stroke-miterlimit: 10;
+        shape-rendering: auto;
+    }
+    .Path_change_profile {
+        overflow: visible;
+        position: absolute;
+        width: 1282.474px;
+        height: 218.265px;
+        left: 30.077px;
+        top: 20.717px;
+        transform: matrix(1,0,0,1,0,0);
+    }
+    #Path_1013_change_profile {
+        fill: rgba(15,83,161,1);
+    }
+    .Path_1013_change_profile {
+        overflow: visible;
+        position: absolute;
+        width: 115.999px;
+        height: 49.452px;
+        left: 618.085px;
+        top: 302.015px;
+        transform: matrix(1,0,0,1,0,0);
+    }
+    #Path_1014_change_profile {
+        fill: rgba(60,152,189,1);
+    }
+    .Path_1014_change_profile {
+        overflow: visible;
+        position: absolute;
+        width: 95.333px;
+        height: 62.985px;
+        left: 637.751px;
+        top: 302.015px;
+        transform: matrix(1,0,0,1,0,0);
+    }
+    #Path_1015_change_profile {
+        fill: rgba(60,152,189,1);
+    }
+    .Path_1015_change_profile {
+        overflow: visible;
+        position: absolute;
+        width: 140.021px;
+        height: 28.396px;
+        left: 527.064px;
+        top: 309.015px;
+        transform: matrix(1,0,0,1,0,0);
+    }
+    .container_change_profile{
+        display: inline-block;
+        position: relative;
+        top: 290px;
+        left: 150px;
+        color: white;
+        width: 1040px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .save_button_change_profile{
+        display: inline-block;
+        position: relative;
+        top: 320px;
+        left: 535px;
+        width: 20%;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        font-size: 20px;
+        font-family: Bahij Helvetica Neue;
+        font-style: normal;
+        font-weight: normal;
+        cursor: pointer;
+        text-align: center;
+        color: rgba(60,152,189,1);
+        background-color: white;
+        border-radius: 50px;
+    }
+    .information_one_change_profile{
+
+        display: inline-block;
+    }
+    .information_two_change_profile{
+        
+        display: inline-block;
+        
+    }
+    .information_three_change_profile{
+         display: inline-block;
+    }
+    .name_change_profile,
+    .lastname_change_profile,
+    .username_change_profile,
+    .email_change_profile,
+    .age_change_profile,
+    .senf_change_profile{
+         color: white;
+    }
+    #input_change_profile{
+        display: inline-block;
+        background: none;
+        width: 300px;
+        padding: 10px 0px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        border-top: 1px solid #ccc;
+        box-sizing: border-box;
+        text-align: right;
+        fill: transparent;
+        outline: none;   
+    }
+    ::placeholder{
+        color: white;
+    }
+    .error_change_profile{
+        color: red;
+        font-weight: bold;
+        font-style: normal;
+    }
+    .ig_change_profile{
+        display: inline-block;
+        position: relative;
+        top: 50px;
+        left: 70px;
+        z-index: 1000;
+}
 }

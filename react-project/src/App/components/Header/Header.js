@@ -63,20 +63,7 @@ const Header = () => {
               </Link>
             </li>
             <hr className="vi_header" />
-            {/* <div className="contact"></div> */}
           </ul>
-
-          <button id="button_header">
-            <Link className="link_nav_header">
-              زبان دری
-            </Link>
-          </button>
-          <button id="button_header">
-            <Link className="link_nav_header">
-              پښتو ژبه
-            </Link>
-          </button>
-
           <div className="icon_header">
             <Link className="link_nav_header" to="/changeprofile">
               <FaUser />

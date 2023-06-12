@@ -1,0 +1,30 @@
+.download {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(60, 155, 200, 1);;
+    justify-content: center;
+    height: 100%;
+}
+.top-books {
+    /* background-color: aquamarine; */
+    color: white;
+    padding:30px;
+    text-align: center;
+    font-size:25px;
+}
+.buttom-books{
+   display: flex;
+   flex-direction: row;
+}
+.buttom-books .link-grade-n .li-grade-b{
+    color: rgba(16,84,162,1);
+    letter-spacing: -0.4px;
+    margin-right: 18px;
+    font-size: 20px;
+}
+.download .book {
+    width:40%;
+    height: 40%;
+    border-radius:30px;
+    margin-left:50px;
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
-// import './App.css';
+import './App.css';
 import Header from "./App/components/Header/Header";
 import SingUp from "./App/screens/SingUp/SingUp";
 import LogIn from "./App/screens/Login/LogIn";
@@ -15,6 +15,7 @@ import Units from "./App/components/Units/Units";
 import Lessons from "./App/components/Lessons/Lessons";
 import Grad from "./App/Grad";
 import Book from "./App/Book";
+import Downloading from "./App/Downloading";
 import Continue from "./App/Continue";
 import About from "./App/About";
 import Suggestion from "./App/Suggestion";
@@ -25,7 +26,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path="/header" element={<Header  />} />
+        <Route exact path="/header" element={<Header />} />
         <Route exact path="/" element={<SingUp />} />
         <Route exact path="/login" element={<LogIn />} />
         <Route exact path="/forgotpassword" element={<ForgotPassword />} />
@@ -38,6 +39,7 @@ function App() {
         <Route path="/lessons" element={<Lessons />} />
         <Route path="/grad" element={<Grad />} />
         <Route path="/book" element={<Book />} />
+        <Route path="/downloading" element={<Downloading/>}/>
         <Route path="/continue" element={<Continue />} />
         <Route path="/about" element={<About />} />
         <Route path="/suggestion" element={<Suggestion />} />
@@ -49,4 +51,4 @@ function App() {
 }
 
 export default App;
-// users
+// po

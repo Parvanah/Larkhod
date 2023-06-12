@@ -1,3 +1,7 @@
+import Spinner from "react-dom";
+import { AuthContext } from "../../context/AuthContext";
+import { useContext } from "react";
+
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from "react";
@@ -11,6 +15,7 @@ import React from 'react'
 <link rel="stylesheet" href="SendCode.css" />;
 
 const SendCode = () => {
+	const { isLoading, register } = useContext(AuthContext);
 	const { t } = useTranslation();
 
 	function handleClick(lang) {
@@ -32,6 +37,8 @@ const SendCode = () => {
 	const handleSubmit = (e) => {
 	  e.preventDefault();
 	  setFormErrors(validate(formValues));
+	  console.log( formValues.email);
+	  register( formValues.email);
 	  setIsSubmit(true);
 	};
   
@@ -45,10 +52,10 @@ const SendCode = () => {
 	  const errors = {};
 	  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 	  if (!values.code) {
-		errors.code = "!کد ضروری است";
+		errors.code = <>{t("sendcode.5")}</>;
 	  } 
       else if (values.code.length < 6) {
-        errors.code = "!کد باید بیشتر از شش حرف باشد";
+        errors.code =<>{t("sendcode.6")}</>;
       }
     //   else if (!regex.test(values.code)) {
 	// 	errors.code = "!این کد معتبر نیست";
@@ -103,7 +110,7 @@ const SendCode = () => {
 		name="code"
 		placeholder={t("sendcode.3")}
 		value={formValues.code}
-		onChange={handleChange}
+		onChange={(e) => handleChange(e)}
 	  />
 	  <p  className="error_send_code">{formErrors.code}</p>
 	{/* </div> */}

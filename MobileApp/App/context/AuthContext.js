@@ -1,7 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import axios from "axios";
 import React, { createContext, useEffect, useState } from "react";
-
+import { useTranslation } from "react-i18next";
 export const AuthContext = createContext();
 axios.defaults.baseURL = "http://192.168.43.81:8000/api/v1";
 axios.defaults.timeout = 3000;
@@ -13,7 +13,9 @@ export const AuthProvider = ({ children }) => {
   const [statusCode, setStatusCode] = useState(null);
   const [password, setPassword] = useState(null);
   const [email, setEmail] = useState(null);
-  // const [name, setName] = useState(null);
+  const [backendError, setBackendError] = useState("");
+  const { t, i18n } = useTranslation();
+
   const Authorization = async (status, token, errorMessage) => {
     try {
       const res = await axios
@@ -53,18 +55,14 @@ export const AuthProvider = ({ children }) => {
         email,
         password,
       });
-      // console.log(response.status);
-      // let userInformation = response.data;
-      // // setUserInfo(userInfo);
-      // // AsyncStorage.setItem("userInfo", JSON.stringify(userInfo));
-      // setIsLoading(false);
-      // var accsess_token = userInformation.token;
       const statusCode = response?.status;
       console.log(userInfo);
       console.log("done");
+      setBackendError("");
       Authorization(statusCode, response?.data?.token, "Successfully");
       setIsLoading(false);
     } catch (error) {
+      setBackendError(t(`BackendError.${error?.response?.data?.message}`));
       console.log(error?.response?.data);
       setUserInfo(null);
       console.log(error?.response?.status);
@@ -265,6 +263,8 @@ export const AuthProvider = ({ children }) => {
         forgotPassword,
         changePassword,
         verifyEmail,
+        backendError,
+        setBackendError,
       }}
     >
       {children}

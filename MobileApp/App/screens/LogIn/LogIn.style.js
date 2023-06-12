@@ -128,5 +128,14 @@ const Styles = StyleSheet.create({
     alignSelf: "flex-start",
     marginLeft: horizontalScale(30),
   },
+  backendError: {
+    color: "red",
+    textAlign: "center",
+    fontSize: moderateScale(15),
+  },
+  google: {
+    height: moderateScale(20),
+    width: moderateScale(20),
+  },
 });
 export default Styles;

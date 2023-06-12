@@ -14,11 +14,7 @@ const ChangeProfile = () => {
 	function handleClick(lang) {
 	  i18next.changeLanguage(lang)
 	}
-
-
-
-
-	const initialValues = {name:"", lastname:"", username: "", email: "", age: "", senf:""};
+	const initialValues = {name:"", lastname:"", age: "", senf:""};
 	const [formValues, setFormValues] = useState(initialValues);
 	const [formErrors, setFormErrors] = useState({});
 	const [isSubmit, setIsSubmit] = useState(false);
@@ -47,25 +43,16 @@ const ChangeProfile = () => {
 	  const errors = {};
 	  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 	  if (!values.name) {
-		errors.name = "!نام ضروری است";
+		errors.name = <>{t("changeprofile.9")}</>;
 	  }
 		if (!values.lastname) {
-			errors.lastname = "!تخلص ضروری است";
+			errors.lastname = <>{t("changeprofile.10")}</>;
 		}
-
-	  if (!values.username) {
-		errors.username = "!نام کاربری ضروری است";
-	  }
-	  if (!values.email) {
-		errors.email = "!ایمیل ضروری است";
-	  } else if (!regex.test(values.email)) {
-		errors.email = "!این ایمیل معتبر نیست";
-	  }
 	  if (!values.age) {
-		errors.age = "!سن ضروری است";
+		errors.age = <>{t("changeprofile.14")}</>;
 	 }
 	 if (!values.senf) {
-		errors.senf = "!صنف ضروری است";
+		errors.senf = <>{t("changeprofile.15")}</>;
 	 }
 	  return errors;
 	};
@@ -122,32 +109,6 @@ const ChangeProfile = () => {
       <form onSubmit={handleSubmit}>
         <div className="container_change_profile">
 
-			<div className='information_one_change_profile'>
-            <input
-            id='input_change_profile'
-			className="username_change_profile"
-              type="text"
-              name="username"
-              placeholder={t("changeprofile.4")}
-              value={formValues.username}
-              onChange={handleChange}
-            />
-			<p className='error_change_profile'>{formErrors.username}</p>
-			<input
-            id='input_change_profile'
-			className="senf_change_profile"
-              type="text"
-              name="senf"
-              placeholder={t("changeprofile.7")}
-              value={formValues.senf}
-              onChange={handleChange}
-            />
-          <p className='error_change_profile'>{formErrors.senf}</p>
-			
-          </div>
-
-    
-
          <div className="information_two_change_profile">
 		 <input
          id='input_change_profile'
@@ -183,16 +144,16 @@ const ChangeProfile = () => {
               onChange={handleChange}
             />
 			 <p className='error_change_profile'>{formErrors.name}</p>
-		  <input
-          id='input_change_profile'
-			 className="email_change_profile"
+			 <input
+            id='input_change_profile'
+			className="senf_change_profile"
               type="text"
-              name="email"
-              placeholder={t("changeprofile.5")}
-              value={formValues.email}
+              name="senf"
+              placeholder={t("changeprofile.7")}
+              value={formValues.senf}
               onChange={handleChange}
             />
-			<p className='error_change_profile'>{formErrors.email}</p>
+          <p className='error_change_profile'>{formErrors.senf}</p>
 		  </div>
         </div>
 		<button className="save_button_change_profile"> {t("changeprofile.8")}</button>

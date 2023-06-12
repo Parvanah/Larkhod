@@ -23,6 +23,8 @@ import styles from "./FirstPaage.style";
 import logo from "../../assets/White_PNG_Format_z.png";
 import CustomText from "../../CustomText";
 import { useTranslation } from "react-i18next";
+import { AuthContext } from "../../context/AuthContext";
+import { useContext } from "react";
 
 const options = [
   { label: "Pashto", value: "pa" },
@@ -32,10 +34,13 @@ const options = [
 export default function FirstPage(props) {
   const { t, i18n } = useTranslation();
   const navigation = useNavigation();
+  const { backendError, setBackendError } = useContext(AuthContext);
   const handleChangePersion = () => {
     i18n.changeLanguage("pe");
+    setBackendError("");
     navigation.navigate("SignUp");
   };
+
   return (
     <View style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollcontainer}>
@@ -50,6 +55,7 @@ export default function FirstPage(props) {
             style={styles.btn}
             // options={options}
             onPress={() => {
+              setBackendError("");
               navigation.navigate("SignUp");
               i18n.changeLanguage("pa");
             }}
