@@ -207,7 +207,7 @@ const ChangeInfo = (props) => {
               {errors.phonNumber && touched.phonNumber && (
                 <CustomText style={styles.errorText}>{errors.phonNumber}</CustomText>
               )}
-          <TouchableOpacity style={styles.submitBtn} onPress={onSubmit}>
+          <TouchableOpacity style={styles.submitBtn} onPress={handleSubmit}>
             {/* onPress={()=> {changeInfo(firstName, lastName, age, grade)}} > */}
             <CustomText style={styles.submitText}>
               {" "}
