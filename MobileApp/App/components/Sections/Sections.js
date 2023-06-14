@@ -109,8 +109,9 @@ const Sections = (props) => {
           <Svg
             xmlns="http://www.w3.org/2000/svg"
             width={331.258}
-            height={104.266}
+            height={verticalScale(104.266)}
             viewBox="0 0 331.258 104.266"
+            preserveAspectRatio="none"
             {...props}
           >
             <Path
