@@ -94,6 +94,7 @@ const Lessons = (props) => {
           <CustomText style={style.pdfText}>{t("Lesson.2")}</CustomText>
         </TouchableOpacity>
       </View>
+
       <View
         style={{
           width: "100%",
@@ -105,7 +106,7 @@ const Lessons = (props) => {
         <FlatList
           contentContainerStyle={style.bottom}
           data={route.params.lessons}
-          renderItem={({ item }) => {
+          renderItem={({ item, index }) => {
             return (
               <TouchableOpacity
                 style={style.lessonBtn}
@@ -119,10 +120,13 @@ const Lessons = (props) => {
                   })
                 }
               >
-                <CustomText style={style.lessonBtnText}>0{num}</CustomText>
+                <CustomText style={style.lessonBtnText}>
+                  0{index + 1}
+                </CustomText>
                 <CustomText style={style.lessonBtnText}>
                   {item.label}
                 </CustomText>
+                {/* {setNum(num + 1)} */}
               </TouchableOpacity>
             );
           }}

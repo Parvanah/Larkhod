@@ -53,10 +53,13 @@ const Styles = StyleSheet.create({
     // paddingHorizontal: 20,
   },
   top: {
-    marginTop: verticalScale(-120),
+    marginTop: verticalScale(-170),
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
+
+    height: verticalScale(150),
+    marginBottom: verticalScale(-20),
   },
   userName: {
     fontSize: moderateScale(20),

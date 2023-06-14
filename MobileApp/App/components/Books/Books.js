@@ -157,8 +157,9 @@ const style = StyleSheet.create({
   container: {
     backgroundColor: "#fff",
     flex: 1,
+    alignItems: "center",
     // alignItems: "center",
-    // alignItems: "center",
+    width: "100%",
   },
   top: {
     height: verticalScale(190),
@@ -170,8 +171,9 @@ const style = StyleSheet.create({
     marginBottom: verticalScale(5),
   },
   logo: {
-    width: horizontalScale(80),
-    height: verticalScale(70),
+    width: 90,
+    height: 80,
+    marginBottom: verticalScale(10),
   },
   arrowStyle: {
     marginRight: "85%",
@@ -183,7 +185,7 @@ const style = StyleSheet.create({
   },
   books: {
     backgroundColor: "rgba(60, 152, 189, 1)",
-    width: "85%",
+    width: "95%",
     paddingHorizontal: horizontalScale(10),
     paddingVertical: verticalScale(9),
     borderRadius: moderateScale(50),
@@ -200,7 +202,7 @@ const style = StyleSheet.create({
     marginTop: verticalScale(0),
     // height: "5%",
     alignItems: "center",
-    // padding: 20,
+    // marginHorizontal: horizontalScale(10),
     justifyContent: "center",
     // position: "absolute",
     // top: verticalScale(200),
