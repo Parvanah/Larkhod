@@ -184,7 +184,7 @@ const style = StyleSheet.create({
     // marginHorizontal: "20%",
   },
   lessonBtn: {
-    backgroundColor: "#fff",
+    backgroundColor: "#D4E4E8",
     width: "80%",
     marginVertical: verticalScale(3),
     paddingVertical: verticalScale(15),

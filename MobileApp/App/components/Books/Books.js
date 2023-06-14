@@ -33,7 +33,12 @@ const Books = (props) => {
   const route = useRoute();
   const { t, i18n } = useTranslation();
   var [inputSearch, setInputSearch] = useState("");
-
+  var title;
+  if (t("Sections.lange") === "Dari") {
+    title = t("Books.2") + route.params.grade;
+  } else {
+    title = t("Books.3") + route.params.grade + t("Books.2");
+  }
   return (
     <View style={style.container}>
       <View style={style.top}>
@@ -70,10 +75,7 @@ const Books = (props) => {
         </TouchableOpacity>
         <Image source={Logo} style={style.logo} />
         <View style={style.books}>
-          <CustomText style={style.BooksText}>
-            {t("Books.2")}
-            {route.params.grade}
-          </CustomText>
+          <CustomText style={style.BooksText}>{title}</CustomText>
         </View>
       </View>
       <View style={style.middle}>

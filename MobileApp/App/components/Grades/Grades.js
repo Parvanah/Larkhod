@@ -21,7 +21,7 @@ import Svg, {
   G,
   ForeignObject,
 } from "react-native-svg";
-import classLogo from "../../assets/Group 544.png";
+import classLogo from "../../assets/Group550.png";
 import SearchBar from "../../screens/SearchBar";
 import { StyleSheet } from "react-native";
 import user from "../../assets/user.png";
@@ -321,8 +321,8 @@ const style = StyleSheet.create({
     textAlign: "right",
   },
   gradeLogo: {
-    width: 28,
-    height: 28,
+    width: 33,
+    height: 33,
   },
   arrowStyle: {
     // marginBottom: "30%",
