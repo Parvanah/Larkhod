@@ -33,7 +33,29 @@ const NewSignUp = () => {
 
   const { t, i18n } = useTranslation();
   const signUpValidationSchema = Yup.object().shape({
+    firstName: Yup.string()
+    .min(2, t("Information.1"))
+    .max(50, t("Information.2"))
+    .required(t("Information.3")),
+  lastName: Yup.string()
+    .min(2, t("Information.4"))
+    .max(50, t("Information.5"))
+    .required(t("Information.6")),
     email: Yup.string().email(t("SignUp.8")).required(t("SignUp.9")),
+    grade: Yup.number()
+    .min(1, t("Information.9"))
+    .max(12, t("Information.9"))
+    .required(t("Information.10")),
+  age: Yup.number()
+    .min(12, t("Information.11"))
+    .max(50, t("Information.11"))
+    .required(t("Information.12")),
+  phonNumber: Yup.string()
+    .matches(
+      /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
+      t("Information.20")
+    )
+    .required(t("Information.21")),
     password: Yup.string()
       .matches(/\w*[a-z]\w*/, t("SignUp.10"))
       .matches(/\w*[A-Z]\w*/, t("SignUp.11"))
@@ -46,8 +68,14 @@ const NewSignUp = () => {
   });
   const navigation = useNavigation();
   const onSubmit = (values) => {
-    register(values.email, values.password);
-    navigation.navigate("SignUpVerification");
+    register(values.firstName,
+      values.lastName,
+      values.age,
+      values.grade,
+      values.phonNumber,
+       values.password,
+       values.confirmPassword);
+    // navigation.navigate("SignUpVerification");
   };
   const [seenVariable, setSeenVariable] = useState(true);
   const SeenPassword = () => {
@@ -65,9 +93,15 @@ const NewSignUp = () => {
         <Formik
           validationSchema={signUpValidationSchema}
           initialValues={{
+            firstName: "",
+            lastName: "",
             email: "",
+            grade: "",
+            age: "",
+            phonNumber: "",
             password: "",
             confirmPassword: "",
+
           }}
           onSubmit={(values) => onSubmit(values)}
         >
@@ -76,12 +110,63 @@ const NewSignUp = () => {
               <Spinner visible={isLoading} />
               <Field
                 component={CustomInput}
+                name="firstName"
+                placeholder={t("Information.14")}
+                onChangeText={handleChange("firstName")}
+                onBlur={handleBlur("firstName")}
+                value={values.firstName}
+                keyboardType="first-name"
+                variant="rounded"
+                style={styles.input}
+              />
+              <Field
+                component={CustomInput}
+                name="lastName"
+                placeholder={t("Information.15")}
+                onChangeText={handleChange("lastName")}
+                onBlur={handleBlur("lastName")}
+                value={values.lastName}
+                keyboardType="last-name"
+                style={styles.input}
+              />
+              <Field
+                component={CustomInput}
                 name="email"
                 placeholder={t("SignUp.3")}
                 keyboardType="email-address"
                 onChangeText={handleChange("email")}
                 onBlur={handleBlur("email")}
                 value={values.email}
+              />
+              <Field
+                component={CustomInput}
+                placeholder={t("Information.17")}
+                name="age"
+                onChangeText={handleChange("age")}
+                onBlur={handleBlur("age")}
+                keyboardType="numeric"
+                value={values.age}
+                style={styles.input}
+              />
+              <Field
+                component={CustomInput}
+                placeholder={t("Information.18")}
+                name="grade"
+                onChangeText={handleChange("grade")}
+                onBlur={handleBlur("grade")}
+                keyboardType="decimal-pad"
+                value={values.grade}
+                style={styles.input}
+              />
+              <Field
+                component={CustomInput}
+                placeholder={t("Information.22")}
+                name="phonNumber"
+                onChangeText={handleChange("phonNumber")}
+                onBlur={handleBlur("phonNumber")}
+                keyboardType="decimal-pad"
+                value={values.phonNumber}
+                style={styles.input}
               />
               {/* <View style={styles.input}>  */}
               <Field

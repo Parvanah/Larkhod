@@ -3,7 +3,7 @@ import axios from "axios";
 import React, { createContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 export const AuthContext = createContext();
-axios.defaults.baseURL = "http://192.168.43.81:8000/api/v1";
+axios.defaults.baseURL = "http://172.20.10.4:8000/api/v1";
 axios.defaults.timeout = 3000;
 
 export const AuthProvider = ({ children }) => {
@@ -156,7 +156,7 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  const information = async (name, lastName, age, grade, image) => {
+  const NewSignUp = async (name, lastName, age, grade, image, email, password, confirmPassword, firstName) => {
     try {
       setIsLoading(true);
       console.log(name);
@@ -165,6 +165,11 @@ export const AuthProvider = ({ children }) => {
         email: email,
         password: password,
         image: image,
+        lastName: lastName,
+        firstName: firstName,
+        age: age,
+        grade: grade,
+        confirmPassword: confirmPassword
       });
       console.log(response?.data);
       setUserInfo(response?.data);
@@ -254,7 +259,7 @@ export const AuthProvider = ({ children }) => {
         register,
         login,
         changeInfo,
-        information,
+        // information,
         isLoggedIn,
         Authorization,
         Loggout,
@@ -265,6 +270,7 @@ export const AuthProvider = ({ children }) => {
         verifyEmail,
         backendError,
         setBackendError,
+        NewSignUp
       }}
     >
       {children}
