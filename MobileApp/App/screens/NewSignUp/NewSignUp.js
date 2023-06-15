@@ -198,9 +198,7 @@ const NewSignUp = () => {
               <Image source={seen} style={styles.seen}/>
             </TouchableOpacity>  
             </View>  */}
-              <View>
-                <CustomText style={{ color: "red" }}>{backendError}</CustomText>
-              </View>
+
               <TouchableOpacity
                 style={styles.submitBtn}
                 // onPress={handleSubmit}
@@ -217,7 +215,9 @@ const NewSignUp = () => {
           )}
         </Formik>
       </View>
-
+      <View>
+        <CustomText style={{ color: "red" }}>{backendError}</CustomText>
+      </View>
       <View style={styles.afterSubmit}>
         <CustomText style={{ color: "lightgray" }}>
           _______________{t("SignUp.6")}______________
