@@ -92,7 +92,7 @@ const Units = () => {
                 onPress={() =>
                   navigation.navigate("Lessons", {
                     lessons: item.lessons,
-                    title: "فصل " + item.label,
+                    title: t("Units.2") + item.label,
                     params: {
                       id: item.id,
                       name: item.name,

@@ -1,4 +1,4 @@
-import React, {useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import {
   View,
   Text,
@@ -27,6 +27,7 @@ import {
 } from "react-native-confirmation-code-field";
 import CustomText from "../../CustomText";
 import { useTranslation } from "react-i18next";
+import { AuthContext } from "../../context/AuthContext";
 // import Spinner from "react-native-loading-spinner-overlay";
 // import { AuthContext } from "../../context/AuthContext";
 
@@ -39,12 +40,13 @@ const SignUpVerification = () => {
     value,
     setValue,
   });
+  const { AfterVarify } = useContext(AuthContext);
   const navigation = useNavigation();
   // const { isLoading, verifyEmail } = useContext(AuthContext);
-  const handleSubmit = (value)=> {
-    navigation.navigate("Information");
+  const handleSubmit = (value) => {
+    AfterVarify();
     // verifyEmail(value.cellCount);
-  }
+  };
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#FFF" }}>
       <ScrollView contentContainerStyle={styles.outContainer}>
@@ -102,7 +104,7 @@ const SignUpVerification = () => {
           </View>
         </View>
         <View style={styles.InContainer}>
-        {/* <Spinner visible={isLoading} /> */}
+          {/* <Spinner visible={isLoading} /> */}
           <CodeField
             ref={ref}
             {...props}
@@ -124,10 +126,7 @@ const SignUpVerification = () => {
               </View>
             )}
           />
-          <TouchableOpacity
-            style={styles.submitBtn}
-            onPress={handleSubmit}
-          >
+          <TouchableOpacity style={styles.submitBtn} onPress={handleSubmit}>
             <CustomText style={styles.submitText}>
               {t("SignUpVerification.1")}
             </CustomText>

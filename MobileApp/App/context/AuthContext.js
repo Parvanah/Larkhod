@@ -3,7 +3,7 @@ import axios from "axios";
 import React, { createContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 export const AuthContext = createContext();
-axios.defaults.baseURL = "http://172.20.10.4:8000/api/v1";
+axios.defaults.baseURL = "http://192.168.43.81:8000/api/v1";
 axios.defaults.timeout = 3000;
 
 export const AuthProvider = ({ children }) => {
@@ -11,10 +11,11 @@ export const AuthProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [splashLoading, setSplashLoading] = useState(false);
   const [statusCode, setStatusCode] = useState(null);
-  const [password, setPassword] = useState(null);
-  const [email, setEmail] = useState(null);
+  // const [password, setPassword] = useState(null);
+  // const [email, setEmail] = useState(null);
   const [backendError, setBackendError] = useState("");
   const { t, i18n } = useTranslation();
+  const [temp, setTemp] = useState(null);
 
   const Authorization = async (status, token, errorMessage) => {
     try {
@@ -39,14 +40,14 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  const register = (emailOutside, passwordOutside) => {
-    setIsLoading(true);
-    setEmail(emailOutside);
-    setPassword(passwordOutside);
-    console.log(email);
-    console.log(password);
-    setIsLoading(false);
-  };
+  // const register = (emailOutside, passwordOutside) => {
+  //   setIsLoading(true);
+  //   setEmail(emailOutside);
+  //   setPassword(passwordOutside);
+  //   console.log(email);
+  //   console.log(password);
+  //   setIsLoading(false);
+  // };
 
   const login = async (email, password) => {
     try {
@@ -155,29 +156,34 @@ export const AuthProvider = ({ children }) => {
       setIsLoading(false);
     }
   };
-
-  const NewSignUp = async (name, lastName, age, grade, image, email, password, confirmPassword, firstName) => {
+  // its register called in newSignUp
+  const NewSignUp = async (
+    firstName,
+    lastName,
+    email,
+    age,
+    grade,
+    phonNumber,
+    password
+  ) => {
     try {
       setIsLoading(true);
-      console.log(name);
+      console.log(firstName);
       const response = await axios.post(`/auth/register`, {
-        name: name,
+        name: firstName,
         email: email,
+        phone: phonNumber,
         password: password,
-        image: image,
-        lastName: lastName,
-        firstName: firstName,
-        age: age,
-        grade: grade,
-        confirmPassword: confirmPassword
       });
       console.log(response?.data);
-      setUserInfo(response?.data);
-      AsyncStorage.setItem("userInfo", JSON.stringify(userInfo));
-
+      setTemp(response.data);
+      console.log("temp");
+      console.log(temp);
+      setBackendError("");
       setIsLoading(false);
     } catch (error) {
       console.log(error?.response?.data);
+      setBackendError(t(`BackendError.${error?.response?.data?.message}`));
       setIsLoading(false);
     }
   };
@@ -201,6 +207,12 @@ export const AuthProvider = ({ children }) => {
   //     setIsLoading(false);
   //   }
   // };
+  const AfterVarify = () => {
+    setIsLoading(true);
+    setUserInfo(temp);
+    AsyncStorage.setItem("userInfo", JSON.stringify(userInfo));
+    setIsLoading(false);
+  };
   const verifyEmail = async (email) => {
     try {
       setIsLoading(true);
@@ -256,21 +268,22 @@ export const AuthProvider = ({ children }) => {
         isLoading,
         userInfo,
         splashLoading,
-        register,
+        // register,
         login,
         changeInfo,
         // information,
         isLoggedIn,
         Authorization,
         Loggout,
-        password,
-        email,
+        // password,
+        // email,
         forgotPassword,
         changePassword,
         verifyEmail,
         backendError,
         setBackendError,
-        NewSignUp
+        NewSignUp,
+        AfterVarify,
       }}
     >
       {children}

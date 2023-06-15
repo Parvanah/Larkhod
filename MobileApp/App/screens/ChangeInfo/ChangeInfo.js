@@ -21,32 +21,32 @@ import {
   verticalScale,
   moderateScale,
 } from "../../Resonsive/Matrix";
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import Spinner from "react-native-loading-spinner-overlay";
 import { AuthContext } from "../../context/AuthContext";
 import * as ImagePicker from "expo-image-picker";
-import * as Permissions from 'expo-permissions';
+import * as Permissions from "expo-permissions";
+import { Formik, Field } from "formik";
+import * as Yup from "yup";
 
 const ChangeInfo = (props) => {
   const [imageUri, setImageUri] = useState();
-  const requestPermission = async () =>{
+  const { t, i18n } = useTranslation();
+  const requestPermission = async () => {
     const { granted } = await ImagePicker.requestCameraPermissionsAsync();
-    if(!granted)
-    alert('you need to enable permission to access the library');
-  }
-   useEffect(() => {
+    if (!granted) alert("you need to enable permission to access the library");
+  };
+  useEffect(() => {
     requestPermission();
-   },[]);
-   const handlePhoto = async () => {
+  }, []);
+  const handlePhoto = async () => {
     try {
       const result = await ImagePicker.launchImageLibraryAsync();
-      if (!result.canceled)
-      setImageUri(result.uri);
-    } catch (error){ 
-      console.log('error reading an image', error);
+      if (!result.canceled) setImageUri(result.uri);
+    } catch (error) {
+      console.log("error reading an image", error);
     }
-  
-   }
+  };
   const ChangeInfoValidationSchema = Yup.object().shape({
     firstName: Yup.string()
       .min(2, t("ChangeInfo.7"))
@@ -64,7 +64,7 @@ const ChangeInfo = (props) => {
       .min(12, t("ChangeInfo.15"))
       .max(50, t("ChangeInfo.15"))
       .required(t("ChangeInfo.16")),
-      phonNumber: Yup.string()
+    phonNumber: Yup.string()
       .matches(
         /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
         t("ChangeInfo.18")
@@ -74,7 +74,6 @@ const ChangeInfo = (props) => {
 
   const { isLoading, changeInfo } = useContext(AuthContext);
 
-  const { t, i18n } = useTranslation();
   const navigation = useNavigation();
   const onSubmit = () => {
     changeInfo(firstName);
@@ -113,14 +112,14 @@ const ChangeInfo = (props) => {
         </View>
         <TouchableOpacity style={styles.imageWrapper} onPress={handlePhoto}>
           {/* <Image source={user} style={styles.img} /> */}
-          <Image  source={{ uri: imageUri}} style={styles.img} />
+          <Image source={{ uri: imageUri }} style={styles.img} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.textUserWapper}>
           <CustomText style={styles.usertext}>{t("ChangeInfo.1")}</CustomText>
         </TouchableOpacity>
       </View>
       <ScrollView contentContainerStyle={styles.svgWrapper}>
-      <Formik
+        <Formik
           validationSchema={ChangeInfoValidationSchema}
           initialValues={{
             firstName: "",
@@ -140,9 +139,9 @@ const ChangeInfo = (props) => {
             touched,
             isValid,
           }) => (
-        <View style={styles.form}>
-          <Spinner visible={isLoading} />
-         <TextInput
+            <View style={styles.form}>
+              <Spinner visible={isLoading} />
+              <TextInput
                 name="firstName"
                 placeholder={t("ChangeInfo.2")}
                 onChangeText={(value) => setfirstName(value)}
@@ -205,18 +204,20 @@ const ChangeInfo = (props) => {
                 style={styles.input}
               />
               {errors.phonNumber && touched.phonNumber && (
-                <CustomText style={styles.errorText}>{errors.phonNumber}</CustomText>
+                <CustomText style={styles.errorText}>
+                  {errors.phonNumber}
+                </CustomText>
               )}
-          <TouchableOpacity style={styles.submitBtn} onPress={handleSubmit}>
-            {/* onPress={()=> {changeInfo(firstName, lastName, age, grade)}} > */}
-            <CustomText style={styles.submitText}>
-              {" "}
-              {t("ChangeInfo.6")}{" "}
-            </CustomText>
-          </TouchableOpacity>
-        </View>
+              <TouchableOpacity style={styles.submitBtn} onPress={handleSubmit}>
+                {/* onPress={()=> {changeInfo(firstName, lastName, age, grade)}} > */}
+                <CustomText style={styles.submitText}>
+                  {" "}
+                  {t("ChangeInfo.6")}{" "}
+                </CustomText>
+              </TouchableOpacity>
+            </View>
           )}
-          </Formik>
+        </Formik>
         <Svg
           xmlns="http://www.w3.org/2000/svg"
           width={"100%"}
@@ -302,7 +303,7 @@ const styles = StyleSheet.create({
     marginHorizontal: horizontalScale(10),
   },
   img: {
-      // height: verticalScale(50),
+    // height: verticalScale(50),
     // width: horizontalScale(50),
     height: verticalScale(100),
     width: horizontalScale(100),
