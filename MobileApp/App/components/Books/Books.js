@@ -34,7 +34,7 @@ const Books = (props) => {
   const { t, i18n } = useTranslation();
   var [inputSearch, setInputSearch] = useState("");
   var title;
-  if (t("Sections.lange") === "Dari") {
+  if (t("Sections.lang") === "Dari") {
     title = t("Books.2") + route.params.grade;
   } else {
     title = t("Books.3") + route.params.grade + t("Books.2");

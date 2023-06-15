@@ -29,33 +29,34 @@ const NewSignUp = () => {
   // const [email, setEmail] = useState(null);
   // const [password, setPassword] = useState(null);
   const [confirmPassword, setConfirmPassword] = useState(null);
-  const { isLoading, verifyEmail, register } = useContext(AuthContext);
+  const { isLoading, verifyEmail, NewSignUp, backendError, setBackendError } =
+    useContext(AuthContext);
 
   const { t, i18n } = useTranslation();
   const signUpValidationSchema = Yup.object().shape({
     firstName: Yup.string()
-    .min(2, t("Information.1"))
-    .max(50, t("Information.2"))
-    .required(t("Information.3")),
-  lastName: Yup.string()
-    .min(2, t("Information.4"))
-    .max(50, t("Information.5"))
-    .required(t("Information.6")),
+      .min(2, t("Information.1"))
+      .max(50, t("Information.2"))
+      .required(t("Information.3")),
+    lastName: Yup.string()
+      .min(2, t("Information.4"))
+      .max(50, t("Information.5"))
+      .required(t("Information.6")),
     email: Yup.string().email(t("SignUp.8")).required(t("SignUp.9")),
     grade: Yup.number()
-    .min(1, t("Information.9"))
-    .max(12, t("Information.9"))
-    .required(t("Information.10")),
-  age: Yup.number()
-    .min(12, t("Information.11"))
-    .max(50, t("Information.11"))
-    .required(t("Information.12")),
-  phonNumber: Yup.string()
-    .matches(
-      /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
-      t("Information.20")
-    )
-    .required(t("Information.21")),
+      .min(1, t("Information.9"))
+      .max(12, t("Information.9"))
+      .required(t("Information.10")),
+    age: Yup.number()
+      .min(12, t("Information.11"))
+      .max(50, t("Information.11"))
+      .required(t("Information.12")),
+    phonNumber: Yup.string()
+      .matches(
+        /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
+        t("Information.20")
+      )
+      .required(t("Information.21")),
     password: Yup.string()
       .matches(/\w*[a-z]\w*/, t("SignUp.10"))
       .matches(/\w*[A-Z]\w*/, t("SignUp.11"))
@@ -68,14 +69,18 @@ const NewSignUp = () => {
   });
   const navigation = useNavigation();
   const onSubmit = (values) => {
-    register(values.firstName,
+    NewSignUp(
+      values.firstName,
       values.lastName,
+      values.email,
       values.age,
       values.grade,
       values.phonNumber,
-       values.password,
-       values.confirmPassword);
-    // navigation.navigate("SignUpVerification");
+      values.password
+    );
+    if (backendError === "") {
+      navigation.navigate("SignUpVerification");
+    }
   };
   const [seenVariable, setSeenVariable] = useState(true);
   const SeenPassword = () => {
@@ -87,7 +92,7 @@ const NewSignUp = () => {
   };
 
   return (
-    <ScrollView>
+    <ScrollView contentContainerStyle={styles.outContainer}>
       <Spinner visible={isLoading} />
       <View style={styles.form}>
         <Formik
@@ -101,7 +106,6 @@ const NewSignUp = () => {
             phonNumber: "",
             password: "",
             confirmPassword: "",
-
           }}
           onSubmit={(values) => onSubmit(values)}
         >
@@ -194,6 +198,7 @@ const NewSignUp = () => {
               <Image source={seen} style={styles.seen}/>
             </TouchableOpacity>  
             </View>  */}
+
               <TouchableOpacity
                 style={styles.submitBtn}
                 // onPress={handleSubmit}
@@ -209,6 +214,9 @@ const NewSignUp = () => {
             </>
           )}
         </Formik>
+      </View>
+      <View>
+        <CustomText style={{ color: "red" }}>{backendError}</CustomText>
       </View>
       <View style={styles.afterSubmit}>
         <CustomText style={{ color: "lightgray" }}>
