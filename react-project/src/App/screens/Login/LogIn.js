@@ -8,6 +8,7 @@ import "./LogIn.css"
 import { FaGoogle } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import img1 from '../../assets/mg.png';
+import arrowr from "../../assets/Group_158_f@2x.png"
 import React from 'react'
 import img3 from '../../assets/logo_3.png'
 // import React from 'react'
@@ -164,21 +165,8 @@ const LogIn = (props) => {
 <div className='Mobile_lr'>
  <div className="M-img">
 <div id="M-arrow">
- <Link to="/SingUp"> <svg xmlns="http://www.w3.org/2000/svg" width={16} height={10} {...props} className='M-arrow'>
-    <defs>
-      <clipPath id="a">
-        <path fill="#fff" d="M0 0h16v10H0z" data-name="Rectangle 85" />
-      </clipPath>
-    </defs>
-    <g clipPath="url(#a)" data-name="Group 158">
-      <path
-        fill="#fff"
-        fillRule="evenodd"
-        d="m3.247 6 2.48 2.294a.99.99 0 0 1 0 1.414 1.023 1.023 0 0 1-1.432 0L.445 6.059A1.465 1.465 0 0 1 0 5a1.483 1.483 0 0 1 .444-1.06L4.294.293a1.025 1.025 0 0 1 1.434 0 .992.992 0 0 1 0 1.414L3.248 4H15a1 1 0 0 1 0 2H3.247Z"
-        data-name="Path 433"
-      />
-    </g>
-  </svg></Link>
+ <Link to="/SingUp">
+ <img src={arrowr}  className="M-arrow"/></Link>
   <img src={img3} className="img3"/>
  </div>
 </div>

@@ -2,6 +2,8 @@ import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 import "./Grades.css"
 import { useEffect, useState } from "react";
+import { AuthContext } from "../../../App/context/AuthContext";
+import {useContext } from 'react';
 import sanaf from "../../assets/sanaf.png";
 import images from "../../assets/images.png";
 import image from "../../assets/Group_158_a@2x.png";
@@ -12,6 +14,8 @@ import { Link, useLocation } from "react-router-dom";
 
 const Grads = () => {
   const { t } = useTranslation();
+  const {currentState,
+    setCurrentState,} = useContext(AuthContext);
 
   function handleClick(lang) {
     i18next.changeLanguage(lang)
@@ -21,7 +25,8 @@ const Grads = () => {
   const location = useLocation();
   const locationData = location.state;
   const grades = locationData.grades;
-
+  console.log("grade");
+  console.log(currentState);
   return (
     <div>
       <div className='all-grade'>
@@ -62,7 +67,7 @@ const Grads = () => {
                 state={{ subjects: item.subjects }}
               >
                 <img className="sanaf-grade" src={sanaf} />
-                <div className="li-grade">{item.label}</div>
+                <div className="li-grade" onClick={()=> setCurrentState(item.subjects)}>{item.label}</div>
               </Link>
             );
           })}

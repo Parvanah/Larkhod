@@ -16,6 +16,8 @@ import "./SingUp.css";
 import { FaGoogle } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import img1 from "../../assets/mg.png";
+import arrowr from "../../assets/Group_158_f@2x.png";
+import img3 from '../../assets/logo_3.png';
 import React from "react";
 import { Link, useNavigate, useNavigation } from "react-router-dom";
 <link rel="stylesheet" href="SingUp.css" />;
@@ -231,6 +233,133 @@ const SingUp = (props) => {
                     console.log('Login Failed');
                 }}/>
       </div>
+      <div className='Mobile_lr'>
+ <div className="M-img">
+<div id="M-arrow">
+ <Link to="/SingUp">
+ <img src={arrowr}  className="M-arrow"/></Link>
+  <img src={img3} className="img3"/>
+ </div>
+</div>
+<div id='Mobile-bottom'>
+ <button className="button_login">
+<div className="upp_login" >{t("login.1")}</div>
+  <Link to="/" className="inn_login">{t("login.2")}</Link>
+</button>
+{/* <div className="cantainer_login">
+      {Object.keys(formErrors).length === 0 && isSubmit ? (
+        <div className="ui message success">{navigate('/header')}</div>
+      ) : (
+        <pre></pre>
+      )}
+
+      <form onSubmit={handleSubmit}>
+        <div className="ui divider"></div>
+        <div className="ui form">
+          <div className="field">
+            <input
+            id="input_login"
+              type="text"
+              name="email"
+              placeholder={t("login.3")}
+              value={formValues.email}
+              onChange={handleChange}
+            />
+            <p  className="error_login">{formErrors.email}</p>
+          </div>
+          
+          <div className="field">
+            <input
+            id="input_login"
+              type="password"
+              name="password"
+              placeholder={t("login.4")}
+              value={formValues.password}
+              onChange={handleChange}
+            />
+            <p  className="error_login">{formErrors.password}</p>
+          </div>
+          <Link className="forgotpassword_login" to="/forgotpassword"> {t("login.5")}</Link>
+        </div>
+         <button className="acount_button_login">{t("login.6")}</button>
+      </form>
+      <h4 className="p_login">{t("login.7")} </h4>
+      <Link to="google.com">
+      <button className="google_button_login">
+      <FaGoogle className="google_icon_login" />
+        <div className="google_p_login">{t("login.8")}</div>
+</button>
+      </Link>
+    </div> */}
+       <div id="cantainer_singup">
+          {Object.keys(formErrors).length === 0 && isSubmit ? (
+            <div>{navigate("/profile")}</div>
+          ) : (
+            <pre></pre>
+          )}
+
+
+          <form onSubmit={handleSubmit}>
+            <div>
+              <input
+                id="input_singup"
+                type="text"
+                name="username"
+                placeholder={t("singup.3")}
+                value={formValues.username}
+                onChange={(e) => handleChange(e)}
+              />
+              <p className="error_singup">{formErrors.username}</p>
+
+              <div className="field">
+                <input
+                  id="input_singup"
+                  type="text"
+                  name="email"
+                  placeholder={t("singup.4")}
+                  value={formValues.email}
+                  onChange={(e) => handleChange(e)}
+                />
+                <p className="error_singup">{formErrors.email}</p>
+              </div>
+
+              <div className="field">
+                <input
+                  id="input_singup"
+                  type="password"
+                  name="password"
+                  placeholder={t("singup.5")}
+                  value={formValues.password}
+                  onChange={(e) => handleChange(e)}
+                />
+                <p className="error_singup">{formErrors.password}</p>
+              </div>
+
+              <div className="field">
+                <input
+                  id="input_singup"
+                  type="password"
+                  name="confirmpassword"
+                  placeholder={t("singup.6")}
+                  value={formValues.confirmpassword}
+                  onChange={(e) => handleChange(e)}
+                />
+                <p className="error_singup">{formErrors.confirmpassword}</p>
+              </div>
+            </div>
+            <button className="acount_button_singuo">{t("singup.1")}</button>
+          </form>
+          <h4 className="p_singup">{t("singup.7")}</h4>
+             <button  className="google_button_singup" onClick={login}>
+            {/* <div>{navigate("/header")}</div> */}
+        
+              <FaGoogle className="google_icon_singup" />
+              <div className="google_p_singup">{t("singup.8")}</div>
+            </button >
+        </div>
+ </div>
+
+</div>
     </div>
   );
 };

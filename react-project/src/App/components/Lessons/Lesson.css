@@ -3,6 +3,7 @@ lesson.css
 
 .mobile{
     display: none;
+    font-family: "Bahij helvetica";
 }
 .mobileSvg{
     display: none;
@@ -15,6 +16,7 @@ lesson.css
     margin-top: 0px;
     display: flex;
     flex-direction: row;
+    font-family: "Bahij helvetica";
     /* height: 70px; */
     /* overflow-y: scroll; */
     padding-left: 5%;
@@ -372,6 +374,7 @@ lesson.css
         overflow-x: hidden;
         padding-left: 30px;
         padding-right: 10px;
+        font-family: "Bahij helvetica";
     }
     .sidebar {
         /* position: fixed;
@@ -537,6 +540,7 @@ lesson.css
         background-image: linear-gradient( #3C98BD, #0F53A1);
         border-bottom-left-radius: 100px;
         border-bottom-right-radius: 100px;
+        font-family: "Bahij helvetica";
     }
 }
 @media only screen and (max-width: 576px ) and (min-width:360px){
@@ -554,6 +558,7 @@ lesson.css
         background-image: linear-gradient( #3C98BD, #0F53A1);
         border-bottom-left-radius: 100px;
         border-bottom-right-radius: 100px;
+        font-family: "Bahij helvetica";
     }
     /* .mobile .mobileTop .svg{
         display: flex;
@@ -588,5 +593,6 @@ lesson.css
         border-bottom-left-radius: 100px;
         border-bottom-right-radius: 100px;
         clip-path: polygon(97% 60%, 1% 58%, 100% 60%, 78% 94%, 21% 94%, 0% 60%, 40% 60%);
+        font-family: "Bahij helvetica";
     }
 }

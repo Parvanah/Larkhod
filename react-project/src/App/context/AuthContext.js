@@ -15,6 +15,12 @@ export const AuthProvider = ({ children }) => {
   const [statusCode, setStatusCode] = useState(null);
   const [password, setPassword] = useState(null);
   const [email, setEmail] = useState(null);
+  const [currentBook , setCurrentBook]  = useState();
+  const [currentState, setCurrentState] = useState();
+  const [currentLesson, setCurrentLesson] = useState();
+  const [currentpart, setCurrentpart] = useState();
+ 
+ 
   // const [name, setName] = useState(null);
   const Authorization = async (status, token, errorMessage) => {
     try {
@@ -272,6 +278,14 @@ export const AuthProvider = ({ children }) => {
         forgotPassword,
         changePassword,
         verifyEmail,
+        currentState,
+        setCurrentState,
+        currentBook,
+        setCurrentBook,
+        currentLesson,
+        setCurrentLesson,
+        currentpart,
+        setCurrentpart
       }}
     >
       {children}

@@ -4,22 +4,38 @@ import { useTranslation } from 'react-i18next';
 import { FaUser } from "react-icons/fa";
 import "./Header.css";
 import { Link } from "react-router-dom";
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 
 import img1 from '../../assets/logo.png';
 import img from '../../assets/larg.png';
 import imgg from '../../assets/smal.png';
+import { AuthContext } from '../../context/AuthContext';
+import {useContext } from 'react';
 
 
 <link rel="stylesheet" href="./Header.css" />;
 const Header = () => {
   const { t } = useTranslation();
-
-  function handleClick(lang) {
+  const {currentState,
+    setCurrentState , currentBook,
+    setCurrentBook ,currentLesson,
+    setCurrentLesson,currentpart,
+    setCurrentpart} = useContext(AuthContext);
+   function handleClick(lang) {
     i18next.changeLanguage(lang)
   }
+  console.log(currentLesson);
+  console.log(currentpart);
+var nav;
+var status;
+if(currentLesson == "lesson"){
+  nav= "/lessons";
+  status={ lessons: currentpart, title: " مضمون " + currentBook};
 
-
+}else{
+ nav="/unit";
+ status={ units: currentpart }; 
+}
 
   return (
     <div className="full_header">
@@ -46,7 +62,8 @@ const Header = () => {
             </li>
             <hr className="vl_header" />
             <li className="li_header">
-              <Link className="link_nav_header" to="/continue">
+              <Link className="link_nav_header" to={nav}
+                state = {status} >
               {t("header.6")}
               </Link>
             </li>
