@@ -1,8 +1,8 @@
 import Spinner from "react-dom";
 import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
-import i18next from 'i18next';
-import { useTranslation } from 'react-i18next';
+import i18n from '../../../i18n';
+import { withNamespaces } from 'react-i18next';
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from '../../assets/PNG_Format.png';
@@ -13,13 +13,11 @@ import "./NewPassword.css"
 import React from 'react'
 <link rel="stylesheet" href="NewPassword.css" />;
 
-const  NewPassword = () => {
+const  NewPassword = ({ t }) => {
 	const { isLoading, register } = useContext(AuthContext);
-	const { t } = useTranslation();
-
-	function handleClick(lang) {
-	  i18next.changeLanguage(lang)
-	}
+	const changeLanguage = (lng) => {
+		i18n.changeLanguage(lng);
+	  }
 
 
 
@@ -86,11 +84,11 @@ const  NewPassword = () => {
 			</rect>
 		</svg>
 	<div id="para_first_new_password">
-	{t("newpassword.1")}
+	{t("newpassword1")}
 	</div>
 	{/* <div className="u_____">{t("newpassword.2")}</div> */}
 	<div id="para_second_new_password">
-	{t("newpassword.2")}
+	{t("newpassword2")}
 	</div>
 	<div id="logoo_new_password">
 	<img id="logo_new_password" src={logo}/>
@@ -109,7 +107,7 @@ const  NewPassword = () => {
             id="input_nextt_new_password"
               type="password"
               name="password"
-              placeholder={t("newpassword.3")}
+              placeholder={t("newpassword3")}
               value={formValues.password}
 			  onChange={(e) => handleChange(e)}
             />
@@ -118,13 +116,13 @@ const  NewPassword = () => {
             id="input_nextt_new_password"
               type="password"
               name="confirmpassword"
-              placeholder={t("newpassword.4")}
+              placeholder={t("newpassword4")}
               value={formValues.confirmpassword}
               onChange={(e) => handleChange(e)}
             />
              <p  className="error_new_password">{formErrors.confirmpassword}</p>
 	{/* </div> */}
-   <button id="button_next_new_password">{t("newpassword.5")}</button>
+   <button id="button_next_new_password">{t("newpassword5")}</button>
 </form>
 </div>
 	
@@ -132,5 +130,4 @@ const  NewPassword = () => {
     </div>
   )
 }
-
-export default NewPassword
+export default  withNamespaces()(NewPassword) ;

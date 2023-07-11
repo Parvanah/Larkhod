@@ -1,25 +1,27 @@
-import i18next from 'i18next';
-import { useTranslation } from 'react-i18next';
+import i18n from '../i18n';
+import { withNamespaces } from 'react-i18next';
 import logo from './assets/PNG_Format.png';
 import dot from './assets/dot_one.png'; 
 import selesh from './assets/Group_158_.png';
 import React from 'react'
 import img3 from '../App/assets/svg_phone.png';
-import img1 from '../App/assets/logo.png';
+import img1 from '../App/assets/logo_1.png';
 import "./About.css"
 import { Link, useNavigate } from "react-router-dom";
  <link rel="stylesheet" href="./About.css" />;
 
-const About = () => {
-  const { t } = useTranslation();
-
-  function handleClick(lang) {
-    i18next.changeLanguage(lang)
-  }
-
+const About = ({ t }) => {
+  const changeLanguage = (lng) => {
+		i18n.changeLanguage(lng);
+	  }
 
   return (
     <div className='all_section_about' id='all_section_about'>
+      <div className='about_images'>
+          <img id='image_phone_one_about' src={img3}/> 
+     <Link  to="/header"><img id='image_phone_two_about' src={selesh}/></Link> 
+       <img id='image_phone_three_about'  src={img1}/> 
+      </div>
         <div>
         <svg class="phone_svg_one_about" viewBox="36.137 50.39 360 165.069">
 		<linearGradient id="phone_svg_one_about" spreadMethod="pad" x1="0.892" x2="0.152" y1="-0.259" y2="1.169">
@@ -29,27 +31,17 @@ const About = () => {
 		<path id="phone_svg_one_about" d="M 396.1369934082031 68.6741943359375 L 396.1369934082031 143.8356781005859 L 378.6035766601562 168.8486022949219 L 357.880615234375 198.4019012451172 C 356.9146118164062 199.7721862792969 355.8939514160156 201.0811309814453 354.8004150390625 202.3082427978516 C 354.3629760742188 202.8195343017578 353.9073486328125 203.2899475097656 353.4516906738281 203.7603302001953 C 347.8016052246094 209.5687408447266 340.7663879394531 213.4137573242188 333.2026062011719 214.8249206542969 C 331.03369140625 215.2544403076172 328.828369140625 215.4589691162109 326.6047973632812 215.4589691162109 L 105.6692047119141 215.4589691162109 C 93.45777893066406 215.4589691162109 81.93894195556641 209.1801452636719 74.39337921142578 198.4019012451172 L 66.13700103759766 186.6214752197266 L 64.87940979003906 184.8421478271484 L 36.13700103759766 143.8356781005859 L 36.13700103759766 68.6741943359375 C 36.13700103759766 59.63434219360352 42.09690856933594 52.06706237792969 49.80650329589844 50.63541793823242 C 50.68135070800781 50.47180557250977 51.55619812011719 50.38999176025391 52.46749877929688 50.38999176025391 L 379.82470703125 50.38999176025391 C 388.8101196289062 50.38999176025391 396.1369934082031 58.61173629760742 396.1369934082031 68.6741943359375 Z">
 		</path>
 	</svg>
-        {/* <svg className='phone_svg_one_about' viewBox="36.137 50.39 360 165.069">
-		<linearGradient id="phone_svg_one_about" spreadMethod="pad" x1="0.892" x2="0.152" y1="-0.259" y2="1.169">
-			<stop offset="0" stop-color="#3c98bd" stop-opacity="1"></stop>
-			<stop offset="1" stop-color="#1054a2" stop-opacity="1"></stop>
-		</linearGradient>
-		<path id="phone_svg_one_about" d="M 396.1369934082031 68.6741943359375 L 396.1369934082031 143.8356781005859 L 378.6035766601562 168.8486022949219 L 357.880615234375 198.4019012451172 C 356.9146118164062 199.7721862792969 355.8939514160156 201.0811309814453 354.8004150390625 202.3082427978516 C 354.3629760742188 202.8195343017578 353.9073486328125 203.2899475097656 353.4516906738281 203.7603302001953 C 347.8016052246094 209.5687408447266 340.7663879394531 213.4137573242188 333.2026062011719 214.8249206542969 C 331.03369140625 215.2544403076172 328.828369140625 215.4589691162109 326.6047973632812 215.4589691162109 L 105.6692047119141 215.4589691162109 C 93.45777893066406 215.4589691162109 81.93894195556641 209.1801452636719 74.39337921142578 198.4019012451172 L 66.13700103759766 186.6214752197266 L 64.87940979003906 184.8421478271484 L 36.13700103759766 143.8356781005859 L 36.13700103759766 68.6741943359375 C 36.13700103759766 59.63434219360352 42.09690856933594 52.06706237792969 49.80650329589844 50.63541793823242 C 50.68135070800781 50.47180557250977 51.55619812011719 50.38999176025391 52.46749877929688 50.38999176025391 L 379.82470703125 50.38999176025391 C 388.8101196289062 50.38999176025391 396.1369934082031 58.61173629760742 396.1369934082031 68.6741943359375 Z">
-		</path>
-	</svg>
-   */}
+
         </div>
-      <div id='section_one_about'>
-      <img id='imggg_about' src={img3}/>
-  <Link to="/header"><img id="selesh_about" src={selesh}/></Link>
-      <img className='img_about' src={img1}/>
+      <div id='section_one_about'> 
+    <Link to="/header"><img id="selesh_about" src={selesh}/></Link>
       <img className='dot_about' src={dot}/>
       </div>
         <div id='section_two_about'>
         <img id="logoooo_about" src={logo}/>
         <div className='about'>
-          <h2 id='title_about'>{t("about.1")}</h2>
-          <p id='paragraph_about'>{t("about.2")}</p>
+          <h2 id='title_about'>{t("about1")}</h2>
+          <p id='paragraph_about'>{t("about2")}</p>
         </div>
         </div>
         
@@ -65,4 +57,4 @@ const About = () => {
     </div>
   )
 }
-export default About
+export default  withNamespaces()(About) ;

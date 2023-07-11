@@ -5,6 +5,10 @@
     box-sizing: border-box;
     border: none;
 }
+
+input:active{
+    background-color: red;
+}
 .Mobile_r{
     display: none;
 }

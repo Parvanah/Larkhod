@@ -10,16 +10,19 @@
 
 //  export default Grad;
 import React from "react";
-import i18next from 'i18next';
-import { useTranslation } from 'react-i18next';
+import i18n from '../i18n';
+import { withNamespaces } from 'react-i18next';
 import sanaf from "./assets/sanaf.png";
 import images from "./assets/images.png";
 import image from "./assets/Group_158_a@2x.png";
 import { Link, useLocation } from "react-router-dom";
 import JSONFiles from './Json Files/SchoolSubjects.json';
 import "./Grades.css";
-const Grads = () => {
-  const { t } = useTranslation();
+const Grads = ( { t } ) => {
+
+  const changeLanguage = (lng) => {
+		i18n.changeLanguage(lng);
+	  }
   var data = JSONFiles.dari_curriculum ;
   var primary = data.primary.grades;
   var secondary = data.secondary.grades;
@@ -108,5 +111,6 @@ const Grads = () => {
     </div>
    )
 }
-export default Grads;
+export default  withNamespaces()(Grads) ;
+
 

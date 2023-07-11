@@ -1,4 +1,5 @@
-import React, { Suspense } from 'react';
+// import React, { Suspense } from 'react';
+import React from 'react';
 import './i18n';
 import * as serviceWorker from './serviceWorker';
 import ReactDOM from "react-dom/client";
@@ -13,12 +14,12 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <AuthProvider> 
-  <Suspense fallback={(<div>Loading...</div>)}>
+  {/* <Suspense fallback={(<div>Loading...</div>)}> */}
   <GoogleOAuthProvider clientId="286821865292-sel956ul462umja0aubg0c2dgt9v4t0k.apps.googleusercontent.com">
   <App />
     </GoogleOAuthProvider>;
 
-</Suspense>
+{/* </Suspense> */}
 </AuthProvider>
 );
 

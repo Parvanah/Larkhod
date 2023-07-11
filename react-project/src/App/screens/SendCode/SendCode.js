@@ -1,9 +1,8 @@
 import Spinner from "react-dom";
 import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
-
-import i18next from 'i18next';
-import { useTranslation } from 'react-i18next';
+import i18n from '../../../i18n';
+import { withNamespaces } from 'react-i18next';
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from '../../assets/PNG_Format.png';
@@ -14,13 +13,13 @@ import "./SendCode.css"
 import React from 'react'
 <link rel="stylesheet" href="SendCode.css" />;
 
-const SendCode = () => {
+const SendCode = ({ t } ) => {
 	const { isLoading, register } = useContext(AuthContext);
-	const { t } = useTranslation();
+	
 
-	function handleClick(lang) {
-	  i18next.changeLanguage(lang)
-	}
+	const changeLanguage = (lng) => {
+		i18n.changeLanguage(lng);
+	  }
 
 
 	const initialValues = { code: "" };
@@ -52,10 +51,10 @@ const SendCode = () => {
 	  const errors = {};
 	  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 	  if (!values.code) {
-		errors.code = <>{t("sendcode.5")}</>;
+		errors.code = <>{t("sendcode5")}</>;
 	  } 
       else if (values.code.length < 6) {
-        errors.code =<>{t("sendcode.6")}</>;
+        errors.code =<>{t("sendcode6")}</>;
       }
     //   else if (!regex.test(values.code)) {
 	// 	errors.code = "!این کد معتبر نیست";
@@ -83,12 +82,12 @@ const SendCode = () => {
 		</svg>
 
 	<div id="para_first_send_code">
-	{t("sendcode.1")}
+	{t("sendcode1")}
 	</div>
 	{/* <div className="u______">{t("sendcode.2")}</div>
     <div className="u__">{t("sendcode.3")} </div> */}
 	<div id="para_second_send_code">
-	{t("sendcode.2")}
+	{t("sendcode2")}
 	</div>
 	<div id="logoo_send_code">
 	<img id="logo_send_code" src={logo}/>
@@ -108,13 +107,13 @@ const SendCode = () => {
 	  id="input_next_send_code"
 		type="code"
 		name="code"
-		placeholder={t("sendcode.3")}
+		placeholder={t("sendcode3")}
 		value={formValues.code}
 		onChange={(e) => handleChange(e)}
 	  />
 	  <p  className="error_send_code">{formErrors.code}</p>
 	{/* </div> */}
-   <button id="button_next_send_code">{t("sendcode.4")}</button>
+   <button id="button_next_send_code">{t("sendcode4")}</button>
 </form>
 </div>
 	
@@ -122,6 +121,4 @@ const SendCode = () => {
     </div>
   )
 }
-
-
-export default SendCode
+export default  withNamespaces()(SendCode) ;

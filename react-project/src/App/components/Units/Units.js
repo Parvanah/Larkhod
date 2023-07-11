@@ -1,5 +1,5 @@
-import i18next from 'i18next';
-import { useTranslation } from 'react-i18next';
+import i18n from '../../../i18n';
+import { withNamespaces } from 'react-i18next';
 import * as React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -7,12 +7,9 @@ import "./Unit.css";
 import sectionicon from "../../assets/Group_374.png";
 // import {HiChevronLeft,HiChevronRight } from "react-icons/hi";
 import photo3 from "../../assets/Group_158.png";
-const Units = (props) => {
-    const { t } = useTranslation();
+const Units = ({ t }) => {
+  
 
-  function handleClick(lang) {
-    i18next.changeLanguage(lang)
-  }
   // getting props that passed from Books to Unit
   const location = useLocation();
   const locationData = location.state;
@@ -32,7 +29,9 @@ const Units = (props) => {
       <div className="t-section">
         <div className="svgArrow">
         <div className="mobile-arrow"> 
-        <svg xmlns="http://www.w3.org/2000/svg" width={22} height={14} {...props}>
+        <svg xmlns="http://www.w3.org/2000/svg" width={22} height={14}
+        //  {...props}
+         >
     <defs>
       <clipPath id="a">
         <path fill="#fff" d="M-.34-.485h22v14h-22z" data-name="Rectangle 85" />
@@ -54,7 +53,7 @@ const Units = (props) => {
             width={36}
             height={22}
             data-name="Group 411"
-            {...props}
+            // {...props}
           >
             <defs>
               <clipPath id="a">
@@ -73,10 +72,12 @@ const Units = (props) => {
         </div>
 
        <div id="laptop-top">
-         <p id="p1">{t("units.1")}</p>
-         <p>{t("units.2")}</p>
+         <p id="p1">{t("units1")}</p>
+         <p>{t("units2")}</p>
         <div id="mobile-p"> 
-           <svg xmlns="http://www.w3.org/2000/svg" width={355} height={115} {...props}>
+           <svg xmlns="http://www.w3.org/2000/svg" width={355} height={115}
+            // {...props}
+            >
     <text
       fill="#fff"
       data-name="\u06A9\u062A\u0627\u0628 \u0645\u0648\u0631\u062F \u0646\u0638\u0631 \u0634\u0645\u0627 \u062F\u0631 \u0641\u0635\u0644\u200C\u0647\u0627\u06CC \u0630\u06CC\u0644 \u062A\u0642\u0633\u06CC\u0645 \u0634\u062F\u0647 \u0627\u0633\u062A \u0641\u0635\u0644 \u0647\u0627\u06CC \u062A\u0642\u0633\u06CC\u0645 \u0634\u062F\u0647\u200C\u06CC \u06A9\u062A\u0627\u0628 \u0631\u0627 \u0627\u0646\u062A\u062E\u0627\u0628 \u0646\u0645\u0648\u062F\u0647 \u0648 \u0645\u0637\u0627\u0644\u0639\u0647 \u0646\u0645\u0627\u06CC\u06CC\u062F"
@@ -119,7 +120,7 @@ const Units = (props) => {
             xmlns="http://www.w3.org/2000/svg"
             width={13.435}
             height={28.158}
-            {...props}
+            // {...props}
           >
             <path
               fill="#fff"
@@ -149,7 +150,7 @@ const Units = (props) => {
             xmlns="http://www.w3.org/2000/svg"
             width={13.435}
             height={27.158}
-            {...props}
+            // {...props}
           >
             <path
               fill="#fff"
@@ -160,7 +161,7 @@ const Units = (props) => {
         </div>
       </div>
       <div className="last">
-         <p>{t("units.3")}</p> 
+         <p>{t("units3")}</p> 
  
         <div className="svg">
      <div id="last-mobile"> 
@@ -174,7 +175,7 @@ const Units = (props) => {
     xmlns="http://www.w3.org/2000/svg"
     width={200.604}
     height={163.229}
-    {...props}
+    // {...props}
   >
     <path
       fill="#fff"
@@ -192,5 +193,6 @@ const Units = (props) => {
   );
 };
 
-export default Units;
+export default  withNamespaces()(Units) ;
+
 

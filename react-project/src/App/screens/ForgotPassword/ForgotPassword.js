@@ -3,8 +3,8 @@ import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
 import { Link, useNavigate, useNavigation } from "react-router-dom";
 import { BrowserRouter as Router } from "react-router-dom";
-import i18next from 'i18next';
-import { useTranslation } from 'react-i18next';
+import i18n from '../../../i18n';
+import { withNamespaces } from 'react-i18next';
 import { useState, useEffect } from "react";
 import logo from '../../assets/PNG_Format.png';
 import img1 from '../../assets/Group_158.png';
@@ -15,13 +15,11 @@ import React from 'react'
 <link rel="stylesheet" href="ForgotPassword.css" />;
 
 
-const ForgotPassword = () => {
+const ForgotPassword = ({ t }) => {
 	const { isLoading, register } = useContext(AuthContext);
-	const { t } = useTranslation();
-
-	function handleClick(lang) {
-	  i18next.changeLanguage(lang)
-	}
+	const changeLanguage = (lng) => {
+		i18n.changeLanguage(lng);
+	  }
 
 
 
@@ -54,9 +52,9 @@ const ForgotPassword = () => {
 	  const errors = {};
 	  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 	  if (!values.email) {
-		errors.email =<>{t("forgotpassword.5")}</>;
+		errors.email =<>{t("forgotpassword5")}</>;
 	  } else if (!regex.test(values.email)) {
-		errors.email = <>{t("forgotpassword.6")}</>;
+		errors.email = <>{t("forgotpassword6")}</>;
 		// (t("grads.1"))
 	  }
 	  return errors;
@@ -83,10 +81,10 @@ const ForgotPassword = () => {
 		</svg>
 		
 	<div id="para_first_forgot_password">
-	{t("forgotpassword.1")}
+	{t("forgotpassword1")}
 	</div>
 	<div id="para_second_forgot_password">
-	{t("forgotpassword.2")}
+	{t("forgotpassword2")}
 	</div>
 	<div id="logoo_forgot_password">
 	<img id="logo_forgot_password" src={logo}/>
@@ -106,12 +104,12 @@ const ForgotPassword = () => {
 	  id="input_next_forgot_password"
 		type="text"
 		name="email"
-		placeholder={t("forgotpassword.3")}
+		placeholder={t("forgotpassword3")}
 		value={formValues.email}
 		onChange={(e) => handleChange(e)}
 	  />
 	  <p  className="error_forgot_password">{formErrors.email}</p>
-   <button id="button-next_forgot_password">{t("forgotpassword.4")}</button>
+   <button id="button-next_forgot_password">{t("forgotpassword4")}</button>
 </form>
 </div>
 	
@@ -120,4 +118,6 @@ const ForgotPassword = () => {
   )
 }
 
-export default ForgotPassword
+// export default ForgotPassword;
+export default  withNamespaces()(ForgotPassword) ;
+

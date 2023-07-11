@@ -1,8 +1,8 @@
 import Spinner from "react-dom";
 import { AuthContext } from "../App/context/AuthContext";
 import { useContext } from "react";
-import i18next from 'i18next';
-import { useTranslation } from 'react-i18next';
+import i18n from '../i18n';
+import { withNamespaces } from 'react-i18next';
 import { FaFacebookF, FaInstagram ,FaYoutube ,FaTwitter} from "react-icons/fa";
 import "./Suggestion.css"
 import ig from './assets/Group_158_jr@2x.png';
@@ -11,13 +11,12 @@ import { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 <link rel="stylesheet" href="./Suggestion.css" />;
 
-const Suggestion = () => {
+const Suggestion = ( { t }) => {
   const { isLoading, register } = useContext(AuthContext);
-  const { t } = useTranslation();
 
-    function handleClick(lang) {
-      i18next.changeLanguage(lang)
-    }
+  const changeLanguage = (lng) => {
+		i18n.changeLanguage(lng);
+	  }
 
 
 
@@ -52,25 +51,25 @@ const Suggestion = () => {
 	  const errors = {};
 	  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 	  if (!values.name) {
-		errors.name =<>{t("suggestion.10")}</>;
+		errors.name =<>{t("suggestion10")}</>;
 	  }
 		if (!values.message) {
-			errors.message = <>{t("suggestion.11")}</>;
+			errors.message = <>{t("suggestion11")}</>;
 		}
 
 	  if (!values.city) {
-		errors.city =<>{t("suggestion.12")}</>;
+		errors.city =<>{t("suggestion12")}</>;
 	  }
 	  if (!values.email) {
-		errors.email = <>{t("suggestion.13")}</>;
+		errors.email = <>{t("suggestion13")}</>;
 	  } else if (!regex.test(values.email)) {
 		errors.email = <>{t("suggestion.14")}</>;
 	  }
 	  if (!values.phone) {
-		errors.phone = <>{t("suggestion.15")}</>;
+		errors.phone = <>{t("suggestion15")}</>;
 	 }
 	 if (!values.senf) {
-		errors.senf =<>{t("suggestion.16")}</>;
+		errors.senf =<>{t("suggestion16")}</>;
 	 }
 	  return errors;
 	};
@@ -78,8 +77,8 @@ const Suggestion = () => {
       <div className="suggestion">
               <div className="sendd-suggestion">
               <Link to="/header"><img id="ig-suggestion" src={ig}/></Link> 
-              <h1 className="title-suggestion">{t("suggestion.1")}</h1>
-              <p className="para-suggestion">{t("suggestion.2")}</p>
+              <h1 className="title-suggestion">{t("suggestion1")}</h1>
+              <p className="para-suggestion">{t("suggestion2")}</p>
       <div >
       <div className='svg-suggestion'>
         <svg className='svg-suggestion' viewBox="36.137 50.39 360 452.886">
@@ -109,7 +108,7 @@ const Suggestion = () => {
 		className='name-of-person-suggestion'
               type="text"
               name="name"
-              placeholder={t("suggestion.3")}
+              placeholder={t("suggestion3")}
               value={formValues.name}
               onChange={(e) => handleChange(e)}
             />
@@ -121,7 +120,7 @@ const Suggestion = () => {
        className='phone-of-person-suggestion'
               type="phone"
               name="phone"
-              placeholder={t("suggestion.5")}
+              placeholder={t("suggestion5")}
               value={formValues.phone}
               onChange={(e) => handleChange(e)}
             />
@@ -133,7 +132,7 @@ const Suggestion = () => {
        className='senf-of-person-suggestion'
               type="text"
               name="senf"
-              placeholder={t("suggestion.4")}
+              placeholder={t("suggestion4")}
               value={formValues.senf}
               onChange={(e) => handleChange(e)}
             />
@@ -144,7 +143,7 @@ const Suggestion = () => {
        className='city-of-person-suggestion'
               type="city"
               name="city"
-              placeholder={t("suggestion.6")}
+              placeholder={t("suggestion6")}
               value={formValues.city}
               onChange={(e) => handleChange(e)}
             />
@@ -159,7 +158,7 @@ const Suggestion = () => {
        className='email-of-person-suggestion'
               type="text"
               name="email"
-              placeholder={t("suggestion.7")}
+              placeholder={t("suggestion7")}
               value={formValues.email}
               onChange={(e) => handleChange(e)}
             />
@@ -170,7 +169,7 @@ const Suggestion = () => {
      className='message-of-person-suggestion'
               type="message"
               name="message"
-              placeholder={t("suggestion.8")}
+              placeholder={t("suggestion8")}
               value={formValues.message}
               onChange={(e) => handleChange(e)}
             />
@@ -180,7 +179,7 @@ const Suggestion = () => {
       
         </div>
         <div className="send-button-suggestion">
-        <button className="send-suggestion">{t("suggestion.9")}</button>
+        <button className="send-suggestion">{t("suggestion9")}</button>
         </div>
 		
       </form>
@@ -200,10 +199,8 @@ const Suggestion = () => {
         </div>
      );
 }
- 
+export default  withNamespaces()(Suggestion) ;
 
- 
-export default Suggestion;
 
 
 

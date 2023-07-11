@@ -1,5 +1,5 @@
-import i18next from 'i18next';
-import { useTranslation } from 'react-i18next';
+import i18n from '../../../i18n';
+import { withNamespaces } from 'react-i18next';
 import { Link, useLocation } from "react-router-dom";
 import * as React from "react";
 import "./Lesson.css";
@@ -10,12 +10,7 @@ import photo3 from "../../assets/Group_408.png";
 import photo4 from "../../assets/Group_404.png";
 import photo5 from "../../assets/Group_158_a@2x.png";
 // import photo6 from "../../assets/Group407.png";
-const Lessons = (props) => {
-  const { t } = useTranslation();
-
-  function handleClick(lang) {
-    i18next.changeLanguage(lang)
-  }
+const Lessons = ({ t }) => {
 
   var [num, setNum] = useState(1);
   const location = useLocation();
@@ -27,7 +22,9 @@ const Lessons = (props) => {
     <body> 
       <div className="lesson">
       
-        <svg xmlns="http://www.w3.org/2000/svg" width={403} height={675} {...props}>
+        <svg xmlns="http://www.w3.org/2000/svg" width={403} height={675}
+        //  {...props}
+         >
     <defs>
       <linearGradient
         id="a"
@@ -56,7 +53,7 @@ const Lessons = (props) => {
             <img src={photo4} />
           </div>
           <div className="text">
-            <h3>{t("lessons.1")} {unit}</h3>
+            <h3>{t("lessons1")} {unit}</h3>
             <div className="sidebar-lessons">
               {lessons.map((item) => {
                 return (
@@ -81,7 +78,7 @@ const Lessons = (props) => {
         <div className="title">
           <div>
             <h1> {unit}</h1>
-            <p>{t("lessons.2")} {title}</p>
+            <p>{t("lessons2")} {title}</p>
           </div>
           <img src={photo1}></img>
           
@@ -93,7 +90,7 @@ const Lessons = (props) => {
         </div>
         <div className="midlle">
           <img src={photo3}></img>
-          <p> {t("lessons.3")}</p>
+          <p> {t("lessons3")}</p>
           
         </div>
       </div>
@@ -102,7 +99,9 @@ const Lessons = (props) => {
         <div className="mobileTop">
           {/* <img src={photo6} className="imgTop"></img> */}
        <div className="svg">
-       <svg xmlns="http://www.w3.org/2000/svg" width={70} height={70} {...props}>
+       <svg xmlns="http://www.w3.org/2000/svg" width={70} height={70} 
+      //  {...props}
+       >
     <defs>
       <clipPath id="a">
         <path
@@ -188,8 +187,8 @@ const Lessons = (props) => {
     </body>
   );
 };
+export default  withNamespaces()(Lessons) ;
 
-export default Lessons;
 
 
 

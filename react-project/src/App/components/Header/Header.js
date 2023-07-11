@@ -1,25 +1,19 @@
-
-import i18next from 'i18next';
-import { useTranslation } from 'react-i18next';
+import i18n from '../../../i18n';
+import { withNamespaces } from 'react-i18next';
 import { FaUser } from "react-icons/fa";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import React, { Component } from "react";
-
+import { useState } from "react";
 import img1 from '../../assets/logo.png';
 import img from '../../assets/larg.png';
 import imgg from '../../assets/smal.png';
 
 
 <link rel="stylesheet" href="./Header.css" />;
-const Header = () => {
-  const { t } = useTranslation();
+const Header = ({ t }) => {
 
-  function handleClick(lang) {
-    i18next.changeLanguage(lang)
-  }
-
-
+  const[openProfile, setOpenProfile]= useState(false)
 
   return (
     <div className="full_header">
@@ -29,46 +23,58 @@ const Header = () => {
           <ul className="ul_header">
             <li className="li_header">
               <Link className="link_nav_header" to="/section">
-              {t("header.3")}
+              {t("header3")}
               </Link>
             </li>
             <hr className="vl_header" />
             <li className="li_header">
               <Link className="link_nav_header" to="/grad">
-              {t("header.4")}
+              {t("header4")}
               </Link>
             </li>
             <hr className="vl_header" />
             <li className="li_header">
               <Link className="link_nav_header" to="/book">
-              {t("header.5")}
+              {t("header5")}
               </Link>
             </li>
             <hr className="vl_header" />
             <li className="li_header">
               <Link className="link_nav_header" to="/continue">
-              {t("header.6")}
+              {t("header6")}
               </Link>
             </li>
             <hr className="vl_header" />
             <li className="li_header">
               <Link className="link_nav_header" to="/about">
-              {t("header.7")}
+              {t("header7")}
               </Link>
             </li>
             <hr className="vl_header" />
             <li className="li_header">
               <Link className="link_nav_header" to="/Suggestion">
-              {t("header.8")}
+              {t("header8")}
               </Link>
             </li>
             <hr className="vi_header" />
           </ul>
-          <div className="icon_header">
+          {/* <div className="icon_header">
             <Link className="link_nav_header" to="/changeprofile">
               <FaUser />
             </Link>
-          </div>
+          </div> */}
+           <div className="icon_header" onClick={()=> setOpenProfile((prev)=> !prev)}>
+            <FaUser />
+        </div>
+        {
+          openProfile &&   <div className="flex flex-col dropDownProfile">
+          <ul  className="flex flex-col gap-4">
+          <Link  to="/changeprofile"> <li className="changefrofilr_button_header">عکس نمایه</li>  </Link>
+        
+            <li>خروج</li>
+          </ul>
+        </div>
+        }
         </div>
       </nav>
       <div className='home'>	
@@ -87,9 +93,9 @@ const Header = () => {
     </div>
     <div >
 		<samp className='paragraph_home'>
-    {t("header.1")}
+    {t("header1")}
 	 </samp>
-     <samp className='paragraph_1_home'><br />  {t("header.2")}</samp> 
+     <samp className='paragraph_1_home'><br />  {t("header2")}</samp> 
      </div>
 <div className='space_home'></div>
      
@@ -107,5 +113,5 @@ const Header = () => {
     </div>
   );
 };
+export default  withNamespaces()(Header) ;
 
-export default Header;

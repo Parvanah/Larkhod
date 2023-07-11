@@ -1,5 +1,5 @@
-import i18next from 'i18next';
-import { useTranslation } from 'react-i18next';
+import i18n from '../../../i18n';
+import { withNamespaces } from 'react-i18next';
 import "./Grades.css"
 import { useEffect, useState } from "react";
 import sanaf from "../../assets/sanaf.png";
@@ -10,11 +10,10 @@ import { Link, useLocation } from "react-router-dom";
 <link rel="stylesheet" href="Grades.css" />;
 
 
-const Grads = () => {
-  const { t } = useTranslation();
+const Grads = ({ t }) => {
 
-  function handleClick(lang) {
-    i18next.changeLanguage(lang)
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
   }
 
 
@@ -48,9 +47,9 @@ const Grads = () => {
           <img className='image-grade' src={images} />
         </div>
         <div>
-          <span className='p-one-grade'>{t("grads.1")} </span>
+          <span className='p-one-grade'>{t("grads1")} </span>
           <br />
-          <span className='p-two-grade'>{t("grads.2")}</span>
+          <span className='p-two-grade'>{t("grads2")}</span>
         </div>
         <div className="button-grade">
           {grades.map((item) => {
@@ -78,5 +77,4 @@ const Grads = () => {
     </div>
   );
 };
-
-export default Grads;
+export default  withNamespaces()(Grads) ;

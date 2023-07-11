@@ -1,18 +1,23 @@
+
+.about_images{
+    display: none;
+   
+}
 #all_section_about{
     width: 100%;
-    height: 100%;
-    overflow: hidden;
+    height: 606px;
+   overflow: hidden;
 }
 
 #section_one_about{
 display: flex;
 justify-content: space-between;
-overflow: hidden;
+
 }
 #selesh_about{
     margin-top: 30px;
     margin-left: 50px;
-    overflow: hidden;
+ 
 }
 .dot_about{
     overflow: hidden;
@@ -22,16 +27,15 @@ overflow: hidden;
    margin-right: 50px;
 }
 #section_two_about{
-    overflow: hidden;
     display: flex;
     justify-content: space-between;
 }
 #logoooo_about{
-    overflow: hidden;
     margin-left: 170px;
+    width: 400px;
+    height: 400px;
 }
 .about{
-    overflow: hidden;
 text-align: right;
 color:  rgba(60,152,189,1);
 font-size: 25px;
@@ -41,6 +45,7 @@ width: 600px;
 letter-spacing: 0.4px;
 margin-top: 30px;
 margin-right: 170px;
+overflow: visible;
 }
 #title_about{
 
@@ -49,7 +54,7 @@ margin-right: 170px;
 
 }
 #section_three_about{ 
-    overflow: hidden;
+
     width: 100px;
     height: 100px; 
     margin-bottom: 30px;
@@ -57,32 +62,52 @@ margin-right: 170px;
 }
 
 #imggg_about{
-    overflow: hidden;
     position: relative;
     top: 40px;
     left: 70px;
     display: none;
 }
 #phone_svg_one_about {
-    height: 0px;
+   
 }
 .phone_svg_one_about {
     display: none;
-    height: 0px;
+  
 }
 .phone_svg_two_about {
-    height: 0px;
+    
 }
 #phone_svg_two_about {
-    overflow: hidden;
-    height: 0px;
+    
     display: none;
 }
 .img_about{
-    overflow: hidden;
     display: none;
 }
 @media screen and (max-width:360px)and (min-width:100px){
+    #image_phone_one_about{
+    width: 60px;
+    position: relative;
+    top: -31px;
+    right: 2px;
+    }
+    #image_phone_two_about{
+        width: 20px;
+        position: relative;
+        top: -50px;
+        left: -30px;
+        }
+        #image_phone_three_about{
+            width: 100px;
+            position: relative;
+            top: 40px;
+            left: 50px;
+        }
+    .about_images{
+        display: block;
+        position: absolute;
+        z-index: 600;
+    }
     #title_about{
         text-align: right;
         font-family: Bahij Helvetica Neue;
@@ -97,7 +122,7 @@ margin-right: 170px;
     .all_section_about{
         overflow: hidden;
         width: 100%;
-        height: 622px;
+        height: 600px;
         position: relative;
     }
     #all_section_about{
@@ -109,6 +134,7 @@ margin-right: 170px;
     
     #section_one_about{
         position: relative;
+        display: none;
     }
     #selesh_about{
        width: 20px;
@@ -141,13 +167,14 @@ margin-right: 170px;
     height: 300px;
     letter-spacing: 0px;
    position: relative;
-   top: -92px;
+   top: -12px;
     margin-right: 50px;
     margin-left: 50px;
     line-height: 25px;
     font-style: normal;
     font-size: 12px;
     color: rgba(112,112,112,1);
+    overflow: visible;
     
     }
     
@@ -169,27 +196,22 @@ margin-right: 170px;
 	}
     #phone_svg_one_about {
         fill: url(#phone_svg_one_about);
-        width: 360px;
-        overflow: hidden;
-        z-index: 0;
+
     }
     .phone_svg_one_about {
-        overflow: hidden;
+     
         position: relative;
-        top: -15px;
-        width: 360px;
-        height: 165.069px;
+        top: -13px;
+      
         display: block;
     }
     .phone_svg_two_about {
         overflow: hidden;
         position: absolute;
-        width: 398.097px;
-        height: 126.488px;
         transform: matrix(1,0,0,1,-28.5484,586.5118) rotate(-17deg);
         transform-origin: center;
         left: 0px;
-        top: 0px;
+        top: -8px;
     }
     #phone_svg_two_about {
         overflow: hidden;
@@ -215,7 +237,433 @@ margin-right: 170px;
         display: block;
 }
 }
-@media screen and (max-width: 576px)and (min-width:360px){}
-@media screen and (max-width:768px)and (min-width:576px){}
-@media screen and (max-width:992px)and (min-width:768px){}
-@media screen and (max-width:1200px)and (min-width:992px){}
+@media screen and (max-width: 576px)and (min-width:360px){
+    #image_phone_one_about{
+        width: 70px;
+        position: relative;
+        top: -64px;
+        right: 2px;
+        }
+        #image_phone_two_about{
+            width: 25px;
+            position: relative;
+            top: -90px;
+            left: -40px;
+            }
+            #image_phone_three_about{
+                width: 150px;
+                position: relative;
+                top: 70px;
+                left: 120px;
+            }
+        .about_images{
+            
+            display: block;
+            position: absolute;
+            z-index: 600;
+        }
+        #title_about{
+            overflow: hidden !important;
+            text-align: right;
+            font-family: Bahij Helvetica Neue;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+            color: rgba(60,152,189,1);
+        }
+        #paragraph_about{
+            overflow: hidden !important;
+        }
+        .all_section_about{
+            overflow: hidden !important;
+            width: 576px !important;
+            height: 600px;
+            position: relative;
+        }
+        #all_section_about{
+            overflow: hidden !important;
+            width: 576px !important;
+            height: 622px;
+            position: relative;
+        }
+        
+        #section_one_about{
+            position: relative;
+            display: none;
+            overflow: hidden !important;
+        }
+        #selesh_about{
+           width: 20px;
+           height: 15px;
+            position: relative;
+            top:-185px;
+            left:-80px;
+            z-index: 27720;
+            overflow: hidden !important;
+           
+        }
+        .dot_about{
+           width: 100px;
+           height: 100px; 
+           margin-top: 30px;
+           margin-right: 50px;
+           display: none;
+        }
+        #section_two_about{
+            /* display: flex;
+            justify-content: space-between; */
+            position: relative;
+            width: 510px;
+            margin-left: 30px;
+            margin-top: -22px;
+            overflow: hidden !important;
+        }
+        #logoooo_about{
+            margin-left: 170px;
+            display: none;
+            overflow: hidden !important;
+        }
+        .about{
+        text-align: right;
+        width: 600px;
+        height: 300px;
+        letter-spacing: 0px;
+       position: relative;
+       top: -12px;
+        margin-right: 50px;
+        margin-left: 50px;
+        line-height: 25px;
+        font-style: normal;
+        font-size: 12px;
+        color: rgba(112,112,112,1);
+        overflow: visible;
+        }
+        
+        #section_three_about{ 
+            width: 100px;
+            height: 100px; 
+            margin-bottom: 30px;
+            margin-left: 50px;
+            display: none;
+            overflow: hidden !important;
+        }
+     
+        #imggg_about{
+            overflow: hidden !important;
+            position: relative;
+            top: -165px;
+            left: -1px;
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+        }
+        #phone_svg_one_about {
+            overflow: hidden !important;
+            fill: url(#phone_svg_one_about);
+
+        }
+        .phone_svg_one_about {
+            overflow: hidden !important;
+            position: relative;
+            left: 0px;
+            top: -40px;
+            display: block;
+        }
+        .phone_svg_two_about {
+            overflow: hidden !important;
+            position: absolute;
+            transform: matrix(1,0,0,1,-28.5484,586.5118) rotate(-17deg);
+            transform-origin: center;
+            left: 0px;
+            top: -48px;
+        }
+        #phone_svg_two_about {
+            overflow: hidden !important;
+            fill: rgba(0,0,0,0);
+            stroke: rgba(60,152,189,1);
+            stroke-width: 1px;
+            stroke-linejoin: miter;
+            stroke-linecap: butt;
+            stroke-dasharray: 4.026000022888184 4.026000022888184;
+            stroke-dashoffset: 0;
+            stroke-miterlimit: 10;
+            shape-rendering: auto;
+            display: block;
+            
+        }
+        .img_about{
+            position: relative;
+            top: -190px;
+            left:   130px;
+            width: 100px;
+            height: 90px;
+            z-index: 200;
+            display: block;
+    }
+}
+@media screen and (max-width:768px)and (min-width:576px){
+    .about_images{
+        display: none;
+       
+    }
+    #all_section_about{
+        width: 100%;
+        height: 600px;
+       overflow: hidden;
+    }
+    
+    #section_one_about{
+    display: flex;
+    justify-content: space-between;
+    
+    }
+    #selesh_about{
+        margin-top: 40px;
+        margin-left: 50px;
+     
+    }
+    .dot_about{
+        overflow: hidden;
+       width: 70px;
+       height: 70px; 
+       margin-top: 20px;
+       margin-right: 50px;
+    }
+    #section_two_about{
+        display: flex;
+        justify-content: space-between;
+    }
+    #logoooo_about{
+        margin-left: 50px;
+        margin-top: 70px;
+        width: 300px;
+        height: 300px;
+    }
+    .about{
+    text-align: right;
+    color:  rgba(60,152,189,1);
+    font-size: 20px;
+    font-weight: 10px;
+    font-style: normal;
+    width: 350px;
+    letter-spacing: 0.4px;
+    margin-top: 30px;
+    margin-right: 50px;
+    overflow: visible;
+    }
+    #title_about{
+    
+    }
+    #paragraph_about{
+    
+    }
+    #section_three_about{ 
+    
+        width: 70px;
+        height: 70px; 
+        margin-bottom: 30px;
+        margin-left: 50px;
+    }
+    
+    #imggg_about{
+        position: relative;
+        top: 40px;
+        left: 70px;
+        display: none;
+    }
+    #phone_svg_one_about {
+       
+    }
+    .phone_svg_one_about {
+        display: none;
+      
+    }
+    .phone_svg_two_about {
+        
+    }
+    #phone_svg_two_about {
+        
+        display: none;
+    }
+    .img_about{
+        display: none;
+    }
+}
+@media screen and (max-width:992px)and (min-width:768px){
+    .about_images{
+        display: none;
+       
+    }
+    #all_section_about{
+        width: 100%;
+        height: 600px;
+       overflow: hidden;
+    }
+    
+    #section_one_about{
+    display: flex;
+    justify-content: space-between;
+    
+    }
+    #selesh_about{
+        margin-top: 40px;
+        margin-left: 50px;
+     
+    }
+    .dot_about{
+        overflow: hidden;
+       width: 80px;
+       height: 80px; 
+       margin-top: 20px;
+       margin-right: 50px;
+    }
+    #section_two_about{
+        display: flex;
+        justify-content: space-between;
+    }
+    #logoooo_about{
+        margin-left: 70px;
+        margin-top: 30px;
+        width: 350px;
+        height: 350px;
+    }
+    .about{
+    text-align: right;
+    color:  rgba(60,152,189,1);
+    font-size: 23px;
+    font-weight: 10px;
+    font-style: normal;
+    width: 450px;
+    letter-spacing: 0.4px;
+    margin-top: 30px;
+    margin-right: 70px;
+    overflow: visible;
+    }
+    #title_about{
+    
+    }
+    #paragraph_about{
+    
+    }
+    #section_three_about{ 
+    
+        width: 80px;
+        height: 80px; 
+        margin-bottom: 30px;
+        margin-left: 50px;
+    }
+    
+    #imggg_about{
+        position: relative;
+        top: 40px;
+        left: 70px;
+        display: none;
+    }
+    #phone_svg_one_about {
+       
+    }
+    .phone_svg_one_about {
+        display: none;
+      
+    }
+    .phone_svg_two_about {
+        
+    }
+    #phone_svg_two_about {
+        
+        display: none;
+    }
+    .img_about{
+        display: none;
+    }
+}
+@media screen and (max-width:1200px)and (min-width:992px){
+    .about_images{
+    display: none;
+   
+}
+#all_section_about{
+    width: 100%;
+    height: 600px;
+   overflow: hidden;
+}
+
+#section_one_about{
+display: flex;
+justify-content: space-between;
+
+}
+#selesh_about{
+    margin-top: 30px;
+    margin-left: 50px;
+ 
+}
+.dot_about{
+    overflow: hidden;
+   width: 100px;
+   height: 100px; 
+   margin-top: 30px;
+   margin-right: 50px;
+}
+#section_two_about{
+    display: flex;
+    justify-content: space-between;
+}
+#logoooo_about{
+    /* margin-top: 30px; */
+    width: 390px;
+    height: 390px;
+    margin-left: 100px;
+    
+}
+.about{
+text-align: right;
+color:  rgba(60,152,189,1);
+font-size: 25px;
+font-weight: 40px;
+font-style: normal;
+width: 560px;
+letter-spacing: 0.4px;
+margin-top: 30px;
+margin-right: 100px;
+overflow: visible;
+}
+#title_about{
+
+}
+#paragraph_about{
+
+}
+#section_three_about{ 
+
+    width: 100px;
+    height: 100px; 
+    margin-bottom: 30px;
+    margin-left: 50px;
+}
+
+#imggg_about{
+    position: relative;
+    top: 40px;
+    left: 70px;
+    display: none;
+}
+#phone_svg_one_about {
+   
+}
+.phone_svg_one_about {
+    display: none;
+  
+}
+.phone_svg_two_about {
+    
+}
+#phone_svg_two_about {
+    
+    display: none;
+}
+.img_about{
+    display: none;
+}
+   
+}

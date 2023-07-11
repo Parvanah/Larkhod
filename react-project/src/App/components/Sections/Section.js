@@ -1,5 +1,5 @@
-import i18next from 'i18next';
-import { useTranslation } from 'react-i18next';
+import i18n from '../../../i18n';
+import { withNamespaces } from 'react-i18next';
 import SchoolSubjects from "../../Json Files/SchoolSubjects.json";
 import JsonFiles from "../../Json Files/SchoolSubjects.json";
 import React from "react";
@@ -16,16 +16,12 @@ import image2 from "../../assets/Group_203@2x.png";
 import image3 from "../../assets/Group_205@2x.png";
 import { useNavigation } from "react-router-dom";
 
-const Section = (props) => {
+const Section = ({ t }) => {
   // const navigate = useNavigation();
     "C:\\UsersKhatima Sadat/Documents/LarkhodeStructure/school_subjectsdari_curriculamprimarysecond_gradeart_subjectlessonslesson_1";
       const navigate = useNavigate();
-  // const navigation = useNavigation();
-
-  const { t } = useTranslation();
-
-  function handleClick(lang) {
-    i18next.changeLanguage(lang)
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
   }
 
   
@@ -33,7 +29,7 @@ const Section = (props) => {
   const pic =
     "C:\\UsersKhatima Sadat/Documents/LarkhodeStructure/school_subjectsdari_curriculamprimarysecond_gradeart_subjectlessonslesson_1";
     var data;
-  if (t("section.lang") == "dari") {
+  if (t("sectionlang") == "dari") {
     data = JsonFiles.dari_curriculum;
   } else {
     data = JsonFiles.pashto_curriculum;
@@ -46,7 +42,7 @@ const Section = (props) => {
             xmlns="http://www.w3.org/2000/svg"
             width={92.512}
             height={93.517}
-            {...props}
+            // {...props}
           >
             <g fill="none">
               <path d="M92.513 27.682 21.475 93.516.001-.001Z" />
@@ -64,7 +60,7 @@ const Section = (props) => {
             xmlns="http://www.w3.org/2000/svg"
             width={95.444}
             height={83.662}
-            {...props}
+            // {...props}
           >
             <path
               fill="#e6e6e6"
@@ -77,8 +73,8 @@ const Section = (props) => {
         <img src={image4} />
       </div>
       <div id="title">
-        <h1>{t("section.1")}</h1>
-        <p>{t("section.2")}</p>
+        <h1>{t("section1")}</h1>
+        <p>{t("section2")}</p>
       </div>
       <ul id="ul-section">
         <li>
@@ -89,9 +85,9 @@ const Section = (props) => {
                     }}
           >
             <img src={image1} />
-            <h1>{t("section.3")}</h1>
+            <h1>{t("section3")}</h1>
             <p>
-             {t("section.4")}
+             {t("section4")}
             </p>
           </Link>
         </li>
@@ -103,9 +99,9 @@ const Section = (props) => {
                   }}
           >
             <img src={image2} />
-            <h1>{t("section.5")} </h1>
+            <h1>{t("section5")} </h1>
             <p>
-            {t("section.6")}
+            {t("section6")}
             </p>
           </Link>
         </li>
@@ -118,9 +114,9 @@ const Section = (props) => {
        
           >
             <img src={image3} />
-            <h1>{t("section.7")} </h1>
+            <h1>{t("section7")} </h1>
             <p>
-            {t("section.8")}
+            {t("section8")}
             </p>
             <p></p>
           </Link>
@@ -132,7 +128,7 @@ const Section = (props) => {
             xmlns="http://www.w3.org/2000/svg"
             width={95.444}
             height={83.662}
-            {...props}
+            // {...props}
           >
             <path
               fill="#e6e6e6"
@@ -147,7 +143,7 @@ const Section = (props) => {
             xmlns="http://www.w3.org/2000/svg"
             width={94.185}
             height={91.531}
-            {...props}
+            // {...props}
           >
             <g fill="none">
               <path d="M63.413 91.531-.003 18.324 94.182 0Z" />
@@ -162,7 +158,9 @@ const Section = (props) => {
     </div>
   );
 };
-export default Section;
+
+export default  withNamespaces()(Section) ;
+
 
 
 

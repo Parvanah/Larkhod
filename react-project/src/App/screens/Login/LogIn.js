@@ -2,8 +2,8 @@ import Spinner from "react-dom";
 import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
 import { Link, useNavigate, useNavigation } from "react-router-dom";
-import i18next from 'i18next';
-import { useTranslation } from 'react-i18next';
+import i18n from '../../../i18n';
+import { withNamespaces } from 'react-i18next';
 import "./LogIn.css"
 import { FaGoogle } from "react-icons/fa";
 import { useState, useEffect } from "react";
@@ -17,17 +17,8 @@ import img3 from '../../assets/logo_3.png'
 
 
 
-const LogIn = (props) => {
+const LogIn = ({ t }) => {
   const { isLoading, register } = useContext(AuthContext);
-
-  const { t } = useTranslation();
-
-  function handleClick(lang) {
-    i18next.changeLanguage(lang)
-  }
-
-
-
   const initialValues = {
     email: "",
     password: "",
@@ -78,14 +69,14 @@ const LogIn = (props) => {
     const errors = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
     if (!values.email) {
-      errors.email = <>{t("login.9")}</>;
+      errors.email = <>{t("login9")}</>;
     } else if (!regex.test(values.email)) {
-      errors.email = <>{t("login.10")}</>;
+      errors.email = <>{t("login10")}</>;
     }
     if (!values.password) {
-      errors.password =  <>{t("login.11")}</>;
+      errors.password =  <>{t("login11")}</>;
     } else if (values.password.length < 8) {
-      errors.password =  <>{t("login.12")}</>;
+      errors.password =  <>{t("login12")}</>;
     }
     
     return errors;
@@ -108,8 +99,8 @@ const LogIn = (props) => {
 		</div>
 	</div>
 <button className="button_login">
-<div className="upp_login" >{t("login.1")}</div>
-  <Link to="/" className="inn_login">{t("login.2")}</Link>
+<div className="upp_login" >{t("login1")}</div>
+  <Link to="/" className="inn_login">{t("login2")}</Link>
 </button>
 <div className="cantainer_login">
       {Object.keys(formErrors).length === 0 && isSubmit ? (
@@ -126,7 +117,7 @@ const LogIn = (props) => {
             id="input_login"
               type="text"
               name="email"
-              placeholder={t("login.3")}
+              placeholder={t("login3")}
               value={formValues.email}
               onChange={(e) => handleChange(e)}
             />
@@ -138,21 +129,21 @@ const LogIn = (props) => {
             id="input_login"
               type="password"
               name="password"
-              placeholder={t("login.4")}
+              placeholder={t("login4")}
               value={formValues.password}
               onChange={(e) => handleChange(e)}
             />
             <p  className="error_login">{formErrors.password}</p>
           </div>
-          <Link className="forgotpassword_login" to="/forgotpassword"> {t("login.5")}</Link>
+          <Link className="forgotpassword_login" to="/forgotpassword"> {t("login5")}</Link>
         </div>
-         <button className="acount_button_login">{t("login.6")}</button>
+         <button className="acount_button_login">{t("login6")}</button>
       </form>
-      <h4 className="p_login">{t("login.7")} </h4>
+      <h4 className="p_login">{t("login7")} </h4>
       <Link to="google.com">
       <button className="google_button_singup">
       <FaGoogle className="google_icon_login" />
-        <div className="google_p_login">{t("login.8")}</div>
+        <div className="google_p_login">{t("login8")}</div>
         
 
 </button>
@@ -164,7 +155,9 @@ const LogIn = (props) => {
 <div className='Mobile_lr'>
  <div className="M-img">
 <div id="M-arrow">
- <Link to="/SingUp"> <svg xmlns="http://www.w3.org/2000/svg" width={16} height={10} {...props} className='M-arrow'>
+ <Link to="/SingUp"> <svg xmlns="http://www.w3.org/2000/svg" width={16} height={10} 
+//  {...props} 
+ className='M-arrow'>
     <defs>
       <clipPath id="a">
         <path fill="#fff" d="M0 0h16v10H0z" data-name="Rectangle 85" />
@@ -184,8 +177,8 @@ const LogIn = (props) => {
 </div>
 <div id='Mobile-bottom'>
  <button className="button_login">
-<div className="upp_login" >{t("login.1")}</div>
-  <Link to="/" className="inn_login">{t("login.2")}</Link>
+<div className="upp_login" >{t("login1")}</div>
+  <Link to="/" className="inn_login">{t("login2")}</Link>
 </button>
 <div className="cantainer_login">
       {Object.keys(formErrors).length === 0 && isSubmit ? (
@@ -202,7 +195,7 @@ const LogIn = (props) => {
             id="input_login"
               type="text"
               name="email"
-              placeholder={t("login.3")}
+              placeholder={t("login3")}
               value={formValues.email}
               onChange={handleChange}
             />
@@ -214,21 +207,21 @@ const LogIn = (props) => {
             id="input_login"
               type="password"
               name="password"
-              placeholder={t("login.4")}
+              placeholder={t("login4")}
               value={formValues.password}
               onChange={handleChange}
             />
             <p  className="error_login">{formErrors.password}</p>
           </div>
-          <Link className="forgotpassword_login" to="/forgotpassword"> {t("login.5")}</Link>
+          <Link className="forgotpassword_login" to="/forgotpassword"> {t("login5")}</Link>
         </div>
-         <button className="acount_button_login">{t("login.6")}</button>
+         <button className="acount_button_login">{t("login6")}</button>
       </form>
-      <h4 className="p_login">{t("login.7")} </h4>
+      <h4 className="p_login">{t("login7")} </h4>
       <Link to="google.com">
       <button className="google_button_login">
       <FaGoogle className="google_icon_login" />
-        <div className="google_p_login">{t("login.8")}</div>
+        <div className="google_p_login">{t("login8")}</div>
 </button>
       </Link>
     </div>
@@ -239,6 +232,5 @@ const LogIn = (props) => {
     </div>
   )
 }
+export default  withNamespaces()(LogIn) ;
 
-
-export default LogIn

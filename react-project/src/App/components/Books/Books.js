@@ -1,17 +1,12 @@
-import i18next from 'i18next';
-import { useTranslation } from 'react-i18next';
+import i18n from '../../../i18n';
+import { withNamespaces } from 'react-i18next';
 import { Link, useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./Books.css";
 import * as React from "react";
 import bookicon from "../../assets/Group_360.png";
-const Books = (props) => {
+const Books = (  {t}) => {
 
-  const { t } = useTranslation();
-
-  function handleClick(lang) {
-    i18next.changeLanguage(lang)
-  }
 
   const location = useLocation();
   const locationData = location.state;
@@ -31,7 +26,9 @@ const Books = (props) => {
       <div className="top">
         <div className="first-svgs">
           <div id="mobile-svg">
-             <svg xmlns="http://www.w3.org/2000/svg" width={22} height={14} {...props}>
+             <svg xmlns="http://www.w3.org/2000/svg" width={22} height={14}
+              // {...props}
+              >
     <defs>
       <clipPath id="a">
         <path
@@ -64,7 +61,7 @@ const Books = (props) => {
               width={36}
               height={22}
               data-name="Group 411"
-              {...props}
+              // {...props}
             >
               <defs>
                 <clipPath id="a">
@@ -92,7 +89,7 @@ const Books = (props) => {
     xmlns="http://www.w3.org/2000/svg"
     width={22.502}
     height={19.725}
-    {...props}
+    // {...props}
   >
     <path
       fill="#707070"
@@ -104,7 +101,7 @@ const Books = (props) => {
                 xmlns="http://www.w3.org/2000/svg"
                 width={77.557}
                 height={70.977}
-                {...props}
+                // {...props}
               >
                 <path
                   fill="#707070"
@@ -116,8 +113,8 @@ const Books = (props) => {
           </div>
         </div>
         <div className="first-section">
-         <h1>{t("books.1")}</h1>
-          <p> {t("books.2")}</p>
+         <h1>{t("books1")}</h1>
+          <p> {t("books2")}</p>
         </div>
         <div className="third-section">
         <div className="mobile-right">
@@ -125,7 +122,7 @@ const Books = (props) => {
     xmlns="http://www.w3.org/2000/svg"
     width={21.811}
     height={22.048}
-    {...props}
+    // {...props}
   >
     <g fill="none">
       <path d="m0 6.526 16.748 15.521L21.811-.001Z" />
@@ -137,7 +134,7 @@ const Books = (props) => {
             xmlns="http://www.w3.org/2000/svg"
             width={74.741}
             height={73.209}
-            {...props}
+            // {...props}
           >
             <g fill="none">
               <path d="m0 21.671 57.391 51.538L74.74 0Z" />
@@ -157,7 +154,7 @@ const Books = (props) => {
             xmlns="http://www.w3.org/2000/svg"
             width={16.435}
             height={30.158}
-            {...props}
+            // {...props}
           >
             <path
               fill="#707070"
@@ -200,7 +197,7 @@ const Books = (props) => {
             xmlns="http://www.w3.org/2000/svg"
             width={16.435}
             height={30.158}
-            {...props}
+            // {...props}
           >
             <path
               fill="#707070"
@@ -218,7 +215,7 @@ const Books = (props) => {
     xmlns="http://www.w3.org/2000/svg"
     width={22.205}
     height={21.58}
-    {...props}
+    // {...props}
   >
     <g fill="none">
       <path d="m7.255 21.58 14.95-17.26L-.003 0Z" />
@@ -230,7 +227,7 @@ const Books = (props) => {
             xmlns="http://www.w3.org/2000/svg"
             width={85.325}
             height={84.161}
-            {...props}
+            // {...props}
           >
             <g fill="none">
               <path d="m27.877 84.161 57.448-67.312L-.003 0Z" />
@@ -242,7 +239,7 @@ const Books = (props) => {
           </svg></div>
         </div>
         <div className="p-section">
-          <p>{t("books.3")}</p>
+          <p>{t("books3")}</p>
         </div>
         <div className="last-svg">
           <div className="mobile-last">
@@ -250,7 +247,7 @@ const Books = (props) => {
     xmlns="http://www.w3.org/2000/svg"
     width={22.502}
     height={19.725}
-    {...props}
+    // {...props}
   >
     <path
       fill="#707070"
@@ -262,7 +259,7 @@ const Books = (props) => {
             xmlns="http://www.w3.org/2000/svg"
             width={77.557}
             height={70.977}
-            {...props}
+            // {...props}
           >
             <path
               fill="#707070"
@@ -274,8 +271,8 @@ const Books = (props) => {
     </div>
   );
 };
+export default  withNamespaces()(Books) ;
 
-export default Books;
 
 
 

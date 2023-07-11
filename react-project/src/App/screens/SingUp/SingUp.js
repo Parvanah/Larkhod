@@ -9,8 +9,8 @@ import Spinner from "react-dom";
 import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-import i18next from "i18next";
-import { useTranslation } from "react-i18next";
+import i18n from '../../../i18n';
+import { withNamespaces } from 'react-i18next';
 // import Translation from '../../../db.json';
 import "./SingUp.css";
 import { FaGoogle } from "react-icons/fa";
@@ -20,7 +20,7 @@ import React from "react";
 import { Link, useNavigate, useNavigation } from "react-router-dom";
 <link rel="stylesheet" href="SingUp.css" />;
 
-const SingUp = (props) => {
+const SingUp = ({ t }) => {
  
 
   const login = useGoogleLogin({
@@ -46,11 +46,11 @@ const SingUp = (props) => {
 //     i18n.changeLanguage(lng);
 // };
   const { isLoading, register } = useContext(AuthContext);
-  const { t } = useTranslation();
+ 
 
-  function handleClick(lang) {
-    i18next.changeLanguage(lang);
-  }
+  const changeLanguage = (lng) => {
+		i18n.changeLanguage(lng);
+	  }
 
   const initialValues = {
     username: "",
@@ -86,29 +86,26 @@ const SingUp = (props) => {
     const errors = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
     if (!values.username) {
-      errors.username = <>{t("singup.9")}</>;
+      errors.username = <>{t('singup9')}</>;
     }
     if (!values.email) {
-      errors.email =  <>{t("singup.10")}</>;
+      errors.email =  <>{t('singup10')}</>;
     } else if (!regex.test(values.email)) {
-      errors.email =  <>{t("singup.11")}</>;
+      errors.email =  <>{t('singup11')}</>;
     }
     if (!values.password) {
-      errors.password = <>{t("singup.12")}</>;
+      errors.password = <>{t('singup12')}</>;
     } else if (values.password.length < 8) {
-      errors.password = <>{t("singup.13")}</>;
+      errors.password = <>{t('singup13')}</>;
     }
     if (!values.confirmpassword) {
 
-      errors.confirmpassword = <>{t("singup.14")}</>;
+      errors.confirmpassword = <>{t('singup14')}</>;
     } else if (values.confirmpassword !== values.password) {
       errors.confirmpassword =
-      <>{t("singup.15")}</>;
+      <>{t("singup15")}</>;
 
-      errors.confirmpassword = "!رمزعبور را تکرار کنید";
-    } else if (values.confirmpassword !== values.password) {
-      errors.confirmpassword =
-        "!تکرار رمز عبور باید با رمزعبور مطابقت داشته باشد";
+
 
     }
 
@@ -138,7 +135,10 @@ const SingUp = (props) => {
           </svg>
 
           <img id="imgg_singup" src={img1} />
-          <button className="button_singup" onClick={() => handleClick("dari")}>
+          <button className="button_singup" onClick={() => changeLanguage('dari')}>زبان دری</button>
+          <button className="button_singup" onClick={() => changeLanguage('pashto')}>پشتو ژبه</button>
+          
+          {/* <button className="button_singup" onClick={() => handleClick("dari")}>
             زبان دری
           </button>
           <button
@@ -146,13 +146,13 @@ const SingUp = (props) => {
             onClick={() => handleClick("pashto")}
           >
             پشتو ژبه
-          </button>
+          </button> */}
         </div>
         <button id="login-button">
           <Link className="up_singup" to="/login">
-            {t("singup.1")}
+          {t('singup1')}
           </Link>
-          <div className="in_singup">{t("singup.2")}</div>
+          <div className="in_singup">{t('singup2')}</div>
         </button>
         <div id="cantainer_singup">
           {Object.keys(formErrors).length === 0 && isSubmit ? (
@@ -168,18 +168,17 @@ const SingUp = (props) => {
                 id="input_singup"
                 type="text"
                 name="username"
-                placeholder={t("singup.3")}
+                placeholder={t('singup3')}
                 value={formValues.username}
                 onChange={(e) => handleChange(e)}
               />
               <p className="error_singup">{formErrors.username}</p>
-
               <div className="field">
                 <input
                   id="input_singup"
                   type="text"
                   name="email"
-                  placeholder={t("singup.4")}
+                  placeholder={t('singup4')}
                   value={formValues.email}
                   onChange={(e) => handleChange(e)}
                 />
@@ -191,7 +190,7 @@ const SingUp = (props) => {
                   id="input_singup"
                   type="password"
                   name="password"
-                  placeholder={t("singup.5")}
+                  placeholder={t('singup5')}
                   value={formValues.password}
                   onChange={(e) => handleChange(e)}
                 />
@@ -203,24 +202,25 @@ const SingUp = (props) => {
                   id="input_singup"
                   type="password"
                   name="confirmpassword"
-                  placeholder={t("singup.6")}
+                  placeholder={t('singup6')}
                   value={formValues.confirmpassword}
                   onChange={(e) => handleChange(e)}
                 />
                 <p className="error_singup">{formErrors.confirmpassword}</p>
               </div>
             </div>
-            <button className="acount_button_singuo">{t("singup.1")}</button>
+            <button className="acount_button_singuo">{t('singup1')}</button>
           </form>
-          <h4 className="p_singup">{t("singup.7")}</h4>
-             <button  className="google_button_singup" onClick={login}>
+          <h4 className="p_singup">{t('singup7')}</h4>
+             <button  className="google_button_singup" onClick={login}
+             >
             {/* <div>{navigate("/header")}</div> */}
         
               <FaGoogle className="google_icon_singup" />
-              <div className="google_p_singup">{t("singup.8")}</div>
+              <div className="google_p_singup">{t('singup8')}</div>
             </button >
         </div>
-         <GoogleLogin
+         {/* <GoogleLogin
             className="google_buttton_singup"
                     onSuccess={credentialResponse => {
                     console.log(credentialResponse.credential);
@@ -229,10 +229,11 @@ const SingUp = (props) => {
                 }}
                     onError={() => {
                     console.log('Login Failed');
-                }}/>
+                }}/> */}
       </div>
     </div>
   );
 };
 
-export default SingUp;
+export default  withNamespaces()(SingUp) ;
+
