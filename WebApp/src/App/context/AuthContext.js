@@ -16,6 +16,10 @@ export const AuthProvider = ({ children }) => {
   const [password, setPassword] = useState(null);
   const [email, setEmail] = useState(null);
   // const [name, setName] = useState(null);
+  const [currentBook , setCurrentBook]  = useState();
+  const [currentState, setCurrentState] = useState();
+  const [currentLesson, setCurrentLesson] = useState();
+  const [currentpart, setCurrentpart] = useState();
   const Authorization = async (status, token, errorMessage) => {
     try {
       const res = await axios
@@ -272,6 +276,14 @@ export const AuthProvider = ({ children }) => {
         forgotPassword,
         changePassword,
         verifyEmail,
+        currentState,
+        setCurrentState,
+        currentBook,
+        setCurrentBook,
+        currentLesson,
+        setCurrentLesson,
+        currentpart,
+        setCurrentpart
       }}
     >
       {children}

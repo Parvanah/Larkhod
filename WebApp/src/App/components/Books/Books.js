@@ -5,12 +5,15 @@ import { useNavigate } from "react-router-dom";
 import "./Books.css";
 import * as React from "react";
 import bookicon from "../../assets/Group_360.png";
+import { AuthContext } from "../../context/AuthContext";
+import {useContext } from 'react';
 const Books = (  {t}) => {
 
 
   const location = useLocation();
   const locationData = location.state;
   const subjects = locationData.subjects;
+  console.log(subjects);
   const navigate = useNavigate();
   const leftScroll = () => {
     const slider = document.getElementById("ul");
@@ -20,7 +23,10 @@ const Books = (  {t}) => {
     const slider = document.getElementById("ul");
     slider.scrollLeft = slider.scrollLeft + 300;
   };
-
+  const {currentBook,
+    setCurrentBook ,currentLesson,
+    setCurrentLesson,currentpart,
+    setCurrentpart} = useContext(AuthContext);
   return (
     <div className="Books" id="Books">
       <div className="top">
@@ -168,22 +174,31 @@ const Books = (  {t}) => {
             if (item.parts[0].lessons == undefined) {
               return (
                 <Link
+                onClick={()=> {
+                  setCurrentLesson("lesson")
+                  setCurrentpart(item.parts)
+                  setCurrentBook(item.label)}}
                   to="/lessons"
                   state={{ lessons: item.parts, title: " مضمون " + item.label }}
                   id="link"
                 >
                   <img src={bookicon} />
-                  <div>
+                  <div >
                     <p>کتاب</p>
-                    <p id="h5">{item.label}</p>
+                    <p id="h5" >{item.label}</p>
                   </div>
                 </Link>
               );
             } else {
               return (
-                <Link to="/unit" state={{ units: item.parts }} id="link">
+                <Link
+                onClick={()=> {     
+                  setCurrentLesson("unit");
+                  setCurrentpart(item.parts)
+                   setCurrentBook(item.label)}}
+                 to="/unit" state={{ units: item.parts }} id="link">
                   <img src={bookicon} />
-                  <div>
+                  <div >
                     <p>کتاب</p>
                     <p id="h5">{item.label}</p>
                   </div>

@@ -16,6 +16,7 @@ const Lessons = ({ t }) => {
   const location = useLocation();
   const locationData = location.state;
   const lessons = locationData.lessons;
+  console.log(lessons);
   const unit = locationData.title;
   const [title, setTitle] = useState("");
   return (
