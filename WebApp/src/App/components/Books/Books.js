@@ -184,8 +184,9 @@ const Books = (  {t}) => {
                 >
                   <img src={bookicon} />
                   <div >
-                    <p>کتاب</p>
-                    <p id="h5" >{item.label}</p>
+                    <p>{t("books6")}</p>
+                  <p id="h5">{t("books4")} {item.label}</p>
+                    <p>{t("books5")}</p>
                   </div>
                 </Link>
               );
@@ -199,8 +200,8 @@ const Books = (  {t}) => {
                  to="/unit" state={{ units: item.parts }} id="link">
                   <img src={bookicon} />
                   <div >
-                    <p>کتاب</p>
-                    <p id="h5">{item.label}</p>
+                    <p id="h5">{t("books4")} {item.label}</p>
+                    <p>{t("books5")}</p>
                   </div>
                 </Link>
               );

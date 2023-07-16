@@ -1,4 +1,5 @@
-
+import i18n from '../i18n';
+import { withNamespaces } from 'react-i18next';
 import * as React from "react"
 import { useRef } from 'react';
 import JSONFiles from './Json Files/SchoolSubjects.json';
@@ -8,10 +9,22 @@ import sanaf from "./assets/sanaf.png";
 import bookH from "./assets/Group 463.png";
 import pathimg from "./assets/Path 968.png";
 import line from "./assets/Line 117.png";
+import JsonFiles from "./Json Files/SchoolSubjects.json";
 
 import './books.css';
-const Book = () => {
-  var data = JSONFiles.dari_curriculum ;
+const Book = ({ t }) => {
+
+  var data;
+  if (t("sectionlang") == "dari") {
+    data = JsonFiles.dari_curriculum;
+  } else {
+    data = JsonFiles.pashto_curriculum;
+  }
+
+  const changeLanguage = (lng) => {
+		i18n.changeLanguage(lng);
+	  }
+  
   var primary = data.primary.grades;
   var secondary = data.secondary.grades;
   var high_school = data.high_school.grades;
@@ -37,8 +50,8 @@ const Book = () => {
         </div>
       <div className='buttom-books'> 
       <div className='p-container-books'>  
-         <p className='p-books'> کتاب های مورد نظر خود را صنف خود را</p>
-         <p id='p-books'>از اینجا انتخاب  کنید</p>
+         <p className='p-books'>{t("book1")}</p>
+       
       </div>
     <div id='h-books'>
     <div ref={top} >
@@ -50,7 +63,7 @@ const Book = () => {
                 state={{ subjects: item.subjects }}
                     >
                       <img className="sanaf-grade-n" src={sanaf} />
-                      <div className="li-grade-b"  src={sanaf} >کتاب های {item.label}</div>
+                      <div className="li-grade-b"  src={sanaf} >{t("book2")} {item.label} {t("book3")}</div>
                     </Link>
                   );
                 })}
@@ -64,7 +77,7 @@ const Book = () => {
                       state={{ subjects: item.subjects }}
                     >
                       <img className="sanaf-grade" src={sanaf} />
-                      <div className="li-grade-n" src={sanaf}> کتاب های {item.label}</div>
+                      <div className="li-grade-n" src={sanaf}>{t("book2")} {item.label}</div>
                     </Link>
                   );
                 })}
@@ -78,7 +91,7 @@ const Book = () => {
                       state={{ subjects: item.subjects }}
                     >
                       <img className="sanaf-grade-n" src={sanaf} />
-                      <div className="li-grade-n" src={sanaf}> کتاب های {item.label}</div>
+                      <div className="li-grade-n" src={sanaf}> {t("book2")}  {item.label}</div>
                     </Link>
                   );
                 })}
@@ -104,5 +117,4 @@ const Book = () => {
  </div>
   )
 }
-
-export default Book;
+export default  withNamespaces()(Book) ;

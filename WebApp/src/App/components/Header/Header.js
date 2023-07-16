@@ -13,7 +13,7 @@ import {useContext } from 'react';
 
 
 <link rel="stylesheet" href="./Header.css" />;
-const Header = ({ t }) => {
+const Header = ({ t }, props) => {
 
   const[openProfile, setOpenProfile]= useState(false)
   const {currentState,
@@ -64,7 +64,7 @@ if(currentLesson == "lesson"){
             <li className="li_header">
             <Link className="link_nav_header" to={nav}
                 state = {status} >
-              {t("header.6")}
+              {t("header6")}
               </Link>
             </li>
             <hr className="vl_header" />

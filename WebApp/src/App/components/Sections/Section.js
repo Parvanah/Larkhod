@@ -1,20 +1,20 @@
 import i18n from '../../../i18n';
 import { withNamespaces } from 'react-i18next';
-import SchoolSubjects from "../../Json Files/SchoolSubjects.json";
+// import SchoolSubjects from "../../Json Files/SchoolSubjects.json";
 import JsonFiles from "../../Json Files/SchoolSubjects.json";
 import React from "react";
 import { BrowserRouter as Router, useNavigate } from "react-router-dom";
-import { Route, Routes } from "react-router-dom";
+// import { Route, Routes } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Grads from "../Grades/Grades";
-import gradeTwo from "../../Json Files/grade_2_dari.json";
-import gradeNine from "../../Json Files/grade_9_dari.json";
+// import gradeTwo from "../../Json Files/grade_2_dari.json";
+// import gradeNine from "../../Json Files/grade_9_dari.json";
 import "./Sections.css";
 import image4 from "../../assets/Group_158_bu.png";
 import image1 from "../../assets/Group_201_ww@2x.png";
 import image2 from "../../assets/Group_203@2x.png";
 import image3 from "../../assets/Group_205@2x.png";
-import { useNavigation } from "react-router-dom";
+// import { useNavigation } from "react-router-dom";
 
 const Section = ({ t }) => {
   // const navigate = useNavigation();
