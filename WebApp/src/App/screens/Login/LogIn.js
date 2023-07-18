@@ -18,7 +18,7 @@ import img3 from '../../assets/logo_3.png'
 
 
 const LogIn = ({ t }) => {
-  const { isLoading, register } = useContext(AuthContext);
+  const { isLoading, login } = useContext(AuthContext);
   const initialValues = {
     email: "",
     password: "",
@@ -37,7 +37,7 @@ const LogIn = ({ t }) => {
     e.preventDefault();
     setFormErrors(validate(formValues));
     console.log( formValues.email, formValues.password);
-    register( formValues.email, formValues.password);
+    login( formValues.email, formValues.password);
     setIsSubmit(true);
   };
 
