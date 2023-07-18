@@ -58,14 +58,17 @@
     color: white;
     font-size:40px;
     font-weight: bold;
+    font-family: "Bahij Helvetica";
 }
 .buttom-books #p-books{
+    font-family: "Bahij Helvetica";
     color: white;
     font-size:35px;
     font-weight: bold;
     text-align: center;
 }
 .buttom-books .link-grade-n .li-grade-b{
+    font-family: "Bahij Helvetica";
     color: rgba(16,84,162,1);
     letter-spacing: -0.4px;
     margin-right: 18px;
@@ -73,6 +76,7 @@
     font-weight: bold;
 }
 .buttom-books .link-grade-n {
+    font-family: "Bahij Helvetica";
     color: rgba(16,84,162,1);
     letter-spacing: -0.4px;
     margin-right: 18px;
@@ -158,11 +162,13 @@
      background-color: red;
     }
     .buttom-books .p-books{
+        font-family: "Bahij Helvetica";
         color: white;
         font-size:15px;
         font-weight: bold;
     }
     .buttom-books #p-books{
+        font-family: "Bahij Helvetica";
         color: white;
         font-size:25px;
         font-weight: bold;
@@ -179,11 +185,13 @@
         background-color: red;
         letter-spacing: -0.4px;
         margin-right:8px;
+        font-family: "Bahij Helvetica";
         font-size:15px;
         font-weight: bold;
         margin: 20px;
     }
     .li-grade-n {
+        font-family: "Bahij Helvetica";
         font-size:15px;
     }
     .pathimg-b {
@@ -266,11 +274,13 @@
      margin-left:90px;
     }
     .buttom-books .p-books{
+        font-family: "Bahij Helvetica";
         color: white;
         font-size:20px;
         font-weight: bold;
     }
     .buttom-books #p-books{
+        font-family: "Bahij Helvetica";
         color: white;
         font-size:25px;
         font-weight: bold;
@@ -283,6 +293,7 @@
         font-weight: bold;
     }
     .buttom-books .link-grade-n {
+        font-family: "Bahij Helvetica";
         color: rgba(16,84,162,1);
         background-color: black;
         letter-spacing: -0.4px;
@@ -292,6 +303,7 @@
         margin: 20px;
     }
     .li-grade-n {
+        font-family: "Bahij Helvetica";
         font-size:15px;
     }
     .pathimg-b {
@@ -369,11 +381,13 @@
      margin-bottom:10px;
     }
     .buttom-books .p-books{
+        font-family: "Bahij Helvetica";
         color: white;
         font-size:25px;
         font-weight: bold;
     }
     .buttom-books #p-books{
+        font-family: "Bahij Helvetica";
         color: white;
         font-size:25px;
         font-weight: bold;
@@ -383,6 +397,7 @@
         color: rgba(16,84,162,1);
         letter-spacing: -0.4px;
         margin-right: 18px;
+        font-family: "Bahij Helvetica";
         font-size:15px;
         font-weight: bold;
     }
@@ -391,6 +406,7 @@
         background-color: green;
         letter-spacing: -0.4px;
         margin-right: 18px;
+        font-family: "Bahij Helvetica";
         font-size:15px;
         font-weight: bold;
         margin:10px;
@@ -477,12 +493,14 @@
  /* background-color: red; */
 }
 .buttom-books .p-books{
+    font-family: "Bahij Helvetica";
     color: white;
     font-size:30px;
     font-weight: bold;
     margin-left:100px;
 }
 .buttom-books #p-books{
+    font-family: "Bahij Helvetica";
     color: white;
     font-size:30px;
     font-weight: bold;
@@ -493,6 +511,7 @@
     color: rgba(16,84,162,1);
     letter-spacing: -0.4px;
     margin-right:18px;
+    font-family: "Bahij Helvetica";
     font-size:15px;
     font-weight: bold;
 }
@@ -502,12 +521,14 @@
     background-color: aqua;
     letter-spacing: -0.4px;
     margin-right:10px;
+    font-family: "Bahij Helvetica";
     font-size:15px;
     font-weight: bold;
      margin:20px;
     margin-right:50px;
 }
 .li-grade-n {
+    font-family: "Bahij Helvetica";
     font-size: 15px;
 }
 .pathimg-b {
@@ -590,10 +611,12 @@
 }
 .buttom-books .p-books{
     color: white;
+    font-family: "Bahij Helvetica";
     font-size:35px;
     font-weight: bold;
 }
 .buttom-books #p-books{
+    font-family: "Bahij Helvetica";
     color: white;
     font-size:30px;
     font-weight: bold;
@@ -603,6 +626,7 @@
     color: rgba(16,84,162,1);
     letter-spacing: -0.4px;
     margin-right:15px;
+    font-family: "Bahij Helvetica";
     font-size:20px;
     font-weight: bold;
 }
@@ -612,6 +636,7 @@
     background-color: beige;
     letter-spacing: -0.4px;
     margin-right:10px;
+    font-family: "Bahij Helvetica";
     font-size: 20px;
     font-weight: bold;
      margin:20px;

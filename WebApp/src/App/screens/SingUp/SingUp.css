@@ -58,7 +58,7 @@
     padding: 4px 30px 4px 30px;
     border-radius: 50px;
     border-width: 1px;
-    font-family:"Bahij Helvetica";
+       font-family: "Bahij Helvetica";
     font-size: 20px;
     font-weight: bold;
     box-shadow: 0px 0px 5px #aaaaaa;
@@ -75,7 +75,7 @@
     width: 335px;
     height: 40px;
     border-radius: 50px;
-    font-family:"Bahij Helvetica";
+       font-family: "Bahij Helvetica";
     display: flex;
     justify-content: space-between;
 }
@@ -108,7 +108,7 @@
 #input_singup{
     position: relative;
     color: #ccc;
-    font-family:"Bahij Helvetica";
+       font-family: "Bahij Helvetica";
     display: inline-block;
     background:none;
     width:300px;
@@ -122,7 +122,7 @@
 }
 .error_singup{
     color: red;
-    font-family:"Bahij Helvetica";
+       font-family: "Bahij Helvetica";
    
    }
 .acount_button_singuo{
@@ -135,13 +135,13 @@
     border-radius: 50px;
     background-color: rgba(60,152,189,1);
     color: white;
-    font-family:"Bahij Helvetica";
+       font-family: "Bahij Helvetica";
     font-size: large;
     font-weight: 12px;
 }
 .p_singup{
     color: white;
-    font-family:"Bahij Helvetica";
+       font-family: "Bahij Helvetica";
     z-index: 100;
     position: relative;
     top: 40px;
@@ -199,7 +199,7 @@ h4 {
     margin:10px 12px 0px 0px;
     font-size: large;
     font-weight: 12px;
-    font-family:"Bahij Helvetica";
+       font-family: "Bahij Helvetica";
     color: rgb(148, 144, 144);
 }
 
@@ -236,7 +236,7 @@ h4 {
         width: 335px;
         height: 40px;
         border-radius: 50px;
-        font-family:"Bahij Helvetica";
+           font-family: "Bahij Helvetica";
         display: flex;
         justify-content: space-between;
     }
@@ -244,7 +244,7 @@ h4 {
     #input_singup {
         position: relative;
         color: white;
-        font-family:"Bahij Helvetica";
+           font-family: "Bahij Helvetica";
          display: inline-block;
          background: none;
          width:270px;
@@ -266,7 +266,7 @@ h4 {
                 border-radius: 50px;
                 background-color: rgba(60,152,189,1);
                 font-size:medium;
-                font-family:"Bahij Helvetica";
+                   font-family: "Bahij Helvetica";
                 font-weight: 12px;
    }
       p_singup {
@@ -299,7 +299,7 @@ h4 {
 google_p_singup {
     margin:10px 12px 0px 0px;
     font-size:medium;
-    font-family:"Bahij Helvetica";
+       font-family: "Bahij Helvetica";
     font-weight: 20px;
     color: rgb(148, 144, 144);
 }
@@ -371,7 +371,7 @@ border-color: white;
 padding: 3px 50px 3px 50px;
 border-radius: 50px;
 border-width: 1px;
-font-family:"Bahij Helvetica";
+   font-family: "Bahij Helvetica";
 font-size:medium;
 font-weight: bold;
 box-shadow: 0px 0px 5px #aaaaaa;
@@ -388,7 +388,7 @@ z-index: 100;
 width: 320px;
 height: 40px;
 border-radius: 50px;
-font-family:"Bahij Helvetica";
+   font-family: "Bahij Helvetica";
 display: flex;
 justify-content: space-between;
 }
@@ -421,7 +421,7 @@ z-index: 100;
 #input_singup{
 position: relative;
 color: #ccc;
-font-family:"Bahij Helvetica";
+   font-family: "Bahij Helvetica";
 display: inline-block;
 background:none;
 left:-90px;
@@ -436,7 +436,7 @@ outline: none;
 }
 .error_singup{
 color: red;
-font-family:"Bahij Helvetica";
+   font-family: "Bahij Helvetica";
 
 }
 .acount_button_singuo{
@@ -449,13 +449,13 @@ height: 40px;
 border-radius: 50px;
 background-color: rgba(60,152,189,1);
 color: white;
-font-family:"Bahij Helvetica";
+   font-family: "Bahij Helvetica";
 font-size:medium;
 font-weight: 12px;
 }
 .p_singup{
 color: white;
-font-family:"Bahij Helvetica";
+   font-family: "Bahij Helvetica";
 z-index: 100;
 position: relative;
 top: 40px;
@@ -501,7 +501,7 @@ margin:5px 0px 0px 10px;
 margin:10px 12px 0px 0px;
 font-size:medium;
 font-weight: 12px;
-font-family:"Bahij Helvetica";
+   font-family: "Bahij Helvetica";
 color: rgb(148, 144, 144);
 }
 }
@@ -568,7 +568,7 @@ color: rgb(148, 144, 144);
         padding: 3px 20px 3px 20px;
         border-radius: 50px;
         border-width: 1px;
-        font-family:"Bahij Helvetica";
+           font-family: "Bahij Helvetica";
         font-size:20px;
         font-weight: bold;
         box-shadow: 0px 0px 5px #aaaaaa;
@@ -585,7 +585,7 @@ color: rgb(148, 144, 144);
         width: 335px;
         height: 40px;
         border-radius: 50px;
-        font-family:"Bahij Helvetica";
+           font-family: "Bahij Helvetica";
         display: flex;
         justify-content: space-between;
     }
@@ -618,7 +618,7 @@ color: rgb(148, 144, 144);
     #input_singup{
         position: relative;
         color: #ccc;
-        font-family:"Bahij Helvetica";
+           font-family: "Bahij Helvetica";
         display: inline-block;
         background:none;
         width:300px;
@@ -632,7 +632,7 @@ color: rgb(148, 144, 144);
     }
     .error_singup{
         color: red;
-        font-family:"Bahij Helvetica";
+           font-family: "Bahij Helvetica";
        
        }
     .acount_button_singuo{
@@ -645,13 +645,13 @@ color: rgb(148, 144, 144);
         border-radius: 50px;
         background-color: rgba(60,152,189,1);
         color: white;
-        font-family:"Bahij Helvetica";
+           font-family: "Bahij Helvetica";
         font-size: large;
         font-weight: 12px;
     }
     .p_singup{
         color: white;
-        font-family:"Bahij Helvetica";
+           font-family: "Bahij Helvetica";
         z-index: 100;
         position: relative;
         top: 40px;
@@ -696,7 +696,7 @@ color: rgb(148, 144, 144);
         margin:10px 12px 0px 0px;
         font-size: large;
         font-weight: 12px;
-        font-family:"Bahij Helvetica";
+           font-family: "Bahij Helvetica";
         color: rgb(148, 144, 144);
     }
 }

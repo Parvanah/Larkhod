@@ -9,6 +9,7 @@
     margin-top: 50px;
     margin-bottom: 12px;
    color: rgba(60,152,189,1) ;
+   font-family: "Bahij Helvetica";
    font-size: 50px;
    margin-left: 590px;
 
@@ -68,6 +69,7 @@ display: inline-block;
 .er-suggestion{
    margin: 0;padding: 0;
     color: rgb(241, 26, 26);
+    font-family: "Bahij Helvetica";
     font-weight: bold;
     font-style: normal;
 }
@@ -244,6 +246,7 @@ left: -570px;
 .title-suggestion{
     margin-top: 20px;
     margin-bottom: 10px;
+    font-family: "Bahij Helvetica";
    color: rgba(60,152,189,1) ;
    font-size: 40px;
     margin-left: 110px;
@@ -251,6 +254,7 @@ left: -570px;
    
 }
 .para-suggestion{
+    font-family: "Bahij Helvetica";
     font-weight: 12px;
     font-size: 15px;
     margin-bottom: 22px;
@@ -310,6 +314,7 @@ display:block;
 
 .er-suggestion{
    margin: 0;padding: 0;
+   font-family: "Bahij Helvetica";
     color: rgb(241, 26, 26);
     font-weight: normal;
     font-style: normal;
@@ -328,6 +333,7 @@ display:block;
 }
 ::placeholder{
     color: rgb(255, 255, 255) !important;
+    font-family: "Bahij Helvetica";
     margin-right: 0;
     padding-right: 0;
    font-weight: 10px;
@@ -346,6 +352,7 @@ font-size: 12px;
     width: 230px;
     height: 25px;
     border-radius: 50px;
+    font-family: "Bahij Helvetica";
     color: rgba(60,152,189,1);
     background-color:white ;
 }
@@ -416,12 +423,14 @@ color: #ccc;
     .title-suggestion{
         margin-top: 5px;
         margin-bottom: 2px;
+        font-family: "Bahij Helvetica";
        color: rgba(60,152,189,1) ;
        font-size: 40px;
        margin-left: 210px;
        
     }
     .para-suggestion{
+        font-family: "Bahij Helvetica";
         font-size: large;
         margin-bottom: 32px;
         text-align: center;
@@ -484,6 +493,7 @@ color: #ccc;
     
     .er-suggestion{
        margin: 0;padding: 0;
+       font-family: "Bahij Helvetica";
         color: rgb(241, 26, 26);
         font-weight: normal;
         font-style: normal;
@@ -504,8 +514,9 @@ color: #ccc;
         color: rgb(255, 255, 255) !important;
         margin-right: 0;
         padding-right: 0;
+        font-family: "Bahij Helvetica";
        font-weight: 10px;
-    font-size: 12px;
+       font-size: 12px;
      
     }
     
@@ -516,7 +527,7 @@ color: #ccc;
         left: -510px;
     }
     .send-suggestion{
-     
+        font-family: "Bahij Helvetica";
         font-size: large;
         width: 360px;
         height: 35px;
@@ -576,6 +587,7 @@ color: #ccc;
         .title-suggestion{
             margin-top: 50px;
             margin-bottom: 12px;
+            font-family: "Bahij Helvetica";
            color: rgba(60,152,189,1) ;
            font-size: 50px;
            margin-left: 300px;
@@ -583,6 +595,7 @@ color: #ccc;
         
         }
         .para-suggestion{
+            font-family: "Bahij Helvetica";
             font-size: large;
             margin-bottom: 32px;
            
@@ -642,6 +655,7 @@ color: #ccc;
         
         .er-suggestion{
            margin: 0;padding: 0;
+           font-family: "Bahij Helvetica";
             color: rgb(241, 26, 26);
             font-weight: bold;
             font-style: normal;
@@ -673,6 +687,7 @@ color: #ccc;
           
         }
         .send-suggestion{
+            font-family: "Bahij Helvetica";
             font-size: large;
             width: 100px;
             height: 30px;
@@ -813,6 +828,7 @@ color: #ccc;
                  .title-suggestion{
                      margin-top: 50px;
                      margin-bottom: 12px;
+                     font-family: "Bahij Helvetica";
                     color: rgba(60,152,189,1) ;
                     font-size: 50px;
                     margin-left: 420px;
@@ -820,6 +836,7 @@ color: #ccc;
                  
                  }
                  .para-suggestion{
+                    font-family: "Bahij Helvetica";
                      font-size: large;
                      margin-bottom: 32px;
                      margin-left: 240px;
@@ -878,6 +895,7 @@ color: #ccc;
                  
                  .er-suggestion{
                     margin: 0;padding: 0;
+                    font-family: "Bahij Helvetica";
                      color: rgb(241, 26, 26);
                      font-weight: bold;
                      font-style: normal;
@@ -909,6 +927,7 @@ color: #ccc;
                    
                  }
                  .send-suggestion{
+                    font-family: "Bahij Helvetica";
                      font-size: large;
                      width: 100px;
                      height: 30px;
@@ -1048,6 +1067,7 @@ color: #ccc;
              .title-suggestion{
                  margin-top: 50px;
                  margin-bottom: 12px;
+                 font-family: "Bahij Helvetica";
                 color: rgba(60,152,189,1) ;
                 font-size: 50px;
                 margin-left: 510px;
@@ -1055,7 +1075,7 @@ color: #ccc;
              
              }
              .para-suggestion{
-              
+                font-family: "Bahij Helvetica";
                  font-size: large;
                  margin-bottom: 32px;
                  margin-left: 320px;
@@ -1116,6 +1136,7 @@ color: #ccc;
              .er-suggestion{
                 margin: 0;padding: 0;
                  color: rgb(241, 26, 26);
+                 font-family: "Bahij Helvetica";
                  font-weight: bold;
                  font-style: normal;
                  height: 1px;
@@ -1146,6 +1167,7 @@ color: #ccc;
                
              }
              .send-suggestion{
+                font-family: "Bahij Helvetica";
                  font-size: large;
                  width: 100px;
                  height: 30px;
