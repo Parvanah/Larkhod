@@ -28,7 +28,7 @@
 #input_login{
     position: relative;
    color: white;
-   font-family:"Bahij Helvetica";
+    font-family: "Bahij Helvetica";
     display: inline-block;
     background: none;
     width: 300px;
@@ -52,7 +52,7 @@
     background-color: rgba(60,152,189,1);
     color: white;
     font-size: large;
-    font-family:"Bahij Helvetica";
+     font-family: "Bahij Helvetica";
     font-weight: 12px;
 }
 .google_button_login{
@@ -76,7 +76,7 @@
 .google_p_login{
     margin:10px 12px 0px 0px;
     font-size: large;
-    font-family:"Bahij Helvetica";
+     font-family: "Bahij Helvetica";
     font-weight: 12px;
     color: rgb(148, 144, 144);
 }
@@ -99,7 +99,7 @@
     padding: 10px 40px 0 0px;
     color: rgba(60,152,189,1);
     font-size: large;
-    font-family:"Bahij Helvetica";
+     font-family: "Bahij Helvetica";
     font-weight: 12px;
     display: inline-block;
 }
@@ -112,7 +112,7 @@
     background-color: rgba(60,152,189,1);
     color: white;
     font-size: large;
-    font-family:"Bahij Helvetica";
+     font-family: "Bahij Helvetica";
     font-weight: 12px;
     display: inline-block;
     padding-right: 12px;
@@ -223,7 +223,7 @@ h4 {
             #input_login{
                position: relative;
               color:#3C98BD;
-              font-family:"Bahij Helvetica";
+               font-family: "Bahij Helvetica";
                display: inline-block;
                background: none;
                width:200px;
@@ -261,7 +261,7 @@ h4 {
             background-color: rgba(60,152,189,1);
             color: white;
             font-size:small;
-            font-family:"Bahij Helvetica";
+             font-family: "Bahij Helvetica";
             font-weight: 12px;
             display: inline-block;
             padding-right: 12px;
@@ -281,7 +281,7 @@ h4 {
             padding: 15px 30px 0 0px;
             color: rgba(60,152,189,1);
             font-size:small;
-            font-family:"Bahij Helvetica";
+             font-family: "Bahij Helvetica";
             font-weight: 12px;
             display: inline-block;
         } 
@@ -295,7 +295,7 @@ h4 {
             border-radius: 50px;
             background-color: rgba(60,152,189,1);
             color: white;
-            font-family:"Bahij Helvetica";
+             font-family: "Bahij Helvetica";
             font-size:small;
             font-weight: 12px;
         }
@@ -376,7 +376,7 @@ margin:5px 0px 0px 10px;
     #input_login{
        position: relative;
       color:#3C98BD;
-      font-family:"Bahij Helvetica";
+       font-family: "Bahij Helvetica";
        display: inline-block;
        background: none;
        width: 300px;
@@ -459,7 +459,7 @@ margin:5px 0px 0px 10px;
         #input_login{
            position: relative;
           color:#3C98BD;
-          font-family:"Bahij Helvetica";
+           font-family: "Bahij Helvetica";
            display: inline-block;
            background: none;
            width: 300px;
@@ -524,7 +524,7 @@ margin:5px 0px 0px 10px;
             #input_login{
                 position: relative;
                color: white;
-               font-family:"Bahij Helvetica";
+                font-family: "Bahij Helvetica";
                 display: inline-block;
                 background: none;
                 width:270px;
@@ -547,7 +547,7 @@ margin:5px 0px 0px 10px;
                 border-radius: 50px;
                 background-color: rgba(60,152,189,1);
                 font-size:medium;
-                font-family:"Bahij Helvetica";
+                 font-family: "Bahij Helvetica";
                 font-weight: 12px;
               
             }
@@ -574,7 +574,7 @@ margin:5px 0px 0px 10px;
             .google_p_login{
                 margin:10px 12px 0px 0px;
                 font-size:medium;
-                font-family:"Bahij Helvetica";
+                 font-family: "Bahij Helvetica";
                 font-weight: 20px;
                 color: rgb(148, 144, 144);
             }
@@ -597,7 +597,7 @@ margin:5px 0px 0px 10px;
                 padding: 10px 40px 0 0px;
                 color: rgba(60,152,189,1);
                 font-size: large;
-                font-family:"Bahij Helvetica";
+                 font-family: "Bahij Helvetica";
                 font-weight: 12px;
                 display: inline-block;
             
@@ -613,7 +613,7 @@ margin:5px 0px 0px 10px;
                 background-color: rgba(60,152,189,1);
                 color: white;
                 font-size: large;
-                font-family:"Bahij Helvetica";
+                 font-family: "Bahij Helvetica";
                 font-weight: 12px;
                 display: inline-block;
                 padding-right: 12px;
@@ -717,7 +717,7 @@ margin:5px 0px 0px 10px;
             #input_login{
                 position: relative;
                color: white;
-               font-family:"Bahij Helvetica";
+                font-family: "Bahij Helvetica";
                 display: inline-block;
                 background: none;
                 width: 300px;
@@ -741,7 +741,7 @@ margin:5px 0px 0px 10px;
                 background-color: rgba(60,152,189,1);
                 color: white;
                 font-size: large;
-                font-family:"Bahij Helvetica";
+                 font-family: "Bahij Helvetica";
                 font-weight: 12px;
               
             }
@@ -768,7 +768,7 @@ margin:5px 0px 0px 10px;
             .google_p_login{
                 margin:10px 12px 0px 0px;
                 font-size: large;
-                font-family:"Bahij Helvetica";
+                 font-family: "Bahij Helvetica";
                 font-weight: 12px;
                 color: rgb(148, 144, 144);
             }
@@ -791,7 +791,7 @@ margin:5px 0px 0px 10px;
                 padding: 10px 40px 0 0px;
                 color: rgba(60,152,189,1);
                 font-size: large;
-                font-family:"Bahij Helvetica";
+                 font-family: "Bahij Helvetica";
                 font-weight: 12px;
                 display: inline-block;
             
@@ -807,7 +807,7 @@ margin:5px 0px 0px 10px;
                 background-color: rgba(60,152,189,1);
                 color: white;
                 font-size: large;
-                font-family:"Bahij Helvetica";
+                 font-family: "Bahij Helvetica";
                 font-weight: 12px;
                 display: inline-block;
                 padding-right: 12px;

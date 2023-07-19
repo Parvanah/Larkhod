@@ -95,7 +95,7 @@ all-grade-n {
 		height:100px;
 		line-height: 79px;
 		text-align: center;
-		font-family: Bahij Helvetica Neue;
+		  font-family: "Bahij Helvetica";
 		/* background-color: red; */
 		color: rgb(255, 255, 255);
 		letter-spacing: -0.4px;
@@ -237,7 +237,7 @@ all-grade-n {
 		height:50px;
 		line-height: 79px;
 		text-align: center;
-		font-family: Bahij Helvetica Neue;
+		  font-family: "Bahij Helvetica";
 		/* background-color: red; */
 		color: rgb(255, 255, 255);
 		letter-spacing: -0.4px;
@@ -363,7 +363,7 @@ all-grade-n {
 		height:50px;
 		line-height: 79px;
 		text-align: center;
-		font-family: Bahij Helvetica Neue;
+		  font-family: "Bahij Helvetica";
 		/* background-color: red; */
 		color: rgb(255, 255, 255);
 		letter-spacing: -0.4px;
@@ -475,12 +475,11 @@ all-grade-n {
 		height:60px;
 		line-height: 79px;
 		text-align: center;
-		font-family: Bahij Helvetica Neue;
+		  font-family: "Bahij Helvetica";
 		/* background-color: red; */
 		color: rgb(255, 255, 255);
 		letter-spacing: -0.4px;
 		font-size:25px;
-		font-family: "Bahij Helvetica";
 	}
 	.link-grade-n{
 		overflow-x: hidden;
@@ -583,7 +582,7 @@ all-grade-n {
 		height:60px;
 		line-height: 79px;
 		text-align: center;
-		font-family: Bahij Helvetica Neue;
+		  font-family: "Bahij Helvetica";
 		/* background-color: red; */
 		color: rgb(255, 255, 255);
 		letter-spacing: -0.4px;
@@ -691,12 +690,11 @@ all-grade-n {
 		height:60px;
 		line-height: 79px;
 		text-align: center;
-		font-family: Bahij Helvetica Neue;
+		  font-family: "Bahij Helvetica";
 		/* background-color: red; */
 		color: rgb(255, 255, 255);
 		letter-spacing: -0.4px;
 		font-size:40px;
-		font-family: "Bahij Helvetica";
 	}
 	.link-grade-n{
 		overflow-x: hidden;

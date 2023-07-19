@@ -38,6 +38,7 @@ justify-content: space-between;
 .about{
 text-align: right;
 color:  rgba(60,152,189,1);
+font-family: "Bahij Helvetica";
 font-size: 25px;
 font-weight: 40px;
 font-style: normal;
@@ -110,7 +111,7 @@ overflow: visible;
     }
     #title_about{
         text-align: right;
-        font-family: Bahij Helvetica Neue;
+          font-family: "Bahij Helvetica";
         font-style: normal;
         font-weight: bold;
         font-size: 20px;
@@ -171,6 +172,7 @@ overflow: visible;
     margin-right: 50px;
     margin-left: 50px;
     line-height: 25px;
+    font-family: "Bahij Helvetica";
     font-style: normal;
     font-size: 12px;
     color: rgba(112,112,112,1);
@@ -265,7 +267,7 @@ overflow: visible;
         #title_about{
             overflow: hidden !important;
             text-align: right;
-            font-family: Bahij Helvetica Neue;
+              font-family: "Bahij Helvetica";
             font-style: normal;
             font-weight: bold;
             font-size: 20px;
@@ -333,6 +335,7 @@ overflow: visible;
         margin-right: 50px;
         margin-left: 50px;
         line-height: 25px;
+        font-family: "Bahij Helvetica";
         font-style: normal;
         font-size: 12px;
         color: rgba(112,112,112,1);
@@ -442,6 +445,7 @@ overflow: visible;
     .about{
     text-align: right;
     color:  rgba(60,152,189,1);
+    font-family: "Bahij Helvetica";
     font-size: 20px;
     font-weight: 10px;
     font-style: normal;
@@ -529,6 +533,7 @@ overflow: visible;
     }
     .about{
     text-align: right;
+    font-family: "Bahij Helvetica";
     color:  rgba(60,152,189,1);
     font-size: 23px;
     font-weight: 10px;
@@ -619,6 +624,7 @@ justify-content: space-between;
 .about{
 text-align: right;
 color:  rgba(60,152,189,1);
+font-family: "Bahij Helvetica";
 font-size: 25px;
 font-weight: 40px;
 font-style: normal;

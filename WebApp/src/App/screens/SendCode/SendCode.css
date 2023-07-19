@@ -34,7 +34,7 @@
     width: 140px;
     height: 35px;
     cursor: pointer;
-    font-family: Gotham;
+    font-family: "Bahij Helvetica";
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
@@ -52,7 +52,7 @@
     height: 250px;
     line-height: 117px;
     text-align: right;
-    font-family: Gotham;
+      font-family: "Bahij Helvetica";
     font-style: normal;
     font-weight: 12px;
     font-size: 50px;
@@ -72,7 +72,7 @@
     line-height: 117px;
     margin-top: -48.5px;
     text-align: right;
-    font-family: Gotham;
+      font-family: "Bahij Helvetica";
     font-style: normal;
     font-weight: 18px;
     font-size: 20px;
@@ -131,6 +131,7 @@
 .error_send_code{
     margin: 0;padding: 0;
     color: rgb(241, 26, 26);
+    font-family: "Bahij Helvetica";
     font-weight: bold;
     font-style: normal;
 }
@@ -204,7 +205,7 @@
         width: 270px;
         height: 35px;
         cursor: pointer;
-        font-family: Gotham;
+        font-family: "Bahij Helvetica";
         font-style: normal;
         font-weight: bold;
         font-size: 20px;
@@ -222,7 +223,7 @@
         height: 250px;
         line-height: 117px;
         text-align: right;
-        font-family: Gotham;
+          font-family: "Bahij Helvetica";
         font-style: normal;
         font-weight:lighter;
         font-size: 38px;
@@ -242,7 +243,7 @@
         line-height: 110px;
         margin-top: -48.5px;
         text-align: right;
-        font-family: Gotham;
+          font-family: "Bahij Helvetica";
         font-style: normal;
         font-weight: 18px;
         font-size: 20px;
@@ -309,6 +310,7 @@
     .error_send_code{
         margin: 0;padding: 0;
         color: rgb(241, 26, 26);
+        font-family: "Bahij Helvetica";
         font-weight: bold;
         font-style: normal;
     }
@@ -370,7 +372,7 @@
         width: 410px;
         height: 35px;
         cursor: pointer;
-        font-family: Gotham;
+          font-family: "Bahij Helvetica";
         font-style: normal;
         font-weight: bold;
         font-size: 20px;
@@ -389,7 +391,7 @@
         height: 250px;
         line-height: 117px;
         text-align: right;
-        font-family: Gotham;
+          font-family: "Bahij Helvetica";
         font-style: normal;
         font-weight: 62px;
         font-size: 51px;
@@ -409,7 +411,7 @@
         line-height: 110px;
         margin-top: -48.5px;
         text-align: right;
-        font-family: Gotham;
+          font-family: "Bahij Helvetica";
         font-style: normal;
         font-weight: 18px;
         font-size: 20px;
@@ -476,6 +478,7 @@
     .error_send_code{
         margin: 0;padding: 0;
         color: rgb(241, 26, 26);
+        font-family: "Bahij Helvetica";
         font-weight: bold;
         font-style: normal;
     }
@@ -518,7 +521,7 @@
     width: 140px;
     height: 35px;
     cursor: pointer;
-    font-family: Gotham;
+      font-family: "Bahij Helvetica";
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
@@ -535,7 +538,7 @@
     height: 250px;
   
     text-align: right;
-    font-family: Gotham;
+      font-family: "Bahij Helvetica";
     font-style: normal;
     font-weight: 12px;
     font-size: 40px;
@@ -555,7 +558,7 @@
     line-height: 117px;
     margin-top: -48.5px;
     text-align: right;
-    font-family: Gotham;
+      font-family: "Bahij Helvetica";
     font-style: normal;
     font-weight: 18px;
     font-size: 20px;
@@ -613,6 +616,7 @@
 .error_send_code{
     margin: 0;padding: 0;
     color: rgb(241, 26, 26);
+    font-family: "Bahij Helvetica";
     font-weight: bold;
     font-style: normal;
 }
@@ -669,7 +673,7 @@
         width: 140px;
         height: 35px;
         cursor: pointer;
-        font-family: Gotham;
+          font-family: "Bahij Helvetica";
         font-style: normal;
         font-weight: bold;
         font-size: 20px;
@@ -686,7 +690,7 @@
 		height: 250px;
 		line-height: 117px;
 		text-align: right;
-		font-family: Gotham;
+		   font-family: "Bahij Helvetica";
 		font-style: normal;
 		font-weight: 12px;
 		font-size: 45px;
@@ -706,7 +710,7 @@
 		line-height: 117px;
 		margin-top: -48.5px;
 		text-align: right;
-		font-family: Gotham;
+		   font-family: "Bahij Helvetica";
 		font-style: normal;
 		font-weight: 18px;
 		font-size: 20px;
@@ -764,6 +768,7 @@
     .error_send_code{
         margin: 0;padding: 0;
         color: rgb(241, 26, 26);
+        font-family: "Bahij Helvetica";
         font-weight: bold;
         font-style: normal;
     }
@@ -817,7 +822,7 @@
         width: 140px;
         height: 35px;
         cursor: pointer;
-        font-family: Gotham;
+          font-family: "Bahij Helvetica";
         font-style: normal;
         font-weight: bold;
         font-size: 20px;
@@ -834,7 +839,7 @@
 		height: 250px;
 		line-height: 117px;
 		text-align: right;
-		font-family: Gotham;
+		   font-family: "Bahij Helvetica";
 		font-style: normal;
 		font-weight: 12px;
 		font-size: 50px;
@@ -854,7 +859,7 @@
 		line-height: 117px;
 		margin-top: -48.5px;
 		text-align: right;
-		font-family: Gotham;
+		   font-family: "Bahij Helvetica";
 		font-style: normal;
 		font-weight: 18px;
 		font-size: 20px;
@@ -912,6 +917,7 @@
     .error_send_code{
         margin: 0;padding: 0;
         color: rgb(241, 26, 26);
+        font-family: "Bahij Helvetica";
         font-weight: bold;
         font-style: normal;
     }

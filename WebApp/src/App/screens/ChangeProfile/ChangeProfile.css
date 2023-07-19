@@ -73,7 +73,7 @@
     width: 204px;
     white-space: nowrap;
     text-align: center;
-    font-family: Bahij Helvetica Neue;
+    font-family: "Bahij Helvetica"; 
     font-style: normal;
     font-weight: normal;
     font-size: 30px;
@@ -154,7 +154,7 @@
     border: 1px solid #ccc;
     box-sizing: border-box;
     font-size: 20px;
-	font-family: Bahij Helvetica Neue;
+    font-family: "Bahij Helvetica"; 
     font-style: normal;
     font-weight: normal;
 	cursor: pointer;
@@ -288,7 +288,7 @@
         width: 204px;
         white-space: nowrap;
         text-align: center;
-        font-family: Bahij Helvetica Neue;
+        font-family: "Bahij Helvetica"; 
         font-style: normal;
         font-weight: normal;
         font-size: 25px;
@@ -369,7 +369,7 @@
         border: 1px solid #ccc;
         box-sizing: border-box;
         font-size: 20px;
-        font-family: Bahij Helvetica Neue;
+        font-family: "Bahij Helvetica"; 
         font-style: normal;
         font-weight: normal;
         cursor: pointer;
@@ -418,6 +418,7 @@
         color: red;
         font-weight: bold;
         font-style: normal;
+        font-family: "Bahij Helvetica"; 
     }
     .ig_change_profile{
         display: inline-block;

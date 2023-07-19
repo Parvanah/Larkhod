@@ -50,8 +50,10 @@ const Book = ({ t }) => {
         </div>
       <div className='buttom-books'> 
       <div className='p-container-books'>  
+
+         <p className='p-books'> کتاب های مورد نظر صنف خود را</p>
+         <p id='p-books'>از اینجا انتخاب  کنید</p>
          <p className='p-books'>{t("book1")}</p>
-       
       </div>
     <div id='h-books'>
     <div ref={top} >

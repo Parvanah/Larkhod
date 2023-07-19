@@ -1,5 +1,6 @@
 import * as React from "react"
 import './downloading.css';
+import { HiDownload } from "react-icons/hi";
 import { Link, useLocation } from "react-router-dom";
 import image10 from "./assets/Group_158_a@2x.png";
 import { useNavigate } from "react-router-dom";
@@ -37,7 +38,7 @@ const  Downloading = (props) => {
        <p className="p-downloding">کتاب مورد نظر خود را</p>
           <p id="p-downloding">از اینجا مرور یا دانلود نمایید</p>
         
-          <div className="ufff">
+          <div className="Download-ul">
             <img src={Dimage}  className="Dimg"/>
          <div className="d-middle">
        <div  ref={top}>
@@ -49,8 +50,8 @@ const  Downloading = (props) => {
                   id="link"
                 >
                   {/* <img src={bookicon} /> */}
-                  <div className="uff">
-                    <div className="d"> دانلود کتاب</div>
+                  <div className="Download-li">
+                    <div className="d-book"><HiDownload size="20px"/></div>
                     <p id="h5">کتاب {item.label}</p>
                   </div>
                 </Link>
@@ -59,8 +60,8 @@ const  Downloading = (props) => {
               return (
                 <Link  state={{ units: item.parts }} id="link">
                   {/* <img src={bookicon} /> */}
-                  <div className="uff">
-                  <div className="d-book"> دانلود کتاب</div>
+                  <div className="Download-li">
+                  <div className="d-book"><HiDownload size="20px"/></div>
                     <p id="h5"> کتاب {item.label}</p>
                   </div>
                 </Link>

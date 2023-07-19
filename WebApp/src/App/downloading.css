@@ -28,15 +28,17 @@
     padding-top:30px;
     font-size:45px;
     font-weight: bold;
-    margin-left:200px;    
+    margin-left:200px; 
+    font-family: "Bahij Helvetica";   
 }
 .download-b #p-downloding {
     color: white;
     font-size:50px;
     margin-left:150px;
     margin-bottom: 3px;
+    font-family: "Bahij Helvetica"; 
 }
-.ufff {
+.Download-ul {
     display: flex;
     flex-direction:row;
     justify-content:center;
@@ -56,7 +58,7 @@
     margin-bottom: 60px;
 }
 
-.uff {
+.Download-li{
 display: flex;
 flex-direction: row;
 justify-content: space-between;
@@ -77,12 +79,14 @@ padding:2px;
 #h5 {
 margin:5px;
 font-size:px;
+font-family: "Bahij Helvetica"; 
 }
 .uff:hover {
    
     background-color: #3c98bd;
 }
 .d-book {
+font-family: "Bahij Helvetica"; 
 padding:8px;
 font-weight: bold;
 }
@@ -125,17 +129,19 @@ font-weight: bold;
     .download-b .p-downloding {
         color: white;
         padding-top:30px;
+        font-family: "Bahij Helvetica";
         font-size:15px;
         font-weight: bold;
         margin-left:200px;    
     }
     .download-b #p-downloding {
         color: white;
+        font-family: "Bahij Helvetica";
         font-size:20px;
         margin-left:150px;
         margin-bottom: 3px;
     }
-    .ufff {
+    .Download-ul {
         display: flex;
         flex-direction:row;
         justify-content:center;
@@ -157,7 +163,7 @@ font-weight: bold;
         /* width: 300px; */
     }
     
-    .uff {
+    .Download-li{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -207,6 +213,7 @@ font-weight: bold;
     }
     .download-b .p-downloding {
         color: white;
+        font-family: "Bahij Helvetica";
         padding-top:30px;
         font-size:25px;
         font-weight: bold;
@@ -214,11 +221,12 @@ font-weight: bold;
     }
     .download-b #p-downloding {
         color: white;
+        font-family: "Bahij Helvetica";
         font-size:30px;
         margin-left:10px;
         margin-bottom: 3px;
     }
-    .ufff {
+    .Download-ul {
         display: flex;
         flex-direction:row;
         justify-content:center;
@@ -243,7 +251,7 @@ font-weight: bold;
         margin-left:-950px;
         display: none;
     }   
-    .uff {
+    .Download-li{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -262,6 +270,7 @@ font-weight: bold;
         margin-left:225px;
     }  */
     #h5 {
+    font-family: "Bahij Helvetica";
     margin:5px;
     font-size:px;
     }
@@ -322,17 +331,19 @@ font-weight: bold;
 .download-b .p-downloding {
     color: white;
     padding-top:30px;
+    font-family: "Bahij Helvetica";
     font-size:25px;
     font-weight: bold;
     margin-left:300px;    
 }
 .download-b #p-downloding {
     color: white;
+    font-family: "Bahij Helvetica";
     font-size:30px;
     margin-left:260px;
     margin-bottom: 3px;
 }
-.ufff {
+.Download-ul {
     display: flex;
     flex-direction:row;
     justify-content:center;
@@ -352,7 +363,7 @@ font-weight: bold;
     margin-bottom: 60px;
 }
 
-.uff {
+.Download-li{
 display: flex;
 flex-direction: row;
 justify-content: space-between;
@@ -419,17 +430,19 @@ font-weight: bold;
     .download-b .p-downloding {
         color: white;
         padding-top:60px;
+        font-family: "Bahij Helvetica";
         font-size:35px;
         font-weight: bold;
         margin-left:240px;    
     }
     .download-b #p-downloding {
         color: white;
+        font-family: "Bahij Helvetica";
         font-size:40px;
         margin-left:180px;
         margin-bottom: 3px;
     }
-    .ufff {
+    .Download-ul {
         display: flex;
         flex-direction:row;
         justify-content:center;
@@ -449,7 +462,7 @@ font-weight: bold;
         margin-bottom: 60px;
     }
     
-    .uff {
+    .Download-li{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -517,17 +530,19 @@ font-weight: bold;
 .download-b .p-downloding {
     color: white;
     padding-top:30px;
+    font-family: "Bahij Helvetica";
     font-size:45px;
     font-weight: bold;
     margin-left:400px;    
 }
 .download-b #p-downloding {
     color: white;
+    font-family: "Bahij Helvetica";
     font-size:50px;
     margin-left:350px;
     margin-bottom: 3px;
 }
-.ufff {
+.Download-ul {
     display: flex;
     flex-direction:row;
     justify-content:center;
@@ -547,7 +562,7 @@ font-weight: bold;
     margin-bottom: 60px;
 }
 
-.uff {
+.Download-li{
 display: flex;
 flex-direction: row;
 justify-content: space-between;
@@ -566,6 +581,7 @@ padding:2px;
     margin-left:225px;
 } 
 #h5 {
+    font-family: "Bahij Helvetica";
 margin:5px;
 font-size:px;
 }
