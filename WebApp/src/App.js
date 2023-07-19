@@ -27,11 +27,6 @@ function App() {
     <Router>
       <Routes>
         <Route exact path="/header" element={<Header />} />
-        <Route exact path="/" element={<SingUp />} />
-        <Route exact path="/login" element={<LogIn />} />
-        <Route exact path="/forgotpassword" element={<ForgotPassword />} />
-        <Route exact path="/sendcode" element={<SendCode />} />
-        <Route exact path="/newpassword" element={<NewPassword />} />
         <Route path="/section" element={<Section />} />
         <Route path="/grades" element={<Grades />} />
         <Route path="/books" element={<Books />} />
@@ -45,10 +40,15 @@ function App() {
         <Route path="/suggestion" element={<Suggestion />} />
         <Route path="/changeprofile" element={<ChangeProfile />} />
         <Route path="/profile" element={<Profile />} />
+        <Route exact path="/" element={<SingUp />} />
+        <Route exact path="/login" element={<LogIn />} />
+        <Route exact path="/forgotpassword" element={<ForgotPassword />} />
+        <Route exact path="/sendcode" element={<SendCode />} />
+        <Route exact path="/newpassword" element={<NewPassword />} />
       </Routes>
     </Router>
   );
 }
 
 export default App;
-// po
+// finally

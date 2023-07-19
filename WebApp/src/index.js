@@ -17,7 +17,7 @@ root.render(
   {/* <Suspense fallback={(<div>Loading...</div>)}> */}
   <GoogleOAuthProvider clientId="286821865292-sel956ul462umja0aubg0c2dgt9v4t0k.apps.googleusercontent.com">
   <App />
-    </GoogleOAuthProvider>;
+  </GoogleOAuthProvider>;
 
 {/* </Suspense> */}
 </AuthProvider>
