@@ -1,5 +1,5 @@
 .suggestion{
-   
+    height: 800px;
 }
 *{
     margin: 0;
@@ -72,6 +72,7 @@ display: inline-block;
     font-family: "Bahij Helvetica";
     font-weight: bold;
     font-style: normal;
+    height: 1px;
 }
 .section-one-input-suggestion{
     display: flex;

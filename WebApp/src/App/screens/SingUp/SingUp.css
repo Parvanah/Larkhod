@@ -82,7 +82,7 @@
     justify-content: space-between;
 }
 .in_singup{
-    padding-top: 10px;
+    padding-top: 5px;
     align-items: center;
     border-radius: 50px;
     width: 185px;
@@ -95,7 +95,7 @@
     padding-right: 12px;
 }
 .up_singup{
-    padding: 10px 0 0 37px;
+    padding: 5px 0 0 37px;
     color: rgba(60,152,189,1);
     font-size: large;
     font-weight: 12px;
@@ -125,6 +125,11 @@
 .error_singup{
     color: red;
        font-family: "Bahij Helvetica";
+/* <<<<<<< grad_update23_july
+======= */
+       height: 1px;
+   
+/* >>>>>>> main */
    }
 .acount_button_singuo{
     display: flex;
@@ -198,7 +203,7 @@ h4 {
     margin:5px 0px 0px 10px;
 }
 .google_p_singup{
-    margin:10px 12px 0px 0px;
+    margin:5px 12px 0px 0px;
     font-size: large;
     font-weight: 12px;
        font-family: "Bahij Helvetica";

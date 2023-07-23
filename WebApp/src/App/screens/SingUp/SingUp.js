@@ -208,7 +208,7 @@ const SingUp = ({ t }) => {
                 <p className="error_singup">{formErrors.confirmpassword}</p>
               </div>
             </div>
-            <button className="acount_button_singuo">{t('singup1')}</button>
+            <button className="acount_button_singuo">{t('singup2')}</button>
           </form>
           <h4 className="p_singup">{t('singup7')}</h4>
              <button  className="google_button_singup" onClick={login}

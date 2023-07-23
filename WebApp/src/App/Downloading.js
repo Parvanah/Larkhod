@@ -1,3 +1,6 @@
+import JsonFiles from "./Json Files/SchoolSubjects.json";
+import i18n from '../i18n';
+import { withNamespaces } from 'react-i18next';
 import * as React from "react"
 import './downloading.css';
 import { HiDownload } from "react-icons/hi";
@@ -10,7 +13,11 @@ import bookicon from "./assets/Group_360.png";
 import Dimage from "./assets/Dimage.png";
 import pathimg from "./assets/Path 968.png";
 import line from "./assets/Line 117.png";
-const  Downloading = (props) => {
+const  Downloading = ({ t }, props) => {
+
+  const changeLanguage = (lng) => {
+		i18n.changeLanguage(lng);
+	  }
   const location = useLocation();
   const locationData = location.state;
   const subjects = locationData.subjects;
@@ -24,6 +31,7 @@ const  Downloading = (props) => {
 
   }
   const scrollTop = ()=>{
+    
     top.current.scrollIntoView({behavier: "smooth"});
     setScrollState("top")
    }
@@ -35,8 +43,8 @@ const  Downloading = (props) => {
       <div className="download-b"> 
       <Link to="/Book"><img className="flesh-image-grade-d" src={image10} /></Link>  
        <div>
-       <p className="p-downloding">کتاب مورد نظر خود را</p>
-          <p id="p-downloding">از اینجا مرور یا دانلود نمایید</p>
+       <p className="p-downloding">{t("downloading1")}</p>
+          <p id="p-downloding"> {t("downloading2")}</p>
         
           <div className="Download-ul">
             <img src={Dimage}  className="Dimg"/>
@@ -52,7 +60,7 @@ const  Downloading = (props) => {
                   {/* <img src={bookicon} /> */}
                   <div className="Download-li">
                     <div className="d-book"><HiDownload size="20px"/></div>
-                    <p id="h5">کتاب {item.label}</p>
+                    <p id="h5"> {t("downloading3")} {item.label} {t("downloading4")}</p>
                   </div>
                 </Link>
               );
@@ -62,7 +70,7 @@ const  Downloading = (props) => {
                   {/* <img src={bookicon} /> */}
                   <div className="Download-li">
                   <div className="d-book"><HiDownload size="20px"/></div>
-                    <p id="h5"> کتاب {item.label}</p>
+                    <p id="h5">  {t("downloading3")} {item.label} {t("downloading4")}</p>
                   </div>
                 </Link>
               );
@@ -1185,4 +1193,4 @@ const  Downloading = (props) => {
      );
 }
  
-export default Downloading;
+export default  withNamespaces()(Downloading) ;
