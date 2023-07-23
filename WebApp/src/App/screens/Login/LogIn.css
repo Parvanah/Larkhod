@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     border: none;
+    font-family: "Bahij Helvetica";
 }
 #all_login {
     position: absolute;
@@ -74,7 +75,7 @@
     margin:5px 0px 0px 10px;
 }
 .google_p_login{
-    margin:10px 12px 0px 0px;
+    margin:5px 12px 0px 0px;
     font-size: large;
      font-family: "Bahij Helvetica";
     font-weight: 12px;
@@ -96,7 +97,7 @@
 
 .inn_login{
 
-    padding: 10px 40px 0 0px;
+    padding: 5px 40px 0 0px;
     color: rgba(60,152,189,1);
     font-size: large;
      font-family: "Bahij Helvetica";
@@ -104,7 +105,7 @@
     display: inline-block;
 }
 .upp_login{
-    padding-top: 10px;
+    padding-top: 5px;
    align-items: center;
     border-radius: 50px;
     width: 185px;
@@ -150,6 +151,7 @@
 }
 .error_login{
  color: red;
+ /* height: 1px; */
 
 }
 h4 {
@@ -175,9 +177,10 @@ h4 {
     top: 40px;
     left: -6px;
 }
-.forgetpassword_login{
-    position: relative;
-    top: 12px;
+.forgotpassword_login{
+    /* position: relative;
+    top: 12px; */
+    color: white !important;
 }
         /* Mobile 1 Responsive */
         @media screen  and (max-width:360px) and (min-width:100px){

@@ -51,9 +51,8 @@ const Book = ({ t }) => {
       <div className='buttom-books'> 
       <div className='p-container-books'>  
 
-         <p className='p-books'> کتاب های مورد نظر صنف خود را</p>
-         <p id='p-books'>از اینجا انتخاب  کنید</p>
          <p className='p-books'>{t("book1")}</p>
+         <p id='p-books'> {t("book4")}</p>
       </div>
     <div id='h-books'>
     <div ref={top} >
@@ -79,7 +78,7 @@ const Book = ({ t }) => {
                       state={{ subjects: item.subjects }}
                     >
                       <img className="sanaf-grade" src={sanaf} />
-                      <div className="li-grade-n" src={sanaf}>{t("book2")} {item.label}</div>
+                      <div className="li-grade-n" src={sanaf}>{t("book2")} {item.label} {t("book3")}</div>
                     </Link>
                   );
                 })}
@@ -93,7 +92,7 @@ const Book = ({ t }) => {
                       state={{ subjects: item.subjects }}
                     >
                       <img className="sanaf-grade-n" src={sanaf} />
-                      <div className="li-grade-n" src={sanaf}> {t("book2")}  {item.label}</div>
+                      <div className="li-grade-n" src={sanaf}> {t("book2")}  {item.label} {t("book3")}</div>
                     </Link>
                   );
                 })}
