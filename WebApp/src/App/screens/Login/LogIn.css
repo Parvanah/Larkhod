@@ -21,13 +21,13 @@
 }
 .cantainer_login{
     position: relative;
-    top: 100px;
+    top: 70px;
     left: 250px;
     z-index: 100;
 }
 #input_login{
     position: relative;
-   color: white;
+    color: white;
     font-family: "Bahij Helvetica";
     display: inline-block;
     background: none;
@@ -83,7 +83,7 @@
 
 .button_login{
     position: relative;
-    top: 90px;
+    top:50px;
     left: 235px;
     z-index: 100;
     width: 335px;
@@ -178,6 +178,7 @@ h4 {
 .forgetpassword_login{
     position: relative;
     top: 12px;
+    font-family: "Bahij Helvetica";
 }
         /* Mobile 1 Responsive */
         @media screen  and (max-width:360px) and (min-width:100px){
@@ -200,7 +201,8 @@ h4 {
                display: none;
             }
             .Mobile_lr .M-img .img3 {
-              margin-left:40%;
+              margin-left:35%;
+              margin-top: 50px;
               /* padding-bottom:10px; */
             }
             .Mobile_lr .M-img .M-arrow {
@@ -215,10 +217,11 @@ h4 {
                padding-top:5%;
             }
             .button_login {
-               margin-left:-150px;
+               margin-left:-170px;
             }
             .cantainer_login {
-               margin-left:-150px;
+               margin-left:-170px;
+               margin-top: -40px;
             }
             #input_login{
                position: relative;
@@ -268,7 +271,7 @@ h4 {
         }
         .button_login{
             position: relative;
-            top: 90px;
+            top:20px;
             left: 235px;
             z-index: 100;
             width:230px;
@@ -330,6 +333,11 @@ margin:5px 0px 0px 10px;
     position: relative;
     top: 12px;
 }
+.error_login{
+    color: red;
+     font-family: "Bahij Helvetica";
+     font-size: small;
+   }
 }
 /* Mobile 2 Responsive */
 @media screen  and (max-width:576px) and (min-width:360px){
@@ -352,8 +360,9 @@ margin:5px 0px 0px 10px;
        display: none;
     }
     .Mobile_lr .M-img .img3 {
-      margin-left:40%;
-      padding-bottom:20px;
+       width:130px;
+      margin-left:35%;
+      padding-bottom:0px;
     }
     .Mobile_lr .M-img .M-arrow {
         margin-top:30px;
@@ -368,10 +377,12 @@ margin:5px 0px 0px 10px;
       
     }
     .button_login {
-       margin-left:-150px;
+        margin-top: -50px;
+       margin-left:-125px;
+       font-weight: 12px;
     }
     .cantainer_login {
-       margin-left:-150px;
+       margin-left:-125px;
     }
     #input_login{
        position: relative;
@@ -408,6 +419,11 @@ margin:5px 0px 0px 10px;
        top: 40px;
        left: -6px;
    }
+   .error_login{
+    color: red;
+     font-family: "Bahij Helvetica";
+     font-size: small;
+   }
    }
    /* Tablate Responsive */
     @media screen and (max-width:768px)and (min-width:576px) {
@@ -431,9 +447,8 @@ margin:5px 0px 0px 10px;
         }
         .Mobile_lr .M-img .img3 {
           margin-left:45%;
-          padding-bottom:20px;
+          padding-bottom:0px;
           width: 120px;
-          background-color:red;
         }
         .Mobile_lr .M-img .M-arrow {
             margin-top:30px;
@@ -444,17 +459,15 @@ margin:5px 0px 0px 10px;
            border-top-left-radius:70px;
            width: 100%;
            background-color: rgba(255,255,255,1); 
-           background-color: cadetblue;
            padding-top:5%;
           
         }
         .button_login {
-           margin-left:5-0px;
-           margin-bottom:-10px;
-           background-color: red;
+            margin-top: -60px;
+            margin-left:-20px;
         }
         .cantainer_login {
-           margin-left:0px;
+            margin-left:-25px;
         }
         #input_login{
            position: relative;
@@ -491,6 +504,11 @@ margin:5px 0px 0px 10px;
            top: 40px;
            left: -6px;
        }
+       .error_login{
+        color: red;
+         font-family: "Bahij Helvetica";
+         font-size: small;
+       }
        }
     /* PC1 Responsive */
     @media screen  and (max-width:992px) and (min-width:768px){
@@ -517,7 +535,7 @@ margin:5px 0px 0px 10px;
             }
             .cantainer_login{
                 position: relative;
-                top: 100px;
+                top:70px;
                 left:165px;
                 z-index: 100;
             }
@@ -551,17 +569,15 @@ margin:5px 0px 0px 10px;
                 font-weight: 12px;
               
             }
-            .google_button_login{
+            .google_button_singup{
                 position: relative;
                 top: 50px;
-                left:0px;
+                left:-20px;
                 z-index: 100;
-                width: 29px;
+                width:300px;
                 height: 40px;
-                border-radius: 10px;
-                border: 2px solid   rgb(148, 144, 144);
-                /* background-color:white; */
-                background-color: red;
+                border-radius: 50px;
+                background-color:white;
                 display: flex;
                 justify-content: space-between;
             }
@@ -581,7 +597,7 @@ margin:5px 0px 0px 10px;
             
             .button_login{
                 position: relative;
-                top: 90px;
+                top: 50px;
                 left:150px;
                 z-index: 100;
                 width:300px;
@@ -596,13 +612,10 @@ margin:5px 0px 0px 10px;
             
                 padding: 10px 40px 0 0px;
                 color: rgba(60,152,189,1);
-                font-size: large;
+                font-size: medium;
                  font-family: "Bahij Helvetica";
-                font-weight: 12px;
+                font-weight:12px;
                 display: inline-block;
-            
-            
-              
             }
             .upp_login{
                 padding-top: 10px;
@@ -612,7 +625,7 @@ margin:5px 0px 0px 10px;
                 height: 40px;
                 background-color: rgba(60,152,189,1);
                 color: white;
-                font-size: large;
+                font-size:medium;
                  font-family: "Bahij Helvetica";
                 font-weight: 12px;
                 display: inline-block;
@@ -715,7 +728,6 @@ margin:5px 0px 0px 10px;
                 z-index: 100;
             }
             #input_login{
-                position: relative;
                color: white;
                 font-family: "Bahij Helvetica";
                 display: inline-block;
@@ -727,7 +739,9 @@ margin:5px 0px 0px 10px;
                 box-sizing: border-box;
                 text-align: right;
                 fill: transparent;
-              outline: none;
+              outline: none;     
+               position: relative;
+          
             }
             
             .acount_button_login{
@@ -745,10 +759,10 @@ margin:5px 0px 0px 10px;
                 font-weight: 12px;
               
             }
-            .google_button_login{
+            .google_button_singup{
                 position: relative;
                 top: 50px;
-                left: 8px;
+                left:9px;
                 z-index: 100;
                 width: 290px;
                 height: 40px;

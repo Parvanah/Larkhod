@@ -5,6 +5,8 @@ import { Link, useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./Unit.css";
 import sectionicon from "../../assets/Group_374.png";
+import imageU from "../../assets/Group_158_a@2x.png"
+import imagel from "../../assets/U.png";
 // import {HiChevronLeft,HiChevronRight } from "react-icons/hi";
 import photo3 from "../../assets/Group_158.png";
 const Units = ({ t }) => {
@@ -28,7 +30,7 @@ const Units = ({ t }) => {
     <div className="units">
       <div className="t-section">
         <div className="svgArrow">
-        <div className="mobile-arrow"> 
+        {/* <div className="mobile-arrow"> 
         <svg xmlns="http://www.w3.org/2000/svg" width={22} height={14}
         //  {...props}
          >
@@ -46,35 +48,15 @@ const Units = ({ t }) => {
       />
     </g>
   </svg>
-  </div>
-          <div className="laptop-arrow" onClick={() => navigate("/")}>
-            <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width={36}
-            height={22}
-            data-name="Group 411"
-            // {...props}
-          >
-            <defs>
-              <clipPath id="a">
-                <path fill="#fff" d="M0 0h36v22H0z" data-name="Rectangle 85" />
-              </clipPath>
-            </defs>
-            <g clipPath="url(#a)" data-name="Group 158">
-              <path
-                fill="#fff"
-                fillRule="evenodd"
-                d="m7.3 13.483 5.574 5.156a2.225 2.225 0 0 1 0 3.178 2.3 2.3 0 0 1-3.219 0L1 13.618a3.294 3.294 0 0 1-1-2.382 3.332 3.332 0 0 1 1-2.382L9.651.659a2.3 2.3 0 0 1 3.223 0 2.229 2.229 0 0 1 0 3.178L7.3 8.988h26.413a2.25 2.25 0 0 1 0 4.5H7.3Z"
-                data-name="Path 433"
-              />
-            </g>
-          </svg></div>
+  </div> */}
+  <Link to="/books"><img className="flesh-image-grade-U" src={imageU} /></Link>
+       
         </div>
 
        <div id="laptop-top">
          <p id="p1">{t("units1")}</p>
          <p>{t("units2")}</p>
-        <div id="mobile-p"> 
+        {/* <div id="mobile-p"> 
            <svg xmlns="http://www.w3.org/2000/svg" width={355} height={115}
             // {...props}
             >
@@ -110,7 +92,7 @@ const Units = ({ t }) => {
       </tspan>
     </text>
   </svg>
-  </div>
+  </div> */}
         </div>
       </div>
       <div className="unitWrapper">
@@ -162,8 +144,10 @@ const Units = ({ t }) => {
       </div>
       <div className="last">
          <p>{t("units3")}</p> 
+         <div><img src= {imagel}  className='imagel'/></div>
+         
  
-        <div className="svg">
+        {/* <div className="svg">
      <div id="last-mobile"> 
      <div> <div className="mobile-p">
           <svg xmlns="http://www.w3.org/2000/svg" width="1416" height="25" viewBox="0 0 1416 25">
@@ -187,7 +171,7 @@ const Units = ({ t }) => {
   </svg>
   </div>
   </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
