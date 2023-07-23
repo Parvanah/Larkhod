@@ -16,6 +16,7 @@ import "./SingUp.css";
 import { FaGoogle } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import img1 from "../../assets/mg.png";
+import img3 from '../../assets/logo_3.png'
 import React from "react";
 import { Link, useNavigate, useNavigation } from "react-router-dom";
 <link rel="stylesheet" href="SingUp.css" />;
@@ -160,8 +161,6 @@ const SingUp = ({ t }) => {
           ) : (
             <pre></pre>
           )}
-
-
           <form onSubmit={handleSubmit}>
             <div>
               <input
@@ -230,6 +229,105 @@ const SingUp = ({ t }) => {
                     onError={() => {
                     console.log('Login Failed');
                 }}/> */}
+      </div>
+     <div className='all_singup'>
+     <div className="M-img">
+<div id="M-arrow">
+ <Link to="/SingUp"> <svg xmlns="http://www.w3.org/2000/svg" width={16} height={10} 
+//  {...props} 
+ className='M-arrow'>
+    <defs>
+      <clipPath id="a">
+        <path fill="#fff" d="M0 0h16v10H0z" data-name="Rectangle 85" />
+      </clipPath>
+    </defs>
+    <g clipPath="url(#a)" data-name="Group 158">
+      <path
+        fill="#fff"
+        fillRule="evenodd"
+        d="m3.247 6 2.48 2.294a.99.99 0 0 1 0 1.414 1.023 1.023 0 0 1-1.432 0L.445 6.059A1.465 1.465 0 0 1 0 5a1.483 1.483 0 0 1 .444-1.06L4.294.293a1.025 1.025 0 0 1 1.434 0 .992.992 0 0 1 0 1.414L3.248 4H15a1 1 0 0 1 0 2H3.247Z"
+        data-name="Path 433"
+      />
+    </g>
+  </svg></Link>
+  <img src={img3} className="img3"/>
+ </div>
+</div>
+      <div className='Mobile-bottom'>
+      <button id="login-button">
+          <Link className="up_singup" to="/login">
+          {t('singup1')}
+          </Link>
+          <div className="in_singup">{t('singup2')}</div>
+        </button>
+        <div id="cantainer_singup">
+          {Object.keys(formErrors).length === 0 && isSubmit ? (
+            <div>{navigate("/profile")}</div>
+          ) : (
+            <pre></pre>
+          )}
+
+
+          <form onSubmit={handleSubmit}>
+            <div>
+              <input
+                id="input_singup"
+                type="text"
+                name="username"
+                placeholder={t('singup3')}
+                value={formValues.username}
+                onChange={(e) => handleChange(e)}
+              />
+              <p className="error_singup">{formErrors.username}</p>
+              <div className="field">
+                <input
+                  id="input_singup"
+                  type="text"
+                  name="email"
+                  placeholder={t('singup4')}
+                  value={formValues.email}
+                  onChange={(e) => handleChange(e)}
+                />
+                <p className="error_singup">{formErrors.email}</p>
+              </div>
+
+              <div className="field">
+                <input
+                  id="input_singup"
+                  type="password"
+                  name="password"
+                  placeholder={t('singup5')}
+                  value={formValues.password}
+                  onChange={(e) => handleChange(e)}
+                />
+                <p className="error_singup">{formErrors.password}</p>
+              </div>
+
+              <div className="field">
+                <input
+                  id="input_singup"
+                  type="password"
+                  name="confirmpassword"
+                  placeholder={t('singup6')}
+                  value={formValues.confirmpassword}
+                  onChange={(e) => handleChange(e)}
+                />
+                <p className="error_singup">{formErrors.confirmpassword}</p>
+              </div>
+            </div>
+            <button className="acount_button_singuo">{t('singup1')}</button>
+          </form>
+          <h4 className="p_singup">{t('singup7')}</h4>
+             <button  className="google_button_singup" onClick={login}
+             >
+            {/* <div>{navigate("/header")}</div> */}
+        
+              <FaGoogle className="google_icon_singup" />
+              <div className="google_p_singup">{t('singup8')}</div>
+            </button >
+        </div>
+      </div>
+
       </div>
     </div>
   );

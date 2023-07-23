@@ -142,7 +142,7 @@ all-grade-n {
 	display: flex;
 	flex-direction: column;
 	height:300px;
-	overflow-y: scroll;
+	overflow-y:hidden;
 	overflow-x: hidden;
 	margin-top: 230px;
 	z-index: 200;
@@ -263,7 +263,7 @@ all-grade-n {
 		display: flex;
 		flex-direction: column;
 		height:280px;
-		overflow-y: scroll;
+		overflow-y:hidden;
 		overflow-x: hidden;
 		/* margin-top:100px; */
 		z-index: 200;
@@ -389,7 +389,7 @@ all-grade-n {
 		display: flex;
 		flex-direction: column;
 		height:280px;
-		overflow-y: scroll;
+			overflow-y:hidden;
 		overflow-x: hidden;
 		/* margin-top:100px; */
 		z-index: 200;
@@ -501,7 +501,7 @@ all-grade-n {
 		flex-direction: column;
 		height:300px;
 		margin-left:-150px ;
-		overflow-y: scroll;
+			overflow-y:hidden;
 		overflow-x: hidden;
 		margin-top:250px;
 		z-index: 200;
@@ -609,7 +609,7 @@ all-grade-n {
 		flex-direction: column;
 		height:300px;
 		margin-left:-150px ;
-		overflow-y: scroll;
+			overflow-y:hidden;
 		overflow-x: hidden;
 		margin-top:250px;
 		z-index: 200;
@@ -716,7 +716,7 @@ all-grade-n {
 		flex-direction: column;
 		height:300px;
 		margin-left:-150px ;
-		overflow-y: scroll;
+			overflow-y:hidden;
 		overflow-x: hidden;
 		margin-top:250px;
 		z-index: 200;

@@ -16,10 +16,23 @@ import {useContext } from 'react';
 import JsonFiles from "./Json Files/SchoolSubjects.json";
 
 import "./Grades.css";
+
+// const scrollBottom = ()=>{
+
+//   bottom.current.scrollIntoView({behavier: "smooth"});
+//   setScrollState("bottom")
+
+//  }
+//  const scrollTop = ()=>{
+//    top.current.scrollIntoView({behavier: "smooth"});
+//    setScrollState("top")
+//   }
 const Grads = ({ t }) => {
+  
     const changeLanguage = (lng) => {
 		i18n.changeLanguage(lng);
 	  }
+    
       var data;
       if (t("sectionlang") == "dari") {
         data = JsonFiles.dari_curriculum;
@@ -73,7 +86,7 @@ const Grads = ({ t }) => {
                   );
                 })}
               </div>
-              <div className="button-grade-N">
+              <div className="button-grade-N" ref={bottom}>
                 {secondary.map((item) => {
                   return (
                     <Link
