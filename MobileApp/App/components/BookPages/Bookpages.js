@@ -81,7 +81,10 @@ function BookPages(props) {
             </CustomText>
           </View>
         </Svg>
-        <TouchableOpacity style={Style.arrowStyle}>
+        <TouchableOpacity
+          style={Style.arrowStyle}
+          onPress={() => navigation.goBack()}
+        >
           <Svg
             data-name="Group 275"
             xmlns="http://www.w3.org/2000/svg"

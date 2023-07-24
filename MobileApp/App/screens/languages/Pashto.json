@@ -188,7 +188,8 @@
     "BackendError": {
       "No User Found": "د دې بریښنالیک سره هیڅ حساب نشته",
       "Incorrect email or password": "برېښنالیک یا پټنوم غلط دی",
-      "Email already taken": "برېښلیک لا دمخه اخیستل شوی"
+      "Email already taken": "برېښلیک لا دمخه اخیستل شوی",
+      "undefined": " تاسو د سرور سره تړلی نه یاست"
     }
   }
 }

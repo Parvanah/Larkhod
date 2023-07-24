@@ -39,7 +39,10 @@ const Lessons = (props) => {
   const path = "../../assets";
   return (
     <View style={style.container}>
-      <TouchableOpacity style={style.arrowStyle}>
+      <TouchableOpacity
+        style={style.arrowStyle}
+        onPress={() => navigation.goBack()}
+      >
         <Svg
           data-name="Group 275"
           xmlns="http://www.w3.org/2000/svg"

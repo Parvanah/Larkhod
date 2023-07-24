@@ -29,14 +29,13 @@ import high from "../../assets/high.png";
 import SeatchBar from "../../screens/SearchBar";
 import { useNavigation } from "@react-navigation/native";
 import gradeLogo from "../../assets/Group_211_y.png";
-import classNine from "../grade_9_dari.json";
-import classTwo from "../grade_2_dari.json";
 import JsonFiles from "../SchoolSubjects.json";
 import CustomText from "../../CustomText";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useTranslation } from "react-i18next";
 import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Sections = (props) => {
   const { Loggout, userInfo } = useContext(AuthContext);
@@ -44,6 +43,7 @@ const Sections = (props) => {
   const onSubmit = () => {
     navigation.navigate("ChangeInfo");
   };
+
   const { t, i18n } = useTranslation();
   var data;
   if (t("Sections.lang") == "Dari") {
