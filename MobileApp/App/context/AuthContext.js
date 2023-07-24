@@ -3,7 +3,7 @@ import axios from "axios";
 import React, { createContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 export const AuthContext = createContext();
-axios.defaults.baseURL = "http://192.168.43.81:8000/api/v1";
+axios.defaults.baseURL = "http://192.168.43.80:8000/api/v1";
 axios.defaults.timeout = 3000;
 
 export const AuthProvider = ({ children }) => {
@@ -249,6 +249,16 @@ export const AuthProvider = ({ children }) => {
       console.log(`isLogged in error ${e}`);
     }
   };
+  const retraive_Language = async () => {
+    try {
+      const data = await AsyncStorage.getItem("language");
+      if (data) {
+        i18n.changeLanguage(data);
+      }
+    } catch (err) {
+      console.log("error of getting data: ", err);
+    }
+  };
   const Loggout = () => {
     try {
       setIsLoading(true);
@@ -261,6 +271,7 @@ export const AuthProvider = ({ children }) => {
   };
   useEffect(() => {
     isLoggedIn();
+    retraive_Language();
   }, []);
   return (
     <AuthContext.Provider
@@ -268,15 +279,11 @@ export const AuthProvider = ({ children }) => {
         isLoading,
         userInfo,
         splashLoading,
-        // register,
         login,
         changeInfo,
-        // information,
         isLoggedIn,
         Authorization,
         Loggout,
-        // password,
-        // email,
         forgotPassword,
         changePassword,
         verifyEmail,

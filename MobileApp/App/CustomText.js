@@ -8,7 +8,7 @@ const CustomText = (props) => {
   useEffect(() => {
     async function loadFont() {
       await Font.loadAsync({
-        "custom-font": require("../assets/fonts/Bahij_Helvetica_Neue_75_Bold.ttf"),
+        "custom-font": require("./assets/fonts/Bahij_Helvetica_Neue_75_Bold.ttf"),
       });
 
       setFontLoaded(true);

@@ -187,7 +187,8 @@
     "BackendError": {
       "No User Found": "هیچ حسابی با این ایمیل موجود نیست",
       "Incorrect email or password": "ایمیل یا رمز عبور اشتباه است",
-      "Email already taken": "ایمیل قبلا گرفته شده"
+      "Email already taken": "ایمیل قبلا گرفته شده",
+      "undefined": "شما به سرور متصل نیستید"
     }
   }
 }

@@ -25,22 +25,31 @@ import CustomText from "../../CustomText";
 import { useTranslation } from "react-i18next";
 import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
-const options = [
-  { label: "Pashto", value: "pa" },
-  { label: "Persian", value: "pe" },
-];
+// const options = [
+//   { label: "Pashto", value: "pa" },
+//   { label: "Persian", value: "pe" },
+// ];
 
 export default function FirstPage(props) {
   const { t, i18n } = useTranslation();
   const navigation = useNavigation();
   const { backendError, setBackendError } = useContext(AuthContext);
-  const handleChangePersion = () => {
-    i18n.changeLanguage("pe");
+
+  const handleChangelanguage = async (lang) => {
     setBackendError("");
+    try {
+      await AsyncStorage.setItem("language", lang);
+      console.log("data saved");
+    } catch (error) {
+      console.log("failed to save data");
+    }
+    i18n.changeLanguage(lang);
     navigation.navigate("SignUp");
   };
 
+  // retraive_date();
   return (
     <View style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollcontainer}>
@@ -48,17 +57,16 @@ export default function FirstPage(props) {
           <Image source={logo} style={styles.imgStyle} />
         </View>
         <View style={styles.btnWrapper}>
-          <Pressable style={styles.btn} onPress={handleChangePersion}>
+          <Pressable
+            style={styles.btn}
+            onPress={() => handleChangelanguage("pe")}
+          >
             <CustomText style={styles.btnText}>زبان دری</CustomText>
           </Pressable>
           <Pressable
             style={styles.btn}
             // options={options}
-            onPress={() => {
-              setBackendError("");
-              navigation.navigate("SignUp");
-              i18n.changeLanguage("pa");
-            }}
+            onPress={() => handleChangelanguage("pa")}
           >
             <CustomText style={styles.btnText}>پښتو ژبه</CustomText>
           </Pressable>

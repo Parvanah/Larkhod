@@ -2,6 +2,7 @@ import i18next from "i18next";
 import Pashto from "./Pashto.json";
 import Persian from "./Persian.json";
 import { initReactI18next } from "react-i18next";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 i18next.use(initReactI18next).init({
   compatibilityJSON: "v3",
