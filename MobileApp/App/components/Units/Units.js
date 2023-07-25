@@ -28,6 +28,9 @@ const Units = () => {
   const navigation = useNavigation();
   const route = useRoute();
   var [inputSearch, setInputSearch] = useState("");
+  const subject_path = route.params.subject_path;
+  console.log(subject_path);
+
   const { t, i18n } = useTranslation();
   return (
     <View style={style.container}>
