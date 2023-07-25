@@ -77,6 +77,8 @@ const Units = () => {
                   navigation.navigate("Lessons", {
                     lessons: item.lessons,
                     title: t("Units.2") + item.label,
+                    lesson_path: item.paths,
+                    subject_path: subject_path,
                     params: {
                       id: item.id,
                       name: item.name,
@@ -96,6 +98,8 @@ const Units = () => {
                   navigation.navigate("Lessons", {
                     lessons: item.lessons,
                     title: t("Units.2") + item.label,
+                    lesson_path: item.paths,
+                    subject_path: subject_path,
                     params: {
                       id: item.id,
                       name: item.name,
