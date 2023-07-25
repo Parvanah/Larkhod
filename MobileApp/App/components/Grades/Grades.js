@@ -25,7 +25,6 @@ import classLogo from "../../assets/Group550.png";
 import SearchBar from "../../screens/SearchBar";
 import { StyleSheet } from "react-native";
 import user from "../../assets/user.png";
-// import route.params.gradeimg.img from "../../assets/Group_211_y.png";
 import arrow from "../../assets/Group_158_a.png";
 import { useNavigation } from "@react-navigation/native";
 import { useRoute } from "@react-navigation/native";
@@ -40,6 +39,7 @@ const Grades = (props) => {
   const { userInfo } = useContext(AuthContext);
   const route = useRoute();
   const navigation = useNavigation();
+  const school_path = route.params.school_path;
   var [inputSearch, setInputSearch] = useState("");
 
   const { t, i18n } = useTranslation();
@@ -56,6 +56,7 @@ const Grades = (props) => {
             navigation.navigate("Books", {
               grade: item.label,
               subjects: item.subjects,
+              grade_path: school_path + item.grade_path,
               params: {
                 id: item.id,
                 name: item.name,
@@ -78,6 +79,7 @@ const Grades = (props) => {
             navigation.navigate("Books", {
               grade: item.label,
               subjects: item.subjects,
+              grade_path: school_path + item.grade_path,
               params: {
                 id: item.id,
                 name: item.name,

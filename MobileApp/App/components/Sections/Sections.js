@@ -35,7 +35,6 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useTranslation } from "react-i18next";
 import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Sections = (props) => {
   const { Loggout, userInfo } = useContext(AuthContext);
@@ -46,6 +45,7 @@ const Sections = (props) => {
 
   const { t, i18n } = useTranslation();
   var data;
+  const base_path = "https://larkhoad.s3.ap-south-1.amazonaws.com";
   if (t("Sections.lang") == "Dari") {
     data = JsonFiles.dari_curriculum;
   } else {
@@ -165,6 +165,7 @@ const Sections = (props) => {
           onPress={() =>
             navigation.navigate("Grades", {
               classes: data.primary.grades,
+              school_path: base_path + data.primary.base_path,
             })
           }
         >
@@ -177,6 +178,7 @@ const Sections = (props) => {
           onPress={() =>
             navigation.navigate("Grades", {
               classes: data.secondary.grades,
+              school_path: base_path + data.secondary.base_path,
             })
           }
         >
@@ -189,6 +191,7 @@ const Sections = (props) => {
           onPress={() =>
             navigation.navigate("Grades", {
               classes: data.high_school.grades,
+              school_path: base_path + data.high_school.base_path,
             })
           }
         >

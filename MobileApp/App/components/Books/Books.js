@@ -33,6 +33,7 @@ const Books = (props) => {
   const route = useRoute();
   const { t, i18n } = useTranslation();
   var [inputSearch, setInputSearch] = useState("");
+  const grade_path = route.params.grade_path;
   var title;
   if (t("Sections.lang") === "Dari") {
     title = t("Books.2") + route.params.grade;
@@ -97,6 +98,7 @@ const Books = (props) => {
                     return navigation.navigate("Lessons", {
                       lessons: item.parts,
                       title: t("Books.1") + item.label,
+                      subject_path: grade_path + item.subject_path,
                       params: {
                         id: item.id,
                         name: item.name,
@@ -106,6 +108,7 @@ const Books = (props) => {
                     navigation.navigate("Units", {
                       units: item.parts,
                       subject: item.label,
+                      subject_path: grade_path + item.subject_path,
                       params: {
                         id: item.id,
                         name: item.name,
@@ -127,6 +130,7 @@ const Books = (props) => {
                     return navigation.navigate("Lessons", {
                       lessons: item.parts,
                       title: t("Books.1") + item.label,
+                      subject_path: grade_path + item.subject_path,
                       params: {
                         id: item.id,
                         name: item.name,
@@ -136,6 +140,7 @@ const Books = (props) => {
                     navigation.navigate("Units", {
                       units: item.parts,
                       subject: item.label,
+                      subject_path: grade_path + item.subject_path,
                       params: {
                         id: item.id,
                         name: item.name,
