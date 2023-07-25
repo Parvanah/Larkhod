@@ -1,6 +1,6 @@
-body {
+/* body {
     overflow-y: hidden;
-}
+} */
 #Books {
     display: flex;
     flex-direction: column;

@@ -96,6 +96,7 @@
 .changefrofilr_button_header{
     border-bottom: 1px solid rgb(231, 228, 228) !important;
     color:rgba(60,152,189,1) ;
+    cursor: pointer !important;
     /* width: 120px; */
 }
 

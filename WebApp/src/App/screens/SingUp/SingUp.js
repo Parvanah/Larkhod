@@ -1,28 +1,26 @@
-import {GoogleLogin} from '@react-oauth/google';
-import jwt_decode from "jwt-decode";
 import {useGoogleLogin} from '@react-oauth/google';
 import axios from "axios"
-// import { Formik, Field } from "formik";
-import * as Yup from "yup";
-// import CustomText from "../../CustomText";
-import Spinner from "react-dom";
 import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
 import i18n from '../../../i18n';
 import { withNamespaces } from 'react-i18next';
-// import Translation from '../../../db.json';
 import "./SingUp.css";
 import { FaGoogle } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import img1 from "../../assets/mg.png";
-import img3 from '../../assets/logo_3.png'
 import React from "react";
 import { Link, useNavigate, useNavigation } from "react-router-dom";
 <link rel="stylesheet" href="SingUp.css" />;
+// import {GoogleLogin} from '@react-oauth/google';
+// import jwt_decode from "jwt-decode";
+// import { Formik, Field } from "formik";
+// import * as Yup from "yup";
+// import CustomText from "../../CustomText";
+// import Spinner from "react-dom";
+// import { BrowserRouter as Router } from "react-router-dom";
+// import Translation from '../../../db.json';
 
 const SingUp = ({ t }) => {
- 
 
   const login = useGoogleLogin({
     onSuccess: async respose => {
@@ -32,29 +30,26 @@ const SingUp = ({ t }) => {
                     "Authorization": `Bearer ${respose.access_token}`
                 }
             })
-
             console.log(res.data)
         } catch (err) {
             console.log(err)
-
         }
 
     }
 });
 
-// const { i18n } = this.props;
-// const changeLanguage = (lng) => {
-//     i18n.changeLanguage(lng);
-// };
   const { isLoading, register } = useContext(AuthContext);
  
-
   const changeLanguage = (lng) => {
 		i18n.changeLanguage(lng);
 	  }
 
   const initialValues = {
-    username: "",
+    firstname: "",
+    lastname:"",
+    age: "",
+    senf:"",
+    number:"",
     email: "",
     password: "",
     confirmpassword: "",
@@ -72,8 +67,8 @@ const SingUp = ({ t }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormErrors(validate(formValues));
-    console.log(formValues.username, formValues.email, formValues.password);
-    register(formValues.username, formValues.email, formValues.password);
+    console.log(formValues.firstname, formValues.email, formValues.password, formValues.lastname,formValues.age,formValues.senf,formValues.number);
+    register(formValues.firstname, formValues.email, formValues.password, formValues.lastname,formValues.age,formValues.senf,formValues.number);
     setIsSubmit(true);
   };
 
@@ -86,9 +81,21 @@ const SingUp = ({ t }) => {
   const validate = (values) => {
     const errors = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-    if (!values.username) {
-      errors.username = <>{t('singup9')}</>;
+    if (!values.firstname) {
+      errors.firstname = <>{t('singup22')}</>;
     }
+      if (!values.lastname) {
+        errors.lastname =  <>{t("singup23")}</>;
+      }
+      if (!values.age) {
+      errors.age =  <>{t("singup24")}</>;
+     }
+     if (!values.senf) {
+      errors.senf =  <>{t("singup25")}</>;
+     }
+     if (!values.number) {
+      errors.number = <>{t("singup26")}</>;
+      }
     if (!values.email) {
       errors.email =  <>{t('singup10')}</>;
     } else if (!regex.test(values.email)) {
@@ -138,16 +145,6 @@ const SingUp = ({ t }) => {
           <img id="imgg_singup" src={img1} />
           <button className="button_singup" onClick={() => changeLanguage('dari')}>زبان دری</button>
           <button className="button_singup" onClick={() => changeLanguage('pashto')}>پشتو ژبه</button>
-          
-          {/* <button className="button_singup" onClick={() => handleClick("dari")}>
-            زبان دری
-          </button>
-          <button
-            className="button_singup"
-            onClick={() => handleClick("pashto")}
-          >
-            پشتو ژبه
-          </button> */}
         </div>
         <button id="login-button">
           <Link className="up_singup" to="/login">
@@ -157,131 +154,76 @@ const SingUp = ({ t }) => {
         </button>
         <div id="cantainer_singup">
           {Object.keys(formErrors).length === 0 && isSubmit ? (
-            <div>{navigate("/profile")}</div>
+            <div>{navigate("/header")}</div>
           ) : (
             <pre></pre>
           )}
           <form onSubmit={handleSubmit}>
-            <div>
+            <div className='first_input_section_singup'>
+            <div className="field">
               <input
                 id="input_singup"
                 type="text"
-                name="username"
+                name="firstname"
                 placeholder={t('singup3')}
-                value={formValues.username}
+                value={formValues.firstname}
                 onChange={(e) => handleChange(e)}
               />
-              <p className="error_singup">{formErrors.username}</p>
+              <p className="error_singup">{formErrors.firstname}</p>
+              </div>
               <div className="field">
                 <input
                   id="input_singup"
                   type="text"
-                  name="email"
-                  placeholder={t('singup4')}
-                  value={formValues.email}
+                  name="lastname"
+                  placeholder={t('singup18')}
+                  value={formValues.lastname}
                   onChange={(e) => handleChange(e)}
                 />
-                <p className="error_singup">{formErrors.email}</p>
+                <p className="error_singup">{formErrors.lastname}</p>
               </div>
 
               <div className="field">
                 <input
                   id="input_singup"
-                  type="password"
-                  name="password"
-                  placeholder={t('singup5')}
-                  value={formValues.password}
+                  type="age"
+                  name="age"
+                  placeholder={t('singup19')}
+                  value={formValues.age}
                   onChange={(e) => handleChange(e)}
                 />
-                <p className="error_singup">{formErrors.password}</p>
+                <p className="error_singup">{formErrors.age}</p>
               </div>
 
               <div className="field">
                 <input
                   id="input_singup"
-                  type="password"
-                  name="confirmpassword"
-                  placeholder={t('singup6')}
-                  value={formValues.confirmpassword}
+                  type="class"
+                  name="senf"
+                  placeholder={t('singup20')}
+                  value={formValues.senf}
                   onChange={(e) => handleChange(e)}
                 />
-                <p className="error_singup">{formErrors.confirmpassword}</p>
+                <p className="error_singup">{formErrors.senf}</p>
               </div>
             </div>
-            <button className="acount_button_singuo">{t('singup2')}</button>
-          </form>
-          <h4 className="p_singup">{t('singup7')}</h4>
-             <button  className="google_button_singup" onClick={login}
-             >
-            {/* <div>{navigate("/header")}</div> */}
-        
-              <FaGoogle className="google_icon_singup" />
-              <div className="google_p_singup">{t('singup8')}</div>
-            </button >
-        </div>
-         {/* <GoogleLogin
-            className="google_buttton_singup"
-                    onSuccess={credentialResponse => {
-                    console.log(credentialResponse.credential);
-                    var decoded = jwt_decode(credentialResponse.credential);
-                    console.log(decoded)
-                }}
-                    onError={() => {
-                    console.log('Login Failed');
-                }}/> */}
-      </div>
-     <div className='all_singup'>
-     <div className="M-img">
-<div id="M-arrow">
- <Link to="/SingUp"> <svg xmlns="http://www.w3.org/2000/svg" width={16} height={10} 
-//  {...props} 
- className='M-arrow'>
-    <defs>
-      <clipPath id="a">
-        <path fill="#fff" d="M0 0h16v10H0z" data-name="Rectangle 85" />
-      </clipPath>
-    </defs>
-    <g clipPath="url(#a)" data-name="Group 158">
-      <path
-        fill="#fff"
-        fillRule="evenodd"
-        d="m3.247 6 2.48 2.294a.99.99 0 0 1 0 1.414 1.023 1.023 0 0 1-1.432 0L.445 6.059A1.465 1.465 0 0 1 0 5a1.483 1.483 0 0 1 .444-1.06L4.294.293a1.025 1.025 0 0 1 1.434 0 .992.992 0 0 1 0 1.414L3.248 4H15a1 1 0 0 1 0 2H3.247Z"
-        data-name="Path 433"
-      />
-    </g>
-  </svg></Link>
-  <img src={img3} className="img3"/>
- </div>
-</div>
-      <div className='Mobile-bottom'>
-      <button id="login-button">
-          <Link className="up_singup" to="/login">
-          {t('singup1')}
-          </Link>
-          <div className="in_singup">{t('singup2')}</div>
-        </button>
-        <div id="cantainer_singup">
-          {Object.keys(formErrors).length === 0 && isSubmit ? (
-            <div>{navigate("/profile")}</div>
-          ) : (
-            <pre></pre>
-          )}
 
 
-          <form onSubmit={handleSubmit}>
-            <div>
+            <div className='second_input_section_singup'>
+            <div className="field">
               <input
-                id="input_singup"
-                type="text"
-                name="username"
-                placeholder={t('singup3')}
-                value={formValues.username}
+                id="inputt_singup"
+                type=""
+                name="number"
+                placeholder={t('singup21')}
+                value={formValues.number}
                 onChange={(e) => handleChange(e)}
               />
-              <p className="error_singup">{formErrors.username}</p>
+              <p className="error_singup">{formErrors.number}</p>
+              </div>
               <div className="field">
                 <input
-                  id="input_singup"
+                  id="inputt_singup"
                   type="text"
                   name="email"
                   placeholder={t('singup4')}
@@ -293,7 +235,7 @@ const SingUp = ({ t }) => {
 
               <div className="field">
                 <input
-                  id="input_singup"
+                  id="inputt_singup"
                   type="password"
                   name="password"
                   placeholder={t('singup5')}
@@ -305,7 +247,7 @@ const SingUp = ({ t }) => {
 
               <div className="field">
                 <input
-                  id="input_singup"
+                  id="inputt_singup"
                   type="password"
                   name="confirmpassword"
                   placeholder={t('singup6')}
@@ -320,18 +262,15 @@ const SingUp = ({ t }) => {
           <h4 className="p_singup">{t('singup7')}</h4>
              <button  className="google_button_singup" onClick={login}
              >
-            {/* <div>{navigate("/header")}</div> */}
-        
               <FaGoogle className="google_icon_singup" />
               <div className="google_p_singup">{t('singup8')}</div>
             </button >
         </div>
-      </div>
-
       </div>
     </div>
   );
 };
 
 export default  withNamespaces()(SingUp) ;
+
 

@@ -28,6 +28,7 @@
 }
 #input_login{
     position: relative;
+    top: 30px;
     color: white;
     font-family: "Bahij Helvetica";
     display: inline-block;
@@ -44,7 +45,7 @@
 
 .acount_button_login{
     position: relative;
-    top: 30px;
+    top: 60px;
     left: -15px;
     z-index: 100;
     width: 335px;
@@ -84,7 +85,7 @@
 
 .button_login{
     position: relative;
-    top:50px;
+    top:80px;
     left: 235px;
     z-index: 100;
     width: 335px;
@@ -174,17 +175,22 @@ h4 {
     color: white;
     z-index: 100;
     position: relative;
-    top: 40px;
+    top: 70px;
     left: -6px;
 }
 
 .forgetpassword_login{
     position: relative;
-    top: 12px;
+    top: 42px;
     font-family: "Bahij Helvetica";
+    color: white !important;
 
+/* .forgotpassword_login{
+     position: relative;
+    top: 12px;
+} */
+   
 }
-
         /* Mobile 1 Responsive */
         @media screen  and (max-width:360px) and (min-width:100px){
             #all_login {

@@ -135,7 +135,7 @@ const LogIn = ({ t }) => {
             />
             <p  className="error_login">{formErrors.password}</p>
           </div>
-          <Link className="forgotpassword_login" to="/forgotpassword"> {t("login5")}</Link>
+          <Link className="forgetpassword_login" to="/forgotpassword"> {t("login5")}</Link>
         </div>
          <button className="acount_button_login">{t("login6")}</button>
       </form>

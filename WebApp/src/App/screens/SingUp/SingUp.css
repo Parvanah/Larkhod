@@ -1,4 +1,777 @@
-/* login styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+.Mobile_r{
+    display: none;
+}
+#all_singup{
+    position: absolute;
+    width: 100%;
+    height: 90%;
+     background-color: rgba(255,255,255,1); 
+    overflow: hidden;
+    --web-view-name: Artboard – 2;
+    --web-view-id: Artboard__2;
+    --web-scale-on-resize: true;
+    --web-enable-deep-linking: true;
+}
+#Group_singup{
+    position: absolute;
+    width: 1921.645px;
+    height: 985.429px;
+    left: 0.355px;
+    top: 0px;
+    overflow: visible;
+    padding: 0px 195px 19px 433px;
+}
+#Path_singup {
+    fill: url(#Path_singup);
+}
+.Path_singup {
+    overflow: visible;
+    position: absolute;
+    width: auto;
+    height: 51%;
+    left: 0px;
+    top: 0px;
+    right: 0;
+    transform: matrix(1,0,0,1,0,0);
+}
+#imgg_singup{
+    
+    position: relative;
+    top: 60px;
+    left: 300px;
+}
+.button_singup{
+    position: relative;
+    top: 100px;
+    right: 140px;
+    width: 200px;
+    margin-left: 20px;
+    background-image: linear-gradient(to right,  rgb(31, 111, 143),  rgba(60,152,189,1)); 
+    border-color: white;
+    padding: 4px 30px 4px 30px;
+    border-radius: 50px;
+    border-width: 1px;
+    font-family:"Bahij Helvetica";
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0px 0px 5px #aaaaaa;
+    cursor: pointer;
+    color: white;
+    /* display: inline-block; */
+    text-align: center;
+}
+#login-button {
+    position: relative;
+    top: 80px;
+    left: 235px;
+    z-index: 100;
+    width: 335px;
+    height: 40px;
+    border-radius: 50px;
+    font-family:"Bahij Helvetica";
+    display: flex;
+    justify-content: space-between;
+}
+.in_singup{
+    padding-top: 5px;
+    align-items: center;
+    border-radius: 50px;
+    width: 185px;
+    height: 40px;
+    background-color: rgba(60,152,189,1);
+    color: white;
+    font-size: large;
+    font-weight: 12px;
+    display: inline-block;
+    padding-right: 12px;
+}
+.up_singup{
+    padding: 5px 0 0 37px;
+    color: rgba(60,152,189,1);
+    font-size: large;
+    font-weight: 12px;
+    display: inline-block;
+}
+#cantainer_singup{
+    position: relative;
+    top: 70px;
+    left: 250px;
+    z-index: 100;
+}
+.first_input_section_singup{
+    position: relative;
+    left: 190px;
+    top: 30px;
+}
+#input_singup{
+   
+    color: #ccc;
+    font-family:"Bahij Helvetica";
+    display: inline-block;
+    background:none;
+    width:200px;
+    padding: 1px ;
+    margin: 8px 0;
+    border-bottom: 2px solid #ccc;
+    box-sizing: border-box;
+    text-align: right;
+    fill: transparent;
+  outline: none;
+}
+.second_input_section_singup{
+    position: absolute;
+    left: -80px;
+    top: 30px;
+}
+#inputt_singup{
+    
+    color: #ccc;
+    font-family:"Bahij Helvetica";
+    display: inline-block;
+    background:none;
+    width:200px;
+    padding: 1px ;
+    margin: 8px 0;
+    border-bottom: 2px solid #ccc;
+    box-sizing: border-box;
+    text-align: right;
+    fill: transparent;
+  outline: none;
+}
+.error_singup{
+    color: red;
+    font-family:"Bahij Helvetica";
+    height: 1px;  
+   }
+.acount_button_singuo{
+    /* display: flex; */
+    position: relative;
+    top: 60px;
+    left: -15px;
+    z-index: 100;
+    width: 336px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: rgba(60,152,189,1);
+    color: white;
+    font-family:"Bahij Helvetica";
+    font-size: large;
+    font-weight: 12px;
+}
+.p_singup{
+    color: white;
+    font-family:"Bahij Helvetica";
+    z-index: 100;
+    position: relative;
+    top: 70px;
+    left: -6px;
+}
+h4 {
+    display: flex;
+    position: relative;
+    left: 12px;
+  }
+  
+  h4::before,
+  h4::after {
+    content: "";
+    display: block;
+    width: 130px;
+    height: 1px;
+    /* background:white; */
+    margin: auto 10px;
+    border-bottom: 2px solid #ccc;
+  }
+.google_button_singup{
+    position: relative;
+    top: 80px;
+    left: 8px;
+    z-index: 100;
+    width: 290px;
+    height: 40px;
+    border-radius: 50px;
+    background-color:white;
+    display: flex;
+    justify-content: space-between;
+}
+.google_buttton_singup{
+    position: relative;
+    top: 100px;
+    left: 8px;
+    z-index: 100;
+    width: 290px;
+    height: 40px;
+    border-radius: 50px;
+    border: 2px solid   rgb(148, 144, 144);
+    background-color:white;
+    display: flex;
+    justify-content: space-between;
+}
+.google_icon_singup{
+    color: rgb(148, 144, 144);
+    width: 30px;
+    height: 30px;
+    margin:5px 0px 0px 10px;
+}
+.google_p_singup{
+    margin:5px 12px 0px 0px;
+    font-size: large;
+    font-weight: 12px;
+    font-family:"Bahij Helvetica";
+    color: rgb(148, 144, 144);
+}
+/* PC Responsive */
+@media screen  and (max-width:992px) and (min-width:768px){
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+.Mobile_r{
+    display: none;
+}
+#all_singup{
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    background-color: rgba(255,255,255,1);
+    overflow: hidden;
+    --web-view-name: Artboard – 2;
+    --web-view-id: Artboard__2;
+    --web-scale-on-resize: true;
+    --web-enable-deep-linking: true;
+}
+#Group_singup{
+    position: absolute;
+    width: 1921.645px;
+    height: 985.429px;
+    left: 0.355px;
+    top: 0px;
+    overflow: visible;
+    padding: 0px 195px 19px 433px;
+}
+#Path_singup {
+    fill: url(#Path_singup);
+}
+.Path_singup {
+    overflow: visible;
+    position: absolute;
+    width: auto;
+    height: 51%;
+    left: 0px;
+    top: 0px;
+    right: 0;
+    transform: matrix(1,0,0,1,0,0);
+}
+#imgg_singup{
+    
+    position: relative;
+    top:200px;
+    left:200px;
+    width:300px;
+}
+.button_singup{
+    position: relative;
+    top: 230px;
+    right: 140px;
+    width: 180px;
+    margin-left:5px;
+    background-image: linear-gradient(to right,  rgb(31, 111, 143),  rgba(60,152,189,1)); 
+    border-color: white;
+    padding: 3px 50px 3px 50px;
+    border-radius: 50px;
+    border-width: 1px;
+    font-family:"Bahij Helvetica";
+    font-size:medium;
+    font-weight: bold;
+    box-shadow: 0px 0px 5px #aaaaaa;
+    cursor: pointer;
+    color: white;
+    display: inline-block;
+    text-align: center;
+}
+#login-button {
+    position: relative;
+    top: 90px;
+    left: 140px;
+    z-index: 100;
+    width: 320px;
+    height: 40px;
+    border-radius: 50px;
+    font-family:"Bahij Helvetica";
+    display: flex;
+    justify-content: space-between;
+}
+.in_singup{
+    padding-top: 10px;
+    align-items: center;
+    border-radius: 50px;
+    width:165px;
+    height: 40px;
+    background-color: rgba(60,152,189,1);
+    color: white;
+    font-size:medium;
+    font-weight: 12px;
+    display: inline-block;
+    padding-right: 12px;
+}
+.up_singup{
+    padding: 10px 0 0 37px;
+    color: rgba(60,152,189,1);
+    font-size:medium;
+    font-weight: 12px;
+    display: inline-block;
+}
+#cantainer_singup{
+    position: relative;
+    top: 100px;
+    left: 250px;
+    z-index: 100;
+}
+#input_singup{
+    position: relative;
+    color: #ccc;
+    font-family:"Bahij Helvetica";
+    display: inline-block;
+    background:none;
+    left:-90px;
+    width:270px;
+    padding:1px ;
+    margin: 8px 0;
+    border-bottom: 2px solid #ccc;
+    box-sizing: border-box;
+    text-align: right;
+    fill: transparent;
+  outline: none;
+}
+.error_singup{
+    color: red;
+    font-family:"Bahij Helvetica";
+   
+   }
+.acount_button_singuo{
+    position: relative;
+    top: 30px;
+    left:-100px;
+    z-index: 100;
+    width: 300px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: rgba(60,152,189,1);
+    color: white;
+    font-family:"Bahij Helvetica";
+    font-size:medium;
+    font-weight: 12px;
+}
+.p_singup{
+    color: white;
+    font-family:"Bahij Helvetica";
+    z-index: 100;
+    position: relative;
+    top: 40px;
+    left:-100px;
+    width:490px;
+}
+h4 {
+    display: flex;
+    position: relative;
+    left: 12px;
+  }
+  
+  h4::before,
+  h4::after {
+    content: "";
+    display: block;
+    width: 125px;
+    height: 1px;
+    /* background:white; */
+    margin: auto 10px;
+    border-bottom: 2px solid #ccc;
+  }
+.google_button_singup{
+    position: relative;
+    top: 50px;
+    left:-100px;
+    z-index: 100;
+    width:290px;
+    height: 40px;
+    border-radius: 50px;
+    border: 2px solid   rgb(148, 144, 144);
+    background-color:white;
+    display: flex;
+    justify-content: space-between;
+}
+.google_icon_singup{
+    color: rgb(148, 144, 144);
+    width:20px;
+    height: 30px;
+    margin:5px 0px 0px 10px;
+}
+.google_p_singup{
+    margin:10px 12px 0px 0px;
+    font-size:medium;
+    font-weight: 12px;
+    font-family:"Bahij Helvetica";
+    color: rgb(148, 144, 144);
+}
+}
+/* PC 2 Responsive */
+@media screen and (max-width:1200px)and (min-width:992px){
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border: none;
+    }
+    .Mobile_r{
+        display: none;
+    }
+    #all_singup{
+        position: absolute;
+        width: 100%;
+        height: 90%;
+         background-color: rgba(255,255,255,1); 
+        overflow: hidden;
+        --web-view-name: Artboard – 2;
+        --web-view-id: Artboard__2;
+        --web-scale-on-resize: true;
+        --web-enable-deep-linking: true;
+    }
+    #Group_singup{
+        position: absolute;
+        width: 1921.645px;
+        height: 985.429px;
+        left: 0.355px;
+        top: 0px;
+        overflow: visible;
+        padding: 0px 195px 19px 433px;
+    }
+    #Path_singup {
+        fill: url(#Path_singup);
+    }
+    .Path_singup {
+        overflow: visible;
+        position: absolute;
+        width: auto;
+        height: 51%;
+        left: 0px;
+        top: 0px;
+        right: 0;
+        transform: matrix(1,0,0,1,0,0);
+    }
+    #imgg_singup{
+        position: relative;
+        top:150px;
+        left:140px;
+        width:350px;
+    }
+    .button_singup{
+        position: relative;
+        top: 200px;
+        right: 140px;
+        left: -250px;
+        width: 202px;
+        /* margin-left: 10px; */
+        background-image: linear-gradient(to right,  rgb(31, 111, 143),  rgba(60,152,189,1)); 
+        border-color: white;
+        padding: 3px 20px 3px 20px;
+        border-radius: 50px;
+        border-width: 1px;
+        font-family:"Bahij Helvetica";
+        font-size:20px;
+        font-weight: bold;
+        box-shadow: 0px 0px 5px #aaaaaa;
+        cursor: pointer;
+        color: white;
+        display: inline-block;
+        text-align: center;
+    }
+    #login-button {
+        position: relative;
+        top: 90px;
+        left: 140px;
+        z-index: 100;
+        width: 335px;
+        height: 40px;
+        border-radius: 50px;
+        font-family:"Bahij Helvetica";
+        display: flex;
+        justify-content: space-between;
+    }
+    .in_singup{
+        padding-top: 10px;
+        align-items: center;
+        border-radius: 50px;
+        width: 185px;
+        height: 40px;
+        background-color: rgba(60,152,189,1);
+        color: white;
+        font-size: large;
+        font-weight: 12px;
+        display: inline-block;
+        padding-right: 12px;
+    }
+    .up_singup{
+        padding: 10px 0 0 37px;
+        color: rgba(60,152,189,1);
+        font-size: large;
+        font-weight: 12px;
+        display: inline-block;
+    }
+    #cantainer_singup{
+        position: relative;
+        top: 100px;
+        left:150px;
+        z-index: 100;
+    }
+    #input_singup{
+        position: relative;
+        color: #ccc;
+        font-family:"Bahij Helvetica";
+        display: inline-block;
+        background:none;
+        width:300px;
+        padding: 1px ;
+        margin: 8px 0;
+        border-bottom: 2px solid #ccc;
+        box-sizing: border-box;
+        text-align: right;
+        fill: transparent;
+      outline: none;
+    }
+    .error_singup{
+        color: red;
+        font-family:"Bahij Helvetica";
+       
+       }
+    .acount_button_singuo{
+        position: relative;
+        top: 30px;
+        left: -15px;
+        z-index: 100;
+        width: 335px;
+        height: 40px;
+        border-radius: 50px;
+        background-color: rgba(60,152,189,1);
+        color: white;
+        font-family:"Bahij Helvetica";
+        font-size: large;
+        font-weight: 12px;
+    }
+    .p_singup{
+        color: white;
+        font-family:"Bahij Helvetica";
+        z-index: 100;
+        position: relative;
+        top: 40px;
+        left: -6px;
+    }
+    h4 {
+        display: flex;
+        position: relative;
+        left: 12px;
+      }
+      
+      h4::before,
+      h4::after {
+        content: "";
+        display: block;
+        width: 130px;
+        height: 1px;
+        /* background:white; */
+        margin: auto 10px;
+        border-bottom: 2px solid #ccc;
+      }
+    .google_button_singup{
+        position: relative;
+        top: 50px;
+        left: 8px;
+        z-index: 100;
+        width: 290px;
+        height: 40px;
+        border-radius: 50px;
+        border: 2px solid   rgb(148, 144, 144);
+        background-color:white;
+        display: flex;
+        justify-content: space-between;
+    }
+    .google_icon_singup{
+        color: rgb(148, 144, 144);
+        width: 30px;
+        height: 30px;
+        margin:5px 0px 0px 10px;
+    }
+    .google_p_singup{
+        margin:10px 12px 0px 0px;
+        font-size: large;
+        font-weight: 12px;
+        font-family:"Bahij Helvetica";
+        color: rgb(148, 144, 144);
+    }
+}
+@media screen  and (max-width:360px) and (min-width:100px){
+    #all_singup {
+        display: none;
+    }
+    .Mobile_r {
+        display: flex;
+        flex-direction: column;
+        background-image: linear-gradient(to right,  rgb(31, 111, 143),  rgba(60,152,189,1)); 
+    }
+    .M-img {
+        height:130px;
+    }
+    .img2 {
+     margin-left:40%;
+     margin-top:30px;
+    }
+    .M-container {
+        border-top-right-radius:60px;
+        border-top-left-radius:60px;
+        width: 100%;
+        background-color: rgba(255,255,255,1); 
+        padding-top:5%;
+    }
+    
+    #cantainer_singup{
+        position: relative;
+        top: 100px;
+        left:90px;
+        z-index: 100;
+    }
+    #input_singup{
+        position: relative;
+        color:rgba(60,152,189,1);
+        font-family:"Bahij Helvetica";
+        display: inline-block;
+        background:none;
+        width:200px;
+        padding: 1px ;
+        margin: 8px 0;
+        border-bottom: 2px solid #ccc;
+        box-sizing: border-box;
+        text-align: right;
+        fill: transparent;
+      outline: none;
+    }
+    .acount_button_singuo{
+        position: relative;
+        top: 30px;
+        left: -15px;
+        z-index: 100;
+        width:230px;
+        height: 40px;
+        border-radius: 50px;
+        background-color: rgba(60,152,189,1);
+        color: white;
+        font-family:"Bahij Helvetica";
+        font-size:small;
+        font-weight: 12px;
+    }
+    .p_singup{
+        color: #ccc;
+               z-index: 100;
+               position: relative;
+               top: 40px;
+               left:-14px;
+    }
+    h4 {
+        display: flex;
+        position: relative;
+        left:-7px;
+      }
+      
+      h4::before,
+      h4::after {
+        content: "";
+        display: block;
+        width: 130px;
+        height: 1px;
+        /* background:white; */
+        margin: auto 10px;
+        border-bottom: 2px solid #ccc;
+      }
+      .google_p_singup{
+        margin:10px 12px 0px 0px;
+        font-size:small;
+        font-family:"Bahij Helvetica";
+        font-weight: 12px;
+        color: rgb(148, 144, 144);
+    }
+    .google_icon_singup {
+            width:25px;
+            height: 30px;
+            margin:5px 0px 0px 10px;
+    }
+    .google_button_singup{
+        position: relative;
+        top: 50px;
+        left:-15px;
+        z-index: 100;
+        width:225px;
+        height: 40px;
+        border-radius: 50px;
+        background-color:white;
+        border: 2px solid  #ccc ;
+        display: flex;
+        justify-content: space-between;
+    }
+    #login-button {
+        position: relative;
+        top:-15px;
+        left:-10px;
+        z-index: 100;
+        width:230px;
+        height: 40px;
+        border-radius: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .in_singup{
+        padding-top: 10px;
+        align-items: center;
+         border-radius: 50px;
+         width:130px;
+         height: 40px;
+         background-color: rgba(60,152,189,1);
+         color: white;
+         font-size:small;
+         font-family:"Bahij Helvetica";
+         font-weight: 12px;
+         display: inline-block;
+         padding-right: 12px;
+    }
+    .up_singup{
+        padding: 10px 0 0 27px;
+        color: rgba(60,152,189,1);
+        font-size:small;
+        font-weight: 12px;
+        display: inline-block;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* login styles
 * {
     margin: 0;
     padding: 0;
@@ -125,11 +898,9 @@
 .error_singup{
     color: red;
        font-family: "Bahij Helvetica";
-/* <<<<<<< grad_update23_july
-======= */
        height: 1px;
    
-/* >>>>>>> main */
+
    }
 .acount_button_singuo{
     display: flex;
@@ -146,6 +917,7 @@
     font-size: large;
     font-weight: 12px;
     padding-left:115px;
+    padding-top:5px;
 }
 .p_singup{
     color: white;
@@ -167,7 +939,7 @@ h4 {
     display: block;
     width: 130px;
     height: 1px;
-    /* background:white; */
+   
     margin: auto 10px;
     border-bottom: 2px solid #ccc;
   }
@@ -208,7 +980,7 @@ h4 {
     font-weight: 12px;
        font-family: "Bahij Helvetica";
     color: rgb(148, 144, 144);
-}
+} */
 
         /* Mobile 1 Responsive */
         @media screen  and (max-width:360px) and (min-width:100px){

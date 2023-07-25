@@ -30,9 +30,9 @@ const Section = ({ t }) => {
     "C:\\UsersKhatima Sadat/Documents/LarkhodeStructure/school_subjectsdari_curriculamprimarysecond_gradeart_subjectlessonslesson_1";
     var data;
   if (t("sectionlang") == "dari") {
-    data = JsonFiles.dari_curriculum;
+    data = JsonFiles.dari_curriculam;
   } else {
-    data = JsonFiles.pashto_curriculum;
+    data = JsonFiles.pashto_curriculam;
   }
   return (
     <div className="section">
