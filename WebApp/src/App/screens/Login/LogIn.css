@@ -183,12 +183,8 @@ h4 {
     top: 12px;
     font-family: "Bahij Helvetica";
 
-/*.forgotpassword_login{
-     position: relative;
-    top: 12px; */
-    color: white !important;
- */
 }
+
         /* Mobile 1 Responsive */
         @media screen  and (max-width:360px) and (min-width:100px){
             #all_login {
