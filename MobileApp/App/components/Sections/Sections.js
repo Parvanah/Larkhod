@@ -29,7 +29,7 @@ import high from "../../assets/high.png";
 import SeatchBar from "../../screens/SearchBar";
 import { useNavigation } from "@react-navigation/native";
 import gradeLogo from "../../assets/Group_211_y.png";
-import JsonFiles from "../SchoolSubjects.json";
+import JsonFile from "../SchoolSubjects.json";
 import CustomText from "../../CustomText";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useTranslation } from "react-i18next";
@@ -47,9 +47,9 @@ const Sections = (props) => {
   var data;
   const base_path = "https://larkhoad.s3.ap-south-1.amazonaws.com";
   if (t("Sections.lang") == "Dari") {
-    data = JsonFiles.dari_curriculum;
+    data = JsonFile.dari_curriculam;
   } else {
-    data = JsonFiles.pashto_curriculum;
+    data = JsonFile.pashto_curricalam;
   }
 
   return (

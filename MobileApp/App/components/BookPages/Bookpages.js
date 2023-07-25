@@ -36,6 +36,10 @@ import CustomText from "../../CustomText";
 function BookPages(props) {
   const navigation = useNavigation();
   const route = useRoute();
+  const lesson_path = route.params.lesson_path;
+  const subject_path = route.params.subject_path;
+  console.log(subject_path + lesson_path[0]);
+  console.log(subject_path + lesson_path[1]);
   const { t, i18n } = useTranslation();
   return (
     <View style={Style.cotainer}>
@@ -121,10 +125,10 @@ function BookPages(props) {
       >
         <ScrollView contentContainerStyle={Style.scrollOption}>
           <View style={Style.lessonFrame}>
-            <Image source={lesson} style={Style.lessonImag} />
-          </View>
-          <View style={Style.lessonFrame}>
-            <Image source={lesson} style={Style.lessonImag} />
+            <Image
+              source={{ uri: subject_path + lesson_path[0] }}
+              style={Style.lessonImag}
+            />
           </View>
         </ScrollView>
       </View>

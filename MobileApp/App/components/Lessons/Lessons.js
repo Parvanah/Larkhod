@@ -36,6 +36,8 @@ const Lessons = (props) => {
   const route = useRoute();
   var [num, setNum] = useState(1);
   const { t, i18n } = useTranslation();
+  const subject_path = route.params.subject_path;
+  console.log(subject_path);
   const path = "../../assets";
   return (
     <View style={style.container}>
@@ -116,6 +118,8 @@ const Lessons = (props) => {
                 onPress={() =>
                   navigation.navigate("BookPages", {
                     lessonTitle: item.label,
+                    lesson_path: item.paths,
+                    subject_path: subject_path,
                     params: {
                       id: item.id,
                       name: item.name,
