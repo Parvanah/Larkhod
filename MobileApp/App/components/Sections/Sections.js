@@ -29,7 +29,7 @@ import high from "../../assets/high.png";
 import SeatchBar from "../../screens/SearchBar";
 import { useNavigation } from "@react-navigation/native";
 import gradeLogo from "../../assets/Group_211_y.png";
-import JsonFile from "../../../../SchoolSubjects.json";
+import JsonFile from "../SchoolSubjects.json";
 import CustomText from "../../CustomText";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useTranslation } from "react-i18next";
