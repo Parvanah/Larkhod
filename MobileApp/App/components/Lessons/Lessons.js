@@ -37,7 +37,9 @@ const Lessons = (props) => {
   var [num, setNum] = useState(1);
   const { t, i18n } = useTranslation();
   const subject_path = route.params.subject_path;
+  const unit_page = route.params.lesson_path;
   console.log(subject_path);
+  console.log("unit pages", unit_page);
   const path = "../../assets";
   return (
     <View style={style.container}>
