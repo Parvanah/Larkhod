@@ -29,6 +29,7 @@ const Units = () => {
   const route = useRoute();
   var [inputSearch, setInputSearch] = useState("");
   const subject_path = route.params.subject_path;
+
   console.log(subject_path);
 
   const { t, i18n } = useTranslation();
@@ -91,6 +92,7 @@ const Units = () => {
               </TouchableOpacity>
             );
           } else if (inputSearch === "") {
+            console.log(item.paths);
             return (
               <TouchableOpacity
                 style={style.unitItem}

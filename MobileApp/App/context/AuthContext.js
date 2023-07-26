@@ -144,7 +144,6 @@ export const AuthProvider = ({ children }) => {
       });
       console.log("put");
       console.log(response.data);
-
       AsyncStorage.setItem(
         "userInfo",
         JSON.stringify({ ...userInfo, user: response?.data })

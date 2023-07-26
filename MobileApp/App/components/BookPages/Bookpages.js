@@ -17,6 +17,7 @@ import {
   TouchableOpacity,
   Image,
   ScrollView,
+  Button,
 } from "react-native";
 import Icon from "../../assets/Group_406.png";
 import lesson from "../../assets/lesson12.1.jpg";
@@ -40,6 +41,10 @@ function BookPages(props) {
   const subject_path = route.params.subject_path;
   console.log(subject_path + lesson_path[0]);
   console.log(subject_path + lesson_path[1]);
+  console.log(lesson_path.length);
+  var [index, setIndex] = React.useState(0);
+  const [pageURi, setPageURi] = React.useState(subject_path + lesson_path[0]);
+
   const { t, i18n } = useTranslation();
   return (
     <View style={Style.cotainer}>
@@ -125,10 +130,35 @@ function BookPages(props) {
       >
         <ScrollView contentContainerStyle={Style.scrollOption}>
           <View style={Style.lessonFrame}>
-            <Image
-              source={{ uri: subject_path + lesson_path[0] }}
-              style={Style.lessonImag}
-            />
+            <Image source={{ uri: pageURi }} style={Style.lessonImag} />
+          </View>
+          <View style={Style.btn}>
+            <Button
+              title={t("BookPages.3")}
+              color="rgba(60, 152, 189, 1)"
+              onPress={() => {
+                setIndex(index + 1);
+                setPageURi(subject_path + lesson_path[index]);
+                console.log("index ", index);
+                if (index === lesson_path.length - 1) {
+                  setIndex(index);
+                  setPageURi(subject_path + lesson_path[index]);
+                }
+              }}
+            ></Button>
+            <Button
+              title={t("BookPages.4")}
+              color="rgba(60, 152, 189, 1)"
+              onPress={() => {
+                setIndex(index - 1);
+                setPageURi(subject_path + lesson_path[index]);
+                if (index == 0) {
+                  setIndex(0);
+                  setPageURi(subject_path + lesson_path[index]);
+                  console.log("index - 1: ", index);
+                }
+              }}
+            ></Button>
           </View>
         </ScrollView>
       </View>
@@ -185,23 +215,29 @@ const Style = StyleSheet.create({
   },
   lessonFrame: {
     borderWidth: horizontalScale(2),
-    width: "100%",
+    width: "95%",
     borderStyle: "dashed",
     borderRadius: moderateScale(20),
-    marginVertical: verticalScale(5),
+    marginVertical: verticalScale(2),
     alignItems: "center",
     borderColor: "rgba(60, 152, 189, 1)",
   },
   lessonImag: {
-    height: verticalScale(600),
-    width: horizontalScale(330),
+    height: verticalScale(550),
+    width: horizontalScale(305),
 
     marginVertical: verticalScale(5),
     // marginVertical: 30,
-    borderRadius: moderateScale(20),
+    borderRadius: moderateScale(10),
     // borderWidth: 1,
     // borderColor: "rgba(60, 152, 189, 1)",
     // borderStyle: "dashed",
+  },
+  btn: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: "100%",
+    paddingHorizontal: horizontalScale(10),
   },
 });
 export default BookPages;
