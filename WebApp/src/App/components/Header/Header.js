@@ -1,13 +1,19 @@
 import i18n from '../../../i18n';
+import { GiHamburgerMenu } from "react-icons/gi";
 import { withNamespaces } from 'react-i18next';
 import { FaUser } from "react-icons/fa";
+import { FiMenu } from "react-icons/fi";
 import "./Header.css";
 import { Link } from "react-router-dom";
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import { useState } from "react";
 import img1 from '../../assets/logo.png';
 import img from '../../assets/larg.png';
 import imgg from '../../assets/smal.png';
+import topimag from "../../assets/logo_3.png";
+import icon from "../../assets/Group_168.png";
+import middleimg from "../../assets/logo_2.png";
+import { ImCross } from "react-icons/im";
 import { AuthContext } from '../../context/AuthContext';
 import {useContext } from 'react';
 
@@ -15,7 +21,8 @@ import {useContext } from 'react';
 <link rel="stylesheet" href="./Header.css" />;
 const Header = ({ t }, props) => {
 
-  const[openProfile, setOpenProfile]= useState(false)
+  const[openProfile, setOpenProfile]= useState(false);
+  const [show, setShow] = useState(false);
   const {currentState,
     setCurrentState , currentBook,
     setCurrentBook ,currentLesson,
@@ -24,6 +31,14 @@ const Header = ({ t }, props) => {
    function handleClick(lang) {
     // i18next.changeLanguage(lang)
   }
+  const [sidebar, setSidebar] = useState("none");
+  const handleSideBar = () => {
+    if (sidebar === "none") {
+      setSidebar("inline-block");
+    } else {
+      setSidebar("none");
+    }
+  };
   console.log(currentLesson);
   console.log(currentpart);
 var nav;
@@ -132,8 +147,102 @@ if(currentLesson == "lesson"){
 				<path id="home_svg_one" d="M 1052.548828125 411.3898620605469 L 131.8900146484375 411.3898620605469 L 131.8900146484375 286.3383178710938 C 770.7160034179688 235.870361328125 1413.725708007812 235.870361328125 2052.550537109375 286.338134765625 L 2052.548828125 911.3898620605469 Z">
 				</path>
 			</svg> 
-   </div>
+      </div>
+      <div className="mobile">
+        <div className="top">
+          <img src={topimag} />
+          <h1>لارښود - Larkhod</h1>
+          <div className="icon_header">
+            <Link className="link_nav_header" to="/changeprofile">
+              <FaUser />
+            </Link>
+          </div>
+          <div className="menu" onClick={handleSideBar}>
+            <FiMenu />
+          </div>
+        </div>
+        <div className="middle">
+          <img src={middleimg} />
+          <p>سفر زیبای تعلیمی خود را</p>
+          <h1>با ما آغاز کنید</h1>
+        </div>
+        <div className="bottom">
+          <svg className="Path_7" viewBox="131.89 248.487 359.958 74.042">
+            <path
+              id="Path_7"
+              d="M 491.8476867675781 322.5292663574219 L 131.8900146484375 322.5292663574219
+           L 131.8900146484375 265.6912231445312 C 251.6147155761719 242.7526550292969 372.12353515625 242.7526550292969 491.8480529785156 265.6911315917969
+            L 491.8476867675781 322.5292663574219 Z"
+            ></path>
+          </svg>
+        </div>
+        <div className="side_bar"
+          style={{
+            display: `${sidebar}`,
+          }}
+        >
+          <div className="cross" onClick={handleSideBar}>
+            <ImCross />
+          </div>
+          <div className="side">
+            <li className="li_header" >
+              <Link
+                className="link_nav_header"
+                to="/section"
+              >
+                {t("header.3")}
+              </Link>
+            </li>
+            <hr/>
+            <li className="li_header">
+              <Link
+                className="link_nav_header"
+                to="/grad"
+              >
+                {t("header.4")}
+              </Link>
+            </li>
+            <hr/>
+            <li className="li_header">
+              <Link
+                className="link_nav_header"
+                to="/book"
+              >
+                {t("header.5")}
+              </Link>
+            </li>
+            <hr/>
+            <li className="li_header">
+              <Link
+                className="link_nav_header"
+                to="/continue"
+              >
+                {t("header.6")}
+              </Link>
+            </li>
+            <hr/>
+            <li className="li_header">
+              <Link
+                className="link_nav_header"
+                to="/about"
+              >
+                {t("header.7")}
+              </Link>
+            </li>
+            <hr/>
+            <li className="li_header">
+              <Link
+                className="link_nav_header"
+                to="/Suggestion"
+              >
+                {t("header.8")}
+              </Link>
+            </li>
+          </div>
+        </div>
+      </div>
     </div>
+    
   );
 };
 export default  withNamespaces()(Header) ;

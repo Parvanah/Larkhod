@@ -4,10 +4,8 @@ import axios from "axios";
 import React, {setStatusCode, Authorization, createContext, useEffect, useState } from "react";
 axios.defaults.baseURL = "http://192.168.43.29:8000/api/v1";
 axios.defaults.timeout = 3000;
-
 // import AsyncStorage from "@react-native-async-storage/async-storage";
 export const AuthContext = createContext();
-
 export const AuthProvider = ({ children }) => {
   const [userInfo, setUserInfo] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -31,7 +29,6 @@ export const AuthProvider = ({ children }) => {
           let userInformation = res.data;
           AsyncStorage.setItem("userInfo", JSON.stringify(userInformation));
           setUserInfo(userInformation);
-
           setIsLoading(false);
         });
     } catch (e) {
@@ -157,14 +154,14 @@ export const AuthProvider = ({ children }) => {
       });
       console.log("put");
       console.log(response.data);
-
       AsyncStorage.setItem(
         "userInfo",
         JSON.stringify({ ...userInfo, user: response?.data })
       );
       setUserInfo({ ...userInfo, user: response?.data });
       setIsLoading(false);
-    } catch (error) {
+    } 
+    catch (error) {
       console.log(error.response?.data);
       setIsLoading(false);
     }

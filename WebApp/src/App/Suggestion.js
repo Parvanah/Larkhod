@@ -18,20 +18,16 @@ const Suggestion = ( { t }) => {
 		i18n.changeLanguage(lng);
 	  }
 
-
-
-    const initialValues = {name:"", message:"", city: "", email: "", phone: "", senf:""};
+  const initialValues = {name:"", message:"", city: "", email: "", phone: "", senf:""};
 	const [formValues, setFormValues] = useState(initialValues);
 	const [formErrors, setFormErrors] = useState({});
 	const [isSubmit, setIsSubmit] = useState(false);
 
 	const navigate = useNavigate();
-  
 	const handleChange = (e) => {
 	  const { name, value } = e.target;
 	  setFormValues({ ...formValues, [name]: value });
 	};
-  
 	const handleSubmit = (e) => {
 	  e.preventDefault();
 	  setFormErrors(validate(formValues));
@@ -40,7 +36,6 @@ const Suggestion = ( { t }) => {
 	  setIsSubmit(true);
 	  
 	};
-  
 	useEffect(() => {
 	  console.log(formErrors);
 	  if (Object.keys(formErrors).length === 0 && isSubmit) {
@@ -73,6 +68,10 @@ const Suggestion = ( { t }) => {
 	 }
 	  return errors;
 	};
+  if (userInfo !== null){
+    return navigate("/header");
+  }
+  else{
     return ( 
       <div className="suggestion">
               <div className="sendd-suggestion">
@@ -198,6 +197,7 @@ const Suggestion = ( { t }) => {
        </div>
         </div>
      );
+  }
 }
 export default  withNamespaces()(Suggestion) ;
 

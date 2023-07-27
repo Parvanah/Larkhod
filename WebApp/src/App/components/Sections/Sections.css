@@ -7,76 +7,66 @@
     flex-direction: column;
     align-items: center;
 }
-
 #title {
     align-items: center;
     color: rgba(60, 152, 189, 1);
 }
-
 #title h1 {
     font-weight: bold;
-    font-size: 70px;
+    font-size: 50px;
     display: flex;
     justify-content: center;
     color: rgba(60, 152, 189, 1);
-    margin-top: -90px;
+    margin-top: -70px;
 }
 #title p {
     color: rgba(60, 152, 189, 1);
     font-size: 30px;
     font-family: "Bahij Helvetica";
+    margin-top: 2%;
 }
 #ul-section {
     display: flex;
+    width: 80%;
     color: rgba(60, 152, 189, 1);
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 #ul-section img {
-    height: 200px;
-    width: 260px;
-    margin-left: 0;
-    margin-right: 0;
+    justify-content: center;
+    display: inline-block;
+    height: 60%;
+    width: 60%;
+    margin-left: 30%;
+    align-items: center;
     margin-top: 6vh;
-    margin-right: px;
-    padding-left: 60px;
 }
-
 #ul-section h1 {
     color: rgba(60, 152, 189, 1);
     font-size: 30px;
-    margin-left: 100px;
+    margin-left: 40%;
     margin-top: 2vh;
-    margin-right: 30px;
 }
-
 #ul-section p {
     color: rgba(60, 152, 189, 1);
+    width: 45%;
     align-items: center;
     justify-content: center;
-    margin-left: 80px;
+    margin-left: 35%;
+    text-align: center;
     margin-top: 2vh;
     margin-right: 50px;
-    font-size: 22px;
+    font-size: 20px;
     display: flex;
 }
-
 .section .prevuse img {
     position: absolute;
-    top: 45px;
-    bottom: 10px;
-    right: 1300px;
-    /* padding-left: 0px;
-    padding-right: 1196px;
-    margin-top: -90px; */
-    /* margin-left: 5px;
-    margin-top: 20px;
-    margin-right: 1250px; */
-    /* height: 15px;
-    width: 30px; */
+    bottom: 90%;
+    right: 93%;
+    display: flex;
+    cursor: pointer;
 }
-
 .section .svg {
     height: 10px;
     width: 10x;
@@ -85,7 +75,6 @@
     padding-right: 950px;
     margin: 12px;
 }
-
 .section .svg1 {
     padding-left: 1080px;
     height: 10px;
@@ -93,37 +82,250 @@
     padding-top: -30px;
     padding-bottom: 85px;
     padding-right: 0px;
-    margin-top: px;
+    margin-top: 0px;
 }
-
 .section .svg2 {
-    height: 10px;
-    width: 10x;
-    top: 580px;
+    height: 10%;
+    width: 5%;
+    top: 500px;
+    right: 85%;
     position: fixed;
-    margin-left: 0px;
-    padding-top: -30px;
-    padding-right: 950px;
+    /* margin-left: 0px;
+    padding-top: 0px;
+    padding-right: 970px;
     padding-bottom: 40px;
     display: inline-flex;
-    margin: 0px;
+    margin: 0px; */
 }
 .section .svg3 {
-    height: 10px;
-    width: 10x;
-    position: fixed;
-    margin-left: 2000px;
-    margin-bottom: 30px;
-    top: 550px;
-    padding-top: 20px;
-    padding-right: 0px;
-    padding-bottom: 80px;
-    padding-right: 970px;
-    display: inline-flex;
-    margin: px;
+    height: 10%;
+    width: 10%;
+    position: absolute;
+    /* margin-left: 2000px;
+    margin-bottom: 30px; */
+    top: 500px;
+    left: 85%;
+
 }
-  /* Extra small devices (phone, 600px and down) */
-@media screen and (max-width: 360px) and (min-width: 100px){
+@media only screen and (max-width: 1200px ) and (min-width: 992px){
+    .section {
+        background-color: white;
+        color: rgb(81, 187, 228);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #title {
+        align-items: center;
+        color: rgba(60, 152, 189, 1);
+    }
+    #title h1 {
+        font-weight: bold;
+        font-size: 47px;
+        display: flex;
+        justify-content: center;
+        color: rgba(60, 152, 189, 1);
+        margin-top: -80px;
+    }
+    #title p {
+        color: rgba(60, 152, 189, 1);
+        font-size: 30px;
+        width: 700px;
+    }
+    #ul-section {
+        display: flex;
+        color: rgba(60, 152, 189, 1);
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    #ul-section img {
+        height: 190px;
+        width: 270px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 6vh;
+        margin-right: 0px;
+        padding-left: 60px;
+    }
+    #ul-section h1 {
+        color: rgba(60, 152, 189, 1);
+        font-size: 30px;
+        margin-left: 120px;
+        margin-top: 2vh;
+        margin-right: 30px;
+    }
+    #ul-section p {
+        color: rgba(60, 152, 189, 1);
+        width: 200px;
+        align-items: center;
+        justify-content: center;
+        margin-left: 80px;
+        margin-top: 2vh;
+        margin-right: 50px;
+        font-size: 22px;
+        display: flex;
+    }
+    .section .prevuse img {
+        position: absolute;
+        top: 10%;
+        right: 92%;
+        cursor: pointer;
+    }
+    .section .svg {
+        height: 5px;
+        width: 5x;
+        padding-right: 75%;
+    }
+    .section .svg1 {
+        padding-left: 650px;
+        height: 5px;
+        width: 5px;
+        padding-top: -30px;
+        padding-bottom: 85px;
+        padding-right: 0px;
+        margin-top: 0px;
+    }
+    .section .svg2 {
+        height: 15%;
+        width: 15%;
+        top: 500px;
+        position: absolute;
+        margin-left: 0px;
+        padding-right: 800px;
+    }
+    .section .svg3 {
+        height: 10px;
+        width: 10x;
+        position: absolute;
+        top: 80%;
+        right: 30%;
+    }
+}
+@media only screen and (max-width: 992px ) and (min-width: 700px){
+    .section {
+        background-color: white;
+        color: rgb(81, 187, 228);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #title {
+        align-items: center;
+        color: rgba(60, 152, 189, 1);
+    }
+    #title h1 {
+        font-weight: bold;
+        font-size: 40px;
+        display: flex;
+        justify-content: center;
+        color: rgba(60, 152, 189, 1);
+        padding-top: 2%;
+    }
+    #title p {
+        color: rgba(60, 152, 189, 1);
+        font-size: 25px;
+        width: 100%;
+        margin-top: 5%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    #ul-section {
+        display: flex;
+        color: rgba(60, 152, 189, 1);
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    #ul-section img {
+        height: 220px;
+        width: 220px;
+        margin-top: -20%;
+        padding: 15%;
+    }
+    #ul-section a{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 230px;
+        margin-top: 60px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #ul-section h1 {
+        color: rgba(60, 152, 189, 1);
+        font-size: 20px;
+        margin-left: 20%;
+        margin-top: 2vh;
+        margin-right: 20%;
+        text-align: center;
+    }
+    #ul-section p {
+        color: rgba(60, 152, 189, 1);
+        align-items: center;
+        justify-content: center;
+        margin-left: 80px;
+        margin-top: 2vh;
+        margin-right: 50px;
+        font-size: 18px;
+        display: flex;
+        width: 200px;
+    }
+    .section .prevuse img {
+        position: absolute;
+        top: 45px;
+        bottom: 10px;
+        right: 1300px;
+    }
+    .section .svg {
+        height: 5px;
+        width: 5px;
+        padding-left: 200px;
+        padding-top: 20px;
+        padding-right: 800px;
+        margin: 12px;
+    }
+    .section .svg1 {
+        padding-left: 600px;
+        height: 5px;
+        width: 5x;
+        padding-top: -30px;
+        padding-bottom: 85px;
+        padding-right: 0px;
+        margin-top: 0px;
+    }
+    .section .svg2 {
+        height: 5px;
+        width: 5x;
+        top: 580px;
+        position: fixed;
+        margin-left: 550px;
+        padding-top: -200%;
+        padding-right: 600px;
+        padding-bottom: 80px;
+        display: inline-flex;
+        margin: 0px;
+    }
+    .section .svg3 {
+        height: 5px;
+        width: 5px;
+        position: fixed;
+        margin-left: 1550px;
+        margin-bottom: 30px;
+        top: 550px;
+        padding-top: 12px;
+        padding-right: 0px;
+        padding-bottom: 80px;
+        padding-right: 970px;
+        display: inline-flex;
+        margin: 0px;
+    }
+}
+@media only screen and (max-width: 360px) and (min-width: 100px){
     .section {
         position: absolute;
         background-color: white;
@@ -181,8 +383,6 @@
         overflow: scroll;
         justify-content: center;
         align-items: center;
-        /* width: 30px; */
-        /* background-color: brown; */
     }
     #ul-section img {
         height: 90%;
@@ -192,14 +392,12 @@
         margin-top: -20%;
         margin-right: 0;
         padding: 20px;
-        /* background-color: blueviolet; */
     }
     #ul-section a{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        /* background-color: yellowgreen; */
         width: 230px;
         margin-top: 60px;
         margin-left: 10px;
@@ -229,14 +427,6 @@
         top: 45px;
         bottom: 10px;
         right: 300px;
-        /* padding-left: 0px;
-        padding-right: 1196px;
-        margin-top: -90px; */
-        /* margin-left: 5px;
-        margin-top: 20px;
-        margin-right: 1250px; */
-        /* height: 15px;
-        width: 30px; */
     }
     .section .svg {
         height: -5px;
@@ -253,7 +443,7 @@
         padding-top: -30px;
         padding-bottom: 85px;
         padding-right: 0px;
-        margin-top: px;
+        margin-top: 0px;
     }
     .section .svg2 {
         height: 5px;
@@ -280,277 +470,7 @@
         padding-bottom: 80px;
         padding-right: 970px;
         display: inline-flex;
-        margin: px;
-    }
-}
-@media only screen and (max-width: 1200px ) and (min-width: 992px){
-    .section {
-        background-color: white;
-        color: rgb(81, 187, 228);
-        height: 100px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    #title {
-        align-items: center;
-        color: rgba(60, 152, 189, 1);
-        margin-left: 0px;
-        margin-right: 0;
-    }
-    
-    #title h1 {
-        font-weight: bold;
-        font-size: 40px;
-        display: flex;
-        justify-content: center;
-        color: rgba(60, 152, 189, 1);
-        margin-top: -90px;
-    }
-    
-    #title p {
-        color: rgba(60, 152, 189, 1);
-        font-size: 30px;
-        width: 400px;
-    }
-    
-    #ul-section {
-        display: flex;
-        color: rgba(60, 152, 189, 1);
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    #ul-section img {
-        height: 200px;
-        width: 260px;
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: 6vh;
-        margin-right: px;
-        padding-left: 60px;
-    }
-    
-    #ul-section h1 {
-        color: rgba(60, 152, 189, 1);
-        font-size: 30px;
-        margin-left: 100px;
-        margin-top: 2vh;
-        margin-right: 30px;
-    }
-    
-    #ul-section p {
-        color: rgba(60, 152, 189, 1);
-        align-items: center;
-        justify-content: center;
-        margin-left: 80px;
-        margin-top: 2vh;
-        margin-right: 50px;
-        font-size: 22px;
-        display: flex;
-    }
-    
-    .section .prevuse img {
-        position: absolute;
-        top: 45px;
-        bottom: 10px;
-        right: 1300px;
-        /* padding-left: 0px;
-        padding-right: 1196px;
-        margin-top: -90px; */
-        /* margin-left: 5px;
-        margin-top: 20px;
-        margin-right: 1250px; */
-        /* height: 15px;
-        width: 30px; */
-    }
-    
-    .section .svg {
-        height: 5px;
-        width: 5x;
-        margin-left: 300px;
-        padding-top: 20px;
-        padding-right: 800px;
-        margin: 12px;
-    }
-    
-    .section .svg1 {
-        padding-left: 600px;
-        height: 5px;
-        width: 5x;
-        padding-top: -30px;
-        padding-bottom: 85px;
-        padding-right: 0px;
-        margin-top: px;
-    }
-    
-    .section .svg2 {
-        height: 5px;
-        width: 5x;
-        top: 580px;
-        position: fixed;
-        margin-left: 0px;
-        padding-top: -90px;
-        padding-right: 800px;
-        padding-bottom: 40px;
-        display: inline-flex;
         margin: 0px;
-    }
-    .section .svg3 {
-        height: 10px;
-        width: 10x;
-        position: fixed;
-        margin-left: 1800px;
-        margin-bottom: 30px;
-        top: 550px;
-        padding-top: 20px;
-        padding-right: 0px;
-        padding-bottom: 80px;
-        padding-right: 970px;
-        display: inline-flex;
-        margin: px;
-    }
-   
-}
-@media only screen and (max-width: 992px ) and (min-width: 700px){
-    .section {
-        background-color: white;
-        color: rgb(81, 187, 228);
-        height: 100px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    #title {
-        align-items: center;
-        color: rgba(60, 152, 189, 1);
-        margin-left: 0px;
-        margin-right: 0;
-    }
-    #title h1 {
-        font-weight: bold;
-        font-size: 40px;
-        display: flex;
-        justify-content: center;
-        color: rgba(60, 152, 189, 1);
-        padding-top: 30px;
-    }
-    #title p {
-        color: rgba(60, 152, 189, 1);
-        font-size: 30px;
-        width: 500px;
-        margin-top: 5%;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-    #ul-section {
-        display: flex;
-        color: rgba(60, 152, 189, 1);
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        /* width: 30px; */
-        /* background-color: brown; */
-    }
-    #ul-section img {
-        height: 90%;
-        width: 90%;
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: -20%;
-        margin-right: 0;
-        padding: 20px;
-        /* background-color: blueviolet; */
-    }
-    #ul-section a{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        /* background-color: yellowgreen; */
-        width: 230px;
-        margin-top: 60px;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-    #ul-section h1 {
-        color: rgba(60, 152, 189, 1);
-        font-size: 20px;
-        margin-left: 20%;
-        margin-top: 2vh;
-        margin-right: 20%;
-        text-align: center;
-    }
-    #ul-section p {
-        color: rgba(60, 152, 189, 1);
-        align-items: center;
-        justify-content: center;
-        margin-left: 80px;
-        margin-top: 2vh;
-        margin-right: 50px;
-        font-size: 18px;
-        display: flex;
-        width: 200px;
-    }
-    .section .prevuse img {
-        position: absolute;
-        top: 45px;
-        bottom: 10px;
-        right: 1300px;
-        /* padding-left: 0px;
-        padding-right: 1196px;
-        margin-top: -90px; */
-        /* margin-left: 5px;
-        margin-top: 20px;
-        margin-right: 1250px; */
-        /* height: 15px;
-        width: 30px; */
-    }
-    .section .svg {
-        height: 5px;
-        width: 5x;
-        padding-left: 200px;
-        padding-top: 20px;
-        padding-right: 800px;
-        margin: 12px;
-    }
-    .section .svg1 {
-        padding-left: 600px;
-        height: 5px;
-        width: 5x;
-        padding-top: -30px;
-        padding-bottom: 85px;
-        padding-right: 0px;
-        margin-top: px;
-    }
-    .section .svg2 {
-        height: 5px;
-        width: 5x;
-        top: 580px;
-        position: fixed;
-        margin-left: 550px;
-        padding-top: -200%;
-        padding-right: 600px;
-        padding-bottom: 80px;
-        display: inline-flex;
-        margin: 0px;
-    }
-    .section .svg3 {
-        height: 5px;
-        width: 5x;
-        position: fixed;
-        margin-left: 1550px;
-        margin-bottom: 30px;
-        top: 550px;
-        padding-top: 12px;
-        padding-right: 0px;
-        padding-bottom: 80px;
-        padding-right: 970px;
-        display: inline-flex;
-        margin: px;
     }
 }
 @media only screen and (max-width: 576px ) and (min-width:360px){
@@ -570,7 +490,7 @@
         align-items: center;
         color: rgba(60, 152, 189, 1);
         margin-left: 0px;
-        margin-right: 0;
+        margin-right: 0px;
     }
     #title h1 {
         position: absolute;
@@ -578,7 +498,7 @@
         width: 300px;
         height: 90px;
         left: 160px;
-        right: 0;
+        right: 0px;
         top: 150px;
         font-weight: bold;
         font-size: 55px;
@@ -615,33 +535,29 @@
         margin-top: 20px;
         position: fixed;
         top: 35%;
-        left: 0;
+        left: 0%;
         right: 30%;
         bottom: -50%;
         overflow: scroll;
         justify-content: center;
         align-items: center;
-        /* width: 30px; */
-        /* background-color: brown; */
     }
     #ul-section img {
         height: 250px;
         width: 250px;
         margin: 10px;
-        margin-left: 0;
-        margin-right: 0;
+        margin-left: 0%;
+        margin-right: 0%;
         margin-top: -70%;
         margin-bottom: -10%;
-        margin-right: 0;
+        margin-right: 0%;
         padding: 30px;
-        /* background-color: blueviolet; */
     }
     #ul-section a{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        /* background-color: yellowgreen; */
         width: 200px;
         padding-top: 30px;
         margin-top: 80px;
@@ -672,18 +588,10 @@
         top: 45px;
         bottom: 10px;
         right: 1300px;
-        /* padding-left: 0px;
-        padding-right: 1196px;
-        margin-top: -90px; */
-        /* margin-left: 5px;
-        margin-top: 20px;
-        margin-right: 1250px; */
-        /* height: 15px;
-        width: 30px; */
     }
     .section .svg {
         height: 3px;
-        width: 3x;
+        width: 3px;
         padding-left: 300px;
         padding-top: 50px;
         padding-right: 700px;
@@ -692,11 +600,11 @@
     .section .svg1 {
         padding-left: 440px;
         height: 5px;
-        width: 5x;
+        width: 5px;
         padding-top: 0px;
         padding-bottom: 95px;
         padding-right: 0px;
-        margin-top: px;
+        margin-top: 0px;
     }
     .section .svg2 {
         height: 5px;
@@ -723,7 +631,7 @@
         padding-bottom: 80px;
         padding-right: 970px;
         display: inline-flex;
-        margin: px;
+        margin: 0px;
     }
 }
 @media only screen and (max-width: 768px ) and (min-width:576px){
@@ -743,7 +651,7 @@
         align-items: center;
         color: rgba(60, 152, 189, 1);
         margin-left: 0px;
-        margin-right: 0;
+        margin-right: 0px;
     }
     #title h1 {
         position: absolute;
@@ -751,7 +659,7 @@
         width: 300px;
         height: 90px;
         left: 220px;
-        right: 0;
+        right: 0px;
         top: 130px;
         font-weight: bold;
         font-size: 55px;
@@ -794,8 +702,6 @@
         overflow: scroll;
         justify-content: center;
         align-items: center;
-        /* width: 30px; */
-        /* background-color: brown; */
     }
     #ul-section img {
         height: 250px;
@@ -807,14 +713,12 @@
         margin-bottom: -10%;
         margin-right: 0;
         padding: 25px;
-        /* background-color: blueviolet; */
     }
     #ul-section a{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        /* background-color: yellowgreen; */
         width: 200px;
         padding-top: 30px;
         margin-top: 80px;
@@ -847,18 +751,10 @@
         top: 45px;
         bottom: 10px;
         right: 620px;
-        /* padding-left: 0px;
-        padding-right: 1196px;
-        margin-top: -90px; */
-        /* margin-left: 5px;
-        margin-top: 20px;
-        margin-right: 1250px; */
-        /* height: 15px;
-        width: 30px; */
     }
     .section .svg {
         height: 3px;
-        width: 3x;
+        width: 3px;
         padding-left: 300px;
         padding-top: 70px;
         padding-right: 500px;
@@ -868,15 +764,15 @@
     .section .svg1 {
         padding-left: 480px;
         height: 5px;
-        width: 5x;
-        padding-top: 10pxpx;
+        width: 5px;
+        padding-top: 10px;
         padding-bottom: 95px;
         padding-right: 0px;
-        margin-top: px;
+        margin-top: 0px;
     }
     .section .svg2 {
         height: 5px;
-        width: 5x;
+        width: 5px;
         top: 580px;
         position: fixed;
         padding-right: 350px;
@@ -899,7 +795,7 @@
         padding-bottom: 80px;
         padding-right: 970px;
         display: inline-flex;
-        margin: px;
+        margin: 0px;
     }
 }
 

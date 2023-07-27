@@ -41,82 +41,88 @@ const Book = ({ t }) => {
     top.current.scrollIntoView({behavier: "smooth"});
     setScrollState("top")
    }
-  return (
- <div className='Download-all-b'>
-     <div className="Bookheader">
-       <div id="flesh-image-grade-B" > <Link to="/Header"><img className="flesh-image-grade-B" src={image5} /></Link> </div>
-        <div className="icon-book">
-         <img src={bookH}  className="bookH"/>
-        </div>
-      <div className='buttom-books'> 
-      <div className='p-container-books'>  
 
-         <p className='p-books'> کتاب های مورد نظر صنف خود را</p>
-         <p id='p-books'>از اینجا انتخاب  کنید</p>
-         <p className='p-books'>{t("book1")}</p>
+   if (userInfo !== null){
+    return navigate("/header");
+  }
+  else{
+    return (
+      <div className='Download-all-b'>
+          <div className="Bookheader">
+            <div id="flesh-image-grade-B" > <Link to="/Header"><img className="flesh-image-grade-B" src={image5} /></Link> </div>
+             <div className="icon-book">
+              <img src={bookH}  className="bookH"/>
+             </div>
+           <div className='buttom-books'> 
+           <div className='p-container-books'>  
+     
+              <p className='p-books'> کتاب های مورد نظر صنف خود را</p>
+              <p id='p-books'>از اینجا انتخاب  کنید</p>
+              <p className='p-books'>{t("book1")}</p>
+           </div>
+         <div id='h-books'>
+         <div ref={top} >
+         {primary.map((item) => {
+                       return (
+                         <Link
+                           className="link-grade-n"
+                           to="/downloading"
+                     state={{ subjects: item.subjects }}
+                         >
+                           <img className="sanaf-grade-n" src={sanaf} />
+                           <div className="li-grade-b"  src={sanaf} >{t("book2")} {item.label} {t("book3")}</div>
+                         </Link>
+                       );
+                     })}
+         </div>
+                      <div ref={bottom}>
+                     {secondary.map((item) => {
+                       return (
+                         <Link
+                           className="link-grade-n"  
+                           to="/dowloading"
+                           state={{ subjects: item.subjects }}
+                         >
+                           <img className="sanaf-grade" src={sanaf} />
+                           <div className="li-grade-n" src={sanaf}>{t("book2")} {item.label}</div>
+                         </Link>
+                       );
+                     })}
+                   </div>
+                   <div > 
+                     {high_school.map((item) => {
+                       return (
+                         <Link
+                           className="link-grade-n"  
+                           to="/downloading"
+                           state={{ subjects: item.subjects }}
+                         >
+                           <img className="sanaf-grade-n" src={sanaf} />
+                           <div className="li-grade-n" src={sanaf}> {t("book2")}  {item.label}</div>
+                         </Link>
+                       );
+                     })}
+                     </div>
+         </div> 
+        
+      <div id="line">
+      <img src={line}  className="line"/>
       </div>
-    <div id='h-books'>
-    <div ref={top} >
-    {primary.map((item) => {
-                  return (
-                    <Link
-                      className="link-grade-n"
-                      to="/downloading"
-                state={{ subjects: item.subjects }}
-                    >
-                      <img className="sanaf-grade-n" src={sanaf} />
-                      <div className="li-grade-b"  src={sanaf} >{t("book2")} {item.label} {t("book3")}</div>
-                    </Link>
-                  );
-                })}
-    </div>
-                 <div ref={bottom}>
-                {secondary.map((item) => {
-                  return (
-                    <Link
-                      className="link-grade-n"  
-                      to="/dowloading"
-                      state={{ subjects: item.subjects }}
-                    >
-                      <img className="sanaf-grade" src={sanaf} />
-                      <div className="li-grade-n" src={sanaf}>{t("book2")} {item.label}</div>
-                    </Link>
-                  );
-                })}
-              </div>
-              <div > 
-                {high_school.map((item) => {
-                  return (
-                    <Link
-                      className="link-grade-n"  
-                      to="/downloading"
-                      state={{ subjects: item.subjects }}
-                    >
-                      <img className="sanaf-grade-n" src={sanaf} />
-                      <div className="li-grade-n" src={sanaf}> {t("book2")}  {item.label}</div>
-                    </Link>
-                  );
-                })}
-                </div>
-    </div> 
-   
- <div id="line">
- <img src={line}  className="line"/>
- </div>
-    
-    <div id="line">
-    <img src={pathimg} className="pathimg-b" onClick={()=>{
-      if(srollState == "bottom"){
-        scrollTop()
-      }else{
-        scrollBottom()
-      }
-    }}/>
-    </div>
-       </div>
-      
-       </div>
- </div>
-  )
+         
+         <div id="line">
+         <img src={pathimg} className="pathimg-b" onClick={()=>{
+           if(srollState == "bottom"){
+             scrollTop()
+           }else{
+             scrollBottom()
+           }
+         }}/>
+         </div>
+            </div>
+           
+            </div>
+      </div>
+       )
+  }
 }
 export default  withNamespaces()(Book) ;

@@ -1,6 +1,3 @@
-lesson.css
-
-
 .mobile{
     display: none;
 }
@@ -17,7 +14,7 @@ lesson.css
     flex-direction: row;
     /* height: 70px; */
     /* overflow-y: scroll; */
-    padding-left: 5%;
+    padding-left: 40px;
     /* height: 100%; */
 }
 .sidebar {
@@ -40,7 +37,8 @@ lesson.css
     margin-bottom: 0px;  
     /* padding: 0px 0px; */
     /* height: 100%; */
-    padding-left: 80px;
+    padding-left: 5px;
+    padding-right: 20px;
     padding-bottom: 70px;
 }
 .sidebar .text{
@@ -48,6 +46,7 @@ lesson.css
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
     margin-top: 0px;
 }
 .sidebar .header{
@@ -55,11 +54,13 @@ lesson.css
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .sidebar .arrow{
     position: absolute;
     top: 0px;
-    left: 50px;
+    left: 10px;
+    cursor: pointer;
 }
 .sidebar .header img{
     width: 50px;
@@ -114,6 +115,7 @@ lesson.css
 .showLesson .title h1{
     font-size: 40px;
     padding: 0;
+    padding-top: 30px;
     margin: 20px;
     width: 300px;
     padding-right: 30px;
@@ -132,13 +134,14 @@ lesson.css
     /* background-color: red; */
     /* padding-top: 100px;
     padding-bottom: 10px; */
-    margin-left: 70px;
+    margin-top: 40px;
+    margin-left: 15px;
 }
 .showLesson .title div p{
-    font-size: 40px;
+    font-size: 30px;
     margin: 10px;
     padding-right: 0px;
-    padding-top: 0px;
+    padding-top: 30px;
     /* background-color: blue; */
     
 }
@@ -150,8 +153,8 @@ lesson.css
     width: 60%;
     height: 70%;
     position: absolute;
-    right: -40px;
-    left: 500px;
+    right: 0px;
+    left: 460px;
     top: 130px;
     /* margin-top: 10px; */
     overflow-y: scroll;
@@ -196,39 +199,37 @@ lesson.css
         display: none;
     }
     .lesson {
-        width: 1200px;
         margin-top: -13px;
         display: flex;
         flex-direction: row;
         /* height: 70px; */
         overflow-y: hidden;
-        overflow-x: hidden;
-        padding-left: 40px;
+        padding-left: 30px;
     }
     .sidebar {
-        /* position: fixed;
-        top: 0%;
-        left: 0%;
-        bottom: 0%; */
-        /* background-color: #3c98bd; */
-        /* width: 200px; */
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
         overflow: scroll;
+        height: 630px;
+        overflow-x: hidden;
+        width: 250px;
         padding: 10px;
-        margin: 20px ;
+        padding-right: 40px;
     }
     .sidebar .text{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        margin-top: 20px;
+        margin-top: 15px;
+        margin-left: 60px;
+        margin-right: 40px;
     }
     .sidebar .header{
         display: flex;
+        width: 200px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -239,12 +240,15 @@ lesson.css
     
     }
     .sidebar h3{
-        padding-bottom: 50px;
+        width: 150px;
+        padding-top: 10px;
+        padding-bottom: 30px;
         text-align: center;
     }
     .sidebar h3, .sidebar .sidebar-lessons div{
         color: white;
         font-size: 20px;
+        margin-bottom: 25px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -252,11 +256,14 @@ lesson.css
         
     }
     .sidebar .sidebar-lessons div .titles{
-        margin-left: 60px ;
+        margin-left: 50px ;
+        font-size: 20px;
+        width: 140px;
+        cursor: pointer;
     
     }
     .sidebar .sidebar-lessons div {
-        padding: 10px;
+        padding: 5px;
         text-align: right;
        
     }
@@ -274,14 +281,15 @@ lesson.css
     }
     .showLesson .title{
         display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        width: 100%;
-        padding-right: 175px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 60px;
+        padding: 0px;
+        margin: 0px;
     }
     .showLesson .title h1{
         font-size: 30px;
-        padding: 0;
+        padding-right: 50px;
         margin: 5px;
     
     }
@@ -331,7 +339,6 @@ lesson.css
         flex-direction: row-reverse;
         justify-content: flex-start;
         align-items: center;
-        width: 100%;
         padding-right: 142px;    
         padding-bottom:-10px;
         margin-bottom: 30px;
@@ -373,7 +380,7 @@ lesson.css
         padding-left: 30px;
         padding-right: 10px;
     }
-    .sidebar {
+    .sidebar-1 {
         /* position: fixed;
         top: 0%;
         left: 0%;
@@ -391,25 +398,25 @@ lesson.css
         margin-bottom: 0px;  
         padding: 0px 30px;
     }
-    .sidebar .text{
+    .sidebar-1 .text{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
         margin-top: 20px;
     }
-    .sidebar .header{
+    .sidebar-1 .header{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .sidebar .header img{
+    .sidebar-1 .header img{
         width: 50px;
         height: 50px;
     
     }
-    .sidebar h3{
+    .sidebar-1 h3{
         padding-bottom: 50px;
         text-align: center;
     }
@@ -422,16 +429,16 @@ lesson.css
         align-items: center;
         
     }
-    .sidebar .sidebar-lessons div .titles{
+    .sidebar-1 .sidebar-lessons div .titles{
         margin-left: 60px ;
     
     }
-    .sidebar .sidebar-lessons div {
+    .sidebar-1 .sidebar-lessons div {
         padding: 10px;
         text-align: right;
        
     }
-    .sidebar .sidebar-lessons div:hover{
+    .sidebar-1 .sidebar-lessons div:hover{
         cursor: pointer;
     }
     .showLesson{
@@ -529,14 +536,187 @@ lesson.css
     .mobile{
         display: flex;
         height: 100%;
-    }
-    .mobile .mobileTop{
         width: 100%;
-        height: 166.076px;
+    }
+    .mobile .mobileTop .mobile-background img{
+        /* background-color: rgb(153, 51, 51); */
+        width:766px;
+        height: 160.076px;
         background-color: #3C98BD;
         background-image: linear-gradient( #3C98BD, #0F53A1);
         border-bottom-left-radius: 100px;
         border-bottom-right-radius: 100px;
+        overflow: visible;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .mobile .mobileTop .imgTop{
+        height: 70px;
+        width: 70px;
+        position: absolute;
+        left: 320px;
+        bottom: 560px;
+        overflow: visible;
+    }
+    .arrow-mob{
+        display: flex;
+        position: absolute;
+        bottom: 615px;
+        left: 30px;
+        overflow: visible;
+        cursor: pointer;
+    }
+    .menu_bar {
+        /* position: fixed;
+        top: 0%;
+        left: 0%;
+        bottom: 0%; */
+        /* background-color: #bd4f3c; */
+        /* width: 350px; */
+        /* position: absolute;
+        top: 0px;
+        left: 10%; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        overflow-y: scroll;
+        margin: 0px ;
+        margin-bottom: 0px;  
+        padding-left: 50px;
+        padding-right: 20px;
+        padding-bottom: 70px;
+    }
+    .menu_bar .text-mob{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        margin-top: 0px;
+    }
+    .menu_bar h3{
+        padding-bottom: 50px;
+        text-align: center;
+    }
+    .menu_bar h3,.menu_bar .sidebar-mobile div{
+        color:#3c98bd;
+        font-size: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .menu_bar .sidebar-mobile div .titles-mob{
+        margin-left: 30px ;
+    }
+    .menu_bar .sidebar-mobile div{
+        padding: 5px;
+        text-align: right;
+    }
+    .menu_bar .sidebar-mobile div:hover{
+        cursor: pointer;
+    }
+    .cross-mob {
+        color: gray;
+        margin-left: 0px;
+        margin-top: 30px;
+        margin-right: 300px;
+        cursor: pointer;
+    }
+    .menu-mob {
+        display: flex;
+        color: white;
+        cursor: pointer;
+        overflow: visible;
+        position: absolute;
+        /* left: 1000px; */
+        bottom: 570px;
+        /* right: 30; */
+    }
+    .menu_bar{
+        background-color: white;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: absolute;
+        /* left: 70%; */
+        right: 0;
+        top: 0;
+        bottom: 0;
+        color: blue;
+        height: 100%;
+    }
+    .menu-mob  {
+        position: absolute;
+        left: 50px;
+        margin-top: 40px;
+        margin-left:0px;
+        margin-right: 50px;
+        margin-bottom: 30px;
+        cursor: pointer;
+    }
+    .mobile-background .title-mob1{
+        display: flex;
+        position: absolute;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        width: 35%;
+        top: 0px;
+        /* padding-top: -200px;
+        padding-bottom: 90px; */
+    }
+    .mobile-background .title-mob1 h1{
+        font-size: 30px;
+        width: 200px;
+        position: absolute;
+        left: 450px;
+        top: 95px;
+    }
+    .mobile-background .title-mob1 p{
+        font-size: 25px;
+        position: absolute;
+        top: 95px;
+        width: 250px;
+        left: 180px;
+        margin-right: 0px;
+    }
+    .mobile-middle{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .mobile-middle .img{
+        width: 70%;
+        height: 60%;
+        margin-right: 780px;
+        top: 180PX;
+        position: absolute;
+        overflow: scroll;
+        overflow-y: scroll;
+        border: 3px dashed #3c98bd;
+        border-radius: 15px;
+        display: block;
+        overflow-x: hidden;
+    }
+    .mobile-middle .img img{
+        width: 100%;
+    }
+    .mobile-bottom img{
+        position: absolute;
+        width: 50px;
+        top: 585px;
+        right: 120px;
+    }
+    .mobile-bottom p{
+        position: absolute;
+        font-size: 20px;
+        width: 200px;
+        top: 600px;
+        right: 120px;
     }
 }
 @media only screen and (max-width: 576px ) and (min-width:360px){
@@ -546,28 +726,172 @@ lesson.css
     .mobile{
         display: flex;
         height: 100%;
-    }
-    .mobile .mobileTop .svg{
-        display: flex;
         width: 100%;
-        height: 166.076px;
+        display: flex;
+        }
+    .mobile .mobileTop .mobile-background img{
+        /* background-color: rgb(153, 51, 51); */
+        width:576px;
+        height: 150.076px;
+        background-color: #3C98BD;
         background-image: linear-gradient( #3C98BD, #0F53A1);
         border-bottom-left-radius: 100px;
         border-bottom-right-radius: 100px;
+        overflow: visible;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-    /* .mobile .mobileTop .svg{
+    .mobile .mobileTop .imgTop{
+        height: 65px;
+        width: 65px;
+        position: absolute;
+        left: 250px;
+        bottom: 560px;
+        overflow: visible;
+    }
+    .arrow-mob{
+        display: flex;
+        position: absolute;
+        bottom: 600px;
+        left: 30px;
+        overflow: visible;
+        cursor: pointer;
+    }
+    .menu_bar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        overflow-y: scroll;
+        margin: 0px ;
+        margin-bottom: 0px;  
+        padding-left: 0px;
+        padding-right: 5px;
+        padding-bottom: 70px;
+    }
+    .menu_bar .text-mob{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        margin-top: 0px;
+    }
+    .menu_bar h3{
+        padding-bottom: 40px;
+        text-align: center;
+    }
+    .menu_bar h3,.menu_bar .sidebar-mobile div{
+        color:#3c98bd;
+        font-size: 19px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .menu_bar .sidebar-mobile div .titles-mob{
+        margin-left: 40px ;
+    }
+    .menu_bar .sidebar-mobile div{
+        padding: 5px;
+        text-align: right;
+    }
+    .menu_bar .sidebar-mobile div:hover{
+        cursor: pointer;
+    }
+    .cross-mob {
+        color: gray;
+        margin-left: 30px;
+        margin-top: 20px;
+        margin-right: 300px;
+        cursor: pointer;
+    }
+    .menu-mob {
+        display: flex;
+        color: white;
+        cursor: pointer;
+        overflow: visible;
+        position: absolute;
+        /* left: 1000px; */
+        bottom: 590px;
+        right: 20px;
+        left: 500px;
+        /* right: 30; */
+    }
+    .menu_bar{
+        background-color: rgb(253, 251, 251);
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: absolute;
+        /* left: 70%; */
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+    }
+    .mobile-background .title-mob1{
+        display: flex;
+        position: absolute;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        width: 35%;
+        top: 0px;
+        color: white;
+        /* padding-top: -200px;
+        padding-bottom: 90px; */
+    }
+    .mobile-background .title-mob1 h1{
+        font-size: 25px;
+        width: 200px;
+        position: absolute;
+        left: 380px;
+        top: 95px;
+    }
+    .mobile-background .title-mob1 p{
+        font-size: 25px;
+        position: absolute;
+        top: 95px;
+        width: 250px;
+        left: 240px;
+        margin-right: 0px;
+    }
+    .mobile-middle{
         display: flex;
         align-items: center;
         justify-content: center;
-    } */
-    .between .img img{
-        width: 100%;
-        padding-left: 0px;
-        padding-right: 500px;
-        height: 1300px;
+    }
+    .mobile-middle .img{
+        width: 70%;
+        height: 60%;
+        margin-right: 600px;
+        top: 180PX;
+        position: absolute;
+        overflow: scroll;
         overflow-y: scroll;
-        border: 4px dashed #3c98bd;
+        border: 3px dashed #3c98bd;
         border-radius: 15px;
+        display: block;
+        overflow-x: hidden;
+    }
+    .mobile-middle .img img{
+        width: 100%;
+    }
+    .mobile-bottom img{
+        position: absolute;
+        width: 40px;
+        top: 575px;
+        right: 100px;
+    }
+    .mobile-bottom p{
+        position: absolute;
+        font-size: 18px;
+        width: 200px;
+        top: 590px;
+        right: 80px;
     }
 }
 @media only screen and (max-width: 360px) and (min-width: 100px){
@@ -576,17 +900,177 @@ lesson.css
     }  
     .mobile{
         display: flex;
-
         height: 100%;
-    }
-    .mobile .mobileTop{
-        display: flex;
         width: 100%;
-        height: 166.076px;
-        background-color: red;
+        display: flex;
+        }
+    .mobile .mobileTop .mobile-background img{
+        /* background-color: rgb(153, 51, 51); */
+        width:360px;
+        height: 150.076px;
+        background-color: #3C98BD;
         background-image: linear-gradient( #3C98BD, #0F53A1);
         border-bottom-left-radius: 100px;
         border-bottom-right-radius: 100px;
-        clip-path: polygon(97% 60%, 1% 58%, 100% 60%, 78% 94%, 21% 94%, 0% 60%, 40% 60%);
+        overflow: visible;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .mobile .mobileTop .imgTop{
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        left: 160px;
+        bottom: 570px;
+        overflow: visible;
+    }
+    .arrow-mob{
+        display: flex;
+        position: absolute;
+        bottom: 615px;
+        left: 30px;
+        overflow: visible;
+        cursor: pointer;
+    }
+    .menu_bar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        overflow-y: scroll;
+        margin: 0px ;
+        margin-bottom: 0px;  
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 70px;
+    }
+    .mob-side img{
+        width: 50px;
+    }
+    .menu_bar .text-mob{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        margin-top: 0px;
+    }
+    .menu_bar h3{
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    .menu_bar h3,.menu_bar .sidebar-mobile div{
+        color:#3c98bd;
+        font-size: 13px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .menu_bar .sidebar-mobile div .titles-mob{
+        margin-left: 50px ;
+    }
+    .menu_bar .sidebar-mobile div{
+        padding: 5px;
+        text-align: right;
+        padding-left: 0px;
+    }
+    .menu_bar .sidebar-mobile div:hover{
+        cursor: pointer;
+    }
+    .cross-mob {
+        color: gray;
+        margin-left: 30px;
+        margin-top: 20px;
+        margin-right: 150px;
+        cursor: pointer;
+    }
+    .menu-mob {
+        display: flex;
+        color: white;
+        cursor: pointer;
+        overflow: visible;
+        position: absolute;
+        /* left: 1000px; */
+        bottom: 610px;
+        right: 40px;
+        left: 300px;
+        /* right: 30; */
+    }
+    .menu_bar{
+        background-color: rgb(253, 251, 251);
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: absolute;
+        /* left: 70%; */
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+    }
+    .mobile-background .title-mob1{
+        display: flex;
+        color: white;
+        position: absolute;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        width: 35%;
+        top: 0px;
+        /* padding-top: -200px;
+        padding-bottom: 90px; */
+    }
+    .mobile-background .title-mob1 h1{
+        font-size: 16px;
+        width: 100px;
+        position: absolute;
+        left: 230px;
+        padding-left: 0px;
+        top: 95px;
+    }
+    .mobile-background .title-mob1 p{
+        font-size: 18px;
+        position: absolute;
+        top: 95px;
+        width: 150px;
+        text-align: center;
+        left: 80px;
+    }
+    .mobile-middle{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .mobile-middle .img{
+        width: 70%;
+        height: 65%;
+        margin-right: 360px;
+        top: 170px;
+        position: absolute;
+        overflow: scroll;
+        overflow-y: scroll;
+        border: 2px dashed #3c98bd;
+        border-radius: 15px;
+        display: block;
+        overflow-x: hidden;
+    }
+    .mobile-middle .img img{
+        width: 100%;
+    }
+    .mobile-bottom img{
+        position: absolute;
+        width: 25px;
+        top: 610px;
+        right: 60px;
+    }
+    .mobile-bottom p{
+        position: absolute;
+        font-size: 12px;
+        width: 115px;
+        top: 615px;
+        right: 60px;
     }
 }

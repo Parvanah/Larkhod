@@ -45,7 +45,12 @@ const Grads = ({ t }) => {
       top.current.scrollIntoView({behavier: "smooth"});
       setScrollState("top")
      }
-   return (
+
+     if (userInfo !== null){
+      return navigate("/header");
+    }
+    else{
+      return (
 
         <div className='all-grade-n'>
      <div className="all-grade-N">
@@ -123,5 +128,6 @@ const Grads = ({ t }) => {
    </div>
    </div> 
    )
+    }
 }
 export default  withNamespaces()(Grads) ;

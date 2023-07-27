@@ -9,13 +9,9 @@ import { FaGoogle } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import img1 from '../../assets/mg.png';
 import React from 'react'
-import img3 from '../../assets/logo_3.png'
+import img3 from '../../assets/logo_3.png';
 // import React from 'react'
 <link rel="stylesheet" href="LogIn.css" />;
-
-
-
-
 
 const LogIn = ({ t }) => {
   const { isLoading, login } = useContext(AuthContext);
