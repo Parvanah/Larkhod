@@ -18,6 +18,12 @@ const Lessons = ({ t }) => {
   const lessons = locationData.lessons;
   console.log(lessons);
   const unit = locationData.title;
+
+  // const lesson_path = locationData.lesson_path;
+  // const subject_path = locationData.subject_path;
+  // console.log(subject_path + lesson_path[0]);
+  // console.log(subject_path + lesson_path[1]);
+
   const [title, setTitle] = useState("");
   return (
     <body> 

@@ -24,7 +24,7 @@ const Section = ({ t }) => {
     i18n.changeLanguage(lng);
   }
 
-  
+  const base_path = "https://larkhoad.s3.ap-south-1.amazonaws.com";
   // const navigate = useNavigation();
   const pic =
     "C:\\UsersKhatima Sadat/Documents/LarkhodeStructure/school_subjectsdari_curriculamprimarysecond_gradeart_subjectlessonslesson_1";
@@ -82,6 +82,7 @@ const Section = ({ t }) => {
             to="/grades"
               state={{
               grades: data.primary.grades,
+              school_path: base_path + data.primary.base_path,
                     }}
           >
             <img src={image1} />
@@ -96,6 +97,7 @@ const Section = ({ t }) => {
             to="/grades"
             state={{
                  grades: data.secondary.grades,
+                 school_path: base_path + data.secondary.base_path,
                   }}
           >
             <img src={image2} />
@@ -110,6 +112,7 @@ const Section = ({ t }) => {
             to="/grades"
             state={{
                   grades: data.high_school.grades,
+                  school_path: base_path + data.high_school.base_path,
                    }}
        
           >

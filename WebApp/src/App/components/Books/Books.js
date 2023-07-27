@@ -18,6 +18,8 @@ const Books = (  {t}) => {
   const locationData = location.state;
   const subjects = locationData.subjects;
   console.log(subjects);
+  const grade_path = locationData.grade_path;
+  
   const navigate = useNavigate();
   const leftScroll = () => {
     const slider = document.getElementById("ul");
@@ -187,7 +189,10 @@ const Books = (  {t}) => {
                   setCurrentpart(item.parts)
                   setCurrentBook(item.label)}}
                   to="/lessons"
-                  state={{ lessons: item.parts, title: " مضمون " + item.label }}
+                  state={{ 
+                   lessons: item.parts, title: " مضمون " + item.label,
+                   subject_path: grade_path + item.subject_path,
+                    }}
                   id="link"
                 >
                   <img src={bookicon} />
@@ -205,7 +210,12 @@ const Books = (  {t}) => {
                   setCurrentLesson("unit");
                   setCurrentpart(item.parts)
                    setCurrentBook(item.label)}}
-                 to="/unit" state={{ units: item.parts }} id="link">
+                 to="/unit" state={{
+
+                   units: item.parts,
+                   subject_path: grade_path + item.subject_path,
+                   
+                   }} id="link">
                   <img src={bookicon} />
                   <div >
                     <p id="h5">{t("books4")} {item.label}</p>

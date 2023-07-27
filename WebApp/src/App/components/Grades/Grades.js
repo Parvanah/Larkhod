@@ -20,6 +20,7 @@ const Grads = ({ t }) => {
   const location = useLocation();
   const locationData = location.state;
   const grades = locationData.grades;
+  const school_path = locationData.school_path;
 
   return (
     <div>
@@ -58,7 +59,10 @@ const Grads = ({ t }) => {
                 className="link-grade"
                 // key={item.id}
                 to="/books"
-                state={{ subjects: item.subjects }}
+                state={{ 
+                subjects: item.subjects,
+                grade_path: school_path + item.grade_path,
+              }}
               >
                 <img className="sanaf-grade" src={sanaf} />
                 <div className="li-grade">{item.label}</div>

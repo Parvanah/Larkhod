@@ -16,6 +16,8 @@ const Units = ({ t }) => {
   const location = useLocation();
   const locationData = location.state;
   const units = locationData.units;
+  const subject_path = locationData.subject_path;
+
   const navigate = useNavigate();
   const slidLeft = () => {
     const slider = document.getElementById("m-section");
@@ -118,7 +120,10 @@ const Units = ({ t }) => {
                 //with units
                 <Link
                   to="/lessons"
-                  state={{ lessons: item.lessons, title: " فصل " + item.label }}
+                  state={{ 
+                    lessons: item.lessons, title: " فصل " + item.label,
+                    subject_path: subject_path,
+                   }}
                 >
                   <img src={sectionicon} />
                   <h3>{item.label}</h3>
