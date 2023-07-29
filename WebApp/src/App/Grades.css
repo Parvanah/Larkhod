@@ -136,7 +136,7 @@ all-grade-n {
 
 	.flesh-image-grade-b {
 		margin-top: 50px;
-		margin-left: 70px;
+		margin-left: 0px;
 	}
 #class-container-n{
 	display: flex;
@@ -159,7 +159,7 @@ all-grade-n {
 	margin-left:80px;
 } 
 .Gimage {
-	width: 550px;
+	width:450px;
 } 
 .G-scrool {
 	background-color: red;

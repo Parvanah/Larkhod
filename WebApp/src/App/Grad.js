@@ -35,9 +35,9 @@ const Grads = ({ t }) => {
     
       var data;
       if (t("sectionlang") == "dari") {
-        data = JsonFiles.dari_curriculum;
+        data = JsonFiles.dari_curriculam;
       } else {
-        data = JsonFiles.pashto_curriculum;
+        data = JsonFiles.pashto_curriculam;
       }
 
   var primary = data.primary.grades;
