@@ -17,11 +17,7 @@ const Grads = ({ t }) => {
   const location = useLocation();
   const locationData = location.state;
   const grades = locationData.grades;
-
-  if (userInfo !== null){
-    return navigate("/header");
-  }
-  else {
+  
     return (
       <div>
         <div className='all-grade'>
@@ -77,6 +73,6 @@ const Grads = ({ t }) => {
         </div>
       </div>
     );
-  }
+  
 };
 export default  withNamespaces()(Grads) ;

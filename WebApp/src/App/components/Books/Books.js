@@ -27,10 +27,6 @@ const Books = (  {t}) => {
     setCurrentLesson,currentpart,
     setCurrentpart} = useContext(AuthContext);
   
-    if (userInfo !== null){
-      return navigate("/header");
-    }
-    else{
       return (
         <div className="Books" id="Books">
           <div className="top">
@@ -290,7 +286,7 @@ const Books = (  {t}) => {
           </div>
         </div>
       );
-    }
+    
 };
 export default  withNamespaces()(Books) ;
 

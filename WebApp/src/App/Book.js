@@ -42,10 +42,6 @@ const Book = ({ t }) => {
     setScrollState("top")
    }
 
-   if (userInfo !== null){
-    return navigate("/header");
-  }
-  else{
     return (
       <div className='Download-all-b'>
           <div className="Bookheader">
@@ -123,6 +119,6 @@ const Book = ({ t }) => {
             </div>
       </div>
        )
-  }
+  
 }
 export default  withNamespaces()(Book) ;

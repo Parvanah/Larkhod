@@ -32,10 +32,7 @@ const Section = ({ t }) => {
   } else {
     data = JsonFiles.pashto_curriculum;
   }
-  if (userInfo !== null){
-    return navigate("/header");
-  }
-  else {
+
     return (
       <div className="section">
         <div className="svg">
@@ -159,7 +156,7 @@ const Section = ({ t }) => {
         </div>
       </div>
     );
-  }
+  
 };
 
 export default  withNamespaces()(Section) ;

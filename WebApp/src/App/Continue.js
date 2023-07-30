@@ -13,16 +13,13 @@ const Continue = () => {
     setCurrentBook} = useContext(AuthContext);
     console.log(currentBook);
 
-    if (userInfo !== null){
-      return navigate("/header");
-    }
-    else{
+   
       return (
         <div>
         {}
         </div>
       )
-    }
+    
 };
 
 export default Continue;

@@ -34,10 +34,7 @@ const Lessons = ({ t }) => {
       setSidebar("none");
     }
   };
-  if (userInfo !== null){
-    return navigate("/header");
-  }
-  else {
+
     return (
       <body> 
         <div className="lesson">
@@ -246,7 +243,7 @@ const Lessons = ({ t }) => {
         
       </body>
     );
-  }
+  
   
 };
 export default  withNamespaces()(Lessons) ;

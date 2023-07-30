@@ -23,10 +23,7 @@ const Units = ({ t }) => {
     slider.scrollLeft = slider.scrollLeft + 500;
   };
 
-  if (userInfo !== null){
-    return navigate("/header");
-  }
-  else {
+ 
     return (
       <div className="units">
         <div className="t-section">
@@ -194,7 +191,7 @@ const Units = ({ t }) => {
         </div>
       </div>
     );
-  }
+  
 };
 
 export default  withNamespaces()(Units) ;

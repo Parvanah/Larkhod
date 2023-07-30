@@ -6,7 +6,6 @@ import { FiMenu } from "react-icons/fi";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import React, { Component, useState } from "react";
-import { useState } from "react";
 import img1 from '../../assets/logo.png';
 import img from '../../assets/larg.png';
 import imgg from '../../assets/smal.png';
@@ -16,7 +15,6 @@ import middleimg from "../../assets/logo_2.png";
 import { ImCross } from "react-icons/im";
 import { AuthContext } from '../../context/AuthContext';
 import {useContext } from 'react';
-
 
 <link rel="stylesheet" href="./Header.css" />;
 const Header = ({ t }, props) => {
@@ -51,7 +49,6 @@ if(currentLesson == "lesson"){
  nav="/unit";
  status={ units: currentpart }; 
 }
-
   return (
     <div className="full_header">
       <nav className="header">

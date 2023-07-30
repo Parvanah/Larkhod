@@ -68,10 +68,6 @@ const Suggestion = ( { t }) => {
 	 }
 	  return errors;
 	};
-  if (userInfo !== null){
-    return navigate("/header");
-  }
-  else{
     return ( 
       <div className="suggestion">
               <div className="sendd-suggestion">
@@ -197,7 +193,6 @@ const Suggestion = ( { t }) => {
        </div>
         </div>
      );
-  }
 }
 export default  withNamespaces()(Suggestion) ;
 

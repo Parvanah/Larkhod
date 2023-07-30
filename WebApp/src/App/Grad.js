@@ -46,10 +46,7 @@ const Grads = ({ t }) => {
       setScrollState("top")
      }
 
-     if (userInfo !== null){
-      return navigate("/header");
-    }
-    else{
+    
       return (
 
         <div className='all-grade-n'>
@@ -128,6 +125,6 @@ const Grads = ({ t }) => {
    </div>
    </div> 
    )
-    }
+    
 }
 export default  withNamespaces()(Grads) ;
