@@ -14,6 +14,9 @@ import image4 from "../../assets/Group_158_bu.png";
 import image1 from "../../assets/Group_201_ww@2x.png";
 import image2 from "../../assets/Group_203@2x.png";
 import image3 from "../../assets/Group_205@2x.png";
+import shape1 from "../../assets/Shape-1.png";
+import shape2 from "../../assets/shape-2.png";
+import Shape3 from "../../assets/Shape-3.png";
 // import { useNavigation } from "react-router-dom";
 
 const Section = ({ t }) => {
@@ -34,6 +37,7 @@ const Section = ({ t }) => {
   }
 
     return (
+      <div className="full-section">
       <div className="section">
         <div className="svg">
           <foreignObject width={"20%"} height={"20%"} x={0} y={0}>
@@ -110,7 +114,6 @@ const Section = ({ t }) => {
               state={{
                     grades: data.high_school.grades,
                      }}
-         
             >
               <img src={image3} />
               <h1>{t("section7")} </h1>
@@ -155,10 +158,83 @@ const Section = ({ t }) => {
           </foreignObject>
         </div>
       </div>
+      <div className='mobile-section'>
+        <div className='mob-sec-header'>
+          <div className="prevuse">
+            <img src={image4} />
+          </div>
+          <div id="title">
+            <h1>{t("section1")}</h1>
+            <p>{t("section2")}</p>
+          </div>
+          <div className='shape-1'>
+            <img src={shape1}/>
+          </div>
+          <div className='shape-2'>
+            <img src={shape2}/>
+          </div>
+        </div>
+        <div className='mob-sec-article'>
+          <ul id="ul-section">
+          <li>
+            <Link
+              to="/grades"
+                state={{
+                grades: data.primary.grades,
+                      }}
+            >
+              <img src={image1} />
+              <h1>{t("section3")}</h1>
+              <p>
+               {t("section4")}
+              </p>
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/grades"
+              state={{
+                   grades: data.secondary.grades,
+                    }}
+            >
+              <img src={image2} />
+              <h1>{t("section5")} </h1>
+              <p>
+              {t("section6")}
+              </p>
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/grades"
+              state={{
+                    grades: data.high_school.grades,
+                     }}
+            >
+              <img src={image3} />
+              <h1>{t("section7")} </h1>
+              <p>
+              {t("section8")}
+              </p>
+              <p></p>
+            </Link>
+          </li>
+          </ul>
+        </div>
+        <div className='mob-sec-bottom'>
+          <div className='shape-3'>
+            <img src={shape2}/>
+          </div>
+          <div className='shape-4'>
+            <img src={Shape3}/>
+          </div>
+        </div>
+        <div/>
+      </div>
+      </div>
+   
     );
-  
 };
-
 export default  withNamespaces()(Section) ;
 
 
