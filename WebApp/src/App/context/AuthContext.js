@@ -166,7 +166,6 @@ export const AuthProvider = ({ children }) => {
       setIsLoading(false);
     }
   };
-
   const information = async (name, lastName, age, grade) => {
     try {
       setIsLoading(true);
