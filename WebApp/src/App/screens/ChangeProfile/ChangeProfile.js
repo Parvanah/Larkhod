@@ -1,4 +1,5 @@
-import i18n from '../../../i18n';
+import { AuthContext } from "../../context/AuthContext";
+import {useContext } from 'react';
 import { withNamespaces } from 'react-i18next';
 import ig from '../../assets/Group_158_jr@2x.png';
 import "./ChangeProfile.css"
@@ -9,18 +10,13 @@ import { Link, useNavigate } from "react-router-dom";
 
 
 const ChangeProfile = ({t}) => {
-	
+	const { userInfo, isLoading } = useContext(AuthContext);
 
-	const changeLanguage = (lng) => {
-		i18n.changeLanguage(lng);
-	  }
 	const initialValues = {name:"", lastname:"", age: "", senf:""};
 	const [formValues, setFormValues] = useState(initialValues);
 	const [formErrors, setFormErrors] = useState({});
 	const [isSubmit, setIsSubmit] = useState(false);
-
 	const navigate = useNavigate();
-  
 	const handleChange = (e) => {
 	  const { name, value } = e.target;
 	  setFormValues({ ...formValues, [name]: value });
@@ -32,7 +28,6 @@ const ChangeProfile = ({t}) => {
 	  setIsSubmit(true);
 	  
 	};
-  
 	useEffect(() => {
 	  console.log(formErrors);
 	  if (Object.keys(formErrors).length === 0 && isSubmit) {
@@ -56,6 +51,13 @@ const ChangeProfile = ({t}) => {
 	 }
 	  return errors;
 	};
+
+	      // const navigation = useNavigate();
+//   if (userInfo === null) {
+//     return navigation("/");
+//   } else if (isLoading) {
+//     return <h1>Loading.....</h1>;
+//   } else if(userInfo !== null){
   return (
     <div>
 		<div>
@@ -73,8 +75,6 @@ const ChangeProfile = ({t}) => {
 		</ellipse>
 	</svg>
 	<div id="Group_change_profile">
-	
-	
 	</div>
 	<button id="nm_change_profile">
 	{t("changeprofile1")}
@@ -159,11 +159,9 @@ const ChangeProfile = ({t}) => {
 		<button className="save_button_change_profile"> {t("changeprofile8")}</button>
       </form>
     </div>
-	
 </div>
     </div>
   )
+	// }
 }
-
-
 export default  withNamespaces()(ChangeProfile) ;

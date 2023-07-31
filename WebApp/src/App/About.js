@@ -1,3 +1,5 @@
+import { AuthContext } from "./context/AuthContext";
+import {useContext } from 'react';
 import i18n from '../i18n';
 import { withNamespaces } from 'react-i18next';
 import logo from './assets/PNG_Format.png';
@@ -11,10 +13,17 @@ import { Link, useNavigate } from "react-router-dom";
  <link rel="stylesheet" href="./About.css" />;
 
 const About = ({ t }) => {
+  const { userInfo, isLoading } = useContext(AuthContext);
   const changeLanguage = (lng) => {
 		i18n.changeLanguage(lng);
 	  }
 
+          // const navigation = useNavigate();
+//   if (userInfo === null) {
+//     return navigation("/");
+//   } else if (isLoading) {
+//     return <h1>Loading.....</h1>;
+//   } else if(userInfo !== null){
   return (
     <div className='all_section_about' id='all_section_about'>
       <div className='about_images'>
@@ -56,5 +65,6 @@ const About = ({ t }) => {
     
     </div>
   )
+// }
 }
 export default  withNamespaces()(About) ;

@@ -1,9 +1,6 @@
-import Spinner from "react-dom";
 import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
-import { Link, useNavigate, useNavigation } from "react-router-dom";
-import { BrowserRouter as Router } from "react-router-dom";
-import i18n from '../../../i18n';
+import { Link, useNavigate } from "react-router-dom";
 import { withNamespaces } from 'react-i18next';
 import { useState, useEffect } from "react";
 import logo from '../../assets/PNG_Format.png';
@@ -14,15 +11,9 @@ import "./ForgotPassword.css"
 import React from 'react'
 <link rel="stylesheet" href="ForgotPassword.css" />;
 
-
 const ForgotPassword = ({ t }) => {
-	const { isLoading, register } = useContext(AuthContext);
-	const changeLanguage = (lng) => {
-		i18n.changeLanguage(lng);
-	  }
-
-
-
+	const { isLoading, register, userInfo } = useContext(AuthContext);
+	// const { register } = useContext(AuthContext);
 	const initialValues = { email: "" };
 	const [formValues, setFormValues] = useState(initialValues);
 	const [formErrors, setFormErrors] = useState({});
@@ -55,10 +46,10 @@ const ForgotPassword = ({ t }) => {
 		errors.email =<>{t("forgotpassword5")}</>;
 	  } else if (!regex.test(values.email)) {
 		errors.email = <>{t("forgotpassword6")}</>;
-		// (t("grads.1"))
 	  }
 	  return errors;
 	};
+	if (userInfo === null) {
   return (
     <div>
 <div id="forgot_password" >
@@ -79,7 +70,6 @@ const ForgotPassword = ({ t }) => {
 			<rect id="mobile_svg_forgot_password" rx="70" ry="70" x="0" y="0" width="360" height="358">
 			</rect>
 		</svg>
-		
 	<div id="para_first_forgot_password">
 	{t("forgotpassword1")}
 	</div>
@@ -88,7 +78,6 @@ const ForgotPassword = ({ t }) => {
 	</div>
 	<div id="logoo_forgot_password">
 	<img id="logo_forgot_password" src={logo}/>
-	{/* <img id='imgg_forgot_password' src={img2}/> */}
 	<img id='imggg_forgot_password' src={img3}/>
 	</div>
 	<Link to='/login' ><img id='imgg_forgot_password' src={img2}/></Link>
@@ -116,8 +105,11 @@ const ForgotPassword = ({ t }) => {
 </div>
     </div>
   )
+} else if (isLoading) {
+	return <h1>Loading.....</h1>;
+  } else {
+	return navigate("/header");
+  }
 }
-
-// export default ForgotPassword;
 export default  withNamespaces()(ForgotPassword) ;
 

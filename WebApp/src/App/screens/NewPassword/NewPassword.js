@@ -1,4 +1,3 @@
-import Spinner from "react-dom";
 import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
 import i18n from '../../../i18n';
@@ -14,25 +13,17 @@ import React from 'react'
 <link rel="stylesheet" href="NewPassword.css" />;
 
 const  NewPassword = ({ t }) => {
-	const { isLoading, register } = useContext(AuthContext);
-	const changeLanguage = (lng) => {
-		i18n.changeLanguage(lng);
-	  }
-
-
-
-
+	
+	const { isLoading, register ,userInfo} = useContext(AuthContext);
 	const initialValues = {password: "", confirmpassword: ""};
 	const [formValues, setFormValues] = useState(initialValues);
 	const [formErrors, setFormErrors] = useState({});
 	const [isSubmit, setIsSubmit] = useState(false);
 	const navigate = useNavigate();
-  
 	const handleChange = (e) => {
 	  const { name, value } = e.target;
 	  setFormValues({ ...formValues, [name]: value });
 	};
-  
 	const handleSubmit = (e) => {
 	  e.preventDefault();
 	  setFormErrors(validate(formValues));
@@ -40,7 +31,6 @@ const  NewPassword = ({ t }) => {
 	  register(formValues.password, formValues.confirmpassword);
 	  setIsSubmit(true);
 	};
-  
 	useEffect(() => {
 	  console.log(formErrors);
 	  if (Object.keys(formErrors).length === 0 && isSubmit) {
@@ -63,6 +53,7 @@ const  NewPassword = ({ t }) => {
 	  
 	  return errors;
 	};
+	if (userInfo === null) {
   return (
     <div>
 <div id="new_password" >
@@ -86,7 +77,6 @@ const  NewPassword = ({ t }) => {
 	<div id="para_first_new_password">
 	{t("newpassword1")}
 	</div>
-	{/* <div className="u_____">{t("newpassword.2")}</div> */}
 	<div id="para_second_new_password">
 	{t("newpassword2")}
 	</div>
@@ -121,13 +111,16 @@ const  NewPassword = ({ t }) => {
               onChange={(e) => handleChange(e)}
             />
              <p  className="error_new_password">{formErrors.confirmpassword}</p>
-	{/* </div> */}
    <button id="button_next_new_password">{t("newpassword5")}</button>
 </form>
-</div>
-	
+</div>	
 </div>
     </div>
   )
+} else if (isLoading) {
+	return <h1>Loading.....</h1>;
+  } else {
+	return navigate("/header");
+  }
 }
 export default  withNamespaces()(NewPassword) ;

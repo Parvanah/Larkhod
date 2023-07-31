@@ -1,3 +1,5 @@
+import { AuthContext } from "./context/AuthContext";
+import {useContext } from 'react';
 import JsonFiles from "./Json Files/SchoolSubjects.json";
 import i18n from '../i18n';
 import { withNamespaces } from 'react-i18next';
@@ -14,7 +16,7 @@ import Dimage from "./assets/Dimage.png";
 import pathimg from "./assets/Path 968.png";
 import line from "./assets/Line 117.png";
 const  Downloading = ({ t }, props) => {
-
+  const { userInfo, isLoading } = useContext(AuthContext);
   const changeLanguage = (lng) => {
 		i18n.changeLanguage(lng);
 	  }
@@ -36,7 +38,12 @@ const  Downloading = ({ t }, props) => {
     setScrollState("top")
    }
 
-
+             // const navigation = useNavigate();
+//   if (userInfo === null) {
+//     return navigation("/");
+//   } else if (isLoading) {
+//     return <h1>Loading.....</h1>;
+//   } else if(userInfo !== null){
     return ( 
         <div> 
       <div  className="d-section">
@@ -1191,6 +1198,7 @@ const  Downloading = ({ t }, props) => {
       
         </div>
      );
+  // }
 }
  
 export default  withNamespaces()(Downloading) ;

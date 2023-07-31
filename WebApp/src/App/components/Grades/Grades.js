@@ -1,7 +1,8 @@
-import i18n from '../../../i18n';
+import { AuthContext } from "../../context/AuthContext";
+import {useContext } from 'react';
+import { useNavigate } from "react-router-dom";
 import { withNamespaces } from 'react-i18next';
 import "./Grades.css"
-import { useEffect, useState } from "react";
 import sanaf from "../../assets/sanaf.png";
 import images from "../../assets/images.png";
 import image from "../../assets/Group_158_a@2x.png";
@@ -9,19 +10,20 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 <link rel="stylesheet" href="Grades.css" />;
 
-
 const Grads = ({ t }) => {
-
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-  }
-
+  const { userInfo, isLoading } = useContext(AuthContext);
 
   const location = useLocation();
   const locationData = location.state;
   const grades = locationData.grades;
   const school_path = locationData.school_path;
 
+      // const navigation = useNavigate();
+//   if (userInfo === null) {
+//     return navigation("/");
+//   } else if (isLoading) {
+//     return <h1>Loading.....</h1>;
+//   } else if(userInfo !== null){
   return (
     <div>
       <div className='all-grade'>
@@ -57,7 +59,6 @@ const Grads = ({ t }) => {
             return (
               <Link
                 className="link-grade"
-                // key={item.id}
                 to="/books"
                 state={{ 
                 subjects: item.subjects,
@@ -80,5 +81,6 @@ const Grads = ({ t }) => {
       </div>
     </div>
   );
+        // }
 };
 export default  withNamespaces()(Grads) ;

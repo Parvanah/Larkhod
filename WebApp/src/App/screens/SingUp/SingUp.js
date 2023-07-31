@@ -1,5 +1,5 @@
 import {useGoogleLogin} from '@react-oauth/google';
-import axios from "axios"
+import axios from "axios";
 import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
 import i18n from '../../../i18n';
@@ -11,16 +11,8 @@ import img1 from "../../assets/mg.png";
 import React from "react";
 import { Link, useNavigate, useNavigation } from "react-router-dom";
 <link rel="stylesheet" href="SingUp.css" />;
-// import {GoogleLogin} from '@react-oauth/google';
-// import jwt_decode from "jwt-decode";
-// import { Formik, Field } from "formik";
-// import * as Yup from "yup";
-// import CustomText from "../../CustomText";
-// import Spinner from "react-dom";
-// import { BrowserRouter as Router } from "react-router-dom";
-// import Translation from '../../../db.json';
 
-const SingUp = ({ t }) => {
+const SingUp = ({ t }, props) => {
 
   const login = useGoogleLogin({
     onSuccess: async respose => {
@@ -38,7 +30,7 @@ const SingUp = ({ t }) => {
     }
 });
 
-  const { isLoading, register } = useContext(AuthContext);
+const { isLoading, register, userInfo } = useContext(AuthContext);
  
   const changeLanguage = (lng) => {
 		i18n.changeLanguage(lng);
@@ -112,14 +104,10 @@ const SingUp = ({ t }) => {
     } else if (values.confirmpassword !== values.password) {
       errors.confirmpassword =
       <>{t("singup15")}</>;
-
-
-
     }
-
     return errors;
   };
-
+  if (userInfo === null) {
   return (
     <div>
       <div id="all_singup">
@@ -269,6 +257,11 @@ const SingUp = ({ t }) => {
       </div>
     </div>
   );
+} else if (isLoading) {
+  return <h1>Loading.....</h1>;
+} else {
+  return navigate("/header");
+}
 };
 
 export default  withNamespaces()(SingUp) ;

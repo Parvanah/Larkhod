@@ -1,4 +1,3 @@
-import i18n from '../../../i18n';
 import { withNamespaces } from 'react-i18next';
 import { Link, useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -11,9 +10,9 @@ import imageB3 from "../../assets/B3.png";
 import imageb4 from "../../assets/b4.png";
 import { AuthContext } from "../../context/AuthContext";
 import {useContext } from 'react';
-const Books = (  {t}) => {
+const Books = ({t}, props) => {
 
-
+  const { userInfo, isLoading } = useContext(AuthContext);
   const location = useLocation();
   const locationData = location.state;
   const subjects = locationData.subjects;
@@ -33,6 +32,13 @@ const Books = (  {t}) => {
     setCurrentBook ,currentLesson,
     setCurrentLesson,currentpart,
     setCurrentpart} = useContext(AuthContext);
+
+    // const navigation = useNavigate();
+//   if (userInfo === null) {
+//     return navigation("/");
+//   } else if (isLoading) {
+//     return <h1>Loading.....</h1>;
+//   } else if(userInfo !== null){
   return (
     <div className="Books" id="Books">
       <div className="top">
@@ -308,6 +314,7 @@ const Books = (  {t}) => {
       </div>
     </div>
   );
+// }
 };
 export default  withNamespaces()(Books) ;
 

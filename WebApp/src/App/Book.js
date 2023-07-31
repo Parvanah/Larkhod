@@ -1,3 +1,6 @@
+import { AuthContext } from "./context/AuthContext";
+import {useContext } from 'react';
+import { useNavigate } from "react-router-dom";
 import i18n from '../i18n';
 import { withNamespaces } from 'react-i18next';
 import * as React from "react"
@@ -13,7 +16,7 @@ import JsonFiles from "./Json Files/SchoolSubjects.json";
 
 import './books.css';
 const Book = ({ t }) => {
-
+  const { userInfo, isLoading } = useContext(AuthContext);
   var data;
   if (t("sectionlang") == "dari") {
     data = JsonFiles.dari_curriculam;
@@ -41,6 +44,13 @@ const Book = ({ t }) => {
     top.current.scrollIntoView({behavier: "smooth"});
     setScrollState("top")
    }
+
+             // const navigation = useNavigate();
+//   if (userInfo === null) {
+//     return navigation("/");
+//   } else if (isLoading) {
+//     return <h1>Loading.....</h1>;
+//   } else if(userInfo !== null){
   return (
  <div className='Download-all-b'>
      <div className="Bookheader">
@@ -129,5 +139,6 @@ const Book = ({ t }) => {
        </div>
  </div>
   )
+// }
 }
 export default  withNamespaces()(Book) ;

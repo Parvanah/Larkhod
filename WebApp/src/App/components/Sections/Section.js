@@ -1,31 +1,23 @@
-import i18n from '../../../i18n';
+import { AuthContext } from '../../context/AuthContext';
+import {useContext } from 'react';
 import { withNamespaces } from 'react-i18next';
-// import SchoolSubjects from "../../Json Files/SchoolSubjects.json";
 import JsonFiles from "../../Json Files/SchoolSubjects.json";
 import React from "react";
 import { BrowserRouter as Router, useNavigate } from "react-router-dom";
-// import { Route, Routes } from "react-router-dom";
 import { Link } from "react-router-dom";
-import Grads from "../Grades/Grades";
-// import gradeTwo from "../../Json Files/grade_2_dari.json";
-// import gradeNine from "../../Json Files/grade_9_dari.json";
 import "./Sections.css";
 import image4 from "../../assets/Group_158_bu.png";
 import image1 from "../../assets/Group_201_ww@2x.png";
 import image2 from "../../assets/Group_203@2x.png";
 import image3 from "../../assets/Group_205@2x.png";
-// import { useNavigation } from "react-router-dom";
 
-const Section = ({ t }) => {
-  // const navigate = useNavigation();
+
+const Section = ({ t }, props) => {
+ 
     "C:\\UsersKhatima Sadat/Documents/LarkhodeStructure/school_subjectsdari_curriculamprimarysecond_gradeart_subjectlessonslesson_1";
       const navigate = useNavigate();
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-  }
-
+      const { userInfo, isLoading } = useContext(AuthContext);
   const base_path = "https://larkhoad.s3.ap-south-1.amazonaws.com";
-  // const navigate = useNavigation();
   const pic =
     "C:\\UsersKhatima Sadat/Documents/LarkhodeStructure/school_subjectsdari_curriculamprimarysecond_gradeart_subjectlessonslesson_1";
     var data;
@@ -34,6 +26,13 @@ const Section = ({ t }) => {
   } else {
     data = JsonFiles.pashto_curriculam;
   }
+
+  // const navigation = useNavigate();
+  // if (userInfo == null) {
+  //   return navigation("/");
+  // } else if (isLoading) {
+  //   return <h1>Loading.....</h1>;
+  // } else {
   return (
     <div className="section">
       <div className="svg">
@@ -42,7 +41,7 @@ const Section = ({ t }) => {
             xmlns="http://www.w3.org/2000/svg"
             width={92.512}
             height={93.517}
-            // {...props}
+            {...props}
           >
             <g fill="none">
               <path d="M92.513 27.682 21.475 93.516.001-.001Z" />
@@ -60,7 +59,7 @@ const Section = ({ t }) => {
             xmlns="http://www.w3.org/2000/svg"
             width={95.444}
             height={83.662}
-            // {...props}
+            {...props}
           >
             <path
               fill="#e6e6e6"
@@ -131,7 +130,7 @@ const Section = ({ t }) => {
             xmlns="http://www.w3.org/2000/svg"
             width={95.444}
             height={83.662}
-            // {...props}
+            {...props}
           >
             <path
               fill="#e6e6e6"
@@ -160,6 +159,7 @@ const Section = ({ t }) => {
       </div>
     </div>
   );
+  //  }
 };
 
 export default  withNamespaces()(Section) ;

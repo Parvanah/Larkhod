@@ -1,4 +1,5 @@
-import i18n from '../../../i18n';
+import { AuthContext } from "../../context/AuthContext";
+import {useContext } from 'react';
 import { withNamespaces } from 'react-i18next';
 import * as React from "react";
 import { Link, useLocation } from "react-router-dom";
@@ -7,11 +8,9 @@ import "./Unit.css";
 import sectionicon from "../../assets/Group_374.png";
 import imageU from "../../assets/Group_158_a@2x.png"
 import imagel from "../../assets/U.png";
-// import {HiChevronLeft,HiChevronRight } from "react-icons/hi";
-import photo3 from "../../assets/Group_158.png";
-const Units = ({ t }) => {
-  
 
+const Units = ({ t }) => {
+  const { userInfo, isLoading } = useContext(AuthContext);
   // getting props that passed from Books to Unit
   const location = useLocation();
   const locationData = location.state;
@@ -27,7 +26,12 @@ const Units = ({ t }) => {
     const slider = document.getElementById("m-section");
     slider.scrollLeft = slider.scrollLeft + 500;
   };
-
+        // const navigation = useNavigate();
+//   if (userInfo === null) {
+//     return navigation("/");
+//   } else if (isLoading) {
+//     return <h1>Loading.....</h1>;
+//   } else if(userInfo !== null){
   return (
     <div className="units">
       <div className="t-section">
@@ -180,6 +184,7 @@ const Units = ({ t }) => {
       </div>
     </div>
   );
+      // }
 };
 
 export default  withNamespaces()(Units) ;

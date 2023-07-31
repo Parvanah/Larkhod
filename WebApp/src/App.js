@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { AuthContext } from "./App/context/AuthContext";
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
@@ -19,10 +21,11 @@ import Downloading from "./App/Downloading";
 import Continue from "./App/Continue";
 import About from "./App/About";
 import Suggestion from "./App/Suggestion";
-import Profile from "./App/screens/Profile/Profile";
 import ChangeProfile from "./App/screens/ChangeProfile/ChangeProfile";
 
 function App() {
+  const { userInfo } = useContext(AuthContext);
+  console.log(userInfo);
   return (
     <Router>
       <Routes>
@@ -39,7 +42,11 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/suggestion" element={<Suggestion />} />
         <Route path="/changeprofile" element={<ChangeProfile />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route
+          exact
+          path="/"
+          element={userInfo === null ? <SingUp /> : <Header />}
+        />
         <Route exact path="/" element={<SingUp />} />
         <Route exact path="/login" element={<LogIn />} />
         <Route exact path="/forgotpassword" element={<ForgotPassword />} />
@@ -51,4 +58,3 @@ function App() {
 }
 
 export default App;
-// finally

@@ -1,7 +1,5 @@
-import Spinner from "react-dom";
 import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
-import i18n from '../../../i18n';
 import { withNamespaces } from 'react-i18next';
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -14,20 +12,12 @@ import React from 'react'
 <link rel="stylesheet" href="SendCode.css" />;
 
 const SendCode = ({ t } ) => {
-	const { isLoading, register } = useContext(AuthContext);
-	
-
-	const changeLanguage = (lng) => {
-		i18n.changeLanguage(lng);
-	  }
-
-
+	const { isLoading, register, userInfo } = useContext(AuthContext);
 	const initialValues = { code: "" };
 	const [formValues, setFormValues] = useState(initialValues);
 	const [formErrors, setFormErrors] = useState({});
 	const [isSubmit, setIsSubmit] = useState(false);
-	const navigate = useNavigate();
-  
+	const navigate = useNavigate(); 
 	const handleChange = (e) => {
 	  const { name, value } = e.target;
 	  setFormValues({ ...formValues, [name]: value });
@@ -56,11 +46,9 @@ const SendCode = ({ t } ) => {
       else if (values.code.length < 6) {
         errors.code =<>{t("sendcode6")}</>;
       }
-    //   else if (!regex.test(values.code)) {
-	// 	errors.code = "!این کد معتبر نیست";
-	//   }
 	  return errors;
 	};
+	if (userInfo === null) {
   return (
     <div>
 <div id="send_code" >
@@ -84,8 +72,6 @@ const SendCode = ({ t } ) => {
 	<div id="para_first_send_code">
 	{t("sendcode1")}
 	</div>
-	{/* <div className="u______">{t("sendcode.2")}</div>
-    <div className="u__">{t("sendcode.3")} </div> */}
 	<div id="para_second_send_code">
 	{t("sendcode2")}
 	</div>
@@ -102,7 +88,6 @@ const SendCode = ({ t } ) => {
 )}
 <div id="form_send_code">
 <form onSubmit={handleSubmit}>
-	{/* <div className="input_next"> */}
 	<input
 	  id="input_next_send_code"
 		type="code"
@@ -112,7 +97,6 @@ const SendCode = ({ t } ) => {
 		onChange={(e) => handleChange(e)}
 	  />
 	  <p  className="error_send_code">{formErrors.code}</p>
-	{/* </div> */}
    <button id="button_next_send_code">{t("sendcode4")}</button>
 </form>
 </div>
@@ -120,5 +104,10 @@ const SendCode = ({ t } ) => {
 </div>
     </div>
   )
+} else if (isLoading) {
+	return <h1>Loading.....</h1>;
+  } else {
+	return navigate("/header");
+  }
 }
 export default  withNamespaces()(SendCode) ;

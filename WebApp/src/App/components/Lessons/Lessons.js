@@ -1,4 +1,6 @@
-import i18n from '../../../i18n';
+import { AuthContext } from "../../context/AuthContext";
+import {useContext } from 'react';
+import { useNavigate } from "react-router-dom";
 import { withNamespaces } from 'react-i18next';
 import { Link, useLocation } from "react-router-dom";
 import * as React from "react";
@@ -9,8 +11,8 @@ import photo2 from "../../assets/lesson_1.jpg";
 import photo3 from "../../assets/Group_408.png";
 import photo4 from "../../assets/Group_404.png";
 import photo5 from "../../assets/Group_158_a@2x.png";
-// import photo6 from "../../assets/Group407.png";
 const Lessons = ({ t }) => {
+  const { userInfo, isLoading } = useContext(AuthContext);
 
   var [num, setNum] = useState(1);
   const location = useLocation();
@@ -19,12 +21,19 @@ const Lessons = ({ t }) => {
   console.log(lessons);
   const unit = locationData.title;
 
-  // const lesson_path = locationData.lesson_path;
-  // const subject_path = locationData.subject_path;
+  const [lesson_path , setLessonPath] = useState();
+  const subject_path = locationData.subject_path;
   // console.log(subject_path + lesson_path[0]);
   // console.log(subject_path + lesson_path[1]);
 
   const [title, setTitle] = useState("");
+
+        // const navigation = useNavigate();
+//   if (userInfo === null) {
+//     return navigation("/");
+//   } else if (isLoading) {
+//     return <h1>Loading.....</h1>;
+//   } else if(userInfo !== null){
   return (
     <body> 
       <div className="lesson">
@@ -69,6 +78,7 @@ const Lessons = ({ t }) => {
                     <div
                       onClick={() => {
                         setTitle(item.label);
+                        setLessonPath(subject_path + item.paths[0]);
                       }}
                       className="titles"
                     >
@@ -92,7 +102,7 @@ const Lessons = ({ t }) => {
         </div>
         <div className="bottom">
           <div className="img">
-            <img src={photo2}></img>
+            <img src={lesson_path}></img>
           </div>
         </div>
         <div className="midlle">
@@ -181,18 +191,11 @@ const Lessons = ({ t }) => {
           </svg>
        </div>
         </div>  
-        <div className="between">
-          <div className="img">
-            <img src={photo2}></img>
-          </div>
-        </div> 
-       <div>
-
-</div>
       </div>
       
     </body>
   );
+            // }
 };
 export default  withNamespaces()(Lessons) ;
 

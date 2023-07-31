@@ -14,12 +14,6 @@ import { Link, useNavigate } from "react-router-dom";
 const Suggestion = ( { t }) => {
   const { isLoading, register } = useContext(AuthContext);
 
-  const changeLanguage = (lng) => {
-		i18n.changeLanguage(lng);
-	  }
-
-
-
     const initialValues = {name:"", message:"", city: "", email: "", phone: "", senf:""};
 	const [formValues, setFormValues] = useState(initialValues);
 	const [formErrors, setFormErrors] = useState({});
@@ -73,6 +67,12 @@ const Suggestion = ( { t }) => {
 	 }
 	  return errors;
 	};
+              // const navigation = useNavigate();
+//   if (userInfo === null) {
+//     return navigation("/");
+//   } else if (isLoading) {
+//     return <h1>Loading.....</h1>;
+//   } else if(userInfo !== null){
     return ( 
       <div className="suggestion">
               <div className="sendd-suggestion">
@@ -198,6 +198,7 @@ const Suggestion = ( { t }) => {
        </div>
         </div>
      );
+  // }
 }
 export default  withNamespaces()(Suggestion) ;
 

@@ -1,8 +1,6 @@
-import Spinner from "react-dom";
 import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
 import { Link, useNavigate, useNavigation } from "react-router-dom";
-import i18n from '../../../i18n';
 import { withNamespaces } from 'react-i18next';
 import "./LogIn.css"
 import { FaGoogle } from "react-icons/fa";
@@ -10,15 +8,10 @@ import { useState, useEffect } from "react";
 import img1 from '../../assets/mg.png';
 import React from 'react'
 import img3 from '../../assets/logo_3.png'
-// import React from 'react'
 <link rel="stylesheet" href="LogIn.css" />;
 
-
-
-
-
-const LogIn = ({ t }) => {
-  const { isLoading, login } = useContext(AuthContext);
+const LogIn = ({ t }, props) => {
+  const { isLoading, login, userInfo } = useContext(AuthContext);
   const initialValues = {
     email: "",
     password: "",
@@ -40,25 +33,6 @@ const LogIn = ({ t }) => {
     login( formValues.email, formValues.password);
     setIsSubmit(true);
   };
-
-
-  // const initialValues = { email: "", password: "", };
-  // const [formValues, setFormValues] = useState(initialValues);
-  // const [formErrors, setFormErrors] = useState({});
-  // const [isSubmit, setIsSubmit] = useState(false);
-  // const navigate = useNavigate();
-
-  // const handleChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setFormValues({ ...formValues, [name]: value });
-  // };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   setFormErrors(validate(formValues));
-  //   setIsSubmit(true);
-  // };
-
   useEffect(() => {
     console.log(formErrors);
     if (Object.keys(formErrors).length === 0 && isSubmit) {
@@ -81,6 +55,7 @@ const LogIn = ({ t }) => {
     
     return errors;
   };
+  if (userInfo === null) {
   return (
     <div>
       
@@ -144,19 +119,15 @@ const LogIn = ({ t }) => {
       <button className="google_button_singup">
       <FaGoogle className="google_icon_login" />
         <div className="google_p_login">{t("login8")}</div>
-        
-
 </button>
-  
       </Link>
-      
     </div>
 </div>
 <div className='Mobile_lr'>
  <div className="M-img">
 <div id="M-arrow">
  <Link to="/SingUp"> <svg xmlns="http://www.w3.org/2000/svg" width={16} height={10} 
-//  {...props} 
+ {...props} 
  className='M-arrow'>
     <defs>
       <clipPath id="a">
@@ -230,7 +201,12 @@ const LogIn = ({ t }) => {
 </div>
 
     </div>
-  )
+  );
+} else if (userInfo !== null) {
+  return navigate("/header");
+} else if (isLoading) {
+  return <h1>Loading.....</h1>;
 }
+};
 export default  withNamespaces()(LogIn) ;
 

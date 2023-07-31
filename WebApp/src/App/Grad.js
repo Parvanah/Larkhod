@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import * as React from "react";
 import { useRef } from 'react';
 import i18n from '../i18n';
@@ -28,10 +29,7 @@ import "./Grades.css";
 //    setScrollState("top")
 //   }
 const Grads = ({ t }) => {
-  
-    const changeLanguage = (lng) => {
-		i18n.changeLanguage(lng);
-	  }
+  const { userInfo, isLoading } = useContext(AuthContext);
     
       var data;
       if (t("sectionlang") == "dari") {
@@ -58,6 +56,13 @@ const Grads = ({ t }) => {
       top.current.scrollIntoView({behavier: "smooth"});
       setScrollState("top")
      }
+
+                 // const navigation = useNavigate();
+//   if (userInfo === null) {
+//     return navigation("/");
+//   } else if (isLoading) {
+//     return <h1>Loading.....</h1>;
+//   } else if(userInfo !== null){
    return (
 
         <div className='all-grade-n'>
@@ -136,5 +141,6 @@ const Grads = ({ t }) => {
    </div>
    </div> 
    )
+  // }
 }
 export default  withNamespaces()(Grads) ;

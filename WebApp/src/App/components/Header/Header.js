@@ -1,4 +1,4 @@
-import i18n from '../../../i18n';
+import { useNavigate } from "react-router-dom";
 import { withNamespaces } from 'react-i18next';
 import { FaUser } from "react-icons/fa";
 import "./Header.css";
@@ -14,16 +14,14 @@ import {useContext } from 'react';
 
 <link rel="stylesheet" href="./Header.css" />;
 const Header = ({ t }, props) => {
-
+  const { Loggout, userInfo, isLoading } = useContext(AuthContext);
   const[openProfile, setOpenProfile]= useState(false)
   const {currentState,
     setCurrentState , currentBook,
     setCurrentBook ,currentLesson,
     setCurrentLesson,currentpart,
     setCurrentpart} = useContext(AuthContext);
-   function handleClick(lang) {
-    // i18next.changeLanguage(lang)
-  }
+
   console.log(currentLesson);
   console.log(currentpart);
 var nav;
@@ -36,7 +34,12 @@ if(currentLesson == "lesson"){
  nav="/unit";
  status={ units: currentpart }; 
 }
-
+// const navigation = useNavigate();
+//   if (userInfo === null) {
+//     return navigation("/");
+//   } else if (isLoading) {
+//     return <h1>Loading.....</h1>;
+//   } else if(userInfo !== null){
   return (
     <div className="full_header">
       <nav className="header">
@@ -81,11 +84,6 @@ if(currentLesson == "lesson"){
             </li>
             <hr className="vi_header" />
           </ul>
-          {/* <div className="icon_header">
-            <Link className="link_nav_header" to="/changeprofile">
-              <FaUser />
-            </Link>
-          </div> */}
            <div className="icon_header" onClick={()=> setOpenProfile((prev)=> !prev)}>
             <FaUser />
         </div>
@@ -93,8 +91,9 @@ if(currentLesson == "lesson"){
           openProfile &&   <div className="flex flex-col dropDownProfile">
           <ul  className="flex flex-col gap-4">
           <Link  to="/changeprofile"> <li className="changefrofilr_button_header">عکس نمایه</li>  </Link>
-        
-            <li>خروج</li>
+            <li className="changefrofilr_button_header"> <Link to="/" onClick={() => Loggout()}>
+                      <input type="button" value="خروج" />
+                    </Link></li>
           </ul>
         </div>
         }
@@ -135,6 +134,7 @@ if(currentLesson == "lesson"){
    </div>
     </div>
   );
+  // }
 };
 export default  withNamespaces()(Header) ;
 
