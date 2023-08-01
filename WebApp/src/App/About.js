@@ -14,9 +14,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 const About = ({ t }) => {
   const { userInfo, isLoading } = useContext(AuthContext);
-  const changeLanguage = (lng) => {
-		i18n.changeLanguage(lng);
-	  }
+
 
           // const navigation = useNavigate();
 //   if (userInfo === null) {

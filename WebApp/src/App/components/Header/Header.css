@@ -71,7 +71,7 @@
 .dropDownProfile{
     position: absolute;
     top:5rem;
-    right: 2.5rem;
+    right: 5rem;
     width: 120px;
     padding: 15px;
     border-radius: 8px;
@@ -95,7 +95,13 @@
 }
 .changefrofilr_button_header{
     border-bottom: 1px solid rgb(231, 228, 228) !important;
-    color:rgba(60,152,189,1) ;
+    color:rgba(60,152,189,1) !important;
+    cursor: pointer !important;
+    /* width: 120px; */
+}
+.logt_button_headerou{
+    /* border-bottom: 1px solid rgb(231, 228, 228) !important; */
+    color:rgba(60,152,189,1) !important;
     cursor: pointer !important;
     /* width: 120px; */
 }

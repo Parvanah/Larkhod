@@ -90,9 +90,10 @@ if(currentLesson == "lesson"){
         {
           openProfile &&   <div className="flex flex-col dropDownProfile">
           <ul  className="flex flex-col gap-4">
-          <Link  to="/changeprofile"> <li className="changefrofilr_button_header">عکس نمایه</li>  </Link>
-            <li className="changefrofilr_button_header"> <Link to="/" onClick={() => Loggout()}>
-                      <input type="button" value="خروج" />
+          <Link  to="/changeprofile"> <li className="changefrofilr_button_header">  {t("header9")} </li>  </Link>
+            <li > <Link to="/" className="logt_button_headerou" onClick={() => Loggout()}>
+            {t("header10")}
+                      <input type="button" value="" />
                     </Link></li>
           </ul>
         </div>

@@ -93,6 +93,9 @@ const { isLoading, register, userInfo } = useContext(AuthContext);
     } else if (!regex.test(values.email)) {
       errors.email =  <>{t('singup11')}</>;
     }
+    // else if (!regex.test(values.email)) {
+    //   errors.email =  <>{t('singup11')}</>;
+    // }
     if (!values.password) {
       errors.password = <>{t('singup12')}</>;
     } else if (values.password.length < 8) {
