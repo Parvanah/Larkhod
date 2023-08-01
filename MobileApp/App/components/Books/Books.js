@@ -99,6 +99,7 @@ const Books = (props) => {
                       lessons: item.parts,
                       title: t("Books.1") + item.label,
                       subject_path: grade_path + item.subject_path,
+                      unit_page: "",
                       params: {
                         id: item.id,
                         name: item.name,
@@ -131,6 +132,7 @@ const Books = (props) => {
                       lessons: item.parts,
                       title: t("Books.1") + item.label,
                       subject_path: grade_path + item.subject_path,
+                      unit_page: "",
                       params: {
                         id: item.id,
                         name: item.name,
