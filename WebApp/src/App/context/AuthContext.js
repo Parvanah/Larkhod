@@ -1,7 +1,13 @@
 import { BASE_URL } from "../config";
 import { AsyncStorage } from "react";
 import axios from "axios";
-import React, {setStatusCode, Authorization, createContext, useEffect, useState } from "react";
+import React, {
+  setStatusCode,
+  Authorization,
+  createContext,
+  useEffect,
+  useState,
+} from "react";
 axios.defaults.baseURL = "http://192.168.43.29:8000/api/v1";
 axios.defaults.timeout = 3000;
 
@@ -16,10 +22,11 @@ export const AuthProvider = ({ children }) => {
   const [password, setPassword] = useState(null);
   const [email, setEmail] = useState(null);
   // const [name, setName] = useState(null);
-  const [currentBook , setCurrentBook]  = useState();
+  const [currentBook, setCurrentBook] = useState();
   const [currentState, setCurrentState] = useState();
   const [currentLesson, setCurrentLesson] = useState();
   const [currentpart, setCurrentpart] = useState();
+  const [backendError, setBackendError] = useState("");
   const Authorization = async (status, token, errorMessage) => {
     try {
       const res = await axios
@@ -50,7 +57,7 @@ export const AuthProvider = ({ children }) => {
         password,
         name,
       });
-      console.log(response.data); 
+      console.log(response.data);
       setIsLoading(false);
     } catch (error) {
       console.log(email);
@@ -75,10 +82,12 @@ export const AuthProvider = ({ children }) => {
       const statusCode = response?.status;
       console.log(userInfo);
       console.log("done");
+      setBackendError("");
       Authorization(statusCode, response?.data?.token, "Successfully");
       setIsLoading(false);
     } catch (error) {
       console.log(error?.response?.data);
+      setBackendError(error.response.data.message);
       setUserInfo(null);
       console.log(error?.response?.status);
       setStatusCode(error?.response?.status);
@@ -283,12 +292,12 @@ export const AuthProvider = ({ children }) => {
         currentLesson,
         setCurrentLesson,
         currentpart,
-        setCurrentpart
+        setCurrentpart,
+        backendError,
+        setBackendError,
       }}
     >
       {children}
     </AuthContext.Provider>
   );
 };
-
-

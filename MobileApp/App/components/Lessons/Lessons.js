@@ -37,9 +37,10 @@ const Lessons = (props) => {
   var [num, setNum] = useState(1);
   const { t, i18n } = useTranslation();
   const subject_path = route.params.subject_path;
-  const unit_page = route.params.lesson_path;
+  const lesson_pages = route.params.lesson_path;
+  const unit_page = route.params.unit_page;
   console.log(subject_path);
-  console.log("unit pages", unit_page);
+  console.log("unit pages", lesson_pages);
   const path = "../../assets";
   return (
     <View style={style.container}>
@@ -110,6 +111,29 @@ const Lessons = (props) => {
           paddingBottom: verticalScale(245),
         }}
       >
+        {unit_page !== "" ? (
+          <View style={style.unitbottom}>
+            <TouchableOpacity
+              style={style.unitbtn}
+              onPress={() => {
+                navigation.navigate("BookPages", {
+                  lessonTitle: route.params.title,
+                  lesson_path: unit_page,
+                  subject_path: subject_path,
+                  // params: {
+                  //   id: item.id,
+                  //   name: item.name,
+                  // },
+                });
+              }}
+            >
+              <CustomText style={style.unitbtnText}>00</CustomText>
+              <CustomText style={style.unitbtnText}>معرفی با فصل</CustomText>
+            </TouchableOpacity>
+          </View>
+        ) : (
+          <View></View>
+        )}
         <FlatList
           contentContainerStyle={style.bottom}
           data={route.params.lessons}
@@ -158,11 +182,6 @@ const style = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     marginTop: verticalScale(30),
-    // paddingHorizontal: 20,
-    // height: 200,
-    // borderBottomLeftRadius: 90,
-    // borderBottomRightRadius: 90,
-    // width: "100%",
   },
   arrowStyle: {
     marginRight: "60%",
@@ -187,9 +206,7 @@ const style = StyleSheet.create({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-
     width: "60%",
-
     // marginHorizontal: "20%",
   },
   lessonBtn: {
@@ -233,6 +250,29 @@ const style = StyleSheet.create({
     marginHorizontal: 10,
     fontSize: moderateScale(15),
     color: "rgba(60,152,189,1)",
+  },
+  unitbottom: {
+    paddingTop: verticalScale(0),
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100%",
+  },
+  unitbtn: {
+    backgroundColor: "#D4E4E8",
+    width: "90%",
+    marginVertical: verticalScale(3),
+    paddingVertical: verticalScale(15),
+    paddingHorizontal: horizontalScale(15),
+    borderRadius: moderateScale(40),
+    alignItems: "center",
+    justifyContent: "space-between",
+    flexDirection: "row",
+  },
+  unitbtnText: {
+    color: "rgba(60,152,189,1)",
+    fontSize: moderateScale(17),
+    width: "50%",
   },
 });
 export default Lessons;
