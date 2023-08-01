@@ -29,9 +29,9 @@ const Units = () => {
   const route = useRoute();
   var [inputSearch, setInputSearch] = useState("");
   const subject_path = route.params.subject_path;
-
+  const [unit_page, setUnit_page] = useState();
   console.log(subject_path);
-
+  console.log(unit_page);
   const { t, i18n } = useTranslation();
   return (
     <View style={style.container}>
@@ -74,40 +74,44 @@ const Units = () => {
             return (
               <TouchableOpacity
                 style={style.unitItem}
-                onPress={() =>
+                onPress={() => {
+                  setUnit_page(item.paths);
                   navigation.navigate("Lessons", {
                     lessons: item.lessons,
                     title: t("Units.2") + item.label,
                     lesson_path: item.paths,
                     subject_path: subject_path,
+                    unit_page: unit_page,
                     params: {
                       id: item.id,
                       name: item.name,
                     },
-                  })
-                }
+                  });
+                }}
               >
                 <Image source={unitIcon} style={{ position: "relative" }} />
                 <CustomText style={style.unitTitle}>{item.label}</CustomText>
               </TouchableOpacity>
             );
           } else if (inputSearch === "") {
-            console.log(item.paths);
+            // console.log(item.paths);
             return (
               <TouchableOpacity
                 style={style.unitItem}
-                onPress={() =>
+                onPress={() => {
+                  setUnit_page(item.paths);
                   navigation.navigate("Lessons", {
                     lessons: item.lessons,
                     title: t("Units.2") + item.label,
                     lesson_path: item.paths,
                     subject_path: subject_path,
+                    unit_page: unit_page,
                     params: {
                       id: item.id,
                       name: item.name,
                     },
-                  })
-                }
+                  });
+                }}
               >
                 <Image source={unitIcon} style={{ position: "relative" }} />
                 <CustomText style={style.unitTitle}>{item.label}</CustomText>
