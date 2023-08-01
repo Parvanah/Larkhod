@@ -37,12 +37,12 @@ const Header = ({ t }, props) => {
     nav = "/unit";
     status = { units: currentpart };
   }
-  const navigation = useNavigate();
-  if (userInfo === null) {
-    return navigation("/");
-  } else if (isLoading) {
-    return <h1>Loading.....</h1>;
-  } else if (userInfo !== null) {
+  // const navigation = useNavigate();
+  // if (userInfo === null) {
+  //   return navigation("/");
+  // } else if (isLoading) {
+  //   return <h1>Loading.....</h1>;
+  // } else if (userInfo !== null) {
     return (
       <div className="full_header">
         <nav className="header">
@@ -161,6 +161,6 @@ const Header = ({ t }, props) => {
         </div>
       </div>
     );
-  }
+  // }
 };
 export default withNamespaces()(Header);
