@@ -173,7 +173,7 @@ const Suggestion = ( { t }) => {
               value={formValues.message}
               onChange={(e) => handleChange(e)}
             />
-			<p id='er-email-message-suggestion' className='er-suggestion'>{formErrors.message}</p>
+			<p id='er-email-message-suggestion' className='eer-suggestion'>{formErrors.message}</p>
 			
 		  </div>
       
