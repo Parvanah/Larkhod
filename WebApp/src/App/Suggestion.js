@@ -74,6 +74,7 @@ const Suggestion = ( { t }) => {
 //     return <h1>Loading.....</h1>;
 //   } else if(userInfo !== null){
     return ( 
+      <div className="all_all">
       <div className="suggestion">
               <div className="sendd-suggestion">
               <Link to="/header"><img id="ig-suggestion" src={ig}/></Link> 
@@ -196,6 +197,7 @@ const Suggestion = ( { t }) => {
         <h5></h5>
         <div className="Copyright-suggestion">@Copyright - 2023 by: <span className="Larkhod-suggestion"> Larkhod </span>| All Rights Reserved</div>
        </div>
+        </div>
         </div>
      );
   // }
