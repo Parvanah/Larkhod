@@ -1,5 +1,5 @@
-import { useGoogleLogin } from "@react-oauth/google";
-import axios from "axios";
+import {useGoogleLogin} from '@react-oauth/google';
+import axios from "axios"
 import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
 import i18n from "../../../i18n";

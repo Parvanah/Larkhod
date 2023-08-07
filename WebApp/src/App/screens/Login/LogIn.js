@@ -2,6 +2,8 @@ import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
 import { Link, useNavigate, useNavigation } from "react-router-dom";
 import { withNamespaces } from "react-i18next";
+import {useGoogleLogin} from '@react-oauth/google';
+import axios from "axios"
 import "./LogIn.css";
 import { FaGoogle } from "react-icons/fa";
 import { useState, useEffect } from "react";
@@ -11,6 +13,23 @@ import img3 from "../../assets/logo_3.png";
 <link rel="stylesheet" href="LogIn.css" />;
 
 const LogIn = ({ t }, props) => {
+  const loggin = useGoogleLogin({
+    onSuccess: async (respose) => {
+      try {
+        const res = await axios.get(
+          "https://www.googleapis.com/oauth2/v3/userinfo",
+          {
+            headers: {
+              Authorization: `Bearer ${respose.access_token}`,
+            },
+          }
+        );
+        console.log(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    },
+  });
   const { isLoading, login, userInfo, backendError } = useContext(AuthContext);
   const initialValues = {
     email: "",
@@ -220,7 +239,7 @@ const LogIn = ({ t }, props) => {
               </form>
               <h4 className="p_login">{t("login7")} </h4>
               <Link to="google.com">
-                <button className="google_button_login">
+                <button className="google_button_login" onClick={ loggin}>
                   <FaGoogle className="google_icon_login" />
                   <div className="google_p_login">{t("login8")}</div>
                 </button>

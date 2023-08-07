@@ -15,6 +15,7 @@ import line from "./assets/Line 117.png";
 import JsonFiles from "./Json Files/SchoolSubjects.json";
 
 import './books.css';
+const base_path = "https://larkhoad.s3.ap-south-1.amazonaws.com";
 const Book = ({ t }) => {
   const { userInfo, isLoading } = useContext(AuthContext);
   var data;
@@ -29,8 +30,11 @@ const Book = ({ t }) => {
 	  }
   
   var primary = data.primary.grades;
+  var primary_path = base_path + data.primary.base_path ;
   var secondary = data.secondary.grades;
+  var secondary_path = base_path + data.secondary.base_path;
   var high_school = data.high_school.grades;
+  var high_school_path = base_path + data.high_school.base_path;
  
   const [srollState, setScrollState] = React.useState();
   const bottom = useRef(null);
@@ -72,11 +76,12 @@ const Book = ({ t }) => {
     <div id='h-books'>
     <div ref={top} >
     {primary.map((item) => {
+      
                   return (
                     <Link
                       className="link-grade-n"
                       to="/downloading"
-                state={{ subjects: item.subjects }}
+                state={{ subjects: item.subjects , grade_path :  primary_path + item.grade_path , grade_name: item.label}}
                     >
                       <img className="sanaf-grade-n" src={sanaf} />
                       <div className="li-grade-b"  src={sanaf} >{t("book2")} {item.label} {t("book3")}</div>
@@ -89,8 +94,8 @@ const Book = ({ t }) => {
                   return (
                     <Link
                       className="link-grade-n"  
-                      to="/dowloading"
-                      state={{ subjects: item.subjects }}
+                      to="/downloading"
+                      state={{ subjects: item.subjects , grade_path :  secondary_path + item.grade_path , grade_name: item.label }}
                     >
                       <img className="sanaf-grade" src={sanaf} />
 
@@ -108,7 +113,7 @@ const Book = ({ t }) => {
                     <Link
                       className="link-grade-n"  
                       to="/downloading"
-                      state={{ subjects: item.subjects }}
+                      state={{ subjects: item.subjects , grade_path :  high_school_path + item.grade_path , grade_name: item.label}}
                     >
                       <img className="sanaf-grade-n" src={sanaf} />
 {/*  <div className="li-grade-b" src={sanaf}> {t("book2")}  {item.label}</div> */}

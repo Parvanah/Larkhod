@@ -24,6 +24,7 @@
 .bookH {
     width:500px;
     margin-top:0px;
+    margin-left: 50px;
 }
 .bookH-mobile {
     display: none;
@@ -36,14 +37,14 @@
 	padding: 0px;
 	display: inline-block;
 	position: relative;
-	top: 80px;
-	left:-80px;
+	top: 70px;
+	left:-70px;
 }
 #h-books {
-    overflow-y: hidden;
+    overflow-y:hidden;
     width:550px;
     height:280px;
-    margin-bottom:50px;
+    margin-bottom:0px;
 } 
 .B-scrool {
     margin-top:30px;
@@ -56,9 +57,9 @@
 }
 .buttom-books .p-container-books {
  margin-top:90px;
- margin-bottom: 20px;
+ margin-bottom: 0px;
  margin-left:0px;
- /* background-color: red; */
+
 }
 .buttom-books .p-books{
     color: white;
@@ -73,20 +74,22 @@
     font-weight: bold;
     text-align: center;
 }
-.buttom-books .link-grade-n .li-grade-b{
+.buttom-books .link-grade-n .li-grade-n{
     font-family: "Bahij Helvetica";
     color: rgba(16,84,162,1);
     letter-spacing: -0.4px;
-    margin-right:20px;
+    margin-right:17px;
     font-size:17px;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
-/* .buttom-books .link-grade-n {
+.buttom-books .link-grade-n .li-grade-b{
     color: rgba(16,84,162,1);
     letter-spacing: -0.4px;
-    margin-right: 18px;
-    font-weight: bold;
-} */
+    margin-right:17px;
+    font-size:17px;
+   
+    /* font-weight: bold; */
+}
 .pathimg-b {
     margin-right:40px;
     /* margin-top:50px; */
@@ -102,11 +105,10 @@
     margin-bottom:0px;
     margin-top:0px;
 }
-/* Mobile1 Responsive */
-@media screen and (max-width:360px)and (min-width:100px) {
-    body {
+@media screen and (max-width:150px)and (min-width:100px){
+    /* body {
         overflow-x: hidden;
-    }
+    } */
   
     .Download-all-b {
         display: flex;
@@ -119,6 +121,8 @@
         flex-direction:row;
         justify-content:center;
         align-self: center;
+        overflow-x: hidden;
+        overflow-y: hidden;
         background-image: linear-gradient(to right, #0F53A1,  #3C98BD);
         width: 100%;
         height:90vh; 
@@ -131,9 +135,12 @@
       
     }
     .bookH {
+        position: fixed;
         width:300px;
-        margin-top:300px;
-        margin-left:200px;
+        margin-top:260px;
+        margin-left:270px;
+        /* background-color: #3C98BD; */
+        background-color:black;
     }
     .bookH-mobile {
         display: none;
@@ -147,15 +154,17 @@
 		width: 22px;
 		display: inline-block;
 		position: relative;
-		top: 40px;
-		left: 40px;
+        top: 40px;
+		left:130px;
+        background-color: red;
     }
     #h-books {
-        /* overflow-y: hidden; */
+        overflow-x: hidden;
+        overflow-y:scroll;
         height:250px;
-        margin-bottom:20px;
+        margin-bottom:0px;
         /* width: 300px; */
-        margin-left:-40px;
+        margin-left:150px;
     } 
     .B-scrool {
         margin-top:30px;
@@ -167,9 +176,9 @@
        margin-left:10px;
     }
     .buttom-books .p-container-books {
-     margin-top:110px;
-     margin-bottom: 20px;
-     margin-left:90px;
+     margin-top:100px;
+     margin-bottom: 0px;
+     margin-left:145px;
     }
     .buttom-books .p-books{
         font-family: "Bahij Helvetica";
@@ -184,23 +193,23 @@
         font-weight: bold;
         text-align: center;
     }
-    .buttom-books .link-grade-n .li-grade-b {
+    .buttom-books .link-grade-n .li-grade-n {
         letter-spacing: -0.4px;
         margin-right: 18px;
         font-size: 15px;
-        font-weight: bold;
+        /* font-weight: bold; */
     }
-    .buttom-books .link-grade-n {
+    .buttom-books .link-grade-n   {
         color: rgba(16,84,162,1);
         letter-spacing: -0.4px;
         margin-bottom:8px;
         margin-left:140px;
         font-family: "Bahij Helvetica";
         font-size:15px;
-        font-weight: bold;
+        /* font-weight: bold; */
         /* margin:10px; */
     }
-    .li-grade-n {
+    .li-grade-b {
         font-family: "Bahij Helvetica";
         font-size:15px;
     }
@@ -213,131 +222,17 @@
         width:280px;
     }
     #line {
-        margin-left:100px;
+        margin-left:170px;
         margin-bottom:-0px;
     }
 }
-/* Mobile2 Responsive */
-@media screen and (max-width:576px)and (min-width:360px) 
-{
-    body {
+
+/* Mobile1 Responsive */
+@media screen and (max-width:480px)and (min-width:320px) {
+    /* body {
         overflow-x: hidden;
-    }
+    } */
   
-    .Download-all-b {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height:90vh;
-    }
-    .Download-all-b   .Bookheader {
-        display: flex;
-        flex-direction:row;
-        justify-content:center;
-        align-self: center;
-        background-image: linear-gradient(to right, #0F53A1,  #3C98BD);
-        width:100%;
-        height:90vh; 
-    }
-    .icon-book {
-        width: 100px;
-        height: 100px;
-        margin-top:200px;
-        margin-left:-190px;
-    }
-    .Download-all-b  .Bookheader .bookH {
-        margin: 0;
-        padding: 0;
-        width:350px;
-        margin-top:300px;
-        margin-left:200px;
-    }
-    .bookH-mobile {
-        display: none;
-    }
-    .book-icon-mobile {
-        display: none;
-    }
-    .Download-all-b  .Bookheader   .flesh-image-grade-B {
-        margin: 0px;
-		padding: 0px;
-		width: 22px;
-		display: inline-block;
-		position: relative;
-		top:50px;
-		left:160px;
-    }
-    .Download-all-b  .Bookheader   #h-books {
-        /* overflow-y: hidden; */
-        height:310px;
-        margin-bottom:0px;
-        /* width: 300px; */
-        margin-left:-250px;
-    } 
-    .Download-all-b  .Bookheader .buttom-books{
-       display: flex;
-       flex-direction:column;
-       align-items: center;
-    }
-    .Download-all-b  .Bookheader .buttom-books .p-container-books {
-     margin-top:100px;
-     margin-bottom:0px;
-     margin-left:-200px;
-    }
-    .Download-all-b  .Bookheader  .buttom-books .p-books{
-        font-family: "Bahij Helvetica";
-        color: white;
-        font-size:20px;
-        font-weight: bold;
-    }
-    .Download-all-b  .Bookheader .buttom-books #p-books{
-        font-family: "Bahij Helvetica";
-        color: white;
-        font-size:25px;
-        font-weight: bold;
-        text-align: center;
-    }
-    .Download-all-b  .Bookheader .buttom-books .link-grade-n .li-grade-b {
-        letter-spacing: -0.4px;
-        margin-right: 18px;
-        font-size:13px;
-        font-weight: bold;
-    }
-    .Download-all-b  .Bookheader  .buttom-books .link-grade-n {
-        width:300px;
-        height:40px;
-        color: rgba(16,84,162,1);
-        background-color: red;
-        letter-spacing: -0.4px;
-        font-family: "Bahij Helvetica";
-        font-size:0px;
-        font-weight: bold;
-        margin-right:0px;
-        margin:15px;
-    }
-    .Download-all-b  .Bookheader  .buttom-books  .li-grade-n {
-        font-family: "Bahij Helvetica";
-        font-size:15px;
-    }
-    .pathimg-b {
-        margin-right:0px;
-        margin-top:0px;
-        cursor: pointer;
-    }
-    .line {
-        width:310px;
-    }
-    #line {
-        display: flex;
-        margin-left:-200px;
-        margin-top:10px;
-    }
-}
-/* Tablate Responsive */
-@media screen and (max-width:768px)and (min-width:576px) {
-    body {
-        overflow-x: hidden;
-    }
     .Download-all-b {
         display: flex;
         flex-direction: column;
@@ -349,6 +244,8 @@
         flex-direction:row;
         justify-content:center;
         align-self: center;
+        overflow-x: hidden;
+        overflow-y: hidden;
         background-image: linear-gradient(to right, #0F53A1,  #3C98BD);
         width: 100%;
         height:90vh; 
@@ -361,9 +258,12 @@
       
     }
     .bookH {
-        width:350px;
-        margin-top:50px;
-        margin-left:130px;
+        position: fixed;
+        width:300px;
+        margin-top:260px;
+        margin-left:270px;
+        /* background-color: #3C98BD; */
+        background-color: red;
     }
     .bookH-mobile {
         display: none;
@@ -374,17 +274,20 @@
     .flesh-image-grade-B {
         margin: 0px;
 		padding: 0px;
-		width: 25px;
+		width: 22px;
 		display: inline-block;
 		position: relative;
-		top: 50px;
-		left: 50px;
+        top: 40px;
+		left:130px;
+        background-color: red;
     }
     #h-books {
+        overflow-x: hidden;
         overflow-y: hidden;
-        height:300px;
-        margin-bottom:20px;
-        margin-left:90px;
+        height:250px;
+        margin-bottom:0px;
+        /* width: 300px; */
+        margin-left:150px;
     } 
     .B-scrool {
         margin-top:30px;
@@ -393,17 +296,17 @@
        display: flex;
        flex-direction:column;
        align-items: center;
-       margin-left:300px;
+       margin-left:10px;
     }
     .buttom-books .p-container-books {
-     margin-top:120px;
-     margin-left:95px;
-     margin-bottom:10px;
+     margin-top:100px;
+     margin-bottom: 0px;
+     margin-left:145px;
     }
     .buttom-books .p-books{
         font-family: "Bahij Helvetica";
         color: white;
-        font-size:25px;
+        font-size:15px;
         font-weight: bold;
     }
     .buttom-books #p-books{
@@ -413,46 +316,282 @@
         font-weight: bold;
         text-align: center;
     }
-    .buttom-books .link-grade-n .li-grade-b{
-        color: rgba(16,84,162,1);
+    .buttom-books .link-grade-n .li-grade-n {
         letter-spacing: -0.4px;
         margin-right: 18px;
-        font-family: "Bahij Helvetica";
-        font-size:15px;
-        font-weight: bold;
-    }
-    .buttom-books .link-grade-n {
-        color: rgba(16,84,162,1);
-        /* color: black; */
-        letter-spacing: -0.4px;
-        margin-right: 18px;
-        font-family: "Bahij Helvetica";
-        font-size:15px;
-        font-weight: bold;
-        margin:10px;
-        width:350px;
-        height:40px;
-    }
-    .li-grade-n {
         font-size: 15px;
+        /* font-weight: bold; */
+    }
+    .buttom-books .link-grade-n   {
+        color: rgba(16,84,162,1);
+        letter-spacing: -0.4px;
+        margin-bottom:8px;
+        margin-left:300px;
+        font-family: "Bahij Helvetica";
+        font-size:15px;
+        /* font-weight: bold; */
+        /* margin:10px; */
+        width:350px;
+    }
+    .li-grade-b {
+        font-family: "Bahij Helvetica";
+        font-size:15px;
     }
     .pathimg-b {
         margin-right:0px;
-        /* margin-bottom:10px; */
-        width:30px;
+        margin-top:5px;
+        cursor: pointer;
     }
     .line {
-        width:350px;
+        width:280px;
     }
     #line {
-        margin: 0;
-        padding: 0;
-        margin-right:-80px;
+        margin-left:170px;
+        margin-bottom:-0px;
+    }
+}
+/* Mobile2 Responsive */
+@media screen and (max-width:576px)and (min-width:360px)  {
+    body {
+        overflow-x: hidden;
+    }
+  
+    .Download-all-b {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height:90vh;
+    }
+    .Bookheader {
+        display: flex;
+        flex-direction:row;
+        justify-content:center;
+        align-self: center;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        background-image: linear-gradient(to right, #0F53A1,  #3C98BD);
+        width: 100%;
+        height:90vh; 
+    }
+    .icon-book {
+        width: 100px;
+        height: 100px;
+        margin-top:200px;
+        margin-left:-190px;
+      
+    }
+    .bookH {
+        position:fixed;
+        width:300px;
+        margin-top:260px;
+        margin-left:220px;
+    }
+    .bookH-mobile {
+        display: none;
+    }
+    .book-icon-mobile {
+        display: none;
+    }
+    .flesh-image-grade-B {
+        margin: 0px;
+		padding: 0px;
+		width: 22px;
+		display: inline-block;
+		position: relative;
+        top: 40px;
+		left:-10px;
+    }
+    #h-books {
+        overflow-x: hidden;
+        /* overflow-y: hidden; */
+        height:250px;
         margin-bottom:0px;
+        /* width: 300px; */
+        margin-left:-90px;
     } 
+    .B-scrool {
+        margin-top:30px;
+    }
+    .buttom-books{
+       display: flex;
+       flex-direction:column;
+       align-items: center;
+       margin-left:10px;
+    }
+    .buttom-books .p-container-books {
+     margin-top:100px;
+     margin-bottom: 0px;
+     margin-left:145px;
+    }
+    .buttom-books .p-books{
+        font-family: "Bahij Helvetica";
+        color: white;
+        font-size:15px;
+        font-weight: bold;
+    }
+    .buttom-books #p-books{
+        font-family: "Bahij Helvetica";
+        color: white;
+        font-size:25px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .buttom-books .link-grade-n .li-grade-n {
+        letter-spacing: -0.4px;
+        margin-right: 18px;
+        font-size: 15px;
+        /* font-weight: bold; */
+    }
+    .buttom-books .link-grade-n   {
+        color: rgba(16,84,162,1);
+        letter-spacing: -0.4px;
+        margin-bottom:8px;
+        margin-left:140px;
+        font-family: "Bahij Helvetica";
+        font-size:15px;
+        /* font-weight: bold; */
+        /* margin:10px; */
+    }
+    .li-grade-b {
+        font-family: "Bahij Helvetica";
+        font-size:15px;
+    }
+    .pathimg-b {
+        margin-right:0px;
+        margin-top:5px;
+        cursor: pointer;
+    }
+    .line {
+        width:400px;
+    }
+    #line {
+        margin-left:50px;
+        margin-bottom:-0px;
+    }
+}
+
+/* Tablate Responsive */
+@media screen and (max-width:768px)and (min-width:576px) {
+    body {
+        overflow-x: hidden;
+    }
+  
+    .Download-all-b {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height:90vh;
+    }
+    .Bookheader {
+        display: flex;
+        flex-direction:row;
+        justify-content:center;
+        align-self: center;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        background-image: linear-gradient(to right, #0F53A1,  #3C98BD);
+        width: 100%;
+        height:90vh; 
+    }
+    .icon-book {
+        width: 100px;
+        height: 100px;
+        margin-top:200px;
+        margin-left:-190px;
+      
+    }
+    .bookH {
+        position:fixed;
+        width:400px;
+        margin-top:230px;
+        margin-left:220px;
+    }
+    .bookH-mobile {
+        display: none;
+    }
+    .book-icon-mobile {
+        display: none;
+    }
+    .flesh-image-grade-B {
+        margin: 0px;
+		padding: 0px;
+		width: 22px;
+		display: inline-block;
+		position: relative;
+        top: 40px;
+		left:-10px;
+        background-color: beige;
+    }
+    #h-books {
+        overflow-x: hidden;
+        /* overflow-y: hidden; */
+        height:250px;
+        margin-top:-c0px;
+        /* width: 300px; */
+        margin-left:-90px;
+    } 
+    .B-scrool {
+        margin-top:30px;
+    }
+    .buttom-books{
+       display: flex;
+       flex-direction:column;
+       align-items: center;
+       margin-left:10px;
+    }
+    .buttom-books .p-container-books {
+     margin-top:70px;
+     margin-bottom: 0px;
+     margin-left:145px;
+    }
+    .buttom-books .p-books{
+        font-family: "Bahij Helvetica";
+        color: white;
+        font-size:15px;
+        font-weight: bold;
+    }
+    .buttom-books #p-books{
+        font-family: "Bahij Helvetica";
+        color: white;
+        font-size:25px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .buttom-books .link-grade-n .li-grade-n {
+        letter-spacing: -0.4px;
+        margin-right: 18px;
+        font-size: 15px;
+        /* font-weight: bold; */
+    }
+    .buttom-books .link-grade-n   {
+        color: rgba(16,84,162,1);
+        letter-spacing: -0.4px;
+        margin-bottom:8px;
+        margin-left:140px;
+        font-family: "Bahij Helvetica";
+        font-size:15px;
+        /* font-weight: bold; */
+        /* margin:10px; */
+    }
+    .li-grade-b {
+        font-family: "Bahij Helvetica";
+        font-size:15px;
+    }
+    .pathimg-b {
+        margin-right:0px;
+        margin-top:5px;
+        cursor: pointer;
+    }
+    .line {
+        width:400px;
+    }
+    #line {
+        margin-left:50px;
+        margin-bottom:-0px;
+    }
 }
 /* PC1 Responsive */
-@media screen and (max-width:992px)and (min-width:768px) {
+@media screen and (max-width:992px)and (min-width:768px){
     body {
         overflow-x: hidden;
     }
@@ -472,17 +611,18 @@
     width: 100%;
     height:90vh; 
 }
-.icon-book {
+/* .icon-book {
     width: 100px;
     height: 100px;
     margin-top:200px;
     margin-left:-190px;
   
-}
+} */
 .bookH {
-    width:450px;
+    width:400px;
     margin-top:40px;
-    margin-left:40px ;
+    margin-left:50px;
+    /* margin-right0px ; */
 }
 .bookH-mobile {
     display: none;
@@ -492,17 +632,17 @@
 }
 .flesh-image-grade-B {
     margin: 0px;
-		padding: 0px;
-		display: inline-block;
-		position: relative;
-		top: 80px;
-		left: 80px;
+    padding: 0px;
+    display: inline-block;
+    position: relative;
+    top: 70px;
+    left: 70px;
 }
 #h-books {
     overflow-y: hidden;
     height:300px;
-    margin-bottom:10px;
-    margin-left:60px;
+    margin-bottom:0px;
+    margin-left:0px;
 } 
 .B-scrool {
     margin-top:30px;
@@ -516,57 +656,50 @@
 .buttom-books .p-container-books {
  margin-top:80px;
  margin-bottom: 20px;
- margin-left:-20px;
+ margin-left:-40px;
  /* background-color: red; */
 }
 .buttom-books .p-books{
-    font-family: "Bahij Helvetica";
     color: white;
+    font-family: "Bahij Helvetica";
     font-size:30px;
     font-weight: bold;
-    margin-left:0px;
 }
 .buttom-books #p-books{
     font-family: "Bahij Helvetica";
     color: white;
-    font-size:30px;
+    font-size:20px;
     font-weight: bold;
     text-align: center;
-    margin-left:0px;
 }
-.buttom-books .link-grade-n .li-grade-b{
+.buttom-books .link-grade-n .li-grade-n{
     color: rgba(16,84,162,1);
     letter-spacing: -0.4px;
-    margin-right:18px;
+    margin-right:15px;
     font-family: "Bahij Helvetica";
-    font-size:15px;
-    font-weight: bold;
+    font-size:17px;
+    /* font-weight: bold; */
 }
-.buttom-books .link-grade-n {
-    width:400px;
+.buttom-books .link-grade-n{
+    /* width:500px; */
     color: rgba(16,84,162,1);
     letter-spacing: -0.4px;
-    margin-right:10px;
+    margin-right:0px;
     font-family: "Bahij Helvetica";
-    font-size:15px;
-    font-weight: bold;
+    /* font-weight: bold; */
     margin:15px;
-    margin-right:50px;
-}
-.li-grade-n {
-    font-family: "Bahij Helvetica";
-    font-size: 15px;
+    /* margin-right:90px; */
 }
 .pathimg-b {
-    margin-right:10px;
+    margin-right:0px;
     /* margin-top:50px; */
 }
 .line {
-    width:400px;
+    width:450px;
 }
 #line {
-    margin-right:60px;
-    margin-bottom:0px;
+    margin-right:70px;
+    margin-bottom:15px;
 }
 }
 
@@ -592,17 +725,18 @@
     width: 100%;
     height:90vh; 
 }
-.icon-book {
+/* .icon-book {
     width: 100px;
     height: 100px;
     margin-top:200px;
     margin-left:-190px;
   
-}
+} */
 .bookH {
     width:450px;
     margin-top:-10px;
-    margin-right:-100px ;
+    margin-left:0px;
+    /* margin-right0px ; */
 }
 .bookH-mobile {
     display: none;
@@ -615,13 +749,13 @@
     padding: 0px;
     display: inline-block;
     position: relative;
-    top: 80px;
-    left: 80px;
+    top: 70px;
+    left: 70px;
 }
 #h-books {
     overflow-y: hidden;
     height:300px;
-    margin-bottom:10px;
+    margin-bottom:0px;
     margin-left:0px;
 } 
 .B-scrool {
@@ -636,7 +770,7 @@
 .buttom-books .p-container-books {
  margin-top:80px;
  margin-bottom: 20px;
- margin-left:-80px;
+ margin-left:-40px;
  /* background-color: red; */
 }
 .buttom-books .p-books{
@@ -652,24 +786,23 @@
     font-weight: bold;
     text-align: center;
 }
-.buttom-books .link-grade-n .li-grade-b{
+.buttom-books .link-grade-n .li-grade-n{
     color: rgba(16,84,162,1);
-    background-color: red;
     letter-spacing: -0.4px;
     margin-right:15px;
     font-family: "Bahij Helvetica";
     font-size:17px;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 .buttom-books .link-grade-n{
-    width:500px;
+    /* width:500px; */
     color: rgba(16,84,162,1);
     letter-spacing: -0.4px;
-    margin-right:10px;
+    margin-right:0px;
     font-family: "Bahij Helvetica";
-    font-weight: bold;
+    /* font-weight: bold; */
     margin:15px;
-    margin-right:90px;
+    /* margin-right:90px; */
 }
 .pathimg-b {
     margin-right:0px;
@@ -680,6 +813,6 @@
 }
 #line {
     margin-right:30px;
-    margin-bottom:0px;
+    margin-bottom:15px;
 }
 }

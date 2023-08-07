@@ -58,7 +58,7 @@
 }
 .d-middle {
     height:300px;
-    overflow-y:hidden;
+    overflow-y:scroll;
     border-bottom:1px solid #707070;
     margin-right:-500px;
     margin-bottom: 60px;
@@ -166,7 +166,7 @@ font-weight: bold;
     }
     .d-middle {
         height:300px;
-       overflow-y:hidden;
+       overflow-y:scroll;
         border-bottom:1px solid #707070;
         margin-right:-10px;
         margin-bottom: 60px;
