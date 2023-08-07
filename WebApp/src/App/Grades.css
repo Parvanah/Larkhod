@@ -82,13 +82,13 @@ all-grade-n {
 		height: 450.955px;	
 	}
 	.grade-container {
-		margin-top:-50px;
+		margin-top:-70px;
 	}
   
 	.p-two-grade-n{
 		font-style:normal;font-weight:lighter; font-size:25px; 
 		left:165.208px;
-		top:130px;
+		top:110px;
 		position: absolute;
 		overflow: hidden;
 		width:600px;
@@ -150,6 +150,7 @@ all-grade-n {
 	/* border-bottom:2px solid #707070; */
 }
 .pathimg-G {
+	display:flex;
 	width:40px;
 	margin-left:330px;
 	margin-top:0px;
@@ -159,7 +160,8 @@ all-grade-n {
 	margin-left:80px;
 } 
 .Gimage {
-	width: 550px;
+	margin-top:20px;
+	width:450px;
 } 
 .G-scrool {
 	background-color: red;
@@ -169,6 +171,7 @@ all-grade-n {
 .G-scrool-mobile {
 	display: none;
 }
+
 /* Mobile1 Responsive */
 @media screen and (max-width:360px)and (min-width:100px){
     /* body {

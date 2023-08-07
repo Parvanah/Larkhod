@@ -44,7 +44,7 @@ const Grads = ({ t }) => {
   const {currentState,
     setCurrentState 
     } = useContext(AuthContext);
-    const [srollState, setScrollState] = React.useState();
+    const [scrollState, setScrollState] = React.useState();
     const bottom = useRef(null);
     const top = useRef(null)
     const scrollBottom = ()=>{
@@ -125,7 +125,7 @@ const Grads = ({ t }) => {
        </div>
        <div>
        <img src={pathimg} className="pathimg-G"  onClick={()=>{
-      if(srollState == "bottom"){
+      if(scrollState == "bottom"){
         scrollTop()
       }else{
         scrollBottom()

@@ -358,6 +358,7 @@
 		position: relative;
 		top: 50px;
 		left: 50px;
+		background-color: blueviolet;
 	}
 }
 
@@ -605,6 +606,7 @@
 		position: relative;
 		top: 50px;
 		left: 50px;
+		background-color: red;
 	}
 }
 @media screen and (max-width:992px)and (min-width:768px){
@@ -724,6 +726,7 @@
 		position: relative;
 		top: 80px;
 		left: 80px;
+	
 	}
 }
 
@@ -844,5 +847,6 @@
 		position: relative;
 		top: 80px;
 		left: 80px;
+		background-color: black;
 	}
 }

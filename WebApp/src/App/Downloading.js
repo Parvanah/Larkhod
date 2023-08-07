@@ -10,6 +10,7 @@ import { Link, useLocation } from "react-router-dom";
 import image10 from "./assets/Group_158_a@2x.png";
 import { useNavigate } from "react-router-dom";
 import { useRef } from 'react';
+import FileSaver from 'file-saver';
 // import * as React from "react";
 import bookicon from "./assets/Group_360.png";
 import Dimage from "./assets/Dimage.png";
@@ -23,6 +24,9 @@ const  Downloading = ({ t }, props) => {
   const location = useLocation();
   const locationData = location.state;
   const subjects = locationData.subjects;
+  const grade_path = locationData.grade_path;
+  const grade_name = locationData.grade_name;
+  console.log(grade_path);
 
   const [srollState, setScrollState] = React.useState();
   const bottom = useRef(null);
@@ -32,11 +36,25 @@ const  Downloading = ({ t }, props) => {
    setScrollState("bottom")
 
   }
+  const path = "https://larkhoad.s3.ap-south-1.amazonaws.com/school_subjects/dari_curriculam/primary/second_grade/dari_subject/pdf_book/G2-Dr-Dari_compressed.pdf";
+  const DownloadPdf=(url , fileName)=>{
+  //  const aTag = document.createElement('a');
+  //  aTag.href = url;
+  //  aTag.target = 'blank';
+  //  aTag.setAttribute('download', 'G2-Dr-Dari_compressed.pdf');
+  //  document.body.appendChild(aTag);
+  //  aTag.click();
+  //  aTag.remove();
+ FileSaver.saveAs(url , fileName );
+
+
+  }
   const scrollTop = ()=>{
     
     top.current.scrollIntoView({behavier: "smooth"});
     setScrollState("top")
    }
+
 
              // const navigation = useNavigate();
 //   if (userInfo === null) {
@@ -58,28 +76,30 @@ const  Downloading = ({ t }, props) => {
          <div className="d-middle">
        <div  ref={top}>
        {subjects.map((item) => {
+        // const subject_path = grade_path + item.subject_path + item.download_pdf;
             if (item.parts[0].lessons == undefined) {
+
               return (
-                <Link
-                  state={{ lessons: item.parts, title: " مضمون " + item.label }}
-                  id="link"
-                >
-                  {/* <img src={bookicon} /> */}
+                // <Link
+                //   state={{ lessons: item.parts, title: " مضمون " + item.label }}
+                //   id="link"
+                // >
+                  
                   <div className="Download-li">
-                    <div className="d-book"><HiDownload size="20px"/></div>
+                    <div className="d-book"><HiDownload size="20px" onClick={()=> DownloadPdf(grade_path + item.subject_path + item.download_pdf , grade_name + "_"+ item.label + ".pdf")}/></div>
                     <p id="h5"> {t("downloading3")} {item.label} {t("downloading4")}</p>
                   </div>
-                </Link>
+                // </Link>
               );
             } else {
               return (
-                <Link  state={{ units: item.parts }} id="link">
-                  {/* <img src={bookicon} /> */}
+                // <Link  state={{ units: item.parts }} id="link">
+
                   <div className="Download-li">
-                  <div className="d-book"><HiDownload size="20px"/></div>
+                  <div className="d-book"><HiDownload size="20px" onClick={()=> DownloadPdf(grade_path + item.subject_path + item.download_pdf , grade_name + "_"+ item.label + ".pdf")} /></div>
                     <p id="h5">  {t("downloading3")} {item.label} {t("downloading4")}</p>
                   </div>
-                </Link>
+                // </Link>
               );
             }
           })}
