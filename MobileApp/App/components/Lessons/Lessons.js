@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import {
   View,
   Text,
@@ -8,6 +8,7 @@ import {
   FlatList,
   Alert,
   ScrollView,
+  Platform,
 } from "react-native";
 import CustomText from "../../CustomText";
 import {
@@ -30,7 +31,12 @@ import Svg, {
 } from "react-native-svg";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useTranslation } from "react-i18next";
-
+import * as FileSystem from "expo-file-system";
+import * as Sharing from "expo-sharing";
+import * as Permissions from "expo-permissions";
+import * as MediaLibrary from "expo-media-library";
+import * as Notifications from "expo-notifications";
+// import { downloadToFolder } from "expo-file-dl";
 const Lessons = (props) => {
   const navigation = useNavigation();
   const route = useRoute();
@@ -39,9 +45,72 @@ const Lessons = (props) => {
   const subject_path = route.params.subject_path;
   const lesson_pages = route.params.lesson_path;
   const unit_page = route.params.unit_page;
-  console.log(subject_path);
-  console.log("unit pages", lesson_pages);
+  const [downloadCheck, setDownloadCheck] = useState();
+  const pdf_path = route.params.pdf_path;
+
+  console.log(pdf_path);
+  console.log(route.params.BookName);
   const path = "../../assets";
+  const downloadFile = async (url, fileName) => {
+    console.log("downlod called");
+
+    try {
+      const downloadResumable = FileSystem.createDownloadResumable(
+        url,
+        FileSystem.documentDirectory + fileName,
+        {},
+        (downloadProgress) => {
+          const progress =
+            downloadProgress.totalBytesWritten /
+            downloadProgress.totalBytesExpectedToWrite;
+
+          progress === 1
+            ? console.log("pdf completely downloaded", progress)
+            : "";
+          Math.sign(progress) === -1
+            ? console.log(
+                "pdf is not downloaed becouse of internet connection or other issues",
+                progress
+              )
+            : "";
+          // setDownloadCheck(progress);
+        }
+      );
+      const result = await downloadResumable.downloadAsync();
+      console.log(result);
+
+      if (Platform.OS === "android") {
+        const perm = await Permissions.askAsync(Permissions.MEDIA_LIBRARY);
+        if (perm.status != "granted") {
+          return;
+        }
+
+        const asset = await MediaLibrary.createAssetAsync(result.uri);
+        const albom = await MediaLibrary.getAlbumAsync("Larkhoad_pdf_books");
+        if (albom == null) {
+          await MediaLibrary.createAlbumAsync(
+            "Larkhoad_pdf_books",
+            asset,
+            false
+          );
+        } else {
+          await MediaLibrary.addAssetsToAlbumAsync([asset], albom, false);
+        }
+
+        alert(`book downloaded on: ${MediaLibrary.getAssetInfoAsync(asset)}`);
+        // }
+      } else if (Platform.OS === "ios") {
+        const UTI = "public.item";
+        await Sharing.shareAsync(result.uri, { UTI });
+      }
+    } catch (err) {
+      console.log("Error of download", err);
+    }
+  };
+  // const save = (uri) => {
+  //   shareAsync(uri);
+  // };
+
   return (
     <View style={style.container}>
       <TouchableOpacity
@@ -97,12 +166,36 @@ const Lessons = (props) => {
         </View>
       </Svg>
       <View style={style.pdfWrapper}>
-        <TouchableOpacity style={style.pdf} activeOpacity={0.5}>
+        <TouchableOpacity
+          style={style.pdf}
+          activeOpacity={0.8}
+          onPress={() =>
+            downloadFile(pdf_path, route.params.BookName + " .pdf")
+          }
+        >
           <Image source={require(path + "/Group_408.png")} />
           <CustomText style={style.pdfText}>{t("Lesson.2")}</CustomText>
         </TouchableOpacity>
       </View>
-
+      {unit_page !== "" ? (
+        <View style={style.unitbottom}>
+          <TouchableOpacity
+            style={style.unitbtn}
+            onPress={() => {
+              navigation.navigate("BookPages", {
+                lessonTitle: route.params.title,
+                lesson_path: unit_page,
+                subject_path: subject_path,
+              });
+            }}
+          >
+            <CustomText style={style.unitbtnText}>00</CustomText>
+            <CustomText style={style.unitbtnText}>معرفی با فصل</CustomText>
+          </TouchableOpacity>
+        </View>
+      ) : (
+        <View></View>
+      )}
       <View
         style={{
           width: "100%",
@@ -111,29 +204,6 @@ const Lessons = (props) => {
           paddingBottom: verticalScale(245),
         }}
       >
-        {unit_page !== "" ? (
-          <View style={style.unitbottom}>
-            <TouchableOpacity
-              style={style.unitbtn}
-              onPress={() => {
-                navigation.navigate("BookPages", {
-                  lessonTitle: route.params.title,
-                  lesson_path: unit_page,
-                  subject_path: subject_path,
-                  // params: {
-                  //   id: item.id,
-                  //   name: item.name,
-                  // },
-                });
-              }}
-            >
-              <CustomText style={style.unitbtnText}>00</CustomText>
-              <CustomText style={style.unitbtnText}>معرفی با فصل</CustomText>
-            </TouchableOpacity>
-          </View>
-        ) : (
-          <View></View>
-        )}
         <FlatList
           contentContainerStyle={style.bottom}
           data={route.params.lessons}
@@ -159,7 +229,6 @@ const Lessons = (props) => {
                 <CustomText style={style.lessonBtnText}>
                   {item.label}
                 </CustomText>
-                {/* {setNum(num + 1)} */}
               </TouchableOpacity>
             );
           }}

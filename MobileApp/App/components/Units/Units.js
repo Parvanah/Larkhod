@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   View,
   Text,
@@ -29,10 +29,15 @@ const Units = () => {
   const route = useRoute();
   var [inputSearch, setInputSearch] = useState("");
   const subject_path = route.params.subject_path;
-  const [unit_page, setUnit_page] = useState();
-  console.log(subject_path);
-  console.log(unit_page);
+  const [unit_page, setUnit_page] = useState(null);
+  const pdf_path = route.params.pdf_path;
+
+  // console.log(subject_path);
+  // console.log(unit_page);
   const { t, i18n } = useTranslation();
+  const handleUnit = (item) => {
+    setUnit_page(item.paths);
+  };
   return (
     <View style={style.container}>
       <View style={style.top}>
@@ -75,13 +80,15 @@ const Units = () => {
               <TouchableOpacity
                 style={style.unitItem}
                 onPress={() => {
-                  setUnit_page(item.paths);
+                  // handleUnit(item);
                   navigation.navigate("Lessons", {
                     lessons: item.lessons,
                     title: t("Units.2") + item.label,
                     lesson_path: item.paths,
                     subject_path: subject_path,
-                    unit_page: unit_page,
+                    unit_page: item.paths,
+                    pdf_path: pdf_path,
+                    BookName: route.params.BookName,
                     params: {
                       id: item.id,
                       name: item.name,
@@ -99,13 +106,15 @@ const Units = () => {
               <TouchableOpacity
                 style={style.unitItem}
                 onPress={() => {
-                  setUnit_page(item.paths);
+                  // handleUnit(item);
                   navigation.navigate("Lessons", {
                     lessons: item.lessons,
                     title: t("Units.2") + item.label,
                     lesson_path: item.paths,
                     subject_path: subject_path,
-                    unit_page: unit_page,
+                    unit_page: item.paths,
+                    pdf_path: pdf_path,
+                    BookName: route.params.BookName,
                     params: {
                       id: item.id,
                       name: item.name,
