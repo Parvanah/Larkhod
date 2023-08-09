@@ -99,7 +99,10 @@ const Books = (props) => {
                       lessons: item.parts,
                       title: t("Books.1") + item.label,
                       subject_path: grade_path + item.subject_path,
+                      pdf_path:
+                        grade_path + item.subject_path + item.download_pdf,
                       unit_page: "",
+                      BookName: route.params.grade + "_" + item.label,
                       params: {
                         id: item.id,
                         name: item.name,
@@ -110,6 +113,9 @@ const Books = (props) => {
                       units: item.parts,
                       subject: item.label,
                       subject_path: grade_path + item.subject_path,
+                      pdf_path:
+                        grade_path + item.subject_path + item.download_pdf,
+                      BookName: route.params.grade + "_" + item.label,
                       params: {
                         id: item.id,
                         name: item.name,
@@ -132,7 +138,10 @@ const Books = (props) => {
                       lessons: item.parts,
                       title: t("Books.1") + item.label,
                       subject_path: grade_path + item.subject_path,
+                      pdf_path:
+                        grade_path + item.subject_path + item.download_pdf,
                       unit_page: "",
+                      BookName: route.params.grade + "_" + item.label,
                       params: {
                         id: item.id,
                         name: item.name,
@@ -143,6 +152,9 @@ const Books = (props) => {
                       units: item.parts,
                       subject: item.label,
                       subject_path: grade_path + item.subject_path,
+                      pdf_path:
+                        grade_path + item.subject_path + item.download_pdf,
+                      BookName: route.params.grade + "_" + item.label,
                       params: {
                         id: item.id,
                         name: item.name,

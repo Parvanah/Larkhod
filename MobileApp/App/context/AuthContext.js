@@ -3,7 +3,7 @@ import axios from "axios";
 import React, { createContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 export const AuthContext = createContext();
-axios.defaults.baseURL = "http://192.168.43.80:8000/api/v1";
+axios.defaults.baseURL = "http://192.168.43.81:8000/api/v1";
 axios.defaults.timeout = 3000;
 
 export const AuthProvider = ({ children }) => {
@@ -11,8 +11,6 @@ export const AuthProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [splashLoading, setSplashLoading] = useState(false);
   const [statusCode, setStatusCode] = useState(null);
-  // const [password, setPassword] = useState(null);
-  // const [email, setEmail] = useState(null);
   const [backendError, setBackendError] = useState("");
   const { t, i18n } = useTranslation();
   const [temp, setTemp] = useState(null);
