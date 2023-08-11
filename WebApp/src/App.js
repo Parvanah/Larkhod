@@ -13,7 +13,7 @@ import NewPassword from "./App/screens/NewPassword/NewPassword";
 import Section from "./App/components/Sections/Section";
 import Grades from "./App/components/Grades/Grades";
 import Books from "./App/components/Books/Books";
-import Units from "./App/components/Units/Units";
+import Unit from "./App/components/Units/Unit";
 import Lessons from "./App/components/Lessons/Lessons";
 import Grad from "./App/Grad";
 import Book from "./App/Book";
@@ -33,7 +33,7 @@ function App() {
         <Route path="/section" element={<Section />} />
         <Route path="/grades" element={<Grades />} />
         <Route path="/books" element={<Books />} />
-        <Route path="/unit" element={<Units />} />
+        <Route path="/unit" element={<Unit />} />
         <Route path="/lessons" element={<Lessons />} />
         <Route path="/grad" element={<Grad />} />
         <Route path="/book" element={<Book />} />

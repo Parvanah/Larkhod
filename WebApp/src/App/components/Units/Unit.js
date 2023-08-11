@@ -9,7 +9,7 @@ import sectionicon from "../../assets/Group_374.png";
 import imageU from "../../assets/Group_158_a@2x.png"
 import imagel from "../../assets/U.png";
 
-const Units = ({ t }) => {
+const Unit = ({ t }) => {
   const { userInfo, isLoading } = useContext(AuthContext);
   // getting props that passed from Books to Unit
   const location = useLocation();
@@ -187,6 +187,6 @@ const Units = ({ t }) => {
       // }
 };
 
-export default  withNamespaces()(Units) ;
+export default  withNamespaces()(Unit) ;
 
 

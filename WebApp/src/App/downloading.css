@@ -3,7 +3,7 @@
     display: flex;
     flex-direction:row;
     justify-content: center; 
-    margin-top:50px;
+    margin-top:20px;
 }
 .icon-D {
     /* width:200px; */
@@ -14,10 +14,11 @@
 	padding: 0px;
 	display: inline-block;
 	position: relative;
-	top:30px;
-	left:-290px;
+	top:50px;
+	left:-240px;
 }
 .pathimg {
+    display: none;
     margin-left:320px;
     margin-bottom:20px;
     cursor: pointer;
@@ -34,13 +35,13 @@
     padding-top:30px;
     font-size:35px;
     font-weight: bold;
-    margin-left:200px; 
+    margin-left:290px; 
     font-family: "Bahij Helvetica";   
 }
 .download-b #p-downloding {
     color: white;
     font-size:40px;
-    margin-left:150px;
+    margin-left:230px;
     margin-bottom: 3px;
     font-family: "Bahij Helvetica"; 
 }
@@ -50,8 +51,9 @@
     justify-content:center;
 }
 .Dimg {
-    width:500px;
-    margin-left:-900px;
+    margin:30px;
+    width:450px;
+    margin-left:-800px;
 }
 .Dimage-m {
     display: none;
@@ -97,7 +99,7 @@ padding:8px;
 font-weight: bold;
 }
 #line-d {
-    margin-left:100px;
+    margin-left:170px;
    margin-top:-50px;
 }
 .line-d {
@@ -157,7 +159,8 @@ font-weight: bold;
         justify-content:center;
     }
     .Dimg {
-        width:600px;
+        background-color: red;
+        width:60px;
         margin-left:-950px;
         display: none;
     }
@@ -227,7 +230,7 @@ font-weight: bold;
 		display:flex;
 		position: relative;
 		top: 0px;
-	   left:-50px;
+	   left:30px;
     }
     .pathimg {
         margin-top:10px;
@@ -268,6 +271,8 @@ font-weight: bold;
     }
     .Dimage-m {
         display:flex;
+        background-color: red;
+
        
     }
     .d-middle {
@@ -276,20 +281,21 @@ font-weight: bold;
         margin-right:-10px;
         margin-bottom: 60px;
         /* width: 300px; */
+        background-color: red;
     }
     
     .Download-li{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width:300px;
+    width:350px;
     height:40px;
     background-color:rgba(212,228,232,1);
     border-radius:30px;
     color: rgba(16,84,162,1);
-    font-size:13px;
-    font-weight: bold;
-    margin:15px;
+    font-size:15px;
+    /* font-weight: bold; */
+    margin:10px;
     padding:2px;
     
     }
@@ -302,8 +308,7 @@ font-weight: bold;
         background-color: #3c98bd;
     }
     .d-book {
-    padding:8px;
-    font-weight: bold;
+    padding:10px;
     }
     #line-d {
         display: flex;
@@ -329,9 +334,10 @@ font-weight: bold;
     /* margin-top:150px; */
 }
 .flesh-image-grade-d {
-    margin-bottom:450px;
-    margin-left:-30px;
+  
+    margin-left:500px;
     width:25px;
+    background-color: black;
 }
 .pathimg {
     margin-left:390px;
@@ -346,17 +352,17 @@ font-weight: bold;
 }
 .download-b .p-downloding {
     color: white;
-    padding-top:30px;
+    padding-top:50px;
     font-family: "Bahij Helvetica";
     font-size:25px;
     font-weight: bold;
-    margin-left:300px;    
+    margin-left:450px;    
 }
 .download-b #p-downloding {
     color: white;
     font-family: "Bahij Helvetica";
     font-size:30px;
-    margin-left:260px;
+    margin-left:390px;
     margin-bottom: 3px;
 }
 .Download-ul {
@@ -366,16 +372,16 @@ font-weight: bold;
 }
 .Dimg {
     width:350px;
-    margin-left:-600px;
+    margin-right:200px;
 }
 .Dimg-m {
     display: none;
 }
 .d-middle {
     height:300px;
-   overflow-y:hidden;
+   overflow-y:scroll;
     border-bottom:1px solid #707070;
-    margin-left:-10px;
+    margin-left:0px;
     margin-bottom: 60px;
 }
 
@@ -383,11 +389,12 @@ font-weight: bold;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
-width:300px;
+width:350px;
 height:40px;
 background-color:rgba(212,228,232,1);
 border-radius:30px;
 color: rgba(16,84,162,1);
+background-color: red;
 margin:5px;
 padding:2px;
 
@@ -410,11 +417,11 @@ padding:8px;
 font-weight: bold;
 }
 #line-d {
-    margin-left:240px;
+    margin-left:370px;
    margin-top:-50px;
 }
 .line-d {
-    width:330px;
+    width:310px;
 }
 }
 /* pC1 Responsive */

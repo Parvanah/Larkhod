@@ -14,6 +14,7 @@ import FileSaver from 'file-saver';
 // import * as React from "react";
 import bookicon from "./assets/Group_360.png";
 import Dimage from "./assets/Dimage.png";
+import Dimage2 from "./assets/Dimage.png";
 import pathimg from "./assets/Path 968.png";
 import line from "./assets/Line 117.png";
 const  Downloading = ({ t }, props) => {

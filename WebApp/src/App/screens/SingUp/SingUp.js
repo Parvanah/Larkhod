@@ -8,6 +8,7 @@ import "./SingUp.css";
 import { FaGoogle } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import img1 from "../../assets/mg.png";
+import img3 from "../../assets/logo_3.png";
 import React from "react";
 import { Link, useNavigate, useNavigation } from "react-router-dom";
 <link rel="stylesheet" href="SingUp.css" />;
@@ -162,6 +163,7 @@ const SingUp = ({ t }, props) => {
               پشتو ژبه
             </button>
           </div>
+          
           <button id="login-button">
             <Link className="up_singup" to="/login">
               {t("singup1")}
@@ -280,6 +282,131 @@ const SingUp = ({ t }, props) => {
               <div className="google_p_singup">{t("singup8")}</div>
             </button>
           </div>
+        </div>
+        <div className='all_singup'>
+        <img src={ img3} className='image3'  />
+        <div className='bottom_Signupm'>
+        <button id="login-button">
+            <Link className="up_singup" to="/login">
+              {t("singup1")}
+            </Link>
+            <div className="in_singup">{t("singup2")}</div>
+          </button>
+          <div id="cantainer_singup">
+            {Object.keys(formErrors).length === 0 && isSubmit ? (
+              <div>{navigate("/header")}</div>
+            ) : (
+              <pre></pre>
+            )}
+            <form onSubmit={handleSubmit}>
+              <div className="first_input_section_singup">
+                <div className="field">
+                  <input
+                    id="input_singup"
+                    type="text"
+                    name="firstname"
+                    placeholder={t("singup3")}
+                    value={formValues.firstname}
+                    onChange={(e) => handleChange(e)}
+                  />
+                  <p className="error_singup">{formErrors.firstname}</p>
+                </div>
+                <div className="field">
+                  <input
+                    id="input_singup"
+                    type="text"
+                    name="lastname"
+                    placeholder={t("singup18")}
+                    value={formValues.lastname}
+                    onChange={(e) => handleChange(e)}
+                  />
+                  <p className="error_singup">{formErrors.lastname}</p>
+                </div>
+
+                <div className="field">
+                  <input
+                    id="input_singup"
+                    type="age"
+                    name="age"
+                    placeholder={t("singup19")}
+                    value={formValues.age}
+                    onChange={(e) => handleChange(e)}
+                  />
+                  <p className="error_singup">{formErrors.age}</p>
+                </div>
+
+                <div className="field">
+                  <input
+                    id="input_singup"
+                    type="class"
+                    name="senf"
+                    placeholder={t("singup20")}
+                    value={formValues.senf}
+                    onChange={(e) => handleChange(e)}
+                  />
+                  <p className="error_singup">{formErrors.senf}</p>
+                </div>
+              </div>
+
+              <div className="second_input_section_singup">
+                <div className="field">
+                  <input
+                    id="inputt_singup"
+                    type=""
+                    name="number"
+                    placeholder={t("singup21")}
+                    value={formValues.number}
+                    onChange={(e) => handleChange(e)}
+                  />
+                  <p className="error_singup">{formErrors.number}</p>
+                </div>
+                <div className="field">
+                  <input
+                    id="inputt_singup"
+                    type="text"
+                    name="email"
+                    placeholder={t("singup4")}
+                    value={formValues.email}
+                    onChange={(e) => handleChange(e)}
+                  />
+                  <p className="error_singup">{formErrors.email}</p>
+                </div>
+
+                <div className="field">
+                  <input
+                    id="inputt_singup"
+                    type="password"
+                    name="password"
+                    placeholder={t("singup5")}
+                    value={formValues.password}
+                    onChange={(e) => handleChange(e)}
+                  />
+                  <p className="error_singup">{formErrors.password}</p>
+                </div>
+
+                <div className="field">
+                  <input
+                    id="inputt_singup"
+                    type="password"
+                    name="confirmpassword"
+                    placeholder={t("singup6")}
+                    value={formValues.confirmpassword}
+                    onChange={(e) => handleChange(e)}
+                  />
+                  <p className="error_singup">{formErrors.confirmpassword}</p>
+                </div>
+              </div>
+              <button className="acount_button_singuo">{t("singup1")}</button>
+            </form>
+            <h4 className="p_singup">{t("singup7")}</h4>
+            <button className="google_button_singup" onClick={login}>
+              <FaGoogle className="google_icon_singup" />
+              <div className="google_p_singup">{t("singup8")}</div>
+            </button>
+          </div>
+        </div>
+          
+     
         </div>
       </div>
     );

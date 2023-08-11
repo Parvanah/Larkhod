@@ -304,23 +304,27 @@ all-grade-n {
 		background-color: red;
 	} */
 	.all-grade-n {
+		overflow-y: hidden;
+		overflow-x: hidden;
 		display: flex;
 		flex-direction: column;
-		height: 100vh;
+		height:90vh;
 	}
 	.all-grade-N {
 		display: flex;
 		flex-direction:column;
+		overflow-y: hidden;
+		overflow-x: hidden;
 		background-image: linear-gradient(to right,  #3C98BD , #0F53A1);
 		border-bottom: #0F53A1;
 		border-bottom-right-radius:130px;
 		border-top-left-radius:100px;
-		height:90vh;
+		height:100%;
 	}
 	.flesh-image-grade-b {
 		margin-top:40px;
 		margin-left:50px;
-		width:15px;
+		width:20px;
 	}
 
 	/* .button-grade-N {
@@ -338,8 +342,8 @@ all-grade-n {
 	.p-one-grade-n{
 		/* left:10px;
 		top:10px; */
-		margin-left:-150px;
-		margin-top:150px;
+		margin-left:-260px;
+		margin-top:160px;
 		position: absolute;
 		overflow: hidden;
 		/* width:700px; */
@@ -358,12 +362,12 @@ all-grade-n {
 		font-style:normal;font-weight:lighter; font-size:25px; 
 		/* left:165.208px;
 		top:120px; */
-		margin-left:-130px;
-		margin-top:90px;
+		margin-left:-220px;
+		margin-top:150px;
 		position: absolute;
 		overflow: hidden;
 		width:500px;
-		height:50px;
+		height:55px;
 		line-height: 79px;
 		text-align: center;
 		  font-family: "Bahij Helvetica";
@@ -374,40 +378,40 @@ all-grade-n {
 		font-family: "Bahij Helvetica";
 	}
 	.link-grade-n{
+		overflow-y: hidden;
 		overflow-x: hidden;
-		margin-left:-10px;
-		width:400px;
+		margin-left:-70px;
+		width:350px;
 		/* height: 34px; */
 		 background-color:rgba(212,228,232,1); 
-		/* background-color: red; */
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		margin-bottom: 12px;
-		border-radius: 32px;
-		text-align: center;
-		align-items: center;
+		 display: flex;
+		 flex-direction: row;
+		 justify-content: space-between;
+		 margin-bottom:10px;
+		 border-radius: 32px;
+		 text-align: center;
+		 align-items: center;
 	}	
 	#class-container-n{
 		display: flex;
 		flex-direction: column;
-		height:280px;
-			overflow-y:hidden;
+		height:300px;
+		overflow-y:hidden;
 		overflow-x: hidden;
 		/* margin-top:100px; */
 		z-index: 200;
 		/* padding-top:-200px; */
-		margin-top:230px;
+		margin-top:320px;
 		/* border-bottom:2px solid #707070; */
 	}
 	.G-scrool {
 	display: none;
 	}
 	.Gimage {
-		width:300px;
-		margin-top:-655px;
+		width:280px;
+		margin-top:-700px;
 		height:200px;
-		margin-left:100px;
+		margin-left:0px;
 	}
 	.G-scrool-mobile  {
 		display: flex;
@@ -415,13 +419,13 @@ all-grade-n {
 	}
 	.pathimg-G {
 		width:20px;
-		margin-left:260px;
-		margin-top:-10px;
+		margin-left:200px;
+		margin-top:0px;
 	}
 	.line-g {
-		width:400px;
+		width:350px;
 		margin-top:10px;
-		margin-left:75px;
+		margin-left:20px;
 	}
 }
 /* Tablate Responsive */

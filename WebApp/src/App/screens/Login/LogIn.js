@@ -156,6 +156,7 @@ const LogIn = ({ t }, props) => {
             </Link>
           </div>
         </div>
+        <div className="mobilee">
         <div className="Mobile_lr">
           <div className="M-img">
             <div id="M-arrow">
@@ -190,6 +191,7 @@ const LogIn = ({ t }, props) => {
               <img src={img3} className="img3" />
             </div>
           </div>
+        </div>
           <div id="Mobile-bottom">
             <button className="button_login">
               <div className="upp_login">{t("login1")}</div>
@@ -247,6 +249,7 @@ const LogIn = ({ t }, props) => {
             </div>
           </div>
         </div>
+  
       </div>
     );
   } else if (userInfo !== null) {
