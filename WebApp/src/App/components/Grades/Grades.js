@@ -10,8 +10,8 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 <link rel="stylesheet" href="Grades.css" />;
 
-const Grads = ({ t }) => {
-  const { userInfo, isLoading } = useContext(AuthContext);
+const Grads = ({ t },props) => {
+  
 
   const location = useLocation();
   const locationData = location.state;

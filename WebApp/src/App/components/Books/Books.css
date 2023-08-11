@@ -210,9 +210,6 @@
 
 
 @media screen and (max-width:360px) and (min-width:100px){
-    body {
-        overflow-y: hidden;
-    }
     #Books {
         display: flex;
         flex-direction: column;
@@ -422,9 +419,6 @@
     }
 }
 @media screen and (max-width:768px)and (min-width:576px) {
-    body {
-        overflow-y: hidden;
-    }
     #Books {
         display: flex;
         flex-direction: column;
@@ -649,9 +643,7 @@
     }
 }
 @media screen and (max-width:992px)and (min-width:768px){
-    body {
-        overflow-y: hidden;
-    }
+
     #Books {
         display: flex;
         flex-direction: column;
@@ -869,9 +861,7 @@
     }
 }
 @media screen and (max-width:1200px)and (min-width:992px) {
-    body {
-        overflow-y: hidden;
-    }
+
     #Books {
         display: flex;
         flex-direction: column;

@@ -407,6 +407,7 @@ color: #ccc;
 }
 
 } */
+/* mobile */
 @media screen and (max-width:150px)and (min-width:100px){
     .form-suggestion{
         height: 0px;
@@ -1976,7 +1977,7 @@ color: #ccc;
      
      }
     
-    }
+}
 @media screen and (max-width: 414px)and (min-width:401px){
         .form-suggestion{
             height: 0px;
@@ -2172,7 +2173,7 @@ color: #ccc;
          
          }
         
-        }
+}
 @media screen and (max-width: 450px)and (min-width:415px){
         .form-suggestion{
             height: 0px;
@@ -2368,7 +2369,7 @@ color: #ccc;
            
          
          }
-        }
+}
 @media screen and (max-width: 500px)and (min-width:451px){
     .form-suggestion{
         height: 0px;
@@ -2564,7 +2565,7 @@ color: #ccc;
        
      
      }
-    }
+}
 @media screen and (max-width: 550px)and (min-width:501px){
         .form-suggestion{
             height: 0px;
@@ -2761,7 +2762,7 @@ color: #ccc;
          
          }
         
-        }
+}
 @media screen and (max-width: 576px)and (min-width:551px){
     .form-suggestion{
        height: 0px;
@@ -2959,1159 +2960,1710 @@ color: #ccc;
     
     }
     
-    }
-@media screen and (max-width:600px)and (min-width:577px){
-        .suggestion{
-            width: 600px;
-            overflow: visible ;
-                 }
-                 *{
-         
-                     margin: 0;
-                     padding: 0;
-                 }
-                 .title-suggestion{
-                     margin-top: 50px;
-                     margin-bottom: 12px;
-                     font-family: "Bahij Helvetica";
-                    color: rgba(60,152,189,1) ;
-                    font-size: 50px;
-                    margin-left: 300px;
-                 
-                 
-                 }
-                 .para-suggestion{
-                     font-family: "Bahij Helvetica";
-                     font-size: large;
-                     margin-bottom: 32px;
-                    
-                     color:  #ccc;
-                     margin-left: 110px;
-                 }
-                 .sendd-suggestion{
-                 width: 100%;
-                 height: 625px;
-                 /* background-color: rgb(255, 255, 255); */
-                 background-color: rgb(28, 102, 136);
-                 }
-                 
-                 .all-input-suggestion{
-                     
-                     position: relative;
-                     left: 80px;
-                     width: 768px;
-             
-                    
-                  
-                 }
-                 #infut-first-suggestion{
-                
-                     margin-right: 92px;
-                     background: none;
-                     width: 200px;
-                     padding: 10px 0px;
-                     margin: 15px 0;
-                     border-bottom: 2px solid #ccc;
-                     box-sizing: border-box;
-                     text-align: right;
-                     fill: transparent;
-                   outline: none;
-         
-                 }
-                 
-                 #infut-second-suggestion{
-                 
-                     background: none;
-                     width: 590px;
-                     padding: 10px 0px;
-                     margin: 15px 0;
-                     border-bottom: 2px solid #ccc;
-                     box-sizing: border-box;
-                     text-align: right;
-                     fill: transparent;
-                   outline: none;
-              
-                 }
-                 
-                 .oo-suggestion{
-                 display: inline-block;
-                 }
-                 
-                 .er-suggestion{
-                    margin: 0;padding: 0;
-                    font-family: "Bahij Helvetica";
-                     color: rgb(241, 26, 26);
-                     font-weight: bold;
-                     font-style: normal;
-                     height: 1px;
-                 }
-                 .section-one-input-suggestion{
-                     display: flex;
-                     justify-content: space-between;
-                     width: 768px;
-         
-              
-                 }
-                 .section-tow-input-suggestion{
-                    width: 768px;
-                 
-                 }
-                 ::placeholder{
-                     color: rgb(177, 174, 174) !important;
-                     margin-right: 0;
-                     padding-right: 0;
-                  
-                 }
-                 
-                 .send-button-suggestion{
-                     margin-top: 30px;
-                     margin-left: 340px;
-                     display: inline-block;
-                    
-                   
-                 }
-                 .send-suggestion{
-                     font-family: "Bahij Helvetica";
-                     font-size: large;
-                     width: 100px;
-                     height: 30px;
-                     border-radius: 50px;
-                     color: white;
-                     background-color:rgba(60,152,189,1) ;
-                 }
-                 
-                 
-                 
-                 .contect-suggestion{
-                     width: 100%;
-                     height: 250px;
-                     background-color: rgb(113, 124, 120);
-                 
-                 }
-                 .all-icons-suggestion{
-                     position: relative;
-                     top: 70px;
-                     left: 280px;
-                     width: 200px;
-                     display: flex;
-                     justify-content: space-between;
-                    overflow: hidden;
-                 }
-                 .icons-suggestion{
-                     padding: 5px 7px 5px 7px;
-                     background-color: rgb(70, 83, 83);
-                     border-radius: 100px;
-                 }
-                 
-                 #facebook-suggestion{
-                     position: relative;
-                     top: 9px;
-                     width: 25px;
-                     height: 25px;
-                     color: white;
-                     border-radius: 100px;
-                    
-                     
-                 }
-                 
-                 #instagram-suggestion{
-                     position: relative;
-                     top: 2px;
-                     width: 25px;
-                     height: 25px;
-                     color: white;
-                     border-radius: 100px;
-                 }
-                 #twitter-suggestion{
-                     position: relative;
-                     top: 3px;
-                     width: 25px;
-                     height: 25px;
-                     color: white;
-                     border-radius: 100px; 
-                 }
-                 #youtube-suggestion{
-                     position: relative;
-                     top: 2px;
-                     width: 25px;
-                     height: 25px;
-                     color: white;
-                     border-radius: 100px; 
-                 }
-                 .Copyright-suggestion{
-                     color: white;
-                     padding-top: 110px;
-                     margin-left: 195px;
-                 }
-                 .Larkhod-suggestion{
-                     color: rgba(60,152,189,1);
-                 }
-                 
-                 h5 {
-                  
-                   position: relative;
-                   top: 90px;
-                   left: 90px;
-                   content: "";
-                   display: block;
-                   width: 550px;
-                   height: 1px;
-                   margin: auto 10px;
-                   border-bottom: 2px solid #ccc;
-                 }
-                 #ig-suggestion{
-                     display: inline-block;
-                  position: relative;
-                  top: 60px;
-                  left: 70px;
-                  z-index: 1000;
-                 }
-                 .message-of-person-suggestion,
-                 .email-of-person-suggestion,
-                 .phone-of-person-suggestion,
-                 .name-of-person-suggestion,
-                 .city-of-person-suggestion,
-                 .senf-of-person-suggestion{
-                 color: #ccc;
-                 }
-                 #name-phone-suggestion{
-                 position: relative;
-                 left: 390px;
-                 
-                 }
-                 #sanf-city-suggestion{
-                 position: relative;
-                 left: -570px;
-                 }
-                 
-                 #svg-suggestion {
-                     fill: url(#svg-suggestion);
-                 }
-                 .svg-suggestion {
-                     display: none;
-                 }
+ }
+
+
+
+
+
+
+ /* computer */
+ @media screen and (max-width:600px)and (min-width:575px){
+    .suggestion{
+        margin-left: -32px;
              }
-@media screen and (max-width:650px)and (min-width:601px){
-        .suggestion{
+             *{
+     
+                 margin: 0;
+                 padding: 0;
+             }
+             .title-suggestion{
+                 margin-top: 50px;
+                 margin-bottom: 12px;
+                 font-family: "Bahij Helvetica";
+                color: rgba(60,152,189,1) ;
+                font-size: 38px;
+                margin-left: 250px;
+             
+             
+             }
+             .para-suggestion{
+                font-family: "Bahij Helvetica";
+                 font-size: 12px;
+                 margin-bottom: 32px;
+                 margin-left: 160px;
+                 color:  #ccc;
+             }
+             .sendd-suggestion{
+             width: 100%;
+             height: 625px;
+             background-color: rgb(255, 255, 255);
+             }
+             
+             .all-input-suggestion{
+                 
+                 position: relative;
+                 left: 110px;
+                 width: 768px;
+              
+                
+              
+             }
+            
+             #infut-first-suggestion{
+            
+                 margin-right: 140px !important;
+                 margin-left: -190px !important;
+                 background: none;
+                 width: 170px;
+                 padding: 10px 0px;
+                 margin: 15px 0;
+                 border-bottom: 2px solid #ccc;
+                 box-sizing: border-box;
+                 text-align: right;
+                 fill: transparent;
+               outline: none;
+     
+             }
+             
+             #infut-second-suggestion{
+             
+                 background: none;
+                 width: 430px;
+                 padding: 10px 0px;
+                 margin: 15px 0;
+                 border-bottom: 2px solid #ccc;
+                 box-sizing: border-box;
+                 text-align: right;
+                 fill: transparent;
+                 outline: none;
+          
+             }
+             
+             .oo-suggestion{
+             display: inline-block;
+             }
+             
+             .er-suggestion{
+                margin-left: -190px;
+                margin-top: -10px;
+                ;padding: 0;
+                font-family: "Bahij Helvetica";
+                 color: rgb(241, 26, 26);
+                 font-weight: bold;
+                 font-style: normal;
+                 height: 1px;
+             }
+             #er-email-message-suggestion{
+                margin-left: 1px;
+             }
+             .eer-suggestion{
+                margin-top: -10px;
+                padding: 0;
+                 color: rgb(241, 26, 26);
+                 font-family: "Bahij Helvetica";
+                 font-weight: bold;
+                 font-style: normal;
+                 height: 1px;
+             }
+             .section-one-input-suggestion{
+                 display: flex;
+                 justify-content: space-between;
+                
+          
+             }
+             .section-tow-input-suggestion{
+                
+             }
+             ::placeholder{
+                 color: rgb(177, 174, 174) !important;
+                 margin-right: 0;
+                 padding-right: 0;
+              
+             }
+             
+             .send-button-suggestion{
+                 margin-top: 30px;
+                 margin-left: 270px;
+                 display: inline-block;
+                
+               
+             }
+             .send-suggestion{
+                font-family: "Bahij Helvetica";
+                 font-size: large;
+                 width: 100px;
+                 height: 30px;
+                 border-radius: 50px;
+                 color: white;
+                 background-color:rgba(60,152,189,1) ;
+             }
+             
+             
+             
+             .contect-suggestion{
+                 width: 100%;
+                 height: 250px;
+                 background-color: rgb(113, 124, 120);
            
-            /* width: 768px; */
-                 }
-                 *{
-         
-                     margin: 0;
-                     padding: 0;
-                 }
-                 .title-suggestion{
-                     margin-top: 50px;
-                     margin-bottom: 12px;
-                     font-family: "Bahij Helvetica";
-                    color: rgba(60,152,189,1) ;
-                    font-size: 50px;
-                    margin-left: 300px;
-                 
-                 
-                 }
-                 .para-suggestion{
-                     font-family: "Bahij Helvetica";
-                     font-size: large;
-                     margin-bottom: 32px;
-                    
-                     color:  #ccc;
-                     margin-left: 110px;
-                 }
-                 .sendd-suggestion{
-                 width: 100%;
-                 height: 625px;
-                 background-color: rgb(255, 255, 255);
-                 }
-                 
-                 .all-input-suggestion{
-                     
-                     position: relative;
-                     left: 80px;
-                     width: 768px;
-             
-                    
-                  
-                 }
-                 #infut-first-suggestion{
-                
-                     margin-right: 92px;
-                     background: none;
-                     width: 200px;
-                     padding: 10px 0px;
-                     margin: 15px 0;
-                     border-bottom: 2px solid #ccc;
-                     box-sizing: border-box;
-                     text-align: right;
-                     fill: transparent;
-                   outline: none;
-         
-                 }
-                 
-                 #infut-second-suggestion{
-                 
-                     background: none;
-                     width: 590px;
-                     padding: 10px 0px;
-                     margin: 15px 0;
-                     border-bottom: 2px solid #ccc;
-                     box-sizing: border-box;
-                     text-align: right;
-                     fill: transparent;
-                   outline: none;
-              
-                 }
-                 
-                 .oo-suggestion{
-                 display: inline-block;
-                 }
-                 
-                 .er-suggestion{
-                    margin: 0;padding: 0;
-                    font-family: "Bahij Helvetica";
-                     color: rgb(241, 26, 26);
-                     font-weight: bold;
-                     font-style: normal;
-                     height: 1px;
-                 }
-                 .section-one-input-suggestion{
-                     display: flex;
-                     justify-content: space-between;
-                     width: 768px;
-         
-              
-                 }
-                 .section-tow-input-suggestion{
-                    width: 768px;
-                 
-                 }
-                 ::placeholder{
-                     color: rgb(177, 174, 174) !important;
-                     margin-right: 0;
-                     padding-right: 0;
-                  
-                 }
-                 
-                 .send-button-suggestion{
-                     margin-top: 30px;
-                     margin-left: 340px;
-                     display: inline-block;
-                    
-                   
-                 }
-                 .send-suggestion{
-                     font-family: "Bahij Helvetica";
-                     font-size: large;
-                     width: 100px;
-                     height: 30px;
-                     border-radius: 50px;
-                     color: white;
-                     background-color:rgba(60,152,189,1) ;
-                 }
-                 
-                 
-                 
-                 .contect-suggestion{
-                     width: 100%;
-                     height: 250px;
-                     background-color: rgb(113, 124, 120);
-                 
-                 }
-                 .all-icons-suggestion{
-                     position: relative;
-                     top: 70px;
-                     left: 280px;
-                     width: 200px;
-                     display: flex;
-                     justify-content: space-between;
-                    overflow: hidden;
-                 }
-                 .icons-suggestion{
-                     padding: 5px 7px 5px 7px;
-                     background-color: rgb(70, 83, 83);
-                     border-radius: 100px;
-                 }
-                 
-                 #facebook-suggestion{
-                     position: relative;
-                     top: 9px;
-                     width: 25px;
-                     height: 25px;
-                     color: white;
-                     border-radius: 100px;
-                    
-                     
-                 }
-                 
-                 #instagram-suggestion{
-                     position: relative;
-                     top: 2px;
-                     width: 25px;
-                     height: 25px;
-                     color: white;
-                     border-radius: 100px;
-                 }
-                 #twitter-suggestion{
-                     position: relative;
-                     top: 3px;
-                     width: 25px;
-                     height: 25px;
-                     color: white;
-                     border-radius: 100px; 
-                 }
-                 #youtube-suggestion{
-                     position: relative;
-                     top: 2px;
-                     width: 25px;
-                     height: 25px;
-                     color: white;
-                     border-radius: 100px; 
-                 }
-                 .Copyright-suggestion{
-                     color: white;
-                     padding-top: 110px;
-                     margin-left: 195px;
-                 }
-                 .Larkhod-suggestion{
-                     color: rgba(60,152,189,1);
-                 }
-                 
-                 h5 {
-                  
-                   position: relative;
-                   top: 90px;
-                   left: 90px;
-                   content: "";
-                   display: block;
-                   width: 550px;
-                   height: 1px;
-                   margin: auto 10px;
-                   border-bottom: 2px solid #ccc;
-                 }
-                 #ig-suggestion{
-                     display: inline-block;
-                  position: relative;
-                  top: 60px;
-                  left: 70px;
-                  z-index: 1000;
-                 }
-                 .message-of-person-suggestion,
-                 .email-of-person-suggestion,
-                 .phone-of-person-suggestion,
-                 .name-of-person-suggestion,
-                 .city-of-person-suggestion,
-                 .senf-of-person-suggestion{
-                 color: #ccc;
-                 }
-                 #name-phone-suggestion{
-                 position: relative;
-                 left: 390px;
-                 
-                 }
-                 #sanf-city-suggestion{
-                 position: relative;
-                 left: -570px;
-                 }
-                 
-                 #svg-suggestion {
-                     fill: url(#svg-suggestion);
-                 }
-                 .svg-suggestion {
-                     display: none;
-                 }
              }
-@media screen and (max-width:750px)and (min-width:651px){
-        .suggestion{
+             .all-icons-suggestion{
+                 position: relative;
+                 top: 70px;
+                 left: 220px;
+                 width: 200px;
+                 display: flex;
+                 justify-content: space-between;
+                overflow: hidden;
+             }
+             .icons-suggestion{
+                 padding: 5px 7px 5px 7px;
+                 background-color: rgb(70, 83, 83);
+                 border-radius: 100px;
+             }
+             
+             #facebook-suggestion{
+                 position: relative;
+                 top: 9px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px;
+                
+                 
+             }
+             
+             #instagram-suggestion{
+                 position: relative;
+                 top: 2px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px;
+             }
+             #twitter-suggestion{
+                 position: relative;
+                 top: 3px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px; 
+             }
+             #youtube-suggestion{
+                 position: relative;
+                 top: 2px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px; 
+             }
+             .Copyright-suggestion{
+                margin-left: 160px;
+                 color: white;
+                 padding-top: 110px;
+                
+             }
+             .Larkhod-suggestion{
+                 color: rgba(60,152,189,1);
+             }
+             
+             h5 {
+              
+               position: relative;
+               top: 90px;
+               left: 109px;
+               content: "";
+               display: block;
+               width: 410px;
+               height: 1px;
+               margin: auto 10px;
+               border-bottom: 2px solid #ccc;
+             }
+             #ig-suggestion{
+                 display: inline-block;
+              position: relative;
+              top: 60px;
+              left: 70px;
+              z-index: 1000;
+             }
+             .message-of-person-suggestion,
+             .email-of-person-suggestion,
+             .phone-of-person-suggestion,
+             .name-of-person-suggestion,
+             .city-of-person-suggestion,
+             .senf-of-person-suggestion{
+             color: #ccc;
+             }
+             #name-phone-suggestion{
+             position: relative;
+             left: 450px;
+             
+             }
+             #sanf-city-suggestion{
+             position: relative;
+             left: -460px;
+             }
+             
+             #svg-suggestion {
+                 fill: url(#svg-suggestion);
+             }
+             .svg-suggestion {
+                 display: none;
+             }
+} 
+ @media screen and (max-width:650px)and (min-width:601px){
+    .suggestion{
+        margin-left: -32px;
+             }
+             *{
+     
+                 margin: 0;
+                 padding: 0;
+             }
+             .title-suggestion{
+                 margin-top: 50px;
+                 margin-bottom: 12px;
+                 font-family: "Bahij Helvetica";
+                color: rgba(60,152,189,1) ;
+                font-size: 38px;
+                margin-left: 270px;
+             
+             
+             }
+             .para-suggestion{
+                font-family: "Bahij Helvetica";
+                 font-size: 13px;
+                 margin-bottom: 32px;
+                 margin-left: 170px;
+                 color:  #ccc;
+             }
+             .sendd-suggestion{
+             width: 100%;
+             height: 625px;
+             background-color: rgb(255, 255, 255);
+             }
+             
+             .all-input-suggestion{
+                 
+                 position: relative;
+                 left: 110px;
+                 width: 768px;
+              
+                
+              
+             }
+            
+             #infut-first-suggestion{
+            
+                 margin-right: 140px !important;
+                 margin-left: -140px !important;
+                 background: none;
+                 width: 170px;
+                 padding: 10px 0px;
+                 margin: 15px 0;
+                 border-bottom: 2px solid #ccc;
+                 box-sizing: border-box;
+                 text-align: right;
+                 fill: transparent;
+               outline: none;
+     
+             }
+             
+             #infut-second-suggestion{
+             
+                 background: none;
+                 width: 480px;
+                 padding: 10px 0px;
+                 margin: 15px 0;
+                 border-bottom: 2px solid #ccc;
+                 box-sizing: border-box;
+                 text-align: right;
+                 fill: transparent;
+                 outline: none;
+          
+             }
+             
+             .oo-suggestion{
+             display: inline-block;
+             }
+             
+             .er-suggestion{
+                margin-left: -140px;
+                margin-top: -10px;
+                ;padding: 0;
+                font-family: "Bahij Helvetica";
+                 color: rgb(241, 26, 26);
+                 font-weight: bold;
+                 font-style: normal;
+                 height: 1px;
+             }
+             #er-email-message-suggestion{
+                margin-left: 1px;
+             }
+             .eer-suggestion{
+                margin-top: -10px;
+                padding: 0;
+                 color: rgb(241, 26, 26);
+                 font-family: "Bahij Helvetica";
+                 font-weight: bold;
+                 font-style: normal;
+                 height: 1px;
+             }
+             .section-one-input-suggestion{
+                 display: flex;
+                 justify-content: space-between;
+                
+          
+             }
+             .section-tow-input-suggestion{
+                
+             }
+             ::placeholder{
+                 color: rgb(177, 174, 174) !important;
+                 margin-right: 0;
+                 padding-right: 0;
+              
+             }
+             
+             .send-button-suggestion{
+                 margin-top: 30px;
+                 margin-left: 300px;
+                 display: inline-block;
+                
+               
+             }
+             .send-suggestion{
+                font-family: "Bahij Helvetica";
+                 font-size: large;
+                 width: 100px;
+                 height: 30px;
+                 border-radius: 50px;
+                 color: white;
+                 background-color:rgba(60,152,189,1) ;
+             }
+             
+             
+             
+             .contect-suggestion{
+                 width: 100%;
+                 height: 250px;
+                 background-color: rgb(113, 124, 120);
            
-            /* width: 768px; */
-                 }
-                 *{
-         
-                     margin: 0;
-                     padding: 0;
-                 }
-                 .title-suggestion{
-                     margin-top: 50px;
-                     margin-bottom: 12px;
-                     font-family: "Bahij Helvetica";
-                    color: rgba(60,152,189,1) ;
-                    font-size: 50px;
-                    margin-left: 300px;
-                 
-                 
-                 }
-                 .para-suggestion{
-                     font-family: "Bahij Helvetica";
-                     font-size: large;
-                     margin-bottom: 32px;
-                    
-                     color:  #ccc;
-                     margin-left: 110px;
-                 }
-                 .sendd-suggestion{
-                 width: 100%;
-                 height: 625px;
-                 background-color: rgb(255, 255, 255);
-                 }
-                 
-                 .all-input-suggestion{
-                     
-                     position: relative;
-                     left: 80px;
-                     width: 768px;
-             
-                    
-                  
-                 }
-                 #infut-first-suggestion{
-                
-                     margin-right: 92px;
-                     background: none;
-                     width: 200px;
-                     padding: 10px 0px;
-                     margin: 15px 0;
-                     border-bottom: 2px solid #ccc;
-                     box-sizing: border-box;
-                     text-align: right;
-                     fill: transparent;
-                   outline: none;
-         
-                 }
-                 
-                 #infut-second-suggestion{
-                 
-                     background: none;
-                     width: 590px;
-                     padding: 10px 0px;
-                     margin: 15px 0;
-                     border-bottom: 2px solid #ccc;
-                     box-sizing: border-box;
-                     text-align: right;
-                     fill: transparent;
-                   outline: none;
-              
-                 }
-                 
-                 .oo-suggestion{
-                 display: inline-block;
-                 }
-                 
-                 .er-suggestion{
-                    margin: 0;padding: 0;
-                    font-family: "Bahij Helvetica";
-                     color: rgb(241, 26, 26);
-                     font-weight: bold;
-                     font-style: normal;
-                     height: 1px;
-                 }
-                 .section-one-input-suggestion{
-                     display: flex;
-                     justify-content: space-between;
-                     width: 768px;
-         
-              
-                 }
-                 .section-tow-input-suggestion{
-                    width: 768px;
-                 
-                 }
-                 ::placeholder{
-                     color: rgb(177, 174, 174) !important;
-                     margin-right: 0;
-                     padding-right: 0;
-                  
-                 }
-                 
-                 .send-button-suggestion{
-                     margin-top: 30px;
-                     margin-left: 340px;
-                     display: inline-block;
-                    
-                   
-                 }
-                 .send-suggestion{
-                     font-family: "Bahij Helvetica";
-                     font-size: large;
-                     width: 100px;
-                     height: 30px;
-                     border-radius: 50px;
-                     color: white;
-                     background-color:rgba(60,152,189,1) ;
-                 }
-                 
-                 
-                 
-                 .contect-suggestion{
-                     width: 100%;
-                     height: 250px;
-                     background-color: rgb(113, 124, 120);
-                 
-                 }
-                 .all-icons-suggestion{
-                     position: relative;
-                     top: 70px;
-                     left: 280px;
-                     width: 200px;
-                     display: flex;
-                     justify-content: space-between;
-                    overflow: hidden;
-                 }
-                 .icons-suggestion{
-                     padding: 5px 7px 5px 7px;
-                     background-color: rgb(70, 83, 83);
-                     border-radius: 100px;
-                 }
-                 
-                 #facebook-suggestion{
-                     position: relative;
-                     top: 9px;
-                     width: 25px;
-                     height: 25px;
-                     color: white;
-                     border-radius: 100px;
-                    
-                     
-                 }
-                 
-                 #instagram-suggestion{
-                     position: relative;
-                     top: 2px;
-                     width: 25px;
-                     height: 25px;
-                     color: white;
-                     border-radius: 100px;
-                 }
-                 #twitter-suggestion{
-                     position: relative;
-                     top: 3px;
-                     width: 25px;
-                     height: 25px;
-                     color: white;
-                     border-radius: 100px; 
-                 }
-                 #youtube-suggestion{
-                     position: relative;
-                     top: 2px;
-                     width: 25px;
-                     height: 25px;
-                     color: white;
-                     border-radius: 100px; 
-                 }
-                 .Copyright-suggestion{
-                     color: white;
-                     padding-top: 110px;
-                     margin-left: 195px;
-                 }
-                 .Larkhod-suggestion{
-                     color: rgba(60,152,189,1);
-                 }
-                 
-                 h5 {
-                  
-                   position: relative;
-                   top: 90px;
-                   left: 90px;
-                   content: "";
-                   display: block;
-                   width: 550px;
-                   height: 1px;
-                   margin: auto 10px;
-                   border-bottom: 2px solid #ccc;
-                 }
-                 #ig-suggestion{
-                     display: inline-block;
-                  position: relative;
-                  top: 60px;
-                  left: 70px;
-                  z-index: 1000;
-                 }
-                 .message-of-person-suggestion,
-                 .email-of-person-suggestion,
-                 .phone-of-person-suggestion,
-                 .name-of-person-suggestion,
-                 .city-of-person-suggestion,
-                 .senf-of-person-suggestion{
-                 color: #ccc;
-                 }
-                 #name-phone-suggestion{
-                 position: relative;
-                 left: 390px;
-                 
-                 }
-                 #sanf-city-suggestion{
-                 position: relative;
-                 left: -570px;
-                 }
-                 
-                 #svg-suggestion {
-                     fill: url(#svg-suggestion);
-                 }
-                 .svg-suggestion {
-                     display: none;
-                 }
              }
-@media screen and (max-width:700px)and (min-width:751px){
-                .suggestion{
-                   
-                    /* width: 768px; */
-                         }
-                         *{
+             .all-icons-suggestion{
+                 position: relative;
+                 top: 70px;
+                 left: 250px;
+                 width: 200px;
+                 display: flex;
+                 justify-content: space-between;
+                overflow: hidden;
+             }
+             .icons-suggestion{
+                 padding: 5px 7px 5px 7px;
+                 background-color: rgb(70, 83, 83);
+                 border-radius: 100px;
+             }
+             
+             #facebook-suggestion{
+                 position: relative;
+                 top: 9px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px;
+                
                  
-                             margin: 0;
-                             padding: 0;
-                         }
-                         .title-suggestion{
-                             margin-top: 50px;
-                             margin-bottom: 12px;
-                             font-family: "Bahij Helvetica";
-                            color: rgba(60,152,189,1) ;
-                            font-size: 50px;
-                            margin-left: 300px;
-                         
-                         
-                         }
-                         .para-suggestion{
-                             font-family: "Bahij Helvetica";
-                             font-size: large;
-                             margin-bottom: 32px;
-                            
-                             color:  #ccc;
-                             margin-left: 110px;
-                         }
-                         .sendd-suggestion{
-                         width: 100%;
-                         height: 625px;
-                         background-color: rgb(255, 255, 255);
-                         }
-                         
-                         .all-input-suggestion{
-                             
-                             position: relative;
-                             left: 80px;
-                             width: 768px;
-                     
-                            
-                          
-                         }
-                         #infut-first-suggestion{
-                        
-                             margin-right: 92px;
-                             background: none;
-                             width: 200px;
-                             padding: 10px 0px;
-                             margin: 15px 0;
-                             border-bottom: 2px solid #ccc;
-                             box-sizing: border-box;
-                             text-align: right;
-                             fill: transparent;
-                           outline: none;
+             }
+             
+             #instagram-suggestion{
+                 position: relative;
+                 top: 2px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px;
+             }
+             #twitter-suggestion{
+                 position: relative;
+                 top: 3px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px; 
+             }
+             #youtube-suggestion{
+                 position: relative;
+                 top: 2px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px; 
+             }
+             .Copyright-suggestion{
+                margin-left: 185px;
+                 color: white;
+                 padding-top: 110px;
+                
+             }
+             .Larkhod-suggestion{
+                 color: rgba(60,152,189,1);
+             }
+             
+             h5 {
+              
+               position: relative;
+               top: 90px;
+               left: 109px;
+               content: "";
+               display: block;
+               width: 460px;
+               height: 1px;
+               margin: auto 10px;
+               border-bottom: 2px solid #ccc;
+             }
+             #ig-suggestion{
+                 display: inline-block;
+              position: relative;
+              top: 60px;
+              left: 70px;
+              z-index: 1000;
+             }
+             .message-of-person-suggestion,
+             .email-of-person-suggestion,
+             .phone-of-person-suggestion,
+             .name-of-person-suggestion,
+             .city-of-person-suggestion,
+             .senf-of-person-suggestion{
+             color: #ccc;
+             }
+             #name-phone-suggestion{
+             position: relative;
+             left: 450px;
+             
+             }
+             #sanf-city-suggestion{
+             position: relative;
+             left: -460px;
+             }
+             
+             #svg-suggestion {
+                 fill: url(#svg-suggestion);
+             }
+             .svg-suggestion {
+                 display: none;
+             }
+} 
+ @media screen and (max-width:700px)and (min-width:651px){
+    .suggestion{
+        margin-left: -32px;
+             }
+             *{
+     
+                 margin: 0;
+                 padding: 0;
+             }
+             .title-suggestion{
+                 margin-top: 50px;
+                 margin-bottom: 12px;
+                 font-family: "Bahij Helvetica";
+                color: rgba(60,152,189,1) ;
+                font-size: 38px;
+                margin-left: 300px;
+             
+             
+             }
+             .para-suggestion{
+                font-family: "Bahij Helvetica";
+                 font-size: 13px;
+                 margin-bottom: 32px;
+                 margin-left: 200px;
+                 color:  #ccc;
+             }
+             .sendd-suggestion{
+             width: 100%;
+             height: 625px;
+             background-color: rgb(255, 255, 255);
+             }
+             
+             .all-input-suggestion{
                  
-                         }
-                         
-                         #infut-second-suggestion{
-                         
-                             background: none;
-                             width: 590px;
-                             padding: 10px 0px;
-                             margin: 15px 0;
-                             border-bottom: 2px solid #ccc;
-                             box-sizing: border-box;
-                             text-align: right;
-                             fill: transparent;
-                           outline: none;
-                      
-                         }
-                         
-                         .oo-suggestion{
-                         display: inline-block;
-                         }
-                         
-                         .er-suggestion{
-                            margin: 0;padding: 0;
-                            font-family: "Bahij Helvetica";
-                             color: rgb(241, 26, 26);
-                             font-weight: bold;
-                             font-style: normal;
-                             height: 1px;
-                         }
-                         .section-one-input-suggestion{
-                             display: flex;
-                             justify-content: space-between;
-                             width: 768px;
-                 
-                      
-                         }
-                         .section-tow-input-suggestion{
-                            width: 768px;
-                         
-                         }
-                         ::placeholder{
-                             color: rgb(177, 174, 174) !important;
-                             margin-right: 0;
-                             padding-right: 0;
-                          
-                         }
-                         
-                         .send-button-suggestion{
-                             margin-top: 30px;
-                             margin-left: 340px;
-                             display: inline-block;
-                            
-                           
-                         }
-                         .send-suggestion{
-                             font-family: "Bahij Helvetica";
-                             font-size: large;
-                             width: 100px;
-                             height: 30px;
-                             border-radius: 50px;
-                             color: white;
-                             background-color:rgba(60,152,189,1) ;
-                         }
-                         
-                         
-                         
-                         .contect-suggestion{
-                             width: 100%;
-                             height: 250px;
-                             background-color: rgb(113, 124, 120);
-                         
-                         }
-                         .all-icons-suggestion{
-                             position: relative;
-                             top: 70px;
-                             left: 280px;
-                             width: 200px;
-                             display: flex;
-                             justify-content: space-between;
-                            overflow: hidden;
-                         }
-                         .icons-suggestion{
-                             padding: 5px 7px 5px 7px;
-                             background-color: rgb(70, 83, 83);
-                             border-radius: 100px;
-                         }
-                         
-                         #facebook-suggestion{
-                             position: relative;
-                             top: 9px;
-                             width: 25px;
-                             height: 25px;
-                             color: white;
-                             border-radius: 100px;
-                            
-                             
-                         }
-                         
-                         #instagram-suggestion{
-                             position: relative;
-                             top: 2px;
-                             width: 25px;
-                             height: 25px;
-                             color: white;
-                             border-radius: 100px;
-                         }
-                         #twitter-suggestion{
-                             position: relative;
-                             top: 3px;
-                             width: 25px;
-                             height: 25px;
-                             color: white;
-                             border-radius: 100px; 
-                         }
-                         #youtube-suggestion{
-                             position: relative;
-                             top: 2px;
-                             width: 25px;
-                             height: 25px;
-                             color: white;
-                             border-radius: 100px; 
-                         }
-                         .Copyright-suggestion{
-                             color: white;
-                             padding-top: 110px;
-                             margin-left: 195px;
-                         }
-                         .Larkhod-suggestion{
-                             color: rgba(60,152,189,1);
-                         }
-                         
-                         h5 {
-                          
-                           position: relative;
-                           top: 90px;
-                           left: 90px;
-                           content: "";
-                           display: block;
-                           width: 550px;
-                           height: 1px;
-                           margin: auto 10px;
-                           border-bottom: 2px solid #ccc;
-                         }
-                         #ig-suggestion{
-                             display: inline-block;
-                          position: relative;
-                          top: 60px;
-                          left: 70px;
-                          z-index: 1000;
-                         }
-                         .message-of-person-suggestion,
-                         .email-of-person-suggestion,
-                         .phone-of-person-suggestion,
-                         .name-of-person-suggestion,
-                         .city-of-person-suggestion,
-                         .senf-of-person-suggestion{
-                         color: #ccc;
-                         }
-                         #name-phone-suggestion{
-                         position: relative;
-                         left: 390px;
-                         
-                         }
-                         #sanf-city-suggestion{
-                         position: relative;
-                         left: -570px;
-                         }
-                         
-                         #svg-suggestion {
-                             fill: url(#svg-suggestion);
-                         }
-                         .svg-suggestion {
-                             display: none;
-                         }
-                     }
-@media screen and (max-width:800px)and (min-width:701px){
-        .suggestion{
+                 position: relative;
+                 left: 110px;
+                 width: 768px;
+              
+                
+              
+             }
+            
+             #infut-first-suggestion{
+            
+                 margin-right: 120px !important;
+                 margin-left: -110px !important;
+                 background: none;
+                 width: 190px;
+                 padding: 10px 0px;
+                 margin: 15px 0;
+                 border-bottom: 2px solid #ccc;
+                 box-sizing: border-box;
+                 text-align: right;
+                 fill: transparent;
+               outline: none;
+     
+             }
+             
+             #infut-second-suggestion{
+             
+                 background: none;
+                 width: 530px;
+                 padding: 10px 0px;
+                 margin: 15px 0;
+                 border-bottom: 2px solid #ccc;
+                 box-sizing: border-box;
+                 text-align: right;
+                 fill: transparent;
+                 outline: none;
+          
+             }
+             
+             .oo-suggestion{
+             display: inline-block;
+             }
+             
+             .er-suggestion{
+                margin-left: -110px;
+                margin-top: -10px;
+                ;padding: 0;
+                font-family: "Bahij Helvetica";
+                 color: rgb(241, 26, 26);
+                 font-weight: bold;
+                 font-style: normal;
+                 height: 1px;
+             }
+             #er-email-message-suggestion{
+                margin-left: 1px;
+             }
+             .eer-suggestion{
+                margin-top: -10px;
+                padding: 0;
+                 color: rgb(241, 26, 26);
+                 font-family: "Bahij Helvetica";
+                 font-weight: bold;
+                 font-style: normal;
+                 height: 1px;
+             }
+             .section-one-input-suggestion{
+                 display: flex;
+                 justify-content: space-between;
+                
+          
+             }
+             .section-tow-input-suggestion{
+                
+             }
+             ::placeholder{
+                 color: rgb(177, 174, 174) !important;
+                 margin-right: 0;
+                 padding-right: 0;
+              
+             }
+             
+             .send-button-suggestion{
+                 margin-top: 30px;
+                 margin-left: 320px;
+                 display: inline-block;
+                
+               
+             }
+             .send-suggestion{
+                font-family: "Bahij Helvetica";
+                 font-size: large;
+                 width: 100px;
+                 height: 30px;
+                 border-radius: 50px;
+                 color: white;
+                 background-color:rgba(60,152,189,1) ;
+             }
+             
+             
+             
+             .contect-suggestion{
+                 width: 100%;
+                 height: 250px;
+                 background-color: rgb(113, 124, 120);
            
-            /* width: 768px; */
-                 }
-                 *{
-         
-                     margin: 0;
-                     padding: 0;
-                 }
-                 .title-suggestion{
-                     margin-top: 50px;
-                     margin-bottom: 12px;
-                     font-family: "Bahij Helvetica";
-                    color: rgba(60,152,189,1) ;
-                    font-size: 50px;
-                    margin-left: 300px;
-                 
-                 
-                 }
-                 .para-suggestion{
-                     font-family: "Bahij Helvetica";
-                     font-size: large;
-                     margin-bottom: 32px;
-                    
-                     color:  #ccc;
-                     margin-left: 110px;
-                 }
-                 .sendd-suggestion{
-                 width: 100%;
-                 height: 625px;
-                 background-color: rgb(255, 255, 255);
-                 }
-                 
-                 .all-input-suggestion{
-                     
-                     position: relative;
-                     left: 80px;
-                     width: 768px;
-             
-                    
-                  
-                 }
-                 #infut-first-suggestion{
-                
-                     margin-right: 92px;
-                     background: none;
-                     width: 200px;
-                     padding: 10px 0px;
-                     margin: 15px 0;
-                     border-bottom: 2px solid #ccc;
-                     box-sizing: border-box;
-                     text-align: right;
-                     fill: transparent;
-                   outline: none;
-         
-                 }
-                 
-                 #infut-second-suggestion{
-                 
-                     background: none;
-                     width: 590px;
-                     padding: 10px 0px;
-                     margin: 15px 0;
-                     border-bottom: 2px solid #ccc;
-                     box-sizing: border-box;
-                     text-align: right;
-                     fill: transparent;
-                   outline: none;
-              
-                 }
-                 
-                 .oo-suggestion{
-                 display: inline-block;
-                 }
-                 
-                 .er-suggestion{
-                    margin: 0;padding: 0;
-                    font-family: "Bahij Helvetica";
-                     color: rgb(241, 26, 26);
-                     font-weight: bold;
-                     font-style: normal;
-                     height: 1px;
-                 }
-                 .section-one-input-suggestion{
-                     display: flex;
-                     justify-content: space-between;
-                     width: 768px;
-         
-              
-                 }
-                 .section-tow-input-suggestion{
-                    width: 768px;
-                 
-                 }
-                 ::placeholder{
-                     color: rgb(177, 174, 174) !important;
-                     margin-right: 0;
-                     padding-right: 0;
-                  
-                 }
-                 
-                 .send-button-suggestion{
-                     margin-top: 30px;
-                     margin-left: 340px;
-                     display: inline-block;
-                    
-                   
-                 }
-                 .send-suggestion{
-                     font-family: "Bahij Helvetica";
-                     font-size: large;
-                     width: 100px;
-                     height: 30px;
-                     border-radius: 50px;
-                     color: white;
-                     background-color:rgba(60,152,189,1) ;
-                 }
-                 
-                 
-                 
-                 .contect-suggestion{
-                     width: 100%;
-                     height: 250px;
-                     background-color: rgb(113, 124, 120);
-                 
-                 }
-                 .all-icons-suggestion{
-                     position: relative;
-                     top: 70px;
-                     left: 280px;
-                     width: 200px;
-                     display: flex;
-                     justify-content: space-between;
-                    overflow: hidden;
-                 }
-                 .icons-suggestion{
-                     padding: 5px 7px 5px 7px;
-                     background-color: rgb(70, 83, 83);
-                     border-radius: 100px;
-                 }
-                 
-                 #facebook-suggestion{
-                     position: relative;
-                     top: 9px;
-                     width: 25px;
-                     height: 25px;
-                     color: white;
-                     border-radius: 100px;
-                    
-                     
-                 }
-                 
-                 #instagram-suggestion{
-                     position: relative;
-                     top: 2px;
-                     width: 25px;
-                     height: 25px;
-                     color: white;
-                     border-radius: 100px;
-                 }
-                 #twitter-suggestion{
-                     position: relative;
-                     top: 3px;
-                     width: 25px;
-                     height: 25px;
-                     color: white;
-                     border-radius: 100px; 
-                 }
-                 #youtube-suggestion{
-                     position: relative;
-                     top: 2px;
-                     width: 25px;
-                     height: 25px;
-                     color: white;
-                     border-radius: 100px; 
-                 }
-                 .Copyright-suggestion{
-                     color: white;
-                     padding-top: 110px;
-                     margin-left: 195px;
-                 }
-                 .Larkhod-suggestion{
-                     color: rgba(60,152,189,1);
-                 }
-                 
-                 h5 {
-                  
-                   position: relative;
-                   top: 90px;
-                   left: 90px;
-                   content: "";
-                   display: block;
-                   width: 550px;
-                   height: 1px;
-                   margin: auto 10px;
-                   border-bottom: 2px solid #ccc;
-                 }
-                 #ig-suggestion{
-                     display: inline-block;
-                  position: relative;
-                  top: 60px;
-                  left: 70px;
-                  z-index: 1000;
-                 }
-                 .message-of-person-suggestion,
-                 .email-of-person-suggestion,
-                 .phone-of-person-suggestion,
-                 .name-of-person-suggestion,
-                 .city-of-person-suggestion,
-                 .senf-of-person-suggestion{
-                 color: #ccc;
-                 }
-                 #name-phone-suggestion{
-                 position: relative;
-                 left: 390px;
-                 
-                 }
-                 #sanf-city-suggestion{
-                 position: relative;
-                 left: -570px;
-                 }
-                 
-                 #svg-suggestion {
-                     fill: url(#svg-suggestion);
-                 }
-                 .svg-suggestion {
-                     display: none;
-                 }
              }
-@media screen and (max-width:900px)and (min-width:801px){
+             .all-icons-suggestion{
+                 position: relative;
+                 top: 70px;
+                 left: 270px;
+                 width: 200px;
+                 display: flex;
+                 justify-content: space-between;
+                overflow: hidden;
+             }
+             .icons-suggestion{
+                 padding: 5px 7px 5px 7px;
+                 background-color: rgb(70, 83, 83);
+                 border-radius: 100px;
+             }
+             
+             #facebook-suggestion{
+                 position: relative;
+                 top: 9px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px;
+                
+                 
+             }
+             
+             #instagram-suggestion{
+                 position: relative;
+                 top: 2px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px;
+             }
+             #twitter-suggestion{
+                 position: relative;
+                 top: 3px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px; 
+             }
+             #youtube-suggestion{
+                 position: relative;
+                 top: 2px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px; 
+             }
+             .Copyright-suggestion{
+                margin-left: 205px;
+                 color: white;
+                 padding-top: 110px;
+                
+             }
+             .Larkhod-suggestion{
+                 color: rgba(60,152,189,1);
+             }
+             
+             h5 {
+              
+               position: relative;
+               top: 90px;
+               left: 109px;
+               content: "";
+               display: block;
+               width: 510px;
+               height: 1px;
+               margin: auto 10px;
+               border-bottom: 2px solid #ccc;
+             }
+             #ig-suggestion{
+                 display: inline-block;
+              position: relative;
+              top: 60px;
+              left: 70px;
+              z-index: 1000;
+             }
+             .message-of-person-suggestion,
+             .email-of-person-suggestion,
+             .phone-of-person-suggestion,
+             .name-of-person-suggestion,
+             .city-of-person-suggestion,
+             .senf-of-person-suggestion{
+             color: #ccc;
+             }
+             #name-phone-suggestion{
+             position: relative;
+             left: 450px;
+             
+             }
+             #sanf-city-suggestion{
+             position: relative;
+             left: -460px;
+             }
+             
+             #svg-suggestion {
+                 fill: url(#svg-suggestion);
+             }
+             .svg-suggestion {
+                 display: none;
+             }
+} 
+ @media screen and (max-width:750px)and (min-width:701px){
+    .suggestion{
+        margin-left: -32px;
+             }
+             *{
+     
+                 margin: 0;
+                 padding: 0;
+             }
+             .title-suggestion{
+                 margin-top: 50px;
+                 margin-bottom: 12px;
+                 font-family: "Bahij Helvetica";
+                color: rgba(60,152,189,1) ;
+                font-size: 40px;
+                margin-left: 310px;
+             
+             
+             }
+             .para-suggestion{
+                font-family: "Bahij Helvetica";
+                 font-size: 14px;
+                 margin-bottom: 32px;
+                 margin-left: 190px;
+                 color:  #ccc;
+             }
+             .sendd-suggestion{
+             width: 100%;
+             height: 625px;
+             background-color: rgb(255, 255, 255);
+             }
+             
+             .all-input-suggestion{
+                 
+                 position: relative;
+                 left: 110px;
+                 width: 768px;
+              
+                
+              
+             }
+            
+             #infut-first-suggestion{
+            
+                 margin-right: 110px !important;
+                 margin-left: -80px !important;
+                 background: none;
+                 width: 200px;
+                 padding: 10px 0px;
+                 margin: 15px 0;
+                 border-bottom: 2px solid #ccc;
+                 box-sizing: border-box;
+                 text-align: right;
+                 fill: transparent;
+               outline: none;
+     
+             }
+             
+             #infut-second-suggestion{
+             
+                 background: none;
+                 width: 570px;
+                 padding: 10px 0px;
+                 margin: 15px 0;
+                 border-bottom: 2px solid #ccc;
+                 box-sizing: border-box;
+                 text-align: right;
+                 fill: transparent;
+               outline: none;
+          
+             }
+             
+             .oo-suggestion{
+             display: inline-block;
+             }
+             
+             .er-suggestion{
+                margin-left: -80px;
+                margin-top: -10px;
+                ;padding: 0;
+                font-family: "Bahij Helvetica";
+                 color: rgb(241, 26, 26);
+                 font-weight: bold;
+                 font-style: normal;
+                 height: 1px;
+             }
+             #er-email-message-suggestion{
+                margin-left: 1px;
+             }
+             .eer-suggestion{
+                margin-top: -10px;
+                padding: 0;
+                 color: rgb(241, 26, 26);
+                 font-family: "Bahij Helvetica";
+                 font-weight: bold;
+                 font-style: normal;
+                 height: 1px;
+             }
+             .section-one-input-suggestion{
+                 display: flex;
+                 justify-content: space-between;
+                
+          
+             }
+             .section-tow-input-suggestion{
+                
+             }
+             ::placeholder{
+                 color: rgb(177, 174, 174) !important;
+                 margin-right: 0;
+                 padding-right: 0;
+              
+             }
+             
+             .send-button-suggestion{
+                 margin-top: 30px;
+                 margin-left: 350px;
+                 display: inline-block;
+                
+               
+             }
+             .send-suggestion{
+                font-family: "Bahij Helvetica";
+                 font-size: large;
+                 width: 100px;
+                 height: 30px;
+                 border-radius: 50px;
+                 color: white;
+                 background-color:rgba(60,152,189,1) ;
+             }
+             
+             
+             
+             .contect-suggestion{
+                 width: 100%;
+                 height: 250px;
+                 background-color: rgb(113, 124, 120);
+           
+             }
+             .all-icons-suggestion{
+                 position: relative;
+                 top: 70px;
+                 left: 300px;
+                 width: 200px;
+                 display: flex;
+                 justify-content: space-between;
+                overflow: hidden;
+             }
+             .icons-suggestion{
+                 padding: 5px 7px 5px 7px;
+                 background-color: rgb(70, 83, 83);
+                 border-radius: 100px;
+             }
+             
+             #facebook-suggestion{
+                 position: relative;
+                 top: 9px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px;
+                
+                 
+             }
+             
+             #instagram-suggestion{
+                 position: relative;
+                 top: 2px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px;
+             }
+             #twitter-suggestion{
+                 position: relative;
+                 top: 3px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px; 
+             }
+             #youtube-suggestion{
+                 position: relative;
+                 top: 2px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px; 
+             }
+             .Copyright-suggestion{
+                margin-left: 235px;
+                 color: white;
+                 padding-top: 110px;
+                
+             }
+             .Larkhod-suggestion{
+                 color: rgba(60,152,189,1);
+             }
+             
+             h5 {
+              
+               position: relative;
+               top: 90px;
+               left: 109px;
+               content: "";
+               display: block;
+               width: 550px;
+               height: 1px;
+               margin: auto 10px;
+               border-bottom: 2px solid #ccc;
+             }
+             #ig-suggestion{
+                 display: inline-block;
+              position: relative;
+              top: 60px;
+              left: 70px;
+              z-index: 1000;
+             }
+             .message-of-person-suggestion,
+             .email-of-person-suggestion,
+             .phone-of-person-suggestion,
+             .name-of-person-suggestion,
+             .city-of-person-suggestion,
+             .senf-of-person-suggestion{
+             color: #ccc;
+             }
+             #name-phone-suggestion{
+             position: relative;
+             left: 450px;
+             
+             }
+             #sanf-city-suggestion{
+             position: relative;
+             left: -460px;
+             }
+             
+             #svg-suggestion {
+                 fill: url(#svg-suggestion);
+             }
+             .svg-suggestion {
+                 display: none;
+             }
+} 
+ @media screen and (max-width:800px)and (min-width:751px){
+    .suggestion{
+        margin-left: -32px;
+             }
+             *{
+     
+                 margin: 0;
+                 padding: 0;
+             }
+             .title-suggestion{
+                 margin-top: 50px;
+                 margin-bottom: 12px;
+                 font-family: "Bahij Helvetica";
+                color: rgba(60,152,189,1) ;
+                font-size: 40px;
+                margin-left: 330px;
+             
+             
+             }
+             .para-suggestion{
+                font-family: "Bahij Helvetica";
+                 font-size: 14px;
+                 margin-bottom: 32px;
+                 margin-left: 210px;
+                 color:  #ccc;
+             }
+             .sendd-suggestion{
+             width: 100%;
+             height: 625px;
+             background-color: rgb(255, 255, 255);
+             }
+             
+             .all-input-suggestion{
+                 
+                 position: relative;
+                 left: 110px;
+                 width: 768px;
+              
+                
+              
+             }
+            
+             #infut-first-suggestion{
+            
+                 margin-right: 100px !important;
+                 margin-left: -55px !important;
+                 background: none;
+                 width: 210px;
+                 padding: 10px 0px;
+                 margin: 15px 0;
+                 border-bottom: 2px solid #ccc;
+                 box-sizing: border-box;
+                 text-align: right;
+                 fill: transparent;
+               outline: none;
+     
+             }
+             
+             #infut-second-suggestion{
+             
+                 background: none;
+                 width: 605px;
+                 padding: 10px 0px;
+                 margin: 15px 0;
+                 border-bottom: 2px solid #ccc;
+                 box-sizing: border-box;
+                 text-align: right;
+                 fill: transparent;
+               outline: none;
+          
+             }
+             
+             .oo-suggestion{
+             display: inline-block;
+             }
+             
+             .er-suggestion{
+                margin-left: -50px;
+                margin-top: -10px;
+                ;padding: 0;
+                font-family: "Bahij Helvetica";
+                 color: rgb(241, 26, 26);
+                 font-weight: bold;
+                 font-style: normal;
+                 height: 1px;
+             }
+             #er-email-message-suggestion{
+                margin-left: 1px;
+             }
+             .eer-suggestion{
+                margin-top: -10px;
+                padding: 0;
+                 color: rgb(241, 26, 26);
+                 font-family: "Bahij Helvetica";
+                 font-weight: bold;
+                 font-style: normal;
+                 height: 1px;
+             }
+             .section-one-input-suggestion{
+                 display: flex;
+                 justify-content: space-between;
+                
+          
+             }
+             .section-tow-input-suggestion{
+                
+             }
+             ::placeholder{
+                 color: rgb(177, 174, 174) !important;
+                 margin-right: 0;
+                 padding-right: 0;
+              
+             }
+             
+             .send-button-suggestion{
+                 margin-top: 30px;
+                 margin-left: 380px;
+                 display: inline-block;
+                
+               
+             }
+             .send-suggestion{
+                font-family: "Bahij Helvetica";
+                 font-size: large;
+                 width: 100px;
+                 height: 30px;
+                 border-radius: 50px;
+                 color: white;
+                 background-color:rgba(60,152,189,1) ;
+             }
+             
+             
+             
+             .contect-suggestion{
+                 width: 100%;
+                 height: 250px;
+                 background-color: rgb(113, 124, 120);
+           
+             }
+             .all-icons-suggestion{
+                 position: relative;
+                 top: 70px;
+                 left: 330px;
+                 width: 200px;
+                 display: flex;
+                 justify-content: space-between;
+                overflow: hidden;
+             }
+             .icons-suggestion{
+                 padding: 5px 7px 5px 7px;
+                 background-color: rgb(70, 83, 83);
+                 border-radius: 100px;
+             }
+             
+             #facebook-suggestion{
+                 position: relative;
+                 top: 9px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px;
+                
+                 
+             }
+             
+             #instagram-suggestion{
+                 position: relative;
+                 top: 2px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px;
+             }
+             #twitter-suggestion{
+                 position: relative;
+                 top: 3px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px; 
+             }
+             #youtube-suggestion{
+                 position: relative;
+                 top: 2px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px; 
+             }
+             .Copyright-suggestion{
+                margin-left: 255px;
+                 color: white;
+                 padding-top: 110px;
+                
+             }
+             .Larkhod-suggestion{
+                 color: rgba(60,152,189,1);
+             }
+             
+             h5 {
+              
+               position: relative;
+               top: 90px;
+               left: 109px;
+               content: "";
+               display: block;
+               width: 590px;
+               height: 1px;
+               margin: auto 10px;
+               border-bottom: 2px solid #ccc;
+             }
+             #ig-suggestion{
+                 display: inline-block;
+              position: relative;
+              top: 60px;
+              left: 70px;
+              z-index: 1000;
+             }
+             .message-of-person-suggestion,
+             .email-of-person-suggestion,
+             .phone-of-person-suggestion,
+             .name-of-person-suggestion,
+             .city-of-person-suggestion,
+             .senf-of-person-suggestion{
+             color: #ccc;
+             }
+             #name-phone-suggestion{
+             position: relative;
+             left: 450px;
+             
+             }
+             #sanf-city-suggestion{
+             position: relative;
+             left: -460px;
+             }
+             
+             #svg-suggestion {
+                 fill: url(#svg-suggestion);
+             }
+             .svg-suggestion {
+                 display: none;
+             }
+} 
+ @media screen and (max-width:850px)and (min-width:801px){
+    .suggestion{
+        margin-left: -32px;
+             }
+             *{
+     
+                 margin: 0;
+                 padding: 0;
+             }
+             .title-suggestion{
+                 margin-top: 50px;
+                 margin-bottom: 12px;
+                 font-family: "Bahij Helvetica";
+                color: rgba(60,152,189,1) ;
+                font-size: 40px;
+                margin-left: 370px;
+             
+             
+             }
+             .para-suggestion{
+                font-family: "Bahij Helvetica";
+                 font-size: 15px;
+                 margin-bottom: 32px;
+                 margin-left: 230px;
+                 color:  #ccc;
+             }
+             .sendd-suggestion{
+             width: 100%;
+             height: 625px;
+             background-color: rgb(255, 255, 255);
+             }
+             
+             .all-input-suggestion{
+                 
+                 position: relative;
+                 left: 110px;
+                 width: 768px;
+              
+                
+              
+             }
+            
+             #infut-first-suggestion{
+                margin-right: 50px !important;
+                margin-left: -40px !important;
+                 background: none;
+                 width: 258px;
+                 padding: 10px 0px;
+                 margin: 15px 0;
+                 border-bottom: 2px solid #ccc;
+                 box-sizing: border-box;
+                 text-align: right;
+                 fill: transparent;
+               outline: none;
+     
+             }
+             
+             #infut-second-suggestion{
+             
+                 background: none;
+                 width: 665px;
+                 padding: 10px 0px;
+                 margin: 15px 0;
+                 border-bottom: 2px solid #ccc;
+                 box-sizing: border-box;
+                 text-align: right;
+                 fill: transparent;
+               outline: none;
+          
+             }
+             
+             .oo-suggestion{
+             display: inline-block;
+             }
+             
+             .er-suggestion{
+                margin-top: -10px;
+                margin-left: -40px;
+                ;padding: 0;
+                font-family: "Bahij Helvetica";
+                 color: rgb(241, 26, 26);
+                 font-weight: bold;
+                 font-style: normal;
+                 height: 1px;
+             }
+             #er-email-message-suggestion{
+                margin-left: 1px;
+             }
+             .eer-suggestion{
+                margin-top: -10px;
+                padding: 0;
+                 color: rgb(241, 26, 26);
+                 font-family: "Bahij Helvetica";
+                 font-weight: bold;
+                 font-style: normal;
+                 height: 1px;
+             }
+             .section-one-input-suggestion{
+                 display: flex;
+                 justify-content: space-between;
+                
+          
+             }
+             .section-tow-input-suggestion{
+                
+             }
+             ::placeholder{
+                 color: rgb(177, 174, 174) !important;
+                 margin-right: 0;
+                 padding-right: 0;
+              
+             }
+             
+             .send-button-suggestion{
+                 margin-top: 30px;
+                 margin-left: 400px;
+                 display: inline-block;
+                
+               
+             }
+             .send-suggestion{
+                font-family: "Bahij Helvetica";
+                 font-size: large;
+                 width: 100px;
+                 height: 30px;
+                 border-radius: 50px;
+                 color: white;
+                 background-color:rgba(60,152,189,1) ;
+             }
+             
+             
+             
+             .contect-suggestion{
+                 width: 100%;
+                 height: 250px;
+                 background-color: rgb(113, 124, 120);
+           
+             }
+             .all-icons-suggestion{
+                 position: relative;
+                 top: 70px;
+                 left: 350px;
+                 width: 200px;
+                 display: flex;
+                 justify-content: space-between;
+                overflow: hidden;
+             }
+             .icons-suggestion{
+                 padding: 5px 7px 5px 7px;
+                 background-color: rgb(70, 83, 83);
+                 border-radius: 100px;
+             }
+             
+             #facebook-suggestion{
+                 position: relative;
+                 top: 9px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px;
+                
+                 
+             }
+             
+             #instagram-suggestion{
+                 position: relative;
+                 top: 2px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px;
+             }
+             #twitter-suggestion{
+                 position: relative;
+                 top: 3px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px; 
+             }
+             #youtube-suggestion{
+                 position: relative;
+                 top: 2px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px; 
+             }
+             .Copyright-suggestion{
+                margin-left: 285px;
+                 color: white;
+                 padding-top: 110px;
+                
+             }
+             .Larkhod-suggestion{
+                 color: rgba(60,152,189,1);
+             }
+             
+             h5 {
+              
+               position: relative;
+               top: 90px;
+               left: 109px;
+               content: "";
+               display: block;
+               width: 640px;
+               height: 1px;
+               margin: auto 10px;
+               border-bottom: 2px solid #ccc;
+             }
+             #ig-suggestion{
+                 display: inline-block;
+              position: relative;
+              top: 60px;
+              left: 70px;
+              z-index: 1000;
+             }
+             .message-of-person-suggestion,
+             .email-of-person-suggestion,
+             .phone-of-person-suggestion,
+             .name-of-person-suggestion,
+             .city-of-person-suggestion,
+             .senf-of-person-suggestion{
+             color: #ccc;
+             }
+             #name-phone-suggestion{
+             position: relative;
+             left: 450px;
+             
+             }
+             #sanf-city-suggestion{
+             position: relative;
+             left: -460px;
+             }
+             
+             #svg-suggestion {
+                 fill: url(#svg-suggestion);
+             }
+             .svg-suggestion {
+                 display: none;
+             }
+} 
+ @media screen and (max-width:900px)and (min-width:851px){
+    .suggestion{
+        margin-left: -32px;
+             }
+             *{
+     
+                 margin: 0;
+                 padding: 0;
+             }
+             .title-suggestion{
+                 margin-top: 50px;
+                 margin-bottom: 12px;
+                 font-family: "Bahij Helvetica";
+                color: rgba(60,152,189,1) ;
+                font-size: 40px;
+                margin-left: 390px;
+             
+             
+             }
+             .para-suggestion{
+                font-family: "Bahij Helvetica";
+                 font-size: 15px;
+                 margin-bottom: 32px;
+                 margin-left: 260px;
+                 color:  #ccc;
+             }
+             .sendd-suggestion{
+             width: 100%;
+             height: 625px;
+             background-color: rgb(255, 255, 255);
+             }
+             
+             .all-input-suggestion{
+                 
+                 position: relative;
+                 left: 110px;
+                 width: 768px;
+              
+                
+              
+             }
+            
+             #infut-first-suggestion{
+            
+                 margin-right: 40px !important;
+                 background: none;
+                 width: 270px;
+                 padding: 10px 0px;
+                 margin: 15px 0;
+                 border-bottom: 2px solid #ccc;
+                 box-sizing: border-box;
+                 text-align: right;
+                 fill: transparent;
+               outline: none;
+     
+             }
+             
+             #infut-second-suggestion{
+             
+                 background: none;
+                 width: 720px;
+                 padding: 10px 0px;
+                 margin: 15px 0;
+                 border-bottom: 2px solid #ccc;
+                 box-sizing: border-box;
+                 text-align: right;
+                 fill: transparent;
+               outline: none;
+          
+             }
+             
+             .oo-suggestion{
+             display: inline-block;
+             }
+             
+             .er-suggestion{
+                margin-top: -10px;
+                padding: 0;
+                font-family: "Bahij Helvetica";
+                 color: rgb(241, 26, 26);
+                 font-weight: bold;
+                 font-style: normal;
+                 height: 1px;
+             }
+             .eer-suggestion{
+                margin-top: -10px;
+                padding: 0;
+                 color: rgb(241, 26, 26);
+                 font-family: "Bahij Helvetica";
+                 font-weight: bold;
+                 font-style: normal;
+                 height: 1px;
+             }
+             .section-one-input-suggestion{
+                 display: flex;
+                 justify-content: space-between;
+                
+          
+             }
+             .section-tow-input-suggestion{
+                
+             }
+             ::placeholder{
+                 color: rgb(177, 174, 174) !important;
+                 margin-right: 0;
+                 padding-right: 0;
+              
+             }
+             
+             .send-button-suggestion{
+                 margin-top: 30px;
+                 margin-left: 420px;
+                 display: inline-block;
+                
+               
+             }
+             .send-suggestion{
+                font-family: "Bahij Helvetica";
+                 font-size: large;
+                 width: 100px;
+                 height: 30px;
+                 border-radius: 50px;
+                 color: white;
+                 background-color:rgba(60,152,189,1) ;
+             }
+             
+             
+             
+             .contect-suggestion{
+                 width: 100%;
+                 height: 250px;
+                 background-color: rgb(113, 124, 120);
+           
+             }
+             .all-icons-suggestion{
+                 position: relative;
+                 top: 70px;
+                 left: 370px;
+                 width: 200px;
+                 display: flex;
+                 justify-content: space-between;
+                overflow: hidden;
+             }
+             .icons-suggestion{
+                 padding: 5px 7px 5px 7px;
+                 background-color: rgb(70, 83, 83);
+                 border-radius: 100px;
+             }
+             
+             #facebook-suggestion{
+                 position: relative;
+                 top: 9px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px;
+                
+                 
+             }
+             
+             #instagram-suggestion{
+                 position: relative;
+                 top: 2px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px;
+             }
+             #twitter-suggestion{
+                 position: relative;
+                 top: 3px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px; 
+             }
+             #youtube-suggestion{
+                 position: relative;
+                 top: 2px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px; 
+             }
+             .Copyright-suggestion{
+                margin-left: 310px;
+                 color: white;
+                 padding-top: 110px;
+                
+             }
+             .Larkhod-suggestion{
+                 color: rgba(60,152,189,1);
+             }
+             
+             h5 {
+              
+               position: relative;
+               top: 90px;
+               left: 100px;
+               content: "";
+               display: block;
+               width: 710px;
+               height: 1px;
+               margin: auto 10px;
+               border-bottom: 2px solid #ccc;
+             }
+             #ig-suggestion{
+                 display: inline-block;
+              position: relative;
+              top: 60px;
+              left: 70px;
+              z-index: 1000;
+             }
+             .message-of-person-suggestion,
+             .email-of-person-suggestion,
+             .phone-of-person-suggestion,
+             .name-of-person-suggestion,
+             .city-of-person-suggestion,
+             .senf-of-person-suggestion{
+             color: #ccc;
+             }
+             #name-phone-suggestion{
+             position: relative;
+             left: 450px;
+             
+             }
+             #sanf-city-suggestion{
+             position: relative;
+             left: -460px;
+             }
+             
+             #svg-suggestion {
+                 fill: url(#svg-suggestion);
+             }
+             .svg-suggestion {
+                 display: none;
+             }
+} 
+@media screen and (max-width:950px)and (min-width:901px){
         .suggestion{
             margin-left: -32px;
                  }
@@ -4187,236 +4739,19 @@ color: #ccc;
                  }
                  
                  .er-suggestion{
-                    margin: 0;padding: 0;
+                    margin-top: -10px;
+                    padding: 0;
                     font-family: "Bahij Helvetica";
                      color: rgb(241, 26, 26);
                      font-weight: bold;
                      font-style: normal;
                      height: 1px;
                  }
-                 .section-one-input-suggestion{
-                     display: flex;
-                     justify-content: space-between;
-                    
-              
-                 }
-                 .section-tow-input-suggestion{
-                    
-                 }
-                 ::placeholder{
-                     color: rgb(177, 174, 174) !important;
-                     margin-right: 0;
-                     padding-right: 0;
-                  
-                 }
-                 
-                 .send-button-suggestion{
-                     margin-top: 30px;
-                     margin-left: 440px;
-                     display: inline-block;
-                    
-                   
-                 }
-                 .send-suggestion{
-                    font-family: "Bahij Helvetica";
-                     font-size: large;
-                     width: 100px;
-                     height: 30px;
-                     border-radius: 50px;
-                     color: white;
-                     background-color:rgba(60,152,189,1) ;
-                 }
-                 
-                 
-                 
-                 .contect-suggestion{
-                     width: 100%;
-                     height: 250px;
-                     background-color: rgb(113, 124, 120);
-               
-                 }
-                 .all-icons-suggestion{
-                     position: relative;
-                     top: 70px;
-                     left: 390px;
-                     width: 200px;
-                     display: flex;
-                     justify-content: space-between;
-                    overflow: hidden;
-                 }
-                 .icons-suggestion{
-                     padding: 5px 7px 5px 7px;
-                     background-color: rgb(70, 83, 83);
-                     border-radius: 100px;
-                 }
-                 
-                 #facebook-suggestion{
-                     position: relative;
-                     top: 9px;
-                     width: 25px;
-                     height: 25px;
-                     color: white;
-                     border-radius: 100px;
-                    
-                     
-                 }
-                 
-                 #instagram-suggestion{
-                     position: relative;
-                     top: 2px;
-                     width: 25px;
-                     height: 25px;
-                     color: white;
-                     border-radius: 100px;
-                 }
-                 #twitter-suggestion{
-                     position: relative;
-                     top: 3px;
-                     width: 25px;
-                     height: 25px;
-                     color: white;
-                     border-radius: 100px; 
-                 }
-                 #youtube-suggestion{
-                     position: relative;
-                     top: 2px;
-                     width: 25px;
-                     height: 25px;
-                     color: white;
-                     border-radius: 100px; 
-                 }
-                 .Copyright-suggestion{
-                    margin-left: 320px;
-                     color: white;
-                     padding-top: 110px;
-                    
-                 }
-                 .Larkhod-suggestion{
-                     color: rgba(60,152,189,1);
-                 }
-                 
-                 h5 {
-                  
-                   position: relative;
-                   top: 90px;
-                   left: 90px;
-                   content: "";
-                   display: block;
-                   width: 780px;
-                   height: 1px;
-                   margin: auto 10px;
-                   border-bottom: 2px solid #ccc;
-                 }
-                 #ig-suggestion{
-                     display: inline-block;
-                  position: relative;
-                  top: 60px;
-                  left: 70px;
-                  z-index: 1000;
-                 }
-                 .message-of-person-suggestion,
-                 .email-of-person-suggestion,
-                 .phone-of-person-suggestion,
-                 .name-of-person-suggestion,
-                 .city-of-person-suggestion,
-                 .senf-of-person-suggestion{
-                 color: #ccc;
-                 }
-                 #name-phone-suggestion{
-                 position: relative;
-                 left: 450px;
-                 
-                 }
-                 #sanf-city-suggestion{
-                 position: relative;
-                 left: -460px;
-                 }
-                 
-                 #svg-suggestion {
-                     fill: url(#svg-suggestion);
-                 }
-                 .svg-suggestion {
-                     display: none;
-                 }
-    }
-@media screen and (max-width:1000px)and (min-width:901px){
-        .suggestion{
-                 }
-                 *{
-         
-                     margin: 0;
-                     padding: 0;
-                 }
-                 .title-suggestion{
-                     margin-top: 50px;
-                     margin-bottom: 12px;
+                 .eer-suggestion{
+                    margin-top: -10px;
+                    padding: 0;
+                     color: rgb(241, 26, 26);
                      font-family: "Bahij Helvetica";
-                    color: rgba(60,152,189,1) ;
-                    font-size: 50px;
-                    margin-left: 420px;
-                 
-                 
-                 }
-                 .para-suggestion{
-                    font-family: "Bahij Helvetica";
-                     font-size: large;
-                     margin-bottom: 32px;
-                     margin-left: 240px;
-                     color:  #ccc;
-                 }
-                 .sendd-suggestion{
-                 width: 100%;
-                 height: 625px;
-                 background-color: rgb(255, 255, 255);
-                 }
-                 
-                 .all-input-suggestion{
-                     
-                     position: relative;
-                     left: 110px;
-                     width: 768px;
-                  
-                    
-                  
-                 }
-                
-                 #infut-first-suggestion{
-                
-                     margin-right: 92px;
-                     background: none;
-                     width: 310px;
-                     padding: 10px 0px;
-                     margin: 15px 0;
-                     border-bottom: 2px solid #ccc;
-                     box-sizing: border-box;
-                     text-align: right;
-                     fill: transparent;
-                   outline: none;
-         
-                 }
-                 
-                 #infut-second-suggestion{
-                 
-                     background: none;
-                     width: 760px;
-                     padding: 10px 0px;
-                     margin: 15px 0;
-                     border-bottom: 2px solid #ccc;
-                     box-sizing: border-box;
-                     text-align: right;
-                     fill: transparent;
-                   outline: none;
-              
-                 }
-                 
-                 .oo-suggestion{
-                 display: inline-block;
-                 }
-                 
-                 .er-suggestion{
-                    margin: 0;padding: 0;
-                    font-family: "Bahij Helvetica";
-                     color: rgb(241, 26, 26);
                      font-weight: bold;
                      font-style: normal;
                      height: 1px;
@@ -4565,8 +4900,500 @@ color: #ccc;
                  .svg-suggestion {
                      display: none;
                  }
-    }
-@media screen and (max-width:1100px)and (min-width:1001px){ 
+ }
+ @media screen and (max-width:1000px)and (min-width:951px){
+    .suggestion{
+        margin-left: -35px;
+             }
+             .title-suggestion{
+                 margin-top: 50px;
+                 margin-bottom: 12px;
+                 font-family: "Bahij Helvetica";
+                color: rgba(60,152,189,1) ;
+                font-size: 50px;
+                margin-left: 450px;
+             
+             
+             }
+             .para-suggestion{
+                font-family: "Bahij Helvetica";
+                 font-size: large;
+                 margin-bottom: 32px;
+                 margin-left: 300px;
+                
+                 color:  #ccc;
+             }
+             .sendd-suggestion{
+             width: 100%;
+             height: 625px;
+             background-color: rgb(255, 255, 255);
+             }
+             
+             .all-input-suggestion{
+                 
+                 position: relative;
+                 left: 110px;
+                 width: 768px;
+                 /* display: inline-block; */
+                
+              
+             }
+             /* #all-input-suggestion{
+                 display: inline-block;
+             } */
+             #infut-first-suggestion{
+                margin-left: -40px !important;
+                 margin-right: 92px;
+                 background: none;
+                 width: 300px;
+                 padding: 10px 0px;
+                 margin: 15px 0;
+                 border-bottom: 2px solid #ccc;
+                 box-sizing: border-box;
+                 text-align: right;
+                 fill: transparent;
+               outline: none;
+     
+             }
+             
+             #infut-second-suggestion{
+                margin-left: 40px !important;
+                 background: none;
+                 width: 763px;
+                 padding: 10px 0px;
+                 margin: 15px 0;
+                 border-bottom: 2px solid #ccc;
+                 box-sizing: border-box;
+                 text-align: right;
+                 fill: transparent;
+               outline: none;
+          
+             }
+             
+             .oo-suggestion{
+             display: inline-block;
+             }
+             
+             .er-suggestion{
+                margin-top: -10px;
+                margin-left: -40px;
+                padding: 0;
+                 color: rgb(241, 26, 26);
+                 font-family: "Bahij Helvetica";
+                 font-weight: bold;
+                 font-style: normal;
+                 height: 1px;
+             }
+             #er-email-message-suggestion{
+                margin-left: 40px;
+             }
+             .eer-suggestion{
+                margin-top: -10px;
+                padding: 0;
+                 color: rgb(241, 26, 26);
+                 font-family: "Bahij Helvetica";
+                 font-weight: bold;
+                 font-style: normal;
+                 height: 1px;
+             }
+             .section-one-input-suggestion{
+                 display: flex;
+                 justify-content: space-between;
+                 /* width: 768px; */
+              /* overflow: hidden; */
+          
+             }
+             .section-tow-input-suggestion{
+                /* width: 768px; */
+                /* overflow: hidden; */
+             }
+             ::placeholder{
+                 color: rgb(177, 174, 174) !important;
+                 margin-right: 0;
+                 padding-right: 0;
+              
+             }
+             
+             .send-button-suggestion{
+                 margin-top: 30px;
+                 margin-left: 480px;
+                 display: inline-block;
+                
+               
+             }
+             .send-suggestion{
+                font-family: "Bahij Helvetica";
+                 font-size: large;
+                 width: 100px;
+                 height: 30px;
+                 border-radius: 50px;
+                 color: white;
+                 background-color:rgba(60,152,189,1) ;
+             }
+             
+             
+             
+             .contect-suggestion{
+                 width: 100%;
+                 height: 250px;
+                 background-color: rgb(113, 124, 120);
+                 
+             }
+             .all-icons-suggestion{
+                 position: relative;
+                 top: 70px;
+                 left: 435px;
+                 width: 200px;
+                 display: flex;
+                 justify-content: space-between;
+                overflow: hidden;
+             }
+             .icons-suggestion{
+                 padding: 5px 7px 5px 7px;
+                 background-color: rgb(70, 83, 83);
+                 border-radius: 100px;
+             }
+             
+             #facebook-suggestion{
+                 position: relative;
+                 top: 9px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px;
+                
+                 
+             }
+             
+             #instagram-suggestion{
+                 position: relative;
+                 top: 2px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px;
+             }
+             #twitter-suggestion{
+                 position: relative;
+                 top: 3px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px; 
+             }
+             #youtube-suggestion{
+                 position: relative;
+                 top: 2px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px; 
+             }
+             .Copyright-suggestion{
+                 color: white;
+                 padding-top: 110px;
+                 margin-left: 365px;
+             }
+             .Larkhod-suggestion{
+                 color: rgba(60,152,189,1);
+             }
+             
+             h5 {
+              
+               position: relative;
+               top: 90px;
+               left: 145px;
+               content: "";
+               display: block;
+               width: 750px;
+               height: 1px;
+               margin: auto 10px;
+               border-bottom: 2px solid #ccc;
+             }
+             #ig-suggestion{
+                 display: inline-block;
+              position: relative;
+              top: 60px;
+              left: 70px;
+              z-index: 1000;
+             }
+             .message-of-person-suggestion,
+             .email-of-person-suggestion,
+             .phone-of-person-suggestion,
+             .name-of-person-suggestion,
+             .city-of-person-suggestion,
+             .senf-of-person-suggestion{
+             color: #ccc;
+             }
+             #name-phone-suggestion{
+             position: relative;
+             left: 540px;
+             
+             }
+             #sanf-city-suggestion{
+             position: relative;
+             left: -430px;
+             }
+             
+             #svg-suggestion {
+                 fill: url(#svg-suggestion);
+             }
+             .svg-suggestion {
+                 /* overflow: visible;
+                 position: absolute;
+                 width: 360px;
+                 height: 482.885px;
+                 left: 0px;
+                 top: 157.115px;
+                 transform: matrix(1,0,0,1,0,0); */
+                 display: none;
+             }
+ }
+@media screen and (max-width:1050px)and (min-width:1001px){
+    .suggestion{
+        margin-left: -35px;
+             }
+             .title-suggestion{
+                 margin-top: 50px;
+                 margin-bottom: 12px;
+                 font-family: "Bahij Helvetica";
+                color: rgba(60,152,189,1) ;
+                font-size: 50px;
+                margin-left: 450px;
+             
+             
+             }
+             .para-suggestion{
+                font-family: "Bahij Helvetica";
+                 font-size: large;
+                 margin-bottom: 32px;
+                 margin-left: 300px;
+                
+                 color:  #ccc;
+             }
+             .sendd-suggestion{
+             width: 100%;
+             height: 625px;
+             }
+             
+             .all-input-suggestion{
+                 
+                 position: relative;
+                 left: 110px;
+                 width: 768px;
+                 /* display: inline-block; */
+                
+              
+             }
+             /* #all-input-suggestion{
+                 display: inline-block;
+             } */
+             #infut-first-suggestion{
+            
+                 margin-right: 92px;
+                 background: none;
+                 width: 340px;
+                 padding: 10px 0px;
+                 margin: 15px 0;
+                 border-bottom: 2px solid #ccc;
+                 box-sizing: border-box;
+                 text-align: right;
+                 fill: transparent;
+               outline: none;
+     
+             }
+             
+             #infut-second-suggestion{
+             
+                 background: none;
+                 width: 880px;
+                 padding: 10px 0px;
+                 margin: 15px 0;
+                 border-bottom: 2px solid #ccc;
+                 box-sizing: border-box;
+                 text-align: right;
+                 fill: transparent;
+               outline: none;
+          
+             }
+             
+             .oo-suggestion{
+             display: inline-block;
+             }
+             
+             .er-suggestion{
+                margin-top: -10px;
+                padding: 0;
+                 color: rgb(241, 26, 26);
+                 font-family: "Bahij Helvetica";
+                 font-weight: bold;
+                 font-style: normal;
+                 height: 1px;
+             }
+             .eer-suggestion{
+                margin-top: -10px;
+                padding: 0;
+                 color: rgb(241, 26, 26);
+                 font-family: "Bahij Helvetica";
+                 font-weight: bold;
+                 font-style: normal;
+                 height: 1px;
+             }
+             .section-one-input-suggestion{
+                 display: flex;
+                 justify-content: space-between;
+                 /* width: 768px; */
+              /* overflow: hidden; */
+          
+             }
+             .section-tow-input-suggestion{
+                /* width: 768px; */
+                /* overflow: hidden; */
+             }
+             ::placeholder{
+                 color: rgb(177, 174, 174) !important;
+                 margin-right: 0;
+                 padding-right: 0;
+              
+             }
+             
+             .send-button-suggestion{
+                 margin-top: 30px;
+                 margin-left: 500px;
+                 display: inline-block;
+                
+               
+             }
+             .send-suggestion{
+                font-family: "Bahij Helvetica";
+                 font-size: large;
+                 width: 100px;
+                 height: 30px;
+                 border-radius: 50px;
+                 color: white;
+                 background-color:rgba(60,152,189,1) ;
+             }
+             
+             
+             
+             .contect-suggestion{
+                 width: 100%;
+                 height: 250px;
+                 background-color: rgb(113, 124, 120);
+                 
+             }
+             .all-icons-suggestion{
+                 position: relative;
+                 top: 70px;
+                 left: 450px;
+                 width: 200px;
+                 display: flex;
+                 justify-content: space-between;
+                overflow: hidden;
+             }
+             .icons-suggestion{
+                 padding: 5px 7px 5px 7px;
+                 background-color: rgb(70, 83, 83);
+                 border-radius: 100px;
+             }
+             
+             #facebook-suggestion{
+                 position: relative;
+                 top: 9px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px;
+                
+                 
+             }
+             
+             #instagram-suggestion{
+                 position: relative;
+                 top: 2px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px;
+             }
+             #twitter-suggestion{
+                 position: relative;
+                 top: 3px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px; 
+             }
+             #youtube-suggestion{
+                 position: relative;
+                 top: 2px;
+                 width: 25px;
+                 height: 25px;
+                 color: white;
+                 border-radius: 100px; 
+             }
+             .Copyright-suggestion{
+                 color: white;
+                 padding-top: 110px;
+                 margin-left: 1px;
+                 margin-left: 380px;
+             }
+             .Larkhod-suggestion{
+                 color: rgba(60,152,189,1);
+             }
+             
+             h5 {
+              
+               position: relative;
+               top: 90px;
+               left: 90px;
+               content: "";
+               display: block;
+               width: 900px;
+               height: 1px;
+               margin: auto 10px;
+               border-bottom: 2px solid #ccc;
+             }
+             #ig-suggestion{
+                 display: inline-block;
+              position: relative;
+              top: 60px;
+              left: 70px;
+              z-index: 1000;
+             }
+             .message-of-person-suggestion,
+             .email-of-person-suggestion,
+             .phone-of-person-suggestion,
+             .name-of-person-suggestion,
+             .city-of-person-suggestion,
+             .senf-of-person-suggestion{
+             color: #ccc;
+             }
+             #name-phone-suggestion{
+             position: relative;
+             left: 540px;
+             
+             }
+             #sanf-city-suggestion{
+             position: relative;
+             left: -430px;
+             }
+             
+             #svg-suggestion {
+                 fill: url(#svg-suggestion);
+             }
+             .svg-suggestion {
+                 /* overflow: visible;
+                 position: absolute;
+                 width: 360px;
+                 height: 482.885px;
+                 left: 0px;
+                 top: 157.115px;
+                 transform: matrix(1,0,0,1,0,0); */
+                 display: none;
+             }
+ }
+@media screen and (max-width:1100px)and (min-width:1051px){ 
                 .suggestion{
                 margin-left: -35px;
                      }
@@ -4640,7 +5467,17 @@ color: #ccc;
                      }
                      
                      .er-suggestion{
-                        margin: 0;padding: 0;
+                        margin-top: -10px;
+                        padding: 0;
+                         color: rgb(241, 26, 26);
+                         font-family: "Bahij Helvetica";
+                         font-weight: bold;
+                         font-style: normal;
+                         height: 1px;
+                     }
+                     .eer-suggestion{
+                        margin-top: -10px;
+                        padding: 0;
                          color: rgb(241, 26, 26);
                          font-family: "Bahij Helvetica";
                          font-weight: bold;
@@ -4754,10 +5591,10 @@ color: #ccc;
                       
                        position: relative;
                        top: 90px;
-                       left: 90px;
+                       left: 140px;
                        content: "";
                        display: block;
-                       width: 980px;
+                       width: 860px;
                        height: 1px;
                        margin: auto 10px;
                        border-bottom: 2px solid #ccc;
@@ -4799,240 +5636,709 @@ color: #ccc;
                          top: 157.115px;
                          transform: matrix(1,0,0,1,0,0); */
                          display: none;
-                     }}
-            
-@media screen and (max-width:1200px)and (min-width:1101px){ 
-                .suggestion{
-                
                      }
-                     .title-suggestion{
-                         margin-top: 50px;
-                         margin-bottom: 12px;
-                         font-family: "Bahij Helvetica";
-                        color: rgba(60,152,189,1) ;
-                        font-size: 50px;
-                        margin-left: 510px;
-                     
-                     
-                     }
-                     .para-suggestion{
-                        font-family: "Bahij Helvetica";
-                         font-size: large;
-                         margin-bottom: 32px;
-                         margin-left: 320px;
-                        
-                         color:  #ccc;
-                     }
-                     .sendd-suggestion{
-                     width: 100%;
-                     height: 625px;
-                     background-color: rgb(255, 255, 255);
-                     }
-                     
-                     .all-input-suggestion{
-                         
-                         position: relative;
-                         left: 150px;
-                         width: 768px;
-                         /* display: inline-block; */
-                        
-                      
-                     }
-                     /* #all-input-suggestion{
-                         display: inline-block;
-                     } */
-                     #infut-first-suggestion{
-                    
-                         margin-right: 92px;
-                         background: none;
-                         width: 340px;
-                         padding: 10px 0px;
-                         margin: 15px 0;
-                         border-bottom: 2px solid #ccc;
-                         box-sizing: border-box;
-                         text-align: right;
-                         fill: transparent;
-                       outline: none;
-             
-                     }
-                     
-                     #infut-second-suggestion{
-                     
-                         background: none;
-                         width: 880px;
-                         padding: 10px 0px;
-                         margin: 15px 0;
-                         border-bottom: 2px solid #ccc;
-                         box-sizing: border-box;
-                         text-align: right;
-                         fill: transparent;
-                       outline: none;
-                  
-                     }
-                     
-                     .oo-suggestion{
-                     display: inline-block;
-                     }
-                     
-                     .er-suggestion{
-                        margin: 0;padding: 0;
-                         color: rgb(241, 26, 26);
-                         font-family: "Bahij Helvetica";
-                         font-weight: bold;
-                         font-style: normal;
-                         height: 1px;
-                     }
-                     .section-one-input-suggestion{
-                         display: flex;
-                         justify-content: space-between;
-                         /* width: 768px; */
-                      /* overflow: hidden; */
-                  
-                     }
-                     .section-tow-input-suggestion{
-                        /* width: 768px; */
-                        /* overflow: hidden; */
-                     }
-                     ::placeholder{
-                         color: rgb(177, 174, 174) !important;
-                         margin-right: 0;
-                         padding-right: 0;
-                      
-                     }
-                     
-                     .send-button-suggestion{
-                         margin-top: 30px;
-                         margin-left: 550px;
-                         display: inline-block;
-                        
-                       
-                     }
-                     .send-suggestion{
-                        font-family: "Bahij Helvetica";
-                         font-size: large;
-                         width: 100px;
-                         height: 30px;
-                         border-radius: 50px;
-                         color: white;
-                         background-color:rgba(60,152,189,1) ;
-                     }
-                     
-                     
-                     
-                     .contect-suggestion{
-                         width: 100%;
-                         height: 250px;
-                         background-color: rgb(113, 124, 120);
-                         
-                     }
-                     .all-icons-suggestion{
-                         position: relative;
-                         top: 70px;
-                         left: 500px;
-                         width: 200px;
-                         display: flex;
-                         justify-content: space-between;
-                        overflow: hidden;
-                     }
-                     .icons-suggestion{
-                         padding: 5px 7px 5px 7px;
-                         background-color: rgb(70, 83, 83);
-                         border-radius: 100px;
-                     }
-                     
-                     #facebook-suggestion{
-                         position: relative;
-                         top: 9px;
-                         width: 25px;
-                         height: 25px;
-                         color: white;
-                         border-radius: 100px;
-                        
-                         
-                     }
-                     
-                     #instagram-suggestion{
-                         position: relative;
-                         top: 2px;
-                         width: 25px;
-                         height: 25px;
-                         color: white;
-                         border-radius: 100px;
-                     }
-                     #twitter-suggestion{
-                         position: relative;
-                         top: 3px;
-                         width: 25px;
-                         height: 25px;
-                         color: white;
-                         border-radius: 100px; 
-                     }
-                     #youtube-suggestion{
-                         position: relative;
-                         top: 2px;
-                         width: 25px;
-                         height: 25px;
-                         color: white;
-                         border-radius: 100px; 
-                     }
-                     .Copyright-suggestion{
-                         color: white;
-                         padding-top: 110px;
-                         margin-left: 1px;
-                         margin-left: 415px;
-                     }
-                     .Larkhod-suggestion{
-                         color: rgba(60,152,189,1);
-                     }
-                     
-                     h5 {
-                      
-                       position: relative;
-                       top: 90px;
-                       left: 90px;
-                       content: "";
-                       display: block;
-                       width: 980px;
-                       height: 1px;
-                       margin: auto 10px;
-                       border-bottom: 2px solid #ccc;
-                     }
-                     #ig-suggestion{
-                         display: inline-block;
-                      position: relative;
-                      top: 60px;
-                      left: 70px;
-                      z-index: 1000;
-                     }
-                     .message-of-person-suggestion,
-                     .email-of-person-suggestion,
-                     .phone-of-person-suggestion,
-                     .name-of-person-suggestion,
-                     .city-of-person-suggestion,
-                     .senf-of-person-suggestion{
-                     color: #ccc;
-                     }
-                     #name-phone-suggestion{
-                     position: relative;
-                     left: 540px;
-                     
-                     }
-                     #sanf-city-suggestion{
-                     position: relative;
-                     left: -430px;
-                     }
-                     
-                     #svg-suggestion {
-                         fill: url(#svg-suggestion);
-                     }
-                     .svg-suggestion {
-                         /* overflow: visible;
-                         position: absolute;
-                         width: 360px;
-                         height: 482.885px;
-                         left: 0px;
-                         top: 157.115px;
-                         transform: matrix(1,0,0,1,0,0); */
-                         display: none;
-                     }}
+ }
+  @media screen and (max-width:1150px)and (min-width:1101px){
+    .suggestion{
+        height: 800px;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .title-suggestion{
+        margin-top: 50px;
+        margin-bottom: 12px;
+       color: rgba(60,152,189,1) ;
+       font-family: "Bahij Helvetica";
+       font-size: 50px;
+       margin-left: 450px;
+    
+    
+    }
+    .para-suggestion{
+        font-size: large;
+        margin-bottom: 32px;
+        
+        color:  #ccc;
+        margin-left: 310px;
+    }
+    .sendd-suggestion{
+    width: 100%;
+    height: 625px;
+    background-color: rgb(255, 255, 255);
+ 
+    
+    }
+    
+    .all-input-suggestion{
+        
+        position: relative;
+        left: 120px;
+        width: 890px;
+       
+     
+    }
+    #infut-first-suggestion{
+       
+        margin-right: 92px;
+        background: none;
+        width: 350px;
+        padding: 10px 0px;
+        margin: 15px 0;
+        border-bottom: 2px solid #ccc;
+        box-sizing: border-box;
+        text-align: right;
+        fill: transparent;
+      outline: none;
+    }
+    
+    #infut-second-suggestion{
+        margin-left: -30px !important;
+        background: none;
+        width: 950px;
+        padding: 10px 0px;
+        margin: 15px 0;
+        border-bottom: 2px solid #ccc;
+        box-sizing: border-box;
+        text-align: right;
+        fill: transparent;
+      outline: none;
+    }
+    
+    .oo-suggestion{
+    display: inline-block;
+    }
+    
+    .er-suggestion{
+       margin-top: -10px;
+        padding: 0;
+        color: rgb(241, 26, 26);
+        font-family: "Bahij Helvetica";
+        font-weight: bold;
+        font-style: normal;
+        height: 1px;
+    }
+    #er-email-message-suggestion{
+        margin-left: -30px;
+    }
+    .eer-suggestion{
+        margin-top: -10px;
+       
+        padding: 0;
+        color: rgb(241, 26, 26);
+        font-family: "Bahij Helvetica";
+        font-weight: bold;
+        font-style: normal;
+        height: 1px;
+    }
+    .section-one-input-suggestion{
+        display: flex;
+        justify-content: space-between;
+    
+    }
+    ::placeholder{
+        color: rgb(177, 174, 174) !important;
+        margin-right: 0;
+        padding-right: 0;
+     
+    }
+    
+    .send-button-suggestion{
+        margin-top: 30px;
+        margin-left: 510px;
+       
+      
+    }
+    .send-suggestion{
+        font-size: large;
+        width: 100px;
+        height: 30px;
+        border-radius: 50px;
+        color: white;
+        background-color:rgba(60,152,189,1) ;
+    }
+    
+    
+    
+    .contect-suggestion{
+        width: 100%;
+        height: 250px;
+        background-color: rgb(113, 124, 120);
+       
+        
+    }
+    .all-icons-suggestion{
+        position: relative;
+        top: 70px;
+        left: 460px;
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .icons-suggestion{
+        padding: 5px 7px 5px 7px;
+        background-color: rgb(70, 83, 83);
+        border-radius: 100px;
+    }
+    
+    #facebook-suggestion{
+        position: relative;
+        top: 9px;
+        width: 25px;
+        height: 25px;
+        color: white;
+        border-radius: 100px;
+       
+        
+    }
+    
+    #instagram-suggestion{
+        position: relative;
+        top: 2px;
+        width: 25px;
+        height: 25px;
+        color: white;
+        border-radius: 100px;
+    }
+    #twitter-suggestion{
+        position: relative;
+        top: 3px;
+        width: 25px;
+        height: 25px;
+        color: white;
+        border-radius: 100px; 
+    }
+    #youtube-suggestion{
+        position: relative;
+        top: 2px;
+        width: 25px;
+        height: 25px;
+        color: white;
+        border-radius: 100px; 
+    }
+    .Copyright-suggestion{
+        color: white;
+        padding-top: 110px;
+        margin-left: 390px;
+    }
+    .Larkhod-suggestion{
+        color: rgba(60,152,189,1);
+    }
+    
+    h5 {
+     
+      position: relative;
+      top: 90px;
+      left: 90px;
+      content: "";
+      display: block;
+      width: 930px;
+      height: 1px;
+      margin: auto 10px;
+      border-bottom: 2px solid #ccc;
+    }
+    #ig-suggestion{
+        display: inline-block;
+     position: relative;
+     top: 60px;
+     left: 70px;
+     z-index: 1000;
+    }
+    .message-of-person-suggestion,
+    .email-of-person-suggestion,
+    .phone-of-person-suggestion,
+    .name-of-person-suggestion,
+    .city-of-person-suggestion,
+    .senf-of-person-suggestion{
+    color: #ccc;
+    }
+    #name-phone-suggestion{
+    position: relative;
+    left: 570px;
+    
+    }
+    #sanf-city-suggestion{
+    position: relative;
+    left: -570px;
+    }
+    
+    #svg-suggestion {
+        fill: url(#svg-suggestion);
+    }
+    .svg-suggestion {
+        /* overflow: visible;
+        position: absolute;
+        width: 360px;
+        height: 482.885px;
+        left: 0px;
+        top: 157.115px;
+        transform: matrix(1,0,0,1,0,0); */
+        display: none;
+    }
+}
+  @media screen and (max-width:1200px)and (min-width:1151px){
+    .suggestion{
+        height: 800px;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .title-suggestion{
+        margin-top: 50px;
+        margin-bottom: 12px;
+       color: rgba(60,152,189,1) ;
+       font-family: "Bahij Helvetica";
+       font-size: 50px;
+       margin-left: 470px;
+    
+    
+    }
+    .para-suggestion{
+        font-size: large;
+        margin-bottom: 32px;
+        
+        color:  #ccc;
+        margin-left: 320px;
+    }
+    .sendd-suggestion{
+    width: 100%;
+    height: 625px;
+    background-color: rgb(255, 255, 255);
+    }
+    
+    .all-input-suggestion{
+        
+        position: relative;
+        left: 120px;
+        width: 920px;
+       
+     
+    }
+    #infut-first-suggestion{
+       
+        margin-right: 92px;
+        background: none;
+        width: 350px;
+        padding: 10px 0px;
+        margin: 15px 0;
+        border-bottom: 2px solid #ccc;
+        box-sizing: border-box;
+        text-align: right;
+        fill: transparent;
+      outline: none;
+    }
+    
+    #infut-second-suggestion{
+        background: none;
+        width: 920px;
+        padding: 10px 0px;
+        margin: 15px 0;
+        border-bottom: 2px solid #ccc;
+        box-sizing: border-box;
+        text-align: right;
+        fill: transparent;
+      outline: none;
+    }
+    
+    .oo-suggestion{
+    display: inline-block;
+    }
+    
+    .er-suggestion{
+       margin-top: -10px;
+        padding: 0;
+        color: rgb(241, 26, 26);
+        font-family: "Bahij Helvetica";
+        font-weight: bold;
+        font-style: normal;
+        height: 1px;
+    }
+    .eer-suggestion{
+        margin-top: -10px;
+        padding: 0;
+        color: rgb(241, 26, 26);
+        font-family: "Bahij Helvetica";
+        font-weight: bold;
+        font-style: normal;
+        height: 1px;
+    }
+    .section-one-input-suggestion{
+        display: flex;
+        justify-content: space-between;
+    
+    }
+    ::placeholder{
+        color: rgb(177, 174, 174) !important;
+        margin-right: 0;
+        padding-right: 0;
+     
+    }
+    
+    .send-button-suggestion{
+        margin-top: 30px;
+        margin-left: 530px;
+       
+      
+    }
+    .send-suggestion{
+        font-size: large;
+        width: 100px;
+        height: 30px;
+        border-radius: 50px;
+        color: white;
+        background-color:rgba(60,152,189,1) ;
+    }
+    
+    
+    
+    .contect-suggestion{
+        width: 100%;
+        height: 250px;
+        background-color: rgb(113, 124, 120);
+       
+        
+    }
+    .all-icons-suggestion{
+        position: relative;
+        top: 70px;
+        left: 480px;
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .icons-suggestion{
+        padding: 5px 7px 5px 7px;
+        background-color: rgb(70, 83, 83);
+        border-radius: 100px;
+    }
+    
+    #facebook-suggestion{
+        position: relative;
+        top: 9px;
+        width: 25px;
+        height: 25px;
+        color: white;
+        border-radius: 100px;
+       
+        
+    }
+    
+    #instagram-suggestion{
+        position: relative;
+        top: 2px;
+        width: 25px;
+        height: 25px;
+        color: white;
+        border-radius: 100px;
+    }
+    #twitter-suggestion{
+        position: relative;
+        top: 3px;
+        width: 25px;
+        height: 25px;
+        color: white;
+        border-radius: 100px; 
+    }
+    #youtube-suggestion{
+        position: relative;
+        top: 2px;
+        width: 25px;
+        height: 25px;
+        color: white;
+        border-radius: 100px; 
+    }
+    .Copyright-suggestion{
+        color: white;
+        padding-top: 110px;
+        margin-left: 410px;
+    }
+    .Larkhod-suggestion{
+        color: rgba(60,152,189,1);
+    }
+    
+    h5 {
+     
+      position: relative;
+      top: 90px;
+      left: 105px;
+      content: "";
+      display: block;
+      width: 930px;
+      height: 1px;
+      margin: auto 10px;
+      border-bottom: 2px solid #ccc;
+    }
+    #ig-suggestion{
+        display: inline-block;
+     position: relative;
+     top: 60px;
+     left: 70px;
+     z-index: 1000;
+    }
+    .message-of-person-suggestion,
+    .email-of-person-suggestion,
+    .phone-of-person-suggestion,
+    .name-of-person-suggestion,
+    .city-of-person-suggestion,
+    .senf-of-person-suggestion{
+    color: #ccc;
+    }
+    #name-phone-suggestion{
+    position: relative;
+    left: 570px;
+    
+    }
+    #sanf-city-suggestion{
+    position: relative;
+    left: -570px;
+    }
+    
+    #svg-suggestion {
+        fill: url(#svg-suggestion);
+    }
+    .svg-suggestion {
+        /* overflow: visible;
+        position: absolute;
+        width: 360px;
+        height: 482.885px;
+        left: 0px;
+        top: 157.115px;
+        transform: matrix(1,0,0,1,0,0); */
+        display: none;
+    }
+}
+ @media screen and (max-width:1280px)and (min-width:1201px){
+    .suggestion{
+        height: 800px;
+       
+    }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .title-suggestion{
+        margin-top: 50px;
+        margin-bottom: 12px;
+       color: rgba(60,152,189,1) ;
+       font-family: "Bahij Helvetica";
+       font-size: 50px;
+       margin-left: 530px;
+    
+    
+    }
+    .para-suggestion{
+        font-size: large;
+        margin-bottom: 32px;
+        
+        color:  #ccc;
+        margin-left: 370px;
+    }
+    .sendd-suggestion{
+    width: 100%;
+    height: 625px;
+    background-color: rgb(255, 255, 255);
+    }
+    
+    .all-input-suggestion{
+        
+        position: relative;
+        left: 170px;
+        width: 920px;
+       
+     
+    }
+    #infut-first-suggestion{
+       
+        margin-right: 92px;
+        background: none;
+        width: 350px;
+        padding: 10px 0px;
+        margin: 15px 0;
+        border-bottom: 2px solid #ccc;
+        box-sizing: border-box;
+        text-align: right;
+        fill: transparent;
+      outline: none;
+    }
+    
+    #infut-second-suggestion{
+        background: none;
+        width: 920px;
+        padding: 10px 0px;
+        margin: 15px 0;
+        border-bottom: 2px solid #ccc;
+        box-sizing: border-box;
+        text-align: right;
+        fill: transparent;
+      outline: none;
+    }
+    
+    .oo-suggestion{
+    display: inline-block;
+    }
+    
+    .er-suggestion{
+       margin-top: -10px;
+        padding: 0;
+        color: rgb(241, 26, 26);
+        font-family: "Bahij Helvetica";
+        font-weight: bold;
+        font-style: normal;
+        height: 1px;
+    }
+    .eer-suggestion{
+        margin-top: -10px;
+        padding: 0;
+        color: rgb(241, 26, 26);
+        font-family: "Bahij Helvetica";
+        font-weight: bold;
+        font-style: normal;
+        height: 1px;
+    }
+    .section-one-input-suggestion{
+        display: flex;
+        justify-content: space-between;
+    
+    }
+    ::placeholder{
+        color: rgb(177, 174, 174) !important;
+        margin-right: 0;
+        padding-right: 0;
+     
+    }
+    
+    .send-button-suggestion{
+        margin-top: 30px;
+        margin-left: 580px;
+       
+      
+    }
+    .send-suggestion{
+        font-size: large;
+        width: 100px;
+        height: 30px;
+        border-radius: 50px;
+        color: white;
+        background-color:rgba(60,152,189,1) ;
+    }
+    
+    
+    
+    .contect-suggestion{
+        width: 100%;
+        height: 250px;
+        background-color: rgb(113, 124, 120);
+        
+    }
+    .all-icons-suggestion{
+        position: relative;
+        top: 70px;
+        left: 530px;
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .icons-suggestion{
+        padding: 5px 7px 5px 7px;
+        background-color: rgb(70, 83, 83);
+        border-radius: 100px;
+    }
+    
+    #facebook-suggestion{
+        position: relative;
+        top: 9px;
+        width: 25px;
+        height: 25px;
+        color: white;
+        border-radius: 100px;
+       
+        
+    }
+    
+    #instagram-suggestion{
+        position: relative;
+        top: 2px;
+        width: 25px;
+        height: 25px;
+        color: white;
+        border-radius: 100px;
+    }
+    #twitter-suggestion{
+        position: relative;
+        top: 3px;
+        width: 25px;
+        height: 25px;
+        color: white;
+        border-radius: 100px; 
+    }
+    #youtube-suggestion{
+        position: relative;
+        top: 2px;
+        width: 25px;
+        height: 25px;
+        color: white;
+        border-radius: 100px; 
+    }
+    .Copyright-suggestion{
+        color: white;
+        padding-top: 110px;
+        margin-left: 460px;
+    }
+    .Larkhod-suggestion{
+        color: rgba(60,152,189,1);
+    }
+    
+    h5 {
+     
+      position: relative;
+      top: 90px;
+      left: 150px;
+      content: "";
+      display: block;
+      width: 930px;
+      height: 1px;
+      margin: auto 10px;
+      border-bottom: 2px solid #ccc;
+    }
+    #ig-suggestion{
+        display: inline-block;
+     position: relative;
+     top: 60px;
+     left: 70px;
+     z-index: 1000;
+    }
+    .message-of-person-suggestion,
+    .email-of-person-suggestion,
+    .phone-of-person-suggestion,
+    .name-of-person-suggestion,
+    .city-of-person-suggestion,
+    .senf-of-person-suggestion{
+    color: #ccc;
+    }
+    #name-phone-suggestion{
+    position: relative;
+    left: 570px;
+    
+    }
+    #sanf-city-suggestion{
+    position: relative;
+    left: -570px;
+    }
+    
+    #svg-suggestion {
+        fill: url(#svg-suggestion);
+    }
+    .svg-suggestion {
+        /* overflow: visible;
+        position: absolute;
+        width: 360px;
+        height: 482.885px;
+        left: 0px;
+        top: 157.115px;
+        transform: matrix(1,0,0,1,0,0); */
+        display: none;
+    }
+}
             
