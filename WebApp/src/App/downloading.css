@@ -215,6 +215,9 @@ font-weight: bold;
         flex-direction:row;
         justify-content: center; 
         margin-top: 50px;
+        width: 100%;
+        height:100%;
+        overflow: hidden;
     }
     .icon-D {
         /* width:200px; */
@@ -227,9 +230,10 @@ font-weight: bold;
 		display:flex;
 		position: relative;
 		top: 0px;
-	   left:-50px;
+	   left:0px;
     }
     .pathimg {
+        display: none;
         margin-top:10px;
         margin-left:130px;
     }
@@ -268,12 +272,14 @@ font-weight: bold;
     }
     .Dimage-m {
         display:flex;
+        margin-top:100px;
+        margin-left:30px;
        
     }
     .d-middle {
         height:300px;
-       overflow-y:hidden;
-        margin-right:-10px;
+       overflow-y:scroll;
+        margin-right:0px;
         margin-bottom: 60px;
         /* width: 300px; */
     }

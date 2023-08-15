@@ -20,6 +20,9 @@
 .Mobile_lr {
     display: none;
 }
+.mobilee  {
+    display: none;
+}
 .cantainer_login{
     position: relative;
     top: 70px;
@@ -192,163 +195,10 @@ h4 {
    
 
 }
-@media screen  and (max-width:320px){
+@media screen  and (max-width:320px) {
     #all_login {
-       display: none;
-    }
-    .Mobile_lr {
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-       justify-content: center;
-       background-image:linear-gradient(#3C98BD, #0F53A1);
-       height: 100%;
-    }
-    .Mobile_lr .M-img{
-       display: flex;
-       flex-direction:row;
-    }
-    .img_login {
-       display: none;
-    }
-    .Mobile_lr .M-img .img3 {
-      margin-left:35%;
-      margin-top: 50px;
-      /* padding-bottom:10px; */
-    }
-    .Mobile_lr .M-img .M-arrow {
-        margin-right:200px;
-        margin-top:20px;
-    }
-    #Mobile-bottom {
-       border-top-right-radius:60px;
-       border-top-left-radius:60px;
-       width: 100%;
-       background-color: rgba(255,255,255,1); 
-       padding-top:5%;
-    }
-    .button_login {
-       margin-left:-170px;
-    }
-    .cantainer_login {
-       margin-left:-170px;
-       margin-top: -40px;
-    }
-    #input_login{
-       position: relative;
-      color:#3C98BD;
-       font-family: "Bahij Helvetica";
-       display: inline-block;
-       background: none;
-       width:200px;
-       padding: 1px ;
-       margin: 8px 0;
-       border-bottom: 2px solid #ccc;
-       box-sizing: border-box;
-       text-align: right;
-       fill: transparent;
-     outline: none;
-   }
-   .p_login{
-       color: #ccc;
-       z-index: 100;
-       position: relative;
-       top: 40px;
-       left:-20px;
-   }
-   h4::before,
-   h4::after {
-     content: "";
-     display: block;
-     width:90px;
-     height: 1px;
-     /* background:white; */
-     margin: auto 10px;
-     border-bottom: 2px solid #ccc;
-   }
-   .upp_login{
-    padding-top: 10px;
-   align-items: center;
-    border-radius: 50px;
-    width:130px;
-    height: 40px;
-    background-color: rgba(60,152,189,1);
-    color: white;
-    font-size:small;
-     font-family: "Bahij Helvetica";
-    font-weight: 12px;
-    display: inline-block;
-    padding-right: 12px;
-}
-.button_login{
-    position: relative;
-    top:20px;
-    left: 235px;
-    z-index: 100;
-    width:230px;
-    height: 40px;
-    border-radius: 50px;
-    display: flex;
-    justify-content: space-between;
-}
-.inn_login{
-    padding: 15px 30px 0 0px;
-    color: rgba(60,152,189,1);
-    font-size:small;
-     font-family: "Bahij Helvetica";
-    font-weight: 12px;
-    display: inline-block;
-} 
-.acount_button_login{
-    position: relative;
-    top: 30px;
-    left: -15px;
-    z-index: 100;
-    width:230px;
-    height: 40px;
-    border-radius: 50px;
-    background-color: rgba(60,152,189,1);
-    color: white;
-     font-family: "Bahij Helvetica";
-    font-size:small;
-    font-weight: 12px;
-}
-
-
-.google_button_login{
-position: relative;
-top: 50px;
-left:-10px;
-z-index: 100;
-width:230px;
-height: 40px;
-border-radius: 50px;
-background-color:white;
-border: 2px solid  #ccc ;
-display: flex;
-justify-content: space-between;
-}
-.google_p_login{
-margin:10px 12px 0px 0px;
-font-size:small;
-font-family:"Bahij Helvetica";
-font-weight: 12px;
-color: rgb(148, 144, 144);
-}
-.google_icon_login{
-width:25px;
-height: 30px;
-margin:5px 0px 0px 10px;
-}
-.forgetpassword_login {
-position: relative;
-top: 12px;
-}
-.error_login{
-color: red;
-font-family: "Bahij Helvetica";
-font-size: small;
-}
+        display: none;
+     }
 }
         /* Mobile 1 Responsive */
         @media screen  and (max-width:360px) and (min-width:100px){
@@ -510,17 +360,23 @@ margin:5px 0px 0px 10px;
    }
 }
 /* Mobile 2 Responsive */
-@media screen  and (max-width:576px) and (min-width:360px){
+@media screen  and (max-width:400px) and (min-width:300px){
     #all_login {
        display: none;
     }
+    .mobilee {
+      display:flex;
+      flex-direction: column;
+      background-image:linear-gradient(#3C98BD, #0F53A1);
+    }
     .Mobile_lr {
-       display: flex;
+       display:flex;
        flex-direction: column;
        align-items: center;
        justify-content: center;
-       background-image:linear-gradient(#3C98BD, #0F53A1);
-       height: 100%;
+       overflow: hidden;
+       /* height:0%; */
+       width: 100%;
     }
     .Mobile_lr .M-img{
        display: flex;
@@ -530,29 +386,36 @@ margin:5px 0px 0px 10px;
        display: none;
     }
     .Mobile_lr .M-img .img3 {
+        position: relative;
        width:130px;
-      margin-left:35%;
+      margin-left:30%;
+      margin-top:0px;
       padding-bottom:0px;
     }
     .Mobile_lr .M-img .M-arrow {
+        position: relative;
         margin-top:30px;
-        margin-right:300px;
+        margin-right:200px;
     }
     #Mobile-bottom {
-       border-top-right-radius:70px;
-       border-top-left-radius:70px;
-       width: 100%;
+        position: relative;
+        border-top-right-radius:70px;
+        border-top-left-radius:70px;
+       overflow-y:scroll;
+       overflow-x: hidden;
+       width:100%;
+       height:500px;
        background-color: rgba(255,255,255,1); 
-       padding-top:5%;
-      
     }
     .button_login {
-        margin-top: -50px;
-       margin-left:-125px;
+        position: absolute;
+        margin-top:-40px;
+       margin-left:-210px;
        font-weight: 12px;
     }
     .cantainer_login {
-       margin-left:-125px;
+       margin-left:-220px;
+       overflow-x: var(--web-view-name);
     }
     #input_login{
        position: relative;
@@ -571,7 +434,7 @@ margin:5px 0px 0px 10px;
    }
    .google_button_login{
        position: relative;
-       top: 50px;
+       top:70px;
        left: 8px;
        z-index: 100;
        width: 290px;
@@ -582,11 +445,25 @@ margin:5px 0px 0px 10px;
        display: flex;
        justify-content: space-between;
    }
+   .acount_button_login{
+    position: relative;
+    top: 60px;
+    left: -15px;
+    z-index: 100;
+    width: 335px;
+    height: 40px;
+    border-radius: 50px;
+    /* background-color: rgba(60,152,189,1); */
+    color: white;
+    font-size: large;
+     font-family: "Bahij Helvetica";
+    font-weight: 12px;
+}
    .p_login{
        color: #ccc;
        z-index: 100;
        position: relative;
-       top: 40px;
+       top:60px;
        left: -6px;
    }
    .error_login{
@@ -938,8 +815,6 @@ margin:5px 0px 0px 10px;
                 height: 40px;
                 border-radius: 50px;
                 background-color:white;
-                
-               
                 display: flex;
                 justify-content: space-between;
             }

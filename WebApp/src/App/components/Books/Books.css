@@ -9,7 +9,7 @@
     /* height: 625px; */
     height: 100vh;
     /* flex: 1; */
-    padding: 20px;
+    padding:0px;
     background-color: rgba(218, 236, 242, 1);
     overflow-x: hidden;
     overflow-y: hidden;
@@ -37,7 +37,7 @@
 
 #Books .top .left-svg {
     margin-top: -20px;
-    margin-left: 20px;
+    margin-left:10px;
 }
 #Books .top .left-svg .mobile-svg{
     display: none;
@@ -177,6 +177,7 @@
 
 #Books .bottom .last-svg {
     margin-right: 100px;
+    margin-top: -20px;
 }
 #Books .bottom .last-svg .mobile-last{
     display: none;
@@ -642,7 +643,10 @@
         width:50px;
     }
 }
-@media screen and (max-width:992px)and (min-width:768px){
+/* tablate resonsive */
+
+/* pc1 responsive */
+@media screen and (max-width:992px)and (min-width:944px){
 
     #Books {
         display: flex;
@@ -833,7 +837,7 @@
     
     .bottom p {
         color: #707070;
-        font-size:25px;
+        font-size:23px;
         padding:0px;
         font-family: "Bahij helvetica";
     }
@@ -860,6 +864,7 @@
         width:80px;
     }
 }
+/* pc2 responsive */
 @media screen and (max-width:1200px)and (min-width:992px) {
 
     #Books {
@@ -871,8 +876,7 @@
         height: 100vh;
         /* flex: 1; */
         padding: 20px;
-        /* background-color: rgba(218, 236, 242, 1); */
-        background-color: aqua;
+        background-color: rgba(218, 236, 242, 1);
         overflow-x: hidden;
         overflow-y: hidden;
     
@@ -1052,7 +1056,7 @@
     
     .bottom p {
         color: #707070;
-        font-size:30px;
+        font-size:25px;
         padding:0px;
         font-family: "Bahij helvetica";
     }
@@ -1078,4 +1082,7 @@
     .imageb2 {
         width:80px;
     }
+}
+@media screen and (max-width:400px)and (min-width:992px){
+    
 }
