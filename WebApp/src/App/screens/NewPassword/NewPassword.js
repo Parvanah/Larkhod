@@ -76,6 +76,8 @@ const  NewPassword = ({ t }) => {
 		</svg>
 	<div id="para_first_new_password">
 	{t("newpassword1")}
+	<br/>
+	{t("newpassword6")}
 	</div>
 	<div id="para_second_new_password">
 	{t("newpassword2")}
@@ -101,7 +103,7 @@ const  NewPassword = ({ t }) => {
               value={formValues.password}
 			  onChange={(e) => handleChange(e)}
             />
-            <p  className="error_new_password">{formErrors.password}</p>
+            <p id="error_new_password" className="error_new_password">{formErrors.password}</p>
 			<input
             id="input_nextt_new_password"
               type="password"
@@ -118,7 +120,7 @@ const  NewPassword = ({ t }) => {
     </div>
   )
 } else if (isLoading) {
-	return <h1>Loading.....</h1>;
+	return <h1>Loading...</h1>;
   } else {
 	return navigate("/header");
   }
