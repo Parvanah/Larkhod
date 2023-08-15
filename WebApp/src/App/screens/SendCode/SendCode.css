@@ -66,7 +66,7 @@
 #para_second_send_code {
     right: 50px;
     left: auto;
-    top: 270px;
+    top: 320px;
     position: absolute;
     overflow: visible;
     width: 706px;
@@ -97,7 +97,7 @@
 }
 #form_send_code{
     position: inherit;
-    top: 330px;
+    top: 380px;
     right: 50px;
     left: auto;
 }
