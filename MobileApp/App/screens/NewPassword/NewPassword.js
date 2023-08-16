@@ -149,7 +149,10 @@ const NewPassword = (props) => {
                   />
                   <TouchableOpacity
                     style={styles.submitBtn}
-                    onPress={handleSubmit}
+                    onPress={() => {
+                      handleSubmit;
+                      navigation.navigate("SignUp");
+                    }}
                     disabled={!isValid}
                   >
                     <CustomText style={styles.submitText}>

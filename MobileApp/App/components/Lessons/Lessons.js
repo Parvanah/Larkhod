@@ -36,6 +36,7 @@ import * as Sharing from "expo-sharing";
 import * as Permissions from "expo-permissions";
 import * as MediaLibrary from "expo-media-library";
 import * as Notifications from "expo-notifications";
+import { parseTrigger } from "expo-notifications/build/scheduleNotificationAsync";
 // import { downloadToFolder } from "expo-file-dl";
 const Lessons = (props) => {
   const navigation = useNavigation();
@@ -47,12 +48,13 @@ const Lessons = (props) => {
   const unit_page = route.params.unit_page;
   const [downloadCheck, setDownloadCheck] = useState();
   const pdf_path = route.params.pdf_path;
-
+  var progressChek;
   console.log(pdf_path);
   console.log(route.params.BookName);
   const path = "../../assets";
   const downloadFile = async (url, fileName) => {
-    console.log("downlod called");
+    // console.log("downlod called");
+    alert("Downloading pdf book started");
 
     try {
       const downloadResumable = FileSystem.createDownloadResumable(
@@ -63,16 +65,16 @@ const Lessons = (props) => {
           const progress =
             downloadProgress.totalBytesWritten /
             downloadProgress.totalBytesExpectedToWrite;
-
-          progress === 1
-            ? console.log("pdf completely downloaded", progress)
-            : "";
-          Math.sign(progress) === -1
-            ? console.log(
-                "pdf is not downloaed becouse of internet connection or other issues",
-                progress
-              )
-            : "";
+          progressChek = progress;
+          // progress === 1
+          //   ? console.log("pdf completely downloaded", progress)
+          //   : "";
+          // Math.sign(progress) === -1
+          //   ? console.log(
+          //       "pdf is not downloaed becouse of internet connection or other issues",
+          //       progress
+          //     )
+          //   : "";
           // setDownloadCheck(progress);
         }
       );
@@ -110,7 +112,32 @@ const Lessons = (props) => {
   // const save = (uri) => {
   //   shareAsync(uri);
   // };
-
+  async function requstNotificationPermission() {
+    const { status } = await Notifications.requestPermissionsAsync();
+    let finalStatus = existingStatus;
+    if (status === "granted") {
+      console.log("Notification permission granted");
+      schedualeNotification();
+    } else {
+      console.log("Notification permission denied");
+    }
+  }
+  async function schedualeNotification() {
+    await Notifications.scheduleNotificationAsync({
+      content: {
+        title: "book downloading",
+        body: progressChek,
+        data: { someData: "goes here " },
+      },
+      trigger: { seconds: 1 },
+    });
+  }
+  Notifications.addNotificationReceivedListener((notification) => {
+    console.log("notification recieved", notification);
+  });
+  Notifications.addNotificationResponseReceivedListener((response) => {
+    console.log("notification Response Received", response);
+  });
   return (
     <View style={style.container}>
       <TouchableOpacity
@@ -169,9 +196,10 @@ const Lessons = (props) => {
         <TouchableOpacity
           style={style.pdf}
           activeOpacity={0.8}
-          onPress={() =>
-            downloadFile(pdf_path, route.params.BookName + " .pdf")
-          }
+          onPress={() => {
+            requstNotificationPermission();
+            downloadFile(pdf_path, route.params.BookName + " .pdf");
+          }}
         >
           <Image source={require(path + "/Group_408.png")} />
           <CustomText style={style.pdfText}>{t("Lesson.2")}</CustomText>
