@@ -75,8 +75,8 @@ const ChangeInfo = (props) => {
   const { isLoading, changeInfo } = useContext(AuthContext);
 
   const navigation = useNavigation();
-  const onSubmit = () => {
-    changeInfo(firstName);
+  const onSubmit = (values) => {
+    changeInfo(values.firstName);
     navigation.goBack();
   };
 
@@ -128,7 +128,7 @@ const ChangeInfo = (props) => {
             age: "",
             phonNumbe: "",
           }}
-          onSubmit={() => onSubmit()}
+          onSubmit={(values) => onSubmit(values)}
         >
           {({
             handleChange,
@@ -144,7 +144,7 @@ const ChangeInfo = (props) => {
               <TextInput
                 name="firstName"
                 placeholder={t("ChangeInfo.2")}
-                onChangeText={(value) => setfirstName(value)}
+                onChangeText={handleChange("firstName")}
                 onBlur={handleBlur("firstName")}
                 value={values.firstName}
                 keyboardType="first-name"
