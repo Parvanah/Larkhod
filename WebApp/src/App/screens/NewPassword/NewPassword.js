@@ -112,7 +112,7 @@ const  NewPassword = ({ t }) => {
               value={formValues.confirmpassword}
               onChange={(e) => handleChange(e)}
             />
-             <p  className="error_new_password">{formErrors.confirmpassword}</p>
+             <p  className="errorr_new_password">{formErrors.confirmpassword}</p>
    <button id="button_next_new_password">{t("newpassword5")}</button>
 </form>
 </div>	
