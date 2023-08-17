@@ -124,7 +124,6 @@ export const AuthProvider = ({ children }) => {
       setIsLoading(false);
     }
   };
-
   // const changeInfo = (firstName, lastName, age) =>{
   //   setIsLoading(true);
   //   axios.post(`/changeInfo` ,{
@@ -143,7 +142,7 @@ export const AuthProvider = ({ children }) => {
   //     setIsLoading(false);
   //   });
   // }
-  const changeInfo = async (name) => {
+  const changeInfo = async (name , lastname,  age , senf) => {
     try {
       setIsLoading(true);
 
@@ -225,7 +224,6 @@ export const AuthProvider = ({ children }) => {
       setIsLoading(false);
     }
   };
-
   const isLoggedIn = async () => {
     try {
       setSplashLoading(true);
@@ -286,19 +284,15 @@ export const AuthProvider = ({ children }) => {
     </AuthContext.Provider>
   );
 };
-
 // import {AsyncStorage} from "react";
 // import axios from "axios";
 // import React, { createContext, useEffect, useState } from "react";
 // import config, { BASE_URL } from "../config";
-
 // export const AuthContext = createContext();
-
 // export const AuthProvider = ({ children }) => {
 //   const [userInfo, setUserInfo] = useState({});
 //   const [isLoading, setIsLoading] = useState(false);
 //   const [splashLoading, setSplashLoading] = useState(false);
-
 //   const register = async ( name,email, password, confirmPassword) => {
 //     try {
 //       setIsLoading(true);

@@ -3,13 +3,12 @@ import { withNamespaces } from 'react-i18next';
 import ig from '../../assets/Group_158_jr@2x.png';
 import "./ChangeProfile.css"
 import React, { useEffect } from 'react'
+import {Component } from 'react';
 import { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 <link rel="stylesheet" href="ChangeProfile.css" />;
 
-
 const ChangeProfile = ({t}) => {
-	
 
 	const changeLanguage = (lng) => {
 		i18n.changeLanguage(lng);
@@ -163,7 +162,6 @@ const ChangeProfile = ({t}) => {
 				<button className="save_button_change_profile"> {t("changeprofile8")}</button>
 			  </form>
 			</div>
-			
 		</div>
 			</div>
 		  )

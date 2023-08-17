@@ -1183,7 +1183,6 @@ const  Downloading = (props) => {
       </div>
     </div>
     
-    
       </div>
    );
   }

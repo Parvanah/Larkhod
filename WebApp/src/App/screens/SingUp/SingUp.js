@@ -21,8 +21,7 @@ import { Link, useNavigate, useNavigation } from "react-router-dom";
 <link rel="stylesheet" href="SingUp.css" />;
 
 const SingUp = ({ t }) => {
- 
-
+  
   const login = useGoogleLogin({
     onSuccess: async respose => {
         try {
@@ -31,13 +30,10 @@ const SingUp = ({ t }) => {
                     "Authorization": `Bearer ${respose.access_token}`
                 }
             })
-
             console.log(res.data)
         } catch (err) {
             console.log(err)
-
         }
-
     }
 });
 
@@ -46,12 +42,9 @@ const SingUp = ({ t }) => {
 //     i18n.changeLanguage(lng);
 // };
   const { isLoading, register } = useContext(AuthContext);
- 
-
   const changeLanguage = (lng) => {
 		i18n.changeLanguage(lng);
 	  }
-
   const initialValues = {
     username: "",
     email: "",
@@ -104,14 +97,9 @@ const SingUp = ({ t }) => {
     } else if (values.confirmpassword !== values.password) {
       errors.confirmpassword =
       <>{t("singup15")}</>;
-
-
-
     }
-
     return errors;
   };
-
   return (
     <div>
       <div id="all_singup">
@@ -160,8 +148,6 @@ const SingUp = ({ t }) => {
           ) : (
             <pre></pre>
           )}
-
-
           <form onSubmit={handleSubmit}>
             <div>
               <input

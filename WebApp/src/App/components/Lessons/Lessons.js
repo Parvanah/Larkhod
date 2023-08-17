@@ -11,11 +11,12 @@ import photo4 from "../../assets/Group_404.png";
 import photo5 from "../../assets/Group_158_a@2x.png";
 // import photo6 from "../../assets/Group407.png";
 import photo6 from "../../assets/Group 407.png";
-import top1 from "../../assets/mob-top.jpg";
+import top1 from "../../assets/Path__2.png";
 import Down1 from "../../assets/Group_408.png";
 import photo7 from "../../assets/Group_158_f.png";
 import { FiMenu } from "react-icons/fi";
 import { ImCross } from "react-icons/im";
+import { saveAs } from 'file-saver';
 const Lessons = ({ t }) => {
 
   var [num, setNum] = useState(1);
@@ -25,7 +26,12 @@ const Lessons = ({ t }) => {
   console.log(lessons);
   const unit = locationData.title;
   const [title, setTitle] = useState("");
-  
+  // const PDFDownloader=()=>{
+  //   const downloadPDF=()=>{
+  //     const fileURL= '/school_subjects/pashto_curriculum/primary/Dari/pdf_book/G1-Dr-Dari.pdf';
+  //     saveAs(fileURL,'downloaded_pdf.pdf');
+  //   };
+  // }
   const [sidebar, setSidebar] = useState("none");
   const handleSideBar = () => {
     if (sidebar === "none") {
@@ -34,11 +40,10 @@ const Lessons = ({ t }) => {
       setSidebar("none");
     }
   };
-
     return (
       <body> 
         <div className="lesson">
-          <svg xmlns="http://www.w3.org/2000/svg" width={403} height={675}
+          <svg xmlns="http://www.w3.org/2000/svg" width={310} height={590}
           //  {...props}
            >
       <defs>
@@ -236,15 +241,12 @@ const Lessons = ({ t }) => {
           </div>
           </div>
           <div className="mobile-bottom">
-          <img src={Down1}/>
+          <button onClick={downloadPDF}></button><img src={Down1}/><button/>
           <p>دانلود فایل پی دی اف</p>
           </div> 
         </div>
-        
       </body>
     );
-  
-  
 };
 export default  withNamespaces()(Lessons) ;
 
