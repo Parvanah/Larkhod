@@ -387,15 +387,16 @@ margin:5px 0px 0px 10px;
     }
     .Mobile_lr .M-img .img3 {
         position: relative;
-       width:130px;
-      margin-left:30%;
-      margin-top:0px;
-      padding-bottom:0px;
+        width: 130px;
+        margin-left:0%;
+        margin-top:50px;
+        padding-bottom:30px;
     }
     .Mobile_lr .M-img .M-arrow {
         position: relative;
         margin-top:30px;
         margin-right:200px;
+        display: none;
     }
     #Mobile-bottom {
         position: relative;
@@ -417,6 +418,20 @@ margin:5px 0px 0px 10px;
        margin-left:-220px;
        overflow-x: var(--web-view-name);
     }
+    .upp_login{
+        padding-top: 5px;
+       align-items: center;
+        border-radius: 50px;
+        width: 185px;
+        height: 40px;
+        background-image:linear-gradient(#3C98BD, #0F53A1);
+        color: white;
+        font-size: large;
+         font-family: "Bahij Helvetica";
+        font-weight: 12px;
+        display: inline-block;
+        padding-right: 12px;
+    }
     #input_login{
        position: relative;
       color:#3C98BD;
@@ -432,6 +447,21 @@ margin:5px 0px 0px 10px;
        fill: transparent;
      outline: none;
    }
+  
+.acount_button_login{
+    position: relative;
+    top: 60px;
+    left: -15px;
+    z-index: 100;
+    width: 335px;
+    height: 40px;
+    border-radius: 50px;
+    background-image:linear-gradient(#3C98BD, #0F53A1);
+    color: white;
+    font-size: large;
+     font-family: "Bahij Helvetica";
+    font-weight: 12px;
+}
    .google_button_login{
        position: relative;
        top:70px;
@@ -477,13 +507,19 @@ margin:5px 0px 0px 10px;
         #all_login {
            display: none;
         }
+        .mobilee {
+          display:flex;
+          flex-direction: column;
+          background-image:linear-gradient(#3C98BD, #0F53A1);
+        }
         .Mobile_lr {
-           display: flex;
+           display:flex;
            flex-direction: column;
            align-items: center;
            justify-content: center;
-           background-image:linear-gradient(#3C98BD, #0F53A1);
-           height: 100%;
+           overflow: hidden;
+           /* height:0%; */
+           width: 100%;
         }
         .Mobile_lr .M-img{
            display: flex;
@@ -493,28 +529,37 @@ margin:5px 0px 0px 10px;
            display: none;
         }
         .Mobile_lr .M-img .img3 {
-          margin-left:45%;
-          padding-bottom:0px;
-          width: 120px;
+            position: relative;
+            width: 130px;
+            margin-left:10%;
+            margin-top: 40px;
+            padding-bottom:30px;
         }
         .Mobile_lr .M-img .M-arrow {
-            margin-top:30px;
+            position: relative;
+            margin-top:50px;
             margin-right:500px;
+            display: none;
         }
         #Mobile-bottom {
-           border-top-right-radius:70px;
-           border-top-left-radius:70px;
-           width: 100%;
+            position: relative;
+            border-top-right-radius:70px;
+            border-top-left-radius:70px;
+           overflow-y:scroll;
+           overflow-x: hidden;
+           width:100%;
+           height:500px;
            background-color: rgba(255,255,255,1); 
-           padding-top:5%;
-          
         }
         .button_login {
-            margin-top: -60px;
-            margin-left:-20px;
+            position: absolute;
+            margin-top:-40px;
+           margin-left:0px;
+           font-weight: 12px;
         }
         .cantainer_login {
-            margin-left:-25px;
+           margin-left:0px;
+           overflow-x: var(--web-view-name);
         }
         #input_login{
            position: relative;
@@ -533,7 +578,7 @@ margin:5px 0px 0px 10px;
        }
        .google_button_login{
            position: relative;
-           top: 50px;
+           top:70px;
            left: 8px;
            z-index: 100;
            width: 290px;
@@ -544,209 +589,243 @@ margin:5px 0px 0px 10px;
            display: flex;
            justify-content: space-between;
        }
+       .upp_login{
+        padding-top:5px;
+       align-items: center;
+        border-radius: 50px;
+        width: 100;
+        height: 40px;
+        background-image:linear-gradient(#3C98BD, #0F53A1);
+        color: white;
+        font-size: large;
+         font-family: "Bahij Helvetica";
+        font-weight: 12px;
+        display: inline-block;
+        padding-right: 12px;
+    }
+       .acount_button_login{
+        position: relative;
+        top: 60px;
+        left: -15px;
+        z-index: 100;
+        width: 335px;
+        height: 40px;
+        border-radius: 50px;
+        /* background-color: rgba(60,152,189,1); */
+        background-image: linear-gradient(#3C98BD, #0F53A1);
+        color: white;
+        font-size: large;
+         font-family: "Bahij Helvetica";
+        font-weight: 12px;
+    }
        .p_login{
            color: #ccc;
            z-index: 100;
            position: relative;
-           top: 40px;
+           top:60px;
            left: -6px;
        }
        .error_login{
         color: red;
          font-family: "Bahij Helvetica";
-         font-size: small;
+         font-size:small;
        }
        }
     /* PC1 Responsive */
-    @media screen  and (max-width:992px) and (min-width:768px){
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                border: none;
-            }
-            #all_login {
-                position: absolute;
-                width: 100%;
-                height: 90%;
-                background-color: rgba(255,255,255,1); 
-                background-color: blueviolet;
-                overflow: hidden;
-                --web-view-name: Artboard – 2;
-                --web-view-id: Artboard__2;
-                --web-scale-on-resize: true;
-                --web-enable-deep-linking: true;
-            }
-            .Mobile_lr {
-                display: none;
-            }
-            .cantainer_login{
-                position: relative;
-                top:70px;
-                left:165px;
-                z-index: 100;
-            }
-            #input_login{
-                position: relative;
-               color: white;
-                font-family: "Bahij Helvetica";
-                display: inline-block;
-                background: none;
-                width:270px;
-                padding: 1px ;
-                margin: 8px 0;
-                border-bottom: 2px solid #ccc;
-                box-sizing: border-box;
-                text-align: right;
-                fill: transparent;
-              outline: none;
-            }
-            
-            .acount_button_login{
-                position: relative;
-                top: 30px;
-                left: -15px;
-                z-index: 100;
-                width: 285px;
-                height: 40px;
-                border-radius: 50px;
-                background-color: rgba(60,152,189,1);
-                font-size:medium;
-                 font-family: "Bahij Helvetica";
-                font-weight: 12px;
-              
-            }
-            .google_button_singup{
-                position: relative;
-                top: 50px;
-                left:-20px;
-                z-index: 100;
-                width:300px;
-                height: 40px;
-                border-radius: 50px;
-                background-color:white;
-                display: flex;
-                justify-content: space-between;
-            }
-            .google_icon_login{
-                color: rgb(148, 144, 144);
-                width:25px;
-                height: 30px;
-                margin:5px 0px 0px 10px;
-            }
-            .google_p_login{
-                margin:10px 12px 0px 0px;
-                font-size:medium;
-                 font-family: "Bahij Helvetica";
-                font-weight: 20px;
-                color: rgb(148, 144, 144);
-            }
-            
-            .button_login{
-                position: relative;
-                top: 50px;
-                left:150px;
-                z-index: 100;
-                width:300px;
-                height: 40px;
-                border-radius: 50px;
-                display: flex;
-                justify-content: space-between;
-            }
-            
-            
-            .inn_login{
-            
-                padding: 10px 40px 0 0px;
-                color: rgba(60,152,189,1);
-                font-size: medium;
-                 font-family: "Bahij Helvetica";
-                font-weight:12px;
-                display: inline-block;
-            }
-            .upp_login{
-                padding-top: 10px;
-               align-items: center;
-                border-radius: 50px;
-                width: 165px;
-                height: 40px;
-                background-color: rgba(60,152,189,1);
-                color: white;
-                font-size:medium;
-                 font-family: "Bahij Helvetica";
-                font-weight: 12px;
-                display: inline-block;
-                padding-right: 12px;
-            }
-            .img_login{
-                position: relative;
-                top:200px;
-                left:150px;
-                width: 350px;
-            }
-            
-            #svg_login{
-                position: absolute;
-                width: 1921.645px;
-                height: 985.429px;
-                left: 0.355px;
-                top: 0px;
-                overflow: visible;
-                padding: 0px 195px 19px 433px;
-            }
-            #Path_login {
-                fill: url(#Path_login);
-            }
-            .Path_login {
-                overflow: visible;
-                position: absolute;
-                
-                width: auto;
-                height: 51%;
-                left: 0px;
-                top: 0px;
-                right: 0;
-                
-                transform: matrix(1,0,0,1,0,0);
-            }
-            .error_login{
-             color: red;
-            
-            }
-            h4 {
-                display: flex;
-                position: relative;
-                left: 12px;
-              }
-              
-              h4::before,
-              h4::after {
-               
-                
-                content: "";
-                display: block;
-                width: 115px;
-                height: 1px;
-                /* background:white; */
-                margin: auto 10px;
-                border-bottom: 2px solid #ccc;
-              }
-            .p_login{
-                color: white;
-                z-index: 100;
-                position: relative;
-                top: 40px;
-                left:-20px;
-                width: 500px;
-            }
-            .forgetpassword_login{
-                color: white;
-                position: relative;
-                top: 12px;
-            }
+    @media screen  and (max-width:1024px) and (min-width:768px){
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: none;
         }
+        #all_login {
+            position: absolute;
+            width: 100%;
+            height: 90%;
+            background-color: rgba(255,255,255,1); 
+            overflow: hidden;
+            --web-view-name: Artboard – 2;
+            --web-view-id: Artboard__2;
+            --web-scale-on-resize: true;
+            --web-enable-deep-linking: true;
+        }
+        .Mobile_lr {
+            display: none;
+        }
+        .cantainer_login{
+            position: relative;
+            top: 100px;
+            left: 150px;
+            z-index: 100;
+        }
+        #input_login{
+           color: white;
+            font-family: "Bahij Helvetica";
+            display: inline-block;
+            background: none;
+            width: 300px;
+            padding: 1px ;
+            margin: 8px 0;
+            border-bottom: 2px solid #ccc;
+            box-sizing: border-box;
+            text-align: right;
+            fill: transparent;
+          outline: none;     
+           position: relative;
+      
+        }
+        
+        .acount_button_login{
+            position: relative;
+            top: 30px;
+            left: -15px;
+            z-index: 100;
+            width: 335px;
+            height: 40px;
+            border-radius: 50px;
+            background-color: rgba(60,152,189,1);
+            color: white;
+            font-size: large;
+             font-family: "Bahij Helvetica";
+            font-weight: 12px;
+          
+        }
+        .google_button_singup{
+            position: relative;
+            top: 50px;
+            left:9px;
+            z-index: 100;
+            width: 290px;
+            height: 40px;
+            border-radius: 50px;
+            background-color:white;
+            display: flex;
+            justify-content: space-between;
+        }
+        .google_icon_login{
+            color: rgb(148, 144, 144);
+            width: 30px;
+            height: 30px;
+            margin:5px 0px 0px 10px;
+        }
+        .google_p_login{
+            margin:10px 12px 0px 0px;
+            font-size: large;
+             font-family: "Bahij Helvetica";
+            font-weight: 12px;
+            color: rgb(148, 144, 144);
+        }
+        
+        .button_login{
+            position: relative;
+            top: 90px;
+            left:130px;
+            z-index: 100;
+            width: 335px;
+            height: 40px;
+            border-radius: 50px;
+            display: flex;
+            justify-content: space-between; 
+        }
+        
+        
+        .inn_login{
+        
+            padding: 10px 40px 10 0px;
+            color: rgba(60,152,189,1);
+            font-size: large;
+             font-family: "Bahij Helvetica";
+            font-weight: 12px;
+            display: inline-block;
+        
+        
+          
+        }
+        .upp_login{
+            padding-top:5px;
+           align-items: center;
+            border-radius: 50px;
+            width: 100;
+            height: 40px;
+            background-color: rgba(60,152,189,1);
+            color: white;
+            font-size: large;
+             font-family: "Bahij Helvetica";
+            font-weight: 12px;
+            display: inline-block;
+            padding-right: 12px;
+        }
+        .img_login{
+           
+            position: relative;
+            width: 350px;
+            top:100px;
+            left: 160px;
+        }
+        
+        #svg_login{
+            position: absolute;
+            width: 1921.645px;
+            height: 985.429px;
+            left: 0.355px;
+            top: 0px;
+            overflow: visible;
+            padding: 0px 195px 19px 433px;
+        }
+        #Path_login {
+            fill: url(#Path_login);
+        }
+        .Path_login {
+            overflow: visible;
+            position: absolute;
+            
+            width: auto;
+            height: 51%;
+            left: 0px;
+            top: 0px;
+            right: 0;
+            
+            transform: matrix(1,0,0,1,0,0);
+        }
+        .error_login{
+         color: red;
+        
+        }
+        h4 {
+            display: flex;
+            position: relative;
+            left: 12px;
+          }
+          
+          h4::before,
+          h4::after {
+           
+            
+            content: "";
+            display: block;
+            width: 130px;
+            height: 1px;
+            /* background:white; */
+            margin: auto 10px;
+            border-bottom: 2px solid #ccc;
+          }
+        .p_login{
+            
+            color: white;
+            z-index: 100;
+            position: relative;
+            top: 40px;
+            left: -6px;
+        }
+        .forgetpassword_login{
+            color: white;
+            position: relative;
+            top: 12px;
+        }
+    }
         /* Pc 2 Responsive */
-        @media screen  and (max-width:1200px) and (min-width:992px){
+        @media screen and (max-width:1200px)and (min-width:1024px){
             * {
                 margin: 0;
                 padding: 0;
@@ -758,7 +837,6 @@ margin:5px 0px 0px 10px;
                 width: 100%;
                 height: 90%;
                 background-color: rgba(255,255,255,1); 
-                background-color: black;
                 overflow: hidden;
                 --web-view-name: Artboard – 2;
                 --web-view-id: Artboard__2;
@@ -835,7 +913,7 @@ margin:5px 0px 0px 10px;
             .button_login{
                 position: relative;
                 top: 90px;
-                left:140px;
+                left:130px;
                 z-index: 100;
                 width: 335px;
                 height: 40px;
@@ -847,7 +925,7 @@ margin:5px 0px 0px 10px;
             
             .inn_login{
             
-                padding: 10px 40px 0 0px;
+                padding: 10px 40px 10 0px;
                 color: rgba(60,152,189,1);
                 font-size: large;
                  font-family: "Bahij Helvetica";
@@ -858,7 +936,7 @@ margin:5px 0px 0px 10px;
               
             }
             .upp_login{
-                padding-top: 10px;
+                padding-top:5px;
                align-items: center;
                 border-radius: 50px;
                 width: 100;
@@ -874,8 +952,8 @@ margin:5px 0px 0px 10px;
             .img_login{
                
                 position: relative;
-                top: 100px;
-                left:250px;
+                top:60px;
+                left:200px;
                 width: 400px;
             }
             

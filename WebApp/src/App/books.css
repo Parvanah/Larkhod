@@ -199,7 +199,6 @@
     }
       .buttom-books .link-grade-n   {
         color: rgba(16,84,162,1);
-        background-color: red;
         letter-spacing: -0.4px;
         margin-bottom:8px;
         margin-left:185px;
@@ -229,124 +228,114 @@
 }
 
 /* Tablate Responsive */
-@media screen and (max-width:768px)and (min-width:576px) {
-    body {
-        overflow-x: hidden;
-    }
-  
-    .Download-all-b {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height:90vh;
-    }
-    .Bookheader {
-        display: flex;
-        flex-direction:row;
-        justify-content:center;
-        align-self: center;
-        overflow-x: hidden;
-        overflow-y: hidden;
-        background-image: linear-gradient(to right, #0F53A1,  #3C98BD);
-        width: 100%;
-        height:90vh; 
-    }
-    .icon-book {
-        width: 100px;
-        height: 100px;
-        margin-top:200px;
-        margin-left:-190px;
+@media screen and (max-width:968px)and (min-width:576px){
       
-    }
-    .bookH {
-        position:fixed;
-        width:380px;
-        margin-top:240px;
-        margin-left:200px;
-    }
-    .bookH-mobile {
-        display: none;
-    }
-    .book-icon-mobile {
-        display: none;
-    }
-    .flesh-image-grade-B {
-        margin: 0px;
-		padding: 0px;
-		width:30px;
-		display: inline-block;
-		position: relative;
-        top: 40px;
-		left:-100px;
-        
-    }
-    #h-books {
-        overflow-x: hidden;
-        /* overflow-y: hidden; */
-        height:250px;
-        margin-top:-0px;
-        /* width: 300px; */
-        margin-left:-90px;
-    } 
-    .B-scrool {
-        margin-top:30px;
-    }
-    .buttom-books{
-       display: flex;
-       flex-direction:column;
-       align-items: center;
-       margin-left:10px;
-    }
-    .buttom-books .p-container-books {
-     margin-top:70px;
-     margin-bottom: 0px;
-     margin-left:15px;
-    }
-    .buttom-books .p-books{
-        font-family: "Bahij Helvetica";
-        color: white;
-        font-size:20px;
-        font-weight: bold;
-    }
-    .buttom-books #p-books{
-        font-family: "Bahij Helvetica";
-        color: white;
-        font-size:25px;
-        font-weight: bold;
-        text-align: center;
-    }
-    .buttom-books .link-grade-n .li-grade-n {
-        letter-spacing: -0.4px;
-        margin-right: 18px;
-        font-size: 15px;
-        /* font-weight: bold; */
-    }
-    .buttom-books .link-grade-n   {
-        color: rgba(16,84,162,1);
-        letter-spacing: -0.4px;
-        margin-bottom:8px;
-        margin-left:140px;
-        font-family: "Bahij Helvetica";
-        font-size:15px;
-        /* font-weight: bold; */
-        /* margin:10px; */
-    }
-    .li-grade-b {
-        font-family: "Bahij Helvetica";
-        font-size:15px;
-    }
-    .pathimg-b {
-        margin-right:0px;
-        margin-top:5px;
-        cursor: pointer;
-    }
-    .line {
-        width:400px;
-    }
-    #line {
-        margin-left:50px;
-        margin-bottom:-0px;
-    }
+.Download-all-b {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height:90vh;
+}
+.Bookheader {
+    display: flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-self: center;
+    background-image: linear-gradient(to right, #0F53A1,  #3C98BD);
+    width: 100%;
+    height:90vh; 
+}
+/* .icon-book {
+    width: 100px;
+    height: 100px;
+    margin-top:200px;
+    margin-left:-190px;
+  
+} */
+.bookH {
+    width:400px;
+    margin-top:40px;
+    margin-left:50px;
+    /* margin-right0px ; */
+}
+.bookH-mobile {
+    display: none;
+}
+.book-icon-mobile {
+    display: none;
+}
+.flesh-image-grade-B {
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+    position: relative;
+    top: 70px;
+    left: 70px;
+}
+#h-books {
+    overflow-y: hidden;
+    height:300px;
+    margin-bottom:0px;
+    margin-left:0px;
+} 
+.B-scrool {
+    margin-top:30px;
+}
+.buttom-books{
+   display: flex;
+   flex-direction:column;
+   align-items: center;
+   margin-left:200px;
+}
+.buttom-books .p-container-books {
+ margin-top:80px;
+ margin-bottom: 20px;
+ margin-left:-40px;
+ /* background-color: red; */
+}
+.buttom-books .p-books{
+    color: white;
+    font-family: "Bahij Helvetica";
+    font-size:30px;
+    font-weight: bold;
+}
+.buttom-books #p-books{
+    font-family: "Bahij Helvetica";
+    color: white;
+    font-size:20px;
+    font-weight: bold;
+    text-align: center;
+}
+.buttom-books .link-grade-n .li-grade-n{
+    color: rgba(16,84,162,1);
+    letter-spacing: -0.4px;
+    margin-right:15px;
+    font-family: "Bahij Helvetica";
+    font-size:17px;
+    /* font-weight: bold; */
+}
+.buttom-books .link-grade-n{
+    width:350px;
+    color: rgba(16,84,162,1);
+    background-color: rgba(218, 236, 242, 1);
+    letter-spacing: -0.4px;
+    margin-right:0px;
+    font-family: "Bahij Helvetica";
+    /* font-weight: bold; */
+    margin:15px;
+    /* margin-right:90px; */
+}
+.pathimg-b {
+    margin-right:0px;
+    /* margin-top:50px; */
+}
+.line {
+    width:50px;
+}
+#line {
+    margin-right:70px;
+    margin-bottom:0px;
+}
 }
 /* PC1 Responsive */
 @media screen and (max-width:992px)and (min-width:768px){
@@ -441,6 +430,7 @@
 .buttom-books .link-grade-n{
     /* width:500px; */
     color: rgba(16,84,162,1);
+    background-color: rgba(218, 236, 242, 1);
     letter-spacing: -0.4px;
     margin-right:0px;
     font-family: "Bahij Helvetica";
@@ -457,16 +447,14 @@
 }
 #line {
     margin-right:70px;
-    margin-bottom:15px;
+    margin-bottom:0px;
 }
 }
 
 
 /* PC2 Responsive */
 @media screen and (max-width:1200px)and (min-width:992px) {
-    body {
-        overflow-x: hidden;
-    }
+   
     
 .Download-all-b {
     display: flex;
@@ -545,7 +533,7 @@
     text-align: center;
 }
 .buttom-books .link-grade-n .li-grade-n{
-    color: rgba(16,84,162,1);
+    /* color: rgba(16,84,162,1); */
     letter-spacing: -0.4px;
     margin-right:15px;
     font-family: "Bahij Helvetica";
@@ -555,6 +543,7 @@
 .buttom-books .link-grade-n{
     /* width:500px; */
     color: rgba(16,84,162,1);
+    background-color: rgba(218, 236, 242, 1);
     letter-spacing: -0.4px;
     margin-right:0px;
     font-family: "Bahij Helvetica";
@@ -564,14 +553,14 @@
 }
 .pathimg-b {
     margin-right:0px;
-    /* margin-top:50px; */
+    margin-top:5px;
 }
 .line {
     width:500px;
 }
 #line {
     margin-right:30px;
-    margin-bottom:15px;
+    margin-bottom:-10px;
 }
 }
 

@@ -277,7 +277,7 @@ const SingUp = ({ t }, props) => {
               <button className="acount_button_singuo">{t("singup1")}</button>
             </form>
             <h4 className="p_singup">{t("singup7")}</h4>
-            <button className="google_button_singup" onClick={login}>
+            <button className="google_buttton_singup" onClick={login}>
               <FaGoogle className="google_icon_singup" />
               <div className="google_p_singup">{t("singup8")}</div>
             </button>

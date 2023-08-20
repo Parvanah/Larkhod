@@ -3,7 +3,10 @@
     display: flex;
     flex-direction:row;
     justify-content: center; 
-    margin-top:50px;
+    margin-top:0px;
+    width: 100%;
+    flex: 1;
+    height: outo;
 }
 .icon-D {
     /* width:200px; */
@@ -14,10 +17,11 @@
 	padding: 0px;
 	display: inline-block;
 	position: relative;
-	top:30px;
-	left:-290px;
+	top:60px;
+	left:-270px;
 }
 .pathimg {
+    display: none;
     margin-left:320px;
     margin-bottom:20px;
     cursor: pointer;
@@ -50,7 +54,8 @@
     justify-content:center;
 }
 .Dimg {
-    width:500px;
+    height:100%;
+    width:100%;
     margin-left:-900px;
 }
 .Dimage-m {
@@ -60,7 +65,7 @@
     height:300px;
     overflow-y:scroll;
     border-bottom:1px solid #707070;
-    margin-right:-500px;
+    margin-right:20%;
     margin-bottom: 60px;
 }
 
@@ -91,6 +96,31 @@ font-family: "Bahij Helvetica";
    
     background-color: #3c98bd;
 }
+@keyframes spinner {
+    0% {
+      transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    }
+    100% {
+      transform: translate3d(-50%, -50%, 0) rotate(360deg);
+    }
+  }
+  .Download-li .spin::before {
+   
+    animation: 1.5s linear infinite spinner;
+    animation-play-state: inherit;
+    border: solid 5px #cfd0d1;
+    border-bottom-color: #1c87c9;
+    border-radius: 50%;
+    content: "";
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transform: translate3d(-50%, -50%, 0);
+    will-change: transform;
+  }
+
 .d-book {
 font-family: "Bahij Helvetica"; 
 padding:8px;
@@ -187,7 +217,7 @@ font-weight: bold;
     padding:2px;
     
     }
-    #h5 {
+ p_download {
     margin:5px;
     font-size:px;
     }
@@ -209,7 +239,7 @@ font-weight: bold;
     }
 
 }
-@media screen and (max-width:576px)and (min-width:360px){
+@media screen and (max-width:385px)and (min-width:360px){
     .download-b {
         display:flex;
         flex-direction:row;
@@ -230,7 +260,7 @@ font-weight: bold;
 		display:flex;
 		position: relative;
 		top: 0px;
-	   left:0px;
+	   left:50px;
     }
     .pathimg {
         display: none;
@@ -249,15 +279,15 @@ font-weight: bold;
         color: white;
         padding-top:30px;
         font-family: "Bahij Helvetica";
-        font-size:15px;
+        font-size:20px;
         font-weight: bold;
-        margin-left:100px;    
+        margin-left:120px;    
     }
     .download-b #p-downloding {
         color: white;
         font-family: "Bahij Helvetica";
         font-size:20px;
-        margin-left:60px;
+        margin-left:100px;
         margin-bottom: 3px;
     }
     .Download-ul {
@@ -273,13 +303,13 @@ font-weight: bold;
     .Dimage-m {
         display:flex;
         margin-top:100px;
-        margin-left:30px;
+        margin-left:80px;
        
     }
     .d-middle {
         height:300px;
        overflow-y:scroll;
-        margin-right:0px;
+       margin-right:20px;
         margin-bottom: 60px;
         /* width: 300px; */
     }
@@ -288,7 +318,7 @@ font-weight: bold;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width:300px;
+    width:350px;
     height:40px;
     background-color:rgba(212,228,232,1);
     border-radius:30px;
@@ -296,12 +326,13 @@ font-weight: bold;
     font-size:13px;
     font-weight: bold;
     margin:15px;
-    padding:2px;
+    padding:0px;
     
     }
-    #h5 {
-    margin:5px;
+    .Download-li #h5 {
+    margin:10px;
     font-size:px;
+    background-color: red;
     }
     .uff:hover {
        
@@ -313,134 +344,42 @@ font-weight: bold;
     }
     #line-d {
         display: flex;
-        margin-left:10px;
+        margin-left:15px;
         margin-top:-50px;
     }
     .line-d {
-        width:310px;
+        width:350px;
     }
 
 }
 /* Tablate Responsive */
-@media screen and (max-width:768px)and (min-width:576px) {
+@media  (width <=768px) or (oreiention : landscape){
     
-.download-b {
-    display: flex;
-    flex-direction:row;
-    justify-content: center; 
-    margin-top: 50px;
-}
-.icon-D {
-    /* width:200px; */
-    /* margin-top:150px; */
-}
-.flesh-image-grade-d {
-    margin-bottom:450px;
-    margin-left:-30px;
-    width:25px;
-}
-.pathimg {
-    margin-left:390px;
-    width: 20px;
-}
-.d-section {
-    display: flex;
-    flex-direction:column;
-    justify-content: space-between;
-    width: 100%;
-    background-image: linear-gradient(to right,  #3C98BD , #0F53A1);
-}
-.download-b .p-downloding {
-    color: white;
-    padding-top:30px;
-    font-family: "Bahij Helvetica";
-    font-size:25px;
-    font-weight: bold;
-    margin-left:300px;    
-}
-.download-b #p-downloding {
-    color: white;
-    font-family: "Bahij Helvetica";
-    font-size:30px;
-    margin-left:260px;
-    margin-bottom: 3px;
-}
-.Download-ul {
-    display: flex;
-    flex-direction:row;
-    justify-content:center;
-}
-.Dimg {
-    width:350px;
-    margin-left:-600px;
-}
-.Dimg-m {
-    display: none;
-}
-.d-middle {
-    height:300px;
-   overflow-y:hidden;
-    border-bottom:1px solid #707070;
-    margin-left:-10px;
-    margin-bottom: 60px;
-}
-
-.Download-li{
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-width:300px;
-height:40px;
-background-color:rgba(212,228,232,1);
-border-radius:30px;
-color: rgba(16,84,162,1);
-margin:5px;
-padding:2px;
-
-}
-.d-scrool {
-    margin-top:50px;
-    margin-bottom:10px;
-    margin-left:225px;
-} 
-#h5 {
-margin:5px;
-font-size:px;
-}
-.uff:hover {
-   
-    background-color: #3c98bd;
-}
-.d-book {
-padding:8px;
-font-weight: bold;
-}
-#line-d {
-    margin-left:240px;
-   margin-top:-50px;
-}
-.line-d {
-    width:330px;
-}
-}
-/* pC1 Responsive */
-@media screen and (max-width:992px)and (min-width:768px){
     .download-b {
         display: flex;
         flex-direction:row;
         justify-content: center; 
-        margin-top: 50px;
+        margin-top:0px;
+        width:100%;
+        height:482px;
     }
     .icon-D {
         /* width:200px; */
         /* margin-top:150px; */
     }
     .flesh-image-grade-d {
-        margin-bottom:450px;
-        margin-left:-150px;
+        margin: 0px;
+        padding: 0px;
+        display: inline-block;
+        position: relative;
+        top:70px;
+        left:0px;
     }
     .pathimg {
-        margin-left:340px;
+        display: none;
+        margin-left:320px;
+        margin-bottom:20px;
+        cursor: pointer;
     }
     .d-section {
         display: flex;
@@ -451,18 +390,18 @@ font-weight: bold;
     }
     .download-b .p-downloding {
         color: white;
-        padding-top:60px;
-        font-family: "Bahij Helvetica";
-        font-size:35px;
+        padding-top:50px;
+        font-size:30px;
         font-weight: bold;
-        margin-left:240px;    
+        margin-left:350px; 
+        font-family: "Bahij Helvetica";   
     }
     .download-b #p-downloding {
         color: white;
-        font-family: "Bahij Helvetica";
-        font-size:40px;
-        margin-left:180px;
-        margin-bottom: 3px;
+        font-size:30px;
+        margin-left:320px;
+        margin-bottom:0px;
+        font-family: "Bahij Helvetica"; 
     }
     .Download-ul {
         display: flex;
@@ -470,18 +409,20 @@ font-weight: bold;
         justify-content:center;
     }
     .Dimg {
-        width:350px;
-        margin-left:-700px;
+        height:300px;
+        margin-top:0px;
+        width:300px;
+        margin-left:-800px;
     }
-    .Dimg-m {
+    .Dimage-m {
         display: none;
     }
     .d-middle {
         height:300px;
-       overflow-y:hidden;
+        overflow-y:scroll;
         border-bottom:1px solid #707070;
-        margin-left:10px;
-        margin-bottom: 60px;
+        margin-right:-800px;
+        margin-top:40px;
     }
     
     .Download-li{
@@ -489,6 +430,144 @@ font-weight: bold;
     flex-direction: row;
     justify-content: space-between;
     width:400px;
+    height:40px;
+    /* background-color:rgba(212,228,232,1); */
+    background-color: red;
+    border-radius:30px;
+    color: rgba(16,84,162,1);
+    margin:5px;
+    padding:2px;
+    
+    }
+    .d-scrool {
+        margin-top:50px;
+        margin-bottom:10px;
+        margin-left:225px;
+    } 
+ p_download {
+    margin:5px;
+    font-size:px;
+    font-family: "Bahij Helvetica"; 
+    }
+    .uff:hover {
+       
+        background-color: #3c98bd;
+    }
+    @keyframes spinner {
+        0% {
+          transform: translate3d(-50%, -50%, 0) rotate(0deg);
+        }
+        100% {
+          transform: translate3d(-50%, -50%, 0) rotate(360deg);
+        }
+      }
+      .Download-li .spin::before {
+       
+        animation: 1.5s linear infinite spinner;
+        animation-play-state: inherit;
+        border: solid 5px #cfd0d1;
+        border-bottom-color: #1c87c9;
+        border-radius: 50%;
+        content: "";
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        transform: translate3d(-50%, -50%, 0);
+        will-change: transform;
+      }
+    
+    .d-book {
+    font-family: "Bahij Helvetica"; 
+    padding:8px;
+    font-weight: bold;
+    }
+    #line-d {
+        margin-left:300px;
+       margin-top:-50px;
+    }
+    .line-d {
+        width:400px;
+    }
+    
+    }
+/* pC1 Responsive */
+@media screen and (max-width:992px)and (min-width:768px){
+    
+    .download-b {
+        display: flex;
+        flex-direction:row;
+        justify-content: center; 
+        margin-top:0px;
+    }
+    .icon-D {
+        /* width:200px; */
+        /* margin-top:150px; */
+    }
+    .flesh-image-grade-d {
+        margin: 0px;
+        padding: 0px;
+        display: inline-block;
+        position: relative;
+        top:70px;
+        left:-10px;
+    }
+    .pathimg {
+        display: none;
+        margin-left:320px;
+        margin-bottom:20px;
+        cursor: pointer;
+    }
+    .d-section {
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        width: 100%;
+        background-image: linear-gradient(to right,  #3C98BD , #0F53A1);
+    }
+    .download-b .p-downloding {
+        color: white;
+        padding-top:50px;
+        font-size:35px;
+        font-weight: bold;
+        margin-left:400px; 
+        font-family: "Bahij Helvetica";   
+    }
+    .download-b #p-downloding {
+        color: white;
+        font-size:40px;
+        margin-left:350px;
+        margin-bottom:0px;
+        font-family: "Bahij Helvetica"; 
+    }
+    .Download-ul {
+        display: flex;
+        flex-direction:row;
+        justify-content:center;
+    }
+    .Dimg {
+        height:340px;
+        margin-top:0px;
+        width:400px;
+        margin-left:-900px;
+    }
+    .Dimage-m {
+        display: none;
+    }
+    .d-middle {
+        height:300px;
+        overflow-y:scroll;
+        border-bottom:1px solid #707070;
+        margin-right:-800px;
+        margin-top:40px;
+    }
+    
+    .Download-li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:450px;
     height:40px;
     background-color:rgba(212,228,232,1);
     border-radius:30px;
@@ -502,45 +581,80 @@ font-weight: bold;
         margin-bottom:10px;
         margin-left:225px;
     } 
-    #h5 {
+ p_download {
     margin:5px;
     font-size:px;
+    font-family: "Bahij Helvetica"; 
     }
     .uff:hover {
        
         background-color: #3c98bd;
     }
+    @keyframes spinner {
+        0% {
+          transform: translate3d(-50%, -50%, 0) rotate(0deg);
+        }
+        100% {
+          transform: translate3d(-50%, -50%, 0) rotate(360deg);
+        }
+      }
+      .Download-li .spin::before {
+       
+        animation: 1.5s linear infinite spinner;
+        animation-play-state: inherit;
+        border: solid 5px #cfd0d1;
+        border-bottom-color: #1c87c9;
+        border-radius: 50%;
+        content: "";
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        transform: translate3d(-50%, -50%, 0);
+        will-change: transform;
+      }
+    
     .d-book {
+    font-family: "Bahij Helvetica"; 
     padding:8px;
     font-weight: bold;
     }
     #line-d {
-        margin-left:150px;
+        margin-left:300px;
        margin-top:-50px;
     }
     .line-d {
-        width:420px;
+        width:480px;
     }
-}
+    
+    }
 /* Pc 2 Responsive */
-@media screen and (max-width:1200px)and (min-width:992px) {
+@media screen and (max-width:1200px)and (min-width:992px){
     
 .download-b {
     display: flex;
     flex-direction:row;
     justify-content: center; 
-    margin-top: 50px;
+    margin-top:0px;
 }
 .icon-D {
     /* width:200px; */
     /* margin-top:150px; */
 }
 .flesh-image-grade-d {
-    margin-bottom:450px;
-    margin-left:-130px;
+    margin: 0px;
+	padding: 0px;
+	display: inline-block;
+	position: relative;
+	top:60px;
+	left:-100px;
 }
 .pathimg {
-    margin-left:550px;
+    display: none;
+    margin-left:320px;
+    margin-bottom:20px;
+    cursor: pointer;
 }
 .d-section {
     display: flex;
@@ -551,18 +665,18 @@ font-weight: bold;
 }
 .download-b .p-downloding {
     color: white;
-    padding-top:30px;
-    font-family: "Bahij Helvetica";
-    font-size:45px;
+    padding-top:50px;
+    font-size:35px;
     font-weight: bold;
-    margin-left:400px;    
+    margin-left:300px; 
+    font-family: "Bahij Helvetica";   
 }
 .download-b #p-downloding {
     color: white;
-    font-family: "Bahij Helvetica";
-    font-size:50px;
-    margin-left:350px;
-    margin-bottom: 3px;
+    font-size:40px;
+    margin-left:230px;
+    margin-bottom:0px;
+    font-family: "Bahij Helvetica"; 
 }
 .Download-ul {
     display: flex;
@@ -570,18 +684,20 @@ font-weight: bold;
     justify-content:center;
 }
 .Dimg {
-    width:550px;
-    margin-left:-700px;
+    height:340px;
+    margin-top:0px;
+    width:400px;
+    margin-left:-900px;
 }
-.Dimg-m {
+.Dimage-m {
     display: none;
 }
 .d-middle {
     height:300px;
-   overflow-y:hidden;
+    overflow-y:scroll;
     border-bottom:1px solid #707070;
-    margin-right:-500px;
-    margin-bottom: 60px;
+    margin-right:-700px;
+    margin-top:40px;
 }
 
 .Download-li{
@@ -603,23 +719,50 @@ padding:2px;
     margin-left:225px;
 } 
 #h5 {
-    font-family: "Bahij Helvetica";
 margin:5px;
 font-size:px;
+font-family: "Bahij Helvetica"; 
 }
 .uff:hover {
    
     background-color: #3c98bd;
 }
+@keyframes spinner {
+    0% {
+      transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    }
+    100% {
+      transform: translate3d(-50%, -50%, 0) rotate(360deg);
+    }
+  }
+  .Download-li .spin::before {
+   
+    animation: 1.5s linear infinite spinner;
+    animation-play-state: inherit;
+    border: solid 5px #cfd0d1;
+    border-bottom-color: #1c87c9;
+    border-radius: 50%;
+    content: "";
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transform: translate3d(-50%, -50%, 0);
+    will-change: transform;
+  }
+
 .d-book {
+font-family: "Bahij Helvetica"; 
 padding:8px;
 font-weight: bold;
 }
 #line-d {
-    margin-left:340px;
+    margin-left:200px;
    margin-top:-50px;
 }
 .line-d {
-    width:470px;
+    width:480px;
 }
+
 }

@@ -76,8 +76,8 @@ const Grads = ({ t }) => {
           <br />
           <span className='p-two-grade-n'>{t("grad2")}</span>
         </div>
-        <div id="class-container-n"  ref={top}>
-              <div className="button-grade-N">
+        <div id="class-container-n"  >
+              <div className="button-grade-N" ref={top}>
                 {primary.map((item) => {
                   return (
                     <Link
