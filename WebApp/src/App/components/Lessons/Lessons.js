@@ -12,7 +12,7 @@ import photo3 from "../../assets/Group_408.png";
 import photo4 from "../../assets/Group_404.png";
 import photo5 from "../../assets/Group_158_a@2x.png";
 import photo6 from "../../assets/Group 407.png";
-import top1 from "../../assets/Path__2.png";
+// import top1 from "../../assets/Path 2@2x.png";
 import Down1 from "../../assets/Group_408.png";
 import photo7 from "../../assets/Group_158_f.png";
 import { FiMenu } from "react-icons/fi";
@@ -54,7 +54,7 @@ const Lessons = ({ t }) => {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width={403}
-          height={675}
+          height={580}
           //  {...props}
         >
           <defs>
@@ -132,88 +132,41 @@ const Lessons = ({ t }) => {
       </div>
       <div className="mobile">
         <div className="mobileTop">
-          {/* <img src={photo6} className="imgTop"></img> */}
-          {/* <div className="svg">
-         <svg xmlns="http://www.w3.org/2000/svg" width={70} height={70} 
-        //  {...props}
-         >
-      <defs>
-        <clipPath id="a">
-          <path
-            fill="none"
-            d="M-.085-.085h70v70h-70z"
-            data-name="Rectangle 275"
-          />
-        </clipPath>
-      </defs>
-      <g data-name="Group 407">
-        <g
-          clipPath="url(#a)"
-          data-name="Group 406"
-          transform="translate(.085 .086)"
-        >
-          <path
-            fill="#e6f0fc"
-            d="M34.915-.095A34.867 34.867 0 1 1 .048 34.772 34.867 34.867 0 0 1 34.915-.095"
-            data-name="Path 1075"
-          />
-          <path
-            fill="#ffc200"
-            d="m39.96 50.03-2.393-3a2.179 2.179 0 0 1 3.409-2.715l8.691 10.912a2.179 2.179 0 0 1-3.407 2.71l-2.831-3.548-17.069.011-2.817 3.537a2.179 2.179 0 1 1-3.409-2.714l8.691-10.912a2.179 2.179 0 0 1 3.409 2.715l-2.4 3.013Z"
-            data-name="Path 1076"
-          />
-          <path
-            fill="#154e84"
-            d="M36.716 47.705a3.269 3.269 0 1 1 5.113-4.073l8.691 10.911a3.27 3.27 0 0 1-5.115 4.073l-2.5-3.141-16.018.014-2.491 3.127a3.269 3.269 0 1 1-5.113-4.073l8.688-10.911a3.27 3.27 0 0 1 5.115 4.073l-.99 1.242h5.606Zm-9.145 3.426 3.809-4.783a1.089 1.089 0 1 0-1.7-1.358L20.988 55.9a1.089 1.089 0 1 0 1.7 1.358l3.143-3.948 18.119-.016 3.157 3.964a1.089 1.089 0 0 0 1.7-1.358l-8.682-10.91a1.089 1.089 0 1 0-1.7 1.358l3.8 4.77Z"
-            data-name="Path 1077"
-          />
-          <path
-            fill="#52abe2"
-            d="M14.213 17.339h41.4a1.09 1.09 0 0 1 1.09 1.09V42.4a3.269 3.269 0 0 1-3.269 3.269H16.392a3.269 3.269 0 0 1-3.269-3.269V18.429a1.09 1.09 0 0 1 1.09-1.09"
-            data-name="Path 1078"
-          />
-          <path
-            fill="#ffc200"
-            d="M37.094 17.339V12.98a2.179 2.179 0 0 0-4.358 0v4.358a2.179 2.179 0 0 0 4.358 0"
-            data-name="Path 1079"
-          />
-          <path
-            fill="none"
-            stroke="#154e84"
-            strokeWidth={2}
-            d="M37.094 17.339V12.98a2.179 2.179 0 0 0-4.358 0v4.358a2.179 2.179 0 0 0 4.358 0Z"
-            data-name="Path 1080"
-          />
-          <path
-            fill="#154e84"
-            d="M38.184 17.339v-4.358a3.269 3.269 0 0 0-6.538 0v4.358a3.269 3.269 0 0 0 6.538 0m-2.179 0a1.09 1.09 0 1 1-2.179 0v-4.358a1.09 1.09 0 1 1 2.179 0Z"
-            data-name="Path 1081"
-          />
-          <path
-            fill="#fff"
-            d="M16.392 17.339h40.315a1.09 1.09 0 0 1 1.09 1.09V42.4H18.571a2.179 2.179 0 0 1-2.179-2.179Z"
-            data-name="Path 1082"
-          />
-          <path
-            fill="#154e84"
-            d="M14.212 16.249h41.4a2.179 2.179 0 0 1 2.179 2.179v23.971a4.359 4.359 0 0 1-4.358 4.359H16.391a4.359 4.359 0 0 1-4.358-4.359V18.428a2.179 2.179 0 0 1 2.179-2.179m0 2.179v23.971a2.179 2.179 0 0 0 2.179 2.179h37.042a2.179 2.179 0 0 0 2.179-2.179V18.428Z"
-            data-name="Path 1083"
-          />
-          <path
-            fill="#ffc200"
-            d="M26.198 38.041h17.433a1.09 1.09 0 0 0 0-2.179H26.198a1.09 1.09 0 1 0 0 2.179"
-            data-name="Path 1084"
-          />
-        </g>
-      </g>
-            </svg>
-         </div> */}
+          <img src={photo6} className="imgTop"></img>
+         
           <div className="mobile-background">
             <div className="title-mob1">
               <h1> {unit}</h1>
               <p>درس {title}</p>
             </div>
-            <img src={top1}></img>
+            <div className="mob-svg">
+                <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={360}
+    height={166.076}
+    {...props}
+  >
+    <defs>
+      <linearGradient
+        id="a"
+        x1={0.5}
+        x2={0.5}
+        y2={1}
+        gradientUnits="objectBoundingBox"
+      >
+        <stop offset={0} stopColor="#3c98bd" />
+        <stop offset={1} stopColor="#0f53a1" />
+      </linearGradient>
+    </defs>
+    <path
+      fill="url(#a)"
+      d="M396.137 49.383v94.452L378.6 168.849 357.881 198.4a43.727 43.727 0 0 1-3.08 3.906c-.437.511-.893.982-1.349 1.452a38.047 38.047 0 0 1-20.252 11.067 33.919 33.919 0 0 1-6.6.634H105.669c-12.211 0-23.73-6.279-31.276-17.057l-8.256-11.78-1.258-1.779-28.742-41.007V49.383Z"
+      data-name="Path 2"
+      transform="translate(-36.137 -49.383)"
+    />
+          </svg>
+            </div>
+            {/* <img src={top1}></img> */}
           </div>
           <Link to="/Grades">
             <img className="arrow-mob" src={photo7} />
@@ -258,7 +211,7 @@ const Lessons = ({ t }) => {
         </div>
         <div className="mobile-middle">
           <div className="img">
-            <img src={photo2}></img>
+          <img src={lesson_path}></img>
           </div>
         </div>
         <div className="mobile-bottom">
