@@ -71,6 +71,10 @@ const SendCode = ({ t } ) => {
 
 	<div id="para_first_send_code">
 	{t("sendcode1")}
+	<br/>
+	{t("sendcode7")}
+	<br/>
+	{t("sendcode8")}
 	</div>
 	<div id="para_second_send_code">
 	{t("sendcode2")}

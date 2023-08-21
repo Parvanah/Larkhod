@@ -72,6 +72,8 @@ const ForgotPassword = ({ t }) => {
 		</svg>
 	<div id="para_first_forgot_password">
 	{t("forgotpassword1")}
+	<br/>
+	{t("forgotpassword7")}
 	</div>
 	<div id="para_second_forgot_password">
 	{t("forgotpassword2")}
