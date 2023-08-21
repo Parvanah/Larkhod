@@ -26,7 +26,7 @@ export const AuthProvider = ({ children }) => {
   const [currentState, setCurrentState] = useState();
   const [currentLesson, setCurrentLesson] = useState();
   const [currentpart, setCurrentpart] = useState();
-  const [backendError, setBackendError] = useState("");
+  const [backendError, setBackendError] = useState();
   const Authorization = async (status, token, errorMessage) => {
     try {
       const res = await axios

@@ -213,6 +213,7 @@
     left: 70px;
     z-index: 1000;
 }
+
 @media only screen and (max-width: 1200px ) and (min-width: 992px){
     *{
         text-decoration: none;
@@ -428,4 +429,108 @@
         left: 70px;
         z-index: 1000;
 }
+}
+/* ///////////////////////// Khatima*/
+.Change_Profile{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.Change_Profile .Top_ChangeProfile{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    width: 100%;
+}
+.Change_Profile .Bottom_ChangeProfile{
+    flex: 3;
+    background-color: #3C98BD;
+    background-image: linear-gradient(#3C98BD, #0F53A1);
+    border-top-right-radius: 18%;
+    border-top: 2px solid gray;
+    border-top-left-radius: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.Change_Profile .Top_ChangeProfile a{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 85%;
+    padding-top: 3%;
+    flex: 1;
+    /* background-color: gray; */
+}
+.Change_Profile .Top_ChangeProfile .ProfHandler{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding: 5%; */
+    /* padding-bottom: 10px; */
+    align-items: center;
+    flex: 1;
+}
+.Change_Profile .Top_ChangeProfile .ProfHandler img{
+ border-radius: 50%;
+ border: 2px solid gray;
+ width: 78%;
+ height: 78%;
+}
+.Change_Profile .Top_ChangeProfile .ProfHandler button{
+    background-color: white;
+    padding: 5px;
+}
+.Change_Profile .Bottom_ChangeProfile form{
+    /* background-color: rebeccapurple; */
+    width: 80%;
+    height:60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Change_Profile .Bottom_ChangeProfile form .form_Row{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    /* background-color: aquamarine; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+.Change_Profile .Bottom_ChangeProfile form .input{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+.Change_Profile .Bottom_ChangeProfile form .input .error{
+    color: red;
+    text-align: right;
+}
+.Change_Profile  .Bottom_ChangeProfile form .ChangeProfile_input_value{
+    background: none;
+    border-top: 1px solid white;
+    width: 100%;
+    padding: 5px;
+    outline: none;
+    color: white;
+}
+.Change_Profile .Bottom_ChangeProfile form #ChangeProfile_input_value::placeholder{
+    color: white;
+    text-align: right;
+}
+.Change_Profile .Bottom_ChangeProfile form .submit_button{
+    background-color: white;
+    padding: 1% 7%;
+    border-radius: 15px;
 }
