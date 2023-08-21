@@ -142,6 +142,88 @@ const Book = ({ t }) => {
        </div>
       
        </div>
+       <div className="BookheaderM">
+       <div id="flesh-image-grade-BM" > <Link to="/Header"><img className="flesh-image-grade-B" src={image5} /></Link> </div>
+       <div className='p-container-booksM'>  
+          {/* <p className='p-books'> کتاب های مورد نظر صنف خود را</p>
+         <p id='p-books'>از اینجا انتخاب  کنید</p> */}
+         {/* <p className='p-books'>{t("book1")}</p> */}
+ 
+         <p className='p-books'>{t("book1")}</p>
+         <p id='p-books'> {t("book4")}</p>
+      </div>
+      <div className='buttom-booksM'> 
+    <div id='h-booksM'>
+    <div ref={top} >
+    {primary.map((item) => {
+      
+                  return (
+                    <Link
+                      className="link-grade-n"
+                      to="/downloading"
+                state={{ subjects: item.subjects , grade_path :  primary_path + item.grade_path , grade_name: item.label}}
+                    >
+                      <img className="sanaf-grade-n" src={sanaf} />
+                      <div className="li-grade-b"  src={sanaf} >{t("book2")} {item.label} {t("book3")}</div>
+                    </Link>
+                  );
+                })}
+    </div>
+                 <div ref={bottom}>
+                {secondary.map((item) => {
+                  return (
+                    <Link
+                      className="link-grade-n"  
+                      to="/downloading"
+                      state={{ subjects: item.subjects , grade_path :  secondary_path + item.grade_path , grade_name: item.label }}
+                    >
+                      <img className="sanaf-grade" src={sanaf} />
+
+                      {/* // <div className="li-grade-b" src={sanaf}>{t("book2")} {item.label}</div> */}
+
+                      <div className="li-grade-n" src={sanaf}>{t("book2")} {item.label} {t("book3")}</div>
+
+                    </Link>
+                  );
+                })}
+              </div>
+              <div > 
+                {high_school.map((item) => {
+                  return (
+                    <Link
+                      className="link-grade-n"  
+                      to="/downloading"
+                      state={{ subjects: item.subjects , grade_path :  high_school_path + item.grade_path , grade_name: item.label}}
+                    >
+                      <img className="sanaf-grade-n" src={sanaf} />
+{/*  <div className="li-grade-b" src={sanaf}> {t("book2")}  {item.label}</div> */}
+
+                      <div className="li-grade-n" src={sanaf}> {t("book2")}  {item.label} {t("book3")}</div>
+
+                    </Link>
+                  );
+                })}
+                </div>
+    </div> 
+   
+ <div id="line">
+ <img src={line}  className="line"/>
+ </div>
+    
+    <div id="line">
+    <img src={pathimg} className="pathimg-b" onClick={()=>{
+      if(srollState == "bottom"){
+        scrollTop()
+      }else{
+        scrollBottom()
+      }
+    }}/>
+    </div>
+       </div>
+       <div className="icon-book">
+         <img src={bookH}  className="bookH"/>
+        </div>
+       </div>
  </div>
   )
 // }

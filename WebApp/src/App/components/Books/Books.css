@@ -17,7 +17,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    /* background-color: aqua; */
+    background-color: aqua;
     width: 90%;
     flex: 1;
 }
@@ -27,10 +27,10 @@
     justify-content: space-between;
     align-items: center;
     flex: 15%;
-    /* background-color: brown; */
+    background-color: brown;
 }
 .full_book #Books .top .first-section{
-    /* background-color: gray; */
+    background-color: gray;
     flex: 70%;
     display: flex;
     flex-direction: column;

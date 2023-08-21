@@ -37,14 +37,14 @@ const Units = ({ t }) => {
   <div className="full_unit"> 
      <div className="units" style={{height: window.innerHeight}}>
   <div className="t-section">
-    <div className="svgArrow">
+  <div className="svgArrow">
    
-<img className="flesh-image-grade-U" src={imageU} onClick={()=> navigate(-1)} />
-<img src={unitm}  className="unitm"  onClick={()=> navigate(-1)}  />
-   
-    </div>
+   <img className="flesh-image-grade-U" src={imageU} onClick={()=> navigate(-1)} />
+   <img src={unitm}  className="unitm"  onClick={()=> navigate(-1)}  />
+       </div>
 
    <div id="laptop-top">
+  
      <h1 id="p1">{t("units1")}</h1>
      <h2>{t("units2")}</h2>
     {/* <div id="mobile-p"> 
@@ -167,7 +167,116 @@ height={163.229}
 </div>
     </div> */}
   </div>
-</div></div>
+</div>
+<div className="Munit"  style={{height: window.innerHeight}}>
+<div className="svgArrow">
+   
+   <img className="flesh-image-grade-U" src={imageU} onClick={()=> navigate(-1)} />
+   {/* <img src={unitm}  className="unitm"  onClick={()=> navigate(-1)}  /> */}
+       </div>
+<div className="t-section">
+
+
+   <div className="laptop-top">
+  
+     <h1 id="p1">{t("units1")}</h1>
+     <h2>{t("units2")}</h2>
+    {/* <div id="mobile-p"> 
+       <svg xmlns="http://www.w3.org/2000/svg" width={355} height={115}
+        // {...props}
+        >
+<text
+  fill="#fff"
+  data-name="\u06A9\u062A\u0627\u0628 \u0645\u0648\u0631\u062F \u0646\u0638\u0631 \u0634\u0645\u0627 \u062F\u0631 \u0641\u0635\u0644\u200C\u0647\u0627\u06CC \u0630\u06CC\u0644 \u062A\u0642\u0633\u06CC\u0645 \u0634\u062F\u0647 \u0627\u0633\u062A \u0641\u0635\u0644 \u0647\u0627\u06CC \u062A\u0642\u0633\u06CC\u0645 \u0634\u062F\u0647\u200C\u06CC \u06A9\u062A\u0627\u0628 \u0631\u0627 \u0627\u0646\u062A\u062E\u0627\u0628 \u0646\u0645\u0648\u062F\u0647 \u0648 \u0645\u0637\u0627\u0644\u0639\u0647 \u0646\u0645\u0627\u06CC\u06CC\u062F"
+  fontFamily="SegoeUI, Segoe UI"
+  fontSize={25}
+  letterSpacing="-.04em"
+>
+  <tspan x={87.963} y={27}>
+    {
+      "\u06A9\u062A\u0627\u0628 \u0645\u0648\u0631\u062F \u0646\u0638\u0631 \u0634\u0645\u0627"
+    }
+  </tspan>
+  <tspan x={17.237} y={54}>
+    {
+      "\u062F\u0631 \u0641\u0635\u0644\u200C\u0647\u0627\u06CC \u0630\u06CC\u0644 \u062A\u0642\u0633\u06CC\u0645 \u0634\u062F\u0647 \u0627\u0633\u062A"
+    }
+  </tspan>
+  <tspan fontSize={21}>
+    <tspan xmlSpace="preserve" x={48.924} y={81}>
+      {
+        "\u0641\u0635\u0644  \u0647\u0627\u06CC \u062A\u0642\u0633\u06CC\u0645 \u0634\u062F\u0647\u200C\u06CC \u06A9\u062A\u0627\u0628 \u0631\u0627"
+      }
+    </tspan>
+    <tspan y={81} />
+    <tspan x={64.104} y={108}>
+      {
+        "\u0627\u0646\u062A\u062E\u0627\u0628 \u0646\u0645\u0648\u062F\u0647 \u0648 \u0645\u0637\u0627\u0644\u0639\u0647 \u0646\u0645\u0627\u06CC\u06CC\u062F"
+      }
+    </tspan>
+  </tspan>
+</text>
+</svg>
+</div> */}
+    </div>
+  </div>
+  <div className="unitWrapper_M">
+    <div onClick={() => slidLeft()} className="arrow">
+      {" "}
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width={13.435}
+        height={28.158}
+        // {...props}
+      >
+        <path
+          fill="#fff"
+          d="M16.435 0 0 15.079l16.435 15.079v-8.293l-7.384-6.786 7.384-6.755Z"
+          data-name="Path 1006"
+        />
+      </svg>
+    </div>
+    <div className="m-section" id="m-section">
+      <div id="ul">
+        {units.map((item) => {
+          return (
+            //with units
+            <Link
+              to="/lessons"
+              state={{ 
+                lessons: item.lessons, title: " فصل " + item.label,
+                subject_path: subject_path,
+               }}
+            >
+              <img src={sectionicon} />
+              <h3>{item.label}</h3>
+            </Link>
+          );
+        })}
+      </div>
+    </div>
+    <div onClick={() => slidRight()} className="arrow">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width={13.435}
+        height={27.158}
+        // {...props}
+      >
+        <path
+          fill="#fff"
+          d="m0 0 16.435 15.079L0 30.158v-8.29l7.384-6.786L0 8.327Z"
+          data-name="Path 1005"
+        />
+      </svg>
+    </div>
+  </div>
+  <div className="lastMU">
+     <p>{t("units3")}</p> 
+  </div>
+  <div className="MUimage"><img src= {imagel}  className='imagel'/></div>
+  
+</div>
+</div>
   );
       // }
 };
