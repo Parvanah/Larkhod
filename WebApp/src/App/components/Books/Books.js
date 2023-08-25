@@ -29,11 +29,11 @@ const Books = ({ t }, props) => {
   const navigate = useNavigate();
   const leftScroll = () => {
     const slider = document.getElementById("ul");
-    slider.scrollLeft = slider.scrollLeft - 100;
+    slider.scrollLeft = slider.scrollLeft - 90;
   };
   const righScrool = () => {
     const slider = document.getElementById("ul");
-    slider.scrollLeft = slider.scrollLeft + 100;
+    slider.scrollLeft = slider.scrollLeft + 90;
   };
   const {
     currentBook,
@@ -140,7 +140,7 @@ const Books = ({ t }, props) => {
                     id="link"
                   >
                     <img src={bookicon} />
-                    <div>
+                    <div className="titles">
                       <p>{t("books6")}</p>
                       <p id="h5">
                         {t("books4")} {item.label}
@@ -165,7 +165,8 @@ const Books = ({ t }, props) => {
                     id="link"
                   >
                     <img src={bookicon} />
-                    <div>
+                    <div className="titles">
+                    <p>{t("books6")}</p>
                       <p id="h5">
                         {t("books4")} {item.label}
                       </p>
@@ -276,7 +277,7 @@ const Books = ({ t }, props) => {
                     id="linkM"
                   >
                     <img src={bookicon} className="MBicon" />
-                    <div>
+                    <div className="titlesm">
                       <p>{t("books6")}</p>
                       <p id="h5">
                         {t("books4")} {item.label}
@@ -301,7 +302,8 @@ const Books = ({ t }, props) => {
                     id="linkM"
                   >
                     <img src={bookicon} className="MBicon" />
-                    <div>
+                    <div className="titlesm">
+                    <p>{t("books6")}</p>
                       <p id="h5">
                         {t("books4")} {item.label}
                       </p>

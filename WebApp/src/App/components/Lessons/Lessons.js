@@ -139,7 +139,7 @@ const Lessons = ({ t }) => {
               <h1> {unit}</h1>
               <p>درس {title}</p>
             </div>
-            <div className="mob-svg">
+            {/* <div className="mob-svg">
                 <svg
     xmlns="http://www.w3.org/2000/svg"
     width={360}
@@ -165,7 +165,7 @@ const Lessons = ({ t }) => {
       transform="translate(-36.137 -49.383)"
     />
           </svg>
-            </div>
+            </div> */}
             {/* <img src={top1}></img> */}
           </div>
           <Link to="/Grades">
