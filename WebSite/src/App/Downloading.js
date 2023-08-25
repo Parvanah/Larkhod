@@ -69,19 +69,24 @@ const Downloading = ({ t }, props) => {
   //     return <h1>Loading.....</h1>;
   //   } else if(userInfo !== null){
   return (
-    <div>
+    <div className="full-Download">
       <div className="d-section">
-        <div className="download-b">
-          <Link to="/Book"><img className="flesh-image-grade-d" src={image10} /></Link>
-          <div>
+         <div className="flesh-image-grade-d">
+         <Link to="/Book"><img  src={image10} /></Link>
+         </div>
+        <div className="second-second-d">
+        <div className="Dimg">
+         <img src={Dimage}  />
+         </div>
+        <div className="subject-section">
+        <div className="p-container-d">
             <p className="p-downloding">{t("downloading1")}</p>
             <p id="p-downloding"> {t("downloading2")}</p>
-
+            </div>
             <div className="Download-ul">
-              <img src={Dimage} className="Dimg" />
               <div className="d-middle">
                 <div ref={top}>
-                  {subjects.map((item , index) => {
+                  {subjects.map((item ) => {
                     // const subject_path = grade_path + item.subject_path + item.download_pdf;
                     if (item.parts[0].lessons == undefined) {
 
@@ -114,11 +119,12 @@ const Downloading = ({ t }, props) => {
                     }
                   })}
                 </div>
-              </div>
-            </div>
-            <div id="line-d">
+                <div id="line-d">
               <img src={line} className="line-d" />
             </div>
+              </div>
+            </div>
+          
             <img src={pathimg} className="pathimg" onClick={() => {
               if (srollState == "bottom") {
                 scrollTop()
@@ -126,7 +132,9 @@ const Downloading = ({ t }, props) => {
                 scrollBottom()
               }
             }} />
-            <div className="Dimage-m">
+        </div>
+        </div>
+            {/* <div className="Dimage-m">
               <svg id="Dimage-m"
                 xmlns="http://www.w3.org/2000/svg"
                 width={262.643}
@@ -1219,10 +1227,10 @@ const Downloading = ({ t }, props) => {
                   </g>
                 </g>
               </svg>
-            </div>
-          </div>
+            </div> */}
+         
 
-        </div>
+       
       </div>
 
 

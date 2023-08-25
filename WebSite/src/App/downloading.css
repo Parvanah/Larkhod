@@ -1,768 +1,116 @@
-
-.download-b {
+.full-Download {
     display: flex;
-    flex-direction:row;
-    justify-content: center; 
-    margin-top:0px;
+    flex-direction: column;
     width: 100%;
+}
+.full-Download .d-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: linear-gradient(to right,  #3C98BD , #0F53A1);
+    width: 100%;
+    height:90vh;
     flex: 1;
-    height: outo;
 }
-.icon-D {
-    /* width:200px; */
-    /* margin-top:150px; */
-}
-.flesh-image-grade-d {
-    margin: 0px;
-	padding: 0px;
-	display: inline-block;
-	position: relative;
-	top:60px;
-	left:-270px;
-}
-.pathimg {
-    display: none;
-    margin-left:320px;
-    margin-bottom:20px;
-    cursor: pointer;
-}
-.d-section {
+.full-Download .d-section  .flesh-image-grade-d {
     display: flex;
     flex-direction:column;
-    align-items: center;
-    width: 100%;
-    background-image: linear-gradient(to right,  #3C98BD , #0F53A1);
+    justify-content:end;
+    align-items:center;
+    width:15%;
+    height:15vh;
 }
-.download-b .p-downloding {
-    color: white;
-    padding-top:30px;
-    font-size:35px;
-    font-weight: bold;
-    margin-left:200px; 
-    font-family: "Bahij Helvetica";   
-}
-.download-b #p-downloding {
-    color: white;
-    font-size:40px;
-    margin-left:150px;
-    margin-bottom: 3px;
-    font-family: "Bahij Helvetica"; 
-}
-.Download-ul {
-    display: flex;
-    flex-direction:row;
-    justify-content:center;
-}
-.Dimg {
-    height:100%;
-    width:100%;
-    margin-left:-900px;
-}
-.Dimage-m {
-    display: none;
-}
-.d-middle {
-    height:300px;
-    overflow-y:scroll;
-    border-bottom:1px solid #707070;
-    margin-right:20%;
-    margin-bottom: 60px;
-}
-
-.Download-li{
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-width:450px;
-height:40px;
-background-color:rgba(212,228,232,1);
-border-radius:30px;
-color: rgba(16,84,162,1);
-margin:5px;
-padding:2px;
-
-}
-.d-scrool {
-    margin-top:50px;
-    margin-bottom:10px;
-    margin-left:225px;
-} 
-#h5 {
-margin:5px;
-font-size:px;
-font-family: "Bahij Helvetica"; 
-}
-.uff:hover {
-   
-    background-color: #3c98bd;
-}
-@keyframes spinner {
-    0% {
-      transform: translate3d(-50%, -50%, 0) rotate(0deg);
-    }
-    100% {
-      transform: translate3d(-50%, -50%, 0) rotate(360deg);
-    }
-  }
-  .Download-li .spin::before {
-   
-    animation: 1.5s linear infinite spinner;
-    animation-play-state: inherit;
-    border: solid 5px #cfd0d1;
-    border-bottom-color: #1c87c9;
-    border-radius: 50%;
-    content: "";
-    height: 40px;
-    width: 40px;
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    transform: translate3d(-50%, -50%, 0);
-    will-change: transform;
-  }
-
-.d-book {
-font-family: "Bahij Helvetica"; 
-padding:8px;
-font-weight: bold;
-}
-#line-d {
-    margin-left:100px;
-   margin-top:-50px;
-}
-.line-d {
-    width:480px;
-}
-/* Mobile1 Responisve */
-@media screen and (max-width:360px)and (min-width:100px){
-    .download-b {
-        display:flex;
-        flex-direction:row;
-        justify-content: center; 
-        margin-top: 50px;
-    }
-    .icon-D {
-        /* width:200px; */
-        /* margin-top:150px; */
-    }
-    .flesh-image-grade-d {
-        margin: 0px;
-		padding: 0px;
-		width:22px;
-		display:flex;
-		position: relative;
-		top: 0px;
-		left:40px;
-    }
-    .pathimg {
-        margin-top:10px;
-        margin-left:130px;
-    }
-    .d-section {
-        display:flex;
-        flex-direction:column;
-        /* align-items: center; */
-        width: 100%;
-        background-image: linear-gradient(to right,  #3C98BD , #0F53A1);
-    }
-    .download-b .p-downloding {
-        display:flex;
-        color: white;
-        padding-top:30px;
-        font-family: "Bahij Helvetica";
-        font-size:15px;
-        font-weight: bold;
-        margin-left:100px;    
-    }
-    .download-b #p-downloding {
-        color: white;
-        font-family: "Bahij Helvetica";
-        font-size:20px;
-        margin-left:60px;
-        margin-bottom: 3px;
-    }
-    .Download-ul {
+.full-Download .d-section .second-second-d {
         display: flex;
-        flex-direction:row;
+        flex-direction: row;
         justify-content:center;
-    }
-    .Dimg {
-        width:600px;
-        margin-left:-950px;
-        display: none;
-    }
-    .Dimage-m {
-        display:flex;
-    }
-    .d-middle {
-        height:300px;
-       overflow-y:scroll;
-        border-bottom:1px solid #707070;
-        margin-right:-10px;
-        margin-bottom: 60px;
-        /* width: 300px; */
-    }
-    
-    .Download-li{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width:300px;
-    height:40px;
-    background-color:rgba(212,228,232,1);
-    border-radius:30px;
-    color: rgba(16,84,162,1);
-    font-size:15px;
-    margin:5px;
-    padding:2px;
-    
-    }
- p_download {
-    margin:5px;
-    font-size:px;
-    }
-    .uff:hover {
-       
-        background-color: #3c98bd;
-    }
-    .d-book {
-    padding:8px;
-    font-weight: bold;
-    }
-    #line-d {
-        display: flex;
-        margin-left:0px;
-       margin-top:-50px;
-    }
-    .line-d {
-        width:310px;
-    }
-
-}
-@media screen and (max-width:385px)and (min-width:360px){
-    .download-b {
-        display:flex;
-        flex-direction:row;
-        justify-content: center; 
-        margin-top: 50px;
-        width: 100%;
-        height:100%;
-        overflow: hidden;
-    }
-    .icon-D {
-        /* width:200px; */
-        /* margin-top:150px; */
-    }
-    .flesh-image-grade-d {
-        margin: 0px;
-		padding: 0px;
-		width:22px;
-		display:flex;
-		position: relative;
-		top: 0px;
-	   left:50px;
-    }
-    .pathimg {
-        display: none;
-        margin-top:10px;
-        margin-left:130px;
-    }
-    .d-section {
-        display:flex;
-        flex-direction:column;
-        /* align-items: center; */
-        width: 100%;
-        background-image: linear-gradient(to right,  #3C98BD , #0F53A1);
-    }
-    .download-b .p-downloding {
-        display:flex;
-        color: white;
-        padding-top:30px;
-        font-family: "Bahij Helvetica";
-        font-size:20px;
-        font-weight: bold;
-        margin-left:120px;    
-    }
-    .download-b #p-downloding {
-        color: white;
-        font-family: "Bahij Helvetica";
-        font-size:20px;
-        margin-left:100px;
-        margin-bottom: 3px;
-    }
-    .Download-ul {
-        display: flex;
-        flex-direction:row;
-        justify-content:center;
-    }
-    .Dimg {
-        width:600px;
-        margin-left:-50px;
-        display: none;
-    }
-    .Dimage-m {
-        display:flex;
-        margin-top:100px;
-        margin-left:80px;
-       
-    }
-    .d-middle {
-        height:300px;
-       overflow-y:scroll;
-       margin-right:20px;
-        margin-bottom: 60px;
-        /* width: 300px; */
-    }
-    
-    .Download-li{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width:350px;
-    height:40px;
-    background-color:rgba(212,228,232,1);
-    border-radius:30px;
-    color: rgba(16,84,162,1);
-    font-size:13px;
-    font-weight: bold;
-    margin:15px;
-    padding:0px;
-    
-    }
-    .Download-li #h5 {
-    margin:10px;
-    font-size:px;
-    background-color: red;
-    }
-    .uff:hover {
-       
-        background-color: #3c98bd;
-    }
-    .d-book {
-    padding:8px;
-    font-weight: bold;
-    }
-    #line-d {
-        display: flex;
-        margin-left:15px;
-        margin-top:-50px;
-    }
-    .line-d {
-        width:350px;
-    }
-
-}
-/* Tablate Responsive */
-@media  (width <=768px) or (oreiention : landscape){
-    
-    .download-b {
-        display: flex;
-        flex-direction:row;
-        justify-content: center; 
-        margin-top:0px;
-        width:100%;
-        height:482px;
-    }
-    .icon-D {
-        /* width:200px; */
-        /* margin-top:150px; */
-    }
-    .flesh-image-grade-d {
-        margin: 0px;
-        padding: 0px;
-        display: inline-block;
-        position: relative;
-        top:70px;
-        left:0px;
-    }
-    .pathimg {
-        display: none;
-        margin-left:320px;
-        margin-bottom:20px;
-        cursor: pointer;
-    }
-    .d-section {
-        display: flex;
-        flex-direction:column;
         align-items: center;
-        width: 100%;
-        background-image: linear-gradient(to right,  #3C98BD , #0F53A1);
+        flex: 1;
     }
-    .download-b .p-downloding {
-        color: white;
-        padding-top:50px;
-        font-size:30px;
-        font-weight: bold;
-        margin-left:350px; 
-        font-family: "Bahij Helvetica";   
-    }
-    .download-b #p-downloding {
-        color: white;
-        font-size:30px;
-        margin-left:320px;
-        margin-bottom:0px;
-        font-family: "Bahij Helvetica"; 
-    }
-    .Download-ul {
+    .full-Download .d-section .second-second-d .Dimg {
         display: flex;
-        flex-direction:row;
-        justify-content:center;
+        flex:20%;
+        height:50%;
     }
-    .Dimg {
-        height:300px;
-        margin-top:0px;
-        width:300px;
-        margin-left:-800px;
+    .full-Download .d-section .second-second-d .Dimg img {
+        width:500px;
     }
-    .Dimage-m {
-        display: none;
-    }
-    .d-middle {
-        height:300px;
-        overflow-y:scroll;
-        border-bottom:1px solid #707070;
-        margin-right:-800px;
-        margin-top:40px;
-    }
-    
-    .Download-li{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width:400px;
-    height:40px;
-    /* background-color:rgba(212,228,232,1); */
-    background-color: red;
-    border-radius:30px;
-    color: rgba(16,84,162,1);
-    margin:5px;
-    padding:2px;
-    
-    }
-    .d-scrool {
-        margin-top:50px;
-        margin-bottom:10px;
-        margin-left:225px;
-    } 
- p_download {
-    margin:5px;
-    font-size:px;
-    font-family: "Bahij Helvetica"; 
-    }
-    .uff:hover {
-       
-        background-color: #3c98bd;
-    }
-    @keyframes spinner {
-        0% {
-          transform: translate3d(-50%, -50%, 0) rotate(0deg);
-        }
-        100% {
-          transform: translate3d(-50%, -50%, 0) rotate(360deg);
-        }
-      }
-      .Download-li .spin::before {
-       
-        animation: 1.5s linear infinite spinner;
-        animation-play-state: inherit;
-        border: solid 5px #cfd0d1;
-        border-bottom-color: #1c87c9;
-        border-radius: 50%;
-        content: "";
-        height: 40px;
-        width: 40px;
-        position: absolute;
-        top: 10%;
-        left: 10%;
-        transform: translate3d(-50%, -50%, 0);
-        will-change: transform;
-      }
-    
-    .d-book {
-    font-family: "Bahij Helvetica"; 
-    padding:8px;
-    font-weight: bold;
-    }
-    #line-d {
-        margin-left:300px;
-       margin-top:-50px;
-    }
-    .line-d {
-        width:400px;
-    }
-    
-    }
-/* pC1 Responsive */
-@media screen and (max-width:992px)and (min-width:768px){
-    
-    .download-b {
+    .full-Download .d-section .second-second-d .subject-section {
         display: flex;
-        flex-direction:row;
-        justify-content: center; 
-        margin-top:0px;
-    }
-    .icon-D {
-        /* width:200px; */
-        /* margin-top:150px; */
-    }
-    .flesh-image-grade-d {
-        margin: 0px;
-        padding: 0px;
-        display: inline-block;
-        position: relative;
-        top:70px;
-        left:-10px;
-    }
-    .pathimg {
-        display: none;
-        margin-left:320px;
-        margin-bottom:20px;
-        cursor: pointer;
-    }
-    .d-section {
-        display: flex;
-        flex-direction:column;
+        flex-direction: column;
+        justify-content:space-between;
         align-items: center;
-        width: 100%;
-        background-image: linear-gradient(to right,  #3C98BD , #0F53A1);
+        /* flex:70%; */
+        /* width: 100%; */
+       background-color: blanchedalmond;
     }
-    .download-b .p-downloding {
+    .full-Download .d-section .second-second-d .p-container-d {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .full-Download .d-section .second-second-d .p-container-d .p-downloding {
         color: white;
-        padding-top:50px;
         font-size:35px;
         font-weight: bold;
-        margin-left:400px; 
         font-family: "Bahij Helvetica";   
     }
-    .download-b #p-downloding {
+    .full-Download .d-section .second-second-d .p-container-d   #p-downloding {
         color: white;
         font-size:40px;
-        margin-left:350px;
-        margin-bottom:0px;
         font-family: "Bahij Helvetica"; 
     }
-    .Download-ul {
+    .full-Download .d-section .second-second-d .subject-section .Download-li {
+        width:75%;
         display: flex;
-        flex-direction:row;
-        justify-content:center;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color:rgba(212,228,232,1);
+        align-items: center;
+        text-align: center;
+        border-radius: 32px;
+        height: 40px;
+        margin: 12px;
+        padding: 1%;
     }
-    .Dimg {
-        height:340px;
-        margin-top:0px;
-        width:400px;
-        margin-left:-900px;
+    
+    .full-Download .d-section .second-second-d .subject-section .Download-li  #h6 {
+        font-size: 20px;
+        font-family: "Bahij Helvetica";
+        color: rgba(16, 84, 162, 1);
     }
-    .Dimage-m {
-        display: none;
+    
+    .full-Download .d-section .second-second-d .subject-section .Download-li .d-book {
+        color: red;
+        width: 22px;
     }
     .d-middle {
-        height:300px;
-        overflow-y:scroll;
-        border-bottom:1px solid #707070;
-        margin-right:-800px;
-        margin-top:40px;
+        overflow-y: scroll;
+        height: 300px;
+        width: 100%;
     }
-    
-    .Download-li{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width:450px;
-    height:40px;
-    background-color:rgba(212,228,232,1);
-    border-radius:30px;
-    color: rgba(16,84,162,1);
-    margin:5px;
-    padding:2px;
-    
+    .pathimg {
+        display: none;
+        margin-left:320px;
+        margin-bottom:20px;
+        cursor: pointer;
     }
-    .d-scrool {
-        margin-top:50px;
-        margin-bottom:10px;
-        margin-left:225px;
-    } 
- p_download {
-    margin:5px;
-    font-size:px;
-    font-family: "Bahij Helvetica"; 
+    .full-Download .d-section .second-second-d #line-d {
+     display: flex;
+     /* width: 100%;
+     height:40%; */
     }
-    .uff:hover {
-       
-        background-color: #3c98bd;
-    }
-    @keyframes spinner {
-        0% {
-          transform: translate3d(-50%, -50%, 0) rotate(0deg);
-        }
-        100% {
-          transform: translate3d(-50%, -50%, 0) rotate(360deg);
-        }
-      }
-      .Download-li .spin::before {
-       
-        animation: 1.5s linear infinite spinner;
-        animation-play-state: inherit;
-        border: solid 5px #cfd0d1;
-        border-bottom-color: #1c87c9;
-        border-radius: 50%;
-        content: "";
-        height: 40px;
-        width: 40px;
-        position: absolute;
-        top: 10%;
-        left: 10%;
-        transform: translate3d(-50%, -50%, 0);
-        will-change: transform;
-      }
-    
-    .d-book {
-    font-family: "Bahij Helvetica"; 
-    padding:8px;
-    font-weight: bold;
-    }
-    #line-d {
-        margin-left:300px;
-       margin-top:-50px;
-    }
-    .line-d {
+    .full-Download .d-section .second-second-d #line-d  .line-d {
         width:480px;
     }
-    
+@media screen and (max-width: 768px) {
+    .Dimg {
+        display:none;
+        flex:20%;
+        height:50%;
     }
-/* Pc 2 Responsive */
-@media screen and (max-width:1200px)and (min-width:992px){
-    
-.download-b {
-    display: flex;
-    flex-direction:row;
-    justify-content: center; 
-    margin-top:0px;
-}
-.icon-D {
-    /* width:200px; */
-    /* margin-top:150px; */
-}
-.flesh-image-grade-d {
-    margin: 0px;
-	padding: 0px;
-	display: inline-block;
-	position: relative;
-	top:60px;
-	left:-100px;
-}
-.pathimg {
-    display: none;
-    margin-left:320px;
-    margin-bottom:20px;
-    cursor: pointer;
-}
-.d-section {
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    width: 100%;
-    background-image: linear-gradient(to right,  #3C98BD , #0F53A1);
-}
-.download-b .p-downloding {
-    color: white;
-    padding-top:50px;
-    font-size:35px;
-    font-weight: bold;
-    margin-left:300px; 
-    font-family: "Bahij Helvetica";   
-}
-.download-b #p-downloding {
-    color: white;
-    font-size:40px;
-    margin-left:230px;
-    margin-bottom:0px;
-    font-family: "Bahij Helvetica"; 
-}
-.Download-ul {
-    display: flex;
-    flex-direction:row;
-    justify-content:center;
-}
-.Dimg {
-    height:340px;
-    margin-top:0px;
-    width:400px;
-    margin-left:-900px;
-}
-.Dimage-m {
-    display: none;
-}
-.d-middle {
-    height:300px;
-    overflow-y:scroll;
-    border-bottom:1px solid #707070;
-    margin-right:-700px;
-    margin-top:40px;
-}
-
-.Download-li{
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-width:450px;
-height:40px;
-background-color:rgba(212,228,232,1);
-border-radius:30px;
-color: rgba(16,84,162,1);
-margin:5px;
-padding:2px;
-
-}
-.d-scrool {
-    margin-top:50px;
-    margin-bottom:10px;
-    margin-left:225px;
-} 
-#h5 {
-margin:5px;
-font-size:px;
-font-family: "Bahij Helvetica"; 
-}
-.uff:hover {
-   
-    background-color: #3c98bd;
-}
-@keyframes spinner {
-    0% {
-      transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    .Dimg img {
+        width:500px;
     }
-    100% {
-      transform: translate3d(-50%, -50%, 0) rotate(360deg);
-    }
-  }
-  .Download-li .spin::before {
-   
-    animation: 1.5s linear infinite spinner;
-    animation-play-state: inherit;
-    border: solid 5px #cfd0d1;
-    border-bottom-color: #1c87c9;
-    border-radius: 50%;
-    content: "";
-    height: 40px;
-    width: 40px;
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    transform: translate3d(-50%, -50%, 0);
-    will-change: transform;
-  }
-
-.d-book {
-font-family: "Bahij Helvetica"; 
-padding:8px;
-font-weight: bold;
-}
-#line-d {
-    margin-left:200px;
-   margin-top:-50px;
-}
-.line-d {
-    width:480px;
-}
-
 }

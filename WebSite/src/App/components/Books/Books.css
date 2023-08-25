@@ -17,7 +17,9 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: aqua;
+    font-family: "Bahij helvetica";
+    color: #3C98BD;
+    /* background-color: aqua; */
     width: 90%;
     flex: 1;
 }
@@ -27,10 +29,9 @@
     justify-content: space-between;
     align-items: center;
     flex: 15%;
-    background-color: brown;
+    /* background-color: brown; */
 }
 .full_book #Books .top .first-section{
-    background-color: gray;
     flex: 70%;
     display: flex;
     flex-direction: column;
@@ -41,7 +42,12 @@
 
 }
 .full_book #Books .top .first-section h1{
+    font-family: "Bahij helvetica";
     font-size: 40px;
+}
+.full_book #Books .top .first-section p {
+    font-family: "Bahij helvetica";
+    font-size:25px;
 }
 .full_book #Books .top .third-section{
     flex: 15%;
@@ -54,6 +60,13 @@
     align-items: center;
     width: 100%;
     flex: 1;
+}
+.titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: "Bahij helvetica";
 }
 .full_book #Books .middlebook .arrrow{
     flex: 10%;
@@ -70,7 +83,7 @@
     align-items: center;  
     flex: 80%;
     /* margin: 20px; */
-    overflow-x: scroll;
+    overflow-x:hidden;
 
 }
 .full_book #Books .middlebook #ul #link{
@@ -110,8 +123,10 @@
     width: 90%;
 }
 .full_book #Books .bottom .p-section p{
-    /* font-size: 30px; */
-    /* text-align: center; */
+    font-size:25px; 
+    font-family: "Bahij helvetica";
+    color: #707070;
+     text-align: center;
 }
 .full_book .MBooks{
     display: none;
@@ -135,6 +150,22 @@
         align-items: center;
         width: 90%;
         flex: 1;
+    }
+    .topp h1 {
+        font-family: "Bahij helvetica";
+        color: #3C98BD;
+    }
+    .topp p {
+        font-size:20px;
+        font-family: "Bahij helvetica";
+        color: #3C98BD;
+    }
+    .titlesm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        font-family: "Bahij helvetica";
     }
     .full_book .MBooks .TopB .imgbm2{
         display: none;
@@ -210,7 +241,8 @@
     border-radius: 30px;
     }
     .full_book .MBooks .middlebook #ul a .MBicon{
-        width: 100px;
+        width:90px;
+        height:5px;
         flex: 100%;
     }
     .full_book .MBooks .ButtomB{
@@ -221,6 +253,22 @@
     text-align: center;
     width: 90%;
     flex: 1;
+    }
+    .full_book #Books .bottom .p-section p{
+        font-size:25px; 
+        font-family: "Bahij helvetica";
+        color:red;
+         text-align: center;
+    }
+    topp h1 {
+        font-family: "Bahij helvetica";
+        color: #3C98BD;
+    }
+    .p {
+        font-size:20px; 
+        font-family: "Bahij helvetica";
+        color: #707070;
+         text-align: center;
     }
     .full_book .MBooks .ButtomB .laptop-right{
         display: flex;
@@ -272,4 +320,11 @@
 .full_book .MBooks .TopB .topp {
     font-size: 15px;
 }
+ .p {
+    font-size:20px; 
+    font-family: "Bahij helvetica";
+    color: #707070;
+     text-align: center;
+}
+
 }

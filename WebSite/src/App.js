@@ -48,7 +48,7 @@ function App() {
           element={userInfo === null ? <SingUp /> : <Header />}
         />
         <Route exact path="/" element={<SingUp />} />
-        <Route exact path="/login" element={<LogIn />} />
+        <Route exact path="/login" element={<SingUp />} />
         <Route exact path="/forgotpassword" element={<ForgotPassword />} />
         <Route exact path="/sendcode" element={<SendCode />} />
         <Route exact path="/newpassword" element={<NewPassword />} />

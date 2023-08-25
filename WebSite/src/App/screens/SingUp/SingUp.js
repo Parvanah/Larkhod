@@ -1,5 +1,5 @@
-import {useGoogleLogin} from '@react-oauth/google';
-import axios from "axios"
+import { useGoogleLogin } from "@react-oauth/google";
+import axios from "axios";
 import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
 import i18n from "../../../i18n";
@@ -11,6 +11,7 @@ import img1 from "../../assets/mg.png";
 import img3 from "../../assets/logo_3.png";
 import React from "react";
 import { Link, useNavigate, useNavigation } from "react-router-dom";
+import LogIn from "../Login/LogIn";
 <link rel="stylesheet" href="SingUp.css" />;
 
 const SingUp = ({ t }, props) => {
@@ -80,6 +81,9 @@ const SingUp = ({ t }, props) => {
       formValues.number
     );
     setIsSubmit(true);
+    if (Object.keys(formErrors).length === 0 && isSubmit) {
+      navigate("/header");
+    }
   };
 
   useEffect(() => {
@@ -126,301 +130,353 @@ const SingUp = ({ t }, props) => {
     }
     return errors;
   };
+  const [SwitchHandle, setSwitchHandle] = useState(true);
+  const [LogInbtnColor, setLogInBtnColor] = useState({
+    backgroundColor: "#FFF , #FFF",
+    color: "#3c98bd",
+  });
+  const [SignUpbtnColor, setSignUpBtnColor] = useState({
+    backgroundColor: "#3c98bd, #0f53a1",
+    color: "white",
+  });
+  const LogInClick = () => {
+    setSwitchHandle(false);
+    setLogInBtnColor({
+      backgroundColor: "#3c98bd, #0f53a1",
+      color: "white",
+    });
+    setSignUpBtnColor({
+      backgroundColor: "#FFF , #FFF",
+      color: "rgba(60, 152, 189, 1)",
+    });
+  };
+  const SignUpClick = () => {
+    setSwitchHandle(true);
+    setSignUpBtnColor({
+      backgroundColor: "#3c98bd, #0f53a1",
+      color: "white",
+    });
+    setLogInBtnColor({
+      backgroundColor: "#FFF , #FFF",
+      color: "rgba(60, 152, 189, 1)",
+    });
+  };
   if (userInfo === null) {
     return (
-      <div>
+      <div className="full-signUP">
         <div id="all_singup">
           <div id="Group_singup">
-            <svg class="Path_singup" viewBox="0 0 1921.728 880.675">
-              <linearGradient
-                id="Path_singup"
-                spreadMethod="pad"
-                x1="0.835"
-                x2="0.274"
-                y1="0"
-                y2="1.305"
-              >
-                <stop offset="0" stop-color="#3c98bd" stop-opacity="1"></stop>
-                <stop offset="1" stop-color="#0f53a1" stop-opacity="1"></stop>
-              </linearGradient>
-              <path
-                id="Path_singup"
-                d="M 1921.7275390625 965.675048828125 L 403.7140502929688 965.675048828125 C 174.1283569335938 937.8496704101562 0 718.1124877929688 0 456.2157287597656 L 0 0 L 2721.7275390625 0 L 2721.7275390625 965.675048828125 Z"
-              ></path>
-            </svg>
-
             <img id="imgg_singup" src={img1} />
-            <button
-              className="button_singup"
-              onClick={() => changeLanguage("dari")}
-            >
-              زبان دری
-            </button>
-            <button
-              className="button_singup"
-              onClick={() => changeLanguage("pashto")}
-            >
-              پشتو ژبه
-            </button>
-          </div>
-          
-          <button id="login-button">
-            <Link className="up_singup" to="/login">
-              {t("singup1")}
-            </Link>
-            <div className="in_singup">{t("singup2")}</div>
-          </button>
-          <div id="cantainer_singup">
-            {Object.keys(formErrors).length === 0 && isSubmit ? (
-              <div>{navigate("/header")}</div>
-            ) : (
-              <pre></pre>
-            )}
-            <form onSubmit={handleSubmit}>
-              <div className="first_input_section_singup">
-                <div className="field">
-                  <input
-                    id="input_singup"
-                    type="text"
-                    name="firstname"
-                    placeholder={t("singup3")}
-                    value={formValues.firstname}
-                    onChange={(e) => handleChange(e)}
-                  />
-                  <p className="error_singup">{formErrors.firstname}</p>
-                </div>
-                <div className="field">
-                  <input
-                    id="input_singup"
-                    type="text"
-                    name="lastname"
-                    placeholder={t("singup18")}
-                    value={formValues.lastname}
-                    onChange={(e) => handleChange(e)}
-                  />
-                  <p className="error_singup">{formErrors.lastname}</p>
-                </div>
-
-                <div className="field">
-                  <input
-                    id="input_singup"
-                    type="age"
-                    name="age"
-                    placeholder={t("singup19")}
-                    value={formValues.age}
-                    onChange={(e) => handleChange(e)}
-                  />
-                  <p className="error_singup">{formErrors.age}</p>
-                </div>
-
-                <div className="field">
-                  <input
-                    id="input_singup"
-                    type="class"
-                    name="senf"
-                    placeholder={t("singup20")}
-                    value={formValues.senf}
-                    onChange={(e) => handleChange(e)}
-                  />
-                  <p className="error_singup">{formErrors.senf}</p>
-                </div>
-              </div>
-
-              <div className="second_input_section_singup">
-                <div className="field">
-                  <input
-                    id="inputt_singup"
-                    type=""
-                    name="number"
-                    placeholder={t("singup21")}
-                    value={formValues.number}
-                    onChange={(e) => handleChange(e)}
-                  />
-                  <p className="error_singup">{formErrors.number}</p>
-                </div>
-                <div className="field">
-                  <input
-                    id="inputt_singup"
-                    type="text"
-                    name="email"
-                    placeholder={t("singup4")}
-                    value={formValues.email}
-                    onChange={(e) => handleChange(e)}
-                  />
-                  <p className="error_singup">{formErrors.email}</p>
-                </div>
-
-                <div className="field">
-                  <input
-                    id="inputt_singup"
-                    type="password"
-                    name="password"
-                    placeholder={t("singup5")}
-                    value={formValues.password}
-                    onChange={(e) => handleChange(e)}
-                  />
-                  <p className="error_singup">{formErrors.password}</p>
-                </div>
-
-                <div className="field">
-                  <input
-                    id="inputt_singup"
-                    type="password"
-                    name="confirmpassword"
-                    placeholder={t("singup6")}
-                    value={formValues.confirmpassword}
-                    onChange={(e) => handleChange(e)}
-                  />
-                  <p className="error_singup">{formErrors.confirmpassword}</p>
-                </div>
-              </div>
-              <button className="acount_button_singuo">{t("singup1")}</button>
-            </form>
-            <h4 className="p_singup">{t("singup7")}</h4>
-            <button className="google_buttton_singup" onClick={login}>
-              <FaGoogle className="google_icon_singup" />
-              <div className="google_p_singup">{t("singup8")}</div>
-            </button>
-          </div>
-        </div>
-        <div className='all_singup'>
-        <img src={ img3} className='image3'  />
-       <div className='langauge'> 
-        <button
-              className="button_singup"
-              onClick={() => changeLanguage("dari")}
-            >
-              زبان دری
-            </button>
-            <button
-              className="button_singup"
-              onClick={() => changeLanguage("pashto")}
-            >
-              پشتو ژبه
-            </button>
+            <div className="all_buttons">
+              <button
+                className="button_singup"
+                onClick={() => changeLanguage("dari")}
+              >
+                زبان دری
+              </button>
+              <button
+                className="button_singup"
+                onClick={() => changeLanguage("pashto")}
+              >
+                پشتو ژبه
+              </button>
             </div>
-        <div className='bottom_Signupm'>
-        <button id="login-button">
-            <Link className="up_singup" to="/login">
-              {t("singup1")}
-            </Link>
-            <div className="in_singup">{t("singup2")}</div>
-          </button>
-          <div id="cantainer_singup">
-            {Object.keys(formErrors).length === 0 && isSubmit ? (
-              <div>{navigate("/header")}</div>
-            ) : (
-              <pre></pre>
-            )}
-            <form onSubmit={handleSubmit}>
-              <div className="first_input_section_singup">
-                <div className="field">
-                  <input
-                    id="input_singup"
-                    type="text"
-                    name="firstname"
-                    placeholder={t("singup3")}
-                    value={formValues.firstname}
-                    onChange={(e) => handleChange(e)}
-                  />
-                  <p className="error_singup">{formErrors.firstname}</p>
-                </div>
-                <div className="field">
-                  <input
-                    id="input_singup"
-                    type="text"
-                    name="lastname"
-                    placeholder={t("singup18")}
-                    value={formValues.lastname}
-                    onChange={(e) => handleChange(e)}
-                  />
-                  <p className="error_singup">{formErrors.lastname}</p>
-                </div>
-
-                <div className="field">
-                  <input
-                    id="input_singup"
-                    type="age"
-                    name="age"
-                    placeholder={t("singup19")}
-                    value={formValues.age}
-                    onChange={(e) => handleChange(e)}
-                  />
-                  <p className="error_singup">{formErrors.age}</p>
-                </div>
-
-                <div className="field">
-                  <input
-                    id="input_singup"
-                    type="class"
-                    name="senf"
-                    placeholder={t("singup20")}
-                    value={formValues.senf}
-                    onChange={(e) => handleChange(e)}
-                  />
-                  <p className="error_singup">{formErrors.senf}</p>
-                </div>
+          </div>
+          <div className="Sign_up_form">
+            <button id="login-button">
+              <div
+                className="up_singup"
+                onClick={LogInClick}
+                style={{
+                  backgroundImage: `linear-gradient(${LogInbtnColor.backgroundColor})`,
+                  color: LogInbtnColor.color,
+                }}
+              >
+                {t("singup1")}
               </div>
-
-              <div className="second_input_section_singup">
-                <div className="field">
-                  <input
-                    id="inputt_singup"
-                    type=""
-                    name="number"
-                    placeholder={t("singup21")}
-                    value={formValues.number}
-                    onChange={(e) => handleChange(e)}
-                  />
-                  <p className="error_singup">{formErrors.number}</p>
-                </div>
-                <div className="field">
-                  <input
-                    id="inputt_singup"
-                    type="text"
-                    name="email"
-                    placeholder={t("singup4")}
-                    value={formValues.email}
-                    onChange={(e) => handleChange(e)}
-                  />
-                  <p className="error_singup">{formErrors.email}</p>
-                </div>
-
-                <div className="field">
-                  <input
-                    id="inputt_singup"
-                    type="password"
-                    name="password"
-                    placeholder={t("singup5")}
-                    value={formValues.password}
-                    onChange={(e) => handleChange(e)}
-                  />
-                  <p className="error_singup">{formErrors.password}</p>
-                </div>
-
-                <div className="field">
-                  <input
-                    id="inputt_singup"
-                    type="password"
-                    name="confirmpassword"
-                    placeholder={t("singup6")}
-                    value={formValues.confirmpassword}
-                    onChange={(e) => handleChange(e)}
-                  />
-                  <p className="error_singup">{formErrors.confirmpassword}</p>
-                </div>
+              <div
+                onClick={SignUpClick}
+                className="in_singup"
+                style={{
+                  backgroundImage: `linear-gradient(${SignUpbtnColor.backgroundColor})`,
+                  color: SignUpbtnColor.color,
+                }}
+              >
+                {t("singup2")}
               </div>
-              <button className="acount_button_singuo">{t("singup1")}</button>
-            </form>
-            <h4 className="p_singup">{t("singup7")}</h4>
-            <button className="google_button_singup" onClick={login}>
-              <FaGoogle className="google_icon_singup" />
-              <div className="google_p_singup">{t("singup8")}</div>
             </button>
+            {SwitchHandle ? (
+              <div id="cantainer_singup">
+                <form onSubmit={handleSubmit}>
+                  <div className="first_input_section_singup">
+                    <div className="field">
+                      <input
+                        id="input_singup"
+                        type="text"
+                        name="firstname"
+                        placeholder={t("singup3")}
+                        value={formValues.firstname}
+                        onChange={(e) => handleChange(e)}
+                      />
+                      <p className="error_singup">{formErrors.firstname}</p>
+                    </div>
+                    <div className="field">
+                      <input
+                        id="input_singup"
+                        type="text"
+                        name="lastname"
+                        placeholder={t("singup18")}
+                        value={formValues.lastname}
+                        onChange={(e) => handleChange(e)}
+                      />
+                      <p className="error_singup">{formErrors.lastname}</p>
+                    </div>
+                    <div className="field">
+                      <input
+                        id="input_singup"
+                        type="age"
+                        name="age"
+                        placeholder={t("singup19")}
+                        value={formValues.age}
+                        onChange={(e) => handleChange(e)}
+                      />
+                      <p className="error_singup">{formErrors.age}</p>
+                    </div>
+
+                    <div className="field">
+                      <input
+                        id="input_singup"
+                        type="class"
+                        name="senf"
+                        placeholder={t("singup20")}
+                        value={formValues.senf}
+                        onChange={(e) => handleChange(e)}
+                      />
+                      <p className="error_singup">{formErrors.senf}</p>
+                    </div>
+                  </div>
+                  <div className="second_input_section_singup">
+                    <div className="field">
+                      <input
+                        id="inputt_singup"
+                        type=""
+                        name="number"
+                        placeholder={t("singup21")}
+                        value={formValues.number}
+                        onChange={(e) => handleChange(e)}
+                      />
+                      <p className="error_singup">{formErrors.number}</p>
+                    </div>
+                    <div className="field">
+                      <input
+                        id="inputt_singup"
+                        type="text"
+                        name="email"
+                        placeholder={t("singup4")}
+                        value={formValues.email}
+                        onChange={(e) => handleChange(e)}
+                      />
+                      <p className="error_singup">{formErrors.email}</p>
+                    </div>
+
+                    <div className="field">
+                      <input
+                        id="inputt_singup"
+                        type="password"
+                        name="password"
+                        placeholder={t("singup5")}
+                        value={formValues.password}
+                        onChange={(e) => handleChange(e)}
+                      />
+                      <p className="error_singup">{formErrors.password}</p>
+                    </div>
+
+                    <div className="field">
+                      <input
+                        id="inputt_singup"
+                        type="password"
+                        name="confirmpassword"
+                        placeholder={t("singup6")}
+                        value={formValues.confirmpassword}
+                        onChange={(e) => handleChange(e)}
+                      />
+                      <p className="error_singup">
+                        {formErrors.confirmpassword}
+                      </p>
+                    </div>
+                  </div>
+                  <button className="acount_button_singuo">
+                    {t("singup1")}
+                  </button>
+                </form>
+                <h4 className="p_singup">{t("singup7")}</h4>
+                <button className="Google_SignUP" onClick={login}>
+                  <FaGoogle className="google_icon_singup" />
+                  <div className="google_p_singup">{t("singup8")}</div>
+                </button>
+              </div>
+            ) : (
+              <LogIn />
+            )}
           </div>
         </div>
-          
-     
+        <div className="all_singup_mobile">
+          <div className="logo_mobile">
+            <img src={img3} className="image3" />
+          </div>
+          <div className="langauge">
+            <button
+              className="button_singup"
+              onClick={() => changeLanguage("dari")}
+            >
+              زبان دری
+            </button>
+            <button
+              className="button_singup"
+              onClick={() => changeLanguage("pashto")}
+            >
+              پشتو ژبه
+            </button>
+          </div>
+          <div className="bottom_Signupm">
+            <button id="login-button">
+              <div
+                className="up_singup"
+                onClick={LogInClick}
+                style={{
+                  backgroundImage: `linear-gradient(${LogInbtnColor.backgroundColor})`,
+                  color: LogInbtnColor.color,
+                }}
+              >
+                {t("singup1")}
+              </div>
+              <div
+                className="in_singup"
+                onClick={SignUpClick}
+                style={{
+                  backgroundImage: `linear-gradient(${SignUpbtnColor.backgroundColor})`,
+                  color: SignUpbtnColor.color,
+                }}
+              >
+                {t("singup2")}
+              </div>
+            </button>
+            {SwitchHandle ? (
+              <div id="cantainer_singup">
+                <form onSubmit={handleSubmit}>
+                  <div className="first_input_section_singup">
+                    <div className="field">
+                      <input
+                        id="input_singup"
+                        type="text"
+                        name="firstname"
+                        placeholder={t("singup3")}
+                        value={formValues.firstname}
+                        onChange={(e) => handleChange(e)}
+                      />
+                      <p className="error_singup">{formErrors.firstname}</p>
+                    </div>
+                    <div className="field">
+                      <input
+                        id="input_singup"
+                        type="text"
+                        name="lastname"
+                        placeholder={t("singup18")}
+                        value={formValues.lastname}
+                        onChange={(e) => handleChange(e)}
+                      />
+                      <p className="error_singup">{formErrors.lastname}</p>
+                    </div>
+
+                    <div className="field">
+                      <input
+                        id="input_singup"
+                        type="age"
+                        name="age"
+                        placeholder={t("singup19")}
+                        value={formValues.age}
+                        onChange={(e) => handleChange(e)}
+                      />
+                      <p className="error_singup">{formErrors.age}</p>
+                    </div>
+
+                    <div className="field">
+                      <input
+                        id="input_singup"
+                        type="class"
+                        name="senf"
+                        placeholder={t("singup20")}
+                        value={formValues.senf}
+                        onChange={(e) => handleChange(e)}
+                      />
+                      <p className="error_singup">{formErrors.senf}</p>
+                    </div>
+                  </div>
+
+                  <div className="second_input_section_singup">
+                    <div className="field">
+                      <input
+                        id="inputt_singup"
+                        type=""
+                        name="number"
+                        placeholder={t("singup21")}
+                        value={formValues.number}
+                        onChange={(e) => handleChange(e)}
+                      />
+                      <p className="error_singup">{formErrors.number}</p>
+                    </div>
+                    <div className="field">
+                      <input
+                        id="inputt_singup"
+                        type="text"
+                        name="email"
+                        placeholder={t("singup4")}
+                        value={formValues.email}
+                        onChange={(e) => handleChange(e)}
+                      />
+                      <p className="error_singup">{formErrors.email}</p>
+                    </div>
+
+                    <div className="field">
+                      <input
+                        id="inputt_singup"
+                        type="password"
+                        name="password"
+                        placeholder={t("singup5")}
+                        value={formValues.password}
+                        onChange={(e) => handleChange(e)}
+                      />
+                      <p className="error_singup">{formErrors.password}</p>
+                    </div>
+
+                    <div className="field">
+                      <input
+                        id="inputt_singup"
+                        type="password"
+                        name="confirmpassword"
+                        placeholder={t("singup6")}
+                        value={formValues.confirmpassword}
+                        onChange={(e) => handleChange(e)}
+                      />
+                      <p className="error_singup">
+                        {formErrors.confirmpassword}
+                      </p>
+                    </div>
+                  </div>
+                  <button className="acount_button_singuo">
+                    {t("singup1")}
+                  </button>
+                </form>
+                <h4 className="p_singup">{t("singup7")}</h4>
+                <button className="google_button_singup" onClick={login}>
+                  <FaGoogle className="google_icon_singup" />
+                  <div className="google_p_singup">{t("singup8")}</div>
+                </button>
+              </div>
+            ) : (
+              <LogIn />
+            )}
+          </div>
         </div>
       </div>
     );
