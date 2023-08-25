@@ -17,7 +17,7 @@ import Down1 from "../../assets/Group_408.png";
 import photo7 from "../../assets/Group_158_f.png";
 import { FiMenu } from "react-icons/fi";
 import { ImCross } from "react-icons/im";
-const Lessons = ({ t }) => {
+const Lessons = ({ t }, props) => {
   const { userInfo, isLoading } = useContext(AuthContext);
 
   var [num, setNum] = useState(1);

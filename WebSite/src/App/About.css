@@ -1,0 +1,304 @@
+.all_section_about{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.section_one_about{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 1;
+}
+.image_phone_one_about{
+    display: none;
+}
+.image_phone_three_about{
+    display: none;
+}
+.selesh_aboutt{
+    display: none;
+}
+.selesh_about{
+    width:70%;
+    margin-top: 150%;
+    margin-left: 200%;
+}
+.dot_about{
+    margin-top: 1%;
+    margin-right: 6%;
+    display: flex;
+    width: 8%;
+}
+.section_two_about{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex: 1;
+}
+.logoooo_about{
+    
+    width: 30%;
+    height:  100%;
+    margin-left: 150px;
+    margin-right: 25px;
+   
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    color:  rgba(60,152,189,1);
+    font-family: "Bahij Helvetica";
+    font-size: 19px;
+    font-style: normal;
+    line-height: 40px;
+    margin-right: 150px;
+    margin-left: 25px;
+}
+.section_three_about{
+    flex: 1;
+}
+.dott-about{
+    margin-bottom: 1%;
+    margin-left: 6%;
+    display: flex;
+    width: 8%;
+}
+.phone_svg_two_about{
+    display: none;
+}
+
+@media screen and (max-width: 414px)and (min-width:100px){
+    .all_section_about{
+     display: flex;
+     flex-direction: column;
+}
+   .section-one-and-two-grades{
+     background-image: url('../App/assets/mb-ba.jpg');
+     background-size: cover; 
+     background-repeat: no-repeat;
+}
+    .section-zero{
+     display: flex;
+     flex-direction: column;
+     height: 30%;
+}
+
+    .image_phone_one_about{
+     display: flex;
+     flex: 1;
+     width: 20%;
+     justify-content: right;
+     align-items: flex-start;
+}
+    .selesh_aboutt{
+     display: flex;
+     margin-top: -10%;
+     margin-left: 10%;
+     width: 6%;
+}
+    .section_one_about{
+     justify-content: space-between;  
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+    .selesh_about{
+     display: none;
+}
+    .image_phone_three_aboutt{
+     flex: 1;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+}
+    .image_phone_three_about{
+     flex: 1;
+     display: flex;
+     width: 30%;
+     height: 30%;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+}
+    .dot_about{
+     display: none;
+}
+        
+    .section_two_about{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     flex: 1;
+}
+    .logoooo_about{
+     display: none;
+}
+    .about{
+     display: flex;
+     flex-direction: column;
+     flex: 1;
+     text-align: right;
+     color:  rgba(60,152,189,1);
+     font-family: "Bahij Helvetica";
+     font-size: 15px;
+     font-style: normal;
+     line-height: 30px;
+     margin-left: 50px;
+     margin-right: 50px;
+     margin-top: 20px;
+     margin-bottom: 30px;
+}
+    .section_three_about{
+     flex: 1;
+}
+    .dott-about{
+     display: none;
+}
+    .phone_svg_two_about{
+     transform-origin: center;
+     display: flex;
+     flex: 1;         
+}
+    #phone_svg_two_about{
+     fill: rgba(0,0,0,0);
+     stroke: rgba(60,152,189,1);
+     stroke-width: 1px;
+     stroke-linejoin: miter;
+     stroke-linecap: butt;
+     stroke-dasharray: 4.026000022888184 4.026000022888184;
+     stroke-dashoffset: 0;
+     stroke-miterlimit: 10;
+     shape-rendering: auto;
+}
+}
+@media screen and (max-width: 768px)and (min-width:415px){
+    .all_section_about{
+     display: flex;
+     flex-direction: column;
+}
+    .section-one-and-two-grades{
+     background-image: url('../App/assets/mb-ba.jpg');
+     background-size: cover; 
+     background-repeat: no-repeat;
+}
+    .section-zero{
+     display: flex;
+     flex-direction: column;
+     height: 30%;
+}
+    .image_phone_one_about{
+     display: flex;
+     flex: 1;
+     width: 20%;
+     justify-content: right;
+     align-items: flex-start;
+}
+    .selesh_aboutt{
+     display: flex;
+     margin-top: -10%;
+     margin-left: 10%;
+    
+}
+    .section_one_about{
+     justify-content: space-between;  
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+    .selesh_about{
+     display: none;
+}
+    .image_phone_three_aboutt{
+     flex: 1;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+}
+    .image_phone_three_about{
+     flex: 1;
+     display: flex;
+     width: 30%;
+     height: 30%;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+}
+    .dot_about{
+     display: none;
+}
+    .section_two_about{
+      display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     flex: 1;
+}
+    .logoooo_about{
+     display: none;
+}
+    .about{
+     display: flex;
+     flex-direction: column;
+     flex: 1;
+     text-align: right;
+     color:  rgba(60,152,189,1);
+     font-family: "Bahij Helvetica";
+     font-size: 20px;
+     font-style: normal;
+     line-height: 40px;
+     margin-left: 100px;
+     margin-right: 100px;
+     margin-top: 30px;
+     margin-bottom: 90px;
+}
+    .section_three_about{
+     flex: 1;
+}
+    .dott-about{
+     display: none;
+}
+    .phone_svg_two_about{
+     transform-origin: center;
+     display: flex;
+     flex: 1;
+}
+    #phone_svg_two_about{
+     fill: rgba(0,0,0,0);
+     stroke: rgba(60,152,189,1);
+     stroke-width: 1px;
+     stroke-linejoin: miter;
+     stroke-linecap: butt;
+     stroke-dasharray: 4.026000022888184 4.026000022888184;
+     stroke-dashoffset: 0;
+     stroke-miterlimit: 10;
+     shape-rendering: auto;
+}
+}
+
+
+ @media screen and (max-width: 950px)and (min-width:769px){
+    .logoooo_about{
+        width: 30%;
+        height:  80%;
+        margin-left: 100px;
+    }
+    .about{
+        margin-right:100px;
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 1100px)and (min-width:951px){
+    .logoooo_about{
+        width: 30%;
+        height:  90%;
+        margin-left: 130px;
+    }
+    .about{
+        margin-right:130px;
+        font-size: 18px;
+    }
+} 
+
