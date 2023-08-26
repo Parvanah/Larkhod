@@ -40,7 +40,7 @@ const About = ({ t }) => {
         <div className="section_two_about">
         <img className="logoooo_about" src={logo}/>
         <div className='about'>
-          <h2 className="title_about" id=''>{t("about1")}</h2>
+          <h1 className="title_about" id=''>{t("about1")}</h1>
           <p className="paragraph_about">{t("about2")}</p>
         </div>
         </div>

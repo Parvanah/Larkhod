@@ -56,6 +56,13 @@
     margin-right: 150px;
     margin-left: 25px;
 }
+.title_about{
+    text-align: right;
+    color:  rgba(60,152,189,1);
+    font-family: "Bahij Helvetica";
+    font-size: 40px;
+    margin-bottom: 10px;
+}
 .section_three_about{
     flex: 1;
 }
@@ -150,6 +157,13 @@
      margin-right: 50px;
      margin-top: 20px;
      margin-bottom: 30px;
+}
+.title_about{
+    text-align: right;
+    color:  rgba(60,152,189,1);
+    font-family: "Bahij Helvetica";
+    font-size: 30px;
+    margin-bottom: 10px;
 }
     .section_three_about{
      flex: 1;
@@ -253,6 +267,13 @@
      margin-right: 100px;
      margin-top: 30px;
      margin-bottom: 90px;
+}
+.title_about{
+    text-align: right !important;
+    color:  rgba(60,152,189,1);
+    font-family: "Bahij Helvetica";
+    font-size: 40px;
+    margin-bottom: 10px;
 }
     .section_three_about{
      flex: 1;
