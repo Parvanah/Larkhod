@@ -3,9 +3,10 @@ import { useContext } from "react";
 import { withNamespaces } from 'react-i18next';
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import logo from '../../assets/PNG_Format.png';
-import img1 from '../../assets/Group_158.png';
-import img2 from '../../assets/Group_158_a.png';
+import logo from '../../assets/blueo.png';
+import logoo from '../../assets/whiteo.png';
+import img1 from '../../assets/Group_158_ob@2x.png';
+import img2 from '../../assets/SELESHHHH.png';
 import img3 from '../../assets/svg_phone.png';
 import "./SendCode.css"
 import React from 'react'
@@ -50,63 +51,64 @@ const SendCode = ({ t } ) => {
 	};
 	if (userInfo === null) {
   return (
-    <div>
-<div id="send_code" >
-	<svg id="background_svg_send_code">
-		<linearGradient id="background_svg_send_code_1" spreadMethod="pad" x1="0.22" x2="0.105" y1="-0.035" y2="1.793">
-			<stop offset="0" stop-color="#3c98bd" stop-opacity="1"></stop>
-			<stop offset="1" stop-color="#0f53a1" stop-opacity="1"></stop>
-		</linearGradient>
-		<rect id="background_svg_send_code_1" rx="200" ry="200" x="0" y="0" width="630" height="930">
-		</rect>
-	</svg>
-	<svg class="mobile_svg_send_code">
-			<linearGradient id="mobile_svg_send_code" spreadMethod="pad" x1="0.22" x2="0.905" y1="-0.035" y2="1.793">
-				<stop offset="0" stop-color="#3c98bd" stop-opacity="1"></stop>
-				<stop offset="1" stop-color="#0f53a1" stop-opacity="1"></stop>
-			</linearGradient>
-			<rect id="mobile_svg_send_code" rx="70" ry="70" x="0" y="0" width="360" height="358">
-			</rect>
-		</svg>
-
-	<div id="para_first_send_code">
-	{t("sendcode1")}
-	<br/>
-	{t("sendcode7")}
-	<br/>
-	{t("sendcode8")}
+	<div className="all-section-send-code">
+		 <div className="section-one-send-code">
+			<div className="sec-one-one-send-code">
+              <Link to='/forgotpassword' ><img className='img_send-code' src={img1}/></Link>
+              {Object.keys(formErrors).length === 0 && isSubmit ? (
+              <div >{navigate('/newpassword')}</div>
+               ) : (
+               <pre></pre>
+               )}
+			</div>
+			<div className="sec-one-two-send-code">
+			 <img className="logo-one-send-code" src={logo}/>
+			 <img className="logo-two-send-code" src={logoo}/>
+			</div>
+		 </div>
+		 <div className="section-two-send-code">
+			<div className="sec-two-one-send-code">
+			  <div className="image-send-code">
+			  <img className='imggg_send-code' src={img3}/>
+			  </div>
+			  <div className="selesh-send-code">
+			  <Link to='/forgotpassword' ><img className="imgg_send-code" src={img2}/></Link>
+			    {Object.keys(formErrors).length === 0 && isSubmit ? (
+                <div >{navigate('/newpassword')}</div>
+                 ) : (
+                 <pre></pre>
+                 )}
+			  </div>
+			  <div className="para-one-and-two-send-code">
+			    <div className="para_first_send-code">
+					{t("sendcode1")}
+                   	<br/>
+	                {t("sendcode7")}
+                	<br/>
+                 	{t("sendcode8")}
+ 	            </div>
+ 	            <div className="para_second_send-code">
+				    {t("sendcode2")}
+ 	            </div>
+			  </div>
+			</div>
+			<div className="sec-two-two-send-code">
+			  <form onSubmit={handleSubmit}>
+			  <input
+	            id="input_next_send-code"
+		        type="code"
+		        name="code"
+		        placeholder={t("sendcode3")}
+		        value={formValues.code}
+		        onChange={(e) => handleChange(e)}
+	            />
+				<div className="error-and-button-send-code"><p  className="error_send-code">{formErrors.code}</p>
+               <button className="button-next-send-code">{t("sendcode4")}</button>
+			   </div>
+             </form>
+			</div>
+		 </div>
 	</div>
-	<div id="para_second_send_code">
-	{t("sendcode2")}
-	</div>
-	<div id="logoo_send_code">
-	<img id="logo_send_code" src={logo}/>
-	<img id='imggg_send_code' src={img3}/>
-	</div>
-  <Link to='/forgotpassword' ><img id='imgg_send_code' src={img2}/></Link>
-  <Link to='/forgotpassword' ><img id='img_send_code' src={img1}/></Link>
-{Object.keys(formErrors).length === 0 && isSubmit ? (
-  <div >{navigate('/newpassword')}</div>
-) : (
-  <pre></pre>
-)}
-<div id="form_send_code">
-<form onSubmit={handleSubmit}>
-	<input
-	  id="input_next_send_code"
-		type="code"
-		name="code"
-		placeholder={t("sendcode3")}
-		value={formValues.code}
-		onChange={(e) => handleChange(e)}
-	  />
-	  <p  className="error_send_code">{formErrors.code}</p>
-   <button id="button_next_send_code">{t("sendcode4")}</button>
-</form>
-</div>
-	
-</div>
-    </div>
   )
 } else if (isLoading) {
 	return <h1>Loading.....</h1>;

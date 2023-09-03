@@ -2,7 +2,7 @@ import { AuthContext } from "./context/AuthContext";
 import {useContext } from 'react';
 import i18n from '../i18n';
 import { withNamespaces } from 'react-i18next';
-import logo from './assets/PNG_Format.png';
+import logo from './assets/blueo.png';
 import dot from './assets/dot_one.png'; 
 import selesh from './assets/Group_158_.png';
 import React from 'react'

@@ -3,9 +3,10 @@ import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { withNamespaces } from 'react-i18next';
 import { useState, useEffect } from "react";
-import logo from '../../assets/PNG_Format.png';
-import img1 from '../../assets/Group_158.png';
-import img2 from '../../assets/Group_158_a.png';
+import logo from '../../assets/blueo.png';
+import logoo from '../../assets/whiteo.png';
+import img1 from '../../assets/Group_158_ob@2x.png';
+import img2 from '../../assets/SELESHHHH.png';
 import img3 from '../../assets/svg_phone.png';
 import "./ForgotPassword.css"
 import React from 'react'
@@ -51,61 +52,62 @@ const ForgotPassword = ({ t }) => {
 	};
 	if (userInfo === null) {
   return (
-    <div>
-<div id="forgot_password" >
-	<svg id="background_svg_forgot_password">
-		<linearGradient id="background_svg_forgot_password_1" spreadMethod="pad" x1="0.22" x2="0.105" y1="-0.035" y2="1.793">
-			<stop offset="0" stop-color="#3c98bd" stop-opacity="1"></stop>
-			<stop offset="1" stop-color="#0f53a1" stop-opacity="1"></stop>
-		</linearGradient>
-		<rect id="background_svg_forgot_password_1" rx="200" ry="200" x="0" y="0" width="630" height="930">
-		</rect>
-	</svg>
-
-	<svg class="mobile_svg_forgot_password">
-			<linearGradient id="mobile_svg_forgot_password" spreadMethod="pad" x1="0.22" x2="0.905" y1="-0.035" y2="1.793">
-				<stop offset="0" stop-color="#3c98bd" stop-opacity="1"></stop>
-				<stop offset="1" stop-color="#0f53a1" stop-opacity="1"></stop>
-			</linearGradient>
-			<rect id="mobile_svg_forgot_password" rx="70" ry="70" x="0" y="0" width="360" height="358">
-			</rect>
-		</svg>
-	<div id="para_first_forgot_password">
-	{t("forgotpassword1")}
-	<br/>
-	{t("forgotpassword7")}
+	<div className="all-section-forgot-password">
+		 <div className="section-one-forgot-password">
+			<div className="sec-one-one-forgot-password">
+              <Link to='/login' ><img className='img_forgot_password' src={img1}/></Link>
+              {Object.keys(formErrors).length === 0 && isSubmit ? (
+               <div>{navigate('/sendcode')}</div>
+              ) : (
+               <pre></pre>
+              )}
+			</div>
+			<div className="sec-one-two-forgot-password">
+			 <img className="logo-one-forgot-password" src={logo}/>
+			 <img className="logo-two-forgot-password" src={logoo}/>
+			</div>
+		 </div>
+		 <div className="section-two-forgot-password">
+			<div className="sec-two-one-forgot-password">
+			  <div className="image-forgot-password">
+			  <img className='imggg_forgot_password' src={img3}/>
+			  </div>
+			  <div className="selesh-forgot-password">
+			  <Link to='/login' ><img className="imgg_forgot_password" src={img2}/></Link>
+				 {Object.keys(formErrors).length === 0 && isSubmit ? (
+                 <div>{navigate('/sendcode')}</div>
+                 ) : (
+                 <pre></pre>
+                 )}
+			  </div>
+			  <div className="para-one-and-two-forgot-password">
+			    <div className="para_first_forgot_password">
+                   {t("forgotpassword1")}
+			        <br/>
+ 	               {t("forgotpassword7")}
+ 	            </div>
+ 	            <div className="para_second_forgot_password">
+ 	               {t("forgotpassword2")}
+ 	            </div>
+			  </div>
+			</div>
+			<div className="sec-two-two-forgot-password">
+			  <form onSubmit={handleSubmit}>
+	            <input
+	            id="input_next_forgot_password"
+		        type="text"
+		        name="email"
+		        placeholder={t("forgotpassword3")}
+		        value={formValues.email}
+		        onChange={(e) => handleChange(e)}
+	            />
+				<div className="error-and-button-forgot-password"><p  className="error_forgot_password">{formErrors.email}</p>
+               <button className="button-next-forgot-password">{t("forgotpassword4")}</button>
+			   </div>
+             </form>
+			</div>
+		 </div>
 	</div>
-	<div id="para_second_forgot_password">
-	{t("forgotpassword2")}
-	</div>
-	<div id="logoo_forgot_password">
-	<img id="logo_forgot_password" src={logo}/>
-	<img id='imggg_forgot_password' src={img3}/>
-	</div>
-	<Link to='/login' ><img id='imgg_forgot_password' src={img2}/></Link>
-  <Link to='/login' ><img id='img_forgot_password' src={img1}/></Link>
-{Object.keys(formErrors).length === 0 && isSubmit ? (
-  <div>{navigate('/sendcode')}</div>
-) : (
-  <pre></pre>
-)}
-<div className="form_forgot_password">
-<form onSubmit={handleSubmit}>
-	<input
-	  id="input_next_forgot_password"
-		type="text"
-		name="email"
-		placeholder={t("forgotpassword3")}
-		value={formValues.email}
-		onChange={(e) => handleChange(e)}
-	  />
-	  <p  className="error_forgot_password">{formErrors.email}</p>
-   <button id="button-next_forgot_password">{t("forgotpassword4")}</button>
-</form>
-</div>
-	
-</div>
-    </div>
   )
 } else if (isLoading) {
 	return <h1>Loading.....</h1>;

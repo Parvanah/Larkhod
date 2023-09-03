@@ -1,4303 +1,643 @@
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border: none;
+.all-section-send-code{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;	
+	height:100vh;
 }
-#send_code {
-    position: absolute;
-    width: 100%;
-    height:  100%;
-    background-color: rgba(255,255,255,1);
-    overflow: hidden;
-
+.section-one-send-code{
+	display: flex;
+	flex-direction: column;
+	flex: 45%;
 }
-
-#background_svg_send_code_1{
-    fill: url(#background_svg_send_code_1);
-    stroke: rgba(112,112,112,1);
+.sec-one-one-send-code{
+	display: flex;
+	justify-content: start;
+	/* height: 5%; */
 }
-#background_svg_send_code {
-    width: 910px;
-    height: 154px;
-    position: absolute;
-    left: -550px;
-    top: 130px;
-    overflow: visible;
-    transform: matrix(1,0,0,1,803,-37) rotate(-90deg);
-    transform-origin: center;
+.img_send-code{
+	position: relative;
+	top: 200%;
+	left: 250%;
 }
-
-#button_next_send_code {
-    margin-top: 12px;
-    width: 140px;
-    height: 35px;
-    cursor: pointer;
-    font-family: "Bahij Helvetica";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    color: rgb(39, 115, 138);
-    letter-spacing: -0.4px;
-    border-radius: 50px;
-    margin-left: 8px;
+.sec-one-two-send-code{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 100%;
 }
-#para_first_send_code{
-    right: 50px;
-    left: auto;
-    top: 100px;
-    position: absolute;
-    overflow: hidden;
-    width: 466px;
-    height: 250px;
-    line-height: 117px;
-    text-align: right;
-      font-family: "Bahij Helvetica";
-    font-style: normal;
-    font-weight: 12px;
-    font-size: 50px;
-    color: rgba(255,255,255,1);
-    letter-spacing: -0.4px;
-    line-height: 70px;
-    
+.logo-one-send-code{
+	width: 55%;
+	height: 50%;
 }
-
-#para_second_send_code {
-    right: 50px;
-    left: auto;
-    top: 320px;
-    position: absolute;
-    overflow: visible;
-    width: 706px;
-    height: 53px;
-    line-height: 117px;
-    margin-top: -48.5px;
-    text-align: right;
-      font-family: "Bahij Helvetica";
-    font-style: normal;
-    font-weight: 18px;
-    font-size: 20px;
-    color: rgba(255,255,255,1);
-    letter-spacing: 2.4px;
+.logo-two-send-code{
+	display: none;
 }
-#input_next_send_code {
-
-    color: white;
-    display: inline-block;
-    background: none;
-    width: 425px;
-    padding-bottom: 8px ;
-    margin: 8px ;
-    border-bottom: 1px solid white;
-    box-sizing: border-box;
-    text-align: right;
-    fill: transparent;
-  outline: none;
+.section-two-send-code{
+	display: flex;
+	flex-direction: column;
+	background-image: url('../../assets/fogotone.png');
+	background-size: cover; 
+	background-repeat: no-repeat;
+	flex: 55%;
+	text-align: right;
+	padding-right: 5%;
+	justify-content: center;
 }
-#form_send_code{
-    position: inherit;
-    top: 380px;
-    right: 50px;
-    left: auto;
+.sec-two-one-send-code{
+	
 }
-#logoo_send_code{
-    position: absolute;
-    width: 36px;
-    height: 22px;
-    left: 140px;
-    top: 160px;
-    overflow: visible;
-    cursor: pointer;
+.selesh-send-code{
+	display: none;
 }
-#logo_send_code{
-    width: 350px;
-    height: 300px;
+.imgg_send-code{}
+.image-send-code{
+	display: none;
 }
-#img_send_code{
-    position: relative;
-    top: 40px;
-    left: 70px;
-    width: 30PX;
+.imggg_send-code{}
+.para-one-and-two-send-code{
+	display: flex;
+	flex-direction: column;
+	text-align: right;
 }
-#imgg_send_code{
-    position: relative;
-    top: 40px;
-    left: 70px;
-    display: none;
+.para_first_send-code{
+	font-family: "Bahij Helvetica";
+	font-style: normal;
+	font-weight: bold;
+	font-size: 4vw;
+	color: rgba(255,255,255,1);
+	letter-spacing: -0.4px;
+	line-height: 70px;
+	padding-left: 15%;
 }
-#imggg_send_code{
-    position: relative;
-    top: 40px;
-    left: 70px;
-    display: none;
+.para_second_send-code{
+	font-family: "Bahij Helvetica";
+	font-style: normal;
+	font-weight: bold;
+	font-size: 1.4vw;
+	color: rgba(255,255,255,1);
+	letter-spacing: 2.4px;
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
-.error_send_code{
-    margin: 0;padding: 0;
-    color: rgb(241, 26, 26);
-    font-family: "Bahij Helvetica";
-    font-weight: bold;
-    font-style: normal;
+.sec-two-two-send-code{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
 }
-#mobile_svg_send_code {
-    fill: url(#mobile_svg_send_code);
+#input_next_send-code{
+	color:  rgb(255, 255, 255) !important;
+	background: none;
+	border-bottom: 2px solid rgba(255, 255, 255,0.5);
+	width: 66%;
+	background-color: rgba(255, 255, 255,0) ;
+	outline: none;
+	font-size: 2.5vw;
+	font-style: normal;
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: 8px;
+	
 }
 
-.mobile_svg_send_code {
-    width: 360px;
-    height: 358px;
-    position: absolute;
-    overflow: visible;
-    transform: translate(-132.517px, 160.426px) matrix(1,0,0,1,132.5166,-160.426) rotate(180deg);
-    transform-origin: center;
-    display: none;
+#input_next_send-code::placeholder{
+	font-size: 2vw;
+	color:  rgb(255, 255, 255) !important;
+	opacity: 0.5;
+	
 }
-
-/* mobile */
-
-@media screen and (max-width:150px)and (min-width:100px){
-    #mobile_svg_send_code {
-        fill: url(#mobile_svg_send_code);
-        width: 150px;
-        height: 358px;
-    }
-
-    .mobile_svg_send_code {
-        width: 150px;
-        height: 358px;
-        position: absolute;
-        top: -100px;
-        overflow: visible;
-        transform: translate(-132.517px, 160.426px) matrix(1,0,0,1,132.5166,-160.426) rotate(180deg);
-        transform-origin: center;
-        display: block;
-    }
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        border: none;
-    }
-    #send_code {
-        position: absolute;
-        width: 100%;
-        height:  100%;
-        background-color: rgb(255, 255, 255);
-        overflow: hidden;
-    
-    }
-
-    #background_svg_send_code_1{
-        fill: url(#background_svg_send_code_1);
-        stroke: rgba(112,112,112,1);
-    }
-    #background_svg_send_code {
-        width: 910px;
-        height: 154px;
-        position: absolute;
-        left: -550px;
-        top: 130px;
-        overflow: hidden;
-        transform: matrix(1,0,0,1,803,-37) rotate(-90deg);
-        transform-origin: center;
-        display: none;
-    }
-
-    #button_next_send_code {
-        position: relative;
-        top: -5px;
-        left: 2px;
-        margin-top: 12px;
-        width: 100px;
-        height: 30px;
-        padding-top: -2px;
-        cursor: pointer;
-          font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: bold;
-        font-size: 20px;
-        color: white;
-        letter-spacing: -0.4px;
-        border-radius: 50px;
-        background-color: rgba(60,152,189,1);
-    }
-    #para_first_send_code{
-        /* position: relative; */
-        top: 90px;
-        left: -330px;
-        position: absolute;
-        overflow: hidden;
-        text-align: right;
-        font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: 62px;
-        font-size: 14px;
-        color: rgba(255,255,255,1);
-        letter-spacing: -0.4px;
-        line-height: 30px;
-        
-    }
-    
-    #para_second_send_code {
-        top: 190px;
-        left: -570px;
-        overflow: visible;
-        line-height: 110px;
-        margin-top: -48.5px;
-        text-align: right;
-          font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: 18px;
-        font-size: 10px;
-        color: rgba(255,255,255,1);
-        letter-spacing: 0.1px;
-    }
-    #input_next_send_code {
-     
-    font-size: 16px;
-        color:rgb(92, 90, 90) !important;
-        display: inline-block;
-        background: none;
-        width: 100px;
-        padding-bottom: 8px ;
-        margin: 8px ;
-        border-bottom: 1px solid rgb(92, 90, 90);
-        box-sizing: border-box;
-        text-align: right;
-        fill: transparent;
-      outline: none;
-    }
-    #form_send_code{
-        position: relative;
-        left: 20px;
-        top: 260px;
-    }
-    #logoo_send_code {
-        position: absolute;
-        width: 36px;
-        height: 22px;
-        left: 50px;
-        top: 420px;
-        overflow: visible;
-        cursor: pointer;
-    }
-    #logo_send_code{
-        width: 60px;
-			height: 50px;
-    }
-    #img_send_code{
-        position: relative;
-        top: 40px;
-        left: 30px;
-        overflow: visible;
-        display: none;
-    }
-    #imgg_send_code{
-        position: relative;
-        width: 15px;
-        height: 10px;
-        top: 20px;
-        left: 20px;
-        overflow: visible;
-        display: block;
-    }
-    #imggg_send_code{
-        width: 50px;
-        height: 50px;
-        position: relative;
-        top: -480px;
-        left: -52px;
-        display: block;
-    }
-    .error_send_code{
-        margin-top: -5px;
-        margin-bottom: 5px;
-        padding: 0;
-        color: rgb(241, 26, 26);
-        font-family: "Bahij Helvetica";
-        font-weight: normal;
-        font-style: normal;
-    }
-    #input_next_send_code::placeholder{
-        color:  rgb(92, 90, 90) !important;
-        font-size: 20px;
-       
-                }
-}
-@media screen and (max-width:200px)and (min-width:151px){
-    #mobile_svg_send_code {
-        fill: url(#mobile_svg_send_code);
-        width: 200px;
-        height: 358px;
-    }
-
-    .mobile_svg_send_code {
-        width: 200px;
-        height: 358px;
-        position: absolute;
-        top: -100px;
-        overflow: visible;
-        transform: translate(-132.517px, 160.426px) matrix(1,0,0,1,132.5166,-160.426) rotate(180deg);
-        transform-origin: center;
-        display: block;
-    }
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        border: none;
-    }
-    #send_code {
-        position: absolute;
-        width: 100%;
-        height:  100%;
-        background-color: rgb(255, 255, 255);
-        overflow: hidden;
-    
-    }
-
-    #background_svg_send_code_1{
-        fill: url(#background_svg_send_code_1);
-        stroke: rgba(112,112,112,1);
-    }
-    #background_svg_send_code {
-        width: 910px;
-        height: 154px;
-        position: absolute;
-        left: -550px;
-        top: 130px;
-        overflow: hidden;
-        transform: matrix(1,0,0,1,803,-37) rotate(-90deg);
-        transform-origin: center;
-        display: none;
-    }
-
-    #button_next_send_code {
-        position: relative;
-        top: -5px;
-        left: 2px;
-        margin-top: 12px;
-        width: 130px;
-        height: 30px;
-        padding-top: -2px;
-        cursor: pointer;
-          font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: bold;
-        font-size: 20px;
-        color: white;
-        letter-spacing: -0.4px;
-        border-radius: 50px;
-        background-color: rgba(60,152,189,1);
-    }
-    #para_first_send_code{
-        /* position: relative; */
-        top: 80px;
-        left: -280px;
-        position: absolute;
-        overflow: hidden;
-        text-align: right;
-        font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: 62px;
-        font-size: 20px;
-        color: rgba(255,255,255,1);
-        letter-spacing: -0.4px;
-        line-height: 30px;
-        
-    }
-    
-    #para_second_send_code {
-        top: 190px;
-        left: -520px;
-        overflow: visible;
-        line-height: 110px;
-        margin-top: -48.5px;
-        text-align: right;
-          font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: 18px;
-        font-size: 14px;
-        color: rgba(255,255,255,1);
-        letter-spacing: 0.1px;
-    }
-    #input_next_send_code {
-     
-    font-size: 16px;
-        color:rgb(92, 90, 90) !important;
-        display: inline-block;
-        background: none;
-        width: 130px;
-        padding-bottom: 8px ;
-        margin: 8px ;
-        border-bottom: 1px solid rgb(92, 90, 90);
-        box-sizing: border-box;
-        text-align: right;
-        fill: transparent;
-      outline: none;
-    }
-    #form_send_code{
-        position: relative;
-        left: 30px;
-        top: 260px;
-    }
-    #logoo_send_code {
-        position: absolute;
-        width: 36px;
-        height: 22px;
-        left: 75px;
-        top: 420px;
-        overflow: visible;
-        cursor: pointer;
-    }
-    #logo_send_code{
-        width: 70px;
-			height: 60px;
-    }
-    #img_send_code{
-        position: relative;
-        top: 40px;
-        left: 30px;
-        overflow: visible;
-        display: none;
-    }
-    #imgg_send_code{
-        position: relative;
-        width: 15px;
-        height: 10px;
-        top: 20px;
-        left: 20px;
-        overflow: visible;
-        display: block;
-    }
-    #imggg_send_code{
-        width: 50px;
-        height: 50px;
-        position: relative;
-        top: -490px;
-        left: -78px;
-        display: block;
-    }
-    .error_send_code{
-        margin-top: -5px;
-        margin-bottom: 5px;
-        padding: 0;
-        color: rgb(241, 26, 26);
-        font-family: "Bahij Helvetica";
-        font-weight: normal;
-        font-style: normal;
-    }
-    #input_next_send_code::placeholder{
-        color:  rgb(92, 90, 90) !important;
-        font-size: 20px;
-       
-                }
-}
-@media screen and (max-width:250px)and (min-width:201px){
-    #mobile_svg_send_code {
-        fill: url(#mobile_svg_send_code);
-        width: 250px;
-        height: 358px;
-    }
-
-    .mobile_svg_send_code {
-        width: 250px;
-        height: 358px;
-        position: absolute;
-        top: -100px;
-        overflow: visible;
-        transform: translate(-132.517px, 160.426px) matrix(1,0,0,1,132.5166,-160.426) rotate(180deg);
-        transform-origin: center;
-        display: block;
-    }
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        border: none;
-    }
-    #send_code {
-        position: absolute;
-        width: 100%;
-        height:  100%;
-        background-color: rgb(255, 255, 255);
-        overflow: hidden;
-    
-    }
-
-    #background_svg_send_code_1{
-        fill: url(#background_svg_send_code_1);
-        stroke: rgba(112,112,112,1);
-    }
-    #background_svg_send_code {
-        width: 910px;
-        height: 154px;
-        position: absolute;
-        left: -550px;
-        top: 130px;
-        overflow: hidden;
-        transform: matrix(1,0,0,1,803,-37) rotate(-90deg);
-        transform-origin: center;
-        display: none;
-    }
-
-    #button_next_send_code {
-        position: relative;
-        top: -5px;
-        left: 2px;
-        margin-top: 12px;
-        width: 150px;
-        height: 30px;
-        padding-top: -2px;
-        cursor: pointer;
-          font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: bold;
-        font-size: 20px;
-        color: white;
-        letter-spacing: -0.4px;
-        border-radius: 50px;
-        background-color: rgba(60,152,189,1);
-    }
-    #para_first_send_code{
-        /* position: relative; */
-        top: 80px;
-        left: -240px;
-        position: absolute;
-        overflow: hidden;
-        text-align: right;
-        font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: 62px;
-        font-size: 22px;
-        color: rgba(255,255,255,1);
-        letter-spacing: -0.4px;
-        line-height: 30px;
-        
-    }
-    
-    #para_second_send_code {
-        top: 190px;
-        left: -485px;
-        overflow: visible;
-        line-height: 110px;
-        margin-top: -48.5px;
-        text-align: right;
-          font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: 18px;
-        font-size: 16px;
-        color: rgba(255,255,255,1);
-        letter-spacing: 0.1px;
-    }
-    #input_next_send_code {
-     
-    font-size: 16px;
-        color:rgb(92, 90, 90) !important;
-        display: inline-block;
-        background: none;
-        width: 150px;
-        padding-bottom: 8px ;
-        margin: 8px ;
-        border-bottom: 1px solid rgb(92, 90, 90);
-        box-sizing: border-box;
-        text-align: right;
-        fill: transparent;
-      outline: none;
-    }
-    #form_send_code{
-        position: relative;
-        left: 50px;
-        top: 260px;
-    }
-    #logoo_send_code {
-        position: absolute;
-        width: 36px;
-        height: 22px;
-        left: 100px;
-        top: 420px;
-        overflow: visible;
-        cursor: pointer;
-    }
-    #logo_send_code{
-        width: 80px;
-        height: 70px;
-    }
-    #img_send_code{
-        position: relative;
-        top: 40px;
-        left: 30px;
-        overflow: visible;
-        display: none;
-    }
-    #imgg_send_code{
-        position: relative;
-        width: 15px;
-        height: 10px;
-        top: 20px;
-        left: 20px;
-        overflow: visible;
-        display: block;
-    }
-    #imggg_send_code{
-        width: 50px;
-        height: 50px;
-        position: relative;
-        top: -500px;
-        left: -102px;
-        display: block;
-    }
-    .error_send_code{
-        margin-top: -5px;
-        margin-bottom: 5px;
-        padding: 0;
-        color: rgb(241, 26, 26);
-        font-family: "Bahij Helvetica";
-        font-weight: normal;
-        font-style: normal;
-    }
-    #input_next_send_code::placeholder{
-        color:  rgb(92, 90, 90) !important;
-        font-size: 20px;
-       
-                }
-}
-@media screen and (max-width:300px)and (min-width:251px){
-    #mobile_svg_send_code {
-        fill: url(#mobile_svg_send_code);
-        width: 300px;
-        height: 358px;
-    }
-
-    .mobile_svg_send_code {
-        width: 300px;
-        height: 358px;
-        position: absolute;
-        top: -100px;
-        overflow: visible;
-        transform: translate(-132.517px, 160.426px) matrix(1,0,0,1,132.5166,-160.426) rotate(180deg);
-        transform-origin: center;
-        display: block;
-    }
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        border: none;
-    }
-    #send_code {
-        position: absolute;
-        width: 100%;
-        height:  100%;
-        background-color: rgb(255, 255, 255);
-        overflow: hidden;
-    
-    }
-
-    #background_svg_send_code_1{
-        fill: url(#background_svg_send_code_1);
-        stroke: rgba(112,112,112,1);
-    }
-    #background_svg_send_code {
-        width: 910px;
-        height: 154px;
-        position: absolute;
-        left: -550px;
-        top: 130px;
-        overflow: hidden;
-        transform: matrix(1,0,0,1,803,-37) rotate(-90deg);
-        transform-origin: center;
-        display: none;
-    }
-
-    #button_next_send_code {
-        position: relative;
-        top: -5px;
-        left: 2px;
-        margin-top: 12px;
-        width: 170px;
-        height: 30px;
-        padding-top: -2px;
-        cursor: pointer;
-          font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: bold;
-        font-size: 20px;
-        color: white;
-        letter-spacing: -0.4px;
-        border-radius: 50px;
-        background-color: rgba(60,152,189,1);
-    }
-    #para_first_send_code{
-        /* position: relative; */
-        top: 70px;
-        left: -200px;
-        position: absolute;
-        overflow: hidden;
-        text-align: right;
-        font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: 62px;
-        font-size: 26px;
-        color: rgba(255,255,255,1);
-        letter-spacing: -0.4px;
-        line-height: 40px;
-        
-    }
-    
-    #para_second_send_code {
-        top: 210px;
-        left: -445px;
-        overflow: visible;
-        line-height: 110px;
-        margin-top: -48.5px;
-        text-align: right;
-          font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: 18px;
-        font-size: 16px;
-        color: rgba(255,255,255,1);
-        letter-spacing: 0.1px;
-    }
-    #input_next_send_code {
-     
-    font-size: 16px;
-        color:rgb(92, 90, 90) !important;
-        display: inline-block;
-        background: none;
-        width: 170px;
-        padding-bottom: 8px ;
-        margin: 8px ;
-        border-bottom: 1px solid rgb(92, 90, 90);
-        box-sizing: border-box;
-        text-align: right;
-        fill: transparent;
-      outline: none;
-    }
-    #form_send_code{
-        position: relative;
-        left: 60px;
-        top: 260px;
-    }
-    #logoo_send_code {
-        position: absolute;
-        width: 36px;
-        height: 22px;
-        left: 115px;
-        top: 420px;
-        overflow: visible;
-        cursor: pointer;
-    }
-    #logo_send_code{
-        width: 90px;
-        height: 80px;
-    }
-    #img_send_code{
-        position: relative;
-        top: 40px;
-        left: 30px;
-        overflow: visible;
-        display: none;
-    }
-    #imgg_send_code{
-        position: relative;
-        width: 20px;
-        height: 15px;
-        top: 30px;
-        left: 30px;
-        overflow: visible;
-        display: block;
-    }
-    #imggg_send_code{
-        width: 70px;
-        height: 70px;
-        position: relative;
-        top: -508px;
-        left: -115px;
-        display: block;
-    }
-    .error_send_code{
-        margin-top: -5px;
-        margin-bottom: 5px;
-        padding: 0;
-        color: rgb(241, 26, 26);
-        font-family: "Bahij Helvetica";
-        font-weight: normal;
-        font-style: normal;
-    }
-    #input_next_send_code::placeholder{
-        color:  rgb(92, 90, 90) !important;
-        font-size: 20px;
-       
-                }
-}
-@media screen and (max-width:320px)and (min-width:301px){
-    #mobile_svg_send_code {
-        fill: url(#mobile_svg_send_code);
-        width: 320px;
-        height: 358px;
-    }
-
-    .mobile_svg_send_code {
-        width: 320px;
-        height: 358px;
-        position: absolute;
-        top: -100px;
-        overflow: visible;
-        transform: translate(-132.517px, 160.426px) matrix(1,0,0,1,132.5166,-160.426) rotate(180deg);
-        transform-origin: center;
-        display: block;
-    }
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        border: none;
-    }
-    #send_code {
-        position: absolute;
-        width: 100%;
-        height:  100%;
-        background-color: rgb(255, 255, 255);
-        overflow: hidden;
-    
-    }
-
-    #background_svg_send_code_1{
-        fill: url(#background_svg_send_code_1);
-        stroke: rgba(112,112,112,1);
-    }
-    #background_svg_send_code {
-        width: 910px;
-        height: 154px;
-        position: absolute;
-        left: -550px;
-        top: 130px;
-        overflow: hidden;
-        transform: matrix(1,0,0,1,803,-37) rotate(-90deg);
-        transform-origin: center;
-        display: none;
-    }
-
-    #button_next_send_code {
-        position: relative;
-        top: -5px;
-        left: 2px;
-        margin-top: 12px;
-        width: 190px;
-        height: 30px;
-        padding-top: -2px;
-        cursor: pointer;
-          font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: bold;
-        font-size: 20px;
-        color: white;
-        letter-spacing: -0.4px;
-        border-radius: 50px;
-        background-color: rgba(60,152,189,1);
-    }
-    #para_first_send_code{
-        /* position: relative; */
-        top: 50px;
-        left: -187px;
-        position: absolute;
-        overflow: hidden;
-        line-height: 117px;
-        text-align: right;
-        font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: 62px;
-        font-size: 26px;
-        color: rgba(255,255,255,1);
-        letter-spacing: -0.4px;
-        line-height: 50px;
-        
-    }
-    
-    #para_second_send_code {
-        top: 210px;
-        left: -430px;
-        overflow: visible;
-        line-height: 110px;
-        margin-top: -48.5px;
-        text-align: right;
-          font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: 18px;
-        font-size: 16px;
-        color: rgba(255,255,255,1);
-        letter-spacing: 0.1px;
-    }
-    #input_next_send_code {
-     
-    font-size: 16px;
-        color:rgb(92, 90, 90) !important;
-        display: inline-block;
-        background: none;
-        width: 190px;
-        padding-bottom: 8px ;
-        margin: 8px ;
-        border-bottom: 1px solid rgb(92, 90, 90);
-        box-sizing: border-box;
-        text-align: right;
-        fill: transparent;
-      outline: none;
-    }
-    #form_send_code{
-        position: relative;
-        left: 60px;
-        top: 260px;
-    }
-    #logoo_send_code {
-        position: absolute;
-        width: 36px;
-        height: 22px;
-        left: 120px;
-        top: 420px;
-        overflow: visible;
-        cursor: pointer;
-    }
-    #logo_send_code{
-        width: 90px;
-        height: 80px;
-    }
-    #img_send_code{
-        position: relative;
-        top: 40px;
-        left: 30px;
-        overflow: visible;
-        display: none;
-    }
-    #imgg_send_code{
-        position: relative;
-        width: 20px;
-        height: 15px;
-        top: 30px;
-        left: 30px;
-        overflow: visible;
-        display: block;
-    }
-    #imggg_send_code{
-        width: 70px;
-        height: 70px;
-        position: relative;
-        top: -508px;
-        left: -120px;
-        display: block;
-    }
-    .error_send_code{
-        margin-top: -5px;
-        margin-bottom: 5px;
-        padding: 0;
-        color: rgb(241, 26, 26);
-        font-family: "Bahij Helvetica";
-        font-weight: normal;
-        font-style: normal;
-    }
-    #input_next_send_code::placeholder{
-        color:  rgb(92, 90, 90) !important;
-        font-size: 20px;
-       
-                }
-}
-@media screen and (max-width:360px)and (min-width:321px){
-    #mobile_svg_send_code {
-        fill: url(#mobile_svg_send_code);
-        width: 360px;
-        height: 358px;
-    }
-
-    .mobile_svg_send_code {
-        width: 360px;
-        height: 358px;
-        position: absolute;
-        top: -90px;
-        overflow: visible;
-        transform: translate(-132.517px, 160.426px) matrix(1,0,0,1,132.5166,-160.426) rotate(180deg);
-        transform-origin: center;
-        display: block;
-    }
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        border: none;
-    }
-    #send_code {
-        position: absolute;
-        width: 100%;
-        height:  100%;
-        background-color: rgb(255, 255, 255);
-        overflow: hidden;
-    
-    }
-
-    #background_svg_send_code_1{
-        fill: url(#background_svg_send_code_1);
-        stroke: rgba(112,112,112,1);
-    }
-    #background_svg_send_code {
-        width: 910px;
-        height: 154px;
-        position: absolute;
-        left: -550px;
-        top: 130px;
-        overflow: hidden;
-        transform: matrix(1,0,0,1,803,-37) rotate(-90deg);
-        transform-origin: center;
-        display: none;
-    }
-
-    #button_next_send_code {
-        position: relative;
-        top: -5px;
-        left: 2px;
-        margin-top: 12px;
-        width: 220px;
-        height: 35px;
-        cursor: pointer;
-          font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: bold;
-        font-size: 20px;
-        color: white;
-        letter-spacing: -0.4px;
-        border-radius: 50px;
-        background-color: rgba(60,152,189,1);
-    }
-    #para_first_send_code{
-        /* position: relative; */
-        top: 50px;
-        left: 40px;
-        position: absolute;
-        overflow: hidden;
-        line-height: 117px;
-        text-align: right;
-        font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: 62px;
-        font-size: 30px;
-        color: rgba(255,255,255,1);
-        letter-spacing: -0.4px;
-        line-height: 50px;
-        
-    }
-    
-    #para_second_send_code {
-        top: 210px;
-        left: -395px;
-        overflow: visible;
-        line-height: 110px;
-        margin-top: -48.5px;
-        text-align: right;
-          font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: 18px;
-        font-size: 16px;
-        color: rgba(255,255,255,1);
-        letter-spacing: 0.1px;
-    }
-    #input_next_send_code {
-     
-    font-size: 18px;
-        color:rgb(92, 90, 90) !important;
-        display: inline-block;
-        background: none;
-        width: 220px;
-        padding-bottom: 8px ;
-        margin: 8px ;
-        border-bottom: 1px solid rgb(92, 90, 90);
-        box-sizing: border-box;
-        text-align: right;
-        fill: transparent;
-      outline: none;
-    }
-    #form_send_code{
-        position: relative;
-        left: 60px;
-        top: 260px;
-    }
-    #logoo_send_code {
-        position: absolute;
-        width: 36px;
-        height: 22px;
-        left: 140px;
-        top: 440px;
-        overflow: visible;
-        cursor: pointer;
-    }
-    #logo_send_code{
-        width: 100px;
-        height: 90px;
-    }
-    #img_send_code{
-        position: relative;
-        top: 40px;
-        left: 30px;
-        overflow: visible;
-        display: none;
-    }
-    #imgg_send_code{
-        position: relative;
-        width: 20px;
-        height: 15px;
-        top: 30px;
-        left: 30px;
-        overflow: visible;
-        display: block;
-    }
-    #imggg_send_code{
-        width: 70px;
-        height: 70px;
-        position: relative;
-        top: -540px;
-        left: -143px;
-        display: block;
-    }
-    .error_send_code{
-        margin: 0;padding: 0;
-        color: rgb(241, 26, 26);
-        font-family: "Bahij Helvetica";
-        font-weight: bold;
-        font-style: normal;
-    }
-    #input_next_send_code::placeholder{
-        color:  rgb(92, 90, 90) !important;
-        font-size: 20px;
-       
-                }
-}
-@media screen and (max-width:386px)and (min-width:361px){
-    #mobile_svg_send_code {
-        fill: url(#mobile_svg_send_code);
-        width: 385px;
-        height: 358px;
-    }
-
-    .mobile_svg_send_code {
-        width: 385px;
-        height: 358px;
-        position: absolute;
-        top: -70px;
-        overflow: visible;
-        transform: translate(-132.517px, 160.426px) matrix(1,0,0,1,132.5166,-160.426) rotate(180deg);
-        transform-origin: center;
-        display: block;
-    }
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        border: none;
-    }
-    #send_code {
-        position: absolute;
-        width: 100%;
-        height:  100%;
-        background-color: rgb(255, 255, 255);
-        overflow: hidden;
-    
-    }
-
-    #background_svg_send_code_1{
-        fill: url(#background_svg_send_code_1);
-        stroke: rgba(112,112,112,1);
-    }
-    #background_svg_send_code {
-        width: 910px;
-        height: 154px;
-        position: absolute;
-        left: -550px;
-        top: 130px;
-        overflow: hidden;
-        transform: matrix(1,0,0,1,803,-37) rotate(-90deg);
-        transform-origin: center;
-        display: none;
-    }
-
-    #button_next_send_code {
-        position: relative;
-        top: -5px;
-        left: 2px;
-        margin-top: 12px;
-        width: 260px;
-        height: 35px;
-        cursor: pointer;
-          font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: bold;
-        font-size: 20px;
-        color: white;
-        letter-spacing: -0.4px;
-        border-radius: 50px;
-        background-color: rgba(60,152,189,1);
-    }
-    #para_first_send_code{
-        /* position: relative; */
-        top: 50px;
-        left: -125px;
-        position: absolute;
-        overflow: hidden;
-        line-height: 117px;
-        text-align: right;
-          font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: 62px;
-        font-size: 34px;
-        color: rgba(255,255,255,1);
-        letter-spacing: -0.4px;
-        line-height: 50px;
-        
-    }
-    
-    #para_second_send_code {
-        top: 220px;
-        left: -370px;
-        position: absolute;
-        overflow: visible;
-        line-height: 110px;
-        margin-top: -48.5px;
-        text-align: right;
-          font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: 18px;
-        font-size: 18px;
-        color: rgba(255,255,255,1);
-        letter-spacing: 0.1px;
-    }
-    #input_next_send_code {
-     
-    font-size: 20px;
-        color:rgb(92, 90, 90) !important;
-        display: inline-block;
-        background: none;
-        width: 260px;
-        padding-bottom: 8px ;
-        margin: 8px ;
-        border-bottom: 1px solid rgb(92, 90, 90);
-        box-sizing: border-box;
-        text-align: right;
-        fill: transparent;
-      outline: none;
-    }
-    #form_send_code{
-        position: relative;
-        left: 50px;
-        top: 280px;
-    }
-    #logoo_send_code {
-        position: absolute;
-        width: 36px;
-        height: 22px;
-        left: 140px;
-        top: 460px;
-        overflow: visible;
-        cursor: pointer;
-    }
-    #logo_send_code{
-        width: 120px;
-        height: 110px;
-    }
-    #img_send_code{
-        position: relative;
-        top: 40px;
-        left: 30px;
-        overflow: visible;
-        display: none;
-    }
-    #imgg_send_code{
-        position: relative;
-        width: 20px;
-        height: 15px;
-        top: 30px;
-        left: 30px;
-        overflow: visible;
-        display: block;
-    }
-    #imggg_send_code{
-        width: 70px;
-        height: 70px;
-        position: relative;
-        top: -580px;
-        left: -143px;
-        display: block;
-    }
-    .error_send_code{
-        margin: 0;padding: 0;
-        color: rgb(241, 26, 26);
-        font-family: "Bahij Helvetica";
-        font-weight: bold;
-        font-style: normal;
-    }
-    #input_next_send_code::placeholder{
-        color:  rgb(92, 90, 90) !important;
-        font-size: 20px;
-       
-                }
-}
-@media screen and (max-width:400px)and (min-width:387px){
-    #mobile_svg_send_code {
-        fill: url(#mobile_svg_send_code);
-        width: 400px;
-        height: 358px;
-    }
-
-    .mobile_svg_send_code {
-        width: 400px;
-        height: 358px;
-        position: absolute;
-        top: -70px;
-        overflow: visible;
-        transform: translate(-132.517px, 160.426px) matrix(1,0,0,1,132.5166,-160.426) rotate(180deg);
-        transform-origin: center;
-        display: block;
-    }
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        border: none;
-    }
-    #send_code {
-        position: absolute;
-        width: 100%;
-        height:  100%;
-        background-color: rgb(255, 255, 255);
-        overflow: hidden;
-    
-    }
-
-    #background_svg_send_code_1{
-        fill: url(#background_svg_send_code_1);
-        stroke: rgba(112,112,112,1);
-    }
-    #background_svg_send_code {
-        width: 910px;
-        height: 154px;
-        position: absolute;
-        left: -550px;
-        top: 130px;
-        overflow: hidden;
-        transform: matrix(1,0,0,1,803,-37) rotate(-90deg);
-        transform-origin: center;
-        display: none;
-    }
-
-    #button_next_send_code {
-        position: relative;
-        top: -5px;
-        left: 2px;
-        margin-top: 12px;
-        width: 260px;
-        height: 35px;
-        cursor: pointer;
-          font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: bold;
-        font-size: 20px;
-        color: white;
-        letter-spacing: -0.4px;
-        border-radius: 50px;
-        background-color: rgba(60,152,189,1);
-    }
-    #para_first_send_code{
-        /* position: relative; */
-        top: 50px;
-        left: -120px;
-        position: absolute;
-        overflow: hidden;
-        line-height: 117px;
-        text-align: right;
-          font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: 62px;
-        font-size: 34px;
-        color: rgba(255,255,255,1);
-        letter-spacing: -0.4px;
-        line-height: 50px;
-        
-    }
-    
-    #para_second_send_code {
-        top: 220px;
-        left: -365px;
-        position: absolute;
-        overflow: visible;
-        line-height: 110px;
-        margin-top: -48.5px;
-        text-align: right;
-          font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: 18px;
-        font-size: 18px;
-        color: rgba(255,255,255,1);
-        letter-spacing: 0.1px;
-    }
-    #input_next_send_code {
-     
-    font-size: 20px;
-        color:rgb(92, 90, 90) !important;
-        display: inline-block;
-        background: none;
-        width: 260px;
-        padding-bottom: 8px ;
-        margin: 8px ;
-        border-bottom: 1px solid rgb(92, 90, 90);
-        box-sizing: border-box;
-        text-align: right;
-        fill: transparent;
-      outline: none;
-    }
-    #form_send_code{
-        position: relative;
-        left: 60px;
-        top: 280px;
-    }
-    #logoo_send_code {
-        position: absolute;
-        width: 36px;
-        height: 22px;
-        left: 150px;
-        top: 450px;
-        overflow: visible;
-        cursor: pointer;
-    }
-    #logo_send_code{
-        width: 120px;
-        height: 110px;
-    }
-    #img_send_code{
-        position: relative;
-        top: 40px;
-        left: 30px;
-        overflow: visible;
-        display: none;
-    }
-    #imgg_send_code{
-        position: relative;
-        width: 20px;
-        height: 15px;
-        top: 30px;
-        left: 30px;
-        overflow: visible;
-        display: block;
-    }
-    #imggg_send_code{
-        width: 70px;
-        height: 70px;
-        position: relative;
-        top: -570px;
-        left: -153px;
-        display: block;
-    }
-    .error_send_code{
-        margin: 0;padding: 0;
-        color: rgb(241, 26, 26);
-        font-family: "Bahij Helvetica";
-        font-weight: bold;
-        font-style: normal;
-    }
-    #input_next_send_code::placeholder{
-        color:  rgb(92, 90, 90) !important;
-        font-size: 20px;
-       
-                }
-}
-@media screen and (max-width:450px)and (min-width:401px){
-    #mobile_svg_send_code {
-        fill: url(#mobile_svg_send_code);
-        width: 450px;
-        height: 358px;
-    }
-
-    .mobile_svg_send_code {
-        width: 450px;
-        height: 358px;
-        position: absolute;
-        top: -90px;
-        overflow: visible;
-        transform: translate(-132.517px, 160.426px) matrix(1,0,0,1,132.5166,-160.426) rotate(180deg);
-        transform-origin: center;
-        display: block;
-    }
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        border: none;
-    }
-    #send_code {
-        position: absolute;
-        width: 100%;
-        height:  100%;
-        background-color: rgb(255, 255, 255);
-        overflow: hidden;
-    
-    }
-
-    #background_svg_send_code_1{
-        fill: url(#background_svg_send_code_1);
-        stroke: rgba(112,112,112,1);
-    }
-    #background_svg_send_code {
-        width: 910px;
-        height: 154px;
-        position: absolute;
-        left: -550px;
-        top: 130px;
-        overflow: hidden;
-        transform: matrix(1,0,0,1,803,-37) rotate(-90deg);
-        transform-origin: center;
-        display: none;
-    }
-
-    #button_next_send_code {
-        position: relative;
-        top: -5px;
-        left: 2px;
-        margin-top: 12px;
-        width: 310px;
-        height: 35px;
-        cursor: pointer;
-          font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: bold;
-        font-size: 20px;
-        color: white;
-        letter-spacing: -0.4px;
-        border-radius: 50px;
-        background-color: rgba(60,152,189,1);
-    }
-    #para_first_send_code{
-        /* position: relative; */
-        top: 50px;
-        left: -70px;
-        position: absolute;
-        overflow: hidden;
-        line-height: 117px;
-        text-align: right;
-          font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: 62px;
-        font-size: 38px;
-        color: rgba(255,255,255,1);
-        letter-spacing: -0.4px;
-        line-height: 50px;
-        
-    }
-    
-    #para_second_send_code {
-        top: 220px;
-        left: -315px;
-        position: absolute;
-        overflow: visible;
-        line-height: 110px;
-        margin-top: -48.5px;
-        text-align: right;
-          font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: 18px;
-        font-size: 18px;
-        color: rgba(255,255,255,1);
-        letter-spacing: 0.1px;
-    }
-    #input_next_send_code {
-     
-    font-size: 20px;
-        color:rgb(92, 90, 90) !important;
-        display: inline-block;
-        background: none;
-        width: 310px;
-        padding-bottom: 8px ;
-        margin: 8px ;
-        border-bottom: 1px solid rgb(92, 90, 90);
-        box-sizing: border-box;
-        text-align: right;
-        fill: transparent;
-      outline: none;
-    }
-    #form_send_code{
-        position: relative;
-        left: 60px;
-        top: 260px;
-    }
-    #logoo_send_code {
-        position: absolute;
-        width: 36px;
-        height: 22px;
-        left: 170px;
-        top: 420px;
-        overflow: visible;
-        cursor: pointer;
-    }
-    #logo_send_code{
-        width: 120px;
-        height: 110px;
-    }
-    #img_send_code{
-        position: relative;
-        top: 40px;
-        left: 30px;
-        overflow: visible;
-        display: none;
-    }
-    #imgg_send_code{
-        position: relative;
-        width: 20px;
-        height: 15px;
-        top: 30px;
-        left: 30px;
-        overflow: visible;
-        display: block;
-    }
-    #imggg_send_code{
-        width: 70px;
-        height: 70px;
-        position: relative;
-        top: -540px;
-        left: -173px;
-        display: block;
-    }
-    .error_send_code{
-        margin: 0;padding: 0;
-        color: rgb(241, 26, 26);
-        font-family: "Bahij Helvetica";
-        font-weight: bold;
-        font-style: normal;
-    }
-    #input_next_send_code::placeholder{
-        color:  rgb(92, 90, 90) !important;
-        font-size: 20px;
-       
-                }
-}
-@media screen and (max-width:500px)and (min-width:451px){
-    #mobile_svg_send_code {
-        fill: url(#mobile_svg_send_code);
-        width: 500px;
-        height: 358px;
-    }
-
-    .mobile_svg_send_code {
-        width: 500px;
-        height: 358px;
-        position: absolute;
-        top: -90px;
-        overflow: visible;
-        transform: translate(-132.517px, 160.426px) matrix(1,0,0,1,132.5166,-160.426) rotate(180deg);
-        transform-origin: center;
-        display: block;
-    }
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        border: none;
-    }
-    #send_code {
-        position: absolute;
-        width: 100%;
-        height:  100%;
-        background-color: rgb(255, 255, 255);
-        overflow: hidden;
-    
-    }
-
-    #background_svg_send_code_1{
-        fill: url(#background_svg_send_code_1);
-        stroke: rgba(112,112,112,1);
-    }
-    #background_svg_send_code {
-        width: 910px;
-        height: 154px;
-        position: absolute;
-        left: -550px;
-        top: 130px;
-        overflow: hidden;
-        transform: matrix(1,0,0,1,803,-37) rotate(-90deg);
-        transform-origin: center;
-        display: none;
-    }
-
-    #button_next_send_code {
-        position: relative;
-        top: -5px;
-        left: 2px;
-        margin-top: 12px;
-        width: 370px;
-        height: 35px;
-        cursor: pointer;
-          font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: bold;
-        font-size: 20px;
-        color: white;
-        letter-spacing: -0.4px;
-        border-radius: 50px;
-        background-color: rgba(60,152,189,1);
-    }
-    #para_first_send_code{
-        /* position: relative; */
-        top: 50px;
-        left: -20px;
-        position: absolute;
-        overflow: hidden;
-        line-height: 117px;
-        text-align: right;
-          font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: 62px;
-        font-size: 38px;
-        color: rgba(255,255,255,1);
-        letter-spacing: -0.4px;
-        line-height: 50px;
-        
-    }
-    
-    #para_second_send_code {
-        top: 220px;
-        left: -265px;
-        position: absolute;
-        overflow: visible;
-        line-height: 110px;
-        margin-top: -48.5px;
-        text-align: right;
-          font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: 18px;
-        font-size: 18px;
-        color: rgba(255,255,255,1);
-        letter-spacing: 0.1px;
-    }
-    #input_next_send_code {
-     
-    font-size: 20px;
-        color:rgb(92, 90, 90) !important;
-        display: inline-block;
-        background: none;
-        width: 370px;
-        padding-bottom: 8px ;
-        margin: 8px ;
-        border-bottom: 1px solid rgb(92, 90, 90);
-        box-sizing: border-box;
-        text-align: right;
-        fill: transparent;
-      outline: none;
-    }
-    #form_send_code{
-        position: relative;
-        left: 60px;
-        top: 260px;
-    }
-    #logoo_send_code {
-        position: absolute;
-        width: 36px;
-        height: 22px;
-        left: 200px;
-        top: 420px;
-        overflow: visible;
-        cursor: pointer;
-    }
-    #logo_send_code{
-        width: 120px;
-        height: 110px;
-    }
-    #img_send_code{
-        position: relative;
-        top: 40px;
-        left: 30px;
-        overflow: visible;
-        display: none;
-    }
-    #imgg_send_code{
-        position: relative;
-        width: 20px;
-        height: 15px;
-        top: 30px;
-        left: 30px;
-        overflow: visible;
-        display: block;
-    }
-    #imggg_send_code{
-        width: 70px;
-        height: 70px;
-        position: relative;
-        top: -540px;
-        left: -203px;
-        display: block;
-    }
-    .error_send_code{
-        margin: 0;padding: 0;
-        color: rgb(241, 26, 26);
-        font-family: "Bahij Helvetica";
-        font-weight: bold;
-        font-style: normal;
-    }
-    #input_next_send_code::placeholder{
-        color:  rgb(92, 90, 90) !important;
-        font-size: 20px;
-       
-                }
-}
-@media screen and (max-width:550px)and (min-width:501px){
-    #mobile_svg_send_code {
-        fill: url(#mobile_svg_send_code);
-        width: 550px;
-        height: 358px;
-    }
-
-    .mobile_svg_send_code {
-        width: 550px;
-        height: 358px;
-        position: absolute;
-        top: -90px;
-        overflow: visible;
-        transform: translate(-132.517px, 160.426px) matrix(1,0,0,1,132.5166,-160.426) rotate(180deg);
-        transform-origin: center;
-        display: block;
-    }
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        border: none;
-    }
-    #send_code {
-        position: absolute;
-        width: 100%;
-        height:  100%;
-        background-color: rgb(255, 255, 255);
-        overflow: hidden;
-    
-    }
-
-    #background_svg_send_code_1{
-        fill: url(#background_svg_send_code_1);
-        stroke: rgba(112,112,112,1);
-    }
-    #background_svg_send_code {
-        width: 910px;
-        height: 154px;
-        position: absolute;
-        left: -550px;
-        top: 130px;
-        overflow: hidden;
-        transform: matrix(1,0,0,1,803,-37) rotate(-90deg);
-        transform-origin: center;
-        display: none;
-    }
-
-    #button_next_send_code {
-        position: relative;
-        top: -5px;
-        left: 2px;
-        margin-top: 12px;
-        width: 390px;
-        height: 35px;
-        cursor: pointer;
-          font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: bold;
-        font-size: 20px;
-        color: white;
-        letter-spacing: -0.4px;
-        border-radius: 50px;
-        background-color: rgba(60,152,189,1);
-    }
-    #para_first_send_code{
-        /* position: relative; */
-        top: 50px;
-        left: 10px;
-        position: absolute;
-        overflow: hidden;
-        line-height: 117px;
-        text-align: right;
-          font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: 62px;
-        font-size: 40px;
-        color: rgba(255,255,255,1);
-        letter-spacing: -0.4px;
-        line-height: 50px;
-        
-    }
-    
-    #para_second_send_code {
-        top: 220px;
-        left: -235px;
-        position: absolute;
-        overflow: visible;
-        line-height: 110px;
-        margin-top: -48.5px;
-        text-align: right;
-          font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: 18px;
-        font-size: 20px;
-        color: rgba(255,255,255,1);
-        letter-spacing: 0.1px;
-    }
-    #input_next_send_code {
-     
-    font-size: 20px;
-        color:rgb(92, 90, 90) !important;
-        display: inline-block;
-        background: none;
-        width: 390px;
-        padding-bottom: 8px ;
-        margin: 8px ;
-        border-bottom: 1px solid rgb(92, 90, 90);
-        box-sizing: border-box;
-        text-align: right;
-        fill: transparent;
-      outline: none;
-    }
-    #form_send_code{
-        position: relative;
-        left: 70px;
-        top: 260px;
-    }
-    #logoo_send_code {
-        position: absolute;
-        width: 36px;
-        height: 22px;
-        left: 220px;
-        top: 420px;
-        overflow: visible;
-        cursor: pointer;
-    }
-    #logo_send_code{
-        width: 120px;
-        height: 110px;
-    }
-    #img_send_code{
-        position: relative;
-        top: 40px;
-        left: 30px;
-        overflow: visible;
-        display: none;
-    }
-    #imgg_send_code{
-        position: relative;
-        width: 20px;
-        height: 15px;
-        top: 30px;
-        left: 40px;
-        overflow: visible;
-        display: block;
-    }
-    #imggg_send_code{
-        width: 80px;
-        height: 80px;
-        position: relative;
-        top: -540px;
-        left: -223px;
-        display: block;
-    }
-    .error_send_code{
-        margin: 0;padding: 0;
-        color: rgb(241, 26, 26);
-        font-family: "Bahij Helvetica";
-        font-weight: bold;
-        font-style: normal;
-    }
-    #input_next_send_code::placeholder{
-        color:  rgb(92, 90, 90) !important;
-        font-size: 20px;
-       
-                }
-}
-@media screen and (max-width:576px)and (min-width:551px){
-    #mobile_svg_send_code {
-        fill: url(#mobile_svg_send_code);
-        width: 576px;
-        height: 358px;
-    }
-
-    .mobile_svg_send_code {
-        width: 576px;
-        height: 358px;
-        position: absolute;
-        top: -90px;
-        overflow: visible;
-        transform: translate(-132.517px, 160.426px) matrix(1,0,0,1,132.5166,-160.426) rotate(180deg);
-        transform-origin: center;
-        display: block;
-    }
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        border: none;
-    }
-    #send_code {
-        position: absolute;
-        width: 100%;
-        height:  100%;
-        background-color: rgba(255,255,255,1);
-        overflow: hidden;
-    
-    }
-
-    #background_svg_send_code_1{
-        fill: url(#background_svg_send_code_1);
-        stroke: rgba(112,112,112,1);
-    }
-    #background_svg_send_code {
-        width: 910px;
-        height: 154px;
-        position: absolute;
-        left: -550px;
-        top: 130px;
-        overflow: hidden;
-        transform: matrix(1,0,0,1,803,-37) rotate(-90deg);
-        transform-origin: center;
-        display: none;
-    }
-
-    #button_next_send_code {
-        position: relative;
-        top: -5px;
-        left: 2px;
-        margin-top: 12px;
-        width: 400px;
-        height: 35px;
-        cursor: pointer;
-          font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: bold;
-        font-size: 20px;
-        color: white;
-        letter-spacing: -0.4px;
-        border-radius: 50px;
-        background-color: rgba(60,152,189,1);
-    }
-    #para_first_send_code{
-        /* position: relative; */
-        top: 50px;
-        left: 30px;
-        position: absolute;
-        overflow: hidden;
-        line-height: 117px;
-        text-align: right;
-          font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: 62px;
-        font-size: 40px;
-        color: rgba(255,255,255,1);
-        letter-spacing: -0.4px;
-        line-height: 50px;
-        
-    }
-    
-    #para_second_send_code {
-        top: 220px;
-        left: -215px;
-        position: absolute;
-        overflow: visible;
-        line-height: 110px;
-        margin-top: -48.5px;
-        text-align: right;
-          font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: 18px;
-        font-size: 20px;
-        color: rgba(255,255,255,1);
-        letter-spacing: 0.1px;
-    }
-    #input_next_send_code {
-     
-    font-size: 20px;
-        color:rgb(92, 90, 90) !important;
-        display: inline-block;
-        background: none;
-        width: 400px;
-        padding-bottom: 8px ;
-        margin: 8px ;
-        border-bottom: 1px solid rgb(92, 90, 90);
-        box-sizing: border-box;
-        text-align: right;
-        fill: transparent;
-      outline: none;
-    }
-    #form_send_code{
-        position: relative;
-        left: 80px;
-        top: 260px;
-    }
-    #logoo_send_code {
-        position: absolute;
-        width: 36px;
-        height: 22px;
-        left: 230px;
-        top: 420px;
-        overflow: visible;
-        cursor: pointer;
-    }
-    #logo_send_code{
-        width: 130px;
-        height: 120px;
-    }
-    #img_send_code{
-        position: relative;
-        top: 40px;
-        left: 30px;
-        overflow: visible;
-        display: none;
-    }
-    #imgg_send_code{
-        position: relative;
-        width: 20px;
-        height: 15px;
-        top: 30px;
-        left: 40px;
-        overflow: visible;
-        display: block;
-    }
-    #imggg_send_code{
-        width: 82px;
-        height: 82px;
-        position: relative;
-        top: -550px;
-        left: -233px;
-        display: block;
-    }
-    .error_send_code{
-        margin: 0;padding: 0;
-        color: rgb(241, 26, 26);
-        font-family: "Bahij Helvetica";
-        font-weight: bold;
-        font-style: normal;
-    }
-    #input_next_send_code::placeholder{
-        color:  rgb(92, 90, 90) !important;
-        font-size: 20px;
-                }
-}
-
-/* computer */
-
-@media screen and (max-width:600px)and (min-width:575px){
-    
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        border: none;
-    }
-    #send_code {
-        position: absolute;
-        width: 100%;
-        height:  100%;
-        background-color: rgb(255, 255, 255);
-        overflow: hidden;
-    
-    }
-    
-    #background_svg_send_code_1{
-        fill: url(#background_svg_send_code_1);
-        stroke: rgba(112,112,112,1);
-        height: 900px;
-                width: 580px;
-    }
-    #background_svg_send_code {
-        position: absolute;
-        left: -940px;
-        top: 80px;
-        overflow: visible;
-        transform: matrix(1,0,0,1,803,-37) rotate(-90deg);
-        transform-origin: center;
-    }
-    
-    #button_next_send_code {
-        margin-top: 12px;
-        width: 100px;
-        height: 30px;
-        cursor: pointer;
-        font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: bold;
-        font-size: 18px;
-        color: rgb(39, 115, 138);
-        letter-spacing: -0.4px;
-        border-radius: 50px;
-        margin-left: 8px;
-    }
-    #para_first_send_code{
-        right: 30px;
-        left: auto;
-        top: 120px;
-        position: absolute;
-        overflow: hidden;
-        line-height: 50px !important;
-        text-align: right;
-          font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: 12px;
-        font-size: 28px;
-        color: rgba(255,255,255,1);
-        letter-spacing: -0.4px;
-
-    }
-    
-    #para_second_send_code {
-        right: 30px;
-        left: auto;
-        top: 310px;
-        position: absolute;
-        overflow: visible;
-        line-height: 117px;
-        margin-top: -70.5px;
-        text-align: right;
-          font-family: "Bahij Helvetica";
-        font-style: normal;
-        font-weight: 18px;
-        font-size: 10px;
-        color: rgba(255,255,255,1);
-        letter-spacing: 0.5px;
-    }
-    #input_next_send_code {
-    
-        color: white;
-        display: inline-block;
-        background: none;
-        width: 225px;
-        padding-bottom: 8px ;
-        margin: 8px ;
-        border-bottom: 1px solid white;
-        box-sizing: border-box;
-        text-align: right;
-        fill: transparent;
-      outline: none;
-    }
-    #form_send_code{
-        position: inherit;
-        top: 340px;
-        right: 30px;
-        left: auto;
-    }
-    #logoo_send_code{
-        position: absolute;
-        width: 36px;
-        height: 22px;
-        left: 40px;
-        top: 210px;
-        overflow: visible;
-        cursor: pointer;
-    }
-    #logo_send_code{
-        width: 170px;
-        height: 140px;
-    }
-    #img_send_code{
-        position: relative;
-        top: 40px;
-        left: 70px;
-        width: 25PX;
-    }
-    #imgg_send_code{
-        position: relative;
-        top: 40px;
-        left: 70px;
-        display: none;
-    }
-    #imggg_send_code{
-        position: relative;
-        top: 40px;
-        left: 70px;
-        display: none;
-    }
-    .error_send_code{
-        margin: 0;padding: 0;
-        color: rgb(241, 26, 26);
-        font-family: "Bahij Helvetica";
-        font-weight: bold;
-        font-style: normal;
-    }
-    #mobile_svg_send_code {
-        fill: url(#mobile_svg_send_code);
-    }
-    
-    .mobile_svg_send_code {
-        width: 360px;
-        height: 358px;
-        position: absolute;
-        overflow: visible;
-        transform: translate(-132.517px, 160.426px) matrix(1,0,0,1,132.5166,-160.426) rotate(180deg);
-        transform-origin: center;
-        display: none;
-    }
-}
-@media screen and (max-width:650px)and (min-width:601px){
-    
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            border: none;
-        }
-        #send_code {
-            position: absolute;
-            width: 100%;
-            height:  100%;
-            background-color: rgb(255, 255, 255);
-            overflow: hidden;
-        
-        }
-        
-        #background_svg_send_code_1{
-            fill: url(#background_svg_send_code_1);
-            stroke: rgba(112,112,112,1);
-            height: 900px;
-                    width: 580px;
-        }
-        #background_svg_send_code {
-            position: absolute;
-            left: -920px;
-            top: 80px;
-            overflow: visible;
-            transform: matrix(1,0,0,1,803,-37) rotate(-90deg);
-            transform-origin: center;
-        }
-        
-        #button_next_send_code {
-            margin-top: 12px;
-            width: 100px;
-            height: 30px;
-            cursor: pointer;
-            font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: bold;
-            font-size: 18px;
-            color: rgb(39, 115, 138);
-            letter-spacing: -0.4px;
-            border-radius: 50px;
-            margin-left: 8px;
-        }
-        #para_first_send_code{
-            right: 30px;
-            left: auto;
-            top: 120px;
-            position: absolute;
-            overflow: hidden;
-            line-height: 50px !important;
-            text-align: right;
-              font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: 12px;
-            font-size: 30px;
-            color: rgba(255,255,255,1);
-            letter-spacing: -0.4px;
-    
-        }
-        
-        #para_second_send_code {
-            right: 30px;
-            left: auto;
-            top: 310px;
-            position: absolute;
-            overflow: visible;
-            line-height: 117px;
-            margin-top: -70.5px;
-            text-align: right;
-              font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: 18px;
-            font-size: 10px;
-            color: rgba(255,255,255,1);
-            letter-spacing: 0.5px;
-        }
-        #input_next_send_code {
-        
-            color: white;
-            display: inline-block;
-            background: none;
-            width: 235px;
-            padding-bottom: 8px ;
-            margin: 8px ;
-            border-bottom: 1px solid white;
-            box-sizing: border-box;
-            text-align: right;
-            fill: transparent;
-          outline: none;
-        }
-        #form_send_code{
-            position: inherit;
-            top: 340px;
-            right: 30px;
-            left: auto;
-        }
-        #logoo_send_code{
-            position: absolute;
-            width: 36px;
-            height: 22px;
-            left: 40px;
-            top: 200px;
-            overflow: visible;
-            cursor: pointer;
-        }
-        #logo_send_code{
-            width: 180px;
-            height: 150px;
-        }
-        #img_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            width: 25PX;
-        }
-        #imgg_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            display: none;
-        }
-        #imggg_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            display: none;
-        }
-        .error_send_code{
-            margin: 0;padding: 0;
-            color: rgb(241, 26, 26);
-            font-family: "Bahij Helvetica";
-            font-weight: bold;
-            font-style: normal;
-        }
-        #mobile_svg_send_code {
-            fill: url(#mobile_svg_send_code);
-        }
-        
-        .mobile_svg_send_code {
-            width: 360px;
-            height: 358px;
-            position: absolute;
-            overflow: visible;
-            transform: translate(-132.517px, 160.426px) matrix(1,0,0,1,132.5166,-160.426) rotate(180deg);
-            transform-origin: center;
-            display: none;
-        }
-}
-@media screen and (max-width:700px)and (min-width:651px){
-    
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            border: none;
-        }
-        #send_code {
-            position: absolute;
-            width: 100%;
-            height:  100%;
-            background-color: rgb(255, 255, 255);
-            overflow: hidden;
-        
-        }
-        
-        #background_svg_send_code_1{
-            fill: url(#background_svg_send_code_1);
-            stroke: rgba(112,112,112,1);
-            height: 900px;
-                    width: 580px;
-        }
-        #background_svg_send_code {
-            position: absolute;
-            left: -900px;
-            top: 80px;
-            overflow: visible;
-            transform: matrix(1,0,0,1,803,-37) rotate(-90deg);
-            transform-origin: center;
-        }
-        
-        #button_next_send_code {
-            margin-top: 12px;
-            width: 100px;
-            height: 30px;
-            cursor: pointer;
-            font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: bold;
-            font-size: 18px;
-            color: rgb(39, 115, 138);
-            letter-spacing: -0.4px;
-            border-radius: 50px;
-            margin-left: 8px;
-        }
-        #para_first_send_code{
-            right: 30px;
-            left: auto;
-            top: 120px;
-            position: absolute;
-            overflow: hidden;
-            line-height: 50px !important;
-            text-align: right;
-              font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: 12px;
-            font-size: 32px;
-            color: rgba(255,255,255,1);
-            letter-spacing: -0.4px;
-    
-        }
-        
-        #para_second_send_code {
-            right: 30px;
-            left: auto;
-            top: 310px;
-            position: absolute;
-            overflow: visible;
-            line-height: 117px;
-            margin-top: -70.5px;
-            text-align: right;
-              font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: 18px;
-            font-size: 12px;
-            color: rgba(255,255,255,1);
-            letter-spacing: 0.5px;
-        }
-        #input_next_send_code {
-        
-            color: white;
-            display: inline-block;
-            background: none;
-            width: 255px;
-            padding-bottom: 8px ;
-            margin: 8px ;
-            border-bottom: 1px solid white;
-            box-sizing: border-box;
-            text-align: right;
-            fill: transparent;
-          outline: none;
-        }
-        #form_send_code{
-            position: inherit;
-            top: 340px;
-            right: 30px;
-            left: auto;
-        }
-        #logoo_send_code{
-            position: absolute;
-            width: 36px;
-            height: 22px;
-            left: 50px;
-            top: 200px;
-            overflow: visible;
-            cursor: pointer;
-        }
-        #logo_send_code{
-            width: 190px;
-            height: 160px;
-        }
-        #img_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            width: 25PX;
-        }
-        #imgg_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            display: none;
-        }
-        #imggg_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            display: none;
-        }
-        .error_send_code{
-            margin: 0;padding: 0;
-            color: rgb(241, 26, 26);
-            font-family: "Bahij Helvetica";
-            font-weight: bold;
-            font-style: normal;
-        }
-        #mobile_svg_send_code {
-            fill: url(#mobile_svg_send_code);
-        }
-        
-        .mobile_svg_send_code {
-            width: 360px;
-            height: 358px;
-            position: absolute;
-            overflow: visible;
-            transform: translate(-132.517px, 160.426px) matrix(1,0,0,1,132.5166,-160.426) rotate(180deg);
-            transform-origin: center;
-            display: none;
-        }
-} 
-@media screen and (max-width:750px)and (min-width:701px){
-    
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            border: none;
-        }
-        #send_code {
-            position: absolute;
-            width: 100%;
-            height:  100%;
-            background-color: rgb(255, 255, 255);
-            overflow: hidden;
-        
-        }
-        
-        #background_svg_send_code_1{
-            fill: url(#background_svg_send_code_1);
-            stroke: rgba(112,112,112,1);
-            height: 900px;
-                    width: 580px;
-        }
-        #background_svg_send_code {
-            position: absolute;
-            left: -880px;
-            top: 80px;
-            overflow: visible;
-            transform: matrix(1,0,0,1,803,-37) rotate(-90deg);
-            transform-origin: center;
-        }
-        
-        #button_next_send_code {
-            margin-top: 12px;
-            width: 100px;
-            height: 30px;
-            cursor: pointer;
-            font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: bold;
-            font-size: 18px;
-            color: rgb(39, 115, 138);
-            letter-spacing: -0.4px;
-            border-radius: 50px;
-            margin-left: 8px;
-        }
-        #para_first_send_code{
-            right: 30px;
-            left: auto;
-            top: 120px;
-            position: absolute;
-            overflow: hidden;
-            line-height: 50px !important;
-            text-align: right;
-              font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: 12px;
-            font-size: 34px;
-            color: rgba(255,255,255,1);
-            letter-spacing: -0.4px;
-    
-        }
-        
-        #para_second_send_code {
-            right: 30px;
-            left: auto;
-            top: 310px;
-            position: absolute;
-            overflow: visible;
-            line-height: 117px;
-            margin-top: -70.5px;
-            text-align: right;
-              font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: 18px;
-            font-size: 12px;
-            color: rgba(255,255,255,1);
-            letter-spacing: 1px;
-        }
-        #input_next_send_code {
-        
-            color: white;
-            display: inline-block;
-            background: none;
-            width: 265px;
-            padding-bottom: 8px ;
-            margin: 8px ;
-            border-bottom: 1px solid white;
-            box-sizing: border-box;
-            text-align: right;
-            fill: transparent;
-          outline: none;
-        }
-        #form_send_code{
-            position: inherit;
-            top: 340px;
-            right: 30px;
-            left: auto;
-        }
-        #logoo_send_code{
-            position: absolute;
-            width: 36px;
-            height: 22px;
-            left: 60px;
-            top: 190px;
-            overflow: visible;
-            cursor: pointer;
-        }
-        #logo_send_code{
-            width: 200px;
-            height: 170px;
-        }
-        #img_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            width: 25PX;
-        }
-        #imgg_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            display: none;
-        }
-        #imggg_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            display: none;
-        }
-        .error_send_code{
-            margin: 0;padding: 0;
-            color: rgb(241, 26, 26);
-            font-family: "Bahij Helvetica";
-            font-weight: bold;
-            font-style: normal;
-        }
-        #mobile_svg_send_code {
-            fill: url(#mobile_svg_send_code);
-        }
-        
-        .mobile_svg_send_code {
-            width: 360px;
-            height: 358px;
-            position: absolute;
-            overflow: visible;
-            transform: translate(-132.517px, 160.426px) matrix(1,0,0,1,132.5166,-160.426) rotate(180deg);
-            transform-origin: center;
-            display: none;
-        }
-        
-}
-@media screen and (max-width:800px)and (min-width:751px){
-    
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            border: none;
-        }
-        #send_code {
-            position: absolute;
-            width: 100%;
-            height:  100%;
-            background-color: rgb(255, 255, 255);
-            overflow: hidden;
-        
-        }
-        
-        #background_svg_send_code_1{
-            fill: url(#background_svg_send_code_1);
-            stroke: rgba(112,112,112,1);
-            height: 900px;
-                    width: 580px;
-        }
-        #background_svg_send_code {
-            position: absolute;
-            left: -840px;
-            top: 80px;
-            overflow: visible;
-            transform: matrix(1,0,0,1,803,-37) rotate(-90deg);
-            transform-origin: center;
-        }
-        
-        #button_next_send_code {
-            margin-top: 12px;
-            width: 100px;
-            height: 30px;
-            cursor: pointer;
-            font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: bold;
-            font-size: 18px;
-            color: rgb(39, 115, 138);
-            letter-spacing: -0.4px;
-            border-radius: 50px;
-            margin-left: 8px;
-        }
-        #para_first_send_code{
-            right: 30px;
-            left: auto;
-            top: 110px;
-            position: absolute;
-            overflow: hidden;
-            line-height: 55px !important;
-            text-align: right;
-              font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: 12px;
-            font-size: 36px;
-            color: rgba(255,255,255,1);
-            letter-spacing: -0.4px;
-    
-        }
-        
-        #para_second_send_code {
-            right: 30px;
-            left: auto;
-            top: 320px;
-            position: absolute;
-            overflow: visible;
-            line-height: 117px;
-            margin-top: -70.5px;
-            text-align: right;
-              font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: 18px;
-            font-size: 12px;
-            color: rgba(255,255,255,1);
-            letter-spacing: 1px;
-        }
-        #input_next_send_code {
-        
-            color: white;
-            display: inline-block;
-            background: none;
-            width: 285px;
-            padding-bottom: 8px ;
-            margin: 8px ;
-            border-bottom: 1px solid white;
-            box-sizing: border-box;
-            text-align: right;
-            fill: transparent;
-          outline: none;
-        }
-        #form_send_code{
-            position: inherit;
-            top: 350px;
-            right: 30px;
-            left: auto;
-        }
-        #logoo_send_code{
-            position: absolute;
-            width: 36px;
-            height: 22px;
-            left: 60px;
-            top: 180px;
-            overflow: visible;
-            cursor: pointer;
-        }
-        #logo_send_code{
-            width: 220px;
-            height: 190px;
-        }
-        #img_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            width: 25PX;
-        }
-        #imgg_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            display: none;
-        }
-        #imggg_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            display: none;
-        }
-        .error_send_code{
-            margin: 0;padding: 0;
-            color: rgb(241, 26, 26);
-            font-family: "Bahij Helvetica";
-            font-weight: bold;
-            font-style: normal;
-        }
-        #mobile_svg_send_code {
-            fill: url(#mobile_svg_send_code);
-        }
-        
-        .mobile_svg_send_code {
-            width: 360px;
-            height: 358px;
-            position: absolute;
-            overflow: visible;
-            transform: translate(-132.517px, 160.426px) matrix(1,0,0,1,132.5166,-160.426) rotate(180deg);
-            transform-origin: center;
-            display: none;
-        }
-}
-@media screen and (max-width:850px)and (min-width:801px){
-    
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            border: none;
-        }
-        #send_code {
-            position: absolute;
-            width: 100%;
-            height:  100%;
-            background-color: rgb(255, 255, 255);
-            overflow: hidden;
-        
-        }
-        
-        #background_svg_send_code_1{
-            fill: url(#background_svg_send_code_1);
-            stroke: rgba(112,112,112,1);
-            height: 900px;
-                    width: 580px;
-        }
-        #background_svg_send_code {
-            position: absolute;
-            left: -820px;
-            top: 80px;
-            overflow: visible;
-            transform: matrix(1,0,0,1,803,-37) rotate(-90deg);
-            transform-origin: center;
-        }
-        
-        #button_next_send_code {
-            margin-top: 12px;
-            width: 120px;
-            height: 30px;
-            cursor: pointer;
-            font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: bold;
-            font-size: 18px;
-            color: rgb(39, 115, 138);
-            letter-spacing: -0.4px;
-            border-radius: 50px;
-            margin-left: 8px;
-        }
-        #para_first_send_code{
-            right: 30px;
-            left: auto;
-            top: 110px;
-            position: absolute;
-            overflow: hidden;
-            line-height: 55px !important;
-            text-align: right;
-              font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: 12px;
-            font-size: 38px;
-            color: rgba(255,255,255,1);
-            letter-spacing: -0.4px;
-    
-        }
-        
-        #para_second_send_code {
-            right: 30px;
-            left: auto;
-            top: 320px;
-            position: absolute;
-            overflow: visible;
-            line-height: 117px;
-            margin-top: -70.5px;
-            text-align: right;
-              font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: 18px;
-            font-size: 12px;
-            color: rgba(255,255,255,1);
-            letter-spacing: 1px;
-        }
-        #input_next_send_code {
-        
-            color: white;
-            display: inline-block;
-            background: none;
-            width: 305px;
-            padding-bottom: 8px ;
-            margin: 8px ;
-            border-bottom: 1px solid white;
-            box-sizing: border-box;
-            text-align: right;
-            fill: transparent;
-          outline: none;
-        }
-        #form_send_code{
-            position: inherit;
-            top: 350px;
-            right: 30px;
-            left: auto;
-        }
-        #logoo_send_code{
-            position: absolute;
-            width: 36px;
-            height: 22px;
-            left: 60px;
-            top: 180px;
-            overflow: visible;
-            cursor: pointer;
-        }
-        #logo_send_code{
-            width: 260px;
-            height: 210px;
-        }
-        #img_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            width: 30PX;
-        }
-        #imgg_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            display: none;
-        }
-        #imggg_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            display: none;
-        }
-        .error_send_code{
-            margin: 0;padding: 0;
-            color: rgb(241, 26, 26);
-            font-family: "Bahij Helvetica";
-            font-weight: bold;
-            font-style: normal;
-        }
-        #mobile_svg_send_code {
-            fill: url(#mobile_svg_send_code);
-        }
-        
-        .mobile_svg_send_code {
-            width: 360px;
-            height: 358px;
-            position: absolute;
-            overflow: visible;
-            transform: translate(-132.517px, 160.426px) matrix(1,0,0,1,132.5166,-160.426) rotate(180deg);
-            transform-origin: center;
-            display: none;
-        }
-}
-@media screen and (max-width:900px)and (min-width:851px){
-    
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            border: none;
-        }
-        #send_code {
-            position: absolute;
-            width: 100%;
-            height:  100%;
-            background-color: rgb(255, 255, 255);
-            overflow: hidden;
-        
-        }
-        
-        #background_svg_send_code_1{
-            fill: url(#background_svg_send_code_1);
-            stroke: rgba(112,112,112,1);
-            height: 900px;
-                    width: 580px;
-        }
-        #background_svg_send_code {
-            position: absolute;
-            left: -780px;
-            top: 80px;
-            overflow: visible;
-            transform: matrix(1,0,0,1,803,-37) rotate(-90deg);
-            transform-origin: center;
-        }
-        
-        #button_next_send_code {
-            margin-top: 12px;
-            width: 120px;
-            height: 30px;
-            cursor: pointer;
-            font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: bold;
-            font-size: 18px;
-            color: rgb(39, 115, 138);
-            letter-spacing: -0.4px;
-            border-radius: 50px;
-            margin-left: 8px;
-        }
-        #para_first_send_code{
-            right: 30px;
-            left: auto;
-            top: 100px;
-            position: absolute;
-            overflow: hidden;
-            line-height: 60px !important;
-            text-align: right;
-              font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: 12px;
-            font-size: 40px;
-            color: rgba(255,255,255,1);
-            letter-spacing: -0.4px;
-            line-height: 70px;
-            
-        }
-        
-        #para_second_send_code {
-            right: 30px;
-            left: auto;
-            top: 320px;
-            position: absolute;
-            overflow: visible;
-            line-height: 117px;
-            margin-top: -70.5px;
-            text-align: right;
-              font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: 18px;
-            font-size: 12px;
-            color: rgba(255,255,255,1);
-            letter-spacing: 2px;
-        }
-        #input_next_send_code {
-        
-            color: white;
-            display: inline-block;
-            background: none;
-            width: 325px;
-            padding-bottom: 8px ;
-            margin: 8px ;
-            border-bottom: 1px solid white;
-            box-sizing: border-box;
-            text-align: right;
-            fill: transparent;
-          outline: none;
-        }
-        #form_send_code{
-            position: inherit;
-            top: 350px;
-            right: 30px;
-            left: auto;
-        }
-        #logoo_send_code{
-            position: absolute;
-            width: 36px;
-            height: 22px;
-            left: 70px;
-            top: 170px;
-            overflow: visible;
-            cursor: pointer;
-        }
-        #logo_send_code{
-            width: 280px;
-            height: 230px;
-        }
-        #img_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            width: 30PX;
-        }
-        #imgg_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            display: none;
-        }
-        #imggg_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            display: none;
-        }
-        .error_send_code{
-            margin: 0;padding: 0;
-            color: rgb(241, 26, 26);
-            font-family: "Bahij Helvetica";
-            font-weight: bold;
-            font-style: normal;
-        }
-        #mobile_svg_send_code {
-            fill: url(#mobile_svg_send_code);
-        }
-        
-        .mobile_svg_send_code {
-            width: 360px;
-            height: 358px;
-            position: absolute;
-            overflow: visible;
-            transform: translate(-132.517px, 160.426px) matrix(1,0,0,1,132.5166,-160.426) rotate(180deg);
-            transform-origin: center;
-            display: none;
-        }
-}
-@media screen and (max-width:950px)and (min-width:901px){
-    
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            border: none;
-        }
-        #send_code {
-            position: absolute;
-            width: 100%;
-            height:  100%;
-            background-color: rgb(255, 255, 255);
-            overflow: hidden;
-        
-        }
-        
-        #background_svg_send_code_1{
-            fill: url(#background_svg_send_code_1);
-            stroke: rgba(112,112,112,1);
-            height: 900px;
-                    width: 580px;
-        }
-        #background_svg_send_code {
-            position: absolute;
-            left: -750px;
-            top: 80px;
-            overflow: visible;
-            transform: matrix(1,0,0,1,803,-37) rotate(-90deg);
-            transform-origin: center;
-        }
-        
-        #button_next_send_code {
-            margin-top: 12px;
-            width: 120px;
-            height: 30px;
-            cursor: pointer;
-            font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: bold;
-            font-size: 18px;
-            color: rgb(39, 115, 138);
-            letter-spacing: -0.4px;
-            border-radius: 50px;
-            margin-left: 8px;
-        }
-        #para_first_send_code{
-            right: 30px;
-            left: auto;
-            top: 100px;
-            position: absolute;
-            overflow: hidden;
-            line-height: 60px !important;
-            text-align: right;
-              font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: 12px;
-            font-size: 42px;
-            color: rgba(255,255,255,1);
-            letter-spacing: -0.4px;
-            line-height: 70px;
-            
-        }
-        
-        #para_second_send_code {
-            right: 30px;
-            left: auto;
-            top: 320px;
-            position: absolute;
-            overflow: visible;
-            line-height: 117px;
-            margin-top: -70.5px;
-            text-align: right;
-              font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: 18px;
-            font-size: 12px;
-            color: rgba(255,255,255,1);
-            letter-spacing: 2px;
-        }
-        #input_next_send_code {
-        
-            color: white;
-            display: inline-block;
-            background: none;
-            width: 345px;
-            padding-bottom: 8px ;
-            margin: 8px ;
-            border-bottom: 1px solid white;
-            box-sizing: border-box;
-            text-align: right;
-            fill: transparent;
-          outline: none;
-        }
-        #form_send_code{
-            position: inherit;
-            top: 350px;
-            right: 30px;
-            left: auto;
-        }
-        #logoo_send_code{
-            position: absolute;
-            width: 36px;
-            height: 22px;
-            left: 70px;
-            top: 170px;
-            overflow: visible;
-            cursor: pointer;
-        }
-        #logo_send_code{
-            width: 290px;
-            height: 240px;
-        }
-        #img_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            width: 30PX;
-        }
-        #imgg_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            display: none;
-        }
-        #imggg_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            display: none;
-        }
-        .error_send_code{
-            margin: 0;padding: 0;
-            color: rgb(241, 26, 26);
-            font-family: "Bahij Helvetica";
-            font-weight: bold;
-            font-style: normal;
-        }
-        #mobile_svg_send_code {
-            fill: url(#mobile_svg_send_code);
-        }
-        
-        .mobile_svg_send_code {
-            width: 360px;
-            height: 358px;
-            position: absolute;
-            overflow: visible;
-            transform: translate(-132.517px, 160.426px) matrix(1,0,0,1,132.5166,-160.426) rotate(180deg);
-            transform-origin: center;
-            display: none;
-        }
-}
-@media screen and (max-width:1000px)and (min-width:951px){
-    
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            border: none;
-        }
-        #send_code {
-            position: absolute;
-            width: 100%;
-            height:  100%;
-            background-color: rgb(255, 255, 255);
-            overflow: hidden;
-        
-        }
-        
-        #background_svg_send_code_1{
-            fill: url(#background_svg_send_code_1);
-            stroke: rgba(112,112,112,1);
-            height: 900px;
-                    width: 580px;
-        }
-        #background_svg_send_code {
-            position: absolute;
-            left: -740px;
-            top: 80px;
-            overflow: visible;
-            transform: matrix(1,0,0,1,803,-37) rotate(-90deg);
-            transform-origin: center;
-        }
-        
-        #button_next_send_code {
-            margin-top: 12px;
-            width: 140px;
-            height: 35px;
-            cursor: pointer;
-            font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: bold;
-            font-size: 20px;
-            color: rgb(39, 115, 138);
-            letter-spacing: -0.4px;
-            border-radius: 50px;
-            margin-left: 8px;
-        }
-        #para_first_send_code{
-            right: 50px;
-            left: auto;
-            top: 100px;
-            position: absolute;
-            overflow: hidden;
-            line-height: 60px !important;
-            text-align: right;
-              font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: 12px;
-            font-size: 44px;
-            color: rgba(255,255,255,1);
-            letter-spacing: -0.4px;
-            line-height: 70px;
-            
-        }
-        
-        #para_second_send_code {
-            right: 50px;
-            left: auto;
-            top: 320px;
-            position: absolute;
-            overflow: visible;
-            line-height: 117px;
-            margin-top: -70.5px;
-            text-align: right;
-              font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: 18px;
-            font-size: 14px;
-            color: rgba(255,255,255,1);
-            letter-spacing: 2px;
-        }
-        #input_next_send_code {
-        
-            color: white;
-            display: inline-block;
-            background: none;
-            width: 365px;
-            padding-bottom: 8px ;
-            margin: 8px ;
-            border-bottom: 1px solid white;
-            box-sizing: border-box;
-            text-align: right;
-            fill: transparent;
-          outline: none;
-        }
-        #form_send_code{
-            position: inherit;
-            top: 350px;
-            right: 50px;
-            left: auto;
-        }
-        #logoo_send_code{
-            position: absolute;
-            width: 36px;
-            height: 22px;
-            left: 80px;
-            top: 160px;
-            overflow: visible;
-            cursor: pointer;
-        }
-        #logo_send_code{
-            width: 300px;
-            height: 250px;
-        }
-        #img_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            width: 30PX;
-        }
-        #imgg_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            display: none;
-        }
-        #imggg_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            display: none;
-        }
-        .error_send_code{
-            margin: 0;padding: 0;
-            color: rgb(241, 26, 26);
-            font-family: "Bahij Helvetica";
-            font-weight: bold;
-            font-style: normal;
-        }
-        #mobile_svg_send_code {
-            fill: url(#mobile_svg_send_code);
-        }
-        
-        .mobile_svg_send_code {
-            width: 360px;
-            height: 358px;
-            position: absolute;
-            overflow: visible;
-            transform: translate(-132.517px, 160.426px) matrix(1,0,0,1,132.5166,-160.426) rotate(180deg);
-            transform-origin: center;
-            display: none;
-        }
-}
-@media screen and (max-width:1050px)and (min-width:1001px){
-    
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            border: none;
-        }
-        #send_code {
-            position: absolute;
-            width: 100%;
-            height:  100%;
-            background-color: rgb(255, 255, 255);
-            overflow: hidden;
-        
-        }
-        
-        #background_svg_send_code_1{
-            fill: url(#background_svg_send_code_1);
-            stroke: rgba(112,112,112,1);
-            height: 900px;
-                    width: 580px;
-        }
-        #background_svg_send_code {
-            position: absolute;
-            left: -700px;
-            top: 80px;
-            overflow: visible;
-            transform: matrix(1,0,0,1,803,-37) rotate(-90deg);
-            transform-origin: center;
-        }
-        
-        #button_next_send_code {
-            margin-top: 12px;
-            width: 140px;
-            height: 35px;
-            cursor: pointer;
-            font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: bold;
-            font-size: 20px;
-            color: rgb(39, 115, 138);
-            letter-spacing: -0.4px;
-            border-radius: 50px;
-            margin-left: 8px;
-        }
-        #para_first_send_code{
-            right: 50px;
-            left: auto;
-            top: 100px;
-            position: absolute;
-            overflow: hidden;
-            line-height: 60px !important;
-            text-align: right;
-              font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: 12px;
-            font-size: 44px;
-            color: rgba(255,255,255,1);
-            letter-spacing: -0.4px;
-            line-height: 70px;
-            
-        }
-        
-        #para_second_send_code {
-            right: 50px;
-            left: auto;
-            top: 320px;
-            position: absolute;
-            overflow: visible;
-            line-height: 117px;
-            margin-top: -70.5px;
-            text-align: right;
-              font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: 18px;
-            font-size: 14px;
-            color: rgba(255,255,255,1);
-            letter-spacing: 2px;
-        }
-        #input_next_send_code {
-        
-            color: white;
-            display: inline-block;
-            background: none;
-            width: 365px;
-            padding-bottom: 8px ;
-            margin: 8px ;
-            border-bottom: 1px solid white;
-            box-sizing: border-box;
-            text-align: right;
-            fill: transparent;
-          outline: none;
-        }
-        #form_send_code{
-            position: inherit;
-            top: 350px;
-            right: 50px;
-            left: auto;
-        }
-        #logoo_send_code{
-            position: absolute;
-            width: 36px;
-            height: 22px;
-            left: 90px;
-            top: 160px;
-            overflow: visible;
-            cursor: pointer;
-        }
-        #logo_send_code{
-            width: 310px;
-            height: 260px;
-        }
-        #img_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            width: 30PX;
-        }
-        #imgg_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            display: none;
-        }
-        #imggg_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            display: none;
-        }
-        .error_send_code{
-            margin: 0;padding: 0;
-            color: rgb(241, 26, 26);
-            font-family: "Bahij Helvetica";
-            font-weight: bold;
-            font-style: normal;
-        }
-        #mobile_svg_send_code {
-            fill: url(#mobile_svg_send_code);
-        }
-        
-        .mobile_svg_send_code {
-            width: 360px;
-            height: 358px;
-            position: absolute;
-            overflow: visible;
-            transform: translate(-132.517px, 160.426px) matrix(1,0,0,1,132.5166,-160.426) rotate(180deg);
-            transform-origin: center;
-            display: none;
-        }
-}
-@media screen and (max-width:1100px)and (min-width:1051px){
-    
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            border: none;
-        }
-        #send_code {
-            position: absolute;
-            width: 100%;
-            height:  100%;
-            background-color: rgb(255, 255, 255);
-            overflow: hidden;
-        
-        }
-        
-        #background_svg_send_code_1{
-            fill: url(#background_svg_send_code_1);
-            stroke: rgba(112,112,112,1);
-            height: 900px;
-                    width: 580px;
-        }
-        #background_svg_send_code {
-            position: absolute;
-            left: -680px;
-            top: 80px;
-            overflow: visible;
-            transform: matrix(1,0,0,1,803,-37) rotate(-90deg);
-            transform-origin: center;
-        }
-        
-        #button_next_send_code {
-            margin-top: 12px;
-            width: 140px;
-            height: 35px;
-            cursor: pointer;
-            font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: bold;
-            font-size: 20px;
-            color: rgb(39, 115, 138);
-            letter-spacing: -0.4px;
-            border-radius: 50px;
-            margin-left: 8px;
-        }
-        #para_first_send_code{
-            right: 50px;
-            left: auto;
-            top: 100px;
-            position: absolute;
-            overflow: hidden;
-            line-height: 117px;
-            text-align: right;
-              font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: 12px;
-            font-size: 46px;
-            color: rgba(255,255,255,1);
-            letter-spacing: -0.4px;
-            line-height: 70px;
-            
-        }
-        
-        #para_second_send_code {
-            right: 50px;
-            left: auto;
-            top: 320px;
-            position: absolute;
-            overflow: visible;
-            line-height: 117px;
-            margin-top: -48.5px;
-            text-align: right;
-              font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: 18px;
-            font-size: 16px;
-            color: rgba(255,255,255,1);
-            letter-spacing: 2.4px;
-        }
-        #input_next_send_code {
-        
-            color: white;
-            display: inline-block;
-            background: none;
-            width: 385px;
-            padding-bottom: 8px ;
-            margin: 8px ;
-            border-bottom: 1px solid white;
-            box-sizing: border-box;
-            text-align: right;
-            fill: transparent;
-          outline: none;
-        }
-        #form_send_code{
-            position: inherit;
-            top: 360px;
-            right: 50px;
-            left: auto;
-        }
-        #logoo_send_code{
-            position: absolute;
-            width: 36px;
-            height: 22px;
-            left: 100px;
-            top: 160px;
-            overflow: visible;
-            cursor: pointer;
-        }
-        #logo_send_code{
-            width: 320px;
-            height: 270px;
-        }
-        #img_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            width: 30PX;
-        }
-        #imgg_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            display: none;
-        }
-        #imggg_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            display: none;
-        }
-        .error_send_code{
-            margin: 0;padding: 0;
-            color: rgb(241, 26, 26);
-            font-family: "Bahij Helvetica";
-            font-weight: bold;
-            font-style: normal;
-        }
-        #mobile_svg_send_code {
-            fill: url(#mobile_svg_send_code);
-        }
-        
-        .mobile_svg_send_code {
-            width: 360px;
-            height: 358px;
-            position: absolute;
-            overflow: visible;
-            transform: translate(-132.517px, 160.426px) matrix(1,0,0,1,132.5166,-160.426) rotate(180deg);
-            transform-origin: center;
-            display: none;
-        }
-}
- @media screen and (max-width:1150px)and (min-width:1101px){
-    
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            border: none;
-        }
-        #send_code {
-            position: absolute;
-            width: 100%;
-            height:  100%;
-            background-color: rgb(255, 255, 255);
-            overflow: hidden;
-        
-        }
-        
-        #background_svg_send_code_1{
-            fill: url(#background_svg_send_code_1);
-            stroke: rgba(112,112,112,1);
-            height: 900px;
-                    width: 580px;
-        }
-        #background_svg_send_code {
-            position: absolute;
-            left: -640px;
-            top: 80px;
-            overflow: visible;
-            transform: matrix(1,0,0,1,803,-37) rotate(-90deg);
-            transform-origin: center;
-        }
-        
-        #button_next_send_code {
-            margin-top: 12px;
-            width: 140px;
-            height: 35px;
-            cursor: pointer;
-            font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: bold;
-            font-size: 20px;
-            color: rgb(39, 115, 138);
-            letter-spacing: -0.4px;
-            border-radius: 50px;
-            margin-left: 8px;
-        }
-        #para_first_send_code{
-            right: 50px;
-            left: auto;
-            top: 100px;
-            position: absolute;
-            overflow: hidden;
-            line-height: 117px;
-            text-align: right;
-              font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: 12px;
-            font-size: 48px;
-            color: rgba(255,255,255,1);
-            letter-spacing: -0.4px;
-            line-height: 70px;
-            
-        }
-        
-        #para_second_send_code {
-            right: 50px;
-            left: auto;
-            top: 320px;
-            position: absolute;
-            overflow: visible;
-            line-height: 117px;
-            margin-top: -48.5px;
-            text-align: right;
-              font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: 18px;
-            font-size: 18px;
-            color: rgba(255,255,255,1);
-            letter-spacing: 2.4px;
-        }
-        #input_next_send_code {
-        
-            color: white;
-            display: inline-block;
-            background: none;
-            width: 405px;
-            padding-bottom: 8px ;
-            margin: 8px ;
-            border-bottom: 1px solid white;
-            box-sizing: border-box;
-            text-align: right;
-            fill: transparent;
-          outline: none;
-        }
-        #form_send_code{
-            position: inherit;
-            top: 360px;
-            right: 50px;
-            left: auto;
-        }
-        #logoo_send_code{
-            position: absolute;
-            width: 36px;
-            height: 22px;
-            left: 120px;
-            top: 160px;
-            overflow: visible;
-            cursor: pointer;
-        }
-        #logo_send_code{
-            width: 330px;
-            height: 280px;
-        }
-        #img_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            width: 30PX;
-        }
-        #imgg_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            display: none;
-        }
-        #imggg_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            display: none;
-        }
-        .error_send_code{
-            margin: 0;padding: 0;
-            color: rgb(241, 26, 26);
-            font-family: "Bahij Helvetica";
-            font-weight: bold;
-            font-style: normal;
-        }
-        #mobile_svg_send_code {
-            fill: url(#mobile_svg_send_code);
-        }
-        
-        .mobile_svg_send_code {
-            width: 360px;
-            height: 358px;
-            position: absolute;
-            overflow: visible;
-            transform: translate(-132.517px, 160.426px) matrix(1,0,0,1,132.5166,-160.426) rotate(180deg);
-            transform-origin: center;
-            display: none;
-        }
- }
- @media screen and (max-width:1200px)and (min-width:1151px){
-    
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            border: none;
-        }
-        #send_code {
-            position: absolute;
-            width: 100%;
-            height:  100%;
-            background-color: rgb(255, 255, 255);
-            overflow: hidden;
-        
-        }
-        
-        #background_svg_send_code_1{
-            fill: url(#background_svg_send_code_1);
-            stroke: rgba(112,112,112,1);
-            height: 900px;
-                    width: 580px;
-        }
-        #background_svg_send_code {
-            position: absolute;
-            left: -600px;
-            top: 80px;
-            overflow: visible;
-            transform: matrix(1,0,0,1,803,-37) rotate(-90deg);
-            transform-origin: center;
-        }
-        
-        #button_next_send_code {
-            margin-top: 12px;
-            width: 140px;
-            height: 35px;
-            cursor: pointer;
-            font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: bold;
-            font-size: 20px;
-            color: rgb(39, 115, 138);
-            letter-spacing: -0.4px;
-            border-radius: 50px;
-            margin-left: 8px;
-        }
-        #para_first_send_code{
-            right: 50px;
-            left: auto;
-            top: 100px;
-            position: absolute;
-            overflow: hidden;
-            line-height: 117px;
-            text-align: right;
-              font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: 12px;
-            font-size: 48px;
-            color: rgba(255,255,255,1);
-            letter-spacing: -0.4px;
-            line-height: 70px;
-            
-        }
-        
-        #para_second_send_code {
-            right: 50px;
-            left: auto;
-            top: 320px;
-            position: absolute;
-            overflow: visible;
-            line-height: 117px;
-            margin-top: -48.5px;
-            text-align: right;
-              font-family: "Bahij Helvetica";
-            font-style: normal;
-            font-weight: 18px;
-            font-size: 18px;
-            color: rgba(255,255,255,1);
-            letter-spacing: 2.4px;
-        }
-        #input_next_send_code {
-        
-            color: white;
-            display: inline-block;
-            background: none;
-            width: 405px;
-            padding-bottom: 8px ;
-            margin: 8px ;
-            border-bottom: 1px solid white;
-            box-sizing: border-box;
-            text-align: right;
-            fill: transparent;
-          outline: none;
-        }
-        #form_send_code{
-            position: inherit;
-            top: 360px;
-            right: 50px;
-            left: auto;
-        }
-        #logoo_send_code{
-            position: absolute;
-            width: 36px;
-            height: 22px;
-            left: 140px;
-            top: 160px;
-            overflow: visible;
-            cursor: pointer;
-        }
-        #logo_send_code{
-            width: 340px;
-            height: 290px;
-        }
-        #img_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            width: 30PX;
-        }
-        #imgg_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            display: none;
-        }
-        #imggg_send_code{
-            position: relative;
-            top: 40px;
-            left: 70px;
-            display: none;
-        }
-        .error_send_code{
-            margin: 0;padding: 0;
-            color: rgb(241, 26, 26);
-            font-family: "Bahij Helvetica";
-            font-weight: bold;
-            font-style: normal;
-        }
-        #mobile_svg_send_code {
-            fill: url(#mobile_svg_send_code);
-        }
-        
-        .mobile_svg_send_code {
-            width: 360px;
-            height: 358px;
-            position: absolute;
-            overflow: visible;
-            transform: translate(-132.517px, 160.426px) matrix(1,0,0,1,132.5166,-160.426) rotate(180deg);
-            transform-origin: center;
-            display: none;
-        }
- }
-@media screen and (max-width:1280px)and (min-width:1201px){
-    
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border: none;
-}
-#send_code {
-    position: absolute;
-    width: 100%;
-    height:  100%;
-    background-color: rgba(255,255,255,1);
-    overflow: hidden;
+.error-and-button-send-code{
+	display: flex;
+	flex-direction: column;
+	text-align: left;
 
 }
+.error_send-code{
+	color: rgb(241, 26, 26);
+	font-family: "Bahij Helvetica";
+	font-weight: bold;
+	font-style: normal;
+	margin-left: 34%;
+}
+.button-next-send-code{
+	margin-left: 34%;
+	margin-top: 12px;
+	width: 140px;
+	height: 35px;
+	cursor: pointer;
+	font-family: "Bahij Helvetica";
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgb(39, 115, 138);
+	letter-spacing: -0.4px;
+	border-radius: 50px;
+	background-color:white;
+	background-image: linear-gradient(#ffffff,
+		   #b8d3f2);
+		   /* and (min-width: 547px) */
+}
+@media screen and (max-width: 768px)and (min-width: 415px){
+.all-section-send-code{
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: space-between;	
+	height:auto;
+}
+.section-one-send-code{
+	display: flex;
+	flex-direction: column;
+	flex: 50%;
+}
+.sec-one-one-send-code{
+	display: flex;
+	justify-content: start;
+	flex: 1%;	
+}
+.img_send-code{
+	display: none;
+}
+.sec-one-two-send-code{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 100%;
+}
+.logo-one-send-code{
+	display: none;
+}
+.logo-two-send-code{
+	display: flex;
+	width: 30%;
+	height: 30%;
+	margin-top: 15%;
+	margin-bottom: 15%;
+}
+.section-two-send-code{
+	display: flex;
+	flex-direction: column;
+	background-image: none;
+	background-size: cover; 
+	background-repeat: no-repeat;
+	flex: 50%;
+	text-align: center;
+	padding-right: 0%;
+	justify-content: center;
+}
+.sec-two-one-send-code{
+	display: flex;
+	flex-direction: column;
+	/* background-image: url('../../assets/ff.png'); */
+	background-size: cover; 
+	background-repeat: no-repeat;
+	padding-right: 80px;
+	/* background-image: linear-gradient(#3289b7 ); */
+	background-color: #3289b7;
+	border-bottom-left-radius: 15%;
+	border-bottom-right-radius: 15%;
+	/* object-position: bottom; */ 
+	/* width: 100%; */
+}
+.selesh-send-code{
+	display: flex;
+	width: 100%;
+	margin-top: -12%;
+	margin-left: 10%;
+}
+.imgg_send-code{
 
-#background_svg_send_code_1{
-    fill: url(#background_svg_send_code_1);
-    stroke: rgba(112,112,112,1);
-    height: 900px;
-			width: 580px;
+	width: 5vw;
+	height: 4vw;
 }
-#background_svg_send_code {
-    position: absolute;
-    left: -550px;
-    top: 80px;
-    overflow: visible;
-    transform: matrix(1,0,0,1,803,-37) rotate(-90deg);
-    transform-origin: center;
+.image-send-code{
+	display: flex;
+	width: 100%;
+}
+.imggg_send-code{
+	display: flex;
+	width: 22%;
+	height: 22%;
+}
+.para-one-and-two-send-code{
+	display: flex;
+	flex-direction: column;
+	text-align: right;
+	padding-bottom: 6%;
+
+}
+.para_first_send-code{
+	font-family: "Bahij Helvetica";
+	font-style: normal;
+	font-weight: bold;
+	font-size: 7.5vw;
+	color: rgba(255,255,255,1);
+	letter-spacing: -0.4px;
+	line-height: 70px;
+	margin-top: 3%;
+	padding-left: 0%;
+}
+.para_second_send-code{
+	font-family: "Bahij Helvetica";
+	font-style: normal;
+	font-weight: bold;
+	font-size: 2.3vw;
+	color: rgba(255,255,255,1);
+	letter-spacing: 2.4px;
+	margin-top: 30px;
+	/* margin-bottom: 10%; */
+}
+.sec-two-two-send-code{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	/* align-items: center;
+	text-align: center; */
+}
+#input_next_send-code{
+	color:  rgb(112, 112, 112,0.9) !important;
+	background: none;
+	border-bottom: 1.5px solid rgb(112, 112, 112,0.9) !important;;
+	width: 80%;
+	background-color: rgba(255, 255, 255,0) ;
+	outline: none;
+	font-size: 4vw;
+	font-style: normal;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 2%;
+	padding-bottom: 2%;
 }
 
-#button_next_send_code {
-    margin-top: 12px;
-    width: 140px;
-    height: 35px;
-    cursor: pointer;
-    font-family: "Bahij Helvetica";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    color: rgb(39, 115, 138);
-    letter-spacing: -0.4px;
-    border-radius: 50px;
-    margin-left: 8px;
+#input_next_send-code::placeholder{
+	font-size: 3vw;
+	color:  rgb(112, 112, 112,0.9) !important;
+	opacity: 0.5;
 }
-#para_first_send_code{
-    right: 50px;
-    left: auto;
-    top: 100px;
-    position: absolute;
-    overflow: hidden;
-    line-height: 117px;
-    text-align: right;
-      font-family: "Bahij Helvetica";
-    font-style: normal;
-    font-weight: 12px;
-    font-size: 50px;
-    color: rgba(255,255,255,1);
-    letter-spacing: -0.4px;
-    line-height: 70px;
-    
+.error-and-button-send-code{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+    align-items: center;
 }
+.error_send-code{
+	color: rgb(241, 26, 26);
+	font-family: "Bahij Helvetica";
+	font-weight: bold;
+	font-style: normal;
+	margin-left: 0%;
+}
+.button-next-send-code{
+	margin-left: 0%;
+	margin-top: 3%;
+	width: 80%;
+	height: 35px;
+	cursor: pointer;
+	font-family: "Bahij Helvetica";
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgb(255, 255, 255);
+	letter-spacing: -0.4px;
+	border-radius: 50px;
+	background-color:white;
+	background-image: linear-gradient(#47b3dd,
+	#2c738f);
+		   align-items: center;
 
-#para_second_send_code {
-    right: 50px;
-    left: auto;
-    top: 320px;
-    position: absolute;
-    overflow: visible;
-    line-height: 117px;
-    margin-top: -48.5px;
-    text-align: right;
-      font-family: "Bahij Helvetica";
-    font-style: normal;
-    font-weight: 18px;
-    font-size: 20px;
-    color: rgba(255,255,255,1);
-    letter-spacing: 2.4px;
-}
-#input_next_send_code {
-
-    color: white;
-    display: inline-block;
-    background: none;
-    width: 425px;
-    padding-bottom: 8px ;
-    margin: 8px ;
-    border-bottom: 1px solid white;
-    box-sizing: border-box;
-    text-align: right;
-    fill: transparent;
-  outline: none;
-}
-#form_send_code{
-    position: inherit;
-    top: 360px;
-    right: 50px;
-    left: auto;
-}
-#logoo_send_code{
-    position: absolute;
-    width: 36px;
-    height: 22px;
-    left: 140px;
-    top: 160px;
-    overflow: visible;
-    cursor: pointer;
-}
-#logo_send_code{
-    width: 350px;
-    height: 300px;
-}
-#img_send_code{
-    position: relative;
-    top: 40px;
-    left: 70px;
-    width: 30PX;
-}
-#imgg_send_code{
-    position: relative;
-    top: 40px;
-    left: 70px;
-    display: none;
-}
-#imggg_send_code{
-    position: relative;
-    top: 40px;
-    left: 70px;
-    display: none;
-}
-.error_send_code{
-    margin: 0;padding: 0;
-    color: rgb(241, 26, 26);
-    font-family: "Bahij Helvetica";
-    font-weight: bold;
-    font-style: normal;
-}
-#mobile_svg_send_code {
-    fill: url(#mobile_svg_send_code);
-}
-
-.mobile_svg_send_code {
-    width: 360px;
-    height: 358px;
-    position: absolute;
-    overflow: visible;
-    transform: translate(-132.517px, 160.426px) matrix(1,0,0,1,132.5166,-160.426) rotate(180deg);
-    transform-origin: center;
-    display: none;
 }
 }
+@media screen and (max-width: 414px){
+	.all-section-send-code{
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: space-between;	
+		height:auto;
+	}
+	.section-one-send-code{
+		display: flex;
+		flex-direction: column;
+		flex: 50%;
+	}
+	.sec-one-one-send-code{
+		display: flex;
+		justify-content: start;
+		flex: 1%;	
+	}
+	.img_send-code{
+		display: none;
+	}
+	.sec-one-two-send-code{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex: 100%;
+	}
+	.logo-one-send-code{
+		display: none;
+	}
+	.logo-two-send-code{
+		display: flex;
+		width: 30%;
+		height: 30%;
+		margin-top: 15%;
+		margin-bottom: 15%;
+	}
+	.section-two-send-code{
+		display: flex;
+		flex-direction: column;
+		background-image: none;
+		background-size: cover; 
+		background-repeat: no-repeat;
+		flex: 50%;
+		text-align: center;
+		padding-right: 0%;
+		justify-content: center;
+	}
+	.sec-two-one-send-code{
+		display: flex;
+		flex-direction: column;
+		/* background-image: url('../../assets/ff.png'); */
+		background-size: cover; 
+		background-repeat: no-repeat;
+		padding-right: 50px;
+		/* background-image: linear-gradient(#3289b7 ); */
+		background-color: #3289b7;
+		border-bottom-left-radius: 15%;
+		border-bottom-right-radius: 15%;
+		/* object-position: bottom; */ 
+		/* width: 100%; */
+	}
+	.selesh-send-code{
+		display: flex;
+		width: 100%;
+		margin-top: -15%;
+		margin-left: 8%;
+	}
+	.imgg_send-code{
+	
+		width: 50%;
+		height: 60%;
+	}
+	.image-send-code{
+		display: flex;
+		width: 100%;
+	}
+	.imggg_send-code{
+		display: flex;
+		width: 27%;
+		height: 27%;
+	}
+	.para-one-and-two-send-code{
+		display: flex;
+		flex-direction: column;
+		text-align: right;
+		
+	
+	}
+	.para_first_send-code{
+		font-family: "Bahij Helvetica";
+		font-style: normal;
+		font-weight: bold;
+		font-size:8vw;
+		color: rgba(255,255,255,1);
+		letter-spacing: -0.4px;
+		margin-top: -1%;
+		padding-left: 0%;
+		line-height: 40px;
+	}
+	.para_second_send-code{
+		font-family: "Bahij Helvetica";
+		font-style: normal;
+		font-weight: bold;
+		font-size: 4vw;
+		color: rgba(255,255,255,1);
+		letter-spacing: 2.4px;
+		margin-top: 20px;
+		margin-bottom: 10%;
+		letter-spacing: 0.1px;
+	}
+	.sec-two-two-send-code{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+	#input_next_send-code{
+		color:  rgb(112, 112, 112,0.9) !important;
+		background: none;
+		border-bottom: 1px solid rgb(112, 112, 112,0.9) !important;;
+		width: 70%;
+		background-color: rgba(255, 255, 255,0) ;
+		outline: none;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: bold;
+		text-align: center;
+		margin-top: 3%;
+		padding-bottom: 3%;
+	}
+	
+	#input_next_send-code::placeholder{
+		font-size: 15px;
+		color:  rgb(112, 112, 112,0.9) !important;
+		opacity: 0.5;
+		
+	}
+	.error-and-button-send-code{
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+	}
+	.error_send-code{
+		color: rgb(241, 26, 26);
+		font-family: "Bahij Helvetica";
+		font-weight: bold;
+		font-style: normal;
+		margin-left: 0%;
+	}
+	.button-next-send-code{
+		margin-left: 0%;
+		margin-top: 4%;
+		width: 70%;
+		height: 35px;
+		cursor: pointer;
+		font-family: "Bahij Helvetica";
+		font-style: normal;
+		font-weight: bold;
+		font-size: 20px;
+		color: rgb(255, 255, 255);
+		letter-spacing: -0.4px;
+		border-radius: 50px;
+		background-color:white;
+		background-image: linear-gradient(#47b3dd,
+		#2c738f);
+			   align-items: center;
+	
+	}
+	}
+	@media screen and (max-width: 300px){
+		.all-section-send-code{
+			display: flex;
+			flex-direction: column-reverse;
+			justify-content: space-between;	
+			height:auto;
+		}
+		.section-one-send-code{
+			display: flex;
+			flex-direction: column;
+			flex: 50%;
+		}
+		.sec-one-one-send-code{
+			display: flex;
+			justify-content: start;
+			flex: 1%;	
+		}
+		.img_send-code{
+			display: none;
+		}
+		.sec-one-two-send-code{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex: 100%;
+		}
+		.logo-one-send-code{
+			display: none;
+		}
+		.logo-two-send-code{
+			display: flex;
+			width: 30%;
+			height: 30%;
+			margin-top: 15%;
+			margin-bottom: 15%;
+		}
+		.section-two-send-code{
+			display: flex;
+			flex-direction: column;
+			background-image: none;
+			background-size: cover; 
+			background-repeat: no-repeat;
+			flex: 50%;
+			text-align: center;
+			padding-right: 0%;
+			justify-content: center;
+		}
+		.sec-two-one-send-code{
+				display: flex;
+		flex-direction: column;
+	
+		background-size: cover; 
+		background-repeat: no-repeat;
+		padding-right: 50px;
+		background-color: #3289b7;
+		border-bottom-left-radius: 15%;
+		border-bottom-right-radius: 15%;
+		}
+		.selesh-send-code{
+			display: flex;
+			width: 100%;
+			margin-top: -15%;
+			margin-left: 8%;
+		}
+		.imgg_send-code{
+		
+			width: 50%;
+			height: 50%;
+		}
+		.image-send-code{
+			display: flex;
+			width: 100%;
+		}
+		.imggg_send-code{
+			display: flex;
+			width: 27%;
+			height: 27%;
+		}
+		.para-one-and-two-send-code{
+			display: flex;
+			flex-direction: column;
+			text-align: right;
+			
+		
+		}
+		.para_first_send-code{
+			font-family: "Bahij Helvetica";
+			font-style: normal;
+			font-weight: bold;
+			font-size:8vw;
+			color: rgba(255,255,255,1);
+			letter-spacing: -0.4px;
+			line-height: 80px;
+			margin-top: -1%;
+			padding-left: 0%;
+			line-height: 40px;
+		}
+		.para_second_send-code{
+			font-family: "Bahij Helvetica";
+			font-style: normal;
+			font-weight: bold;
+			font-size: 4vw;
+			color: rgba(255,255,255,1);
+			letter-spacing: 2.4px;
+			margin-top: 12px;
+			margin-bottom: 10%;
+			letter-spacing: 0.1px;
+		}
+		.sec-two-two-send-code{
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+		}
+		#input_next_send-code{
+			color:  rgb(112, 112, 112,0.9) !important;
+			background: none;
+			border-bottom: 1px solid rgb(112, 112, 112,0.9) !important;;
+			width: 70%;
+			background-color: rgba(255, 255, 255,0) ;
+			outline: none;
+			font-size: 20px;
+			font-style: normal;
+			font-weight: bold;
+			text-align: center;
+			margin-top: 3%;
+			padding-bottom: 3%;
+		}
+		
+		#input_next_send-code::placeholder{
+			font-size: 15px;
+			color:  rgb(112, 112, 112,0.9) !important;
+			opacity: 0.5;
+			
+		}
+		.error-and-button-send-code{
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+			align-items: center;
+		}
+		.error_send-code{
+			color: rgb(241, 26, 26);
+			font-family: "Bahij Helvetica";
+			font-weight: bold;
+			font-style: normal;
+			margin-left: 0%;
+		}
+		.button-next-send-code{
+			margin-left: 0%;
+			margin-top: 4%;
+			width: 70%;
+			height: 35px;
+			cursor: pointer;
+			font-family: "Bahij Helvetica";
+			font-style: normal;
+			font-weight: bold;
+			font-size: 20px;
+			color: rgb(255, 255, 255);
+			letter-spacing: -0.4px;
+			border-radius: 50px;
+			background-color:white;
+			background-image: linear-gradient(#47b3dd,
+			#2c738f);
+				   align-items: center;
+		
+		}
+	}

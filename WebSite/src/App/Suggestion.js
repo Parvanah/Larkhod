@@ -57,7 +57,7 @@ const Suggestion = ( { t }) => {
 	  if (!values.email) {
 		errors.email = <>{t("suggestion13")}</>;
 	  } else if (!regex.test(values.email)) {
-		errors.email = <>{t("suggestion.14")}</>;
+		errors.email = <>{t("suggestion14")}</>;
 	  }
 	  if (!values.phone) {
 		errors.phone = <>{t("suggestion15")}</>;
