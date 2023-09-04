@@ -1,1156 +1,487 @@
-.mobile {
+.Lesson_body .mobile {
     display: none;
 }
-.mobileSvg {
+.Lesson_body .mobileSvg {
     display: none;
 }
 * {
     margin: 0;
     padding: 0;
 }
-.lesson {
-    margin-top: 0px;
+.Lesson_body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.Lesson_body .lesson {
     display: flex;
     flex-direction: row;
-    padding-left: 3%;
+    justify-content: space-around;
+    align-items: center;
     height: 100%;
+    width: 100%;
 }
-.lesson svg{
-    width: 30%;
-    height: 603px;
-}
-.sidebar {
+
+.Lesson_body .sidebar {
     display: flex;
-    height: 550px;
+    height:100%;
+    width: 27%;
+    margin-left: 3%;
+    padding: 3% 2% 5% 2%;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    overflow-y: scroll;
+    align-items: center;    
+    background-image: linear-gradient(to bottom, #3c98bd , #0f53a1);
 }
-.sidebar .text {
+.Lesson_body .sidebar .arrow {
+    cursor: pointer;
+    width: 100%; 
+    height: 2%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
+    justify-content: end;
+    align-items: start;
 }
-.sidebar .header {
+.Lesson_body .sidebar .header_lesson {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    width: 100%;
+    height: 18%;
+    
 }
-.sidebar .arrow {
-    position: relative;
-    top: 0px;
-    left: 5%;
+.Lesson_body .sidebar .header_lesson img{
+    height: 60px;
+    width: 60px;
+}
+.Lesson_body .sidebar .text{
+height: 75%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 100%;
+
+}
+.Lesson_body .sidebar .text .Lesson_title{
+flex: 10%;
+color: #FFF;
+text-align: center;
+
+}
+.Lesson_body .sidebar .text .sidebar-lessons{
+height: 90%;
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.Lesson_body .sidebar .text .sidebar-lessons .inside_sidebar-lessons{
+overflow-y: scroll;
+flex: 100%;
+width: 100%;
+
+}
+
+.Lesson_body .sidebar .text .sidebar-lessons .inside_sidebar-lessons .lesson_item{
+color: #FFF;
+font-size: 13px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+font-weight: bold;
+height: 10%;
+padding: 5px;
+
+}
+.Lesson_body .sidebar .text .sidebar-lessons .inside_sidebar-lessons .lesson_item:hover{
+border: 1px solid #FFF;
+/* border-radius: 10px; */
+cursor: pointer;
+}
+.Lesson_body .sidebar .text .sidebar-lessons .inside_sidebar-lessons .lesson_item .titles_lesson{
+    text-align: right;
+}
+.Lesson_body .sidebar .scrollArrow {
+    flex: 5%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+}
+
+.Lesson_body .sidebar .scrollArrow img {
+    width: 20px;
+    height: 10px;
+}
+
+.Lesson_body .sidebar .scrollArrow img:hover {
     cursor: pointer;
 }
-
-.sidebar .header img {
-    width: 50px;
-    height: 50px;
+.Lesson_body .showLesson {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;  
+    padding: 2% 2% 0% 2%;
+}
+.Lesson_body .showLesson .title {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: end;
+    height: 15%;
+    width: 100%;
+    font-size: 15px;
+    color: #3C98BD;
+    font-weight: bold;
+    text-align: right;
+    
+}
+.Lesson_body .showLesson .title .main_lesson_title{
+display: flex;
+    flex-direction: row-reverse;
+    justify-content:start;
     align-items: center;
 }
-
-.sidebar h3 {
-    padding-bottom: 50px;
-    text-align: center;
+.Lesson_body .showLesson .title img{
+height: 60px;
+width: 60px;
 }
-.sidebar h3,
-.sidebar .sidebar-lessons div {
-    color: white;
-    font-size: 20px;
+.Lesson_body .showLesson .bottom{
+   height: 80%; 
+   width: 100%;
+display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    align-items: center;
+}
+.Lesson_body .showLesson .bottom .img{
+    width: 100%;
+    height: 95%;
+    overflow-y: scroll;
+    border: 4px dashed #3c98bd;
+    border-radius: 15px;
+}
+.Lesson_body .showLesson .bottom .img img{
+ width: 100%;
+}
+.Lesson_body .showLesson .midlle{
+    height: 5%;
+    display: flex;
+        flex-direction: row-reverse;
+        justify-content: end;
+        align-items: center;
+        width: 80%;
+}
+.Lesson_body .showLesson .midlle img{
+    width: 25px;
+    height: 25px;
+}
+.Lesson_body .showLesson .midlle p{
+    color: #707070;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 1%;
+}
+
+@media screen and (min-height: 650px){
+.Lesson_body .sidebar .header_lesson img {
+        height: 80px;
+        width: 80px;
+    }
+
+.Lesson_body .sidebar {
+    padding: 10% 2%;
+}
+.Lesson_body .showLesson .title img {
+    height: 80px;
+    width: 80px;
+}
+.Lesson_body .showLesson .midlle img {
+    width: 50px;
+    height: 50px;
+}
+}
+@media screen and (min-height: 800px) and (min-width: 300px){
+.Lesson_body .mobile .mobileTop .mobile-background {
+        margin-bottom: 30px;
+        margin-top: -200px;
+        /* background-color: rgb(209, 187, 187); */
+    }
+        .Lesson_body .mobile .mobileTop .BackGround_color {
+            height: 100%;
+            width: 100%;
+        }
+
+}
+@media screen and (min-height: 900px){
+/* .Lesson_body .sidebar {
+        padding: 20% 2%;
+    } */
+}
+@media screen and (max-width: 800px) and (max-height: 650px){
+.Lesson_body .sidebar .text .sidebar-lessons .inside_sidebar-lessons .lesson_item{
+    height: 12%;
+    font-size: 10px;
+}
+}
+@media screen and (min-width: 1000px) and (min-height: 1000px){
+.Lesson_body .sidebar .text .sidebar-lessons .inside_sidebar-lessons .lesson_item{
+    font-size: 17px;
+}
+}
+@media screen and (max-width: 700px) and (min-height: 650px) {
+    .Lesson_body .sidebar .arrow img{
+    width: 20px;
+    height: 10px;
+    }
+    .Lesson_body .sidebar .header_lesson img {
+        height: 50px;
+        width: 50px;
+    }
+}
+@media screen and (max-width: 900px){
+.Lesson_body .showLesson .title{
+    font-size: 10px;
+}
+.Lesson_body .sidebar .text .Lesson_title{
+    font-size: 13px;
+}
+.Lesson_body .sidebar .arrow img{
+    height: 20px;
+    height: 10px;
+}
+}
+@media screen and (max-width: 700px){
+.Lesson_body .lesson{
+    display: none;
+}
+.Lesson_body .mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    transition: all 1s;
+
+}
+.Lesson_body .mobile .mobileTop{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 25%;
+width: 100%;
+}
+.Lesson_body .mobile .mobileTop .BackGround_color{
+    height: 100%;
+    width: 100%;
+}
+.Lesson_body .mobile .mobileTop .mobile-background{
+margin-top: -140px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 100%;
+}
+.Lesson_body .mobile .mobileTop .mobile-background .arrowLesson{
+    width: 90%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: start;
+}
+.Lesson_body .mobile .mobileTop .mobile-background .arrowLesson .arrow-mob:hover,
+.Lesson_body .mobile .mobileTop .mobile-background .arrowLesson .menu-mob{
+cursor: pointer;
+}
+.Lesson_body .mobile .mobileTop .mobile-background .imgTop{
+ width: 60px;
+ height: 60px ;
+}
+.Lesson_body .mobile .mobileTop .mobile-background .title-mob1{
+    font-weight: bold;
+    color: #FFF;
+    text-align: center;
+    font-size: 15px;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+.Lesson_body .mobile .mobile-middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 5%;
+    height: 70%;
+    width: 100%;
 }
-
-.sidebar .sidebar-lessons div .titles {
-    margin-left: 30px;
-    padding-bottom: 5%;
-}
-
-.sidebar .sidebar-lessons div {
-    padding: 5px;
-    text-align: right;
-    padding-bottom: 10%;
+.Lesson_body .mobile .mobile-middle .img{
+    width: 85%;
+    height: 90%;
+    overflow-y: scroll;
+    border: 2px dashed #3c98bd;
+    border-radius: 5%;
 
 }
-.sidebar .sidebar-lessons div:hover {
+.Lesson_body .mobile .mobile-middle .img img{
+    width: 100%;
+    border-radius: 5%;
+}
+.Lesson_body .mobile .mobile-bottom {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+    align-items: center;
+    height: 5%;
+    width: 85%;
+    color: #707070;
+    
+}
+.Lesson_body .mobile .mobile-bottom img{
+    height: 100%;
+    width: 6%;
+}
+.Lesson_body .mobile .menu_bar{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+/* height: 100%; */
+background-color: white;
+width: 60%;
+padding: 5% 3%;
+transition: all 1s;
+border: 2px double #3c98bd;
+
+}
+.Lesson_body .mobile .menu_bar .cross-mob{
+ height: 5%;
+}
+.Lesson_body .mobile .menu_bar .cross-mob:hover{
     cursor: pointer;
 }
-.showLesson {
-    width: 80%;
-    padding: 50px 0px 90px 0px;
+.Lesson_body .mobile .menu_bar .mob-side{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 10%;
+}
+.Lesson_body .mobile .menu_bar .mob-side img{
+    width: 50px;
+    height: 50px;
+}
+.Lesson_body .mobile .menu_bar .text-mob{
+height: 75%;
+}
+.Lesson_body .mobile .menu_bar .text-mob .text-mob-title{
+    height: 10%;
+    color: #3c98bd;
+    font-weight: bold;
+    text-align: center;
+    font-size: 12px;
+}
+.Lesson_body .mobile .menu_bar .text-mob .sidebar-mobile-wrapper{
+height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-}
-.showLesson .title {
-    display: flex;
-    position: absolute;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    width: 60%;
-    margin-top: -3%;
-}
-
-.showLesson .title h1 {
-    font-size: 33px;
-    position: relative;
-    top: 28%;
-    width: 340px;
-    text-align: end;
-}
-
-.showLesson .title div {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    align-items: center;
-    padding-top: -30px;
-}
-
-.showLesson .title img {
-    height: 60px;
-    width: 60px;
-    margin-top: 40px;
-}
-
-.showLesson .title div p {
-    font-size: 30px;
-    width: 300px;
-    top: 27px;
-    text-align: end;
-    position: relative;
-}
-/* 
-.showLesson .bottom {
-    width:70%;
-    margin: 0px;
-} */
-
-.showLesson .bottom .img {
-    width: 60%;
-    height: 65%;
-    position: absolute;
-    left: 35%;
-    top: 130px;
-    /* margin-top: 10px; */
-    overflow-y: scroll;
-    border: 4px dashed #3c98bd;
-    border-radius: 15px;
-    margin-left: 1%;
-}
-
-.showLesson .bottom .img img {
     width: 100%;
 }
-
-.showLesson .midlle {
+.Lesson_body .mobile .menu_bar .text-mob .sidebar-mobile-wrapper .sidebar-mobile{
+    flex: 80%;
     display: flex;
-    position: relative;
-    width: 40%;
-    margin-left: 50%;
-    bottom: -15%;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    color: #3c98bd;
+    font-weight: bold;
+    overflow-y: scroll;
+    font-size: 12px;
 }
-.showLesson .midlle img {
-    height: 45px;
-    width: 45px;
-    left: 80%;
-    position: relative;
-    display: flex;
-    cursor: pointer;
+.Lesson_body .mobile .menu_bar .text-mob .sidebar-mobile-wrapper .sidebar-mobile .mob-item{
+display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 3px;
+    text-align: right;
+
 }
-.showLesson .midlle p {
-    padding-top: 3%;
-    padding-left: 11%;
-    font-size: 25px;
-    color: #707070;
+.Lesson_body .mobile .menu_bar .text-mob .sidebar-mobile-wrapper .sidebar-mobile .mob-item:hover{
+    cursor: pointer;   
+    /* background-color: #3C98BD; */
+    /* color: #FFF; */
+    border: 1px solid #3C98BD;
 }
-@media only screen and (max-width: 1200px) and (min-width: 992px) {
-    .mobile {
-        display: none;
-    }
-
-    .mobileSvg {
-        display: none;
-    }
-
-    * {
-        margin: 0;
-        padding: 0;
-    }
-    .lesson svg{
-        width: 30%;
-        height: 600px;
-    }
-    .lesson {
-        margin-top: 0px;
-        display: flex;
-        flex-direction: row;
-        padding-left: 3%;
-        height: 603px;
-    }
-
-    .sidebar {
-        display: flex;
-        margin-right: 40%;
-        height: 603px;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        overflow-y: scroll;
-    }
-    .sidebar .text {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        text-align: center;
-        margin-bottom: 20%;
-    }
-    .sidebar .header {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-    .sidebar .arrow {
-        position: absolute;
-        top: 0px;
-        left: 5%;
-        cursor: pointer;
-    }
-    .sidebar .header img {
-        width: 50px;
-        height: 50px;
-        align-items: center;
-    }
-    .sidebar h3 {
-        padding-bottom: 50px;
-        text-align: center;
-    }
-    .sidebar h3,
-    .sidebar .sidebar-lessons div {
-        color: white;
-        font-size: 20px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 5%;
-    }
-    .sidebar .sidebar-lessons div .titles {
-        margin-left: 30px;
-        padding-bottom: 5%;
-    }
-    .sidebar .sidebar-lessons div {
-        padding: 5px;
-        text-align: right;
-        padding-bottom: 10%;
-
-    }
-    .sidebar .sidebar-lessons div:hover {
-        cursor: pointer;
-    }
-    .showLesson {
-        width: 80%;
-        padding: 50px 0px 90px 0px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .showLesson .title {
-        display: flex;
-        position: absolute;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        width: 60%;
-    }
-    .showLesson .title h1 {
-        font-size: 30px;
-        position: absolute;
-        right: 3%;
-        left: 54%;
-        top: 36%;
-        width: 47%;
-    }
-    .showLesson .title div {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: flex-end;
-        align-items: center;
-        padding-top: -30px;
-    }
-    .showLesson .title img {
-        height: 55px;
-        width: 55px;
-        margin-top: 40px;
-        display: flex;
-        position: relative;
-        left: 5%;
-    }
-    .showLesson .title div p {
-        font-size: 25px;
-        margin-right: 2%;
-        width: 37%;
-        top: 35px;
-        right: 48%;
-        text-align: end;
-        position: absolute;
-
-    }
-
-    /* .showLesson .bottom {
-        width:70%;
-        margin: 0px;
-    } */
-
-    .showLesson .bottom .img {
-        width: 57%;
-        height: 65%;
-        position: absolute;
-        margin-left: 20%;
-        top: 130px;
-        /* margin-top: 10px; */
-        overflow-y: scroll;
-        border: 3.5px dashed #3c98bd;
-        border-radius: 15px;
-        margin-left: 3%;
-    }
-
-    .showLesson .bottom .img img {
-        width: 100%;
-    }
-
-    .showLesson .midlle {
-        display: flex;
-        position: relative;
-        width: 40%;
-        margin-left: 50%;
-        margin-bottom: 0%;
-    }
-
-    .showLesson .midlle img {
-        height: 45px;
-        width: 45px;
-        left: 74%;
-        position: relative;
-        display: flex;
-        margin-top: 10%;
-        margin-left: 5%;
-    }
-
-    .showLesson .midlle p {
-        font-size: 23px;
-        width: 73%;
-        right: 15%;
-        margin-top: 9%;
-        position: relative;
-        color: #707070;
-        margin-bottom: 5%;
-    }
 }
-@media only screen and (max-width: 992px) and (min-width: 768px) {
-    .mobile {
-        display: none;
-    }
-    .mobileSvg {
-        display: none;
-    }
-    * {
-        margin: 0;
-        padding: 0;
-    }
-    .lesson {
-        margin-top: 0px;
-        display: flex;
-        flex-direction: row;
-        padding-left: 3%;
-        height: 600px;
-    }
-    .lesson svg{
-        width: 40%;
-        height: 600px;
-    }
-    .sidebar {
-        display: flex;
-        margin-right: 20%;
-        height: 603px;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        overflow-y: scroll;
-    }
-    .sidebar .text {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        text-align: center;
-        margin-bottom: 20%;
-    }
-    .sidebar .header {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-    .sidebar .arrow {
-        display:flex ;
-        height: 2.5%;
-        width: 2.5%;
-        position: absolute;
-        top: 0px;
-        left: 5%;
-        cursor: pointer;
-    }
-    .sidebar .header img {
-        width: 50px;
-        height: 50px;
-        align-items: center;
-    }
-    .sidebar h3 {
-        padding-bottom: 50px;
-        text-align: center;
-    }
-    .sidebar h3,
-    .sidebar .sidebar-lessons div {
-        color: white;
-        font-size: 20px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 5%;
-    }
-    .sidebar .sidebar-lessons div .titles {
-        margin-left: 30px;
-        padding-bottom: 5%;
-    }
-    .sidebar .sidebar-lessons div {
-        padding: 5px;
-        text-align: right;
-        padding-bottom: 10%;
-    }
-    .sidebar .sidebar-lessons div:hover {
-        cursor: pointer;
-    }
-    .showLesson {
-        width: 80%;
-        padding: 50px 0px 90px 0px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .showLesson .title {
-        display: flex;
-        position: absolute;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        width: 60%;
-    }
-    .showLesson .title h1 {
-        font-size: 18px;
-        position: absolute;
-        left: 49%;
-        top: 35px;
-        width: 41%;
-    }
-    .showLesson .title div {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: flex-end;
-        align-items: center;
-        padding-top: -30px;
-    }
-    .showLesson .title img {
-        height: 40px;
-        width: 40px;
-        margin-top: 40px;
-        display: flex;
-        position: relative;
-        left: 6%;
-    }
-    .showLesson .title div p {
-        font-size: 16px;
-        margin-right: 2%;
-        width: 35%;
-        height: 50px;
-        top: 40px;
-        left: 40%;
-        display: flex;
-        text-align: center;
-        position: absolute;
-    }
-    /* .showLesson .bottom {
-        width:70%;
-        margin: 0px;
-    } */
-    .showLesson .bottom .img {
-        width: 50%;
-        height: 65%;
-        display: flex;
-        margin-left: 7%;
-        top: 130px;
-        /* margin-top: 10px; */
-        overflow-y: scroll;
-        border: 3px dashed #3c98bd;
-        border-radius: 15px;
-        margin-right: 10%;
-    }
-    .showLesson .bottom .img img {
-        width: 100%;
-    }
-    .showLesson .midlle {
-        display: flex;
-        width: 40%;
-        margin-left: 50%;
-        bottom: -6%;
-    }
-    .showLesson .midlle img {
-        height: 35px;
-        width: 35px;
-        left: 60%;
-        position: absolute;
-        display: flex;
-        bottom: -20px;
-        margin-left: 5%;
-    }
-    .showLesson .midlle p {
-        font-size: 16px;
-        text-align: center;
-        display: inline-block;
-        margin-right: 8%;
-        margin-left: 12%;
-        padding-left: 30%;
-        width: 230px;
-        right: 25%;
-        bottom: -16px;
-        position: absolute;
-        color: #707070;
-    }
+@media screen and (max-width: 390px){
+.Lesson_body .mobile .mobile-bottom img {
+ height: 100%;
+ width: 10%;
 }
-@media only screen and (max-width: 768px) and (min-width:576px) {
-    .lesson {
-        display: none;
-    }
-
-    .mobile {
-        /* background-image: url(/WebApp/src/App/assets/Path_2@2x.png); */
-        display: flex;
-        width: 100%;
-    }
-    .mobile .mobileTop .mobile-background img {
-        width: 768px;
-        height: 160.076px;
-        margin-right: 1%;
-        overflow: visible;
-        position: relative;
-        z-index: -1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .mobile .mobileTop .imgTop {
-        height: 27%;
-        width: 9%;
-        position: relative;
-        top: -42%;
-        left: 42%;
-    }
-    .arrow-mob {
-        height: 2%;
-        display: flex;
-        position: absolute;
-        bottom: 615px;
-        left: 8%;
-        top: 5%;
-        overflow: visible;
-        cursor: pointer;
-    }
-
-    .menu_bar {
-        /* position: fixed;
-        top: 0%;
-        left: 0%;
-        bottom: 0%; */
-        /* background-color: #bd4f3c; */
-        /* width: 350px; */
-        /* position: absolute;
-        top: 0px;
-        left: 10%; */
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        text-align: center;
-        overflow-y: scroll;
-        margin: 0px;
-        margin-bottom: 0px;
-        padding-left: 50px;
-        padding-right: 20px;
-        padding-bottom: 70px;
-    }
-
-    .menu_bar .text-mob {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        text-align: center;
-        margin-top: 0px;
-    }
-
-    .menu_bar h3 {
-        padding-bottom: 50px;
-        text-align: center;
-    }
-
-    .menu_bar h3,
-    .menu_bar .sidebar-mobile div {
-        color: #3c98bd;
-        font-size: 20px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .menu_bar .sidebar-mobile div .titles-mob {
-        margin-left: 30px;
-    }
-
-    .menu_bar .sidebar-mobile div {
-        padding: 5px;
-        text-align: right;
-    }
-
-    .menu_bar .sidebar-mobile div:hover {
-        cursor: pointer;
-    }
-
-    .cross-mob {
-        color: gray;
-        margin-left: 0px;
-        margin-top: 30px;
-        margin-right: 300px;
-        cursor: pointer;
-    }
-
-    .menu-mob {
-        display: flex;
-        color: white;
-        cursor: pointer;
-        overflow: visible;
-        position: absolute;
-        bottom: 570px;
-        background-color: red;
-    }
-
-    .menu_bar {
-        background-color: white;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        position: absolute;
-        /* left: 70%; */
-        right: 0;
-        top: 0;
-        bottom: 0;
-        color: blue;
-        height: 100%;
-    }
-
-    .menu-mob {
-        position: absolute;
-        left: 50px;
-        margin-top: 40px;
-        margin-left: 0px;
-        margin-right: 50px;
-        margin-bottom: 30px;
-        cursor: pointer;
-    }
-
-    .mobile-background .title-mob1 {
-        display: flex;
-        position: absolute;
-        align-items: center;
-        flex-direction: row-reverse;
-        justify-content: flex-start;
-        width: 35%;
-        top: 0px;
-        /* padding-top: -200px;
-        padding-bottom: 90px; */
-    }
-
-    .mobile-background .title-mob1 h1 {
-        font-size: 30px;
-        width: 200px;
-        position: absolute;
-        left: 450px;
-        top: 95px;
-    }
-
-    .mobile-background .title-mob1 p {
-        font-size: 25px;
-        position: absolute;
-        top: 95px;
-        width: 250px;
-        left: 180px;
-        margin-right: 0px;
-    }
-
-    .mobile-middle {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .mobile-middle .img {
-        width: 70%;
-        height: 60%;
-        margin-right: 780px;
-        top: 180PX;
-        position: absolute;
-        overflow: scroll;
-        overflow-y: scroll;
-        border: 3px dashed #3c98bd;
-        border-radius: 15px;
-        display: block;
-        overflow-x: hidden;
-    }
-
-    .mobile-middle .img img {
-        width: 100%;
-    }
-
-    .mobile-bottom img {
-        position: absolute;
-        width: 50px;
-        top: 585px;
-        right: 120px;
-    }
-
-    .mobile-bottom p {
-        position: absolute;
-        font-size: 20px;
-        width: 200px;
-        top: 600px;
-        right: 120px;
-    }
+}
+@media screen and (max-width: 350px){
+.Lesson_body .mobile .mobileTop .mobile-background {
+ margin-top: -140px;
+}
+}
+@media screen and (max-height: 573px) and (max-width:700px){
+.Lesson_body{
+    height: 573px;
+}
+/* .Lesson_body .mobile .menu_bar{
+height: 573px;
+overflow-y: scroll;
+} */
+.Lesson_body .mobile .menu_bar .mob-side {
+height: 12%;
+margin-bottom: 2%;
+}
+.Lesson_body .mobile .menu_bar {
+    padding-top: 1%;
 }
 
-@media only screen and (max-width: 576px) and (min-width:360px) {
-    .lesson {
-        display: none;
-    }
-
-    .mobile {
-        display: flex;
-        height: 100%;
-        width: 100%;
-        display: flex;
-    }
-
-    .mobile .mobileTop .mobile-background img {
-        /* background-color: rgb(153, 51, 51); */
-        width: 576px;
-        height: 150.076px;
-        background-color: #3C98BD;
-        background-image: linear-gradient(#3C98BD, #0F53A1);
-        border-bottom-left-radius: 100px;
-        border-bottom-right-radius: 100px;
-        overflow: visible;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .mobile .mobileTop .imgTop {
-        height: 65px;
-        width: 65px;
-        position: absolute;
-        left: 250px;
-        bottom: 560px;
-        overflow: visible;
-    }
-
-    .arrow-mob {
-        display: flex;
-        position: absolute;
-        bottom: 600px;
-        left: 30px;
-        overflow: visible;
-        cursor: pointer;
-    }
-
-    .menu_bar {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        text-align: center;
-        overflow-y: scroll;
-        margin: 0px;
-        margin-bottom: 0px;
-        padding-left: 0px;
-        padding-right: 5px;
-        padding-bottom: 70px;
-    }
-
-    .menu_bar .text-mob {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        text-align: center;
-        margin-top: 0px;
-    }
-
-    .menu_bar h3 {
-        padding-bottom: 40px;
-        text-align: center;
-    }
-
-    .menu_bar h3,
-    .menu_bar .sidebar-mobile div {
-        color: #3c98bd;
-        font-size: 19px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .menu_bar .sidebar-mobile div .titles-mob {
-        margin-left: 40px;
-    }
-
-    .menu_bar .sidebar-mobile div {
-        padding: 5px;
-        text-align: right;
-    }
-
-    .menu_bar .sidebar-mobile div:hover {
-        cursor: pointer;
-    }
-
-    .cross-mob {
-        color: gray;
-        margin-left: 30px;
-        margin-top: 20px;
-        margin-right: 300px;
-        cursor: pointer;
-    }
-
-    .menu-mob {
-        display: flex;
-        color: white;
-        cursor: pointer;
-        overflow: visible;
-        position: absolute;
-        /* left: 1000px; */
-        bottom: 590px;
-        right: 20px;
-        left: 500px;
-        /* right: 30; */
-    }
-
-    .menu_bar {
-        background-color: rgb(253, 251, 251);
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        position: absolute;
-        /* left: 70%; */
-        right: 0;
-        top: 0;
-        bottom: 0;
-        height: 100%;
-    }
-
-    .mobile-background .title-mob1 {
-        display: flex;
-        position: absolute;
-        align-items: center;
-        flex-direction: row-reverse;
-        justify-content: flex-start;
-        width: 35%;
-        top: 0px;
-        color: white;
-        /* padding-top: -200px;
-        padding-bottom: 90px; */
-    }
-
-    .mobile-background .title-mob1 h1 {
-        font-size: 25px;
-        width: 200px;
-        position: absolute;
-        left: 380px;
-        top: 95px;
-    }
-
-    .mobile-background .title-mob1 p {
-        font-size: 25px;
-        position: absolute;
-        top: 95px;
-        width: 250px;
-        left: 240px;
-        margin-right: 0px;
-    }
-
-    .mobile-middle {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .mobile-middle .img {
-        width: 70%;
-        height: 60%;
-        margin-right: 600px;
-        top: 180PX;
-        position: absolute;
-        overflow: scroll;
-        overflow-y: scroll;
-        border: 3px dashed #3c98bd;
-        border-radius: 15px;
-        display: block;
-        overflow-x: hidden;
-    }
-
-    .mobile-middle .img img {
-        width: 100%;
-    }
-
-    .mobile-bottom img {
-        position: absolute;
-        width: 40px;
-        top: 575px;
-        right: 100px;
-    }
-
-    .mobile-bottom p {
-        position: absolute;
-        font-size: 18px;
-        width: 200px;
-        top: 590px;
-        right: 80px;
-    }
 }
-
-@media only screen and (max-width: 360px) and (min-width: 100px) {
-    .lesson {
-        display: none;
+@media screen and (max-height: 432px){
+.Lesson_body{
+    height: 432px;
+}
+}
+@media screen and (max-height: 435px) {
+.Lesson_body .mobile{
+    height: 435px;
+}
+}
+@media screen and (max-height: 360px){
+.Lesson_body .mobile .mobileTop .mobile-background {
+        margin-top: -98px;
     }
-
-    .mobile {
-        display: flex;
-        height: 100%;
-        width: 100%;
-        display: flex;
-    }
-
-    .mobile .mobileTop .mobile-background img {
-        /* background-color: rgb(153, 51, 51); */
-        width: 360px;
-        height: 150.076px;
-        background-color: #3C98BD;
-        background-image: linear-gradient(#3C98BD, #0F53A1);
-        border-bottom-left-radius: 100px;
-        border-bottom-right-radius: 100px;
-        overflow: visible;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .mobile .mobileTop .imgTop {
-        height: 50px;
-        width: 50px;
-        position: absolute;
-        left: 160px;
-        bottom: 570px;
-        overflow: visible;
-    }
-
-    .arrow-mob {
-        display: flex;
-        position: absolute;
-        bottom: 615px;
-        left: 30px;
-        overflow: visible;
-        cursor: pointer;
-    }
-
-    .menu_bar {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        text-align: center;
-        overflow-y: scroll;
-        margin: 0px;
-        margin-bottom: 0px;
-        padding-left: 0px;
-        padding-right: 0px;
-        padding-bottom: 70px;
-    }
-
-    .mob-side img {
-        width: 50px;
-    }
-
-    .menu_bar .text-mob {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        text-align: center;
-        margin-top: 0px;
-    }
-
-    .menu_bar h3 {
-        padding-bottom: 20px;
-        text-align: center;
-    }
-
-    .menu_bar h3,
-    .menu_bar .sidebar-mobile div {
-        color: #3c98bd;
-        font-size: 13px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .menu_bar .sidebar-mobile div .titles-mob {
-        margin-left: 50px;
-    }
-
-    .menu_bar .sidebar-mobile div {
-        padding: 5px;
-        text-align: right;
-        padding-left: 0px;
-    }
-
-    .menu_bar .sidebar-mobile div:hover {
-        cursor: pointer;
-    }
-
-    .cross-mob {
-        color: gray;
-        margin-left: 30px;
-        margin-top: 20px;
-        margin-right: 150px;
-        cursor: pointer;
-    }
-
-    .menu-mob {
-        display: flex;
-        color: white;
-        cursor: pointer;
-        overflow: visible;
-        position: absolute;
-        /* left: 1000px; */
-        bottom: 610px;
-        right: 40px;
-        left: 300px;
-        /* right: 30; */
-    }
-
-    .menu_bar {
-        background-color: rgb(253, 251, 251);
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        position: absolute;
-        /* left: 70%; */
-        right: 0;
-        top: 0;
-        bottom: 0;
-        height: 100%;
-    }
-
-    .mobile-background .title-mob1 {
-        display: flex;
-        color: white;
-        position: absolute;
-        align-items: center;
-        flex-direction: row-reverse;
-        justify-content: flex-start;
-        width: 35%;
-        top: 0px;
-        /* padding-top: -200px;
-        padding-bottom: 90px; */
-    }
-
-    .mobile-background .title-mob1 h1 {
-        font-size: 16px;
-        width: 100px;
-        position: absolute;
-        left: 230px;
-        padding-left: 0px;
-        top: 95px;
-    }
-
-    .mobile-background .title-mob1 p {
-        font-size: 18px;
-        position: absolute;
-        top: 95px;
-        width: 150px;
-        text-align: center;
-        left: 80px;
-    }
-
-    .mobile-middle {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .mobile-middle .img {
-        width: 70%;
-        height: 65%;
-        margin-right: 360px;
-        top: 170px;
-        position: absolute;
-        overflow: scroll;
-        overflow-y: scroll;
-        border: 2px dashed #3c98bd;
-        border-radius: 15px;
-        display: block;
-        overflow-x: hidden;
-    }
-
-    .mobile-middle .img img {
-        width: 100%;
-    }
-
-    .mobile-bottom img {
-        position: absolute;
-        width: 25px;
-        top: 610px;
-        right: 60px;
-    }
-
-    .mobile-bottom p {
-        position: absolute;
-        font-size: 12px;
-        width: 115px;
-        top: 615px;
-        right: 60px;
-    }
+.Lesson_body .mobile .mobileTop .mobile-background .imgTop{
+    height: 40px;
+    width: 40px;
+}
 }
