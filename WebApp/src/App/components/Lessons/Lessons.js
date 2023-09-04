@@ -12,12 +12,12 @@ import photo3 from "../../assets/Group_408.png";
 import photo4 from "../../assets/Group_404.png";
 import photo5 from "../../assets/Group_158_a@2x.png";
 import photo6 from "../../assets/Group 407.png";
-// import top1 from "../../assets/Path 2@2x.png";
+import top1 from "../../assets/Path_2@2x.png";
 import Down1 from "../../assets/Group_408.png";
 import photo7 from "../../assets/Group_158_f.png";
 import { FiMenu } from "react-icons/fi";
 import { ImCross } from "react-icons/im";
-const Lessons = ({ t }) => {
+const Lessons = ({ t },props) => {
   const { userInfo, isLoading } = useContext(AuthContext);
 
   var [num, setNum] = useState(1);
@@ -139,38 +139,16 @@ const Lessons = ({ t }) => {
               <h1> {unit}</h1>
               <p>درس {title}</p>
             </div>
-            <div className="mob-svg">
-                <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={360}
-    height={166.076}
-    {...props}
-  >
-    <defs>
-      <linearGradient
-        id="a"
-        x1={0.5}
-        x2={0.5}
-        y2={1}
-        gradientUnits="objectBoundingBox"
-      >
-        <stop offset={0} stopColor="#3c98bd" />
-        <stop offset={1} stopColor="#0f53a1" />
-      </linearGradient>
-    </defs>
-    <path
-      fill="url(#a)"
-      d="M396.137 49.383v94.452L378.6 168.849 357.881 198.4a43.727 43.727 0 0 1-3.08 3.906c-.437.511-.893.982-1.349 1.452a38.047 38.047 0 0 1-20.252 11.067 33.919 33.919 0 0 1-6.6.634H105.669c-12.211 0-23.73-6.279-31.276-17.057l-8.256-11.78-1.258-1.779-28.742-41.007V49.383Z"
-      data-name="Path 2"
-      transform="translate(-36.137 -49.383)"
-    />
-          </svg>
-            </div>
-            {/* <img src={top1}></img> */}
+            <img src={top1}></img>
           </div>
-          <Link to="/Grades">
-            <img className="arrow-mob" src={photo7} />
+          <div className="arrow-mob">
+          <Link 
+          to="/Grades">
+            <button>
+            <img src={photo7} />
+            </button>
           </Link>
+          </div>  
           <div className="menu-mob" onClick={handleSideBar}>
             <FiMenu />
           </div>
@@ -207,7 +185,7 @@ const Lessons = ({ t }) => {
               </div>
             </div>
           </div>
-          <img src={photo6} className="imgTop" />
+          {/* <img src={photo6} className="imgTop" /> */}
         </div>
         <div className="mobile-middle">
           <div className="img">

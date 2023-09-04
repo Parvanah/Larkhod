@@ -28,12 +28,6 @@ const Section = ({ t }, props) => {
     data = JsonFiles.pashto_curriculam;
   }
 
-  // const navigation = useNavigate();
-  // if (userInfo == null) {
-  //   return navigation("/");
-  // } else if (isLoading) {
-  //   return <h1>Loading.....</h1>;
-  // } else {
   return (
     <div className="full-section">
       <div className="section">
@@ -71,7 +65,12 @@ const Section = ({ t }, props) => {
           </foreignObject>
         </div>
         <div className="prevuse">
-          <img src={image4} />
+          <Link 
+          to="/Header">
+            <button>
+            <img src={image4} />
+            </button>
+          </Link>
         </div>
         <div id="title">
           <h1>{t("section1")}</h1>
@@ -156,7 +155,12 @@ const Section = ({ t }, props) => {
       <div className="mobile-section">
         <div className="mob-sec-header">
           <div className="prevuse">
+          <Link 
+          to="/Header">
+            <button>
             <img src={image4} />
+            </button>
+          </Link>
           </div>
           <div id="title">
             <h1>{t("section1")}</h1>
