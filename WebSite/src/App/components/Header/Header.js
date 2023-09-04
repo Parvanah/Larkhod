@@ -14,6 +14,8 @@ import { FiMenu } from "react-icons/fi";
 import topimag from "../../assets/logo_3.png";
 import middleimg from "../../assets/logo_2.png";
 import { ImCross } from "react-icons/im";
+import buttom_img from "../../assets/Path_7.png";
+import down_img from "../../assets/Path_39.png";
 <link rel="stylesheet" href="./Header.css" />;
 const Header = ({ t }, props) => {
   const { Loggout, userInfo, isLoading } = useContext(AuthContext);
@@ -47,12 +49,7 @@ const Header = ({ t }, props) => {
     nav = "/unit";
     status = { units: currentpart };
   }
-  // const navigation = useNavigate();
-  // if (userInfo === null) {
-  //   return navigation("/");
-  // } else if (isLoading) {
-  //   return <h1>Loading.....</h1>;
-  // } else if (userInfo !== null) {
+
   return (
     <div className="full_header">
       <nav className="header">
@@ -136,7 +133,6 @@ const Header = ({ t }, props) => {
             ></path>
           </svg>
         </Link>
-
         <div className="images_paragraph_home">
           <div>
             <img className="imgg_home" src={imgg} />
@@ -151,7 +147,6 @@ const Header = ({ t }, props) => {
           </div>
           <div className="space_home"></div>
         </div>
-
         <svg className="home_svg_one" viewBox="131.89 248.487 1920.661 112.903">
           <linearGradient
             id="Union_1_dg"
@@ -187,19 +182,15 @@ const Header = ({ t }, props) => {
           <img src={middleimg} />
           <p>سفر زیبای تعلیمی خود را</p>
           <h1>با ما آغاز کنید</h1>
+
+          {/* <div className="imggg1">
+          <img src={buttom_img} />
+          </div>
+         <div className="imggg2">
+         <img src={down_img}/>
+         </div> */}
         </div>
-        <div className="bottom">
-          <svg className="Path_7" viewBox="131.89 248.487 359.958 74.042">
-            <path
-              id="Path_7"
-              d="M 491.8476867675781 322.5292663574219 L 131.8900146484375 322.5292663574219
-           L 131.8900146484375 265.6912231445312 C 251.6147155761719 242.7526550292969 372.12353515625 242.7526550292969 491.8480529785156 265.6911315917969
-            L 491.8476867675781 322.5292663574219 Z"
-            ></path>
-          </svg>
-        </div>
-        <div
-          className="side_bar"
+        <div className="side_bar"
           style={{
             display: `${sidebar}`,
           }}
@@ -246,8 +237,8 @@ const Header = ({ t }, props) => {
           </div>
         </div>
       </div>
+      <div className="buttom"></div>
     </div>
   );
-  // }
 };
 export default withNamespaces()(Header);
