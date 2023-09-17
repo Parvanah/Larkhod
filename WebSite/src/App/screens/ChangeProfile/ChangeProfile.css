@@ -6,431 +6,17 @@
     box-sizing: border-box;
     border: none;
 }
-#change_profile_svg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255,255,255,1);
-    overflow: hidden;
-}
-#Rectangle_change_profile {
-    fill: url(#Rectangle_change_profile);
-    stroke: rgba(112,112,112,1);
-    stroke-width: 1px;
-    stroke-linejoin: miter;
-    stroke-linecap: butt;
-    stroke-miterlimit: 4;
-    shape-rendering: auto;
-}
-.Rectangle_change_profile {
-    position: absolute;
-    overflow: visible;
-    width: 1920px;
-    height: 636px;
-    left: 0px;
-    top: 240px;
-}
-#Ellipse_change_profile {
-    fill: rgba(255,255,255,1);
-    stroke: rgba(112,112,112,1);
-    stroke-width: 6px;
-    stroke-linejoin: miter;
-    stroke-linecap: butt;
-    stroke-miterlimit: 4;
-    shape-rendering: auto;
-}
-.Ellipse_change_profile {
-    position: absolute;
-    overflow: visible;
-    width: 258px;
-    height: 258px;
-    left: 551px;
-    top: -20px;
-}
-#Group_change_profile{
-    position: absolute;
-    width: 121px;
-    height: 136px;
-    left: 899.999px;
-    top: 152px;
-    overflow: visible;
-}
-#Group_change_profile {
-    position: absolute;
-    width: 121px;
-    height: 136px;
-    left: 0.001px;
-    top: 0px;
-    overflow: visible;
-}
-#nm_change_profile {
-    background-color: white;
-    cursor: pointer;
-    left: 580px;
-    top: 180px;
-    position: absolute;
-    overflow: visible;
-    width: 204px;
-    white-space: nowrap;
-    text-align: center;
-    font-family: "Bahij Helvetica"; 
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    color: rgba(112,112,112,1);
-}
-#Path_change_profile {
-    fill: rgba(0,0,0,0);
-    stroke: rgba(60,152,189,1);
-    stroke-width: 1.5px;
-    stroke-linejoin: miter;
-    stroke-linecap: butt;
-    stroke-dasharray: 4.026000022888184 4.026000022888184;
-    stroke-dashoffset: 0;
-    stroke-miterlimit: 10;
-    shape-rendering: auto;
-}
-.Path_change_profile {
-    overflow: visible;
-    position: absolute;
-    width: 1282.474px;
-    height: 218.265px;
-    left: 30.077px;
-    top: 20.717px;
-    transform: matrix(1,0,0,1,0,0);
-}
-#Path_1013_change_profile {
-    fill: rgba(15,83,161,1);
-}
-.Path_1013_change_profile {
-    overflow: visible;
-    position: absolute;
-    width: 115.999px;
-    height: 49.452px;
-    left: 618.085px;
-    top: 302.015px;
-    transform: matrix(1,0,0,1,0,0);
-}
-#Path_1014_change_profile {
-    fill: rgba(60,152,189,1);
-}
-.Path_1014_change_profile {
-    overflow: visible;
-    position: absolute;
-    width: 95.333px;
-    height: 62.985px;
-    left: 637.751px;
-    top: 302.015px;
-    transform: matrix(1,0,0,1,0,0);
-}
-#Path_1015_change_profile {
-    fill: rgba(60,152,189,1);
-}
-.Path_1015_change_profile {
-    overflow: visible;
-    position: absolute;
-    width: 140.021px;
-    height: 28.396px;
-    left: 527.064px;
-    top: 309.015px;
-    transform: matrix(1,0,0,1,0,0);
-}
-.container_change_profile{
-    display: inline-block;
-    position: relative;
-    top: 250px;
-    left: 150px;
+
+
+::placeholder {
     color: white;
-    width: 1040px;
-    display: flex;
-    justify-content: space-between;
-}
-.save_button_change_profile{
-    display: inline-block;
-    position: relative;
-    top: 300px;
-    left: 535px;
-    width: 20%;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    font-size: 20px;
-    font-family: "Bahij Helvetica"; 
-    font-style: normal;
-    font-weight: normal;
-	cursor: pointer;
-    text-align: center;
-	color: rgba(60,152,189,1);
-	background-color: white;
-	border-radius: 50px;
+    font-family: "Bahij Helvetica";
+
 }
 
-.information_two_change_profile{
-   
-   display: inline-block;
-   margin-left: 70px;
-   
-}
-.information_three_change_profile{
-    display: inline-block;
-    margin-right: 70px;
-}
-.name_change_profile,
-.lastname_change_profile,
-.username_change_profile,
-.email_change_profile,
-.age_change_profile,
-.senf_change_profile{
-    color: white;
-}
-#input_change_profile{
-    display: inline-block;
-    background: none;
-    width: 350px;
-    padding: 10px 0px;
-    /* margin-bottom: 30px; */
-    margin-top: 60px;
-    border-top: 1px solid #ccc;
-    box-sizing: border-box;
-    text-align: right;
-    fill: transparent;
-    outline: none;
-    
-}
-::placeholder{
-    color: white;
- 
-}
-.error_change_profile{
-    color: red;
-    font-weight: bold;
-    font-style: normal;
-    height: 1px;
-}
-.ig_change_profile{
-    display: inline-block;
-    position: relative;
-    top: 50px;
-    left: 70px;
-    z-index: 1000;
-}
 
-@media only screen and (max-width: 1200px ) and (min-width: 992px){
-    *{
-        text-decoration: none;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        border: none;
-    }
-    #change_profile_svg {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(255,255,255,1);
-        overflow: hidden;
-    }
-    #Rectangle_change_profile {
-        fill: url(#Rectangle_change_profile);
-        stroke: rgba(112,112,112,1);
-        stroke-width: 1px;
-        stroke-linejoin: miter;
-        stroke-linecap: butt;
-        stroke-miterlimit: 4;
-        shape-rendering: auto;
-    }
-    .Rectangle_change_profile {
-        position: absolute;
-        overflow: visible;
-        width: 1200px;
-        height: 636px;
-        left: 0px;
-        right: 0px;
-        top: 240px;
-    }
-    #Ellipse_change_profile {
-        fill: rgba(255,255,255,1);
-        stroke: rgba(112,112,112,1);
-        stroke-width: 6px;
-        stroke-linejoin: miter;
-        stroke-linecap: butt;
-        stroke-miterlimit: 4;
-        shape-rendering: auto;
-    }
-    .Ellipse_change_profile {
-        position: absolute;
-        overflow: visible;
-        width: 258px;
-        height: 258px;
-        left: 551px;
-        top: -20px;
-    }
-    #Group_change_profile{
-        position: absolute;
-        width: 121px;
-        height: 136px;
-        left: 899.999px;
-        top: 152px;
-        overflow: visible;
-    }
-    .Group_change_profile {
-        position: absolute;
-        width: 121px;
-        height: 136px;
-        left: 0.001px;
-        top: 0px;
-        overflow: visible;
-    }
-    #nm_change_profile {
-        background-color: white;
-        cursor: pointer;
-        left: 580px;
-        top: 180px;
-        position: absolute;
-        overflow: visible;
-        width: 204px;
-        white-space: nowrap;
-        text-align: center;
-        font-family: "Bahij Helvetica"; 
-        font-style: normal;
-        font-weight: normal;
-        font-size: 25px;
-        color: rgba(112,112,112,1);
-    }
-    #Path_change_profile {
-        fill: rgba(0,0,0,0);
-        stroke: rgba(60,152,189,1);
-        stroke-width: 1px;
-        stroke-linejoin: miter;
-        stroke-linecap: butt;
-        stroke-dasharray: 4.026000022888184 4.026000022888184;
-        stroke-dashoffset: 0;
-        stroke-miterlimit: 10;
-        shape-rendering: auto;
-    }
-    .Path_change_profile {
-        overflow: visible;
-        position: absolute;
-        width: 1282.474px;
-        height: 218.265px;
-        left: 30.077px;
-        top: 20.717px;
-        transform: matrix(1,0,0,1,0,0);
-    }
-    #Path_1013_change_profile {
-        fill: rgba(15,83,161,1);
-    }
-    .Path_1013_change_profile {
-        overflow: visible;
-        position: absolute;
-        width: 115.999px;
-        height: 49.452px;
-        left: 618.085px;
-        top: 302.015px;
-        transform: matrix(1,0,0,1,0,0);
-    }
-    #Path_1014_change_profile {
-        fill: rgba(60,152,189,1);
-    }
-    .Path_1014_change_profile {
-        overflow: visible;
-        position: absolute;
-        width: 95.333px;
-        height: 62.985px;
-        left: 637.751px;
-        top: 302.015px;
-        transform: matrix(1,0,0,1,0,0);
-    }
-    #Path_1015_change_profile {
-        fill: rgba(60,152,189,1);
-    }
-    .Path_1015_change_profile {
-        overflow: visible;
-        position: absolute;
-        width: 140.021px;
-        height: 28.396px;
-        left: 527.064px;
-        top: 309.015px;
-        transform: matrix(1,0,0,1,0,0);
-    }
-    .container_change_profile{
-        display: inline-block;
-        position: relative;
-        top: 290px;
-        left: 150px;
-        color: white;
-        width: 1040px;
-        display: flex;
-        justify-content: space-between;
-    }
-    .save_button_change_profile{
-        display: inline-block;
-        position: relative;
-        top: 320px;
-        left: 535px;
-        width: 20%;
-        border: 1px solid #ccc;
-        box-sizing: border-box;
-        font-size: 20px;
-        font-family: "Bahij Helvetica"; 
-        font-style: normal;
-        font-weight: normal;
-        cursor: pointer;
-        text-align: center;
-        color: rgba(60,152,189,1);
-        background-color: white;
-        border-radius: 50px;
-    }
-    .information_one_change_profile{
 
-        display: inline-block;
-    }
-    .information_two_change_profile{
-        
-        display: inline-block;
-        
-    }
-    .information_three_change_profile{
-         display: inline-block;
-    }
-    .name_change_profile,
-    .lastname_change_profile,
-    .username_change_profile,
-    .email_change_profile,
-    .age_change_profile,
-    .senf_change_profile{
-         color: white;
-    }
-    #input_change_profile{
-        display: inline-block;
-        background: none;
-        width: 300px;
-        padding: 10px 0px;
-        margin-bottom: 30px;
-        margin-top: 30px;
-        border-top: 1px solid #ccc;
-        box-sizing: border-box;
-        text-align: right;
-        fill: transparent;
-        outline: none;   
-    }
-    ::placeholder{
-        color: white;
-    }
-    .error_change_profile{
-        color: red;
-        font-weight: bold;
-        font-style: normal;
-        font-family: "Bahij Helvetica"; 
-    }
-    .ig_change_profile{
-        display: inline-block;
-        position: relative;
-        top: 50px;
-        left: 70px;
-        z-index: 1000;
-}
-}
-/* ///////////////////////// Khatima*/
+/* ///////////////////////// mainChangeProfile*/
 .Change_Profile{
     background-color: white;
     display: flex;
@@ -441,58 +27,107 @@
 }
 .Change_Profile .Top_ChangeProfile{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex: 1;
-    width: 100%;
+    height: 35%;
+    width: 95%;
+    /* position: relative; */
+    /* background-color: cadetblue; */
 }
-.Change_Profile .Bottom_ChangeProfile{
-    flex: 3;
-    background-color: #3C98BD;
-    background-image: linear-gradient(#3C98BD, #0F53A1);
-    border-top-right-radius: 18%;
-    border-top: 2px solid gray;
-    border-top-left-radius: 15%;
+.Change_Profile .Top_ChangeProfile a {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-.Change_Profile .Top_ChangeProfile a{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    width: 85%;
-    padding-top: 3%;
-    flex: 1;
+    justify-content: start;
+    align-items: start;
+    width: 10%;
+    /* padding-top: 3%; */
+    height: 80%;
     /* background-color: gray; */
 }
-.Change_Profile .Top_ChangeProfile .ProfHandler{
+.Change_Profile .Top_ChangeProfile a img{
+    height: 15px;
+    width: 30px;
+}
+
+.Change_Profile .Top_ChangeProfile .ProfHandler {
     display: flex;
     flex-direction: column;
     justify-content: center;
     /* padding: 5%; */
     /* padding-bottom: 10px; */
     align-items: center;
-    flex: 1;
+    height: 100%;
+    width: 90%;
+    margin-right: 10%;
+    background-color: #FFF;
+    
 }
-.Change_Profile .Top_ChangeProfile .ProfHandler img{
- border-radius: 50%;
- border: 2px solid gray;
- width: 78%;
- height: 78%;
+.Change_Profile .Top_ChangeProfile .ProfHandler .TelegramIcon{
+    margin-top: 1%;
+    width: 100%;
+    height: 99%;
+    /* margin-bottom: 8%; */
+    
+    
+    
 }
-.Change_Profile .Top_ChangeProfile .ProfHandler button{
+.Change_Profile .Top_ChangeProfile .ProfHandler .insideTelegramIcon{
+    position: absolute;
+    top: 8%;
+    left:35% ;
+    display: flex;
+    flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        /* background-color: rebeccapurple; */
+        width: 15%;
+    height: 20%;
+
+}
+.Change_Profile .Top_ChangeProfile .ProfHandler .insideTelegramIcon .profilePhoto{
+    width: 50%;
+    height: 80%;
+    border-radius: 50%;
+}
+.Change_Profile .Top_ChangeProfile .ProfHandler .insideTelegramIcon .ChangeProfBtn{
+    height: 20%;
+    background-color: white;
+    border: none;
+    outline: none;
+    color: gray;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+
+}
+.Change_Profile .Top_ChangeProfile .ProfHandler .insideTelegramIcon .ChangeProfBtn input[type="file"]{
+    display: none;
+}
+.Change_Profile .Top_ChangeProfile .ProfHandler button {
     background-color: white;
     padding: 5px;
+}
+.Change_Profile .Bottom_ChangeProfile{
+    height: 65%;
+    background-color: #3C98BD;
+    background-image: linear-gradient(to right,#3C98BD, #0F53A1);
+    border-top-right-radius: 110px;
+    border-top: 2px solid gray;
+    border-top-left-radius: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.Change_Profile .Bottom_ChangeProfile .CP_M_BackGround{
+display: none;
 }
 .Change_Profile .Bottom_ChangeProfile form{
     /* background-color: rebeccapurple; */
     width: 80%;
-    height:60vh;
+    height:60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -506,12 +141,25 @@
     /* background-color: aquamarine; */
     margin-top: 10px;
     margin-bottom: 10px;
+    height: 30%;
 
 }
 .Change_Profile .Bottom_ChangeProfile form .input{
     width: 40%;
     display: flex;
     flex-direction: column;
+}
+.Change_Profile .Bottom_ChangeProfile form .input ::placeholder {
+    text-align: right;
+    color: #FFF;
+    font-family: "Bahij Helvetica";
+}
+.Change_Profile .Bottom_ChangeProfile form .input .error_change_profile {
+    color: red;
+    font-weight: bold;
+    font-style: normal;
+    height: 1px;
+    text-align: right;
 }
 .Change_Profile .Bottom_ChangeProfile form .input .error{
     color: red;
@@ -533,4 +181,175 @@
     background-color: white;
     padding: 1% 7%;
     border-radius: 15px;
+}
+@media screen and (max-width: 1030px){
+.Change_Profile .Top_ChangeProfile .ProfHandler .insideTelegramIcon .profilePhoto {
+        width: 80%;
+        height: 80%;
+    }
+}
+@media screen and (max-width: 850px) {
+    .Change_Profile .Top_ChangeProfile .ProfHandler .insideTelegramIcon .profilePhoto {
+        width: 100%;
+        height: 80%;
+    }
+}
+@media screen and (min-height: 650px)  {
+        .Change_Profile .Top_ChangeProfile .ProfHandler .insideTelegramIcon {
+                width: 20%;
+                height: 20%;
+                /* background-color: #fff; */
+            }
+}
+@media screen and (max-width: 700px) {
+.Change_Profile .Top_ChangeProfile{
+        height: 25%;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+
+}
+.Change_Profile .Top_ChangeProfile a{
+  /* align-items: end; */
+  justify-content: end;
+  width: 90%;
+  height: 20%;
+  /* background-color: #3C98BD; */
+}
+.Change_Profile .Top_ChangeProfile .ProfHandler{
+height: 80%;
+width: 110%;
+}
+.Change_Profile .Top_ChangeProfile .ProfHandler .TelegramIcon {
+    height: 100%;
+    margin-top: 0%;
+}
+.Change_Profile .Top_ChangeProfile .ProfHandler .insideTelegramIcon {
+    position: absolute;
+    /* top: 6%; */
+    /* left: 20%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+    height: 15%;
+
+}
+
+.Change_Profile .Top_ChangeProfile .ProfHandler .insideTelegramIcon .profilePhoto {
+    width: 50%;
+    height: 70%;
+    border-radius: 50%;
+}
+
+.Change_Profile .Top_ChangeProfile .ProfHandler .insideTelegramIcon .ChangeProfBtn {
+    height: 30%;
+    background-color: white;
+    border: none;
+    outline: none;
+    color: gray;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+
+}
+.Change_Profile .Top_ChangeProfile .ProfHandler button {
+    background-color: white;
+    padding: 5px;
+}
+.Change_Profile .Top_ChangeProfile a img{
+    height: 10px;
+    width: 20px;
+}
+.Change_Profile .Bottom_ChangeProfile {
+       height: 75%;
+        background-color: #FFF;
+        background-image: none;
+        border-top-right-radius: none;
+        border-top:none;
+        border-top-left-radius: none;
+        position: relative;
+    }
+
+    .Change_Profile .Bottom_ChangeProfile .CP_M_BackGround {
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+        .Change_Profile .Bottom_ChangeProfile form {
+            position: absolute;
+        }
+        .Change_Profile .Bottom_ChangeProfile form .form_Row {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            height: 50%;
+    
+        }
+    
+        .Change_Profile .Bottom_ChangeProfile form .input {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            height: 50%;
+        }
+        .Change_Profile .Bottom_ChangeProfile form .submit_button{
+            width: 80%;
+        }
+       .Change_Profile .Bottom_ChangeProfile form .input  .error_change_profile {
+                    color: red;
+                    font-weight: bold;
+                    font-style: normal;
+                    height: 1px;
+                    font-size: 12px;
+                    text-align: right;
+                }
+}
+@media screen and (max-width: 445px) {
+.Change_Profile .Top_ChangeProfile .ProfHandler .insideTelegramIcon{
+    width: 35%;
+    text-align: center;
+}
+}
+@media screen and (max-width: 350px) {
+    .Change_Profile .Bottom_ChangeProfile form .input {
+            width: 100%;
+        }
+    .Change_Profile .Bottom_ChangeProfile form .submit_button {
+                    width: 100%;
+    }
+}
+@media screen and (max-width: 250px){
+.Change_Profile .Top_ChangeProfile .ProfHandler .insideTelegramIcon .ChangeProfBtn{
+ font-size: 10px;
+}
+}
+
+@media screen and (max-height: 500px) and (min-width: 701px){
+.Change_Profile .Top_ChangeProfile .ProfHandler .insideTelegramIcon {
+        height: 20%;
+    }
+    .Change_Profile .Top_ChangeProfile .ProfHandler .insideTelegramIcon .profilePhoto {
+    width: 50%;
+    height: 70%;
+    border-radius: 50%;
+}
+}
+@media screen and (max-height: 390px) and (min-width: 701px) {
+.Change_Profile{
+    height: 390px;
+}
+}
+@media screen and (max-height: 500px) and (max-width: 700px) {
+    .Change_Profile {
+        height: 500px;
+    }
+        .Change_Profile .Top_ChangeProfile .ProfHandler .insideTelegramIcon{
+            top: 11%;
+        }
 }
