@@ -6,7 +6,6 @@ import i18n from "../../../i18n";
 import { withNamespaces } from "react-i18next";
 import "./SingUp.css";
 import { FaGoogle } from "react-icons/fa";
-import googlePhoto  from "../../assets/Google.png";
 import { useState, useEffect } from "react";
 import img1 from "../../assets/mg.png";
 import img3 from "../../assets/logo_3.png";
@@ -470,7 +469,7 @@ const SingUp = ({ t }, props) => {
                 </form>
                 <h4 className="p_singup">{t("singup7")}</h4>
                 <button className="google_button_singup" onClick={login}>
-                  {/* <FaGoogle className="google_icon_singup" /> */}
+                  <FaGoogle className="google_icon_singup" />
                   <div className="google_p_singup">{t("singup8")}</div>
                 </button>
               </div>
