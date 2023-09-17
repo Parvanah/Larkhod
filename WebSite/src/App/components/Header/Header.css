@@ -9,8 +9,8 @@
 }
 .full_header{
     color: white;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
 }
 .header{
@@ -194,8 +194,8 @@
     }
     .full_header {
         color: white;
-        height: 100%;
-        width: 100%;
+        height: 100vh;
+        width: 100vw;
     }
     .mobile {
         display: none;
@@ -302,7 +302,7 @@
     }
     .home_svg_one {
         fill: rgba(255, 255, 255, 1);
-        width: 100%;
+        width: 100vw;
         height: 80px;
     }
     #home_svg {
@@ -341,7 +341,6 @@
         text-decoration: none;
         list-style-type: none;
     }
-
     .full_header {
         color: white;
         width: 100%;
@@ -379,7 +378,6 @@
         margin-right: 26px;
         display: inline-block;
     }
-
     /* #button_header{
         margin-left: 5px;
         background-image: linear-gradient(to right,rgb(31, 111, 143),rgba(60,152,189,1));
@@ -398,7 +396,6 @@
         height: 5%;
         width: 5%;
     }
-
     .link_nav_header {
         color: white;
     }
@@ -406,8 +403,8 @@
     /*home style////////////////////////////////////////////////////////*/
     .home {
         background-image: linear-gradient(to right, rgb(45, 132, 167), rgba(60, 152, 189, 1));
-        height: 450px;
-        width: 100%;
+        height: 490px;
+        width: 100vw;
     }
     .img_one_home {
         margin-top: 30px;
@@ -449,11 +446,11 @@
     }
     #home_svg_one {
         fill: rgba(255, 255, 255, 1);
-        width: 100vw;
     }
     .home_svg_one {
         fill: rgba(255, 255, 255, 1);
         width: 100vw;
+        height: 13vh;
         /* position: relative;
         top: -0px; */
     }
@@ -463,11 +460,10 @@
     .home_svg {
         overflow: visible;
         position: absolute;
-        background-color: red;
-        height: 15px;
+        height: 2%;
         left: 50%;
-        top: 570px;
-        transform: matrix(1, 0, 0, 1, 0, 0);
+        top: 580px;
+        /* transform: matrix(1, 0, 0, 1, 0, 0); */
         cursor: pointer;
     }
     .imggg_home {

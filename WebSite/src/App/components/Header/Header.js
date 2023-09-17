@@ -171,7 +171,7 @@ const Header = ({ t }, props) => {
           <h1>لارښود - Larkhod</h1>
           <div className="icon_header">
             <Link className="link_nav_header" to="/changeprofile">
-              <FaUser />
+              < FaUser />
             </Link>
           </div>
           <div className="menu" onClick={handleSideBar}>
