@@ -2,37 +2,32 @@
     background-color: white;
     color: rgb(81, 187, 228);
     font-family: "Bahij Helvetica";
-    height: 100px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .mobile-section {
     display: none;
 }
-
 #title {
     align-items: center;
     color: rgba(60, 152, 189, 1);
 }
-
 #title h1 {
     font-weight: bold;
     font-size: 50px;
     display: flex;
     justify-content: center;
     color: rgba(60, 152, 189, 1);
-    margin-top: -70px;
+    margin-top: -80px;
 }
-
 #title p {
     color: rgba(60, 152, 189, 1);
     font-size: 30px;
     font-family: "Bahij Helvetica";
-    margin-top: 2%;
+    margin-top: 0%;
 }
-
 #ul-section {
     display: flex;
     width: 80%;
@@ -41,24 +36,21 @@
     justify-content: center;
     align-items: center;
 }
-
 #ul-section img {
     justify-content: center;
     display: inline-block;
-    height: 60%;
-    width: 60%;
+    height: 50%;
+    width: 50%;
     margin-left: 30%;
     align-items: center;
     margin-top: 6vh;
 }
-
 #ul-section h1 {
     color: rgba(60, 152, 189, 1);
     font-size: 30px;
-    margin-left: 40%;
-    margin-top: 2vh;
+    margin-left: 36%;
+    margin-top: 0%;
 }
-
 #ul-section p {
     color: rgba(60, 152, 189, 1);
     width: 45%;
@@ -66,12 +58,10 @@
     justify-content: center;
     margin-left: 35%;
     text-align: center;
-    margin-top: 2vh;
-    margin-right: 50px;
+    margin-top: 3%;
     font-size: 20px;
     display: flex;
 }
-
 .section .prevuse img {
     position: absolute;
     bottom: 90%;
@@ -79,51 +69,25 @@
     display: flex;
     cursor: pointer;
 }
-
 .section .svg {
     height: 10px;
     width: 10x;
-    margin-left: 0px;
-    padding-top: 20px;
-    padding-right: 950px;
-    margin: 12px;
+    margin-right: 70%;
+    margin-top: 3%;
 }
-
 .section .svg1 {
-    padding-left: 1080px;
-    height: 10px;
-    width: 10x;
-    padding-top: -30px;
-    padding-bottom: 85px;
+    margin-left: 80%;
     padding-right: 0px;
-    margin-top: 0px;
 }
-
 .section .svg2 {
-    height: 10%;
-    width: 5%;
-    top: 500px;
-    right: 85%;
-    position: fixed;
-    /* margin-left: 0px;
-    padding-top: 0px;
-    padding-right: 970px;
-    padding-bottom: 40px;
-    display: inline-flex;
-    margin: 0px; */
+    margin-top: -6%;
+    margin-right: 70%;
+    display: flex;
 }
-
 .section .svg3 {
-    height: 10%;
-    width: 10%;
-    position: absolute;
-    /* margin-left: 2000px;
-    margin-bottom: 30px; */
-    top: 500px;
-    left: 85%;
-
+    margin-top: -8%;
+    margin-left: 80%;
 }
-
 @media only screen and (max-width: 1200px) and (min-width: 992px) {
     .section {
         background-color: white;
@@ -132,28 +96,25 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        height: 100vh;
     }
-
     #title {
         align-items: center;
         color: rgba(60, 152, 189, 1);
     }
-
     #title h1 {
         font-weight: bold;
         font-size: 47px;
         display: flex;
         justify-content: center;
         color: rgba(60, 152, 189, 1);
-        margin-top: -80px;
+        margin-top: -100px;
     }
-
     #title p {
         color: rgba(60, 152, 189, 1);
         font-size: 30px;
-        width: 700px;
+        width:100% ;
     }
-
     #ul-section {
         display: flex;
         color: rgba(60, 152, 189, 1);
@@ -161,111 +122,86 @@
         justify-content: center;
         align-items: center;
     }
-
     #ul-section img {
         justify-content: center;
         display: inline-block;
-        height: 55%;
-        width: 55%;
+        height: 50%;
+        width: 50%;
         margin-left: 30%;
         margin-right: 30%;
         align-items: center;
-        margin-top: 6vh;
     }
-
     #ul-section h1 {
         color: rgba(60, 152, 189, 1);
         font-size: 30px;
-        margin-left: 40%;
-        margin-top: 2vh;
+        margin-left: 35%;
+        margin-top: 3%;
     }
-
     #ul-section p {
         color: rgba(60, 152, 189, 1);
-        width: 55%;
+        width: 60%;
         text-align: center;
         align-items: center;
         justify-content: center;
         margin-left: 30%;
-        margin-top: 2vh;
         font-size: 22px;
         display: flex;
     }
-
     .section .prevuse img {
-        width: 3%;
         height: 3%;
-        align-items: center;
-        top: 10%;
+        top: 7%;
         left: 5%;
         display: flex;
         cursor: pointer;
     }
-
     .section .svg {
-        height: 5px;
-        width: 5x;
-        padding-right: 75%;
+        display: flex;
+        margin-top: 4%;
+        margin-left: 0%;
     }
-
     .section .svg1 {
-        padding-left: 650px;
-        height: 5px;
-        width: 5px;
-        padding-top: -30px;
-        padding-bottom: 85px;
-        padding-right: 0px;
-        margin-top: 0px;
+        margin-right: 8%;
     }
-
     .section .svg2 {
-        top: 80%;
+        display: flex;
+        margin-left: -5%;
     }
-
     .section .svg3 {
-        height: 10px;
-        width: 10x;
-        position: absolute;
-        top: 80%;
-        right: 30%;
+        display: flex;
+        margin-top: -7%;
     }
 }
-
 @media only screen and (max-width: 992px) and (min-width: 768px) {
     .section {
         background-color: white;
         color: rgb(81, 187, 228);
-        height: 100%;
+        height: 100vh;
+        width: 100vw;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
     #title {
         align-items: center;
-        color: rgba(60, 152, 189, 1);
         padding-top: 13%;
     }
-
     #title h1 {
+        margin-top: -10%;
         font-weight: bold;
-        font-size: 40px;
+        font-size: 38px;
         display: flex;
         justify-content: center;
         color: rgba(60, 152, 189, 1);
-        padding-top: 2%;
     }
-
     #title p {
         color: rgba(60, 152, 189, 1);
-        font-size: 25px;
+        font-size: 23px;
         width: 100%;
-        margin-top: 5%;
+        margin-top: 3%;
         align-items: center;
         justify-content: center;
         text-align: center;
     }
-
     #ul-section {
         display: flex;
         color: rgba(60, 152, 189, 1);
@@ -273,17 +209,15 @@
         justify-content: center;
         align-items: center;
     }
-
     #ul-section img {
-        height: 90%;
-        width: 90%;
+        height: 80%;
+        width: 80%;
         justify-content: space-between;
         margin-top: -20%;
         padding: 10%;
         margin-right: 30%;
         margin-left: 20%;
     }
-
     #ul-section a {
         display: flex;
         flex-direction: column;
@@ -294,16 +228,14 @@
         margin-left: 2%;
         margin-right: 2%;
     }
-
     #ul-section h1 {
         color: rgba(60, 152, 189, 1);
-        font-size: 25px;
+        font-size: 23px;
         margin-left: 20%;
         margin-top: 0px;
         margin-right: 18%;
         text-align: center;
     }
-
     #ul-section p {
         color: rgba(60, 152, 189, 1);
         align-items: center;
@@ -312,72 +244,62 @@
         margin-right: 25%;
         font-size: 19px;
         display: flex;
-        width: 60%;
+        width: 65%;
     }
-
     .section .prevuse img {
         position: absolute;
-        top: 10%;
-        right: 90%;
+        top: 8%;
+        right: 91%;
         width: 3%;
         cursor: pointer;
     }
-
     .section .svg {
         position: absolute;
-        left: 10%;
+        margin-right: 65%;
+        top: 6%;
+        display: flex;
+        align-items: center;
     }
-
     .section .svg1 {
         position: absolute;
-        right: 10%;
-        top: 10%;
+        right: 9%;
+        top: 3%;
     }
-
     .section .svg2 {
         position: absolute;
         left: 10%;
         bottom: 20%;
-        top: 80%;
+        top: 91%;
     }
-
     .section .svg3 {
         position: absolute;
-        top: 80%;
-        left: 80%;
+        top: 92%;
+        left: 0%;
     }
 }
-
 @media only screen and (max-width: 768px) and (min-width:576px) {
     .section {
         display: none;
     }
-
     .section .prevuse img {
         display: none;
     }
-
     .section .svg {
         display: none;
     }
-
     .section .svg1 {
         display: none;
     }
-
     .section .svg2 {
         display: none;
     }
-
     .section .svg3 {
         display: none;
     }
-
     .mobile-section {
         display: block;
-        height: auto;
+        height: 100vh;
     }
-
     .mob-sec-header .prevuse {
         position: absolute;
         height: 2.6%;
@@ -386,132 +308,110 @@
         left: 7%;
         cursor: pointer;
     }
-
     #title h1 {
         position: absolute;
         color: rgba(255, 194, 0, 1);
-        font-size: 50px;
+        font-size: 45px;
         top: 17%;
         text-align: center;
         left: 32%;
     }
-
     #title p {
         width: 80%;
         position: absolute;
-        font-size: 28px;
-        top: 13%;
+        font-size: 25px;
+        top: 15%;
         text-align: center;
         left: 13%;
     }
-
     .shape-1 {
         position: absolute;
         display: flex;
-        width: 15%;
-        height: 10%;
+        height: 8%;
         left: 15%;
         top: 25%;
     }
-
     .shape-2 {
         position: absolute;
         display: flex;
         width: 11%;
-        height: 12%;
+        height: 8%;
         top: 5%;
         left: 80%;
     }
-
     .mob-sec-article #ul-section {
-        position: absolute;
-        top: 26%;
-        padding-top: 63%;
+        position: fixed;
+        top: 28%;
+        padding-top: 400px;
         left: 20%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         overflow-y: scroll;
-        align-items: center;
-        height: 60%;
+        height: 70vh;
+        margin-bottom: 20%;
         width: 60%;
     }
-
     .mob-sec-article #ul-section img {
-        height: 60%;
-        width: 40%;
-        margin-top: 0%;
-        padding-top: 2%;
-        margin-bottom: -2%;
+        height: 170px;
+        width: 75%;
+        margin-top: -5;
+        margin-bottom: 0%;
     }
-
     .mob-sec-article #ul-section h1 {
         font-size: 25px;
         font-family: "Bahij Helvetica";
-        margin-left: 36%;
-        padding-top: 0%;
+        width: 60%;
+        margin-top:-2;
+        margin-bottom: 0;
     }
-
     .mob-sec-article #ul-section p {
         font-size: 20px;
         text-align: center;
         font-family: "Bahij Helvetica";
-        width: 60%;
+        width: 70%;
         margin-left: 23%;
-        margin-bottom: 3%;
-
+        margin-top: 0;
     }
-
     .shape-3 {
         display: flex;
-        height: 12%;
-        width: 12%;
+        height: 10%;
         position: absolute;
-        top: 80%;
+        top: 83%;
         left: 10%;
     }
-
     .shape-4 {
         position: absolute;
         display: flex;
-        width: 10%;
-        height: 12%;
-        left: 80%;
+        height: 10%;
+        left: 83%;
         top: 85%;
     }
 }
-
 @media only screen and (max-width: 576px) and (min-width:360px) {
     .section {
         display: none;
     }
-
     .section .prevuse img {
         display: none;
     }
-
     .section .svg {
         display: none;
     }
-
     .section .svg1 {
         display: none;
     }
-
     .section .svg2 {
         display: none;
     }
-
     .section .svg3 {
         display: none;
     }
-
     .mobile-section {
         width: 100%;
         display: block;
-        height: auto;
+        height: 100vh;
     }
-
     .mob-sec-header .prevuse {
         width: 5%;
         height: 2%;
@@ -521,25 +421,22 @@
         left: 7%;
         cursor: pointer;
     }
-
     #title h1 {
         position: absolute;
         color: rgba(255, 194, 0, 1);
-        font-size: 34px;
-        top: 15%;
+        font-size: 30px;
+        top: 17%;
         text-align: center;
-        left: 36%;
+        left: 30%;
     }
-
     #title p {
-        width: 40%;
+        width: 80%;
         position: absolute;
         font-size: 23px;
         top: 10%;
         text-align: center;
-        left: 33%;
+        left: 10%;
     }
-
     .shape-1 {
         position: absolute;
         display: flex;
@@ -548,37 +445,34 @@
         left: 15%;
         top: 25%;
     }
-
     .shape-2 {
         position: absolute;
         display: flex;
         width: 10%;
         height: 10%;
-        top: 10%;
+        top: 2%;
         left: 80%;
     }
-
     .mob-sec-article #ul-section {
         position: absolute;
-        top: 28%;
-        left: 8%;
-        padding-top: 75%;
-        padding-right: 2%;
+        top: 25%;
+        left: -14%;
+        margin-right: 6%;
+        padding-top: 410px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         overflow-y: scroll;
         align-items: center;
         height: 58%;
-        width: 70%;
+        width: 100%;
     }
-
     .mob-sec-article #ul-section img {
-        width: 55%;
-        height: 57%;
-        margin-right: 15%;
+        width: 50%;
+        height: 60%;
+        margin-right: 16%;
+        margin-top: 0;
     }
-
     .mob-sec-article #ul-section h1 {
         font-size: 23px;
         font-family: "Bahij Helvetica";
@@ -586,233 +480,84 @@
         text-align: center;
         margin-left: 26%;
         margin-top: 0px;
+        margin-bottom: 0px;
     }
-
     .mob-sec-article #ul-section p {
         font-size: 20px;
         width: 70%;
         text-align: center;
         font-family: "Bahij Helvetica";
         margin-left: 22%;
-        margin-top: 2%;
+        margin-top: 0%;
+        margin-bottom: -5%;
     }
-
     .shape-3 {
         display: flex;
         height: 9%;
         width: 9%;
         position: absolute;
-        top: 80%;
+        top: 87%;
         left: 10%;
     }
-
     .shape-4 {
         position: absolute;
         display: flex;
         width: 11.3%;
         height: 10%;
         left: 80%;
-        top: 85%;
+        top: 88%;
     }
 }
-
-@media only screen and (max-width: 491px) and (min-width:360px) {
-    .section {
-        display: none;
-    }
-
-    .section .prevuse img {
-        display: none;
-    }
-
-    .section .svg {
-        display: none;
-    }
-
-    .section .svg1 {
-        display: none;
-    }
-
-    .section .svg2 {
-        display: none;
-    }
-
-    .section .svg3 {
-        display: none;
-    }
-
-    .mobile-section {
-        width: 100%;
-        display: block;
-        height: auto;
-    }
-
-    .mob-sec-header .prevuse {
-        width: 5%;
-        height: 2%;
-        position: absolute;
-        display: flex;
-        top: 7%;
-        left: 7%;
-        cursor: pointer;
-    }
-
-    #title h1 {
-        position: absolute;
-        color: rgba(255, 194, 0, 1);
-        font-size: 34px;
-        top: 15%;
-        text-align: center;
-        left: 32%;
-    }
-
-    #title p {
-        width: 50%;
-        position: absolute;
-        font-size: 23px;
-        top: 10%;
-        text-align: center;
-        left: 28%;
-    }
-
-    .shape-1 {
-        position: absolute;
-        display: flex;
-        width: 7%;
-        height: 7%;
-        left: 15%;
-        top: 25%;
-    }
-
-    .shape-2 {
-        position: absolute;
-        display: flex;
-        width: 10%;
-        height: 10%;
-        top: 10%;
-        left: 80%;
-    }
-
-    .mob-sec-article #ul-section {
-        position: absolute;
-        top: 29%;
-        left: 8%;
-        padding-top: 77%;
-        padding-right: 2%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        overflow-y: scroll;
-        align-items: center;
-        height: 50%;
-        width: 70%;
-    }
-
-    .mob-sec-article #ul-section img {
-        width: 50%;
-        height: 50%;
-        margin-right: 15%;
-        margin-top: 7%;
-    }
-
-    .mob-sec-article #ul-section h1 {
-        font-size: 20px;
-        font-family: "Bahij Helvetica";
-        width: 60%;
-        text-align: center;
-        margin-left: 26%;
-        margin-top: 0px;
-    }
-
-    .mob-sec-article #ul-section p {
-        font-size: 18px;
-        width: 85%;
-        text-align: center;
-        font-family: "Bahij Helvetica";
-        margin-left: 18%;
-        margin-top: 2%;
-    }
-
-    .shape-3 {
-        display: flex;
-        height: 9%;
-        width: 9%;
-        position: absolute;
-        top: 80%;
-        left: 10%;
-    }
-
-    .shape-4 {
-        position: absolute;
-        display: flex;
-        width: 11.3%;
-        height: 10%;
-        left: 80%;
-        top: 85%;
-    }
-}
-
 @media only screen and (max-width: 360px) and (min-width: 100px) {
     .section {
         display: none;
     }
-
     .section .prevuse img {
         display: none;
     }
-
     .section .svg {
         display: none;
     }
-
     .section .svg1 {
         display: none;
     }
-
     .section .svg2 {
         display: none;
     }
-
     .section .svg3 {
         display: none;
     }
-
     .mobile-section {
-        background-color: white;
         width: 100%;
         display: block;
-        height: auto;
+        height: 100vh;
     }
-
     .mob-sec-header .prevuse {
         height: 1.5%;
         position: absolute;
         display: flex;
-        top: 4%;
+        top: 6%;
         left: 7%;
         cursor: pointer;
     }
-
     #title h1 {
         position: absolute;
         color: rgba(255, 194, 0, 1);
         font-family: "Bahij Helvetica";
-        font-size: 25px;
-        top: 17%;
+        font-size: 30px;
+        top: 20%;
         text-align: center;
-        left: 32%;
+        left: 28%;
     }
-
     #title p {
-        width: 48%;
+        width: 60%;
         position: absolute;
         font-family: "Bahij Helvetica";
         font-size: 18px;
-        top: 10%;
+        top: 20%;
         text-align: center;
-        left: 32%;
+        left: 24%;
     }
-
     .shape-1 {
         position: absolute;
         display: flex;
@@ -821,7 +566,6 @@
         left: 15%;
         top: 25%;
     }
-
     .shape-2 {
         position: absolute;
         display: flex;
@@ -830,64 +574,58 @@
         top: 5%;
         left: 80%;
     }
-
     .mob-sec-article #ul-section {
         position: absolute;
         top: 180px;
-        left: 10%;
-        padding-top: 100%;
-        padding-right: 2%;
+        left: 20%;
+        padding-top: 390px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         overflow-y: scroll;
         align-items: center;
         height: 60%;
-        width: 70%;
+        width: 60%;
     }
-
     .mob-sec-article #ul-section img {
-        width: 55%;
-        height: 50%;
-        margin-right: 15%;
-        margin-top: 2px;
-        padding-top: 7%;
+        width: 100%;
+        margin-left: -7%;
+        padding-right: 18%;
+        align-items: center;
+        height:50%;
+        margin-top: -10px;
+        padding-top: 10px;
     }
-
     .mob-sec-article #ul-section h1 {
         font-size: 18px;
         font-family: "Bahij Helvetica";
-        width: 70%;
+        width: 90%;
         text-align: center;
-        margin-left: 28%;
-        margin-top: 0%;
+        margin-left: -5%;
     }
-
     .mob-sec-article #ul-section p {
         font-size: 16px;
         text-align: center;
-        width: 70%;
+        width: 90%;
         font-family: "Bahij Helvetica";
-        margin-left: 23%;
+        margin-left: -5%;
         margin-top: 3%;
-        padding-bottom: 2%;
+        padding-bottom: -3%;
     }
-
     .shape-3 {
         display: flex;
-        height: 7%;
-        width: 7%;
+        height: 8%;
+        width: 8%;
         position: absolute;
         top: 90%;
         left: 10%;
     }
-
     .shape-4 {
         position: absolute;
         display: flex;
         width: 9%;
         height: 9%;
         left: 80%;
-        top: 85%;
+        top: 90%;
     }
 }
