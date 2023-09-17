@@ -1,80 +1,93 @@
 .Download-all-b {
     display: flex;
     flex-direction: column;
-    /* height: 100vh; */
+    height: 100vh;
     width: 100%;
 }
 .Download-all-b .Bookheader {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     background-image: linear-gradient(to right, #0F53A1, #3C98BD);
     width: 100%;
+    height: 90%;
     
 }
 .Download-all-b .Bookheader #flesh-image-grade-B {
     display:flex;
     flex-direction:column;
-    justify-content:end;
-    align-items:center;
-    width:15%;
-    height:15vh;
+    justify-content: end;
+    align-items: start;
+    width:90%;
+    height:10%;  
 }
+.Download-all-b .Bookheader #flesh-image-grade-B a{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+
+}
+
 .Download-all-b .Bookheader .second-section {
     display: flex;
     flex-direction: row;
     justify-content:space-between;
     align-items:center;
-    width:100%;
-    flex: 1;
-    height: 100%;
+    width:90%;
+    height: 90%;
 }
 .Download-all-b .Bookheader .second-section .icon-book {
     display: flex;
-    flex:60%;
-    width:10% ;
-    height:70%;
-}
-#h-books  {
-    overflow-y: hidden;
-    width: 100%;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    width:50% ;
+    height:100%;
 }
 .Download-all-b .Bookheader .second-section .icon-book .bookH {
-    width: 500px;
+    width: 100%;
+    height: 80%;
+    margin-bottom: 10%;
 }
 .Download-all-b .Bookheader .second-section .buttom-books {
     display: flex;
     flex-direction:column;
     justify-content:center;
     align-items: center;
-    flex:50%;
+    width:50%;
+    height: 100%;
 }
 .Download-all-b .Bookheader .second-section .buttom-books .p-container-books {
     display: flex;
     flex-direction: column;
-    justify-content:flex-start;
-    width: 100%;
+    justify-content:center;
     align-items: center;
-    height:50%;
+    width: 100%;
+    height: 18%;
+    color: white;
+    margin-bottom: 2%;
    }
-   .Download-all-b .Bookheader .second-section .buttom-books .p-container-books .p-books {
+.Download-all-b .Bookheader .second-section .buttom-books .p-container-books .p-books {
        color: white;
-       font-size: 30px;
+       font-size: 25px;
        font-weight: bold;
        font-family: "Bahij Helvetica";
-   }
+}
    
-   .Download-all-b .Bookheader .second-section .buttom-books .p-container-books #p-books {
+.Download-all-b .Bookheader .second-section .buttom-books .p-container-books #p-books {
        font-family: "Bahij Helvetica";
        color: white;
-       font-size: 30px;
+       font-size: 25px;
        font-weight: bold;
        text-align: center;
-   }
-   .Download-all-b .Bookheader .second-section .buttom-books #h-books {
+}
+.Download-all-b .Bookheader .second-section .buttom-books #h-books {
     overflow-y:scroll;
-    /* width: 550px; */
-    height: 280px;
+   width: 100%;
+    height: 80%;
 }
 .Download-all-b .Bookheader .second-section .buttom-books #h-books .link-grade-nb {
     display: flex;
@@ -106,29 +119,24 @@
 .BookheaderM {
     display: none;
 }
-
-
-/* .link-grade-n {
-    background-color: aqua;
+.Download-all-b .Bookheader .second-section .buttom-books #line {
+    height: 10%;
     width: 100%;
-    display: none;
-} */
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid white;
+}
 .pathimg-b {
     display: flex;
     cursor: pointer;
 }
 
-.line {
+/* .line {
     width: 530px;
-}
-#line {
-    margin: 0;
-    padding: 0;
-    margin-right:0px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-}
+} */
+
 .BookheaderM {
     display: none;
 }
@@ -139,8 +147,77 @@
 .Download-all-b-m {
     display: none;
 }
+ @media screen and (min-height: 650px) and (min-width: 700px){
+.Download-all-b .Bookheader .second-section .icon-book{
+    height: 580px;
+}
+.Download-all-b .Bookheader .second-section .buttom-books{
+    height: 580px;
+}
+}
+@media screen and (max-height: 610px) and (max-width: 864px) {
+.Download-all-b .Bookheader .second-section .icon-book{
+    height: 85%;
+}
+.Download-all-b .Bookheader .second-section .buttom-books {
+    height: 85%;
+}
+}
+@media screen and (max-width: 864px){
+/* .Download-all-b .Bookheader .second-section .icon-book{
+    height: 80%;
 
-@media screen and (max-width: 768px) {
+} */
+/* .Download-all-b .Bookheader .second-section .icon-book .bookH {
+    width: 100%;
+    height: 80%;
+   
+} */
+}
+@media screen and (max-width: 700px){
+.Download-all-b .Bookheader .second-section .icon-book {
+   display: none;
+}
+.Download-all-b .Bookheader #flesh-image-grade-B a img {
+    width: 20px;
+    height: 15px;
+}
+.Download-all-b .Bookheader .second-section .buttom-books {
+    width: 100%;
+    height: 100%;
+}
+}
+@media screen and (max-width: 450px){
+.Download-all-b .Bookheader .second-section .buttom-books .p-container-books #p-books {
+        font-size: 15px;
+    }
+.Download-all-b .Bookheader .second-section .buttom-books .p-container-books .p-books {
+    font-size: 15px;
+}
+.Download-all-b .Bookheader .second-section .buttom-books #line img{
+    width: 20px;
+    height: 10px;
+}
+
+}
+@media screen and (max-width: 250px){
+.Download-all-b .Bookheader .second-section .buttom-books #h-books .link-grade-nb .li-grade-bb {
+font-size: 12px;
+    }
+}
+@media screen and (max-height: 410px){
+.Download-all-b .Bookheader .second-section .buttom-books .p-container-books #p-books {
+        font-size: 14px;
+    }
+
+    .Download-all-b .Bookheader .second-section .buttom-books .p-container-books .p-books {
+        font-size: 14px;
+    }
+/* .Download-all-b { 
+    height: 435px;   
+    } */
+}
+/* @media screen and (max-width: 768px) {
     .Download-all-b {
         display: none;
     }
@@ -228,15 +305,7 @@
         height:310px;
         width: 100%;
     }
-    /* .link-grade-n {
-        background-color: aqua;
-        width: 100%;
-        display: none;
-    } */
-    
     .pathimg-bm {
-        /* margin-right:-50px; */
-        /* margin-top:50px; */
         cursor: pointer;
         background-color: #3C98BD;
         align-items: center;
@@ -262,8 +331,8 @@
         width: 50px;
     }
  
-}
-@media screen and (max-width:375px) {
+} */
+/* @media screen and (max-width:375px) {
    
     .Download-all-b-m {
         display:none;
@@ -286,4 +355,4 @@
         flex-direction: row;
         width: 10%;
     }
-}
+} */
