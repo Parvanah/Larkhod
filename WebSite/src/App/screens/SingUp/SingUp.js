@@ -188,7 +188,7 @@ const SingUp = ({ t }, props) => {
                 className="up_singup"
                 onClick={LogInClick}
                 style={{
-                  backgroundImage: `linear-gradient(${LogInbtnColor.backgroundColor})`,
+                  backgroundImage: `linear-gradient(to left ,${LogInbtnColor.backgroundColor})`,
                   color: LogInbtnColor.color,
                 }}
               >
@@ -198,7 +198,7 @@ const SingUp = ({ t }, props) => {
                 onClick={SignUpClick}
                 className="in_singup"
                 style={{
-                  backgroundImage: `linear-gradient(${SignUpbtnColor.backgroundColor})`,
+                  backgroundImage: `linear-gradient(to left , ${SignUpbtnColor.backgroundColor})`,
                   color: SignUpbtnColor.color,
                 }}
               >
@@ -344,7 +344,7 @@ const SingUp = ({ t }, props) => {
                 className="up_singup"
                 onClick={LogInClick}
                 style={{
-                  backgroundImage: `linear-gradient(${LogInbtnColor.backgroundColor})`,
+                  backgroundImage: `linear-gradient(to left,${LogInbtnColor.backgroundColor})`,
                   color: LogInbtnColor.color,
                 }}
               >
@@ -354,7 +354,7 @@ const SingUp = ({ t }, props) => {
                 className="in_singup"
                 onClick={SignUpClick}
                 style={{
-                  backgroundImage: `linear-gradient(${SignUpbtnColor.backgroundColor})`,
+                  backgroundImage: `linear-gradient(to left,${SignUpbtnColor.backgroundColor})`,
                   color: SignUpbtnColor.color,
                 }}
               >

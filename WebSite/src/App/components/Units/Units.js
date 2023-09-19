@@ -45,7 +45,7 @@ const Units = ({ t }) => {
           <div id="laptop-top">
 
             <h1 id="p1">{t("units1")}</h1>
-            <h2>{t("units2")}</h2>
+            <h2 className="h2">{t("units2")}</h2>
             {/* <div id="mobile-p"> 
        <svg xmlns="http://www.w3.org/2000/svg" width={355} height={115}
         // {...props}

@@ -163,7 +163,7 @@ const LogIn = ({ t }, props) => {
           <h4 className="p_login">{t("login7")} </h4>
           <Link to="google.com" className="GoogleBtn">
             <button className="google_button_login" onClick={login}>
-              <FaGoogle className="google_icon_login" />
+              {/* <FaGoogle className="google_icon_login" /> */}
               <div className="google_p_login">{t("login8")}</div>
             </button>
           </Link>
