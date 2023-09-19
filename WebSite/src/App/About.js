@@ -45,6 +45,7 @@ const About = ({ t }) => {
         </div>
         </div>
 
+<div className="gg">
         <div className="section_three_about" >
         <img  className="dott-about" src={dot}/>
         <svg className="phone_svg_two_about" id='phone_svg_two_about' viewBox="188.817 59.877 398.097 126.488">
@@ -52,6 +53,7 @@ const About = ({ t }) => {
        
     </path>
 	</svg>
+       </div>
        </div>
     </div>
   )

@@ -2,32 +2,38 @@
 	background-color: rgba(60,152,189,1);
 	display: flex;
 	flex-direction: column;
-
+    width: 100%;
+    height: 100vh;
+	min-height: 560px;
 }
 .section-one-grades{
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 .top-svg-gardes{
-width: 100%;
+    width: 100%;
 }
 .section-two-grades{
-margin-top: -2%;
-margin-left: 5%;
+    margin-top: -4vw;
+    margin-left: 5vw;
+    flex: 1;
 	}
 .flesh-image-grade{
-
+width: 3vw;
+height: 2vw;
 }
 .section-three-grades{
 display: flex;
-flex-direction: row;
+flex-direction: column;
 justify-content: space-between;
+flex: 4;
 }
 .one-gardes{
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-    flex: 1;
+	justify-content: center;
+	flex: 1;
 }
 .one-one-grades{
 	display: flex;
@@ -35,10 +41,11 @@ justify-content: space-between;
 	justify-content: center;
 	text-align: center;
 	align-items: center;
-	margin-left: 10%;
-	margin-right: -10%;
-	/* margin-bottom: -40%; */
-	/* margin-top: 30px; */
+	width: 80%;
+	position: absolute;
+	top: 130px;
+	left: -8%;
+	z-index: 1000;
 }
 .p-one-grade{
 	display: flex;
@@ -46,92 +53,352 @@ justify-content: space-between;
 	 font-family: "Bahij Helvetica";
 	font-style: normal;
 	font-weight: bold;
-	font-size: 35px;
+	font-size: 3vw;
 	color: rgba(255,255,255,1);
 }
 .p-two-grade{
 	display: flex;
 	font-style:normal;
 	font-weight:lighter;
-	 font-size:25px; 	
+	 font-size: 1.9vw;	
 	text-align: center;
 	 font-family: "Bahij Helvetica";
 	color: rgb(255, 255, 255);
-	margin-top: -30px;
+	margin-top: -25px;
 	margin-bottom: 30px;
 }
 .button-grade{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	width: 100%;
+	width: 48%;
 	align-items: center;
-	margin-bottom: -50%;
 }
 .link-grade{
-	width: 75%;
-	height: 34px;
+	width: 100%;
+	height: 2.7vw;
 	background-color:rgba(212,228,232,1);
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	margin-bottom: 12px;
+	margin-bottom: 0.9vw;
 	border-radius: 32px;
 	text-align: center;
 	align-items: center;
 }
 .sanaf-grade{
-	width: 22px;
-	height: 25px;
-	margin-left: 18px;
+	width: 1.4vw;
+	height: 1.5vw;
+	margin-left: 1.5vw;
 }
 
 
 .li-grade{
-	margin-right: 18px;
-	font-size: 20px;
+	margin-right: 1.5vw;
+	font-weight: bold;
+	font-size: 1.4vw;
 	color: rgba(16,84,162,1);
 	letter-spacing: -0.4px;
 }
 .svg-one-grade{
-display: flex;
-justify-content: flex-start;
-align-items: flex-start;
-text-align: start;
-width: 45%;
-height: 50%;
-
+display: none;
 }	
 #svg-one-grade{
-	opacity: 0.52;
-	fill: rgb(255, 255, 255);
+
 }
 .two-gardes{
 display: flex;
-justify-content: end;
+justify-content: space-between;
+margin-bottom: 0px; 
+flex: 3;
 align-items: end;
-flex: 1;
-margin-bottom: 0px;
-
+text-align: end;
 }
 .svg-two-grade{
-	display: none;
+	display: flex;
+	width: 24vw;
+	height: 20vw;
 }	
 #svg-two-grade{
-
+	opacity: 0.52;
+	fill: rgb(255, 255, 255);
 }	
 .image-grade{
-width: 90%;
-	height: 90%;
+	display: flex;
+	width: 45vw;
+	height: 33vw;
+
 }
 #image-grade{
-
-	
-
 }
 	
-
-@media screen and (max-width:769px)and (min-width:415px){
+@media screen and (max-width:769px){
+	.all-grade{
+		background-color: rgba(60,152,189,1);
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 100vh;
+		min-height: 560px;
+	}
+	.section-one-grades{
+		display: flex;
+		flex-direction: column;
+	}
+	.top-svg-gardes{
+		width: 100%;
+	}
+	.section-two-grades{
+		margin-top: -6vw;
+		margin-left: 6vw;
+		}
+	.flesh-image-grade{
+	width: 4vw;
+	height: 3vw;
+	}
+	.section-three-grades{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex: 4;
+	}
+	.one-gardes{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		flex: 1;
+	}
+	.one-one-grades{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		align-items: center;
+		width: 100%;
+		position: absolute;
+		top: 130px;
+		left: unset;
+		z-index: 1000;
+	}
+	.p-one-grade{
+		display: flex;
+		text-align: center;
+		 font-family: "Bahij Helvetica";
+		font-style: normal;
+		font-weight: bold;
+		font-size: 4.5vw;
+		color: rgba(255,255,255,1);
+	}
+	.p-two-grade{
+		display: flex;
+		font-style:normal;
+		font-weight:lighter;
+		 font-size: 3.4vw;	
+		text-align: center;
+		 font-family: "Bahij Helvetica";
+		color: rgb(255, 255, 255);
+		margin-top: -25px;
+		margin-bottom: 30px;
+	}
+	.button-grade{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 70%;
+		align-items: center;
+	}
+	.link-grade{
+		width: 100%;
+		height: 3.7vw;
+		background-color:rgba(212,228,232,1);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-bottom: 1.2vw;
+		border-radius: 32px;
+		text-align: center;
+		align-items: center;
+	}
+	.sanaf-grade{
+		width: 2vw;
+		height: 2.1vw;
+		margin-left: 2vw;
+	}
+	
+	
+	.li-grade{
+		margin-right: 2vw;
+		font-weight: bold;
+		font-size: 2.1vw;
+		color: rgba(16,84,162,1);
+		letter-spacing: -0.4px;
+	}
+	.svg-one-grade{
+	display: none;
+	}	
+	#svg-one-grade{
+	
+	}
+	.two-gardes{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 0px; 
+	flex: 3;
+	align-items: end;
+	text-align: end;
+	}
+	.svg-two-grade{
+		display: flex;
+		width: 24vw;
+	height: 20vw;
+	}	
+	#svg-two-grade{
+		opacity: 0.52;
+		fill: rgb(255, 255, 255);
+	}	
+	.image-grade{
+		display: flex;
+		width: 45vw;
+		height: 33vw;
+	
+	}
+	#image-grade{
+	}
+}
+@media screen and (max-width:414px){
+	.all-grade{
+		background-color: rgba(60,152,189,1);
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 100vh;
+		min-height: 560px;
+	}
+	.section-one-grades{
+		display: flex;
+		flex-direction: column;
+	}
+	.top-svg-gardes{
+		width: 100%;
+	}
+	.section-two-grades{
+		margin-top: -20vw;
+		margin-left: 10vw;
+		}
+	.flesh-image-grade{
+	width: 5vw;
+	height: 4vw;
+	}
+	.section-three-grades{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex: 4;
+	}
+	.one-gardes{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		flex: 1;
+	}
+	.one-one-grades{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		align-items: center;
+		width: 100%;
+		position: absolute;
+		top: 90px;
+		left: unset;
+		z-index: 1000;
+	}
+	.p-one-grade{
+		display: flex;
+		text-align: center;
+		 font-family: "Bahij Helvetica";
+		font-style: normal;
+		font-weight: bold;
+		font-size: 6.5vw;
+		color: rgba(255,255,255,1);
+	}
+	.p-two-grade{
+		display: flex;
+		font-style:normal;
+		font-weight:lighter;
+		 font-size: 5.4vw;	
+		text-align: center;
+		 font-family: "Bahij Helvetica";
+		color: rgb(255, 255, 255);
+		margin-top: -25px;
+		margin-bottom: 20px;
+	}
+	.button-grade{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 70%;
+		align-items: center;
+	}
+	.link-grade{
+		width: 100%;
+		height: 6.5vw;
+		background-color:rgba(212,228,232,1);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-bottom: 2vw;
+		border-radius: 32px;
+		text-align: center;
+		align-items: center;
+	}
+	.sanaf-grade{
+		width: 3.5vw;
+		height: 3.6vw;
+		margin-left: 3vw;
+	}
+	
+	
+	.li-grade{
+		margin-right: 3vw;
+		font-weight: bold;
+		font-size: 3.5vw;
+		color: rgba(16,84,162,1);
+		letter-spacing: -0.4px;
+	}
+	.svg-one-grade{
+	display: none;
+	}	
+	#svg-one-grade{
+	
+	}
+	.two-gardes{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 0px; 
+	flex: 3;
+	align-items: end;
+	text-align: end;
+	}
+	.svg-two-grade{
+		display: flex;
+		width: 24vw;
+	height: 20vw;
+	}	
+	#svg-two-grade{
+		opacity: 0.52;
+		fill: rgb(255, 255, 255);
+	}	
+	.image-grade{
+		display: flex;
+		width: 80vw;
+		height: 65vw;
+	
+	}
+	#image-grade{
+	}
+}
+/* @media screen and (max-width:769px)and (min-width:415px){
 	.all-grade{
 		background-color: rgba(60,152,189,1);
 		display: flex;
@@ -250,7 +517,7 @@ display: none;
 		text-align: start;
 		width: 25%;
 		height: 25%;
-		/* margin-bottom: 10px; */
+
 	}	
 	#svg-two-grade{
 		opacity: 0.52;
@@ -270,8 +537,8 @@ display: none;
 	
 	}
 		
-}
-@media screen and (max-width:414px)and (min-width:100px){
+} */
+/* @media screen and (max-width:414px)and (min-width:100px){
 	.all-grade{
 		background-color: rgba(60,152,189,1);
 		display: flex;
@@ -394,7 +661,7 @@ display: none;
 		text-align: start;
 		width: 30%;
 		height: 30%;
-		/* margin-bottom: 10px; */
+
 	}	
 	#svg-two-grade{
 		opacity: 0.52;
@@ -414,7 +681,7 @@ display: none;
 	
 	}
 		
-}
+} */
 
 
  
