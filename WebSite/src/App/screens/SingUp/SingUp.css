@@ -246,23 +246,24 @@ margin: 1%;
 .full-signUP #all_singup .Sign_up_form #cantainer_singup .Google_SignUP .google_p_singup {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
 }
 
-.full-signUP #all_singup .Sign_up_form #cantainer_singup .Google_SignUP .google_icon_singup {
-    flex: 30%;
-    color: rgb(148, 144, 144);
+.full-signUP #all_singup .Sign_up_form #cantainer_singup .Google_SignUP img {
+    flex:10%;
+    margin-left:2%;
+    height:70%;
 }
 
 .full-signUP #all_singup .Sign_up_form #cantainer_singup .Google_SignUP .google_p_singup {
-    flex: 70%;
-    font-size:13px;
+    flex:90%;
+    font-size:15px;
     font-weight:20px;
     /* font-weight: bold; */
     font-family: "Bahij Helvetica";
     color: rgb(148, 144, 144);
-    margin-left:20%;
+    margin-left:25%;
     padding: 0%;
 }
 @media screen and (max-height: 425px) {
@@ -302,6 +303,16 @@ margin: 1%;
 .full-signUP #all_singup .Sign_up_form #cantainer_singup form .first_input_section_singup .field .error_singup,
 .full-signUP #all_singup .Sign_up_form #cantainer_singup form .second_input_section_singup .field .error_singup{
     font-size: 60%;
+}
+.full-signUP #all_singup .Sign_up_form #cantainer_singup .Google_SignUP .google_p_singup {
+    flex:90%;
+    font-size:15px;
+    font-weight:20px;
+    /* font-weight: bold; */
+    font-family: "Bahij Helvetica";
+    /* color: rgb(148, 144, 144); */
+    margin-left:30%;
+    padding: 0%;
 }
  
 }
@@ -576,7 +587,7 @@ margin: 1%;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        width: 95%;
+        width:95%;
         margin-bottom: 5%;
         border-radius: 30px;
         background-color: #FFF;
@@ -585,13 +596,19 @@ margin: 1%;
 
     .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup .google_button_singup .google_icon_singup {
         flex: 1;
-
+    }
+    .google_button_singup img {
+      margin-left:2%;
+      height:70%;
     }
 
     .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup .google_button_singup .google_p_singup {
-        flex: 3;
-        font-weight: bold;
+        flex:3;
+        /* font-weight: bold; */
         color: silver;
+        font-size:15px;  
+        margin-right:2%;
+        text-align: end;
     }
 }
 @media screen and (max-width: 600px){

@@ -179,6 +179,7 @@
             flex: 1;
             overflow-y:scroll;
         }
+     
         .full-Download .d-section .bottom_D .BookD_list .second-second-d .Download-ul  .d-middle .inside_ul .Download-li{
             display: flex;
                 flex-direction: row;
@@ -235,7 +236,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 70%;
+        width:95%;
         height: 50%;
         margin-top: 20%;
         /* margin-bottom: 5%; */
@@ -274,6 +275,7 @@
     .full-Download .d-section .bottom_D .BookD_list .second-second-d .Download-ul .d-middle .inside_ul .Download-li {
         font-size: 12px;
     }
+ 
     }
     @media screen and (max-width: 350px){
     .full-Download .d-section .bottom_D .BookD_list{
@@ -297,6 +299,7 @@
         font-family: "Bahij Helvetica";
         text-align: center;
     }
+
     }
     @media screen and (max-width: 305px) {
         .full-Download .d-section .bottom_D .BookD_list .second-second-d .Download-ul .d-middle .inside_ul .Download-li {
@@ -334,6 +337,32 @@
     .full-Download .d-section .bottom_D .BookD_list .second-second-d .p-container-d #p-downloding {
         font-size: 20px;
     }
+    .full-Download .d-section .bottom_D .BookD_list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width:95%;
+        height: 50%;
+        margin-top:10%;
+        /* margin-bottom: 5%; */
+        /* background-color: red; */
+    }
+    .full-Download .d-section .bottom_D .Dimg img  {
+        width:50%;
+        height:0%;
+        /* background-color: black; */
+    }
+    .full-Download .d-section .bottom_D .second-second-d {
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        margin-top: 20%;
+        /* background-color: aqua; */
+}
     }
     @media screen and (max-width: 994px) {
         .full-Download .d-section .bottom_D .Dimg  {
@@ -357,6 +386,7 @@
     @media screen and (min-height: 800px) and (max-width: 700px){
     .full-Download .d-section .bottom_D .Dimg{
         height: 50%;
+ 
     }
     .full-Download .d-section .bottom_D .BookD_list{
         height: 50%;
@@ -390,4 +420,5 @@
     .full-Download{
         height: 363px;
     }
+   
     }

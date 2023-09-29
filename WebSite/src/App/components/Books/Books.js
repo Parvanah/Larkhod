@@ -29,11 +29,11 @@ const Books = ({ t }, props) => {
   const navigate = useNavigate();
   const leftScroll = () => {
     const slider = document.getElementById("ul");
-    slider.scrollLeft = slider.scrollLeft - 90;
+    slider.scrollLeft = slider.scrollLeft -90;
   };
   const righScrool = () => {
     const slider = document.getElementById("ul");
-    slider.scrollLeft = slider.scrollLeft + 90;
+    slider.scrollLeft = slider.scrollLeft +90;
   };
   const {
     currentBook,
@@ -315,7 +315,7 @@ const Books = ({ t }, props) => {
             })}
           </div>
           <div onClick={() => righScrool()} className="arrow" >
-            <img src={scrolrm} alt="photo" className="scrolrm" />
+            <img src={scrolrm} alt="photo" />
           </div>
         </div>
         <div className=" ButtomB">

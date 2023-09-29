@@ -5,8 +5,10 @@ import { useContext } from "react";
 import i18n from "../../../i18n";
 import { withNamespaces } from "react-i18next";
 import "./SingUp.css";
-import { FaGoogle } from "react-icons/fa";
+// import { FaGoogle } from "react-icons/fa";
 import { useState, useEffect } from "react";
+import google from "../../assets/Group 10.png";
+
 import img1 from "../../assets/mg.png";
 import img3 from "../../assets/logo_3.png";
 import React from "react";
@@ -311,7 +313,8 @@ const SingUp = ({ t }, props) => {
                 </form>
                 <h4 className="p_singup">{t("singup7")}</h4>
                 <button className="Google_SignUP" onClick={login}>
-                  <FaGoogle className="google_icon_singup" />
+                  {/* <FaGoogle className="google_icon_singup" /> */}
+                  <img src={google} className="google"/>
                   <div className="google_p_singup">{t("singup8")}</div>
                 </button>
               </div>
@@ -469,7 +472,8 @@ const SingUp = ({ t }, props) => {
                 </form>
                 <h4 className="p_singup">{t("singup7")}</h4>
                 <button className="google_button_singup" onClick={login}>
-                  <FaGoogle className="google_icon_singup" />
+                  {/* <FaGoogle className="google_icon_singup" /> */}
+                  <img src={google}  className="google"/>
                   <div className="google_p_singup">{t("singup8")}</div>
                 </button>
               </div>

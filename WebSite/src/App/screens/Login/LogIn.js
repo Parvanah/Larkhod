@@ -5,9 +5,9 @@ import { withNamespaces } from "react-i18next";
 import { useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
 import "./LogIn.css";
-import { FaGoogle } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import img1 from "../../assets/mg.png";
+import googlel from "../../assets/Google.png"
 import React from "react";
 import img3 from "../../assets/logo_3.png";
 <link rel="stylesheet" href="LogIn.css" />;
@@ -124,7 +124,8 @@ const LogIn = ({ t }, props) => {
           <h4 className="p_login">{t("login7")} </h4>
           <Link to="google.com" className="GoogleBtn">
             <button className="google_button_singup">
-              <FaGoogle className="google_icon_login" />
+              {/* <FaGoogle className="google_icon_login" /> */}
+              <img src={googlel} className="google"/>
               <div className="google_p_login">{t("login8")}</div>
             </button>
           </Link>
@@ -164,6 +165,7 @@ const LogIn = ({ t }, props) => {
           <Link to="google.com" className="GoogleBtn">
             <button className="google_button_login" onClick={login}>
               {/* <FaGoogle className="google_icon_login" /> */}
+              <img src={googlel} className="google"/>
               <div className="google_p_login">{t("login8")}</div>
             </button>
           </Link>
