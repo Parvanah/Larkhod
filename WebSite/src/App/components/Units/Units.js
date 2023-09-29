@@ -9,6 +9,8 @@ import sectionicon from "../../assets/Group_374.png";
 import imageU from "../../assets/Group_158_a@2x.png"
 import imagel from "../../assets/Shape.png";
 import unitm from "../../assets/unitm.png";
+import rightClick from "../../assets/rightClick.png";
+import leftClick from "../../assets/leftClick.png";
 
 const Units = ({ t }) => {
   const { userInfo, isLoading } = useContext(AuthContext);
@@ -88,7 +90,7 @@ const Units = ({ t }) => {
         <div className="unitWrapper">
           <div onClick={() => slidLeft()} className="arrow">
             {" "}
-            <svg
+            {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               width={13.435}
               height={28.158}
@@ -99,7 +101,8 @@ const Units = ({ t }) => {
                 d="M16.435 0 0 15.079l16.435 15.079v-8.293l-7.384-6.786 7.384-6.755Z"
                 data-name="Path 1006"
               />
-            </svg>
+            </svg> */}
+            <img src={leftClick} alt="photo"/>
           </div>
           <div className="m-section" id="m-section">
             {/* <div id="ul"> */}
@@ -121,7 +124,7 @@ const Units = ({ t }) => {
             {/* </div> */}
           </div>
           <div onClick={() => slidRight()} className="arrow">
-            <svg
+            {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               width={13.435}
               height={27.158}
@@ -132,7 +135,8 @@ const Units = ({ t }) => {
                 d="m0 0 16.435 15.079L0 30.158v-8.29l7.384-6.786L0 8.327Z"
                 data-name="Path 1005"
               />
-            </svg>
+            </svg> */}
+            <img src={rightClick} />
           </div>
         </div>
         <div className="last">

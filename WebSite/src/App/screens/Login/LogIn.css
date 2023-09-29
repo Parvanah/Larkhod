@@ -134,7 +134,7 @@
 
 .full_login .Log_In_form .GoogleBtn .google_button_singup {
     width: 100%;
-    padding-left: 5%;
+    padding-left:2%;
     padding-right: 5%;
     flex: 100%;
     border-radius: 50px;
@@ -146,6 +146,10 @@
     font-size: 100%;
     font-family: "Bahij Helvetica";
     color: rgb(148, 144, 144);
+}
+.google_button_singup img {
+    /* background-color: red; */
+    height: 70%;
 }
 
 @media screen and (max-width: 1024px) {
@@ -179,7 +183,6 @@
 @media screen and (max-width: 772px) {
     .full_login .Log_In_form .GoogleBtn .google_button_singup {
         font-size: 90%;
-        background-color: red;
     }
 
     .full_login .Log_In_form {
@@ -328,7 +331,7 @@
 
     .full_login .mobilee .GoogleBtn .google_button_login {
         width: 100%;
-        padding-left: 5%;
+        padding-left:2%;
         padding-right: 5%;
         height: 95%;
         /* margin-top: 5%; */
@@ -343,6 +346,10 @@
         border: 1px solid silver;
         color: silver;
         font-weight:bold;
+    }
+    .google_button_login  img {
+        /* background-color: red; */
+        height: 70%;
     }
 }
 
