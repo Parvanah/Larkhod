@@ -95,7 +95,7 @@
     align-items: center;
     flex: 80%;
     /* margin: 20px; */
-    overflow-x: scroll;
+    overflow-x: hidden;
 
 }
 
@@ -250,7 +250,7 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        overflow-x: scroll;
+        overflow-x: hidden;
     }
     .arrow img {
         width:12px;
@@ -347,7 +347,8 @@
         width: 100%;
         /* flex: 1; */
         height: 40%;
-        overflow-x: scroll;
+        overflow-x:hidden;
+        /* background-color: red; */
     }
 }
 
