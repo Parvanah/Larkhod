@@ -145,7 +145,6 @@ const Header = ({ t }, props) => {
               <br /> {t("header2")}
             </samp>
           </div>
-          <div className="space_home"></div>
         </div>
         <svg className="home_svg_one" viewBox="131.89 248.487 1920.661 112.903">
           <linearGradient
@@ -169,11 +168,35 @@ const Header = ({ t }, props) => {
         <div className="top">
           <img src={topimag} />
           <h1>لارښود - Larkhod</h1>
-          <div className="icon_header">
-            <Link className="link_nav_header" to="/changeprofile">
-              < FaUser />
-            </Link>
+          <div
+            className="icon_header"
+            onClick={() => setOpenProfile((prev) => !prev)}
+          >
+            <FaUser />
           </div>
+          {openProfile && (
+            <div className="flex flex-col dropDownProfile">
+              <ul className="flex flex-col gap-4">
+                <Link to="/changeprofile">
+                  {" "}
+                  <li className="changefrofilr_button_header">
+                    {t("header9")}
+                  </li>{" "}
+                </Link>
+                <li>
+                  {" "}
+                  <Link
+                    className="logout_button_header"
+                    to="/"
+                    onClick={() => Loggout()}
+                  >
+                    {t("header10")}
+                    <input type="button" />
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          )}
           <div className="menu" onClick={handleSideBar}>
             <FiMenu />
           </div>
