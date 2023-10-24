@@ -249,7 +249,7 @@
 }
 
 /* Mobile*/
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
     .full-signUP #all_singup {
         display: none;
     }

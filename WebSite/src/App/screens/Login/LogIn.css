@@ -163,7 +163,7 @@
 
 
 /* Mobile*/
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
     .full_login .Log_In_form {
         display: none;
     }
@@ -174,7 +174,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        /* background-color: rebeccapurple; */
         width: 55%;
 
     }
@@ -250,7 +249,6 @@
 
     .full_login .mobilee form .ui_form .forgotpassword_login {
         flex: 30%;
-        /* background-color: yellowgreen; */
         width: 100%;
         color: gray;
         text-align: center;
@@ -259,7 +257,6 @@
 
     .full_login .mobilee form .acount_button_login {
         flex: 20%;
-        /* margin-bottom: 5%; */
         width: 100%;
         border-radius: 50px;
         background-color: rgba(60, 152, 189, 1);
@@ -268,7 +265,6 @@
         color: white;
         font-family: "Bahij Helvetica";
         font-size: 90%;
-        /* font-weight: bold; */
     }
 
     .full_login .mobilee .p_login {
@@ -294,7 +290,6 @@
 
     .full_login .mobilee .GoogleBtn {
         flex: 5%;
-        /* background-color: chartreuse; */
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -307,7 +302,6 @@
         padding-left:2%;
         padding-right: 5%;
         height: 95%;
-        /* margin-top: 5%; */
         margin-bottom: 5%;
         border-radius: 50px;
         background-color: white;
@@ -321,12 +315,11 @@
         font-weight:bold;
     }
     .google_button_login  img {
-        /* background-color: red; */
         height: 70%;
     }
 }
 
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
     .full_login {
         flex: 87%;
     }
@@ -334,17 +327,14 @@
 
 @media screen and (max-width: 400px) {
     .full_login .mobilee .GoogleBtn .google_button_login {
-        /* font-size: 60%; */
         height: 90%;
         width: 100%;
-        /* margin-top: 5%; */
         margin-bottom: 10%;
     }
 
     .full_login .mobilee form .acount_button_login {
-        /* font-size: 60%; */
         flex: 15%;
         width: 100%;
     }
-}
+} */
 
