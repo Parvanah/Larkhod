@@ -144,7 +144,6 @@ const Header = ({ t }, props) => {
               <br /> {t("header2")}
             </samp>
           </div>
-          <div className="space_home"></div>
         </div>
         <svg className="home_svg_one" viewBox="131.89 248.487 1920.661 112.903">
           <linearGradient
@@ -169,8 +168,11 @@ const Header = ({ t }, props) => {
           <img src={topimag} />
           <h1>لارښود - Larkhod</h1>
 
+
+
           
             <div
+
             className="icon_header"
             onClick={() => setOpenProfile((prev) => !prev)}
           >
@@ -199,9 +201,6 @@ const Header = ({ t }, props) => {
               </ul>
             </div>
           )}
-
-
-
           <div className="menu" onClick={handleSideBar}>
             <FiMenu />
           </div>
