@@ -14,8 +14,8 @@ import { FiMenu } from "react-icons/fi";
 import topimag from "../../assets/logo_3.png";
 import middleimg from "../../assets/logo_2.png";
 import { ImCross } from "react-icons/im";
-import buttom_img from "../../assets/Path_7.png";
-import down_img from "../../assets/Path_39.png";
+// import buttom_img from "../../assets/Path_7.png";
+// import down_img from "../../assets/Path_39.png";
 <link rel="stylesheet" href="./Header.css" />;
 const Header = ({ t }, props) => {
   const { Loggout, userInfo, isLoading } = useContext(AuthContext);
@@ -49,7 +49,6 @@ const Header = ({ t }, props) => {
     nav = "/unit";
     status = { units: currentpart };
   }
-
   return (
     <div className="full_header">
       <nav className="header">
@@ -168,7 +167,12 @@ const Header = ({ t }, props) => {
         <div className="top">
           <img src={topimag} />
           <h1>لارښود - Larkhod</h1>
-          <div
+
+
+
+          
+            <div
+
             className="icon_header"
             onClick={() => setOpenProfile((prev) => !prev)}
           >

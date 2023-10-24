@@ -9,7 +9,7 @@ import "./SingUp.css";
 import { useState, useEffect } from "react";
 import google from "../../assets/Group 10.png";
 
-import img1 from "../../assets/mg.png";
+import img1 from "../../assets/kp.png";
 import img3 from "../../assets/logo_3.png";
 import React from "react";
 import { Link, useNavigate, useNavigation } from "react-router-dom";
@@ -308,7 +308,7 @@ const SingUp = ({ t }, props) => {
                     </div>
                   </div>
                   <button className="acount_button_singuo">
-                    {t("singup1")}
+                    {t("singup2")}
                   </button>
                 </form>
                 <h4 className="p_singup">{t("singup7")}</h4>
