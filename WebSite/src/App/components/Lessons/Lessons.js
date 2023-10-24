@@ -13,7 +13,7 @@ import photo4 from "../../assets/Group_404.png";
 import photo5 from "../../assets/Group_158_a@2x.png";
 import photo6 from "../../assets/Group 407.png";
 import scrollArrow from "../../assets/Path_1005.png";
-import topHeader from "../../assets/Path_2.png";
+import topHeader from "../../assets/Path 2.png";
 // import top1 from "../../assets/Path 2@2x.png";
 import Down1 from "../../assets/Group_408.png";
 import photo7 from "../../assets/Group_158_f.png";
@@ -37,14 +37,14 @@ const Lessons = ({ t }, props) => {
     aTag.click();
     aTag.remove();
   };
+  const [pageNum, setPageNum] = useState(0);
   const subject_path = locationData.subject_path;
   const [lesson_path, setLessonPath] = useState(
-    subject_path + lessons[0].paths[0]
+    subject_path + lessons[0].paths[pageNum]
   );
-
-  // console.log(subject_path + lesson_path[0]);
-  // console.log(subject_path + lesson_path[1]);
-
+  const handelPage = () => {
+    setPageNum(pageNum + 1);
+  };
   const [title, setTitle] = useState(lessons[0].label);
 
   const navigation = useNavigate();
@@ -89,7 +89,7 @@ const Lessons = ({ t }, props) => {
                       }
                       onClick={() => {
                         setTitle(item.label);
-                        setLessonPath(subject_path + item.paths[0]);
+                        setLessonPath(subject_path + item.paths[pageNum]);
                       }}
                     >
                       <div> 0{index + 1}</div>
@@ -117,8 +117,16 @@ const Lessons = ({ t }, props) => {
             </div>
           </div>
           <div className="midlle">
-            <img src={photo3}></img>
-            <p> {t("lessons3")}</p>
+            <div className="pdf-Download-ls">
+              <img src={photo3}></img>
+              <p> {t("lessons3")}</p>
+            </div>
+            <div className="next-back-ls">
+              <button className="next-ls" onClick={handelPage}>
+                next
+              </button>
+              <button className="back-ls">back</button>
+            </div>
           </div>
         </div>
       </div>
@@ -148,9 +156,15 @@ const Lessons = ({ t }, props) => {
           </div>
         </div>
         <div className="mobile-bottom">
-          <img src={Down1} />
-          <button />
-          <p>دانلود فایل پی دی اف</p>
+          <div className="pdf-Download-ls">
+            <img src={Down1} />
+            <button />
+            <p className="mobile-bottom-p">دانلود فایل پی دی اف</p>
+          </div>
+          <div className="next-back-ls">
+            <button className="next-ls">next</button>
+            <button className="back-ls">back</button>
+          </div>
         </div>
         <div
           className="menu_bar"

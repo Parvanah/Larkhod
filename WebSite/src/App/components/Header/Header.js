@@ -167,12 +167,7 @@ const Header = ({ t }, props) => {
         <div className="top">
           <img src={topimag} />
           <h1>لارښود - Larkhod</h1>
-
-
-
-          
             <div
-
             className="icon_header"
             onClick={() => setOpenProfile((prev) => !prev)}
           >

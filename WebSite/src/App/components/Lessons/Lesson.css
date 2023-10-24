@@ -181,21 +181,51 @@ display: flex;
     height: 5%;
     display: flex;
         flex-direction: row-reverse;
-        justify-content: end;
+        justify-content: space-between;
         align-items: center;
-        width: 80%;
+        width: 90%;
 }
-.Lesson_body .showLesson .midlle img{
+.Lesson_body .showLesson .midlle .pdf-Download-ls{
+display: flex;
+flex-direction: row-reverse;
+justify-content: end;
+align-items: center;
+width: 50%;
+
+}
+.Lesson_body .showLesson .midlle .pdf-Download-ls img{
     width: 25px;
     height: 25px;
 }
-.Lesson_body .showLesson .midlle p{
+.Lesson_body .showLesson .midlle .pdf-Download-ls p{
     color: #707070;
     font-size: 16px;
     font-weight: bold;
     margin-right: 1%;
 }
+.Lesson_body .showLesson .midlle .next-back-ls {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+.Lesson_body .showLesson .midlle .next-back-ls .next-ls, 
+.Lesson_body .showLesson .midlle .next-back-ls .back-ls {
+ background-image: linear-gradient(to left , #3c98bd,
+    #0f53a1);
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ cursor: pointer;
+ width: 30%;
+ color: #FFF;
+ height: 80%;
+ border-radius: 10px;
 
+}
 @media screen and (min-height: 650px){
 .Lesson_body .sidebar .header_lesson img {
         height: 80px;
@@ -353,9 +383,38 @@ cursor: pointer;
     color: #707070;
     
 }
-.Lesson_body .mobile .mobile-bottom img{
+.Lesson_body .mobile .mobile-bottom .pdf-Download-ls{
+display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+        align-items: center;
+    width: 50%;
     height: 100%;
-    width: 6%;
+}
+.Lesson_body .mobile .mobile-bottom .next-back-ls{
+    display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        width: 50%;
+}
+.Lesson_body .mobile .mobile-bottom .next-back-ls .next-ls , 
+.Lesson_body .mobile .mobile-bottom .next-back-ls .back-ls{
+background-image: linear-gradient(to left, #3c98bd,
+            #0f53a1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+    width: 30%;
+    color: #FFF;
+    height: 80%;
+    border-radius: 10px;
+}
+.Lesson_body .mobile .mobile-bottom .pdf-Download-ls img{
+    height: 100%;
+    width: 15%;
 }
 .Lesson_body .mobile .menu_bar{
 display: flex;
@@ -476,7 +535,7 @@ margin-bottom: 2%;
     height: 435px;
 }
 }
-@media screen and (max-height: 360px){
+@media screen and (max-height: 450px){
 .Lesson_body .mobile .mobileTop .mobile-background {
         margin-top: -98px;
     }
@@ -484,4 +543,24 @@ margin-bottom: 2%;
     height: 40px;
     width: 40px;
 }
+}
+@media screen and (max-width: 435px) {
+    .Lesson_body .mobile .mobile-bottom .pdf-Download-ls img {
+            height: 100%;
+            width: 30%;
+        }
+.Lesson_body .mobile .mobile-bottom .pdf-Download-ls .mobile-bottom-p{
+font-size: 12px;
+}
+.Lesson_body .mobile .mobile-bottom .next-back-ls .next-ls,
+.Lesson_body .mobile .mobile-bottom .next-back-ls .back-ls {
+    cursor: pointer;
+    width: 40%;
+}
+}
+@media screen and (max-width: 330px) {
+    .Lesson_body .mobile .mobile-bottom .pdf-Download-ls .mobile-bottom-p {
+        font-size: 10px;
+        text-align: center;
+    }
 }
