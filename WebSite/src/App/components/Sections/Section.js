@@ -70,7 +70,7 @@ const Section = ({ t }, props) => {
             </svg>
           </foreignObject>
         </div>
-        <div className="prevuse">
+        <div className="prevuse" onClick={() => navigate(-1)}>
           <img src={image4} />
         </div>
         <div id="title">
@@ -155,9 +155,9 @@ const Section = ({ t }, props) => {
       </div>
       <div className="mobile-section">
         <div className="mob-sec-header">
-          <div className="prevuse">
-            <img src={image4} />
-          </div>
+        <div className="prevuse" onClick={() => navigate(-1)}>
+          <img src={image4} />
+        </div>
           <div id="title">
             <h1>{t("section1")}</h1>
             <p>{t("section2")}</p>

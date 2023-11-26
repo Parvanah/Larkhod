@@ -14,6 +14,7 @@ import { FiMenu } from "react-icons/fi";
 import topimag from "../../assets/logo_3.png";
 import middleimg from "../../assets/logo_2.png";
 import { ImCross } from "react-icons/im";
+// import butimg from "../../assets/Path_7";
 // import buttom_img from "../../assets/Path_7.png";
 // import down_img from "../../assets/Path_39.png";
 <link rel="stylesheet" href="./Header.css" />;
@@ -258,8 +259,12 @@ const Header = ({ t }, props) => {
             </li>
           </div>
         </div>
+        {/* <div className="buttom">
+        <div className="svg">
+          <img src="butimg"></img>
+        </div>
+      </div> */}
       </div>
-      <div className="buttom"></div>
     </div>
   );
 };
