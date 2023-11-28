@@ -37,6 +37,7 @@ const Lessons = ({ t }, props) => {
     aTag.click();
     aTag.remove();
   };
+  const [IsLoading, setIsLoading] = useState();
   const [FirstColor, setFirstColor] = useState("#3c98bd");
   const [secondColor, setsecondColor] = useState("#0f53a1");
   const [nextBtn, setNextbtn] = useState({
@@ -109,8 +110,11 @@ const Lessons = ({ t }, props) => {
                           : {}
                       }
                       onClick={() => {
+                        setPageNum(0);
+                        setIsLoading(true);
                         setTitle(item.label);
                         setLessonPath(item);
+                        setIsLoading(false);
                       }}
                     >
                       <div> 0{index + 1}</div>
@@ -128,14 +132,22 @@ const Lessons = ({ t }, props) => {
         <div className="showLesson">
           <div className="title">
             <div className="main_lesson_title">
-              <h1>{`${unit} _ ${title}`}</h1>
+              {isLoading ? (
+                <div>Loading...</div>
+              ) : (
+                <h1>{`${unit} _ ${title}`}</h1>
+              )}
             </div>
             <img src={photo1}></img>
           </div>
           <div className="bottom">
-            <div className="img">
-              <img src={subject_path + lesson_path.paths[pageNum]}></img>
-            </div>
+            {isLoading ? (
+              <div>Loading...</div>
+            ) : (
+              <div className="img">
+                <img src={subject_path + lesson_path.paths[pageNum]}></img>
+              </div>
+            )}
           </div>
           <div className="midlle">
             <div className="pdf-Download-ls">
