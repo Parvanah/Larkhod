@@ -1,14 +1,17 @@
 .Lesson_body .mobile {
     display: none;
 }
+
 .Lesson_body .mobileSvg {
     display: none;
 }
+
 * {
     margin: 0;
     padding: 0;
 }
-.Lesson_body{
+
+.Lesson_body {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,6 +19,7 @@
     width: 100%;
     height: 100vh;
 }
+
 .Lesson_body .lesson {
     display: flex;
     flex-direction: row;
@@ -27,24 +31,26 @@
 
 .Lesson_body .sidebar {
     display: flex;
-    height:100%;
+    height: 100%;
     width: 27%;
     margin-left: 3%;
     padding: 3% 2% 5% 2%;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;    
-    background-image: linear-gradient(to bottom, #3c98bd , #0f53a1);
+    align-items: center;
+    background-image: linear-gradient(to bottom, #3c98bd, #0f53a1);
 }
+
 .Lesson_body .sidebar .arrow {
     cursor: pointer;
-    width: 100%; 
+    width: 100%;
     height: 2%;
     display: flex;
     flex-direction: column;
     justify-content: end;
     align-items: start;
 }
+
 .Lesson_body .sidebar .header_lesson {
     display: flex;
     flex-direction: column;
@@ -53,62 +59,70 @@
     text-align: center;
     width: 100%;
     height: 18%;
-    
+
 }
-.Lesson_body .sidebar .header_lesson img{
+
+.Lesson_body .sidebar .header_lesson img {
     height: 60px;
     width: 60px;
 }
-.Lesson_body .sidebar .text{
-height: 75%;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-width: 100%;
 
-}
-.Lesson_body .sidebar .text .Lesson_title{
-flex: 10%;
-color: #FFF;
-text-align: center;
-
-}
-.Lesson_body .sidebar .text .sidebar-lessons{
-height: 90%;
-width: 100%;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-}
-.Lesson_body .sidebar .text .sidebar-lessons .inside_sidebar-lessons{
-overflow-y: scroll;
-flex: 100%;
-width: 100%;
+.Lesson_body .sidebar .text {
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 
 }
 
-.Lesson_body .sidebar .text .sidebar-lessons .inside_sidebar-lessons .lesson_item{
-color: #FFF;
-font-size: 13px;
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
-font-weight: bold;
-height: 10%;
-padding: 5px;
+.Lesson_body .sidebar .text .Lesson_title {
+    flex: 10%;
+    color: #FFF;
+    text-align: center;
 
 }
-.Lesson_body .sidebar .text .sidebar-lessons .inside_sidebar-lessons .lesson_item:hover{
-border: 1px solid #FFF;
-/* border-radius: 10px; */
-cursor: pointer;
+
+.Lesson_body .sidebar .text .sidebar-lessons {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.Lesson_body .sidebar .text .sidebar-lessons .inside_sidebar-lessons .lesson_item .titles_lesson{
+
+.Lesson_body .sidebar .text .sidebar-lessons .inside_sidebar-lessons {
+    overflow-y: scroll;
+    flex: 100%;
+    width: 100%;
+
+}
+
+.Lesson_body .sidebar .text .sidebar-lessons .inside_sidebar-lessons .lesson_item {
+    color: #FFF;
+    font-size: 13px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    height: 10%;
+    padding: 5px;
+
+}
+
+.Lesson_body .sidebar .text .sidebar-lessons .inside_sidebar-lessons .lesson_item:hover {
+    border: 1px solid #FFF;
+    /* border-radius: 10px; */
+    cursor: pointer;
+}
+
+.Lesson_body .sidebar .text .sidebar-lessons .inside_sidebar-lessons .lesson_item .titles_lesson {
     text-align: right;
 }
+
 .Lesson_body .sidebar .scrollArrow {
     flex: 5%;
 
@@ -127,15 +141,17 @@ cursor: pointer;
 .Lesson_body .sidebar .scrollArrow img:hover {
     cursor: pointer;
 }
+
 .Lesson_body .showLesson {
     width: 70%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: end;  
+    align-items: end;
     padding: 2% 2% 0% 2%;
 }
+
 .Lesson_body .showLesson .title {
     display: flex;
     flex-direction: row-reverse;
@@ -147,417 +163,475 @@ cursor: pointer;
     color: #3C98BD;
     font-weight: bold;
     text-align: right;
-    
+
 }
-.Lesson_body .showLesson .title .main_lesson_title{
-display: flex;
-    flex-direction: row-reverse;
-    justify-content:start;
-    align-items: center;
-}
-.Lesson_body .showLesson .title img{
-height: 60px;
-width: 60px;
-}
-.Lesson_body .showLesson .bottom{
-   height: 80%; 
-   width: 100%;
-display: flex;
+
+.Lesson_body .showLesson .title .main_lesson_title {
+    display: flex;
     flex-direction: row-reverse;
     justify-content: start;
     align-items: center;
 }
-.Lesson_body .showLesson .bottom .img{
+
+.Lesson_body .showLesson .title img {
+    height: 60px;
+    width: 60px;
+}
+
+.Lesson_body .showLesson .bottom {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    align-items: center;
+}
+
+.Lesson_body .showLesson .bottom .img {
     width: 100%;
     height: 95%;
     overflow-y: scroll;
     border: 4px dashed #3c98bd;
     border-radius: 15px;
 }
-.Lesson_body .showLesson .bottom .img img{
- width: 100%;
+
+.Lesson_body .showLesson .bottom .img img {
+    width: 100%;
 }
-.Lesson_body .showLesson .midlle{
+
+.Lesson_body .showLesson .midlle {
     height: 5%;
     display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        align-items: center;
-        width: 90%;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
 }
-.Lesson_body .showLesson .midlle .pdf-Download-ls{
-display: flex;
-flex-direction: row-reverse;
-justify-content: end;
-align-items: center;
-width: 50%;
+
+.Lesson_body .showLesson .midlle .pdf-Download-ls {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+    align-items: center;
+    width: 50%;
 
 }
-.Lesson_body .showLesson .midlle .pdf-Download-ls img{
+
+.Lesson_body .showLesson .midlle .pdf-Download-ls img {
     width: 25px;
     height: 25px;
 }
-.Lesson_body .showLesson .midlle .pdf-Download-ls p{
+
+.Lesson_body .showLesson .midlle .pdf-Download-ls p {
     color: #707070;
     font-size: 16px;
     font-weight: bold;
     margin-right: 1%;
 }
+
 .Lesson_body .showLesson .midlle .next-back-ls {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
+
     width: 50%;
     height: 100%;
 }
-.Lesson_body .showLesson .midlle .next-back-ls .next-ls, 
+
+.Lesson_body .showLesson .midlle .next-back-ls .next-ls,
 .Lesson_body .showLesson .midlle .next-back-ls .back-ls {
- background-image: linear-gradient(to left , #3c98bd,
-    #0f53a1);
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- cursor: pointer;
- width: 30%;
- color: #FFF;
- height: 80%;
- border-radius: 10px;
-
-}
-@media screen and (min-height: 650px){
-.Lesson_body .sidebar .header_lesson img {
-        height: 80px;
-        width: 80px;
-    }
-
-.Lesson_body .sidebar {
-    padding: 10% 2%;
-}
-.Lesson_body .showLesson .title img {
-    height: 80px;
-    width: 80px;
-}
-.Lesson_body .showLesson .midlle img {
-    width: 50px;
-    height: 50px;
-}
-}
-@media screen and (min-height: 800px) and (min-width: 300px){
-.Lesson_body .mobile .mobileTop .mobile-background {
-        margin-bottom: 30px;
-        margin-top: -200px;
-        /* background-color: rgb(209, 187, 187); */
-    }
-        .Lesson_body .mobile .mobileTop .BackGround_color {
-            height: 100%;
-            width: 100%;
-        }
-
-}
-@media screen and (min-height: 900px){
-/* .Lesson_body .sidebar {
-        padding: 20% 2%;
-    } */
-}
-@media screen and (max-width: 800px) and (max-height: 650px){
-.Lesson_body .sidebar .text .sidebar-lessons .inside_sidebar-lessons .lesson_item{
-    height: 12%;
-    font-size: 10px;
-}
-}
-@media screen and (min-width: 1000px) and (min-height: 1000px){
-.Lesson_body .sidebar .text .sidebar-lessons .inside_sidebar-lessons .lesson_item{
-    font-size: 17px;
-}
-}
-@media screen and (max-width: 700px) and (min-height: 650px) {
-    .Lesson_body .sidebar .arrow img{
-    width: 20px;
-    height: 10px;
-    }
-    .Lesson_body .sidebar .header_lesson img {
-        height: 50px;
-        width: 50px;
-    }
-}
-@media screen and (max-width: 900px){
-.Lesson_body .showLesson .title{
-    font-size: 10px;
-}
-.Lesson_body .sidebar .text .Lesson_title{
-    font-size: 13px;
-}
-.Lesson_body .sidebar .arrow img{
-    height: 20px;
-    height: 10px;
-}
-}
-@media screen and (max-width: 700px){
-.Lesson_body .lesson{
-    display: none;
-}
-.Lesson_body .mobile {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    transition: all 1s;
-
-}
-.Lesson_body .mobile .mobileTop{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-height: 25%;
-width: 100%;
-}
-.Lesson_body .mobile .mobileTop .BackGround_color{
-    height: 100%;
-    width: 100%;
-}
-.Lesson_body .mobile .mobileTop .mobile-background{
-margin-top: -140px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-width: 100%;
-height: 100%;
-}
-.Lesson_body .mobile .mobileTop .mobile-background .arrowLesson{
-    width: 90%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: start;
-}
-.Lesson_body .mobile .mobileTop .mobile-background .arrowLesson .arrow-mob:hover,
-.Lesson_body .mobile .mobileTop .mobile-background .arrowLesson .menu-mob{
-cursor: pointer;
-}
-.Lesson_body .mobile .mobileTop .mobile-background .imgTop{
- width: 60px;
- height: 60px ;
-}
-.Lesson_body .mobile .mobileTop .mobile-background .title-mob1{
-    font-weight: bold;
-    color: #FFF;
-    text-align: center;
-    font-size: 15px;
-    margin-left: 8%;
-    margin-right: 8%;
-}
-
-.Lesson_body .mobile .mobile-middle {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 70%;
-    width: 100%;
-}
-.Lesson_body .mobile .mobile-middle .img{
-    width: 85%;
-    height: 90%;
-    overflow-y: scroll;
-    border: 2px dashed #3c98bd;
-    border-radius: 5%;
-
-}
-.Lesson_body .mobile .mobile-middle .img img{
-    width: 100%;
-    border-radius: 5%;
-}
-.Lesson_body .mobile .mobile-bottom {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: end;
-    align-items: center;
-    height: 5%;
-    width: 85%;
-    color: #707070;
-    
-}
-.Lesson_body .mobile .mobile-bottom .pdf-Download-ls{
-display: flex;
-    flex-direction: row-reverse;
-    justify-content: end;
-        align-items: center;
-    width: 50%;
-    height: 100%;
-}
-.Lesson_body .mobile .mobile-bottom .next-back-ls{
-    display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        align-items: center;
-        width: 50%;
-}
-.Lesson_body .mobile .mobile-bottom .next-back-ls .next-ls , 
-.Lesson_body .mobile .mobile-bottom .next-back-ls .back-ls{
-background-image: linear-gradient(to left, #3c98bd,
-            #0f53a1);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    cursor: pointer;
     align-items: center;
     width: 30%;
     color: #FFF;
     height: 80%;
     border-radius: 10px;
-}
-.Lesson_body .mobile .mobile-bottom .pdf-Download-ls img{
-    height: 100%;
-    width: 15%;
-}
-.Lesson_body .mobile .menu_bar{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-position: fixed;
-top: 0;
-right: 0;
-bottom: 0;
-/* height: 100%; */
-background-color: white;
-width: 60%;
-padding: 5% 3%;
-transition: all 1s;
-border: 2px double #3c98bd;
 
 }
-.Lesson_body .mobile .menu_bar .cross-mob{
- height: 5%;
+
+@media screen and (min-height: 650px) {
+    .Lesson_body .sidebar .header_lesson img {
+        height: 80px;
+        width: 80px;
+    }
+
+    .Lesson_body .sidebar {
+        padding: 10% 2%;
+    }
+
+    .Lesson_body .showLesson .title img {
+        height: 80px;
+        width: 80px;
+    }
+
+    .Lesson_body .showLesson .midlle img {
+        width: 50px;
+        height: 50px;
+    }
 }
-.Lesson_body .mobile .menu_bar .cross-mob:hover{
-    cursor: pointer;
-}
-.Lesson_body .mobile .menu_bar .mob-side{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-width: 100%;
-height: 10%;
-}
-.Lesson_body .mobile .menu_bar .mob-side img{
-    width: 50px;
-    height: 50px;
-}
-.Lesson_body .mobile .menu_bar .text-mob{
-height: 75%;
-}
-.Lesson_body .mobile .menu_bar .text-mob .text-mob-title{
-    height: 10%;
-    color: #3c98bd;
-    font-weight: bold;
-    text-align: center;
-    font-size: 12px;
-}
-.Lesson_body .mobile .menu_bar .text-mob .sidebar-mobile-wrapper{
-height: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-.Lesson_body .mobile .menu_bar .text-mob .sidebar-mobile-wrapper .sidebar-mobile{
-    flex: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    color: #3c98bd;
-    font-weight: bold;
-    overflow-y: scroll;
-    font-size: 12px;
-}
-.Lesson_body .mobile .menu_bar .text-mob .sidebar-mobile-wrapper .sidebar-mobile .mob-item{
-display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 3px;
-    text-align: right;
+
+@media screen and (min-height: 800px) and (min-width: 300px) {
+    .Lesson_body .mobile .mobileTop .mobile-background {
+        margin-bottom: 30px;
+        margin-top: -200px;
+        /* background-color: rgb(209, 187, 187); */
+    }
+
+    .Lesson_body .mobile .mobileTop .BackGround_color {
+        height: 100%;
+        width: 100%;
+    }
 
 }
-.Lesson_body .mobile .menu_bar .text-mob .sidebar-mobile-wrapper .sidebar-mobile .mob-item:hover{
-    cursor: pointer;   
-    /* background-color: #3C98BD; */
-    /* color: #FFF; */
-    border: 1px solid #3C98BD;
+
+@media screen and (min-height: 900px) {
+    /* .Lesson_body .sidebar {
+        padding: 20% 2%;
+    } */
 }
+
+@media screen and (max-width: 800px) and (max-height: 650px) {
+    .Lesson_body .sidebar .text .sidebar-lessons .inside_sidebar-lessons .lesson_item {
+        height: 12%;
+        font-size: 10px;
+    }
 }
-@media screen and (max-width: 390px){
-.Lesson_body .mobile .mobile-bottom img {
- height: 100%;
- width: 10%;
+
+@media screen and (min-width: 1000px) and (min-height: 1000px) {
+    .Lesson_body .sidebar .text .sidebar-lessons .inside_sidebar-lessons .lesson_item {
+        font-size: 17px;
+    }
 }
+
+@media screen and (max-width: 700px) and (min-height: 650px) {
+    .Lesson_body .sidebar .arrow img {
+        width: 20px;
+        height: 10px;
+    }
+
+    .Lesson_body .sidebar .header_lesson img {
+        height: 50px;
+        width: 50px;
+    }
 }
-@media screen and (max-width: 350px){
-.Lesson_body .mobile .mobileTop .mobile-background {
- margin-top: -140px;
+
+@media screen and (max-width: 900px) {
+    .Lesson_body .showLesson .title {
+        font-size: 10px;
+    }
+
+    .Lesson_body .sidebar .text .Lesson_title {
+        font-size: 13px;
+    }
+
+    .Lesson_body .sidebar .arrow img {
+        height: 20px;
+        height: 10px;
+    }
 }
+
+@media screen and (max-width: 700px) {
+    .Lesson_body .lesson {
+        display: none;
+    }
+
+    .Lesson_body .mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        transition: all 1s;
+
+    }
+
+    .Lesson_body .mobile .mobileTop {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 25%;
+        width: 100%;
+    }
+
+    .Lesson_body .mobile .mobileTop .BackGround_color {
+        height: 100%;
+        width: 100%;
+    }
+
+    .Lesson_body .mobile .mobileTop .mobile-background {
+        margin-top: -140px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .Lesson_body .mobile .mobileTop .mobile-background .arrowLesson {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    .Lesson_body .mobile .mobileTop .mobile-background .arrowLesson .arrow-mob:hover,
+    .Lesson_body .mobile .mobileTop .mobile-background .arrowLesson .menu-mob {
+        cursor: pointer;
+    }
+
+    .Lesson_body .mobile .mobileTop .mobile-background .imgTop {
+        width: 60px;
+        height: 60px;
+    }
+
+    .Lesson_body .mobile .mobileTop .mobile-background .title-mob1 {
+        font-weight: bold;
+        color: #FFF;
+        text-align: center;
+        font-size: 15px;
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+
+    .Lesson_body .mobile .mobile-middle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 70%;
+        width: 100%;
+    }
+
+    .Lesson_body .mobile .mobile-middle .img {
+        width: 85%;
+        height: 90%;
+        overflow-y: scroll;
+        border: 2px dashed #3c98bd;
+        border-radius: 5%;
+
+    }
+
+    .Lesson_body .mobile .mobile-middle .img img {
+        width: 100%;
+        border-radius: 5%;
+    }
+
+    .Lesson_body .mobile .mobile-bottom {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: end;
+        align-items: center;
+        height: 5%;
+        width: 85%;
+        color: #707070;
+
+    }
+
+    .Lesson_body .mobile .mobile-bottom .pdf-Download-ls {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: end;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+    }
+
+    .Lesson_body .mobile .mobile-bottom .next-back-ls {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        width: 50%;
+    }
+
+    .Lesson_body .mobile .mobile-bottom .next-back-ls .next-ls,
+    .Lesson_body .mobile .mobile-bottom .next-back-ls .back-ls {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        color: #FFF;
+        height: 80%;
+        border-radius: 10px;
+    }
+
+    .Lesson_body .mobile .mobile-bottom .pdf-Download-ls img {
+        height: 100%;
+        width: 15%;
+    }
+
+    .Lesson_body .mobile .menu_bar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        /* height: 100%; */
+        background-color: white;
+        width: 60%;
+        padding: 5% 3%;
+        transition: all 1s;
+        border: 2px double #3c98bd;
+
+    }
+
+    .Lesson_body .mobile .menu_bar .cross-mob {
+        height: 5%;
+    }
+
+    .Lesson_body .mobile .menu_bar .cross-mob:hover {
+        cursor: pointer;
+    }
+
+    .Lesson_body .mobile .menu_bar .mob-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 10%;
+    }
+
+    .Lesson_body .mobile .menu_bar .mob-side img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .Lesson_body .mobile .menu_bar .text-mob {
+        height: 75%;
+    }
+
+    .Lesson_body .mobile .menu_bar .text-mob .text-mob-title {
+        height: 10%;
+        color: #3c98bd;
+        font-weight: bold;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .Lesson_body .mobile .menu_bar .text-mob .sidebar-mobile-wrapper {
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .Lesson_body .mobile .menu_bar .text-mob .sidebar-mobile-wrapper .sidebar-mobile {
+        flex: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        color: #3c98bd;
+        font-weight: bold;
+        overflow-y: scroll;
+        font-size: 12px;
+    }
+
+    .Lesson_body .mobile .menu_bar .text-mob .sidebar-mobile-wrapper .sidebar-mobile .mob-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 3px;
+        text-align: right;
+
+    }
+
+    .Lesson_body .mobile .menu_bar .text-mob .sidebar-mobile-wrapper .sidebar-mobile .mob-item:hover {
+        cursor: pointer;
+        /* background-color: #3C98BD; */
+        /* color: #FFF; */
+        border: 1px solid #3C98BD;
+    }
 }
-@media screen and (max-height: 573px) and (max-width:700px){
-.Lesson_body{
-    height: 573px;
+
+@media screen and (max-width: 390px) {
+    .Lesson_body .mobile .mobile-bottom img {
+        height: 100%;
+        width: 10%;
+    }
 }
-/* .Lesson_body .mobile .menu_bar{
+
+@media screen and (max-width: 350px) {
+    .Lesson_body .mobile .mobileTop .mobile-background {
+        margin-top: -140px;
+    }
+}
+
+@media screen and (max-height: 573px) and (max-width:700px) {
+    .Lesson_body {
+        height: 573px;
+    }
+
+    /* .Lesson_body .mobile .menu_bar{
 height: 573px;
 overflow-y: scroll;
 } */
-.Lesson_body .mobile .menu_bar .mob-side {
-height: 12%;
-margin-bottom: 2%;
-}
-.Lesson_body .mobile .menu_bar {
-    padding-top: 1%;
-}
+    .Lesson_body .mobile .menu_bar .mob-side {
+        height: 12%;
+        margin-bottom: 2%;
+    }
+
+    .Lesson_body .mobile .menu_bar {
+        padding-top: 1%;
+    }
 
 }
-@media screen and (max-height: 432px){
-.Lesson_body{
-    height: 432px;
+
+@media screen and (max-height: 432px) {
+    .Lesson_body {
+        height: 432px;
+    }
 }
-}
+
 @media screen and (max-height: 435px) {
-.Lesson_body .mobile{
-    height: 435px;
+    .Lesson_body .mobile {
+        height: 435px;
+    }
 }
-}
-@media screen and (max-height: 450px){
-.Lesson_body .mobile .mobileTop .mobile-background {
+
+@media screen and (max-height: 450px) {
+    .Lesson_body .mobile .mobileTop .mobile-background {
         margin-top: -98px;
     }
-.Lesson_body .mobile .mobileTop .mobile-background .imgTop{
-    height: 40px;
-    width: 40px;
+
+    .Lesson_body .mobile .mobileTop .mobile-background .imgTop {
+        height: 40px;
+        width: 40px;
+    }
 }
-}
+
 @media screen and (max-width: 435px) {
     .Lesson_body .mobile .mobile-bottom .pdf-Download-ls img {
-            height: 100%;
-            width: 30%;
-        }
-.Lesson_body .mobile .mobile-bottom .pdf-Download-ls .mobile-bottom-p{
-font-size: 12px;
+        height: 100%;
+        width: 30%;
+    }
+
+    .Lesson_body .mobile .mobile-bottom .pdf-Download-ls .mobile-bottom-p {
+        font-size: 12px;
+    }
+
+    .Lesson_body .mobile .mobile-bottom .next-back-ls .next-ls,
+    .Lesson_body .mobile .mobile-bottom .next-back-ls .back-ls {
+        width: 40%;
+    }
 }
-.Lesson_body .mobile .mobile-bottom .next-back-ls .next-ls,
-.Lesson_body .mobile .mobile-bottom .next-back-ls .back-ls {
-    cursor: pointer;
-    width: 40%;
-}
-}
+
 @media screen and (max-width: 330px) {
     .Lesson_body .mobile .mobile-bottom .pdf-Download-ls .mobile-bottom-p {
         font-size: 10px;
