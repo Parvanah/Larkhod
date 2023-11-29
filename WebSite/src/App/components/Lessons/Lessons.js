@@ -192,6 +192,49 @@ const Lessons = ({ t }, props) => {
         </div>
       </div>
       <div className="mobile">
+        <div
+          className="menu_bar"
+          style={{
+            display: `${sidebar}`,
+          }}
+        >
+          <div className="cross-mob" onClick={handleSideBar}>
+            <ImCross color="#3C98BD" />
+          </div>
+          <div className="mob-side">
+            <img src={photo4} alt="pic" />
+          </div>
+          <div className="text-mob">
+            <h3 className="text-mob-title"> درس های {unit}</h3>
+            <div className="sidebar-mobile-wrapper">
+              <div className="sidebar-mobile">
+                {lessons.map((item, index) => {
+                  return (
+                    <div
+                      className="mob-item"
+                      style={
+                        title === item.label
+                          ? { background: "#3C98BD", color: "#FFF" }
+                          : {}
+                      }
+                      onClick={() => {
+                        console.log(item);
+                        setPageNum(0);
+                        setIsLoading(true);
+                        setTitle(item.label);
+                        setLessonPath(item);
+                        setIsLoading(false);
+                      }}
+                    >
+                      <div> 0{index + 1}</div>
+                      <div className="titles-mob">{item.label}</div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="mobileTop">
           <img className="BackGround_color" src={topHeader} alt="pic" />
           <div className="mobile-background">
@@ -214,6 +257,7 @@ const Lessons = ({ t }, props) => {
         </div>
         <div className="mobile-middle">
           <div className="img">
+            {console.log(subject_path + lesson_path.paths[pageNum])}
             <img
               src={subject_path + lesson_path.paths[pageNum]}
               loading=""
@@ -260,45 +304,6 @@ const Lessons = ({ t }, props) => {
             >
               back
             </button>
-          </div>
-        </div>
-        <div
-          className="menu_bar"
-          style={{
-            display: `${sidebar}`,
-          }}
-        >
-          <div className="cross-mob" onClick={handleSideBar}>
-            <ImCross color="#3C98BD" />
-          </div>
-          <div className="mob-side">
-            <img src={photo4} alt="pic" />
-          </div>
-          <div className="text-mob">
-            <h3 className="text-mob-title"> درس های {unit}</h3>
-            <div className="sidebar-mobile-wrapper">
-              <div className="sidebar-mobile">
-                {lessons.map((item, index) => {
-                  return (
-                    <div
-                      className="mob-item"
-                      style={
-                        title === item.label
-                          ? { background: "#3C98BD", color: "#FFF" }
-                          : {}
-                      }
-                      onClick={() => {
-                        setTitle(item.label);
-                        setLessonPath(item);
-                      }}
-                    >
-                      <div> 0{index + 1}</div>
-                      <div className="titles-mob">{item.label}</div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
           </div>
         </div>
       </div>
