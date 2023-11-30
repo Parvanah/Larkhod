@@ -71,7 +71,7 @@ const Lessons = ({ t }, props) => {
       setPageNum(pageNum - 1);
     }
   };
-  const [title, setTitle] = useState(unitsPath ? unit : lessons[0].label);
+  const [title, setTitle] = useState(unitsPath ? "شروع فصل" : lessons[0].label);
 
   const navigation = useNavigate();
   //   if (userInfo === null) {
@@ -115,7 +115,7 @@ const Lessons = ({ t }, props) => {
                     onClick={() => {
                       setPageNum(0);
                       setIsLoading(true);
-                      setTitle(unit);
+                      setTitle("شروع فصل");
                       setLessonPath({ label: unit, paths: unitsPath });
                       console.log(lesson_path);
                       setIsLoading(false);
@@ -247,7 +247,7 @@ const Lessons = ({ t }, props) => {
                     onClick={() => {
                       setPageNum(0);
                       setIsLoading(true);
-                      setTitle(unit);
+                      setTitle("شروع فصل");
                       setLessonPath({ label: unit, paths: unitsPath });
                       console.log(lesson_path);
                       setIsLoading(false);
