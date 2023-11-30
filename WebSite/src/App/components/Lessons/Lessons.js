@@ -28,6 +28,8 @@ const Lessons = ({ t }, props) => {
   const lessons = locationData.lessons;
   console.log(lessons);
   const unit = locationData.title;
+  const unitsPath = locationData.unitPath;
+  console.log("unit Path:", unitsPath);
   const DownloadPdf = (url, fileName) => {
     const aTag = document.createElement("a");
     aTag.href = url;
@@ -51,7 +53,9 @@ const Lessons = ({ t }, props) => {
 
   const [pageNum, setPageNum] = useState(0);
   const subject_path = locationData.subject_path;
-  const [lesson_path, setLessonPath] = useState(lessons[0]);
+  const [lesson_path, setLessonPath] = useState(
+    unitsPath ? { label: unit, paths: unitsPath } : lessons[0]
+  );
   console.log(lesson_path);
   const handelPage = () => {
     if (pageNum === lesson_path.paths.length - 1) {
@@ -67,7 +71,7 @@ const Lessons = ({ t }, props) => {
       setPageNum(pageNum - 1);
     }
   };
-  const [title, setTitle] = useState(lessons[0].label);
+  const [title, setTitle] = useState(unitsPath ? unit : lessons[0].label);
 
   const navigation = useNavigate();
   //   if (userInfo === null) {
@@ -100,6 +104,29 @@ const Lessons = ({ t }, props) => {
             </h3>
             <div className="sidebar-lessons">
               <div className="inside_sidebar-lessons">
+                {unitsPath ? (
+                  <div
+                    className="lesson_item"
+                    style={
+                      title === unit
+                        ? { background: "#FFF", color: "#3C98BD" }
+                        : {}
+                    }
+                    onClick={() => {
+                      setPageNum(0);
+                      setIsLoading(true);
+                      setTitle(unit);
+                      setLessonPath({ label: unit, paths: unitsPath });
+                      console.log(lesson_path);
+                      setIsLoading(false);
+                    }}
+                  >
+                    <div> 00</div>
+                    <div className="titles_lesson">{"شروع فصل"}</div>
+                  </div>
+                ) : (
+                  <div></div>
+                )}
                 {lessons.map((item, index) => {
                   return (
                     <div
@@ -114,6 +141,7 @@ const Lessons = ({ t }, props) => {
                         setIsLoading(true);
                         setTitle(item.label);
                         setLessonPath(item);
+                        console.log(lesson_path);
                         setIsLoading(false);
                       }}
                     >
@@ -208,6 +236,29 @@ const Lessons = ({ t }, props) => {
             <h3 className="text-mob-title"> درس های {unit}</h3>
             <div className="sidebar-mobile-wrapper">
               <div className="sidebar-mobile">
+                {unitsPath ? (
+                  <div
+                    className="mob-item"
+                    style={
+                      title === unit
+                        ? { background: "#3C98BD", color: "#FFF" }
+                        : {}
+                    }
+                    onClick={() => {
+                      setPageNum(0);
+                      setIsLoading(true);
+                      setTitle(unit);
+                      setLessonPath({ label: unit, paths: unitsPath });
+                      console.log(lesson_path);
+                      setIsLoading(false);
+                    }}
+                  >
+                    <div> 00</div>
+                    <div className="titles-mob">{"شروع فصل"}</div>
+                  </div>
+                ) : (
+                  <div></div>
+                )}
                 {lessons.map((item, index) => {
                   return (
                     <div
