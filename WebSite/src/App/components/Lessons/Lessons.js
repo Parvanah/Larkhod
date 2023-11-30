@@ -108,7 +108,7 @@ const Lessons = ({ t }, props) => {
                   <div
                     className="lesson_item"
                     style={
-                      title === unit
+                      title === "شروع فصل"
                         ? { background: "#FFF", color: "#3C98BD" }
                         : {}
                     }
@@ -240,7 +240,7 @@ const Lessons = ({ t }, props) => {
                   <div
                     className="mob-item"
                     style={
-                      title === unit
+                      title === "شروع فصل"
                         ? { background: "#3C98BD", color: "#FFF" }
                         : {}
                     }
