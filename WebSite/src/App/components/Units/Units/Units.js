@@ -1,12 +1,12 @@
 import { AuthContext } from "../../context/AuthContext";
-import { useContext } from 'react';
-import { withNamespaces } from 'react-i18next';
+import { useContext } from "react";
+import { withNamespaces } from "react-i18next";
 import * as React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./Unit.css";
 import sectionicon from "../../assets/Group_374.png";
-import imageU from "../../assets/Group_158_a@2x.png"
+import imageU from "../../assets/Group_158_a@2x.png";
 import imagel from "../../assets/Shape.png";
 import unitm from "../../assets/unitm.png";
 
@@ -35,15 +35,18 @@ const Units = ({ t }) => {
   //   } else if(userInfo !== null){
   return (
     <div className="full_unit">
-      <div className="units" >
+      <div className="units">
         <div className="t-section">
           <div className="svgArrow">
-            <img className="flesh-image-grade-U" src={imageU} onClick={() => navigate(-1)} />
+            <img
+              className="flesh-image-grade-U"
+              src={imageU}
+              onClick={() => navigate(-1)}
+            />
             {/* <img src={unitm} className="unitm" onClick={() => navigate(-1)} /> */}
           </div>
 
           <div id="laptop-top">
-
             <h1 id="p1">{t("units1")}</h1>
             <h2>{t("units2")}</h2>
             {/* <div id="mobile-p"> 
@@ -92,7 +95,7 @@ const Units = ({ t }) => {
               xmlns="http://www.w3.org/2000/svg"
               width={13.435}
               height={28.158}
-            // {...props}
+              // {...props}
             >
               <path
                 fill="#fff"
@@ -103,21 +106,23 @@ const Units = ({ t }) => {
           </div>
           <div className="m-section" id="m-section">
             {/* <div id="ul"> */}
-              {units.map((item) => {
-                return (
-                  //with units
-                  <Link
-                    to="/lessons"
-                    state={{
-                      lessons: item.lessons, title: " فصل " + item.label,
-                      subject_path: subject_path,
-                    }}
-                  >
-                    <img src={sectionicon} />
-                    <h3>{item.label}</h3>
-                  </Link>
-                );
-              })}
+            {units.map((item) => {
+              return (
+                //with units
+                <Link
+                  to="/lessons"
+                  state={{
+                    lessons: item.lessons,
+                    title: " فصل " + item.label,
+                    unitPath: item.paths,
+                    subject_path: subject_path,
+                  }}
+                >
+                  <img src={sectionicon} />
+                  <h3>{item.label + "Khan"}</h3>
+                </Link>
+              );
+            })}
             {/* </div> */}
           </div>
           <div onClick={() => slidRight()} className="arrow">
@@ -125,7 +130,7 @@ const Units = ({ t }) => {
               xmlns="http://www.w3.org/2000/svg"
               width={13.435}
               height={27.158}
-            // {...props}
+              // {...props}
             >
               <path
                 fill="#fff"
@@ -137,8 +142,9 @@ const Units = ({ t }) => {
         </div>
         <div className="last">
           <p>{t("units3")}</p>
-          <div className="svg_wrapper"><img src={imagel} className='imagel' /></div>
-
+          <div className="svg_wrapper">
+            <img src={imagel} className="imagel" />
+          </div>
 
           {/* <div className="svg">
  <div id="last-mobile"> 
@@ -167,9 +173,13 @@ height={163.229}
     </div> */}
         </div>
       </div>
-      <div className="Munit" >
+      <div className="Munit">
         <div className="svgArrowM">
-          <img className="flesh-image-grade-U" src={imageU} onClick={() => navigate(-1)} />
+          <img
+            className="flesh-image-grade-U"
+            src={imageU}
+            onClick={() => navigate(-1)}
+          />
           <div className="t-sectionM">
             <div className="laptop-top">
               <h1 id="p1">{t("units1")}</h1>
@@ -186,7 +196,7 @@ height={163.229}
               xmlns="http://www.w3.org/2000/svg"
               width={13.435}
               height={28.158}
-            // {...props}
+              // {...props}
             >
               <path
                 fill="#fff"
@@ -203,7 +213,9 @@ height={163.229}
                   <Link
                     to="/lessons"
                     state={{
-                      lessons: item.lessons, title: " فصل " + item.label,
+                      lessons: item.lessons,
+                      title: " فصل " + item.label,
+                      unitPath: item.paths,
                       subject_path: subject_path,
                     }}
                   >
@@ -219,7 +231,7 @@ height={163.229}
               xmlns="http://www.w3.org/2000/svg"
               width={13.435}
               height={27.158}
-            // {...props}
+              // {...props}
             >
               <path
                 fill="#fff"
@@ -230,8 +242,13 @@ height={163.229}
           </div>
         </div>
         <div className="lastMU">
-          <div className="PMU"> <p>{t("units3")}</p></div>
-          <div className="MUimage"><img src={imagel} className='imagelMU' /></div>
+          <div className="PMU">
+            {" "}
+            <p>{t("units3")}</p>
+          </div>
+          <div className="MUimage">
+            <img src={imagel} className="imagelMU" />
+          </div>
         </div>
       </div>
     </div>
@@ -240,5 +257,3 @@ height={163.229}
 };
 
 export default withNamespaces()(Units);
-
-
