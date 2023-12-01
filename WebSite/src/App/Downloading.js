@@ -1,6 +1,6 @@
 import { AuthContext } from "./context/AuthContext";
 import { useContext } from "react";
-import JsonFiles from "./Json Files/SchoolSubjects.json";
+// import JsonFiles from "./Json Files/SchoolSubjects.json";
 import i18n from "../i18n";
 import { withNamespaces } from "react-i18next";
 import * as React from "react";
@@ -8,15 +8,15 @@ import "./downloading.css";
 import { HiDownload } from "react-icons/hi";
 import { Link, useLocation } from "react-router-dom";
 import image10 from "./assets/Group_158_a@2x.png";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
-import FileSaver from "file-saver";
+// import FileSaver from "file-saver";
 // import * as React from "react";
-import bookicon from "./assets/Group_360.png";
+// import bookicon from "./assets/Group_360.png";
 import Dimage from "./assets/Dimage.png";
-import Dimage2 from "./assets/Dimage.png";
+// import Dimage2 from "./assets/Dimage.png";
 import pathimg from "./assets/Path 968.png";
-import line from "./assets/Line 117.png";
+// import line from "./assets/Line 117.png";
 const Downloading = ({ t }, props) => {
   const { userInfo, isLoading } = useContext(AuthContext);
   const changeLanguage = (lng) => {
@@ -33,7 +33,7 @@ const Downloading = ({ t }, props) => {
   const bottom = useRef(null);
   const top = useRef(null);
   const [DownloadIcon, setDownloadIcon] = React.useState("flex");
-  const [spinIcon, setSpinIcon] = React.useState("none");
+  // const [spinIcon, setSpinIcon] = React.useState("none");
   const scrollBottom = () => {
     bottom.current.scrollIntoView({ behavier: "smooth" });
     setScrollState("bottom");
@@ -110,8 +110,8 @@ const Downloading = ({ t }, props) => {
                               />
                             </div>
                             <p id="h6">
-                              {t("downloading3")} {item.label}
-                              {t("downloading4")}
+                              {t("downloading3")} {item.label}    {t("downloading4")}
+                           
                             </p>
                           </div>
                         );
@@ -138,8 +138,8 @@ const Downloading = ({ t }, props) => {
                             </div>
 
                             <p id="h6">
-                              {t("downloading3")} {item.label}
-                              {t("downloading4")}
+                              {t("downloading3")} {item.label}  {t("downloading4")}
+                             
                             </p>
                           </div>
                           // </Link>
