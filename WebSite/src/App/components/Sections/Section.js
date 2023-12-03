@@ -155,9 +155,9 @@ const Section = ({ t }, props) => {
       </div>
       <div className="mobile-section">
         <div className="mob-sec-header">
-        <div className="prevuse" onClick={() => navigate(-1)}>
-          <img src={image4} />
-        </div>
+          <div className="prevuse" onClick={() => navigate(-1)}>
+            <img src={image4} />
+          </div>
           <div id="title">
             <h1>{t("section1")}</h1>
             <p>{t("section2")}</p>
@@ -176,6 +176,7 @@ const Section = ({ t }, props) => {
                 to="/grades"
                 state={{
                   grades: data.primary.grades,
+                  school_path: base_path + data.primary.base_path,
                 }}
               >
                 <img src={image1} />
@@ -188,6 +189,7 @@ const Section = ({ t }, props) => {
                 to="/grades"
                 state={{
                   grades: data.secondary.grades,
+                  school_path: base_path + data.secondary.base_path,
                 }}
               >
                 <img src={image2} />
@@ -200,6 +202,7 @@ const Section = ({ t }, props) => {
                 to="/grades"
                 state={{
                   grades: data.high_school.grades,
+                  school_path: base_path + data.high_school.base_path,
                 }}
               >
                 <img src={image3} />
