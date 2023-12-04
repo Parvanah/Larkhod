@@ -116,7 +116,7 @@ const Units = ({ t }) => {
                   to="/lessons"
                   state={{
                     lessons: item.lessons,
-                    title: " فصل " + item.label,
+                    title: "فصل" + item.label,
                     unitPath: item.paths,
                     subject_path: subject_path,
                   }}
