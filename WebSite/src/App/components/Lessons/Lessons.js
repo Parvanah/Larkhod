@@ -201,6 +201,7 @@ const Lessons = ({ t }, props) => {
               <button
                 className="next-ls"
                 onClick={handelPage}
+                disabled={pageNum == lesson_path.paths.length - 1}
                 style={
                   pageNum == lesson_path.paths.length - 1
                     ? {
@@ -217,6 +218,7 @@ const Lessons = ({ t }, props) => {
               <button
                 onClick={handlePageBack}
                 className="back-ls"
+                disabled={pageNum == 0}
                 style={
                   pageNum == 0
                     ? {
@@ -355,6 +357,7 @@ const Lessons = ({ t }, props) => {
             <button
               className="next-ls"
               onClick={handelPage}
+              disabled={pageNum == lesson_path.paths.length - 1}
               style={
                 pageNum == lesson_path.paths.length - 1
                   ? {
@@ -371,6 +374,7 @@ const Lessons = ({ t }, props) => {
             <button
               onClick={handlePageBack}
               className="back-ls"
+              disabled={pageNum == 0}
               style={
                 pageNum == 0
                   ? {
