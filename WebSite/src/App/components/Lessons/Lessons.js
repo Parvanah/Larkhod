@@ -39,7 +39,8 @@ const Lessons = ({ t }, props) => {
     aTag.click();
     aTag.remove();
   };
-  const [IsLoading, setIsLoading] = useState();
+  const [IsLoading, setIsLoading] = useState(true);
+  const [IsErrorOnImageLoad, setIsErrorOnImageLoad] = useState(false);
   const [FirstColor, setFirstColor] = useState("#3c98bd");
   const [secondColor, setsecondColor] = useState("#0f53a1");
   const [nextBtn, setNextbtn] = useState({
@@ -58,6 +59,8 @@ const Lessons = ({ t }, props) => {
   );
   console.log(lesson_path);
   const handelPage = () => {
+    setIsLoading(true);
+    setIsErrorOnImageLoad(false);
     if (pageNum === lesson_path.paths.length - 1) {
       setPageNum(pageNum);
     } else {
@@ -65,6 +68,8 @@ const Lessons = ({ t }, props) => {
     }
   };
   const handlePageBack = () => {
+    setIsLoading(true);
+    setIsErrorOnImageLoad(false);
     if (pageNum === 0) {
       setPageNum(pageNum);
     } else {
@@ -115,10 +120,10 @@ const Lessons = ({ t }, props) => {
                     onClick={() => {
                       setPageNum(0);
                       setIsLoading(true);
+                      setIsErrorOnImageLoad(false);
                       setTitle("شروع فصل");
                       setLessonPath({ label: unit, paths: unitsPath });
                       console.log(lesson_path);
-                      setIsLoading(false);
                     }}
                   >
                     <div> 00</div>
@@ -139,10 +144,10 @@ const Lessons = ({ t }, props) => {
                       onClick={() => {
                         setPageNum(0);
                         setIsLoading(true);
+                        setIsErrorOnImageLoad(false);
                         setTitle(item.label);
                         setLessonPath(item);
                         console.log(lesson_path);
-                        setIsLoading(false);
                       }}
                     >
                       <div> 0{index + 1}</div>
@@ -160,7 +165,7 @@ const Lessons = ({ t }, props) => {
         <div className="showLesson">
           <div className="title">
             <div className="main_lesson_title">
-              {isLoading ? (
+              {IsLoading ? (
                 <div>Loading...</div>
               ) : (
                 <h1>{`${unit} _ ${title}`}</h1>
@@ -169,13 +174,23 @@ const Lessons = ({ t }, props) => {
             <img src={photo1}></img>
           </div>
           <div className="bottom">
-            {isLoading ? (
-              <div>Loading...</div>
-            ) : (
-              <div className="img">
-                <img src={subject_path + lesson_path.paths[pageNum]}></img>
-              </div>
-            )}
+            <div className="img">
+              {!IsErrorOnImageLoad ? (
+                <img
+                  src={subject_path + lesson_path.paths[pageNum]}
+                  style={IsLoading ? { opacity: 0 } : { opacity: 1 }}
+                  onLoad={() => {
+                    setIsLoading(false);
+                  }}
+                  onError={() => {
+                    setIsLoading(false);
+                    setIsErrorOnImageLoad(true);
+                  }}
+                ></img>
+              ) : (
+                <div className="ErrorOnLoading">Failed to load image</div>
+              )}
+            </div>
           </div>
           <div className="midlle">
             <div className="pdf-Download-ls">
@@ -197,7 +212,7 @@ const Lessons = ({ t }, props) => {
                       }
                 }
               >
-                next
+                {IsLoading ? "Loading" : "next"}
               </button>
               <button
                 onClick={handlePageBack}
@@ -213,7 +228,7 @@ const Lessons = ({ t }, props) => {
                       }
                 }
               >
-                back
+                {IsLoading ? "Loading" : "Back"}
               </button>
             </div>
           </div>
@@ -247,6 +262,8 @@ const Lessons = ({ t }, props) => {
                     onClick={() => {
                       setPageNum(0);
                       setIsLoading(true);
+
+                      setIsErrorOnImageLoad(false);
                       setTitle("شروع فصل");
                       setLessonPath({ label: unit, paths: unitsPath });
                       console.log(lesson_path);
@@ -272,6 +289,7 @@ const Lessons = ({ t }, props) => {
                         console.log(item);
                         setPageNum(0);
                         setIsLoading(true);
+                        setIsErrorOnImageLoad(false);
                         setTitle(item.label);
                         setLessonPath(item);
                         setIsLoading(false);
@@ -302,18 +320,29 @@ const Lessons = ({ t }, props) => {
             </div>
             <img src={photo6} className="imgTop" alt="pic"></img>
             <div className="title-mob1">
-              <p>{`${unit}- ${title}`}</p>
+              {IsLoading ? <div>Loading</div> : <p>{`${unit}- ${title}`}</p>}
             </div>
           </div>
         </div>
         <div className="mobile-middle">
           <div className="img">
             {console.log(subject_path + lesson_path.paths[pageNum])}
-            <img
-              src={subject_path + lesson_path.paths[pageNum]}
-              loading=""
-              alt="pic"
-            ></img>
+            {!IsErrorOnImageLoad ? (
+              <img
+                src={subject_path + lesson_path.paths[pageNum]}
+                style={IsLoading ? { opacity: 0 } : { opacity: 1 }}
+                onLoad={() => {
+                  setIsLoading(false);
+                }}
+                onError={() => {
+                  setIsLoading(false);
+                  setIsErrorOnImageLoad(true);
+                }}
+                alt="pic"
+              ></img>
+            ) : (
+              <div className="ErrorOnLoading">Failed to load image</div>
+            )}
           </div>
         </div>
         <div className="mobile-bottom">
@@ -337,7 +366,7 @@ const Lessons = ({ t }, props) => {
                     }
               }
             >
-              next
+              {IsLoading ? "Loading" : "next"}
             </button>
             <button
               onClick={handlePageBack}
@@ -353,7 +382,7 @@ const Lessons = ({ t }, props) => {
                     }
               }
             >
-              back
+              {IsLoading ? "Loading" : "back"}
             </button>
           </div>
         </div>

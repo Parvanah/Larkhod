@@ -1,3 +1,13 @@
+.ErrorOnLoading{
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: red;
+        height: 100%;
+        font-size: 19px;
+        font-weight: bold;
+}
 .Lesson_body .mobile {
     display: none;
 }
@@ -102,13 +112,13 @@
 
 .Lesson_body .sidebar .text .sidebar-lessons .inside_sidebar-lessons .lesson_item {
     color: #FFF;
-    font-size: 13px;
+    font-size: 12px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     font-weight: bold;
-    height: 10%;
+    height: 12%;
     padding: 5px;
 
 }
@@ -159,7 +169,7 @@
     align-items: end;
     height: 15%;
     width: 100%;
-    font-size: 15px;
+    font-size: 13px;
     color: #3C98BD;
     font-weight: bold;
     text-align: right;
