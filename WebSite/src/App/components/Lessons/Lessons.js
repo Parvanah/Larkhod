@@ -66,6 +66,9 @@ const Lessons = ({ t }, props) => {
     } else {
       setPageNum(pageNum + 1);
     }
+     if (!IsErrorOnImageLoad) {
+       setIsLoading(false);
+     }
   };
   const handlePageBack = () => {
     setIsLoading(true);
@@ -74,6 +77,20 @@ const Lessons = ({ t }, props) => {
       setPageNum(pageNum);
     } else {
       setPageNum(pageNum - 1);
+    }
+     if (!IsErrorOnImageLoad) {
+       setIsLoading(false);
+     }
+  };
+  const handleClick = (title, lesson_path) => {
+    setPageNum(0);
+    setIsLoading(true);
+    setIsErrorOnImageLoad(false);
+    setTitle(title);
+    setLessonPath(lesson_path);
+    console.log(lesson_path);
+    if (!IsErrorOnImageLoad) {
+      setIsLoading(false);
     }
   };
   const [title, setTitle] = useState(unitsPath ? "شروع فصل" : lessons[0].label);
@@ -117,13 +134,8 @@ const Lessons = ({ t }, props) => {
                         ? { background: "#FFF", color: "#3C98BD" }
                         : {}
                     }
-                    onClick={() => {
-                      setPageNum(0);
-                      setIsLoading(true);
-                      setIsErrorOnImageLoad(false);
-                      setTitle("شروع فصل");
-                      setLessonPath({ label: unit, paths: unitsPath });
-                      console.log(lesson_path);
+                    onClick={() => { handleClick("شروع فصل", { label: unit, paths: unitsPath });
+                     
                     }}
                   >
                     <div> 00</div>
@@ -142,12 +154,7 @@ const Lessons = ({ t }, props) => {
                           : {}
                       }
                       onClick={() => {
-                        setPageNum(0);
-                        setIsLoading(true);
-                        setIsErrorOnImageLoad(false);
-                        setTitle(item.label);
-                        setLessonPath(item);
-                        console.log(lesson_path);
+                       handleClick(item.label,item)
                       }}
                     >
                       <div> 0{index + 1}</div>
@@ -262,14 +269,10 @@ const Lessons = ({ t }, props) => {
                         : {}
                     }
                     onClick={() => {
-                      setPageNum(0);
-                      setIsLoading(true);
-
-                      setIsErrorOnImageLoad(false);
-                      setTitle("شروع فصل");
-                      setLessonPath({ label: unit, paths: unitsPath });
-                      console.log(lesson_path);
-                      setIsLoading(false);
+                      handleClick("شروع فصل", {
+                        label: unit,
+                        paths: unitsPath,
+                      });
                     }}
                   >
                     <div> 00</div>
@@ -288,13 +291,7 @@ const Lessons = ({ t }, props) => {
                           : {}
                       }
                       onClick={() => {
-                        console.log(item);
-                        setPageNum(0);
-                        setIsLoading(true);
-                        setIsErrorOnImageLoad(false);
-                        setTitle(item.label);
-                        setLessonPath(item);
-                        setIsLoading(false);
+                        handleClick(item.label , item);
                       }}
                     >
                       <div> 0{index + 1}</div>
