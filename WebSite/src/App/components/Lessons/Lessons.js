@@ -29,6 +29,7 @@ const Lessons = ({ t }, props) => {
   console.log(lessons);
   const unit = locationData.title;
   const unitsPath = locationData.unitPath;
+  var timeStamp = new Date().getTime();
   console.log("unit Path:", unitsPath);
   const DownloadPdf = (url, fileName) => {
     const aTag = document.createElement("a");
@@ -66,9 +67,9 @@ const Lessons = ({ t }, props) => {
     } else {
       setPageNum(pageNum + 1);
     }
-     if (!IsErrorOnImageLoad) {
-       setIsLoading(false);
-     }
+    //  if (!IsErrorOnImageLoad) {
+    //    setIsLoading(false);
+    //  }
   };
   const handlePageBack = () => {
     setIsLoading(true);
@@ -78,9 +79,9 @@ const Lessons = ({ t }, props) => {
     } else {
       setPageNum(pageNum - 1);
     }
-     if (!IsErrorOnImageLoad) {
-       setIsLoading(false);
-     }
+    //  if (!IsErrorOnImageLoad) {
+    //    setIsLoading(false);
+    //  }
   };
   const handleClick = (title, lesson_path) => {
     setPageNum(0);
@@ -89,9 +90,9 @@ const Lessons = ({ t }, props) => {
     setTitle(title);
     setLessonPath(lesson_path);
     console.log(lesson_path);
-    if (!IsErrorOnImageLoad) {
-      setIsLoading(false);
-    }
+    // if (!IsErrorOnImageLoad) {
+    //   setIsLoading(false);
+    // }
   };
   const [title, setTitle] = useState(unitsPath ? "شروع فصل" : lessons[0].label);
 
@@ -134,8 +135,11 @@ const Lessons = ({ t }, props) => {
                         ? { background: "#FFF", color: "#3C98BD" }
                         : {}
                     }
-                    onClick={() => { handleClick("شروع فصل", { label: unit, paths: unitsPath });
-                     
+                    onClick={() => {
+                      handleClick("شروع فصل", {
+                        label: unit,
+                        paths: unitsPath,
+                      });
                     }}
                   >
                     <div> 00</div>
@@ -154,7 +158,7 @@ const Lessons = ({ t }, props) => {
                           : {}
                       }
                       onClick={() => {
-                       handleClick(item.label,item)
+                        handleClick(item.label, item);
                       }}
                     >
                       <div> 0{index + 1}</div>
@@ -184,7 +188,10 @@ const Lessons = ({ t }, props) => {
             <div className="img">
               {!IsErrorOnImageLoad ? (
                 <img
-                  src={subject_path + lesson_path.paths[pageNum]}
+                  src={
+                    `${subject_path + lesson_path.paths[pageNum]}?t=` +
+                    timeStamp
+                  }
                   style={IsLoading ? { opacity: 0 } : { opacity: 1 }}
                   onLoad={() => {
                     setIsLoading(false);
@@ -291,7 +298,7 @@ const Lessons = ({ t }, props) => {
                           : {}
                       }
                       onClick={() => {
-                        handleClick(item.label , item);
+                        handleClick(item.label, item);
                       }}
                     >
                       <div> 0{index + 1}</div>
@@ -328,7 +335,9 @@ const Lessons = ({ t }, props) => {
             {console.log(subject_path + lesson_path.paths[pageNum])}
             {!IsErrorOnImageLoad ? (
               <img
-                src={subject_path + lesson_path.paths[pageNum]}
+                src={
+                  `${subject_path + lesson_path.paths[pageNum]}?t=` + timeStamp
+                }
                 style={IsLoading ? { opacity: 0 } : { opacity: 1 }}
                 onLoad={() => {
                   setIsLoading(false);
