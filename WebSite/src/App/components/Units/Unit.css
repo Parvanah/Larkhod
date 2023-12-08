@@ -296,12 +296,12 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        flex: 1;
+        flex:1;
         /* background-color: aqua; */
     }
     
     .full_unit .units .t-section .svgArrow {
-        flex: 2;
+        flex:1;
         display: flex;
         flex-direction: column;
         justify-content: end;
@@ -310,20 +310,24 @@
         cursor:pointer;
        
  .flesh-image-grade-U {
-        width:22px;
+        width:15px;
+        margin-left:4%;
+        margin-top:13%;
     }
     }
     .full_unit .units .t-section #laptop-top {
-        flex: 2;
+        flex:3;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
         width: 80%;
+        margin-top: 10%;
+        /* background-color: aqua; */
     }
     
     .full_unit .units .t-section #laptop-top #p1 {
-        margin-top: 5%;
+        margin-top: 15%;
         font-size:3vw;
         color: white;
         font-family: "Bahij helvetica";
@@ -348,7 +352,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        width: 100%;
+        width: 90%;
         cursor: pointer;
         behavior: "smooth";
         /* margin-left: 30px; */
@@ -394,12 +398,12 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        width: 200px;
-        height: 160px;
+        width:120px;
+        height:130px;
         margin: 12px;
         border: none;
         border-radius: 15px;
-        padding: 10px;
+        padding:20px;
     }
     
     .full_unit .units .unitWrapper .m-section a h3 {
@@ -409,8 +413,8 @@
         font-family: "Bahij helvetica";
         font-style: normal;
         /* font-weight: bold; */
-        font-size: 14px;
-        width: 140px;
+        font-size:10px;
+        width: 110px;
         height: 40%;
         display: flex;
         flex-direction: column;
@@ -419,8 +423,8 @@
     }
     
     .full_unit .units .unitWrapper .m-section a img {
-        width: 65px;
-        height: 65px;
+        width: 55px;
+        height:55px;
     }
     
     .full_unit .units .last {
