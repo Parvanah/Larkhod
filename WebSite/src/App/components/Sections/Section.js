@@ -13,14 +13,14 @@ import image3 from "../../assets/Group_205@2x.png";
 import shape1 from "../../assets/Shape-1.png";
 import shape2 from "../../assets/shape-2.png";
 import Shape3 from "../../assets/Shape-3.png";
-
+import { basePath } from "../../BasePath/BasePath";
 const Section = ({ t }, props) => {
   "C:\\UsersKhatima Sadat/Documents/LarkhodeStructure/school_subjectsdari_curriculamprimarysecond_gradeart_subjectlessonslesson_1";
   const navigate = useNavigate();
   const { userInfo, isLoading } = useContext(AuthContext);
-  const base_path = "https://larkhoad.s3.ap-south-1.amazonaws.com";
-  const pic =
-    "C:\\UsersKhatima Sadat/Documents/LarkhodeStructure/school_subjectsdari_curriculamprimarysecond_gradeart_subjectlessonslesson_1";
+  const base_path = basePath;
+  // const pic =
+  //   "C:\\UsersKhatima Sadat/Documents/LarkhodeStructure/school_subjectsdari_curriculamprimarysecond_gradeart_subjectlessonslesson_1";
   var data;
   if (t("sectionlang") == "dari") {
     data = JsonFiles.dari_curriculam;
@@ -70,7 +70,7 @@ const Section = ({ t }, props) => {
             </svg>
           </foreignObject>
         </div>
-        <div className="prevuse" onClick={() => navigate(-1)}>
+        <div className="prevuse" onClick={() => navigate("/header")}>
           <img src={image4} />
         </div>
         <div id="title">
