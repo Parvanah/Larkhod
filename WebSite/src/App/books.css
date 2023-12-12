@@ -281,7 +281,11 @@
         height: 435px;   
         } */
 }
-
+@media screen and (max-height: 720px) and (max-width: 700px) and (min-width: 529px){
+.Download-all-b .Bookheader .second-section .icon-book{
+    display: none;
+}
+}
 /* @media screen and (max-width: 768px) {
         .Download-all-b {
             display: none;

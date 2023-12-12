@@ -92,6 +92,7 @@ width: 100%;
 	overflow-y: hidden;
 	height: 10%;
 	flex: 1;
+	/* background-color: aqua; */
 	/* padding-top: 180px; */
 }
 .full-all-grade-n .all-grade-N .second-section-grade .grades-section #class-container-n .all_grade_wrapper_h .button-grade-N {
@@ -174,17 +175,19 @@ cursor: pointer;
 	
 	}
 
-
-
 }
-@media screen and (max-height: 610px) and (max-width: 864px){
+@media screen and (max-height: 614px) and (max-width: 864px){
 	
 	.full-all-grade-n .all-grade-N .second-section-grade .icon-grade {
 		height: 85%;
 		margin-right: 2%;
+		/* background-color: red; */
+
+		
 	}
 	.full-all-grade-n .all-grade-N .second-section-grade .grades-section {
 		height:80%;
+		/* background-color: #0F53A1; */
 	}
 .pathimg-G img {
 	width: 40px;
@@ -195,6 +198,11 @@ cursor: pointer;
 	width:60%;	
 }
 
+}
+@media screen and (max-height: 720px) and (max-width: 700px)and (min-width: 450px){
+	.full-all-grade-n .all-grade-N .second-section-grade .icon-grade{
+		display: none;
+	}
 }
 @media screen and (max-width: 700px) {
 	.full-all-grade-n .all-grade-N {
