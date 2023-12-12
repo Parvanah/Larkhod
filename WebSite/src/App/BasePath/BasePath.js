@@ -1,0 +1,1 @@
+export const basePath = "https://larkhoad.s3.ap-south-1.amazonaws.com";
