@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center !important;
-    height: 100vh;
-    min-height: 560px;
+    height: 83%;
+    /* min-height: 560px; */
 }
 .section_one_about{
     display: flex;
