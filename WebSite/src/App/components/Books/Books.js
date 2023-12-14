@@ -62,7 +62,7 @@ const Books = ({ t }, props) => {
       <div className="Books" id="Books">
         <div className="top">
           <div className="first-svgs">
-            <div className="arrowSvg" onClick={() => navigate(-1)}>
+            <div className="arrowSvg" onClick={() => navigate("/header")}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={36}
@@ -166,7 +166,7 @@ const Books = ({ t }, props) => {
                   >
                     <img src={bookicon} />
                     <div className="titles">
-                    <p>{t("books6")}</p>
+                      <p>{t("books6")}</p>
                       <p id="h5">
                         {t("books4")} {item.label}
                       </p>
@@ -303,7 +303,7 @@ const Books = ({ t }, props) => {
                   >
                     <img src={bookicon} className="MBicon" />
                     <div className="titlesm">
-                    <p>{t("books6")}</p>
+                      <p>{t("books6")}</p>
                       <p id="h5">
                         {t("books4")} {item.label}
                       </p>
@@ -314,7 +314,7 @@ const Books = ({ t }, props) => {
               }
             })}
           </div>
-          <div onClick={() => righScrool()} className="arrow" >
+          <div onClick={() => righScrool()} className="arrow">
             <img src={scrolrm} alt="photo" />
           </div>
         </div>

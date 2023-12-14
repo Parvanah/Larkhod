@@ -27,6 +27,7 @@ export const AuthProvider = ({ children }) => {
   const [currentLesson, setCurrentLesson] = useState();
   const [currentpart, setCurrentpart] = useState();
   const [backendError, setBackendError] = useState();
+  const [currentPath, setCurrentPath] = useState();
   const Authorization = async (status, token, errorMessage) => {
     try {
       const res = await axios
@@ -59,6 +60,7 @@ export const AuthProvider = ({ children }) => {
       });
       console.log(response.data);
       setIsLoading(false);
+      window.location.pathname = "/header";
     } catch (error) {
       console.log(email);
       console.log(password);
@@ -268,6 +270,7 @@ export const AuthProvider = ({ children }) => {
   };
   useEffect(() => {
     isLoggedIn();
+    setCurrentPath(window.location.pathname);
   }, []);
   return (
     <AuthContext.Provider
@@ -297,6 +300,8 @@ export const AuthProvider = ({ children }) => {
         setCurrentpart,
         backendError,
         setBackendError,
+        currentPath,
+        setCurrentPath,
       }}
     >
       {children}
