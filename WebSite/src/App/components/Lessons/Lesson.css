@@ -214,9 +214,9 @@
     height: 5%;
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 75%;
 }
 
 .Lesson_body .showLesson .midlle .pdf-Download-ls {
@@ -246,7 +246,7 @@
     justify-content: space-between;
     align-items: center;
 
-    width: 50%;
+    width: 60%;
     height: 100%;
 }
 
@@ -260,6 +260,7 @@
     color: #FFF;
     height: 80%;
     border-radius: 10px;
+    cursor: pointer;
 
 }
 
@@ -437,7 +438,7 @@
     .Lesson_body .mobile .mobile-bottom {
         display: flex;
         flex-direction: row-reverse;
-        justify-content: end;
+        justify-content: center;
         align-items: center;
         height: 5%;
         width: 85%;
@@ -459,7 +460,7 @@
         flex-direction: row-reverse;
         justify-content: space-between;
         align-items: center;
-        width: 50%;
+        width: 60%;
     }
 
     .Lesson_body .mobile .mobile-bottom .next-back-ls .next-ls,
@@ -472,6 +473,7 @@
         color: #FFF;
         height: 80%;
         border-radius: 10px;
+        cursor: pointer;
     }
 
     .Lesson_body .mobile .mobile-bottom .pdf-Download-ls img {
@@ -640,6 +642,7 @@ overflow-y: scroll;
     .Lesson_body .mobile .mobile-bottom .next-back-ls .next-ls,
     .Lesson_body .mobile .mobile-bottom .next-back-ls .back-ls {
         width: 40%;
+        
     }
 }
 
