@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     background-color: #DAECF2;
-    height: 100vh;
+    height: 90%;
 }
 
 .full_book #Books {

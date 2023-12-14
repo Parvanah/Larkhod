@@ -15,18 +15,13 @@ import shape2 from "../../assets/shape-2.png";
 import Shape3 from "../../assets/Shape-3.png";
 import { basePath } from "../../BasePath/BasePath";
 const Section = ({ t }, props) => {
-  "C:\\UsersKhatima Sadat/Documents/LarkhodeStructure/school_subjectsdari_curriculamprimarysecond_gradeart_subjectlessonslesson_1";
   const navigate = useNavigate();
   const { userInfo, isLoading } = useContext(AuthContext);
   const base_path = basePath;
-  // const pic =
-  //   "C:\\UsersKhatima Sadat/Documents/LarkhodeStructure/school_subjectsdari_curriculamprimarysecond_gradeart_subjectlessonslesson_1";
-  var data;
-  if (t("sectionlang") == "dari") {
-    data = JsonFiles.dari_curriculam;
-  } else {
-    data = JsonFiles.pashto_curriculam;
-  }
+
+  var dataDari = JsonFiles.dari_curriculam;
+
+  var dataPashto = JsonFiles.pashto_curriculam;
 
   // const navigation = useNavigate();
   // if (userInfo == null) {
@@ -82,8 +77,14 @@ const Section = ({ t }, props) => {
             <Link
               to="/grades"
               state={{
-                grades: data.primary.grades,
-                school_path: base_path + data.primary.base_path,
+                Dari: {
+                  grades: dataDari.primary.grades,
+                  school_path: base_path + dataDari.primary.base_path,
+                },
+                Pashto: {
+                  grades: dataPashto.primary.grades,
+                  school_path: base_path + dataPashto.primary.base_path,
+                },
               }}
             >
               <img src={image1} />
@@ -95,8 +96,14 @@ const Section = ({ t }, props) => {
             <Link
               to="/grades"
               state={{
-                grades: data.secondary.grades,
-                school_path: base_path + data.secondary.base_path,
+                Dari: {
+                  grades: dataDari.secondary.grades,
+                  school_path: base_path + dataDari.secondary.base_path,
+                },
+                Pashto: {
+                  grades: dataPashto.secondary.grades,
+                  school_path: base_path + dataPashto.secondary.base_path,
+                },
               }}
             >
               <img src={image2} />
@@ -108,8 +115,14 @@ const Section = ({ t }, props) => {
             <Link
               to="/grades"
               state={{
-                grades: data.high_school.grades,
-                school_path: base_path + data.high_school.base_path,
+                Dari: {
+                  grades: dataDari.high_school.grades,
+                  school_path: base_path + dataDari.high_school.base_path,
+                },
+                Pashto: {
+                  grades: dataPashto.high_school.grades,
+                  school_path: base_path + dataPashto.high_school.base_path,
+                },
               }}
             >
               <img src={image3} />
@@ -175,8 +188,14 @@ const Section = ({ t }, props) => {
               <Link
                 to="/grades"
                 state={{
-                  grades: data.primary.grades,
-                  school_path: base_path + data.primary.base_path,
+                  Dari: {
+                    grades: dataDari.primary.grades,
+                    school_path: base_path + dataDari.primary.base_path,
+                  },
+                  Pashto: {
+                    grades: dataPashto.primary.grades,
+                    school_path: base_path + dataPashto.primary.base_path,
+                  },
                 }}
               >
                 <img src={image1} />
@@ -188,8 +207,14 @@ const Section = ({ t }, props) => {
               <Link
                 to="/grades"
                 state={{
-                  grades: data.secondary.grades,
-                  school_path: base_path + data.secondary.base_path,
+                  Dari: {
+                    grades: dataDari.secondary.grades,
+                    school_path: base_path + dataDari.secondary.base_path,
+                  },
+                  Pashto: {
+                    grades: dataPashto.secondary.grades,
+                    school_path: base_path + dataPashto.secondary.base_path,
+                  },
                 }}
               >
                 <img src={image2} />
@@ -201,8 +226,14 @@ const Section = ({ t }, props) => {
               <Link
                 to="/grades"
                 state={{
-                  grades: data.high_school.grades,
-                  school_path: base_path + data.high_school.base_path,
+                  Dari: {
+                    grades: dataDari.high_school.grades,
+                    school_path: base_path + dataDari.high_school.base_path,
+                  },
+                  Pashto: {
+                    grades: dataPashto.high_school.grades,
+                    school_path: base_path + dataPashto.high_school.base_path,
+                  },
                 }}
               >
                 <img src={image3} />

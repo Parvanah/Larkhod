@@ -17,10 +17,15 @@ import arrowOpen from "../../assets/Path-1005.png";
 import arrowClose from "../../assets/Path-1006.png";
 import { ImCross } from "react-icons/im";
 import i18n from "../../../i18n";
-<link rel="stylesheet" href="../Header/Header.css" />;
-const Home = ({ t }, props)=>{
-    return(
-        <div className="home">
+import bottomHome from "../../assets/Path_7.png";
+import "./Home.css";
+{
+  /* <link rel="stylesheet" href="./Home.css" />; */
+}
+const Home = ({ t }, props) => {
+  return (
+    <div className="Home-wrapper">
+      <div className="home">
         <Link to="/section">
           <svg class="home_svg" viewBox="385.11 697.15 30.158 16.435">
             <path
@@ -30,19 +35,23 @@ const Home = ({ t }, props)=>{
           </svg>
         </Link>
         <div className="images_paragraph_home">
-          <div>
-            <img className="imgg_home" src={imgg} />
-            <img className="img_one_home" src={img1} />
-            <img className="imggg_home" src={img} />
+          <div className="imgg_home">
+            <img src={imgg} />
           </div>
-          <div>
-            <samp className="paragraph_home">{t("header1")}</samp>
-            <samp className="paragraph_1_home">
-              <br /> {t("header2")}
-            </samp>
+          <div className="IconAndText">
+            <img className="img_one_home" src={img1} />
+            <div>
+              <samp className="paragraph_home">{t("header1")}</samp>
+              <samp className="paragraph_1_home">
+                <br /> {t("header2")}
+              </samp>
+            </div>
+          </div>
+          <div className="imgg_home">
+            <img src={img} />
           </div>
         </div>
-        <svg className="home_svg_one" viewBox="131.89 248.487 1920.661 112.903">
+        {/* <svg className="home_svg_one" viewBox="131.89 248.487 1920.661 112.903">
           <linearGradient
             id="Union_1_dg"
             spreadMethod="pad"
@@ -58,7 +67,15 @@ const Home = ({ t }, props)=>{
             id="home_svg_one"
             d="M 1052.548828125 411.3898620605469 L 131.8900146484375 411.3898620605469 L 131.8900146484375 286.3383178710938 C 770.7160034179688 235.870361328125 1413.725708007812 235.870361328125 2052.550537109375 286.338134765625 L 2052.548828125 911.3898620605469 Z"
           ></path>
-        </svg>
-      </div>)
+        </svg> */}
+        <img src={bottomHome} alt="botomHome" className="home_svg_one" />
+      </div>
+      {/* <div className="middle">
+        <img src={middleimg} />
+        <p>سفر زیبای تعلیمی خود را</p>
+        <h1>با ما آغاز کنید</h1>
+      </div> */}
+    </div>
+  );
 };
 export default withNamespaces()(Home);

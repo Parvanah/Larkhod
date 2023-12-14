@@ -3,7 +3,7 @@ import { withNamespaces } from "react-i18next";
 import { FaUser } from "react-icons/fa";
 import "./Header.css";
 import { Link } from "react-router-dom";
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import { useState } from "react";
 import img1 from "../../assets/logo.png";
 import img from "../../assets/larg.png";
@@ -18,17 +18,23 @@ import arrowClose from "../../assets/Path-1006.png";
 import { ImCross } from "react-icons/im";
 import i18n from "../../../i18n";
 import Home from "../Home/Home";
+import logoSideBar from "../../assets/logo_5.png";
+
 // import butimg from "../../assets/Path_7";
 // import buttom_img from "../../assets/Path_7.png";
 // import down_img from "../../assets/Path_39.png";
 <link rel="stylesheet" href="./Header.css" />;
 
 const Header = ({ t }, props) => {
+  const navigate = useNavigate();
   const { Loggout, userInfo, isLoading } = useContext(AuthContext);
   const [openProfile, setOpenProfile] = useState(false);
   const [isOpen, setIsOpen] = useState("none");
   const [isClose, setIsClose] = useState("flex");
-  const options = [{ name: "دری", value: "dari" }, { name: "پښتو" , value : "pashto"}];
+  const options = [
+    { name: "دری", value: "dari" },
+    { name: "پښتو", value: "pashto" },
+  ];
   const [selectedOption, setSelectedOption] = useState(
     t("sectionlang") === "pashto" ? options[1].name : options[0].name
   );
@@ -61,11 +67,21 @@ const Header = ({ t }, props) => {
   };
   const handleOptionClick = (option) => {
     setSelectedOption(option.name);
-    i18n.changeLanguage(option.value);
-     setIsOpen("none");
-     setIsClose("flex");
+    
+    setIsOpen("none");
+    setIsClose("flex");
+    if (
+      (window.location.pathname === "/grades" ||
+        window.location.pathname === "/books" ||
+        window.location.pathname === "/unit" ||
+        window.location.pathname === "/lessons") &&
+      t("sectionlang") !== option.value
+    ) {
+      i18n.changeLanguage(option.value);
+      navigate("/section");
+    }
   };
- 
+
   console.log(currentLesson);
   console.log(currentpart);
   var nav;
@@ -77,6 +93,21 @@ const Header = ({ t }, props) => {
     nav = "/unit";
     status = { units: currentpart };
   }
+  const handleProfileToggle = () => {
+    if (openProfile) {
+      setOpenProfile(false);
+    } else {
+      setOpenProfile(true);
+    }
+  };
+  const handleProfileOption = () => {
+    setOpenProfile(false);
+  };
+  // useEffect(() => {
+  //   if (window.location.pathname !== "/header") {
+  //     openProfile(false);
+  //   }
+  // });
   return (
     <div className="full_header">
       <nav className="header">
@@ -100,12 +131,6 @@ const Header = ({ t }, props) => {
                 {t("header5")}
               </Link>
             </li>
-            {/* <hr className="vl_header" />
-            <li className="li_header">
-              <Link className="link_nav_header" to={nav} state={status}>
-                {t("header6")}
-              </Link>
-            </li> */}
             <hr className="vl_header" />
             <li className="li_header">
               <Link className="link_nav_header" to="/about">
@@ -118,7 +143,13 @@ const Header = ({ t }, props) => {
                 {t("header8")}
               </Link>
             </li>
-            <hr className="vi_header" />
+            <hr className="vl_header" />
+            <li className="li_header">
+              <Link className="link_nav_header" to="/header">
+                {t("header12")}
+              </Link>
+            </li>
+            <hr className="vl_header" />
           </ul>
           <div className="lng">
             <div className="selctedoption">
@@ -142,72 +173,43 @@ const Header = ({ t }, props) => {
               )}
             </div>
           </div>
-          <div
-            className="icon_header"
-            onClick={() => setOpenProfile((prev) => !prev)}
-          >
-            <FaUser />
-          </div>
-          {openProfile && (
-            <div className="flex flex-col dropDownProfile">
-              <ul className="flex flex-col gap-4">
-                <Link to="/changeprofile">
-                  {" "}
-                  <li className="changefrofilr_button_header">
-                    {t("header9")}
-                  </li>{" "}
-                </Link>
-                <li>
-                  {" "}
-                  <Link
-                    className="logout_button_header"
-                    to="/"
-                    onClick={() => Loggout()}
-                  >
-                    {t("header10")}
-                    <input type="button" />
-                  </Link>
-                </li>
-              </ul>
+          <div className="icon_header">
+            <FaUser onClick={() => setOpenProfile((prev) => !prev)} />
+            <div className="insideProfile">
+              {openProfile && (
+                <div className="flex flex-col dropDownProfile">
+                  <ul className="flex flex-col gap-4">
+                    <Link to="/changeprofile">
+                      {" "}
+                      <li className="changefrofilr_button_header">
+                        {t("header9")}
+                      </li>{" "}
+                    </Link>
+                    <li>
+                      {" "}
+                      <Link
+                        className="logout_button_header"
+                        to="/"
+                        onClick={() => Loggout()}
+                      >
+                        {t("header10")}
+                        <input type="button" />
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              )}
             </div>
-          )}
+          </div>
         </div>
       </nav>
-      <Home />
       <div className="mobile">
         <div className="top">
-          <img src={topimag} />
-          <h1>لارښود - Larkhod</h1>
-          <div
-            className="icon_header"
-            onClick={() => setOpenProfile((prev) => !prev)}
-          >
-            <FaUser />
+          <div className="leftTop">
+            <img src={topimag} />
+            <h1>لارښود - Larkhod</h1>
           </div>
-          {openProfile && (
-            <div className="flex flex-col dropDownProfile">
-              <ul className="flex flex-col gap-4">
-                <Link to="/changeprofile">
-                  {" "}
-                  <li className="changefrofilr_button_header">
-                    {t("header9")}
-                  </li>{" "}
-                </Link>
-                <li>
-                  {" "}
-                  <Link
-                    className="logout_button_header"
-                    to="/"
-                    onClick={() => Loggout()}
-                  >
-                    {t("header10")}
-                    <input type="button" />
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          )}
-          {/* <div className="lng">
+          <div className="lng">
             <div className="selctedoption">
               <div>{selectedOption || t("header11")}</div>
               <div onClick={handleToggle} style={{ display: isClose }}>
@@ -228,22 +230,48 @@ const Header = ({ t }, props) => {
                 </ul>
               )}
             </div>
-          </div> */}
+          </div>
+          <div className="icon_header">
+            <FaUser onClick={handleProfileToggle} />
+            <div className="insideProfile">
+              {openProfile === true && (
+                <div
+                  className="flex flex-col dropDownProfile"
+                  style={{ display: openProfile ? "flex" : "none" }}
+                >
+                  <ul className="flex flex-col gap-4">
+                    <div
+                      onClick={() => {
+                        openProfile(false);
+                        navigate("/changeprofile");
+                      }}
+                    >
+                      {" "}
+                      <li className="changefrofilr_button_header">
+                        {t("header9")}
+                      </li>{" "}
+                    </div>
+                    <li>
+                      {" "}
+                      <div
+                        className="logout_button_header"
+                        onClick={() => {
+                          Loggout();
+                          handleProfileOption();
+                        }}
+                      >
+                        {t("header10")}
+                        <input type="button" />
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              )}
+            </div>
+          </div>
           <div className="menu" onClick={handleSideBar}>
-            <FiMenu />
+            <FiMenu className="menuIcon" />
           </div>
-        </div>
-        <div className="middle">
-          <img src={middleimg} />
-          <p>سفر زیبای تعلیمی خود را</p>
-          <h1>با ما آغاز کنید</h1>
-
-          {/* <div className="imggg1">
-          <img src={buttom_img} />
-          </div>
-         <div className="imggg2">
-         <img src={down_img}/>
-         </div> */}
         </div>
         <div
           className="side_bar"
@@ -260,7 +288,7 @@ const Header = ({ t }, props) => {
                 {t("header3")}
               </Link>
             </li>
-            <hr />
+
             <li className="li_header">
               <Link className="link_nav_header" to="/grad">
                 {t("header4")}
@@ -272,31 +300,21 @@ const Header = ({ t }, props) => {
                 {t("header5")}
               </Link>
             </li>
-            {/* <hr />
-            <li className="li_header">
-              <Link className="link_nav_header" to="/continue">
-                {t("header6")}
-              </Link>
-            </li> */}
-            <hr />
             <li className="li_header">
               <Link className="link_nav_header" to="/about">
                 {t("header7")}
               </Link>
             </li>
-            <hr />
             <li className="li_header">
               <Link className="link_nav_header" to="/Suggestion">
                 {t("header8")}
               </Link>
             </li>
+            <li className="li_header">
+              <img src={logoSideBar} />
+            </li>
           </div>
         </div>
-        {/* <div className="buttom">
-        <div className="svg">
-          <img src="butimg"></img>
-        </div>
-      </div> */}
       </div>
     </div>
   );

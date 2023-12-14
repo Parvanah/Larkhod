@@ -3,6 +3,9 @@
     src: url("./Fonts/Bahij\ Helvetica\ Neue\ 45\ Light\(1\).ttf")
     format("truetype") ;
 }
+.App{
+    height: 100vh;
+}
 /* .d-middle::-webkit-scrollbar {
     width:4em;
 }
