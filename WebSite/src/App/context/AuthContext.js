@@ -8,7 +8,7 @@ import React, {
   useEffect,
   useState,
 } from "react";
-axios.defaults.baseURL = "http://192.168.43.29:8000/api/v1";
+axios.defaults.baseURL = "http://192.168.195.250:8000/api/v1";
 axios.defaults.timeout = 3000;
 
 // import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -244,6 +244,7 @@ export const AuthProvider = ({ children }) => {
       setSplashLoading(true);
       let userInfo = await localStorage.getItem("userInfo");
       userInfo = JSON.parse(userInfo);
+      // window.location.pathname = "/header";
 
       if (userInfo) {
         setUserInfo(userInfo);
@@ -258,6 +259,7 @@ export const AuthProvider = ({ children }) => {
     try {
       setIsLoading(true);
       localStorage.removeItem("userInfo");
+      window.location.pathname = "/";
       setUserInfo(null);
       setIsLoading(false);
     } catch (e) {

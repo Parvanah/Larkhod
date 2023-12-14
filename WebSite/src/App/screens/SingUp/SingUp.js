@@ -236,7 +236,7 @@ const SingUp = ({ t }, props) => {
                     <div className="field">
                       <input
                         id="input_singup"
-                        type="age"
+                        type="date"
                         name="age"
                         placeholder={t("singup19")}
                         value={formValues.age}
@@ -314,7 +314,7 @@ const SingUp = ({ t }, props) => {
                 <h4 className="p_singup">{t("singup7")}</h4>
                 <button className="Google_SignUP" onClick={login}>
                   {/* <FaGoogle className="google_icon_singup" /> */}
-                  <img src={google} className="google"/>
+                  <img src={google} className="google" />
                   <div className="google_p_singup">{t("singup8")}</div>
                 </button>
               </div>
@@ -473,7 +473,7 @@ const SingUp = ({ t }, props) => {
                 <h4 className="p_singup">{t("singup7")}</h4>
                 <button className="google_button_singup" onClick={login}>
                   {/* <FaGoogle className="google_icon_singup" /> */}
-                  <img src={google}  className="google"/>
+                  <img src={google} className="google" />
                   <div className="google_p_singup">{t("singup8")}</div>
                 </button>
               </div>
