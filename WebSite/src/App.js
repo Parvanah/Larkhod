@@ -1,9 +1,9 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "./App/context/AuthContext";
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
-import './App.css';
+import "./App.css";
 import Header from "./App/components/Header/Header";
 import SingUp from "./App/screens/SingUp/SingUp";
 import LogIn from "./App/screens/Login/LogIn";
@@ -22,38 +22,57 @@ import Continue from "./App/Continue";
 import About from "./App/About";
 import Suggestion from "./App/Suggestion";
 import ChangeProfile from "./App/screens/ChangeProfile/ChangeProfile";
-
+import Home from "./App/components/Home/Home";
+import "./App.css";
 function App() {
   const { userInfo } = useContext(AuthContext);
   console.log(userInfo);
+
+  // useEffect(() => {
+  //   userInfo !== null
+  //     ? (window.location.pathname = "/header")
+  //     : (window.location.pathname = "/");
+  // }, []);
   return (
-    <Router>
-      <Routes>
-        <Route exact path="/header" element={<Header />} />
-        <Route path="/section" element={<Section />} />
-        <Route path="/grades" element={<Grades />} />
-        <Route path="/books" element={<Books />} />
-        <Route path="/unit" element={<Units />} />
-        <Route path="/lessons" element={<Lessons />} />
-        <Route path="/grad" element={<Grad />} />
-        <Route path="/book" element={<Book />} />
-        <Route path="/downloading" element={<Downloading/>}/>
-        <Route path="/continue" element={<Continue />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/suggestion" element={<Suggestion />} />
-        <Route path="/changeprofile" element={<ChangeProfile />} />
-        <Route
-          exact
-          path="/"
-          element={userInfo === null ? <SingUp /> : <Header />}
-        />
-        <Route exact path="/" element={<SingUp />} />
-        <Route exact path="/login" element={<SingUp />} />
-        <Route exact path="/forgotpassword" element={<ForgotPassword />} />
-        <Route exact path="/sendcode" element={<SendCode />} />
-        <Route exact path="/newpassword" element={<NewPassword />} />
-      </Routes>
-    </Router>
+    <div className="App">
+      <Router>
+        {!(
+          window.location.pathname === "/login" ||
+          window.location.pathname === "/"
+        ) ||
+        window.location.pathname === "/header" ||
+        userInfo != null ? (
+          <Header />
+        ) : (
+          <></>
+        )}
+        <Routes>
+          <Route path="/header" element={<Home />} />
+          <Route path="/section" element={<Section />} />
+          <Route path="/grades" element={<Grades />} />
+          <Route path="/books" element={<Books />} />
+          <Route path="/unit" element={<Units />} />
+          <Route path="/lessons" element={<Lessons />} />
+          <Route path="/grad" element={<Grad />} />
+          <Route path="/book" element={<Book />} />
+          <Route path="/downloading" element={<Downloading />} />
+          <Route path="/continue" element={<Continue />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/suggestion" element={<Suggestion />} />
+          <Route path="/changeprofile" element={<ChangeProfile />} />
+          {/* <Route
+            exact
+            path="/"
+            element={userInfo === null ? <SingUp /> : <Home />}
+          /> */}
+          <Route exact path="/" element={<SingUp />} />
+          <Route exact path="/login" element={<SingUp />} />
+          <Route exact path="/forgotpassword" element={<ForgotPassword />} />
+          <Route exact path="/sendcode" element={<SendCode />} />
+          <Route exact path="/newpassword" element={<NewPassword />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 
