@@ -67,16 +67,17 @@ const Header = ({ t }, props) => {
   };
   const handleOptionClick = (option) => {
     setSelectedOption(option.name);
-    i18n.changeLanguage(option.value);
+    
     setIsOpen("none");
     setIsClose("flex");
     if (
-      window.location.pathname === "/grades" ||
-      window.location.pathname === "/grades" ||
-      window.location.pathname === "/books" ||
-      window.location.pathname === "/unit" ||
-      window.location.pathname === "/lessons"
+      (window.location.pathname === "/grades" ||
+        window.location.pathname === "/books" ||
+        window.location.pathname === "/unit" ||
+        window.location.pathname === "/lessons") &&
+      t("sectionlang") !== option.value
     ) {
+      i18n.changeLanguage(option.value);
       navigate("/section");
     }
   };
