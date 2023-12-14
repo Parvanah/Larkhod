@@ -207,15 +207,15 @@ const Lessons = ({ t }, props) => {
             </div>
           </div>
           <div className="midlle">
-            <div className="pdf-Download-ls">
+            {/* <div className="pdf-Download-ls">
               <img src={photo3}></img>
               <p> {t("lessons3")}</p>
-            </div>
+            </div> */}
             <div className="next-back-ls">
               <button
                 className="next-ls"
                 onClick={handelPage}
-                disabled={pageNum == lesson_path.paths.length - 1}
+                disabled={pageNum == lesson_path.paths.length - 1 || IsLoading}
                 style={
                   pageNum == lesson_path.paths.length - 1
                     ? {
@@ -232,7 +232,7 @@ const Lessons = ({ t }, props) => {
               <button
                 onClick={handlePageBack}
                 className="back-ls"
-                disabled={pageNum == 0}
+                disabled={pageNum == 0 || IsLoading}
                 style={
                   pageNum == 0
                     ? {
@@ -354,16 +354,16 @@ const Lessons = ({ t }, props) => {
           </div>
         </div>
         <div className="mobile-bottom">
-          <div className="pdf-Download-ls">
+          {/* <div className="pdf-Download-ls">
             <img src={Down1} />
             <button />
             <p className="mobile-bottom-p">دانلود فایل پی دی اف</p>
-          </div>
+          </div> */}
           <div className="next-back-ls">
             <button
               className="next-ls"
               onClick={handelPage}
-              disabled={pageNum == lesson_path.paths.length - 1}
+              disabled={pageNum == lesson_path.paths.length - 1 || IsLoading}
               style={
                 pageNum == lesson_path.paths.length - 1
                   ? {

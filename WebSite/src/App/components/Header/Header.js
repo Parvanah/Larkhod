@@ -77,9 +77,14 @@ const Header = ({ t }, props) => {
         window.location.pathname === "/lessons") &&
       t("sectionlang") !== option.value
     ) {
-      i18n.changeLanguage(option.value);
       navigate("/section");
+    } else if (
+      window.location.pathname === "/downloading" &&
+      t("sectionlang") !== option.value
+    ) {
+      navigate("/book");
     }
+    i18n.changeLanguage(option.value);
   };
 
   console.log(currentLesson);

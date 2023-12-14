@@ -25,22 +25,36 @@ import ChangeProfile from "./App/screens/ChangeProfile/ChangeProfile";
 import Home from "./App/components/Home/Home";
 import "./App.css";
 function App() {
-  const { userInfo } = useContext(AuthContext);
+  const { userInfo, currentPath, setCurrentPath } = useContext(AuthContext);
   console.log(userInfo);
 
-  // useEffect(() => {
-  //   userInfo !== null
-  //     ? (window.location.pathname = "/header")
-  //     : (window.location.pathname = "/");
-  // }, []);
+  useEffect(() => {
+    setCurrentPath(window.location.pathname);
+  });
   return (
     <div className="App">
       <Router>
-        {!(
+        {/* {!(
           window.location.pathname === "/login" ||
-          window.location.pathname === "/"
+          window.location.pathname === "/" ||
+          window.location.pathname === "/forgotpassword" ||
+          window.location.pathname === "/sendcode" ||
+          window.location.pathname === "/newpassword"
         ) ||
         window.location.pathname === "/header" ||
+        userInfo != null ? (
+          <Header />
+        ) : (
+          <></>
+        )} */}
+        {!(
+          currentPath === "/login" ||
+          currentPath === "/" ||
+          currentPath === "/forgotpassword" ||
+          currentPath === "/sendcode" ||
+          currentPath === "/newpassword"
+        ) ||
+        currentPath === "/header" ||
         userInfo != null ? (
           <Header />
         ) : (
