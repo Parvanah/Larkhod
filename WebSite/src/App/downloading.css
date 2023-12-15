@@ -133,6 +133,7 @@
   .d-book {
     color: rgba(16, 84, 162, 1);
     margin:1%;
+    cursor: pointer;
   }
     .full-Download .d-section .bottom_D .BookD_list .second-second-d .Download-ul .d-middle .inside_ul .Download-li #h6{
         text-align: right ;
