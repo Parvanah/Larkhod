@@ -31,10 +31,13 @@ const Header = ({ t }, props) => {
   const [openProfile, setOpenProfile] = useState(false);
   const [isOpen, setIsOpen] = useState("none");
   const [isClose, setIsClose] = useState("flex");
+  const [isOpenBookMenue, setIsOpenBookMenue] = useState(false);
+  //const [isCloseBookMenue, setIsCloseBookMenue] = useState("flex");
   const options = [
     { name: "دری", value: "dari" },
     { name: "پښتو", value: "pashto" },
   ];
+  const bookOptions = [t("header13"), t("header14")];
   const [selectedOption, setSelectedOption] = useState(
     t("sectionlang") === "pashto" ? options[1].name : options[0].name
   );
@@ -67,7 +70,7 @@ const Header = ({ t }, props) => {
   };
   const handleOptionClick = (option) => {
     setSelectedOption(option.name);
-    
+
     setIsOpen("none");
     setIsClose("flex");
     if (
@@ -86,7 +89,21 @@ const Header = ({ t }, props) => {
     }
     i18n.changeLanguage(option.value);
   };
-
+  const handleBookMenueToggle = () => {
+    if (isOpenBookMenue) {
+      setIsOpenBookMenue(false);
+    } else {
+      setIsOpenBookMenue(true);
+    }
+  };
+  const handleBookOptionClick = (option) => {
+    if (option === t("header13")) {
+      navigate("/book");
+    } else if (option === t("header14")) {
+      navigate("/readingBook");
+    }
+    setIsOpenBookMenue(false);
+  };
   console.log(currentLesson);
   console.log(currentpart);
   var nav;
@@ -108,6 +125,7 @@ const Header = ({ t }, props) => {
   const handleProfileOption = () => {
     setOpenProfile(false);
   };
+
   // useEffect(() => {
   //   if (window.location.pathname !== "/header") {
   //     openProfile(false);
@@ -131,10 +149,32 @@ const Header = ({ t }, props) => {
               </Link>
             </li>
             <hr className="vl_header" />
-            <li className="li_header">
-              <Link className="link_nav_header" to="/book">
-                {t("header5")}
-              </Link>
+            <li className="li_header_book">
+              <div className="selctedoption ">
+                <div onClick={handleBookMenueToggle}>
+                  {t("header5")}
+                  <img
+                    src={isOpenBookMenue ? arrowClose : arrowOpen}
+                    alt="arrowIcon"
+                  />
+                </div>
+                <div className="bookMenue">
+                  {isOpenBookMenue && (
+                    <ul className="dropdown-menu">
+                      {bookOptions.map((i) => (
+                        <li
+                          key={i}
+                          onClick={() => {
+                            handleBookOptionClick(i);
+                          }}
+                        >
+                          {i}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </div>
             </li>
             <hr className="vl_header" />
             <li className="li_header">
