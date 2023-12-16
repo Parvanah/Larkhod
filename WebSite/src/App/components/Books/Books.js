@@ -62,7 +62,7 @@ const Books = ({ t }, props) => {
       <div className="Books" id="Books">
         <div className="top">
           <div className="first-svgs">
-            <div className="arrowSvg" onClick={() => navigate("/header")}>
+            <div className="arrowSvg" onClick={() => navigate(-1)}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={36}
