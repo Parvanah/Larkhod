@@ -94,7 +94,9 @@ const Lessons = ({ t }, props) => {
     //   setIsLoading(false);
     // }
   };
-  const [title, setTitle] = useState(unitsPath ? "شروع فصل" : lessons[0].label);
+  const [title, setTitle] = useState(
+    unitsPath ? t("lessons6") : lessons[0].label
+  );
 
   const navigation = useNavigate();
   //   if (userInfo === null) {
@@ -131,19 +133,19 @@ const Lessons = ({ t }, props) => {
                   <div
                     className="lesson_item"
                     style={
-                      title === "شروع فصل"
+                      title === t("lessons6")
                         ? { background: "#FFF", color: "#3C98BD" }
                         : {}
                     }
                     onClick={() => {
-                      handleClick("شروع فصل", {
+                      handleClick(t("lessons6"), {
                         label: unit,
                         paths: unitsPath,
                       });
                     }}
                   >
                     <div> 00</div>
-                    <div className="titles_lesson">{"شروع فصل"}</div>
+                    <div className="titles_lesson">{t("lessons6")}</div>
                   </div>
                 ) : (
                   <div></div>
@@ -202,7 +204,7 @@ const Lessons = ({ t }, props) => {
                   }}
                 ></img>
               ) : (
-                <div className="ErrorOnLoading">Failed to load image</div>
+                <div className="ErrorOnLoading">{t("lessons7")}</div>
               )}
             </div>
           </div>
@@ -227,7 +229,7 @@ const Lessons = ({ t }, props) => {
                       }
                 }
               >
-                {IsLoading ? "Loading" : "next"}
+                {IsLoading ? "Loading" : t("lessons4")}
               </button>
               <button
                 onClick={handlePageBack}
@@ -244,7 +246,7 @@ const Lessons = ({ t }, props) => {
                       }
                 }
               >
-                {IsLoading ? "Loading" : "Back"}
+                {IsLoading ? "Loading" : t("lessons5")}
               </button>
             </div>
           </div>
@@ -271,19 +273,19 @@ const Lessons = ({ t }, props) => {
                   <div
                     className="mob-item"
                     style={
-                      title === "شروع فصل"
+                      title === t("lessons6")
                         ? { background: "#3C98BD", color: "#FFF" }
                         : {}
                     }
                     onClick={() => {
-                      handleClick("شروع فصل", {
+                      handleClick(t("lessons6"), {
                         label: unit,
                         paths: unitsPath,
                       });
                     }}
                   >
                     <div> 00</div>
-                    <div className="titles-mob">{"شروع فصل"}</div>
+                    <div className="titles-mob">{t("lessons6")}</div>
                   </div>
                 ) : (
                   <div></div>
@@ -349,7 +351,7 @@ const Lessons = ({ t }, props) => {
                 alt="pic"
               ></img>
             ) : (
-              <div className="ErrorOnLoading">Failed to load image</div>
+              <div className="ErrorOnLoading">{t("lessons7")}</div>
             )}
           </div>
         </div>
@@ -375,12 +377,12 @@ const Lessons = ({ t }, props) => {
                     }
               }
             >
-              {IsLoading ? "Loading" : "next"}
+              {IsLoading ? "Loading" : t("lessons4")}
             </button>
             <button
               onClick={handlePageBack}
               className="back-ls"
-              disabled={pageNum == 0}
+              disabled={pageNum == 0 || IsLoading}
               style={
                 pageNum == 0
                   ? {
@@ -392,7 +394,7 @@ const Lessons = ({ t }, props) => {
                     }
               }
             >
-              {IsLoading ? "Loading" : "back"}
+              {IsLoading ? "Loading" : t("lessons5")}
             </button>
           </div>
         </div>

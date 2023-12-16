@@ -157,12 +157,12 @@ const Header = ({ t }, props) => {
             <hr className="vl_header" />
           </ul>
           <div className="lng">
-            <div className="selctedoption">
+            <div className="selctedoption" onClick={handleToggle}>
               <div>{selectedOption || t("header11")}</div>
               <div onClick={handleToggle} style={{ display: isClose }}>
                 <img src={arrowOpen} />
               </div>
-              <div style={{ display: isOpen }} onClick={handleToggle}>
+              <div style={{ display: isOpen }}>
                 <img src={arrowClose} />
               </div>
             </div>
