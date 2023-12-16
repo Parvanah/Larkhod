@@ -39,6 +39,9 @@
     justify-content: center;
     align-items: center;
 }
+#ul-section li{
+    list-style: none;
+}
 #ul-section img {
     justify-content: center;
     display: inline-block;
