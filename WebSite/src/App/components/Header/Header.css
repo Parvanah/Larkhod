@@ -135,7 +135,7 @@
 }
 
 
-.lng{
+.lng , .li_header_book{
     width: 8%;
     display: flex;
     flex-direction: column;
@@ -145,25 +145,33 @@
     /* padding: 4px; */
     border-radius: 2px;
     position: relative;
+    
 
 }
-.lng .selctedoption{
+ .li_header_book{
+  border: none;
+  cursor: pointer;
+  width: 16.6%;
+}
+.lng .selctedoption , .li_header_book .selctedoptio{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
     
+    
 }
-.lng .selctedoption img{
+.lng .selctedoption img ,.li_header_book .selctedoption img{
     width: 10px;
     height: 6px;
     cursor: pointer;
     margin-left: 5px;
     
     
+    
 }
-.lng .lng-menu .dropdown-menu {
+.lng .lng-menu .dropdown-menu , .li_header_book .bookMenue .dropdown-menu{
   position: absolute;
   top: 100%;
   left: 0;
@@ -176,15 +184,17 @@
   border: 1px solid #ccc;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 2000;
+  transition: all 2s linear 1s;
   
 }
-.lng .lng-menu .dropdown-menu li {
+.lng .lng-menu .dropdown-menu li ,  .li_header_book .bookMenue .dropdown-menu li{
   padding: 10px;
   cursor: pointer;
   color: rgba(60, 152, 189, 1);
+  text-align: right;
 }
 
-.lng .lng-menu .dropdown-menu li:hover {
+.lng .lng-menu .dropdown-menu li:hover ,.li_header_book .bookMenue .dropdown-menu li:hover{
   background-color: #f0f0f0;
 }
 .dropDownProfile::before {

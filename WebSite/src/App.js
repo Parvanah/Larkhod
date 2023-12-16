@@ -24,6 +24,7 @@ import Suggestion from "./App/Suggestion";
 import ChangeProfile from "./App/screens/ChangeProfile/ChangeProfile";
 import Home from "./App/components/Home/Home";
 import "./App.css";
+import ReadingBook from "./readingBook";
 function App() {
   const { userInfo, currentPath, setCurrentPath } = useContext(AuthContext);
   console.log(userInfo);
@@ -74,6 +75,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/suggestion" element={<Suggestion />} />
           <Route path="/changeprofile" element={<ChangeProfile />} />
+          <Route path="/readingBook" element={<ReadingBook />} />
           {/* <Route
             exact
             path="/"
