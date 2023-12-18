@@ -8,15 +8,26 @@ import "./SingUp.css";
 // import { FaGoogle } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import google from "../../assets/Group 10.png";
-
 import img1 from "../../assets/kp.png";
-import img3 from "../../assets/logo_3.png";
+import img3 from "../../assets/logo_1.png";
 import React from "react";
 import { Link, useNavigate, useNavigation } from "react-router-dom";
 import LogIn from "../Login/LogIn";
+import { number } from "yup";
 <link rel="stylesheet" href="SingUp.css" />;
-
+// import React, { useState } from 'react';
+  
 const SingUp = ({ t }, props) => {
+  // const [placeholder, setPlaceholder] = useState('سن');
+  // const updatePlaceholder = () => {
+  //   setPlaceholder('');
+  // };
+  // const dateInput = document.getElementById('dateInput');
+  // dateInput.type = 'Age';
+  const [type, setType] = useState('');
+  const updateType = () => {
+    setType("date");
+  };
   const login = useGoogleLogin({
     onSuccess: async (respose) => {
       try {
@@ -226,53 +237,6 @@ const SingUp = ({ t }, props) => {
                       <input
                         id="input_singup"
                         type="text"
-                        name="lastname"
-                        placeholder={t("singup18")}
-                        value={formValues.lastname}
-                        onChange={(e) => handleChange(e)}
-                      />
-                      <p className="error_singup">{formErrors.lastname}</p>
-                    </div>
-                    <div className="field">
-                      <input
-                        id="input_singup"
-                        type="date"
-                        name="age"
-                        placeholder={t("singup19")}
-                        value={formValues.age}
-                        onChange={(e) => handleChange(e)}
-                      />
-                      <p className="error_singup">{formErrors.age}</p>
-                    </div>
-
-                    <div className="field">
-                      <input
-                        id="input_singup"
-                        type="class"
-                        name="senf"
-                        placeholder={t("singup20")}
-                        value={formValues.senf}
-                        onChange={(e) => handleChange(e)}
-                      />
-                      <p className="error_singup">{formErrors.senf}</p>
-                    </div>
-                  </div>
-                  <div className="second_input_section_singup">
-                    <div className="field">
-                      <input
-                        id="inputt_singup"
-                        type=""
-                        name="number"
-                        placeholder={t("singup21")}
-                        value={formValues.number}
-                        onChange={(e) => handleChange(e)}
-                      />
-                      <p className="error_singup">{formErrors.number}</p>
-                    </div>
-                    <div className="field">
-                      <input
-                        id="inputt_singup"
-                        type="text"
                         name="email"
                         placeholder={t("singup4")}
                         value={formValues.email}
@@ -280,10 +244,20 @@ const SingUp = ({ t }, props) => {
                       />
                       <p className="error_singup">{formErrors.email}</p>
                     </div>
-
                     <div className="field">
                       <input
-                        id="inputt_singup"
+                        id="input_singup"
+                        type="text"
+                        name="lastname"
+                        placeholder={t("singup18")}
+                        value={formValues.lastname}
+                        onChange={(e) => handleChange(e)}
+                      />
+                      <p className="error_singup">{formErrors.lastname}</p>
+                    </div>
+                      <div className="field">
+                      <input
+                        id="input_singup"
                         type="password"
                         name="password"
                         placeholder={t("singup5")}
@@ -292,7 +266,20 @@ const SingUp = ({ t }, props) => {
                       />
                       <p className="error_singup">{formErrors.password}</p>
                     </div>
-
+                  </div>
+                  <div className="second_input_section_singup">
+                    <div className="field">
+                      <input
+                       onFocus={updateType}
+                        id="inputt_singup"                                        
+                        type={type}
+                        name="age"
+                        placeholder={t("singup19")}
+                      value={formValues.age}
+                      onChange={(e) => handleChange(e)} 
+                      />
+                      <p className="error_singup">{formErrors.age}</p>
+                    </div>
                     <div className="field">
                       <input
                         id="inputt_singup"
@@ -305,6 +292,19 @@ const SingUp = ({ t }, props) => {
                       <p className="error_singup">
                         {formErrors.confirmpassword}
                       </p>
+                    </div>
+
+                    <div className="fieldd">
+                      <input
+                      className="input_end"
+                        id="inputtt_singup"
+                        type=""
+                        name="number"
+                        placeholder={t("singup21")}
+                        value={formValues.number}
+                        onChange={(e) => handleChange(e)}
+                      />
+                      <p className="error_singup">{formErrors.number}</p> 
                     </div>
                   </div>
                   <button className="acount_button_singuo">
