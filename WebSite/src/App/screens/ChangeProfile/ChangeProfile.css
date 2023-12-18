@@ -20,7 +20,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 85%;
+    position: relative;
 }
 .Change_Profile .Top_ChangeProfile{
     display: flex;
@@ -89,13 +90,16 @@
 }
 .Change_Profile .Top_ChangeProfile .ProfHandler .insideTelegramIcon .ChangeProfBtn{
     height: 20%;
-    background-color: white;
+    /* background-color: white; */
     border: none;
     outline: none;
     color: gray;
     font-weight: bold;
     cursor: pointer;
     font-size: 15px;
+    width: 100%;
+    text-align: center;
+    /* background-color: red; */
 
 }
 .Change_Profile .Top_ChangeProfile .ProfHandler .insideTelegramIcon .ChangeProfBtn input[type="file"]{
@@ -106,7 +110,7 @@
     padding: 5px;
 }
 .Change_Profile .Bottom_ChangeProfile{
-    height: 65%;
+    height: 100%;
     background-color: #3C98BD;
     background-image: linear-gradient(to right,#3C98BD, #0F53A1);
     border-top-right-radius: 110px;
@@ -248,7 +252,7 @@ width: 110%;
     color: gray;
     font-weight: bold;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 11px;
 
 }
 .Change_Profile .Top_ChangeProfile .ProfHandler button {
@@ -349,4 +353,8 @@ width: 110%;
         .Change_Profile .Top_ChangeProfile .ProfHandler .insideTelegramIcon{
             top: 11%;
         }
+
+}
+@media screen and (max-height: 500px){
+
 }

@@ -19,6 +19,8 @@ import { ImCross } from "react-icons/im";
 import i18n from "../../../i18n";
 import Home from "../Home/Home";
 import logoSideBar from "../../assets/logo_5.png";
+import MobileArrowClose from "../../assets/Path 2777.png";
+import MobileArrowOpen from "../../assets/Path 2778.png";
 
 // import butimg from "../../assets/Path_7";
 // import buttom_img from "../../assets/Path_7.png";
@@ -131,6 +133,7 @@ const Header = ({ t }, props) => {
   //     openProfile(false);
   //   }
   // });
+
   return (
     <div className="full_header">
       <nav className="header">
@@ -329,29 +332,68 @@ const Header = ({ t }, props) => {
           </div>
           <div className="side">
             <li className="li_header">
-              <Link className="link_nav_header" to="/section">
+              <Link
+                className="link_nav_header"
+                to="/section"
+                onClick={handleSideBar}
+              >
                 {t("header3")}
               </Link>
             </li>
 
             <li className="li_header">
-              <Link className="link_nav_header" to="/grad">
+              <Link
+                className="link_nav_header"
+                to="/grad"
+                onClick={handleSideBar}
+              >
                 {t("header4")}
               </Link>
             </li>
             <hr />
-            <li className="li_header">
-              <Link className="link_nav_header" to="/book">
-                {t("header5")}
-              </Link>
+            <li className="li_header_book">
+              <div className="selctedoption ">
+                <div onClick={handleBookMenueToggle}>
+                  {t("header5")}
+                  <img
+                    src={isOpenBookMenue ? MobileArrowOpen : MobileArrowClose}
+                    alt="arrowIcon"
+                  />
+                </div>
+                <div className="bookMenue">
+                  {isOpenBookMenue && (
+                    <ul className="dropdown-menu">
+                      {bookOptions.map((i) => (
+                        <li
+                          key={i}
+                          onClick={() => {
+                            handleBookOptionClick(i);
+                            handleSideBar();
+                          }}
+                        >
+                          {i}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </div>
             </li>
             <li className="li_header">
-              <Link className="link_nav_header" to="/about">
+              <Link
+                className="link_nav_header"
+                to="/about"
+                onClick={handleSideBar}
+              >
                 {t("header7")}
               </Link>
             </li>
             <li className="li_header">
-              <Link className="link_nav_header" to="/Suggestion">
+              <Link
+                className="link_nav_header"
+                to="/Suggestion"
+                onClick={handleSideBar}
+              >
                 {t("header8")}
               </Link>
             </li>
