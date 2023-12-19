@@ -4,18 +4,20 @@ import { useNavigate } from "react-router-dom";
 import "./Books.css";
 import * as React from "react";
 import bookicon from "../../assets/Group_360.png";
-import arrowB from "../../assets/arrowB.png";
+import arrowBb from "../../assets/arrowBb.png";
 import imageb1 from "../../assets/B1.png";
 import imageb2 from "../../assets/B2.png";
 import imageB3 from "../../assets/B3.png";
 import imageb4 from "../../assets/B1.png";
 import imagebm from "../../assets/mobileb.png";
 import imgbm2 from "../../assets/mobileb2.png";
-import MBarrow from "../../assets/MBarrow.png";
+// import MBarrow from "../../assets/MBarrow.png";
+import arrowB from "../../assets/arrowB.png";
 import mobileb3 from "../../assets/mobileb3.png";
 import imgbm4 from "../../assets/imgbm2.png";
 import scrolrm from "../../assets/scrolrm.png";
 import scrollm from "../../assets/scrollm.png";
+// import back from "../../assets/SELESHHHH.png";
 import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
 const Books = ({ t }, props) => {
@@ -87,6 +89,7 @@ const Books = ({ t }, props) => {
                   />
                 </g>
               </svg>
+              
             </div>
             {/* <div className="left-svg"> */}
             <div className="laptop-svg">
@@ -208,7 +211,7 @@ const Books = ({ t }, props) => {
       <div className="MBooks">
         <div className="TopB">
           <div className="arrowSvg" onClick={() => navigate(-1)}>
-            <svg
+            {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               width={36}
               height={22}
@@ -231,12 +234,14 @@ const Books = ({ t }, props) => {
                   data-name="Path 433"
                 />
               </g>
-            </svg>
+            </svg> */}
+            <img src={arrowBb} alt="photo" className="arroeBb" />
+               <div className=" Mbarrow" onClick={() => navigate(-1)}>
           </div>
-          <div className=" Mbarrow" onClick={() => navigate(-1)}>
-            <img src={MBarrow} alt="photo" />
           </div>
-          <div className="imgbm2">
+       
+      <div className="second-sectino-book">
+            <div className="imgbm12">
             <img src={imgbm2} alt="photo" />
           </div>
 
@@ -247,9 +252,10 @@ const Books = ({ t }, props) => {
             <h1>{t("books1")}</h1>
             <p> {t("books2")}</p>
           </div>
-          <div className="imagebm">
+          <div className="imgbm2">
             <img src={imagebm} alt="photo" />
           </div>
+      </div>
           <div className="laptop-right">
             <img src={imageb2} className="imageb2" />
           </div>

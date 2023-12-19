@@ -162,13 +162,23 @@
         justify-content: space-between;
         align-items: center;
         flex: 1;
-        /* background-color: red; */
-        min-height:50px;
+        height: 100vh;
+       
     }
-
-    .full_book .MBooks .TopB {
+    .second-sectino-book {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
+        width:100%;
+        height:100%;
+        /* background-color: black; */
+    }
+    /* .image1 {
+        background-color: red;
+    } */
+    .full_book .MBooks .TopB {
+        display: flex;
+        flex-direction: column;
         justify-content: space-between;
         align-items: center;
         width: 90%;
@@ -178,10 +188,11 @@
     .topp h1 {
         font-family: "Bahij helvetica";
         color: #3C98BD;
+        font-size: 4vw;
     }
 
     .topp p {
-        font-size: 20px;
+        font-size:4vw;
         font-family: "Bahij helvetica";
         color: #3C98BD;
     }
@@ -192,14 +203,23 @@
         align-items: center;
         color: white;
         font-family: "Bahij helvetica";
+        font-size:2vw;
     }
 
     .full_book .MBooks .TopB .imgbm2 {
-        display: none;
+        display: flex;
+        width:10%;
+       align-items: flex-start;
+    }
+    .imgbm12 {
+        height:30%;
+        align-items: end;
+        margin-left: 10%;
+        display:flex;
     }
 
     .full_book .MBooks .TopB .laptop-right {
-        display: flex;
+        display: none;
         /* background-color: #707070; */
         /* background-color: red; */
     }
@@ -224,6 +244,7 @@
         align-items: center;
         text-align: center;
         height:100%; 
+        width:100%;
     }
     .full_book .MBooks .middlebook {
         display: flex;
@@ -237,8 +258,9 @@
 .titlesm {
     font-family: "Bahij helvetica";
     text-align:center;
-  font-size:12px;
-  width: 100%;
+    align-items: center;
+  font-size:2vw;
+  width:100%;
 }
     .full_book .MBooks .middlebook .arrow {
         flex: 1;
@@ -277,9 +299,9 @@
         flex-direction: column;
         align-items: end;
         justify-content:center;
-        padding:20%;
+        padding:10%;
         height:150px;
-        border-radius: 10px;
+        border-radius: 15px;
         border-radius:15px;
     }
 
@@ -319,19 +341,19 @@
     }
 
     .full_book .MBooks .ButtomB .laptop-right {
-        display: flex;
+        display: none;
     }
 
     .full_book .MBooks .ButtomB .mobilebb3 {
-        display: none;
-    }
-
-    .full_book .MBooks .ButtomB .last-svg {
         display: flex;
     }
 
-    .full_book .MBooks .ButtomB .imagemb {
+    .full_book .MBooks .ButtomB .last-svg {
         display: none;
+    }
+
+    .full_book .MBooks .ButtomB .imagemb {
+        display: flex;
     }
     .full_book #Books .middlebook {
         display: flex;
@@ -349,11 +371,23 @@
         margin-left:4%;
         cursor: pointer;
     }
+    /* .second-sectino-book {
+        background-color: black;
+        display: flex;
+        flex-direction: ;
+        width:100%;
+        height: 20%;
+    } */
 }
 
 @media screen and (max-width: 736px) {
+    .second-sectino-book {
+        display: flex;
+        flex-direction: row;
+    }
     .full_book .MBooks .TopB .imgbm2 {
         display: flex;
+        flex-direction: row;
     }
 
     .full_book .MBooks .TopB .laptop-svg {
@@ -369,11 +403,21 @@
     }
 
     .full_book .MBooks .TopB .arrowSvg {
-        display: none;
+        display: flex;
+        width:90%;
+        align-items: end;
+        height:30%;
+        /* margin-top:5%; */
+        /* margin-left:8%; */
+    }
+    .full_book .MBooks .TopB .arrowSvg img {
+        width:6vw;
+        cursor: pointer;
     }
 
-    .full_book .MBooks .TopB .Mbarrow {
+ .Mbarrow {
         display: flex;
+        background-color:red;
     }
 
     .full_book .MBooks .ButtomB .laptop-right {
@@ -442,7 +486,7 @@
 
 @media screen and (max-width: 367px) {
     .full_book .MBooks .TopB .topp h1 {
-        font-size: 18px;
+        font-size:14px;
 
     }
 
@@ -475,6 +519,7 @@
 @media screen and (max-height: 342px) and (max-width: 768px) {
     .full_book {
         height: 342px;
+       
     }
    
 }

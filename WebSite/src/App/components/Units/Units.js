@@ -23,11 +23,11 @@ const Units = ({ t }) => {
   const navigate = useNavigate();
   const slidLeft = () => {
     const slider = document.getElementById("m-section");
-    slider.scrollLeft = slider.scrollLeft - 200;
+    slider.scrollLeft = slider.scrollLeft - 160;
   };
   const slidRight = () => {
     const slider = document.getElementById("m-section");
-    slider.scrollLeft = slider.scrollLeft + 200;
+    slider.scrollLeft = slider.scrollLeft + 160;
   };
   // const navigation = useNavigate();
   //   if (userInfo === null) {

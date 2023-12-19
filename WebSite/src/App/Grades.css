@@ -69,7 +69,7 @@
 	font-family: "Bahij Helvetica";
 	font-style: normal;
 	font-weight: bold;
-	font-size: 25px;
+	font-size:25px;
 	margin-top: -5%;
 	color: rgba(255, 255, 255, 1);
 	/* letter-spacing: -0.4px; */
@@ -83,6 +83,7 @@
 	align-items: center;
 	width: 100%;
 }
+
 .full-all-grade-n .all-grade-N .second-section-grade .grades-section #class-container-n .all_grade_wrapper_h{
 width: 100%;
 	display: flex;
@@ -172,8 +173,8 @@ cursor: pointer;
 	}
 	.full-all-grade-n .all-grade-N .second-section-grade .grades-section {
 		height: 580px;
-	
 	}
+	
 
 }
 @media screen and (max-height: 614px) and (max-width: 864px){
@@ -185,15 +186,15 @@ cursor: pointer;
 
 		
 	}
+	.pathimg-G-wrapper img {
+	display: none;
+	/* background-color: red; */
+	}
 	.full-all-grade-n .all-grade-N .second-section-grade .grades-section {
-		height:80%;
+		height:90%;
 		/* background-color: #0F53A1; */
 	}
-.pathimg-G img {
-	width: 40px;
-	margin-left: 230px; 
-	display: none;
-} 
+ 
 .full-all-grade-n .all-grade-N .second-section-grade .icon-grade img {	
 	width:60%;	
 }
@@ -244,7 +245,9 @@ cursor: pointer;
 		height: 100%;
 		flex: 1;
 		/* padding-top: 180px; */
-	}
+
+	} 
+
 }
 
 @media screen and (max-width: 450px){

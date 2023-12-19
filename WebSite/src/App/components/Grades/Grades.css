@@ -139,7 +139,8 @@ text-align: end;
 	
 @media screen and (max-width:769px){
 	.all-grade{
-		background-color: rgba(60,152,189,1);
+		/* background-color: rgba(60,152,189,1); */
+		/* background-color: black; */
 		display: flex;
 		flex-direction: column;
 		width: 100%;
@@ -272,7 +273,8 @@ text-align: end;
 }
 @media screen and (max-width:414px){
 	.all-grade{
-		background-color: rgba(60,152,189,1);
+		/* background-color: rgba(60,152,189,1); */
+		/* background-color: red; */
 		display: flex;
 		flex-direction: column;
 		width: 100%;

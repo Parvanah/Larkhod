@@ -270,7 +270,7 @@
     .full_unit {
         display: flex;
         flex-direction: column;
-        background-color: rgba(60, 155, 200, 1);
+        /* background-color: rgba(60, 155, 200, 1); */
         height:100vh;
         width: 100%;
     }
@@ -306,7 +306,7 @@
         flex-direction: column;
         justify-content: end;
         align-items: start;
-        width: 90%;
+        width:90%;
         cursor:pointer;
        
  .flesh-image-grade-U {
@@ -352,7 +352,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        width: 90%;
+        width:90%;
         cursor: pointer;
         behavior: "smooth";
         /* margin-left: 30px; */
