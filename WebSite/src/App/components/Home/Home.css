@@ -58,8 +58,8 @@ width: 100%;
     /* margin-top: 5vh;
     width: 20vw;
     margin-left: 5w; */
-    width: 50%;
-    height: 60%;
+    width: 40%;
+    height: 50%;
 
   }
   .images_paragraph_home .IconAndText{
@@ -132,5 +132,9 @@ width: 100%;
 @media only screen and (min-height: 650px){
   .home_svg {
     top: 90%;
+  }
+  .images_paragraph_home .IconAndText .img_one_home{
+    width: 50%;
+    height: 60%;
   }
 }
