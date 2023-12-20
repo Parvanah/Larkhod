@@ -38,8 +38,7 @@ const Units = ({ t }) => {
   return (
     <div className="full_unit">
       <div className="units">
-        <div className="t-section">
-          <div className="svgArrow">
+      <div className="svgArrow">
             <img
               className="flesh-image-grade-U"
               src={imageU}
@@ -47,7 +46,7 @@ const Units = ({ t }) => {
             />
             {/* <img src={unitm} className="unitm" onClick={() => navigate(-1)} /> */}
           </div>
-
+        <div className="t-section">
           <div id="laptop-top">
             <h1 id="p1">{t("units1")}</h1>
             <h2 className="h2">{t("units2")}</h2>
