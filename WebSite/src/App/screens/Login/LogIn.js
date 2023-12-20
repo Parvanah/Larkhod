@@ -89,6 +89,7 @@ const LogIn = ({ t }, props) => {
   };
   if (userInfo === null) {
     return (
+          //  header 
       <div className="full_login">
         <div className="Log_In_form">
           <form onSubmit={handleSubmit}>
@@ -172,7 +173,7 @@ const LogIn = ({ t }, props) => {
       </div>
     );
   } else if (userInfo !== null) {
-    return navigate("/header");
+    return navigate("/home");
   } else if (isLoading) {
     return <h1>Loading.....</h1>;
   }

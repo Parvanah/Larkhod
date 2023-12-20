@@ -9,7 +9,7 @@ const ReadingBook = ({ t }) => {
     <div className="readingBookk">
     <div className="topOfbook">
       <div className="backslashR">
-      <Link to="/header">
+      <Link to="/home">
       <img src={backr} className="backslashR"/>
           </Link>
        
