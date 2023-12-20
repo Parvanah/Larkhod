@@ -397,6 +397,13 @@ const Header = ({ t }, props) => {
                 {t("header8")}
               </Link>
             </li>
+            <li className="li_header"><Link
+                className="link_nav_header"
+                to="/header"
+                onClick={handleSideBar}
+              >
+                {t("header12")}
+              </Link></li>
             <li className="li_header">
               <img src={logoSideBar} />
             </li>
