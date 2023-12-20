@@ -30,7 +30,7 @@ const About = ({ t }) => {
       <Link to="/header"><img className="selesh_aboutt"  src={selesh}/></Link>
         </div>
       <div className="section_one_about"> 
-      <Link to="/header"><img className="selesh_about"  src={selesh}/></Link>
+      <Link to="/home"><img className="selesh_about"  src={selesh}/></Link>
         <img className="image_phone_three_about" src={img1}/> 
       <img className="dot_about" src={dot}/>
       </div>

@@ -66,7 +66,7 @@ const Grads = ({ t }) => {
     <div className="full-all-grade-n">
       <div className="all-grade-N">
         <div className="flesh-image-grade-b">
-          <Link to="/Header">
+          <Link to="/home">
             <img src={image} />
           </Link>
         </div>

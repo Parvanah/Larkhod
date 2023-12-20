@@ -77,13 +77,13 @@ const Suggestion = ( { t }) => {
       <div className="all-section-suggestion">
         <div className="section-one-suggestion">
           <div className="sec-one-one-suggestion">
-            <Link to="/header"><img id="vector-suggestion" src={ig}/></Link> 
+            <Link to="/home"><img id="vector-suggestion" src={ig}/></Link> 
           </div>
           <div className="sec-one-two-suggestion">
             <h1 className="title-suggestion">{t("suggestion1")}</h1>
             <p className="para-suggestion">{t("suggestion2")}</p>
           </div>
-          {Object.keys(formErrors).length === 0 && isSubmit ? (<div>{navigate('/header')}</div>) : (<pre></pre>)}
+          {Object.keys(formErrors).length === 0 && isSubmit ? (<div>{navigate('/home')}</div>) : (<pre></pre>)}
           <div className="sec-one-three-suggestion">
             <form className='form-suggestion' onSubmit={handleSubmit}>
                <div className="section-first-input-suggestion">

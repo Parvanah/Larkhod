@@ -95,6 +95,7 @@
 }
 
 .full_login .Log_In_form form .acount_button_login {
+    cursor: pointer;
     width: 25vw;
     height: 3vw;
     border-radius: 50px;
@@ -141,7 +142,7 @@
 .full_login .Log_In_form .GoogleBtn .google_button_singup {
     font-size: 1vw;
     font-weight: bold;
-    
+    cursor: pointer;
     padding-right: 1.4vw;
     font-family: "Bahij Helvetica";
     color: rgb(194, 191, 191);
@@ -266,6 +267,7 @@
     }
 
     .full_login .mobilee form .acount_button_login {
+        cursor: pointer;
         height: 6vw;
         width: 65vw;    
         border-radius: 50px;
@@ -317,7 +319,7 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-  
+        cursor: pointer;
         height: 6vw;
         width: 55vw;
        

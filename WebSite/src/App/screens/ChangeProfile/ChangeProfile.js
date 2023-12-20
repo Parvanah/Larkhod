@@ -82,7 +82,7 @@ const ChangeProfile = ({ t }) => {
   return (
     <div className="Change_Profile">
       <div className="Top_ChangeProfile">
-        <Link to="/header">
+        <Link to="/home">
           <img src={ig} />
         </Link>
         <div className="ProfHandler">

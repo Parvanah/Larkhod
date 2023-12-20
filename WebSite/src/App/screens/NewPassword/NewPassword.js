@@ -57,12 +57,13 @@ const  NewPassword = ({ t }) => {
 	};
 	if (userInfo === null) {
   return (
+	    //  header 
 	<div className="all-section-new-password">
 		 <div className="section-one-new-password">
 			<div className="sec-one-one-new-password">
               <Link to='/sendcode' ><img className='img_new_password' src={img1}/></Link>
               {Object.keys(formErrors).length === 0 && isSubmit ? (
-               <div >{navigate('/header')}</div>
+               <div >{navigate('/home')}</div>
                ) : (
                <pre></pre>
                )}
@@ -80,7 +81,7 @@ const  NewPassword = ({ t }) => {
 			  <div className="selesh-new-password">
 			  <Link to='/sendcode' ><img className="imgg_new_password" src={img2}/></Link>
 			   {Object.keys(formErrors).length === 0 && isSubmit ? (
-                <div >{navigate('/header')}</div>
+                <div >{navigate('/home')}</div>
                 ) : (
                 <pre></pre>
                 )}
@@ -125,74 +126,11 @@ const  NewPassword = ({ t }) => {
 			</div>
 		 </div>
 	</div>
-//     <div>
-// <div id="new_password" >
-// 	<svg id="background_svg_new_password">
-// 		<linearGradient id="background_svg_new_password_1" spreadMethod="pad" x1="0.22" x2="0.105" y1="-0.035" y2="1.793">
-// 			<stop offset="0" stop-color="#3c98bd" stop-opacity="1"></stop>
-// 			<stop offset="1" stop-color="#0f53a1" stop-opacity="1"></stop>
-// 		</linearGradient>
-// 		<rect id="background_svg_new_password_1" rx="200" ry="200" x="0" y="0" width="630" height="930">
-// 		</rect>
-// 	</svg>
-
-// 	<svg class="mobile_svg_new_password">
-// 			<linearGradient id="mobile_svg_new_password" spreadMethod="pad" x1="0.22" x2="0.905" y1="-0.035" y2="1.793">
-// 				<stop offset="0" stop-color="#3c98bd" stop-opacity="1"></stop>
-// 				<stop offset="1" stop-color="#0f53a1" stop-opacity="1"></stop>
-// 			</linearGradient>
-// 			<rect id="mobile_svg_new_password" rx="70" ry="70" x="0" y="0" width="360" height="358">
-// 			</rect>
-// 		</svg>
-// 	<div id="para_first_new_password">
-	// {t("newpassword1")}
-	// <br/>
-	// {t("newpassword6")}
-// 	</div>
-// 	<div id="para_second_new_password">
-// 	{t("newpassword2")}
-// 	</div>
-// 	<div id="logoo_new_password">
-// 	<img id="logo_new_password" src={logo}/>
-// 	<img id='imggg_new_password' src={img3}/>
-// 	</div>
-// 	<Link to='/sendcode' ><img id='imgg_new_password' src={img2}/></Link>
-//   <Link to='/sendcode' ><img id='img_new_password' src={img1}/></Link>
-// {Object.keys(formErrors).length === 0 && isSubmit ? (
-//   <div >{navigate('/header')}</div>
-// ) : (
-//   <pre></pre>
-// )}
-// <div className="form_new_password">
-// <form onSubmit={handleSubmit}>
-// 	<input
-//             id="input_nextt_new_password"
-//               type="password"
-//               name="password"
-//               placeholder={t("newpassword3")}
-//               value={formValues.password}
-// 			  onChange={(e) => handleChange(e)}
-//             />
-//             <p id="error_new_password" className="error_new_password">{formErrors.password}</p>
-// 			<input
-//             id="input_nextt_new_password"
-//               type="password"
-//               name="confirmpassword"
-//               placeholder={t("newpassword4")}
-//               value={formValues.confirmpassword}
-//               onChange={(e) => handleChange(e)}
-//             />
-//              <p  className="errorr_new_password">{formErrors.confirmpassword}</p>
-//    <button id="button_next_new_password">{t("newpassword5")}</button>
-// </form>
-// </div>	
-// </div>
-//     </div>
   )
 } else if (isLoading) {
 	return <h1>Loading...</h1>;
   } else {
-	return navigate("/header");
+	return navigate("/home");
   }
 }
 export default  withNamespaces()(NewPassword) ;
