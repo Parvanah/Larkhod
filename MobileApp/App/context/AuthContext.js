@@ -3,7 +3,7 @@ import axios from "axios";
 import React, { createContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 export const AuthContext = createContext();
-axios.defaults.baseURL = "http://192.168.43.81:8000/api/v1";
+axios.defaults.baseURL = "http://172.20.10.6:8000/api/v1";
 axios.defaults.timeout = 3000;
 
 export const AuthProvider = ({ children }) => {

@@ -59,11 +59,11 @@ const StackNaigator = () => {
           <Stack.Screen name="NewPassword" component={NewPassword} />
           <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
           <Stack.Screen name="EnterCode" component={EnterCode} />
-          {/* <Stack.Screen name="Information" component={Information} /> */}
-          <Stack.Screen
+          { <Stack.Screen name="Information" component={Information} /> }
+          { <Stack.Screen
             name="SignUpVerification"
             component={SignUpVerification}
-          />
+          /> }
         </Stack.Group>
       )}
     </Stack.Navigator>

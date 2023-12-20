@@ -126,7 +126,7 @@ const ChangeInfo = (props) => {
             lastName: "",
             grade: "",
             age: "",
-            phonNumbe: "",
+            phoneNumber: "",
           }}
           onSubmit={() => onSubmit()}
         >
@@ -196,16 +196,16 @@ const ChangeInfo = (props) => {
               )}
               <TextInput
                 placeholder={t("ChangeInfo.17")}
-                name="phonNumber"
-                onChangeText={handleChange("phonNumber")}
-                onBlur={handleBlur("phonNumber")}
+                name="phoneNumber"
+                onChangeText={handleChange("phoneNumber")}
+                onBlur={handleBlur("phoneNumber")}
                 keyboardType="decimal-pad"
-                value={values.phonNumber}
+                value={values.phoneNumber}
                 style={styles.input}
               />
-              {errors.phonNumber && touched.phonNumber && (
+              {errors.phoneNumber && touched.phoneNumber && (
                 <CustomText style={styles.errorText}>
-                  {errors.phonNumber}
+                  {errors.phoneNumber}
                 </CustomText>
               )}
               <TouchableOpacity style={styles.submitBtn} onPress={handleSubmit}>
