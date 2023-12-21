@@ -82,7 +82,7 @@ function App() {
         ) ||
         currentPath === "/home" ||
         userInfo != null ? (
-          <Header />
+          <Header/>
         ) : (
           <></>
         )}

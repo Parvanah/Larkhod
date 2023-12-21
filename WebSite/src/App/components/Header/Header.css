@@ -387,8 +387,8 @@
   }
 
 }
-/* @media only screen and (max-width: 461px){
-  .full_header .mobile .side_bar{
-    width: 50vw;
+@media only screen and (max-height: 520px){
+  .full_header{
+    height: 70px;
   }
-} */
+}

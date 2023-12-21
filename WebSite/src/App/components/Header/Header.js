@@ -21,6 +21,7 @@ import Home from "../Home/Home";
 import logoSideBar from "../../assets/logo_5.png";
 import MobileArrowClose from "../../assets/Path 2777.png";
 import MobileArrowOpen from "../../assets/Path 2778.png";
+import lessonList from "../../assets/Group-271.png";
 
 // import butimg from "../../assets/Path_7";
 // import buttom_img from "../../assets/Path_7.png";
@@ -256,6 +257,7 @@ const Header = ({ t }, props) => {
           <div className="leftTop">
             <img src={topimag} />
             <h1>لارښود - Larkhod</h1>
+
           </div>
           <div className="lng">
             <div className="selctedoption">
@@ -319,6 +321,7 @@ const Header = ({ t }, props) => {
           </div>
           <div className="menu" onClick={handleSideBar}>
             <FiMenu className="menuIcon" />
+            
           </div>
         </div>
         <div
