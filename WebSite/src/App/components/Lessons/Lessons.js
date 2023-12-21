@@ -231,7 +231,7 @@ const Lessons = ({ t }, props) => {
                       }
                 }
               >
-                {IsLoading ? <TailSpin width={"20px"} color="black" height={"20px"}/> : t("lessons4")}
+                {IsLoading ? <TailSpin width={"30px"} color=" #474646" height={"30px"}/> : t("lessons4")}
               </button>
               <button
                 onClick={handlePageBack}
