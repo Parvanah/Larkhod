@@ -80,7 +80,7 @@ function App() {
           currentPath === "/sendcode" ||
           currentPath === "/newpassword"
         ) ||
-        currentPath === "/header" ||
+        currentPath === "/home" ||
         userInfo != null ? (
           <Header />
         ) : (

@@ -95,7 +95,7 @@ const SingUp = ({ t }, props) => {
     );
     setIsSubmit(true);
     if (Object.keys(formErrors).length === 0 && isSubmit) {
-      navigate("/header");
+      navigate("/home");
     }
   };
 

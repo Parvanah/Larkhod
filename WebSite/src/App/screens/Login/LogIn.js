@@ -52,8 +52,8 @@ const LogIn = ({ t }, props) => {
     login(formValues.email, formValues.password);
     setIsSubmit(true);
     if (Object.keys(formErrors).length === 0 && isSubmit) {
-      navigate("/header");
-      window.location.pathname = "/header";
+      navigate("/home");
+      window.location.pathname = "/home";
     }
     // {
     //   Object.keys(formErrors).length === 0 && isSubmit ? (
