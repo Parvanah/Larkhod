@@ -196,6 +196,7 @@ const Lessons = ({ t }, props) => {
                     `${subject_path + lesson_path.paths[pageNum]}?t=` +
                     timeStamp
                   }
+                  style={IsLoading? { opacity: 0} : {opacity: 1} }
                   onLoad={() => {
                     setIsLoading(false);
                   }}
