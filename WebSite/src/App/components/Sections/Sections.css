@@ -1,11 +1,11 @@
 .full-section{
-    height: 90%;
+    height: 88vh;
 }
 .section {
     background-color: white;
     color: rgb(81, 187, 228);
     font-family: "Bahij Helvetica";
-    height: 100%;
+    height: 75vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,21 +19,21 @@
 }
 #title h1 {
     font-weight: bold;
-    font-size: 50px;
+    font-size: 45px;
     display: flex;
     justify-content: center;
     color: rgba(60, 152, 189, 1);
-    margin-top: -80px;
+    margin-top: -100px;
 }
 #title p {
     color: rgba(60, 152, 189, 1);
-    font-size: 30px;
+    font-size: 28px;
     font-family: "Bahij Helvetica";
     margin-top: 0%;
 }
 #ul-section {
     display: flex;
-    width: 80%;
+    width: 80vw;
     color: rgba(60, 152, 189, 1);
     flex-direction: row;
     justify-content: center;
@@ -49,7 +49,7 @@
     width: 50%;
     margin-left: 30%;
     align-items: center;
-    margin-top: 6vh;
+    margin-top: 2vh;
 }
 #ul-section h1 {
     color: rgba(60, 152, 189, 1);
@@ -98,11 +98,10 @@
     .section {
         background-color: white;
         color: rgb(81, 187, 228);
-        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 100vh;
+        height: 80vh;
     }
     #title {
         align-items: center;
@@ -110,18 +109,23 @@
     }
     #title h1 {
         font-weight: bold;
-        font-size: 47px;
+        font-size: 43px;
         display: flex;
         justify-content: center;
         color: rgba(60, 152, 189, 1);
-        margin-top: -100px;
+        margin-top: -12vh;
     }
     #title p {
         color: rgba(60, 152, 189, 1);
-        font-size: 30px;
-        width:100% ;
+        font-size: 28px;
+        width:100%;
+        margin-left: 5vw;
+        margin-right: 6vw;
+        justify-content: center;
+        align-items: center;
     }
     #ul-section {
+        width: 80vw;
         display: flex;
         color: rgba(60, 152, 189, 1);
         flex-direction: row;
@@ -141,11 +145,11 @@
         color: rgba(60, 152, 189, 1);
         font-size: 30px;
         margin-left: 35%;
-        margin-top: 3%;
+        margin-top: 0%;
     }
     #ul-section p {
         color: rgba(60, 152, 189, 1);
-        width: 60%;
+        width: 63%;
         text-align: center;
         align-items: center;
         justify-content: center;
@@ -155,7 +159,7 @@
     }
     .section .prevuse img {
         height: 3%;
-        top: 7%;
+        top:20%;
         left: 5%;
         display: flex;
         cursor: pointer;
@@ -163,25 +167,29 @@
     .section .svg {
         display: flex;
         margin-top: 4%;
-        margin-left: 0%;
+        margin-left: -4vw;
     }
     .section .svg1 {
-        margin-right: 8%;
+        display: flex;
+        margin-right: 0%;
+        margin-top: -4vh;
     }
     .section .svg2 {
         display: flex;
-        margin-left: -5%;
+        margin-top: -20vh;
+        margin-left: -8%;
     }
     .section .svg3 {
         display: flex;
         margin-top: -7%;
+        margin-right: -7%;
     }
 }
 @media only screen and (max-width: 992px) and (min-width: 768px) {
     .section {
         background-color: white;
         color: rgb(81, 187, 228);
-        height: 100vh;
+        height: 88vh;
         width: 100vw;
         display: flex;
         flex-direction: column;
@@ -192,23 +200,26 @@
         padding-top: 13%;
     }
     #title h1 {
-        margin-top: -10%;
+        margin-top: -20%;
         font-weight: bold;
-        font-size: 38px;
+        font-size: 40px;
         display: flex;
         justify-content: center;
         color: rgba(60, 152, 189, 1);
     }
     #title p {
         color: rgba(60, 152, 189, 1);
-        font-size: 23px;
-        width: 100%;
-        margin-top: 3%;
+        font-size: 25px;
+        width: 80vw;
+        margin-top: 2%;
         align-items: center;
         justify-content: center;
         text-align: center;
     }
     #ul-section {
+        margin-top: -2vh;
+        width: 80vw;
+        height: 50vh;
         display: flex;
         color: rgba(60, 152, 189, 1);
         flex-direction: row;
@@ -216,29 +227,29 @@
         align-items: center;
     }
     #ul-section img {
-        height: 80%;
-        width: 80%;
+        height: 50%;
+        width: 50%;
         justify-content: space-between;
-        margin-top: -20%;
-        padding: 10%;
-        margin-right: 30%;
-        margin-left: 20%;
+        margin-top: -10%;
+        margin-left: 4vw;
     }
-    #ul-section a {
+    /* #ul-section a {
+        background-color: black;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        width: 230px;
-        margin-top: 60px;
-        margin-left: 2%;
-        margin-right: 2%;
-    }
+        width: 25vw;
+        height: 50vh;
+        margin-left: 10%;
+        margin-right: 20%;
+    } */
     #ul-section h1 {
+        width: 20vw;
         color: rgba(60, 152, 189, 1);
-        font-size: 23px;
-        margin-left: 20%;
-        margin-top: 0px;
+        font-size: 25px;
+        margin-left: 8%;
+        margin-top: 0%;
         margin-right: 18%;
         text-align: center;
     }
@@ -246,7 +257,7 @@
         color: rgba(60, 152, 189, 1);
         align-items: center;
         justify-content: center;
-        margin-left: 25%;
+        margin-left: 12%;
         margin-right: 25%;
         font-size: 19px;
         display: flex;
@@ -254,33 +265,41 @@
     }
     .section .prevuse img {
         position: absolute;
-        top: 8%;
-        right: 91%;
+        top: 18%;
+        right: 93%;
         width: 3%;
         cursor: pointer;
     }
     .section .svg {
-        position: absolute;
-        margin-right: 65%;
-        top: 6%;
         display: flex;
-        align-items: center;
+        height: 10vh;
+        width: 10vw;
+        margin-right: 70%;
+        margin-top: 3vh;
     }
     .section .svg1 {
-        position: absolute;
-        right: 9%;
-        top: 3%;
+        display: flex;
+        height: 15vh;
+        width: 10vw;
+        margin-right: 5%;
+        position: relative;
+        top: -8%;
+        margin-bottom: -10%;
+
     }
     .section .svg2 {
-        position: absolute;
-        left: 10%;
-        bottom: 20%;
-        top: 91%;
+        display: flex;
+        height: 10vh;
+        width: 10vw;
+        margin-left: -8vw;
+        margin-right: 75%;
+        margin-bottom: 5vh;
     }
     .section .svg3 {
-        position: absolute;
-        top: 92%;
-        left: 0%;
+        display: flex;
+        width: 10vw;
+        margin-top: -18vh;
+        margin-right: vw;
     }
 }
 @media only screen and (max-width: 768px) and (min-width:576px) {
@@ -303,73 +322,72 @@
         display: none;
     }
     .mobile-section {
+        width: 100%;
         display: block;
-        height: 100vh;
+        height: 80vh;
     }
     .mob-sec-header .prevuse {
         position: absolute;
         height: 2.6%;
         display: flex;
-        top: 7%;
-        left: 7%;
+        top: 18%;
+        left: 5%;
         cursor: pointer;
     }
     #title h1 {
-        position: absolute;
+        position: relative;
         color: rgba(255, 194, 0, 1);
-        font-size: 45px;
-        top: 17%;
+        font-size: 40px;
+        margin-top: 3vh;
         text-align: center;
-        left: 32%;
+        align-items: center;
+        width: 50vw;
+        left: 25vw;
     }
     #title p {
-        width: 80%;
-        position: absolute;
-        font-size: 25px;
-        top: 15%;
+        width: 80vw;
+        position: relative;
+        font-size: 23px;
+        margin-top: -1%;
         text-align: center;
         left: 13%;
     }
     .shape-1 {
-        position: absolute;
+        margin-right: 90vw;
+        margin-top: -5vh;
+        margin-left: 10vw;
         display: flex;
-        height: 8%;
-        left: 15%;
-        top: 25%;
     }
     .shape-2 {
-        position: absolute;
         display: flex;
-        width: 11%;
-        height: 8%;
-        top: 5%;
-        left: 80%;
+        height: 10%;
+        position: absolute;
+        top: 15%;
+        right: 5%;
     }
     .mob-sec-article #ul-section {
-        position: fixed;
-        top: 28%;
-        padding-top: 400px;
-        left: 20%;
+        position: relative;
+        margin-top: -4vh;
+        padding-top: 68vh;
+        left: 18%;
         display: flex;
+        height: 50vh;
         flex-direction: column;
         justify-content: center;
         overflow-y: scroll;
-        height: 70vh;
-        margin-bottom: 20%;
+        /* scroll-padding-top: 20vh; */
         width: 60%;
     }
     .mob-sec-article #ul-section img {
-        height: 170px;
-        width: 75%;
-        margin-top: -5;
-        margin-bottom: 0%;
+        width: 50%;
+        height: 55%;
+        margin-top: -5%;
     }
     .mob-sec-article #ul-section h1 {
         font-size: 25px;
         font-family: "Bahij Helvetica";
         width: 60%;
-        margin-top:-2;
-        margin-bottom: 0;
+        margin-top:-2%;
     }
     .mob-sec-article #ul-section p {
         font-size: 20px;
@@ -378,6 +396,7 @@
         width: 70%;
         margin-left: 23%;
         margin-top: 0;
+        margin-bottom: 0%;
     }
     .shape-3 {
         display: flex;
@@ -416,14 +435,14 @@
     .mobile-section {
         width: 100%;
         display: block;
-        height: 100vh;
+        height: 80vh;
     }
     .mob-sec-header .prevuse {
         width: 5%;
         height: 2%;
         position: absolute;
         display: flex;
-        top: 7%;
+        top: 17%;
         left: 7%;
         cursor: pointer;
     }
