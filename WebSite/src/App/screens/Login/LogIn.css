@@ -188,7 +188,7 @@
         flex-wrap: wrap;
         width: 100%;
         flex: 90%;
-        padding-bottom: 12%;
+        padding-bottom: 30%;
 
     }
 
@@ -255,7 +255,8 @@
     }
 
     .full_login .mobilee form .ui_form .forgotpassword_login {
-        flex: 30%;
+        flex: none;
+        /* flex: 30%; */
         width: 87%;
         color: silver;
         text-align: center;
@@ -267,6 +268,7 @@
     }
 
     .full_login .mobilee form .acount_button_login {
+        margin-bottom: 6vw;
         cursor: pointer;
         height: 6vw;
         width: 65vw;    
@@ -292,7 +294,8 @@
         width: 100%;
         margin-bottom: 1%;
         font-weight: bold;  
-        flex: 2%;
+        flex: none;
+        /* flex: 2%; */
     }
 
     .full_login .mobilee .p_login::after,
@@ -322,7 +325,7 @@
         cursor: pointer;
         height: 6vw;
         width: 55vw;
-       
+        margin-top: 3vw;
         border-radius: 30px;
         background-color: #FFF;
         border: 1px solid silver;
@@ -351,18 +354,200 @@
     .full_login {
         flex: 87%;
     }
-}
+} */
 
-@media screen and (max-width: 400px) {
-    .full_login .mobilee .GoogleBtn .google_button_login {
-        height: 90%;
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    .full_login .Log_In_form {
+        display: none;
+    }
+
+    .full_login {
+        flex: 88%;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        width: 70%;
+        height: 100vw;
+    
+    }
+
+    .full_login .mobilee {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
         width: 100%;
-        margin-bottom: 10%;
+        flex: 90%;
+        padding-bottom: 50%;
+
+    }
+
+    .full_login .mobilee form {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        flex: 60%;
+        /* padding-top: 10%; */
+    }
+
+    .full_login .mobilee form .ui_form {
+        flex: 80%;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .full_login .mobilee form .ui_form .field {
+        flex: 44%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .full_login .mobilee form .ui_form .field #input_login {
+        color: #ccc;
+        font-family: "Bahij Helvetica";
+        background: none;
+        width: 60vw;
+        /* flex: 2; */
+        border-bottom: 2px solid #ccc;
+        box-sizing: border-box;
+        text-align: right;
+        fill: transparent;
+        outline: none;
+        font-size: 3.5vw;
+        font-weight: bold;
+        margin-top: 3vw;
+    }
+
+    .full_login .mobilee form .ui_form .field #input_login::placeholder {
+        color: silver;
+        font-weight: 14px;
+    }
+
+    .full_login .mobilee form .ui_form .field .error_login {
+        color: red;
+        font-family: "Bahij Helvetica";
+        height: 3px;
+       font-size:3.2vw;
+    font-weight: bold;
+        text-align: left;
+        width: 87%;
+    }
+
+    .full_login .mobilee form .ui_form .forgotpassword_login {
+        flex: none;
+        /* flex: 30%; */
+        width: 87%;
+        color: silver;
+        text-align: center;
+        font-size: 4vw;
+        font-weight: bold;
+        text-align: left;
+        margin-top:3vw;
+        margin-bottom: 4vw;
     }
 
     .full_login .mobilee form .acount_button_login {
-        flex: 15%;
-        width: 100%;
+        margin-bottom: 6vw;
+        cursor: pointer;
+        height: 9vw;
+        width: 65vw;    
+        border-radius: 50px;
+        background-color: rgba(60, 152, 189, 1);
+        background-image: linear-gradient(to left,#3c98bd,#0f53a1);
+        color: white;
+        font-family: "Bahij Helvetica";
+        font-weight: bold;
+        font-size: 4vw;
+        flex: none;
+       
     }
-} */
+
+    .full_login .mobilee .p_login {
+        font-size: 3.5vw;
+        color: silver;
+        font-family: "Bahij Helvetica";
+        flex: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: end;
+        width: 100%;
+        margin-bottom: 1%;
+        font-weight: bold;  
+        flex: none;
+        /* flex: 2%; */
+    }
+
+    .full_login .mobilee .p_login::after,
+    .full_login .mobilee .p_login::before {
+      
+        content: "";
+        border-bottom: 2px solid #ccc;
+        width:35%;
+        margin-bottom: 2%;
+    }
+
+    .full_login .mobilee .GoogleBtn {
+        /* flex: 5%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; */
+    }
+
+    .full_login .mobilee .GoogleBtn .google_button_login {
+        flex:none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        height: 9vw;
+        width: 55vw;
+        margin-top: 3vw;
+        border-radius: 30px;
+        background-color: #FFF;
+        border: 1px solid silver;
+    }
+    .google_button_login  img {
+        margin-left:2vw; 
+        height:5vw;
+        width:5vw;
+    }
+    .google_button_singup img {
+        margin-left:2vw; 
+        height:5vw;
+        width:5vw;
+    }
+    .google_p_login{
+        flex:none;
+        color: silver;
+        font-size:3.5vw;  
+        font-weight: bold;
+        text-align: end;
+        margin-right: 2.5vw;
+    }
+}
 

@@ -4,6 +4,7 @@
     box-sizing: border-box;
     border: none;
 }
+
 .all_singup_mobile {
     display: none;
 }
@@ -15,7 +16,8 @@
     min-height: 560px;
     width: 100%;
 }
-.full-signUP #all_singup  {
+
+.full-signUP #all_singup {
     background-image: linear-gradient(#3c98bd, #0f53a1);
     border-bottom-left-radius: 270px;
     display: flex;
@@ -26,13 +28,13 @@
     height: 90%;
 }
 
-.full-signUP #all_singup #Group_singup{
+.full-signUP #all_singup #Group_singup {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    flex: 60%; 
+    flex: 60%;
 }
 
 .full-signUP #all_singup #Group_singup #imgg_singup {
@@ -48,7 +50,7 @@
 }
 
 
-.full-signUP #all_singup #Group_singup .all_buttons .button_singup{
+.full-signUP #all_singup #Group_singup .all_buttons .button_singup {
     background-image: linear-gradient(to right, rgb(31, 111, 143), rgba(60, 152, 189, 1));
     border-color: white;
     width: 12vw;
@@ -87,10 +89,10 @@
     background-color: white;
 }
 
-.full-signUP #all_singup .Sign_up_form #login-button .up_singup  {
+.full-signUP #all_singup .Sign_up_form #login-button .up_singup {
     color: rgba(60, 152, 189, 1);
     font-size: 1.5vw;
-    font-weight:bold;
+    font-weight: bold;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -108,7 +110,7 @@
     height: 3vw;
     color: white;
     font-size: 1.5vw;
-    font-weight:bold;
+    font-weight: bold;
     font-family: "Bahij Helvetica";
     display: flex;
     flex-direction: column;
@@ -125,7 +127,7 @@
     width: 100%;
 }
 
-.full-signUP #all_singup .Sign_up_form #cantainer_singup form  {
+.full-signUP #all_singup .Sign_up_form #cantainer_singup form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -136,7 +138,7 @@
 }
 
 .full-signUP #all_singup .Sign_up_form #cantainer_singup form .first_input_section_singup,
-.full-signUP #all_singup .Sign_up_form #cantainer_singup form .second_input_section_singup  {
+.full-signUP #all_singup .Sign_up_form #cantainer_singup form .second_input_section_singup {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -153,16 +155,17 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-   margin-bottom: 1vw;
+    margin-bottom: 1vw;
 }
-.fieldd{
+
+.fieldd {
     width: 98.9%;
     display: flex;
     flex-direction: column;
     /* justify-content: space-between;
     align-items: center; */
-   margin-bottom: 1vw;
-   margin-right: 0.2vw;
+    margin-bottom: 1vw;
+    margin-right: 0.2vw;
 }
 
 .full-signUP #all_singup .Sign_up_form #cantainer_singup form .first_input_section_singup .field #input_singup,
@@ -180,7 +183,8 @@
     font-size: 1.1vw;
     font-weight: 3vw;
 }
-.input_end{
+
+.input_end {
     /* width:33.8vw !important; */
     color: #ccc;
     font-family: "Bahij Helvetica";
@@ -205,14 +209,15 @@
     font-weight: 600;
     width: 100%;
 }
-.error_singup{
+
+.error_singup {
     color: red;
     font-family: "Bahij Helvetica";
     height: 3px;
     text-align: left;
     font-size: 1vw;
     font-weight: 600;
-    width: 100%; 
+    width: 100%;
 }
 
 .full-signUP #all_singup .Sign_up_form #cantainer_singup form .acount_button_singuo {
@@ -221,7 +226,7 @@
     height: 3vw;
     border-radius: 50px;
     background-color: rgba(60, 152, 189, 1);
-    background-image: linear-gradient(to left,#3c98bd,#0f53a1);
+    background-image: linear-gradient(to left, #3c98bd, #0f53a1);
     color: white;
     font-family: "Bahij Helvetica";
     font-size: 1.5vw;
@@ -241,15 +246,17 @@
     align-items: end;
     width: 30vw;
     margin-bottom: 1%;
-     
+
 }
+
 .p_singup::before,
-.p_singup::after{
-   content: "";
-   border-bottom: 0.2vw solid silver;
-   width:9.5vw;
-   margin: 3%;
+.p_singup::after {
+    content: "";
+    border-bottom: 0.2vw solid silver;
+    width: 9.5vw;
+    margin: 3%;
 }
+
 .full-signUP #all_singup .Sign_up_form #cantainer_singup .Google_SignUP {
     cursor: pointer;
     width: 23vw;
@@ -268,16 +275,16 @@
     font-weight: bold;
     display: flex;
     flex-direction: column;
-    justify-content:space-between;
+    justify-content: space-between;
 }
 
 .full-signUP #all_singup .Sign_up_form #cantainer_singup .Google_SignUP img {
-    margin-left:0.7vw;
-    height:2.1vw;
+    margin-left: 0.7vw;
+    height: 2.1vw;
 }
 
 .full-signUP #all_singup .Sign_up_form #cantainer_singup .Google_SignUP .google_p_singup {
-    margin-right:1.4vw;
+    margin-right: 1.4vw;
     font-family: "Bahij Helvetica";
     color: rgb(194, 191, 191);
 }
@@ -297,7 +304,6 @@
         align-items: center;
         width: 100%;
         height: 100vh;
-        min-height: 659px;
     }
 
     .full-signUP .all_singup_mobile .logo_mobile {
@@ -307,7 +313,7 @@
         align-items: center;
 
     }
-  
+
     .full-signUP .all_singup_mobile .langauge {
         display: flex;
         flex-direction: row;
@@ -316,7 +322,8 @@
         width: 55vw;
         margin-bottom: 5vw;
     }
-    .image3{
+
+    .image3 {
         width: 22vw;
         height: 18vw;
         margin-top: 6vw;
@@ -330,11 +337,11 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-image: linear-gradient(to left,#3C98BD, #0F53A1);
+        background-image: linear-gradient(to left, #3C98BD, #0F53A1);
         border-color: rgb(255, 255, 255);
         border-radius: 50px;
         border-width: 0.2vw;
-       border-style: solid;
+        border-style: solid;
         font-family: "Bahij Helvetica";
         font-weight: bold;
         font-size: 3vw;
@@ -352,7 +359,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        box-shadow: 0px -2px 5px rgba(0, 0, 0,0.2);
+        box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
     }
 
     .full-signUP .all_singup_mobile .bottom_Signupm #login-button {
@@ -384,7 +391,7 @@
         justify-content: center;
         align-items: center;
         border-radius: 50px;
-        
+
     }
 
     .full-signUP .all_singup_mobile .bottom_Signupm #login-button .in_singup {
@@ -417,7 +424,7 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        width:100%;
+        width: 100%;
         flex: 70%;
     }
 
@@ -431,38 +438,42 @@
         flex-wrap: wrap;
         flex: 3;
     }
+
     .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .first_input_section_singup .field,
-    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .second_input_section_singup .field{
+    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .second_input_section_singup .field {
         width: 44%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
     }
+
     .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .first_input_section_singup .field #input_singup,
-    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .second_input_section_singup .field #inputt_singup{
-    color: #ccc;
-    font-family: "Bahij Helvetica";
-    background: none;
-    width: 100%;
-    flex: 1;
-    border-bottom: 2px solid #ccc;
-    box-sizing: border-box;
-    text-align: right;
-    fill: transparent;
-    outline: none;
-     font-size: 2vw;
-     font-weight: bold;
-     margin-top: 3vw;
-    
-    }
-    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .first_input_section_singup .field #input_singup::placeholder,
-    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .second_input_section_singup .field  #inputt_singup::placeholder,
-    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .second_input_section_singup .fieldd  #inputtt_singup::placeholder{
-    color: silver;
+    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .second_input_section_singup .field #inputt_singup {
+        color: #ccc;
+        font-family: "Bahij Helvetica";
+        background: none;
+        width: 100%;
+        flex: 1;
+        border-bottom: 2px solid #ccc;
+        box-sizing: border-box;
+        text-align: right;
+        fill: transparent;
+        outline: none;
+        font-size: 2vw;
+        font-weight: bold;
+        margin-top: 3vw;
 
     }
-    .fieldd{
+
+    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .first_input_section_singup .field #input_singup::placeholder,
+    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .second_input_section_singup .field #inputt_singup::placeholder,
+    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .second_input_section_singup .fieldd #inputtt_singup::placeholder {
+        color: silver;
+
+    }
+
+    .fieldd {
         color: #ccc;
         font-family: "Bahij Helvetica";
         background: none;
@@ -475,7 +486,8 @@
         fill: transparent;
         outline: none;
     }
-    .input_end{
+
+    .input_end {
         color: #ccc;
         font-family: "Bahij Helvetica";
         background: none;
@@ -489,29 +501,31 @@
         font-weight: bold;
     }
 
-   .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .first_input_section_singup .field .error_singup,
-   .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .second_input_section_singup .field .error_singup,
-   .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .second_input_section_singup .fieldd .error_singup{
-    color: red;
-    font-family: "Bahij Helvetica";
-    height: 3px;
-   font-size:2vw;
-    text-align: left;
-    width: 100%;
+    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .first_input_section_singup .field .error_singup,
+    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .second_input_section_singup .field .error_singup,
+    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .second_input_section_singup .fieldd .error_singup {
+        color: red;
+        font-family: "Bahij Helvetica";
+        height: 3px;
+        font-size: 2vw;
+        text-align: left;
+        width: 100%;
     }
-    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .acount_button_singuo{
+
+    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .acount_button_singuo {
         height: 6vw;
         width: 65vw;
         cursor: pointer;
         border-radius: 50px;
         background-color: rgba(60, 152, 189, 1);
-        background-image: linear-gradient(to left,#3c98bd,#0f53a1);
+        background-image: linear-gradient(to left, #3c98bd, #0f53a1);
         color: white;
         font-family: "Bahij Helvetica";
         font-size: 3vw;
         font-weight: bold;
-
+        margin-bottom: 6vw;
     }
+
     .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup .p_singup {
         color: silver;
         font-family: "Bahij Helvetica";
@@ -522,19 +536,22 @@
         align-items: end;
         width: 100%;
         margin-bottom: 1%;
-        font-weight: bold;  
-        flex: 2%;
-         
+        font-weight: bold;
+        flex: none;
+        /* flex: 2%; */
+
     }
-   .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup .p_singup::before,
-   .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup .p_singup::after{
-    content: "";
-    border-bottom: 2px solid #ccc;
-    width:23.5vw;
-    margin-bottom: 2%;
+
+    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup .p_singup::before,
+    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup .p_singup::after {
+        content: "";
+        border-bottom: 2px solid #ccc;
+        width: 23.5vw;
+        margin-bottom: 2%;
 
 
-   }
+    }
+
     .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup .google_button_singup {
         flex: none;
         display: flex;
@@ -544,7 +561,8 @@
         cursor: pointer;
         height: 6vw;
         width: 55vw;
-        margin-bottom: 6vw;
+        margin-top: 3vw;
+        margin-bottom: 20vw;
         border-radius: 30px;
         background-color: #FFF;
         border: 1px solid silver;
@@ -554,18 +572,20 @@
         flex: 1;
         margin-right: 2vw;
     }
+
     .google_button_singup img {
-      height:70%;
+        height: 70%;
     }
 
     .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup .google_button_singup .google_p_singup {
         color: silver;
-        font-size:2vw;  
+        font-size: 2vw;
         font-weight: bold;
         text-align: end;
         margin-right: 2vw;
     }
-} 
+}
+
 /* @media screen and (max-width: 600px){
         .full-signUP .all_singup_mobile .langauge .button_singup{
             width: 40%;
@@ -596,43 +616,299 @@
     .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup {
         flex: 87%;
     } 
-}
-@media screen and (max-width: 450px) {
+} */
+@media screen and (max-width: 600px) {
+    .full-signUP #all_singup {
+        display: none;
+    }
+
+    .full-signUP .all_singup_mobile {
+
+        background-image: linear-gradient(to right, rgb(31, 111, 143), rgba(60, 152, 189, 1));
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .full-signUP .all_singup_mobile .logo_mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .full-signUP .all_singup_mobile .langauge {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 55vw;
+        margin-bottom: 5vw;
+    }
+
+    .image3 {
+        width: 33vw;
+        height: 28vw;
+        margin-top: 6vw;
+        margin-bottom: 2vw;
+    }
+
     .full-signUP .all_singup_mobile .langauge .button_singup {
-        font-size: 14px;
-        width: 40%;
-        height: 60%;
+        height: 9vw;
+        width: 26vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(to left, #3C98BD, #0F53A1);
+        border-color: rgb(255, 255, 255);
+        border-radius: 50px;
+        border-width: 0.2vw;
+        border-style: solid;
+        font-family: "Bahij Helvetica";
+        font-weight: bold;
+        font-size: 4vw;
+        cursor: pointer;
+        color: white;
     }
-    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form{
-    flex: 80%;
-    }
-    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup .p_singup{
-      flex: 5%;      
-    }
-    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup .google_button_singup{
-     flex: 10%;
-    margin-bottom: 5%;
-    }
+
     .full-signUP .all_singup_mobile .bottom_Signupm {
-        border-top-right-radius: 50px;
-        border-top-left-radius: 50px;
+        flex: 60%;
+        border-top-right-radius: 60px;
+        border-top-left-radius: 60px;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .full-signUP .all_singup_mobile .bottom_Signupm #login-button {
+        cursor: pointer;
+        margin-top: 2%;
+        width: 65vw;
+        margin-top: 12vw;
+        border-radius: 50px;
+        font-family: "Bahij Helvetica";
+        font-weight: bold;
+        font-size: 1vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #FFF;
+        border: 0.2vw solid silver;
+    }
+
+    .full-signUP .all_singup_mobile .bottom_Signupm #login-button .up_singup {
+        color: linear-gradient(#3C98BD, #0F53A1);
+        font-family: "Bahij Helvetica";
+        font-weight: bold;
+        font-size: 4vw;
+        width: 50%;
+        height: 9vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+
+    }
+
+    .full-signUP .all_singup_mobile .bottom_Signupm #login-button .in_singup {
+        font-weight: bold;
+        font-size: 4vw;
+        border-radius: 50px;
+        background-image: linear-gradient(#3C98BD, #0F53A1);
+        color: white;
+        color: linear-gradient(#3C98BD, #0F53A1);
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup {
+        flex: 88%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 75%;
+    }
+
+    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        flex: 70%;
+    }
+
+    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .first_input_section_singup,
+    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .second_input_section_singup {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        flex-wrap: wrap;
+        flex: 3;
+    }
+
+    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .first_input_section_singup .field,
+    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .second_input_section_singup .field {
+        width: 44%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .first_input_section_singup .field #input_singup,
+    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .second_input_section_singup .field #inputt_singup {
+        color: #ccc;
+        font-family: "Bahij Helvetica";
+        background: none;
+        width: 100%;
+        flex: 1;
+        border-bottom: 2px solid #ccc;
+        box-sizing: border-box;
+        text-align: right;
+        fill: transparent;
+        outline: none;
+        font-size: 3.5vw;
+        font-weight: bold;
+        margin-top: 3vw;
+
+    }
+
+    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .first_input_section_singup .field #input_singup::placeholder,
+    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .second_input_section_singup .field #inputt_singup::placeholder,
+    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .second_input_section_singup .fieldd #inputtt_singup::placeholder {
+        color: silver;
+
+    }
+
+    .fieldd {
+        color: #ccc;
+        font-family: "Bahij Helvetica";
+        background: none;
+        width: 100%;
+        flex: none;
+        margin-top: 3vw;
+        margin-bottom: 4vw;
+        box-sizing: border-box;
+        text-align: right;
+        fill: transparent;
+        outline: none;
+    }
+
+    .input_end {
+        color: #ccc;
+        font-family: "Bahij Helvetica";
+        background: none;
+        flex: none;
+        border-bottom: 2px solid #ccc;
+        box-sizing: border-box;
+        text-align: right;
+        fill: transparent;
+        outline: none;
+        font-size: 3.5vw;
+        font-weight: bold;
+    }
+
+    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .first_input_section_singup .field .error_singup,
+    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .second_input_section_singup .field .error_singup,
+    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .second_input_section_singup .fieldd .error_singup {
+        color: red;
+        font-family: "Bahij Helvetica";
+        height: 3px;
+        font-size: 3.2vw;
+        text-align: left;
+        width: 100%;
+    }
+
+    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .acount_button_singuo {
+        height: 9vw;
+        width: 65vw;
+        cursor: pointer;
+        border-radius: 50px;
+        background-color: rgba(60, 152, 189, 1);
+        background-image: linear-gradient(to left, #3c98bd, #0f53a1);
+        color: white;
+        font-family: "Bahij Helvetica";
+        font-size: 4vw;
+        font-weight: bold;
+        margin-bottom: 6vw;
+    }
+
+    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup .p_singup {
+        color: silver;
+        font-family: "Bahij Helvetica";
+        flex: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: end;
+        width: 100%;
+        margin-bottom: 1%;
+        font-weight: bold;
+        flex: none;
+        /* flex: 2%; */
+        font-size: 3.5vw;
+
+    }
+
+    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup .p_singup::before,
+    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup .p_singup::after {
+        content: "";
+        border-bottom: 2px solid #ccc;
+        width: 23.5vw;
+        margin-bottom: 2%;
+
+
+    }
+
+    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup .google_button_singup {
+        flex: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        height: 9vw;
+        width: 55vw;
+        margin-top: 3vw;
+        margin-bottom: 25vw;
+        border-radius: 30px;
+        background-color: #FFF;
+        border: 1px solid silver;
+    }
+
+    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup .google_button_singup .google_icon_singup {
+        flex: 1;
+        margin-right: 2vw;
+    }
+
+    .google_button_singup img {
+        height: 70%;
     }
 
     .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup .google_button_singup .google_p_singup {
-        font-size: 80%;
+        color: silver;
+        font-size: 3.5vw;
+        font-weight: bold;
+        text-align: end;
+        margin-right: 2.5vw;
     }
-    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .first_input_section_singup .field .error_singup,
-    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .second_input_section_singup .field .error_singup{
-            font-size: 50%;
-    }
-    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .acount_button_singuo{
-            font-size: 70%;
-            
-    }
-    .full-signUP .all_singup_mobile .bottom_Signupm #login-button{
-        flex: 8%;
-    }
-    .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup{
-        flex: 87%;
-    }
-}*/
+}
