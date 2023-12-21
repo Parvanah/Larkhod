@@ -633,6 +633,7 @@ overflow-y: scroll;
     .Lesson_body .mobile .mobile-bottom .pdf-Download-ls img {
         height: 100%;
         width: 30%;
+
     }
 
     .Lesson_body .mobile .mobile-bottom .pdf-Download-ls .mobile-bottom-p {
@@ -651,4 +652,5 @@ overflow-y: scroll;
         font-size: 10px;
         text-align: center;
     }
+ 
 }
