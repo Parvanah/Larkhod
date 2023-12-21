@@ -1,10 +1,10 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect,useState } from "react";
 import { AuthContext } from "./App/context/AuthContext";
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Header from "./App/components/Header/Header";
+import Header from "./App/components/Header/Header.js";
 import SingUp from "./App/screens/SingUp/SingUp";
 import LogIn from "./App/screens/Login/LogIn";
 import ForgotPassword from "./App/screens/ForgotPassword/ForgotPassword";
@@ -22,10 +22,29 @@ import Continue from "./App/Continue";
 import About from "./App/About";
 import Suggestion from "./App/Suggestion";
 import ChangeProfile from "./App/screens/ChangeProfile/ChangeProfile";
-import Home from "./App/components/Home/Home";
+import Home from "./App/components/Home/Home.js";
 import "./App.css";
 import ReadingBook from "./readingBook";
+import Loading from "./App/Loading/Loading.js";
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate an async operation (e.g., data fetching) that triggers loading
+    const fetchData = async () => {
+      // Perform your async operation here
+
+      // Simulate the completion of the async operation after 2 seconds
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+
+      // Set loading to false when the operation is complete
+      setLoading(false);
+    };
+
+    // Call the fetchData function
+    fetchData();
+  }, []);
+
   const { userInfo, currentPath, setCurrentPath } = useContext(AuthContext);
   console.log(userInfo);
 
@@ -34,6 +53,12 @@ function App() {
   });
   return (
     <div className="App">
+          {loading ? (
+        <Loading />
+      ) : (
+        <>
+        
+     
       <Router>
         {/* {!(
           window.location.pathname === "/login" ||
@@ -55,14 +80,14 @@ function App() {
           currentPath === "/sendcode" ||
           currentPath === "/newpassword"
         ) ||
-        currentPath === "/header" ||
+        currentPath === "/home" ||
         userInfo != null ? (
           <Header />
         ) : (
           <></>
         )}
         <Routes>
-          <Route path="/header" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/section" element={<Section />} />
           <Route path="/grades" element={<Grades />} />
           <Route path="/books" element={<Books />} />
@@ -88,6 +113,8 @@ function App() {
           <Route exact path="/newpassword" element={<NewPassword />} />
         </Routes>
       </Router>
+      </>
+      )}
     </div>
   );
 }

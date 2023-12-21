@@ -58,7 +58,7 @@ const Book = ({ t }) => {
     <div className="Download-all-b">
       <div className="Bookheader">
         <div id="flesh-image-grade-B">
-          <Link to="/Header">
+          <Link to="/home">
             <img src={image5} />
           </Link>
         </div>

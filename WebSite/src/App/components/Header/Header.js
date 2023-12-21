@@ -129,7 +129,7 @@ const Header = ({ t }, props) => {
   };
 
   // useEffect(() => {
-  //   if (window.location.pathname !== "/header") {
+  //   if (window.location.pathname !== "/home") {
   //     openProfile(false);
   //   }
   // });
@@ -137,7 +137,7 @@ const Header = ({ t }, props) => {
   return (
     <div className="full_header">
       <nav className="header">
-        <Link to="/header"></Link>
+        <Link to="/home"></Link>
         <div className="nav_header">
           <ul className="ul_header">
             <li className="li_header">
@@ -193,7 +193,7 @@ const Header = ({ t }, props) => {
             </li>
             <hr className="vl_header" />
             <li className="li_header">
-              <Link className="link_nav_header" to="/header">
+              <Link className="link_nav_header" to="/home">
                 {t("header12")}
               </Link>
             </li>
@@ -397,6 +397,13 @@ const Header = ({ t }, props) => {
                 {t("header8")}
               </Link>
             </li>
+            <li className="li_header"><Link
+                className="link_nav_header"
+                to="/home"
+                onClick={handleSideBar}
+              >
+                {t("header12")}
+              </Link></li>
             <li className="li_header">
               <img src={logoSideBar} />
             </li>

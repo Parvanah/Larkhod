@@ -65,7 +65,7 @@ const Section = ({ t }, props) => {
             </svg>
           </foreignObject>
         </div>
-        <div className="prevuse" onClick={() => navigate("/header")}>
+        <div className="prevuse" onClick={() => navigate("/home")}>
           <img src={image4} />
         </div>
         <div id="title">

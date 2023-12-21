@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { withNamespaces } from "react-i18next";
 import { FaUser } from "react-icons/fa";
-import "../Header/Header.css";
+import "../Home/Home.css";
 import { Link } from "react-router-dom";
 import React, { Component } from "react";
 import { useState } from "react";

@@ -95,7 +95,7 @@ const SingUp = ({ t }, props) => {
     );
     setIsSubmit(true);
     if (Object.keys(formErrors).length === 0 && isSubmit) {
-      navigate("/header");
+      navigate("/home");
     }
   };
 
@@ -366,7 +366,7 @@ const SingUp = ({ t }, props) => {
             </button>
             {SwitchHandle ? (
               <div id="cantainer_singup">
-                <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
                   <div className="first_input_section_singup">
                     <div className="field">
                       <input
@@ -383,55 +383,6 @@ const SingUp = ({ t }, props) => {
                       <input
                         id="input_singup"
                         type="text"
-                        name="lastname"
-                        placeholder={t("singup18")}
-                        value={formValues.lastname}
-                        onChange={(e) => handleChange(e)}
-                      />
-                      <p className="error_singup">{formErrors.lastname}</p>
-                    </div>
-
-                    <div className="field">
-                      <input
-                        id="input_singup"
-                        type="age"
-                        name="age"
-                        placeholder={t("singup19")}
-                        value={formValues.age}
-                        onChange={(e) => handleChange(e)}
-                      />
-                      <p className="error_singup">{formErrors.age}</p>
-                    </div>
-
-                    <div className="field">
-                      <input
-                        id="input_singup"
-                        type="class"
-                        name="senf"
-                        placeholder={t("singup20")}
-                        value={formValues.senf}
-                        onChange={(e) => handleChange(e)}
-                      />
-                      <p className="error_singup">{formErrors.senf}</p>
-                    </div>
-                  </div>
-
-                  <div className="second_input_section_singup">
-                    <div className="field">
-                      <input
-                        id="inputt_singup"
-                        type=""
-                        name="number"
-                        placeholder={t("singup21")}
-                        value={formValues.number}
-                        onChange={(e) => handleChange(e)}
-                      />
-                      <p className="error_singup">{formErrors.number}</p>
-                    </div>
-                    <div className="field">
-                      <input
-                        id="inputt_singup"
-                        type="text"
                         name="email"
                         placeholder={t("singup4")}
                         value={formValues.email}
@@ -439,10 +390,20 @@ const SingUp = ({ t }, props) => {
                       />
                       <p className="error_singup">{formErrors.email}</p>
                     </div>
-
                     <div className="field">
                       <input
-                        id="inputt_singup"
+                        id="input_singup"
+                        type="text"
+                        name="lastname"
+                        placeholder={t("singup18")}
+                        value={formValues.lastname}
+                        onChange={(e) => handleChange(e)}
+                      />
+                      <p className="error_singup">{formErrors.lastname}</p>
+                    </div>
+                      <div className="field">
+                      <input
+                        id="input_singup"
                         type="password"
                         name="password"
                         placeholder={t("singup5")}
@@ -451,7 +412,20 @@ const SingUp = ({ t }, props) => {
                       />
                       <p className="error_singup">{formErrors.password}</p>
                     </div>
-
+                  </div>
+                  <div className="second_input_section_singup">
+                    <div className="field">
+                      <input
+                       onFocus={updateType}
+                        id="inputt_singup"                                        
+                        type={type}
+                        name="age"
+                        placeholder={t("singup19")}
+                      value={formValues.age}
+                      onChange={(e) => handleChange(e)} 
+                      />
+                      <p className="error_singup">{formErrors.age}</p>
+                    </div>
                     <div className="field">
                       <input
                         id="inputt_singup"
@@ -465,9 +439,22 @@ const SingUp = ({ t }, props) => {
                         {formErrors.confirmpassword}
                       </p>
                     </div>
+
+                    <div className="fieldd">
+                      <input
+                      className="input_end"
+                        id="inputtt_singup"
+                        type=""
+                        name="number"
+                        placeholder={t("singup21")}
+                        value={formValues.number}
+                        onChange={(e) => handleChange(e)}
+                      />
+                      <p className="error_singup">{formErrors.number}</p> 
+                    </div>
                   </div>
                   <button className="acount_button_singuo">
-                    {t("singup1")}
+                    {t("singup2")}
                   </button>
                 </form>
                 <h4 className="p_singup">{t("singup7")}</h4>
@@ -487,7 +474,7 @@ const SingUp = ({ t }, props) => {
   } else if (isLoading) {
     return <h1>Loading.....</h1>;
   } else {
-    return navigate("/header");
+    return navigate("/home");
   }
 };
 

@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     background-color: #DAECF2;
-    height: 90%;
+    height:88%;
 }
 
 .full_book #Books {
@@ -85,6 +85,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    cursor: pointer;
 }
 
 .full_book #Books .middlebook #ul {
@@ -170,29 +171,29 @@
         flex-direction: row;
         justify-content: space-between;
         width:100%;
-        height:100%;
-        /* background-color: black; */
+        height:60%;
     }
-    /* .image1 {
+    .image1 {
         background-color: red;
-    } */
+        display: none;
+    }
     .full_book .MBooks .TopB {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        width: 90%;
-        flex:1;
+        width:90%;
+        height:30%;
     }
 
     .topp h1 {
         font-family: "Bahij helvetica";
         color: #3C98BD;
-        font-size: 4vw;
+        font-size:3vw;
     }
 
     .topp p {
-        font-size:4vw;
+        font-size:3vw;
         font-family: "Bahij helvetica";
         color: #3C98BD;
     }
@@ -228,10 +229,14 @@
         display: none;
     }
 
-    .full_book .MBooks .TopB .arrowSvg {
+   .arrowSvg {
         display: flex;
+        justify-content:start;
+        align-items: center;
+        height:70%; 
+        width:90%;
+         
     }
-
     .full_book .MBooks .TopB .Mbarrow {
         display: none;
     }
@@ -240,7 +245,7 @@
         font-size: 17px;
         display: flex;
         flex-direction: column;
-        justify-content: end;
+        justify-content: center;
         align-items: center;
         text-align: center;
         height:100%; 
@@ -253,7 +258,6 @@
         align-items: center;
         text-align: center;
         width:80%;
-        flex:1;
     }
 .titlesm {
     font-family: "Bahij helvetica";
@@ -270,6 +274,7 @@
         align-items: center;
         text-align: center;
         overflow-x: hidden;
+        cursor: pointer;
     }
     .arrow img {
         width:12px;
@@ -300,7 +305,7 @@
         align-items: end;
         justify-content:center;
         padding:10%;
-        height:150px;
+        height:25vw;
         border-radius: 15px;
         border-radius:15px;
     }
@@ -470,7 +475,6 @@
 @media screen and (max-width: 438px) {
     .full_book .MBooks .TopB .topp h1 {
         font-size: 15px;
-
     }
 
     .full_book .MBooks .ButtomB .p {
