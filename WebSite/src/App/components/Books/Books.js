@@ -27,7 +27,7 @@ const Books = ({ t }, props) => {
   const subjects = locationData.subjects;
   console.log(subjects);
   const grade_path = locationData.grade_path;
-
+  const grade_name = locationData.grade_name;
   const navigate = useNavigate();
   const leftScroll = () => {
     const slider = document.getElementById("ul");
@@ -99,7 +99,7 @@ const Books = ({ t }, props) => {
             {/* </div> */}
           </div>
           <div className="first-section">
-            <h1>{t("books1")}</h1>
+            <h1>{t("books1")} {grade_name}</h1>
             <p> {t("books2")}</p>
           </div>
           <div className="third-section">
