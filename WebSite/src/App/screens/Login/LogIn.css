@@ -448,10 +448,11 @@
         color: red;
         font-family: "Bahij Helvetica";
         height: 3px;
-       font-size:3.2vw;
+       font-size:3vw;
     font-weight: bold;
         text-align: left;
         width: 87%;
+        margin-bottom: 2vw;
     }
 
     .full_login .mobilee form .ui_form .forgotpassword_login {
