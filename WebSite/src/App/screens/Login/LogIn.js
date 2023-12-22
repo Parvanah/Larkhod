@@ -30,7 +30,7 @@ const LogIn = ({ t }, props) => {
       }
     },
   });
-  const { isLoading, login, userInfo, backendError } = useContext(AuthContext);
+  const { setIsLoading, isLoading, login, userInfo, backendError } = useContext(AuthContext);
   const initialValues = {
     email: "",
     password: "",
@@ -38,14 +38,14 @@ const LogIn = ({ t }, props) => {
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
-  const navigate = useNavigate();
+  const navigate = useNavigate(); 
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit =  (e) => {
     e.preventDefault();
     setFormErrors(validate(formValues));
     console.log(formValues.email, formValues.password);
@@ -87,6 +87,59 @@ const LogIn = ({ t }, props) => {
 
     return errors;
   };
+
+
+
+// Add the isLoading state
+
+// const handleLogin = async (e) => {
+//   e.preventDefault();
+//   setFormErrors(validate(formValues));
+
+//   try {
+//     // Set isLoading to true when starting login request
+//     setIsLoading(true);
+
+//     const response = await axios.post("your_login_endpoint", {
+//       email: formValues.email,
+//       password: formValues.password,
+//     });
+
+//     // Check if login was successful
+//     if (response.data.success) {
+//       navigate("/home");
+//       window.location.pathname = "/home";
+//     } else {
+//       // Check for specific error indicating user not found
+//       if (response.data.error === "user_not_found") {
+//         setFormErrors({
+//           ...formErrors,
+//           general: "User not found. Please check your credentials.",
+//         });
+//       } else {
+//         setFormErrors({
+//           ...formErrors,
+//           general: "An error occurred during login. Please try again.",
+//         });
+//       }
+//     }
+//   } catch (error) {
+//     console.error("Login error:", error);
+//     setFormErrors({
+//       ...formErrors,
+//       general: "An error occurred during login. Please try again.",
+//     });
+//   } finally {
+//     // Set isLoading to false after login request completes (whether success or error)
+//     setIsLoading(false);
+//   }
+
+//   setIsSubmit(true);
+// };
+
+
+
+
   if (userInfo === null) {
     return (
           //  header 
@@ -120,7 +173,13 @@ const LogIn = ({ t }, props) => {
                 {t("login5")}
               </Link>
             </div>
-            <button className="acount_button_login">{t("login6")}</button>
+            <button className="acount_button_login" disabled={isLoading}>
+          {/* {isLoading ? t("loading...") : t("login6")} */}
+          {t("login6")}
+        </button>
+        {formErrors.general && (
+          <div className="error_login">{formErrors.general}</div>
+        )}
           </form>
           <h4 className="p_login">{t("login7")} </h4>
           <Link to="google.com" className="GoogleBtn">
@@ -160,7 +219,13 @@ const LogIn = ({ t }, props) => {
                 {t("login5")}
               </Link>
             </div>
-            <button className="acount_button_login">{t("login6")}</button>
+            <button className="acount_button_login" disabled={isLoading}>
+          {/* {isLoading ? t("loading...") : t("login6")} */}
+         {t("login6")}
+        </button>
+        {formErrors.general && (
+          <div className="error_login">{formErrors.general}</div>
+        )}
           </form>
           <h4 className="p_login">{t("login7")} </h4>
           <Link to="google.com" className="GoogleBtn">
