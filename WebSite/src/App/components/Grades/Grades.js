@@ -25,6 +25,9 @@ const Grads = ({ t },props) => {
     t("sectionlang") === "dari"
       ? locationData.Dari.school_path
       : locationData.Pashto.school_path;
+    const section_Name = t("sectionlang") === "dari"
+      ? locationData.Dari.section_Name
+      : locationData.Pashto.section_Name;
 
   // const navigation = useNavigate();
   //   if (userInfo === null) {
@@ -45,7 +48,7 @@ const Grads = ({ t },props) => {
       <div className="section-three-grades">
         <div className="one-gardes">
           <div className="one-one-grades">
-            <span className="p-one-grade">{t("grads1")} </span>
+            <span className="p-one-grade">{t("grads1")} {section_Name}</span>
             <br />
             <span className="p-two-grade">{t("grads2")}</span>
             <div className="button-grade">
@@ -57,6 +60,7 @@ const Grads = ({ t },props) => {
                     state={{
                       subjects: item.subjects,
                       grade_path: school_path + item.grade_path,
+                      grade_name: item.label + section_Name
                     }}
                   >
                     <img className="sanaf-grade" src={sanaf} />
