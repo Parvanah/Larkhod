@@ -833,9 +833,10 @@
         color: red;
         font-family: "Bahij Helvetica";
         height: 3px;
-        font-size: 3.2vw;
+        font-size: 3vw;
         text-align: left;
         width: 100%;
+        margin-bottom: 2vw;
     }
 
     .full-signUP .all_singup_mobile .bottom_Signupm #cantainer_singup form .acount_button_singuo {
