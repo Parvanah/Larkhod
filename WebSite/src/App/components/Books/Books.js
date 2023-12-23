@@ -99,7 +99,7 @@ const Books = ({ t }, props) => {
             {/* </div> */}
           </div>
           <div className="first-section">
-            <h1>{t("books1")} {grade_name}</h1>
+            <h1>{t("books1")} {grade_name} </h1>
             <p> {t("books2")}</p>
           </div>
           <div className="third-section">
@@ -138,7 +138,8 @@ const Books = ({ t }, props) => {
                     state={{
                       lessons: item.parts,
                       title: " مضمون " + item.label,
-                      subject_path: grade_path + item.subject_path,
+                      subject_path: grade_path + item.subject_path ,
+
                     }}
                     id="link"
                   >
@@ -164,6 +165,7 @@ const Books = ({ t }, props) => {
                     state={{
                       units: item.parts,
                       subject_path: grade_path + item.subject_path,
+                      grade_name:grade_name + item.label
                     }}
                     id="link"
                   >

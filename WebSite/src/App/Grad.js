@@ -45,6 +45,7 @@ const Grads = ({ t }) => {
   var secondary = data.secondary.grades;
   var high_school = data.high_school.grades;
   const { currentState, setCurrentState } = useContext(AuthContext);
+  
   const [srollState, setScrollState] = React.useState();
   const bottom = useRef(null);
   const top = useRef(null);
@@ -88,6 +89,7 @@ const Grads = ({ t }) => {
                           subjects: item.subjects,
                           grade_path:
                             basePath + data.primary.base_path + item.grade_path,
+                            grade_name: item.label
                         }}
                       >
                         <div className="sanaf-grade-n">

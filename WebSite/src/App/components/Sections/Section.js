@@ -80,12 +80,12 @@ const Section = ({ t }, props) => {
                 Dari: {
                   grades: dataDari.primary.grades,
                   school_path: base_path + dataDari.primary.base_path,
-                  section_Name: "‌Primarary",
+                  section_Name: "ابتداییه",
                 },
                 Pashto: {
                   grades: dataPashto.primary.grades,
                   school_path: base_path + dataPashto.primary.base_path,
-                  section_Name: "‌Primarary",
+                  section_Name: "ابتداییه",
                 },
               }}
             >
@@ -101,12 +101,12 @@ const Section = ({ t }, props) => {
                 Dari: {
                   grades: dataDari.secondary.grades,
                   school_path: base_path + dataDari.secondary.base_path,
-                  section_Name: "‌Seconadary",
+                  section_Name: "متوسطه",
                 },
                 Pashto: {
                   grades: dataPashto.secondary.grades,
                   school_path: base_path + dataPashto.secondary.base_path,
-                  section_Name: "‌Seconadary",
+                  section_Name: "متوسطه  ",
                 },
               }}
             >
@@ -122,12 +122,12 @@ const Section = ({ t }, props) => {
                 Dari: {
                   grades: dataDari.high_school.grades,
                   school_path: base_path + dataDari.high_school.base_path,
-                  section_Name: "high_school",
+                  section_Name: "لیسه ",
                 },
                 Pashto: {
                   grades: dataPashto.high_school.grades,
                   school_path: base_path + dataPashto.high_school.base_path,
-                  section_Name: "high_school",
+                  section_Name: "لیسه ",
                 },
               }}
             >

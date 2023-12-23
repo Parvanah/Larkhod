@@ -19,6 +19,7 @@ const Units = ({ t }) => {
   const locationData = location.state;
   const units = locationData.units;
   const subject_path = locationData.subject_path;
+  const grade_name = locationData.grade_name;
 
   const navigate = useNavigate();
   const slidLeft = () => {
@@ -48,7 +49,7 @@ const Units = ({ t }) => {
           </div>
         <div className="t-section">
           <div id="laptop-top">
-            <h1 id="p1">{t("units1")}</h1>
+            <h1 id="p1">{t("units1")} {grade_name}</h1>
             <h2 className="h2">{t("units2")}</h2>
 
           </div>
@@ -129,7 +130,7 @@ const Units = ({ t }) => {
                     to="/lessons"
                     state={{
                       lessons: item.lessons,
-                      title: " فصل "+ item.label,
+                      title: " فصل " + item.label ,
                       unitPath: item.paths,
                       subject_path: subject_path,
                     }}

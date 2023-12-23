@@ -48,9 +48,10 @@ const Grads = ({ t },props) => {
       <div className="section-three-grades">
         <div className="one-gardes">
           <div className="one-one-grades">
-            <span className="p-one-grade">{t("grads1")} {section_Name}</span>
+           
+            <span className="p-one-grade">{t("grads1")} {section_Name} </span>
             <br />
-            <span className="p-two-grade">{t("grads2")}</span>
+            <span className="p-two-grade">{t("grads2")} </span>
             <div className="button-grade">
               {grades.map((item) => {
                 return (
@@ -60,7 +61,8 @@ const Grads = ({ t },props) => {
                     state={{
                       subjects: item.subjects,
                       grade_path: school_path + item.grade_path,
-                      grade_name: item.label + section_Name
+                      grade_name: item.label 
+                      
                     }}
                   >
                     <img className="sanaf-grade" src={sanaf} />
