@@ -49,7 +49,8 @@ const Units = ({ t }) => {
           </div>
         <div className="t-section">
           <div id="laptop-top">
-            <h1 id="p1">{t("units1")} {grade_name}</h1>
+            <h1 id="header-gradename">{grade_name}</h1>
+            <h1 id="p1">{t("units1")}</h1>
             <h2 className="h2">{t("units2")}</h2>
 
           </div>
@@ -67,7 +68,7 @@ const Units = ({ t }) => {
                   to="/lessons"
                   state={{
                     lessons: item.lessons,
-                    title: item.label,
+                    title: `${grade_name} , ${item.label}` ,
                     unitPath: item.paths,
                     subject_path: subject_path,
                   }}

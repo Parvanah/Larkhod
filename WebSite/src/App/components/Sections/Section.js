@@ -85,7 +85,7 @@ const Section = ({ t }, props) => {
                 Pashto: {
                   grades: dataPashto.primary.grades,
                   school_path: base_path + dataPashto.primary.base_path,
-                  section_Name: "ابتداییه",
+                  section_Name: `د ${t("section3")}`,
                 },
               }}
             >
@@ -106,7 +106,7 @@ const Section = ({ t }, props) => {
                 Pashto: {
                   grades: dataPashto.secondary.grades,
                   school_path: base_path + dataPashto.secondary.base_path,
-                  section_Name: "متوسطه  ",
+                  section_Name: `د ${t("section5")}`,
                 },
               }}
             >
@@ -127,7 +127,7 @@ const Section = ({ t }, props) => {
                 Pashto: {
                   grades: dataPashto.high_school.grades,
                   school_path: base_path + dataPashto.high_school.base_path,
-                  section_Name: "لیسه ",
+                  section_Name:  `د ${t("section7")}`,
                 },
               }}
             >

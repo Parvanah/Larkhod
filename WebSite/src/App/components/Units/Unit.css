@@ -38,7 +38,7 @@
     justify-content:end;
     align-items: start;
     width:90VW;
-    height:5VW;
+    height:10%;
     cursor:pointer;
 }
 
@@ -49,11 +49,12 @@
     justify-content: flex-start;
     align-items: center;
     width: 80%;
-    height:0%;
+    /* height:0%; */
+    /* margin-bottom: 2%; */
 }
 
 .full_unit .units .t-section #laptop-top #p1 {
-    font-size:2vw;
+    font-size: 20px;
     color: white;
     font-family: "Bahij helvetica";
     font-weight: bold;
@@ -64,11 +65,16 @@
 .full_unit .units .t-section #laptop-top .h2 {
     /* padding: 10px; */
     color: white;
-    font-size:2vw;
+    font-size:20px;
     font-family: "Bahij helvetica";
     text-align: center;
 }
-
+.full_unit .units .t-section #laptop-top #header-gradename{
+    color: white;
+    font-size:25px;
+    font-family: "Bahij helvetica";
+    text-align: center;
+}
 .t-section .mobile-top {
     display: none;
 }
@@ -83,6 +89,7 @@
     /* margin-left: 30px; */
     flex:1;
     /* margin-bottom: -5%; */
+    margin-top: 3%;
 }
 
 .full_unit .units .unitWrapper .arrow {

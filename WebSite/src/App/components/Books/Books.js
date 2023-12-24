@@ -137,7 +137,7 @@ const Books = ({ t }, props) => {
                     to="/lessons"
                     state={{
                       lessons: item.parts,
-                      title: " مضمون " + item.label,
+                      title: t("sectionlang") === "dari" ? `${grade_name} , مضمون ${item.label} `: `${grade_name} , ${item.label} مضمون`,
                       subject_path: grade_path + item.subject_path ,
 
                     }}
@@ -165,7 +165,7 @@ const Books = ({ t }, props) => {
                     state={{
                       units: item.parts,
                       subject_path: grade_path + item.subject_path,
-                      grade_name:grade_name + item.label
+                      grade_name: t("sectionlang") === "dari"? grade_name + ` کتاب ${item.label} ` : grade_name +` ${item.label} کتاب `
                     }}
                     id="link"
                   >

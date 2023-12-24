@@ -49,7 +49,7 @@ const Grads = ({ t },props) => {
         <div className="one-gardes">
           <div className="one-one-grades">
            
-            <span className="p-one-grade">{t("grads1")} {section_Name} </span>
+            <span className="p-one-grade">{ t("sectionlang")=== "dari"? `${t("grads1")} ${section_Name}`: `${section_Name} ${t("grads1")} ` }</span>
             <br />
             <span className="p-two-grade">{t("grads2")} </span>
             <div className="button-grade">
