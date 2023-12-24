@@ -125,9 +125,9 @@ const Lessons = ({ t }, props) => {
             <img src={photo4} />
           </div>
           <div className="text">
-            <h3 className="Lesson_title">
-              {t("lessons1")} {unit}
-            </h3>
+            <h4 className="Lesson_title">
+              { t("sectionlang") === "dari"? `${t("lessons1")} ${unit}`:`د ${unit}  ${t("lessons1")}`}
+            </h4>
             <div className="sidebar-lessons">
               <div className="inside_sidebar-lessons">
                 {unitsPath ? (
