@@ -14,6 +14,9 @@ import shape1 from "../../assets/Shape-1.png";
 import shape2 from "../../assets/shape-2.png";
 import Shape3 from "../../assets/Shape-3.png";
 import { basePath } from "../../BasePath/BasePath";
+import dot from '../../../App/assets/dot_one.png';
+import svgone from '../../../App/assets/section_one.png';
+import svgtwo from '../../../App/assets/section_two.png';
 const Section = ({ t }, props) => {
   const navigate = useNavigate();
   const { userInfo, isLoading } = useContext(AuthContext);
@@ -32,66 +35,41 @@ const Section = ({ t }, props) => {
   return (
     <div className="full-section">
       <div className="section">
-        <div className="svg">
-          <foreignObject width={"20%"} height={"20%"} x={0} y={0}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={92.512}
-              height={93.517}
-              {...props}
-            >
-              <g fill="none">
-                <path d="M92.513 27.682 21.475 93.516.001-.001Z" />
-                <path
-                  fill="#edc315"
-                  d="m13.592 14.504 13.761 59.93 45.525-42.19-59.286-17.74M0 0l92.513 27.682-71.038 65.834L0 0Z"
-                />
-              </g>
-            </svg>
-          </foreignObject>
+        <div className="section_one_images">
+        <div className="prevuse_section">
+            <img className="prevuse" onClick={() => navigate("/home")} src={image4} />
+            <img className="svgone_section" src={svgone} />
+          </div>
+          <img className="dot_section" src={dot} />
         </div>
-        <div className="svg1">
-          <foreignObject width={"50%"} height={"50%"} x={5} y={5}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={95.444}
-              height={83.662}
-              {...props}
-            >
-              <path
-                fill="#e6e6e6"
-                d="M86.369 79.086a4.537 4.537 0 1 1 4.537 4.577 4.557 4.557 0 0 1-4.537-4.577Zm-28.79 0a4.538 4.538 0 1 1 4.537 4.577 4.557 4.557 0 0 1-4.537-4.577Zm-28.79 0a4.537 4.537 0 1 1 4.537 4.577 4.557 4.557 0 0 1-4.536-4.577ZM0 79.086a4.537 4.537 0 1 1 4.537 4.577A4.557 4.557 0 0 1 0 79.086Zm86.369-24.837a4.537 4.537 0 1 1 4.537 4.577 4.558 4.558 0 0 1-4.537-4.577Zm-28.79 0a4.538 4.538 0 1 1 4.537 4.577 4.558 4.558 0 0 1-4.537-4.577Zm-28.79 0a4.537 4.537 0 1 1 4.537 4.577 4.557 4.557 0 0 1-4.536-4.577ZM0 54.249a4.537 4.537 0 1 1 4.537 4.577A4.557 4.557 0 0 1 0 54.249Zm86.369-24.836a4.537 4.537 0 1 1 4.537 4.577 4.558 4.558 0 0 1-4.537-4.577Zm-28.79 0a4.538 4.538 0 1 1 4.537 4.577 4.558 4.558 0 0 1-4.537-4.577Zm-28.79 0a4.537 4.537 0 1 1 4.537 4.577 4.557 4.557 0 0 1-4.536-4.577ZM0 29.413a4.537 4.537 0 1 1 4.537 4.577A4.557 4.557 0 0 1 0 29.413ZM86.369 4.577a4.537 4.537 0 1 1 4.537 4.577 4.558 4.558 0 0 1-4.537-4.577Zm-28.79 0a4.538 4.538 0 1 1 4.537 4.577 4.558 4.558 0 0 1-4.537-4.577Zm-28.79 0a4.537 4.537 0 1 1 4.537 4.577 4.557 4.557 0 0 1-4.536-4.577ZM0 4.577a4.537 4.537 0 1 1 4.537 4.577A4.557 4.557 0 0 1 0 4.577Z"
-              />
-            </svg>
-          </foreignObject>
+        <div className="section_two_title">
+          <div className="title_section">
+            <h1 className="title_one_section">{t("section1")}</h1>
+            <p className="title_two_section">{t("section2")}</p>
+          </div>
         </div>
-        <div className="prevuse" onClick={() => navigate("/home")}>
-          <img src={image4} />
-        </div>
-        <div id="title">
-          <h1>{t("section1")}</h1>
-          <p>{t("section2")}</p>
-        </div>
-        <ul id="ul-section">
-          <li>
+        {/* ul-section */}
+        <ul className="section_three_ul">
+        <li>
             <Link
               to="/grades"
               state={{
                 Dari: {
-                  grades: dataDari.primary.grades,
-                  school_path: base_path + dataDari.primary.base_path,
-                  section_Name: "ابتداییه",
+                  grades: dataDari.high_school.grades,
+                  school_path: base_path + dataDari.high_school.base_path,
                 },
                 Pashto: {
-                  grades: dataPashto.primary.grades,
-                  school_path: base_path + dataPashto.primary.base_path,
-                  section_Name: `د ${t("section3")}`,
+                  grades: dataPashto.high_school.grades,
+                  school_path: base_path + dataPashto.high_school.base_path,
                 },
               }}
             >
-              <img src={image1} />
-              <h1>{t("section3")}</h1>
-              <p>{t("section4")}</p>
+              <img src={image3} />
+              <h1>{t("section7")} </h1>
+              <p>{t("section8")}</p>
+              <p>{t("section9")}</p>
+              <p>{t("section10")}</p>
+              <p></p>
             </Link>
           </li>
           <li>
@@ -101,18 +79,18 @@ const Section = ({ t }, props) => {
                 Dari: {
                   grades: dataDari.secondary.grades,
                   school_path: base_path + dataDari.secondary.base_path,
-                  section_Name: "متوسطه",
                 },
                 Pashto: {
                   grades: dataPashto.secondary.grades,
                   school_path: base_path + dataPashto.secondary.base_path,
-                  section_Name: `د ${t("section5")}`,
                 },
               }}
             >
               <img src={image2} />
               <h1>{t("section5")} </h1>
               <p>{t("section6")}</p>
+              <p>{t("section11")}</p>
+              <p>{t("section12")}</p>
             </Link>
           </li>
           <li>
@@ -120,58 +98,37 @@ const Section = ({ t }, props) => {
               to="/grades"
               state={{
                 Dari: {
-                  grades: dataDari.high_school.grades,
-                  school_path: base_path + dataDari.high_school.base_path,
-                  section_Name: "لیسه ",
+                  grades: dataDari.primary.grades,
+                  school_path: base_path + dataDari.primary.base_path,
                 },
                 Pashto: {
-                  grades: dataPashto.high_school.grades,
-                  school_path: base_path + dataPashto.high_school.base_path,
-                  section_Name:  `د ${t("section7")}`,
+                  grades: dataPashto.primary.grades,
+                  school_path: base_path + dataPashto.primary.base_path,
                 },
               }}
             >
-              <img src={image3} />
-              <h1>{t("section7")} </h1>
-              <p>{t("section8")}</p>
-              <p></p>
+              <img src={image1} />
+              <h1>{t("section3")}</h1>
+              <p>{t("section4")}</p>
+              <p>{t("section13")}</p>
+              <p>{t("section14")}</p>
             </Link>
           </li>
         </ul>
-        <div className="svg2">
-          <foreignObject width={"40%"} height={"40%"} x={5} y={5}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={95.444}
-              height={83.662}
-              {...props}
-            >
-              <path
-                fill="#e6e6e6"
-                d="M86.369 79.086a4.537 4.537 0 1 1 4.537 4.577 4.557 4.557 0 0 1-4.537-4.577Zm-28.79 0a4.538 4.538 0 1 1 4.537 4.577 4.557 4.557 0 0 1-4.537-4.577Zm-28.79 0a4.537 4.537 0 1 1 4.537 4.577 4.557 4.557 0 0 1-4.536-4.577ZM0 79.086a4.537 4.537 0 1 1 4.537 4.577A4.557 4.557 0 0 1 0 79.086Zm86.369-24.837a4.537 4.537 0 1 1 4.537 4.577 4.558 4.558 0 0 1-4.537-4.577Zm-28.79 0a4.538 4.538 0 1 1 4.537 4.577 4.558 4.558 0 0 1-4.537-4.577Zm-28.79 0a4.537 4.537 0 1 1 4.537 4.577 4.557 4.557 0 0 1-4.536-4.577ZM0 54.249a4.537 4.537 0 1 1 4.537 4.577A4.557 4.557 0 0 1 0 54.249Zm86.369-24.836a4.537 4.537 0 1 1 4.537 4.577 4.558 4.558 0 0 1-4.537-4.577Zm-28.79 0a4.538 4.538 0 1 1 4.537 4.577 4.558 4.558 0 0 1-4.537-4.577Zm-28.79 0a4.537 4.537 0 1 1 4.537 4.577 4.557 4.557 0 0 1-4.536-4.577ZM0 29.413a4.537 4.537 0 1 1 4.537 4.577A4.557 4.557 0 0 1 0 29.413ZM86.369 4.577a4.537 4.537 0 1 1 4.537 4.577 4.558 4.558 0 0 1-4.537-4.577Zm-28.79 0a4.538 4.538 0 1 1 4.537 4.577 4.558 4.558 0 0 1-4.537-4.577Zm-28.79 0a4.537 4.537 0 1 1 4.537 4.577 4.557 4.557 0 0 1-4.536-4.577ZM0 4.577a4.537 4.537 0 1 1 4.537 4.577A4.557 4.557 0 0 1 0 4.577Z"
-              />
-            </svg>
-          </foreignObject>
-        </div>
-        <div className="svg3">
-          <foreignObject width={"20%"} height={"20%"} x={-3} y={-3}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={94.185}
-              height={91.531}
-              // {...props}
-            >
-              <g fill="none">
-                <path d="M63.413 91.531-.003 18.324 94.182 0Z" />
-                <path
-                  fill="#edc315"
-                  d="m59.512 71.754 19.72-58.657L18.874 24.84l40.638 46.914m3.901 19.777L0 18.324 94.185 0 63.413 91.531Z"
-                />
-              </g>
-            </svg>
-          </foreignObject>
+        <div className="section_four_images">
+          <img className="dot_sectionn" src={dot} />
+          <img className="svgtwo_section" src={svgtwo} />
         </div>
       </div>
+
+
+
+
+
+
+
+
+
       <div className="mobile-section">
         <div className="mob-sec-header">
           <div className="prevuse" onClick={() => navigate(-1)}>
@@ -207,6 +164,8 @@ const Section = ({ t }, props) => {
                 <img src={image1} />
                 <h1>{t("section3")}</h1>
                 <p>{t("section4")}</p>
+              <p>{t("section13")}</p>
+              <p>{t("section14")}</p>
               </Link>
             </li>
             <li>
@@ -226,6 +185,8 @@ const Section = ({ t }, props) => {
                 <img src={image2} />
                 <h1>{t("section5")} </h1>
                 <p>{t("section6")}</p>
+              <p>{t("section11")}</p>
+              <p>{t("section12")}</p>
               </Link>
             </li>
             <li>
@@ -245,6 +206,8 @@ const Section = ({ t }, props) => {
                 <img src={image3} />
                 <h1>{t("section7")} </h1>
                 <p>{t("section8")}</p>
+              <p>{t("section9")}</p>
+              <p>{t("section10")}</p>
                 <p></p>
               </Link>
             </li>
@@ -266,3 +229,4 @@ const Section = ({ t }, props) => {
 };
 
 export default withNamespaces()(Section);
+
