@@ -229,3 +229,4 @@ const Section = ({ t }, props) => {
 };
 
 export default withNamespaces()(Section);
+

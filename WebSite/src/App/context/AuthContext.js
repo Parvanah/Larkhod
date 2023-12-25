@@ -60,7 +60,7 @@ export const AuthProvider = ({ children }) => {
       });
       console.log(response.data);
       setIsLoading(false);
-      setCurrentPath("/header");
+      setCurrentPath("/home");
     } catch (error) {
       console.log(email);
       console.log(password);
