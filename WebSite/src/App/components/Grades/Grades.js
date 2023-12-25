@@ -81,7 +81,6 @@ const Grads = ({ t },props) => {
       </div>
     </div>
   );
-        // }
 };
 export default  withNamespaces()(Grads) ;
 
