@@ -46,54 +46,12 @@ const Section = ({ t }, props) => {
           <div className="title_section">
             <h1 className="title_one_section">{t("section1")}</h1>
             <p className="title_two_section">{t("section2")}</p>
+            <img className="svg-mobile-section-one" src={shape1} />
           </div>
         </div>
         {/* ul-section */}
         <ul className="section_three_ul">
         <li>
-            <Link
-              to="/grades"
-              state={{
-                Dari: {
-                  grades: dataDari.high_school.grades,
-                  school_path: base_path + dataDari.high_school.base_path,
-                },
-                Pashto: {
-                  grades: dataPashto.high_school.grades,
-                  school_path: base_path + dataPashto.high_school.base_path,
-                },
-              }}
-            >
-              <img src={image3} />
-              <h1>{t("section7")} </h1>
-              <p>{t("section8")}</p>
-              <p>{t("section9")}</p>
-              <p>{t("section10")}</p>
-              <p></p>
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/grades"
-              state={{
-                Dari: {
-                  grades: dataDari.secondary.grades,
-                  school_path: base_path + dataDari.secondary.base_path,
-                },
-                Pashto: {
-                  grades: dataPashto.secondary.grades,
-                  school_path: base_path + dataPashto.secondary.base_path,
-                },
-              }}
-            >
-              <img src={image2} />
-              <h1>{t("section5")} </h1>
-              <p>{t("section6")}</p>
-              <p>{t("section11")}</p>
-              <p>{t("section12")}</p>
-            </Link>
-          </li>
-          <li>
             <Link
               to="/grades"
               state={{
@@ -114,10 +72,54 @@ const Section = ({ t }, props) => {
               <p>{t("section14")}</p>
             </Link>
           </li>
+          <li>
+            <Link
+              to="/grades"
+              state={{
+                Dari: {
+                  grades: dataDari.secondary.grades,
+                  school_path: base_path + dataDari.secondary.base_path,
+                },
+                Pashto: {
+                  grades: dataPashto.secondary.grades,
+                  school_path: base_path + dataPashto.secondary.base_path,
+                },
+              }}
+            >
+              <img className="imag_sectin_l" src={image2} />
+              <h1>{t("section5")} </h1>
+              <p>{t("section6")}</p>
+              <p>{t("section11")}</p>
+              <p>{t("section12")}</p>
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/grades"
+              state={{
+                Dari: {
+                  grades: dataDari.high_school.grades,
+                  school_path: base_path + dataDari.high_school.base_path,
+                },
+                Pashto: {
+                  grades: dataPashto.high_school.grades,
+                  school_path: base_path + dataPashto.high_school.base_path,
+                },
+              }}
+            >
+              <img className="imag_sectin_l" src={image3} />
+              <h1>{t("section7")} </h1>
+              <p>{t("section8")}</p>
+              <p>{t("section9")}</p>
+              <p>{t("section10")}</p>
+              <p></p>
+            </Link>
+          </li>
         </ul>
         <div className="section_four_images">
           <img className="dot_sectionn" src={dot} />
           <img className="svgtwo_section" src={svgtwo} />
+          <img className="svg-mobile-section-two" src={Shape3} />
         </div>
       </div>
 
@@ -129,7 +131,7 @@ const Section = ({ t }, props) => {
 
 
 
-      <div className="mobile-section">
+      {/* <div className="mobile-section">
         <div className="mob-sec-header">
           <div className="prevuse" onClick={() => navigate(-1)}>
             <img src={image4} />
@@ -222,7 +224,7 @@ const Section = ({ t }, props) => {
           </div>
         </div>
         <div />
-      </div>
+      </div> */}
     </div>
   );
   //  }
