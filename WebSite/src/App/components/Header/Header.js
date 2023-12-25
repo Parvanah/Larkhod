@@ -21,6 +21,7 @@ import Home from "../Home/Home";
 import logoSideBar from "../../assets/logo_5.png";
 import MobileArrowClose from "../../assets/Path 2777.png";
 import MobileArrowOpen from "../../assets/Path 2778.png";
+import lessonList from "../../assets/Group-271.png";
 
 // import butimg from "../../assets/Path_7";
 // import buttom_img from "../../assets/Path_7.png";
@@ -129,7 +130,7 @@ const Header = ({ t }, props) => {
   };
 
   // useEffect(() => {
-  //   if (window.location.pathname !== "/header") {
+  //   if (window.location.pathname !== "/home") {
   //     openProfile(false);
   //   }
   // });
@@ -137,7 +138,7 @@ const Header = ({ t }, props) => {
   return (
     <div className="full_header">
       <nav className="header">
-        <Link to="/header"></Link>
+        <Link to="/home"></Link>
         <div className="nav_header">
           <ul className="ul_header">
             <li className="li_header">
@@ -193,7 +194,7 @@ const Header = ({ t }, props) => {
             </li>
             <hr className="vl_header" />
             <li className="li_header">
-              <Link className="link_nav_header" to="/header">
+              <Link className="link_nav_header" to="/home">
                 {t("header12")}
               </Link>
             </li>
@@ -256,6 +257,7 @@ const Header = ({ t }, props) => {
           <div className="leftTop">
             <img src={topimag} />
             <h1>لارښود - Larkhod</h1>
+
           </div>
           <div className="lng">
             <div className="selctedoption">
@@ -319,6 +321,7 @@ const Header = ({ t }, props) => {
           </div>
           <div className="menu" onClick={handleSideBar}>
             <FiMenu className="menuIcon" />
+            
           </div>
         </div>
         <div
@@ -399,7 +402,7 @@ const Header = ({ t }, props) => {
             </li>
             <li className="li_header"><Link
                 className="link_nav_header"
-                to="/header"
+                to="/home"
                 onClick={handleSideBar}
               >
                 {t("header12")}

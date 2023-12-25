@@ -27,7 +27,7 @@ const Books = ({ t }, props) => {
   const subjects = locationData.subjects;
   console.log(subjects);
   const grade_path = locationData.grade_path;
-
+  const grade_name = locationData.grade_name;
   const navigate = useNavigate();
   const leftScroll = () => {
     const slider = document.getElementById("ul");
@@ -99,7 +99,7 @@ const Books = ({ t }, props) => {
             {/* </div> */}
           </div>
           <div className="first-section">
-            <h1>{t("books1")}</h1>
+            <h1>{t("books1")} {grade_name} </h1>
             <p> {t("books2")}</p>
           </div>
           <div className="third-section">
@@ -137,8 +137,9 @@ const Books = ({ t }, props) => {
                     to="/lessons"
                     state={{
                       lessons: item.parts,
-                      title: " مضمون " + item.label,
-                      subject_path: grade_path + item.subject_path,
+                      title: t("sectionlang") === "dari" ? `${grade_name} , مضمون ${item.label} `: `${grade_name} , ${item.label} مضمون`,
+                      subject_path: grade_path + item.subject_path ,
+
                     }}
                     id="link"
                   >
@@ -164,6 +165,7 @@ const Books = ({ t }, props) => {
                     state={{
                       units: item.parts,
                       subject_path: grade_path + item.subject_path,
+                      grade_name: t("sectionlang") === "dari"? grade_name + ` کتاب ${item.label} ` : grade_name +` ${item.label} کتاب `
                     }}
                     id="link"
                   >

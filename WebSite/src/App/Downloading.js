@@ -84,7 +84,7 @@ const Downloading = ({ t }, props) => {
           <div className="BookD_list">
             <div className="second-second-d">
               <div className="p-container-d">
-                <p className="p-downloding">{t("downloading1")}</p>
+                <p className="p-downloding">{t("downloading1")} {grade_name}</p>
                 <p id="p-downloding"> {t("downloading2")}</p>
               </div>
               <div className="Download-ul" id="Download-ul">

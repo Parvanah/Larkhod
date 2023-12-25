@@ -1,4 +1,5 @@
 import { AuthContext } from "../../context/AuthContext";
+import { TailSpin } from "react-loader-spinner";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { withNamespaces } from "react-i18next";
@@ -124,9 +125,9 @@ const Lessons = ({ t }, props) => {
             <img src={photo4} />
           </div>
           <div className="text">
-            <h3 className="Lesson_title">
-              {t("lessons1")} {unit}
-            </h3>
+            <h4 className="Lesson_title">
+              { t("sectionlang") === "dari"? `${t("lessons1")} ${unit}`:`د ${unit}  ${t("lessons1")}`}
+            </h4>
             <div className="sidebar-lessons">
               <div className="inside_sidebar-lessons">
                 {unitsPath ? (
@@ -179,8 +180,9 @@ const Lessons = ({ t }, props) => {
           <div className="title">
             <div className="main_lesson_title">
               {IsLoading ? (
-                <div>Loading...</div>
-              ) : (
+                <div><TailSpin width={"30px"} color=" #474646" height={"30px"}/></div>
+              ) 
+              : (
                 <h1>{`${unit} _ ${title}`}</h1>
               )}
             </div>
@@ -194,7 +196,7 @@ const Lessons = ({ t }, props) => {
                     `${subject_path + lesson_path.paths[pageNum]}?t=` +
                     timeStamp
                   }
-                  style={IsLoading ? { opacity: 0 } : { opacity: 1 }}
+                  style={IsLoading? { opacity: 0} : {opacity: 1} }
                   onLoad={() => {
                     setIsLoading(false);
                   }}
@@ -229,7 +231,7 @@ const Lessons = ({ t }, props) => {
                       }
                 }
               >
-                {IsLoading ? "Loading" : t("lessons4")}
+                {IsLoading ? <TailSpin width={"30px"} color=" #474646" height={"30px"}/> : t("lessons4")}
               </button>
               <button
                 onClick={handlePageBack}
@@ -243,10 +245,11 @@ const Lessons = ({ t }, props) => {
                     : {
                         backgroundImage: `linear-gradient(to left , ${backBtn.FirstColor},
     ${backBtn.secondColor})`,
+    
                       }
                 }
               >
-                {IsLoading ? "Loading" : t("lessons5")}
+                {IsLoading ? <TailSpin width={"25px"} color=" #474646" height={"20px"}/> : t("lessons5")}
               </button>
             </div>
           </div>
@@ -328,7 +331,7 @@ const Lessons = ({ t }, props) => {
             </div>
             <img src={photo6} className="imgTop" alt="pic"></img>
             <div className="title-mob1">
-              {IsLoading ? <div>Loading</div> : <p>{`${unit}- ${title}`}</p>}
+              {IsLoading ? <div><TailSpin width={"25px"} color=" #474646" height={"20px"}/></div> : <p>{`${unit}- ${title}`}</p>}
             </div>
           </div>
         </div>
@@ -377,7 +380,7 @@ const Lessons = ({ t }, props) => {
                     }
               }
             >
-              {IsLoading ? "Loading" : t("lessons4")}
+              {IsLoading ? <TailSpin width={"25px"} color=" #474646" height={"20px"}/> : t("lessons4")}
             </button>
             <button
               onClick={handlePageBack}
@@ -394,7 +397,7 @@ const Lessons = ({ t }, props) => {
                     }
               }
             >
-              {IsLoading ? "Loading" : t("lessons5")}
+              {IsLoading ? <TailSpin width={"20px"} color="black" height={"20px"}/> : t("lessons5")}
             </button>
           </div>
         </div>

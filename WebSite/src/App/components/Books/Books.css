@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     background-color: #DAECF2;
-    height: 90%;
+    height:88%;
 }
 
 .full_book #Books {
@@ -33,8 +33,18 @@
     align-items: center;
     flex:15%;
     cursor: pointer;
+    
+    height: 60%;
 }
+.full_book #Books .top .first-svgs .arrowSvg{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    
 
+}
 .full_book #Books .top .first-section {
     flex: 70%;
     display: flex;
@@ -47,17 +57,23 @@
 
 .full_book #Books .top .first-section h1 {
     font-family: "Bahij helvetica";
-    font-size: 40px;
+    font-size: 4vw;
+    text-align: center;
 }
 
 .full_book #Books .top .first-section p {
     font-family: "Bahij helvetica";
-    font-size: 25px;
+    font-size: 3vw;
+    text-align: center;
 }
 
 .full_book #Books .top .third-section {
     flex: 15%;
-    /* background-color: antiquewhite; */
+    
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .full_book #Books .middlebook {
@@ -76,6 +92,8 @@
     align-items: center;
     color: white;
     font-family: "Bahij helvetica";
+    font-size: 15px;
+   
 }
 
 .full_book #Books .middlebook .arrrow {
@@ -171,29 +189,29 @@
         flex-direction: row;
         justify-content: space-between;
         width:100%;
-        height:100%;
-        /* background-color: black; */
+        height:60%;
     }
-    /* .image1 {
-        background-color: red;
-    } */
+    .image1 {
+        
+        display: none;
+    }
     .full_book .MBooks .TopB {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        width: 90%;
-        flex:1;
+        width:90%;
+        height:30%;
     }
 
     .topp h1 {
         font-family: "Bahij helvetica";
         color: #3C98BD;
-        font-size: 4vw;
+        font-size:3vw;
     }
 
     .topp p {
-        font-size:4vw;
+        font-size:3vw;
         font-family: "Bahij helvetica";
         color: #3C98BD;
     }
@@ -204,7 +222,7 @@
         align-items: center;
         color: white;
         font-family: "Bahij helvetica";
-        font-size:2vw;
+        font-size:13px;
     }
 
     .full_book .MBooks .TopB .imgbm2 {
@@ -229,10 +247,20 @@
         display: none;
     }
 
-    .full_book .MBooks .TopB .arrowSvg {
+   .arrowSvg {
         display: flex;
+        justify-content:start;
+        align-items: center;
+        height:50%; 
+        width:100%;
+       
+         
     }
-
+    .arrowSvg img {
+        width: 20px;
+        /* height: 20px; */
+        cursor: pointer;
+    }
     .full_book .MBooks .TopB .Mbarrow {
         display: none;
     }
@@ -241,7 +269,7 @@
         font-size: 17px;
         display: flex;
         flex-direction: column;
-        justify-content: end;
+        justify-content: center;
         align-items: center;
         text-align: center;
         height:100%; 
@@ -254,13 +282,12 @@
         align-items: center;
         text-align: center;
         width:80%;
-        flex:1;
     }
 .titlesm {
     font-family: "Bahij helvetica";
     text-align:center;
     align-items: center;
-  font-size:2vw;
+  font-size:13px;
   width:100%;
 }
     .full_book .MBooks .middlebook .arrow {
@@ -285,6 +312,9 @@
         text-align: center;
         flex:3;
         overflow-x:scroll;
+        margin-top: 0;
+        margin-bottom: 0;
+        /* overflow-y: hidden; */
     }
 
    
@@ -302,9 +332,12 @@
         align-items: end;
         justify-content:center;
         padding:10%;
-        height:150px;
+        height:25vw;
         border-radius: 15px;
         border-radius:15px;
+    }
+    .full_book .MBooks .middlebook #ul{
+
     }
 
     .full_book .MBooks .middlebook #ul a .MBicon {
@@ -330,7 +363,7 @@
         text-align: center;
     }
 
-    topp h1 {
+    .topp h1 {
         font-family: "Bahij helvetica";
         color: #3C98BD;
     }
@@ -406,20 +439,22 @@
 
     .full_book .MBooks .TopB .arrowSvg {
         display: flex;
-        width:90%;
+        width:100%;
         align-items: end;
         height:30%;
+        
         /* margin-top:5%; */
         /* margin-left:8%; */
     }
     .full_book .MBooks .TopB .arrowSvg img {
-        width:6vw;
+        width: 20px;
+        /* height: 20px; */
         cursor: pointer;
     }
 
  .Mbarrow {
         display: flex;
-        background-color:red;
+        /* background-color:red; */
     }
 
     .full_book .MBooks .ButtomB .laptop-right {
@@ -448,6 +483,11 @@
         color: #707070;
         text-align: center;
     }
+    .full_book .MBooks .middlebook .MobileBooks{
+    /* background-color: red; */
+    height: 100%;
+    padding: 0;
+    }
     /* .Mbarrow {
         margin-bottom:10%;
         margin-left:0%;
@@ -455,14 +495,15 @@
         background-color: black;
     } */
     #linkM {
-        margin: 2%;
+        /* margin: 0% 2%; */
         background-image: linear-gradient(#0F53A1, #3C98BD);
         display: flex;
         flex-direction: column;
         align-items: end;
         justify-content:center;
-        padding:10%;
+        padding:8%;
         height:150px;
+        /* padding: 100%; */
         border-radius: 10px;
         border-radius:15px;
     }
@@ -472,7 +513,6 @@
 @media screen and (max-width: 438px) {
     .full_book .MBooks .TopB .topp h1 {
         font-size: 15px;
-
     }
 
     .full_book .MBooks .ButtomB .p {
@@ -522,14 +562,13 @@
     .full_book {
         height: 342px;
        
-    }
-   
+    }  
 }
 
 @media screen and (max-height: 520px) {
-    .full_book {
+    /* .full_book {
         height: 600px;
-    }
+    } */
     .full_book #Books .top .first-section h1 {
         font-family: "Bahij helvetica";
         font-size:25px;
@@ -540,4 +579,50 @@
         font-size:20px;
     }
     
+}
+@media screen and (max-height: 705px) {
+    .full_book #Books .top .first-svgs .laptop-svg .image1{
+        height: 80%;
+        width: 80%;
+    }
+    /* .full_book #Books .top .third-section{
+        background-color: #707070;
+        height: 80%;
+        
+    } */
+    .full_book #Books .top .third-section .laptop-right{
+        height: 80%;
+        width: 80%;
+    }
+    .full_book #Books .top .first-section h1{
+      font-size: 3vw;
+
+    }
+    .full_book #Books .top .first-section p{
+        font-size: 2vw;
+    }
+    .full_book #Books .bottom  .laptop-right{
+    
+    height: 60%;
+    }
+    .full_book #Books .bottom  .laptop-right .imageb2{
+        margin-top: 20%;
+        height: 80%;
+
+    }
+    .full_book #Books .bottom .last-svg{
+        
+        height: 60%;
+    }
+    .full_book #Books .bottom .last-svg .image4{
+        height: 80%;
+        width: 100%;
+        margin-top: 20%;
+    }
+
+}
+@media screen and (max-height: 520px) and (min-width: 769px) {
+    .full_book {
+        height: 600px;
+    }
 }
