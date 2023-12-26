@@ -82,7 +82,18 @@ const LogIn = ({ t }, props) => {
     } else if (values.password.length < 8) {
       errors.password = <>{t("login12")}</>;
     } else if (backendError !== "") {
-      errors.password = <>{backendError}</>;
+      if( backendError === "No User Found"){
+        errors.password = <>{t("No User Found")}</>;
+      } else if( backendError === "Incorrect email or password"){
+        errors.password = <>{t("Incorrect email or password")}</>;
+      } else if(backendError === "not connected"){
+        errors.password = <>{t("You are not connected with server")}</>
+      }
+      else{
+        errors.password = <>{backendError}</>
+
+      }
+      
     }
 
     return errors;
