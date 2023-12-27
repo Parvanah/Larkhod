@@ -2,7 +2,7 @@
 .full_header {
   color: white;
   width: 100%;
-  height: 12%;
+  height: 90px;
   overflow: hidden;
   z-index: 3000;
   overflow: visible;
@@ -18,23 +18,19 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  font-size: 1.3vw;
   font-family: "Bahij Helvetica";
   font-weight: bold;
-  /* align-items: center; */
 }
 .full_header .header .nav_header {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   height: 100%;
-  /* background-color: #aaaaaa; */
   width: 100%;
 }
 .full_header .header .nav_header .ul_header {
   width: 70%;
-  margin-right: 10%;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -50,65 +46,88 @@
 }
 .full_header .header .nav_header .ul_header .li_header .link_nav_header {
   color: #FFF;
-  font-size: 15px;
+  font-size: 1.5vw;
+  font-weight: bold;
 }
 .full_header .header .nav_header .ul_header .vl_header {
   align-items: center;
-  border-left: 1px solid white;
+  border-left: 2px solid white;
   height: 17px;
   display: inline-block;
 }
+.all_buttonss {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.button_singupp {
+  background-image: linear-gradient(to right, rgb(31, 111, 143), rgba(60, 152, 189, 1));
+  border-color: white;
+  width: 9vw;
+  height: 3vw;
+  cursor: pointer;
+  margin: 2%;
+  flex: 1;
+  border-radius: 50px;
+  border-width: 1px;
+  border-style: solid;
+  font-family: "Bahij Helvetica";
+  font-size: 1.5vw;
+  box-shadow: 0px 0px 5px #aaaaaa;
+  color: white;
+  text-align: center;
+}
 .icon_header {
-  font-size: 20px;
-  width: 12%;
+  font-size: 2.1vw;
   position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  margin-right: 5vw;
 }
 .insideProfile {
-  width: 12%;
+  /* width:10%; */
 }
 .insideProfile ul {
   list-style: none;
 }
 .dropDownProfile {
+  justify-content: start;
   position: absolute;
-  top: 160%;
+  top: 3vw;
+  margin-right: -3vw;
   right: 0;
-  width: 100%;
-  padding: 1%;
-  border-radius: 8px;
+  width: 8vw;
   background-color: white;
-  border: 1px solid gray;
   color: rgba(60, 152, 189, 1);
   text-align: right;
-  font-size: 15px;
+  font-size: 1.5vw;
   z-index: 200;
-
+  list-style: none;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.dropDownProfile ul :hover {
+  background-color: #f0f0f0;
+}
+.dropDownProfile ul
+li {
+padding: 0px 10px 10px 10px;
+cursor: pointer;
+color: rgba(60, 152, 189, 1);
+text-align: right;
+font-size: 1.1vw;
+}
+.changefrofilr_button_header{
+  padding-top: 10px !important;
 }
 .dropDownProfile ul{
   text-align: right;
-  width: 100%;
   z-index: 300;
-}
-#button_header {
-  margin-left: 5px;
-  background-image: linear-gradient(
-    to right,
-    rgb(31, 111, 143),
-    rgba(60, 152, 189, 1)
-  );
-  border-color: white;
-  padding: 4px 30px 4px 30px;
-  border-radius: 50px;
-  border-width: 1px;
-  font-size: 20px;
-  font-family: "Bahij Helvetica";
-  font-weight: bold;
-  box-shadow: 0px 0px 5px #aaaaaa;
 }
 
 .lng,
@@ -119,7 +138,6 @@
   justify-content: center;
   align-items: center;
   border: 1px solid #fff;
-  /* padding: 4px; */
   border-radius: 2px;
   position: relative;
   height: 40%;
@@ -137,7 +155,7 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 1.5vw;
 
 }
 .lng .selctedoption img,
@@ -162,13 +180,11 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  background-color: #fff;
+  background-color: white;
   border-radius: 2px;
   border: 1px solid #ccc;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 2000;
-  transition: all 2s linear 1s;
-
 }
 .lng .lng-menu .dropdown-menu li,
 .full_header
@@ -183,40 +199,24 @@
   cursor: pointer;
   color: rgba(60, 152, 189, 1);
   text-align: right;
-  font-size: 15px;
+  font-size: 1.1vw;
 }
 
 .lng .lng-menu .dropdown-menu li:hover,
 .li_header_book .bookMenue .dropdown-menu li:hover {
   background-color: #f0f0f0;
 }
-.dropDownProfile::before {
-  content: "";
-  position: absolute;
-  top: -0.7rem;
-  right: 5vw;
-  width: 20px;
-  height: 20px;
-  transform: rotate(45deg);
-  background-color: white;
-  border-left: 1px solid gray;
-  border-top: 1px solid gray;
-}
 .changefrofilr_button_header {
-  border-bottom: 1px solid rgb(231, 228, 228) !important;
   color: rgba(60, 152, 189, 1) !important;
   cursor: pointer !important;
-  /* width: 120px; */
 }
 .logout_button_header {
-  /* border-bottom: 1px solid rgb(231, 228, 228) !important; */
   color: rgba(60, 152, 189, 1) !important;
   cursor: pointer !important;
-  /* width: 120px; */
 }
 
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 769px) {
   .full_header .header {
     display: none;
   }
