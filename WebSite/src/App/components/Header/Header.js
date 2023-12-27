@@ -3,31 +3,31 @@ import { withNamespaces } from "react-i18next";
 import { FaUser } from "react-icons/fa";
 import "./Header.css";
 import { Link } from "react-router-dom";
-import React, { Component, useEffect } from "react";
-import { useState } from "react";
-import img1 from "../../assets/logo.png";
-import img from "../../assets/larg.png";
-import imgg from "../../assets/smal.png";
+import React, { useEffect } from "react";
+import { useState,useRef,useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
-import { useContext } from "react";
 import { FiMenu } from "react-icons/fi";
 import topimag from "../../assets/logo_3.png";
-import middleimg from "../../assets/logo_2.png";
 import arrowOpen from "../../assets/Path-1005.png";
 import arrowClose from "../../assets/Path-1006.png";
 import { ImCross } from "react-icons/im";
 import i18n from "../../../i18n";
-import Home from "../Home/Home";
 import logoSideBar from "../../assets/logo_5.png";
 import MobileArrowClose from "../../assets/Path 2777.png";
 import MobileArrowOpen from "../../assets/Path 2778.png";
-import lessonList from "../../assets/Group-271.png";
-
+{/* <link rel="stylesheet" href="./Header.css" />; */}
+// import img1 from "../../assets/logo.png";
+// import img from "../../assets/larg.png";
+// import imgg from "../../assets/smal.png";
+// import middleimg from "../../assets/logo_2.png";
+// import lessonList from "../../assets/Group-271.png";
+// import Home from "../Home/Home";
 // import butimg from "../../assets/Path_7";
 // import buttom_img from "../../assets/Path_7.png";
 // import down_img from "../../assets/Path_39.png";
-<link rel="stylesheet" href="./Header.css" />;
 
+
+ 
 const Header = ({ t }, props) => {
   const navigate = useNavigate();
   const { Loggout, userInfo, isLoading } = useContext(AuthContext);
@@ -128,15 +128,30 @@ const Header = ({ t }, props) => {
   const handleProfileOption = () => {
     setOpenProfile(false);
   };
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
 
-  // useEffect(() => {
-  //   if (window.location.pathname !== "/home") {
-  //     openProfile(false);
-  //   }
-  // });
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen("none");
+        setIsClose("flex");
+        setOpenProfile(false);
+        setIsOpenBookMenue(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
-    <div className="full_header">
+    <div ref={dropdownRef} className="full_header">
       <nav className="header">
         <Link to="/home"></Link>
         <div className="nav_header">
@@ -154,7 +169,7 @@ const Header = ({ t }, props) => {
             </li>
             <hr className="vl_header" />
             <li className="li_header_book">
-              <div className="selctedoption ">
+              <div className="selctedoption">
                 <div onClick={handleBookMenueToggle}>
                   {t("header5")}
                   <img
@@ -162,7 +177,7 @@ const Header = ({ t }, props) => {
                     alt="arrowIcon"
                   />
                 </div>
-                <div className="bookMenue">
+                <div  className="bookMenue">
                   {isOpenBookMenue && (
                     <ul className="dropdown-menu">
                       {bookOptions.map((i) => (
@@ -200,28 +215,20 @@ const Header = ({ t }, props) => {
             </li>
             <hr className="vl_header" />
           </ul>
-          <div className="lng">
-            <div className="selctedoption" onClick={handleToggle}>
-              <div>{selectedOption || t("header11")}</div>
-              <div onClick={handleToggle} style={{ display: isClose }}>
-                <img src={arrowOpen} />
-              </div>
-              <div style={{ display: isOpen }}>
-                <img src={arrowClose} />
-              </div>
+             <div className="all_buttonss">
+              <button
+                className="button_singupp"
+                onClick={() => changeLanguage("dari")}
+              >
+                زبان دری
+              </button>
+              <button
+                className="button_singupp"
+                onClick={() => changeLanguage("pashto")}
+              >
+                پشتو ژبه
+              </button>
             </div>
-            <div className="lng-menu">
-              {isOpen === "flex" && (
-                <ul className="dropdown-menu">
-                  {options.map((option) => (
-                    <li key={option} onClick={() => handleOptionClick(option)}>
-                      {option.name}
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          </div>
           <div className="icon_header">
             <FaUser onClick={() => setOpenProfile((prev) => !prev)} />
             <div className="insideProfile">
