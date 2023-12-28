@@ -27,7 +27,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height:15%;
+    height:5%;
     /* flex: 0; */
 }
 
@@ -38,7 +38,7 @@
     justify-content:end;
     align-items: start;
     width:90VW;
-    height:10%;
+    height:18%;
     cursor:pointer;
 }
 
@@ -46,10 +46,10 @@
     /* flex: 2; */
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content:center;
     align-items: center;
     width: 80%;
-    /* height:0%; */
+    /* height:100%; */
     /* margin-bottom: 2%; */
 }
 
@@ -130,8 +130,8 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 200px;
-    height: 160px;
+    width: 170px;
+    height: 140px;
     margin: 12px;
     border: none;
     border-radius: 15px;
@@ -164,6 +164,7 @@
     flex-direction: row;
     width: 100%;
     /* flex: 1; */
+    height:33%;
 }
 
 .full_unit .units .last .p-svg {
@@ -297,7 +298,12 @@
         width:100%;
       
     }
-    
+    .full_unit .units .t-section #laptop-top #header-gradename{
+        color:white;
+        font-size:4vw;
+        font-family: "Bahij helvetica";
+        text-align: center;
+    }
     .full_unit .units .t-section {
         /* padding:40px; */
         display: flex;
@@ -305,19 +311,20 @@
         justify-content: space-between;
         align-items: center;
         width:80%;
+        height: 100%;
     }
     .full_unit .units .svgArrow  {
         display: flex;
         flex-direction: column;
-        width:80%;
-        height:14%;
+        width:86%;
+        height:19%;
         cursor:pointer;
-       
-        .flesh-image-grade-U {
+        align-items:start;
+    }
+     .flesh-image-grade-U {
             display: flex;
             width:6vw;
         }
-    }
     .full_unit .units .t-section #laptop-top {
        
         display: flex;
@@ -325,8 +332,8 @@
         justify-content:center;
         align-items: center;
         width:0%;
-        height: 80%;
-        flex: 3;
+        height:80%;
+        flex:3;
         /* margin-top: 10%; */
     }
     
@@ -356,12 +363,13 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        width:90%;
+        width:100%;
         cursor: pointer;
         behavior: "smooth";
         /* margin-left: 30px; */
-        flex:1;
-        margin-bottom: -5%;
+        /* flex:1; */
+        height:90%;
+        /* margin-bottom: -5%; */
     }
     
     .full_unit .units .unitWrapper .arrow {
@@ -434,8 +442,10 @@
     .full_unit .units .last {
         display: flex;
         flex-direction: row;
+       justify-content: center;
         width: 100%;
-        flex: 1;
+        /* flex: 1; */
+        height:80%;
     }
     
     .full_unit .units .last .p-svg {

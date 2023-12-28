@@ -37,13 +37,11 @@
     height: 60%;
 }
 .full_book #Books .top .first-svgs .arrowSvg{
-    height: 100%;
+    height: 60%;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
-    
-
 }
 .full_book #Books .top .first-section {
     flex: 70%;
@@ -184,6 +182,13 @@
         height: 100vh;
        
     }
+    .arroeBb {
+        margin-bottom:5%;
+        margin-left:4%;
+        cursor: pointer;
+        display: flex;
+        align-items:start;
+    }
     .second-sectino-book {
         display: flex;
         flex-direction: row;
@@ -208,12 +213,16 @@
         font-family: "Bahij helvetica";
         color: #3C98BD;
         font-size:3vw;
+        font-weight: bold;
+        align-items: center;
     }
 
     .topp p {
         font-size:3vw;
         font-family: "Bahij helvetica";
         color: #3C98BD;
+         align-items: center;
+       
     }
 
     .titlesm {
@@ -250,11 +259,9 @@
    .arrowSvg {
         display: flex;
         justify-content:start;
-        align-items: center;
-        height:50%; 
+        align-items: end;
+        height:40%; 
         width:100%;
-       
-         
     }
     .arrowSvg img {
         width: 20px;
@@ -278,7 +285,7 @@
     .full_book .MBooks .middlebook {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content:center;
         align-items: center;
         text-align: center;
         width:80%;
@@ -287,7 +294,7 @@
     font-family: "Bahij helvetica";
     text-align:center;
     align-items: center;
-  font-size:13px;
+    font-size:2vw;
   width:100%;
 }
     .full_book .MBooks .middlebook .arrow {
@@ -401,11 +408,12 @@
         overflow-x:hidden;
         /* background-color: red; */
     }
-    .Mbarrow {
+    /* .Mbarrow {
         margin-bottom:30%;
         margin-left:4%;
         cursor: pointer;
-    }
+        background-color: black;
+    } */
     /* .second-sectino-book {
         background-color: black;
         display: flex;
@@ -478,7 +486,7 @@
     }
 
     .p {
-        font-size: 20px;
+        font-size: 18px;
         font-family: "Bahij helvetica";
         color: #707070;
         text-align: center;
@@ -512,11 +520,11 @@
 
 @media screen and (max-width: 438px) {
     .full_book .MBooks .TopB .topp h1 {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .full_book .MBooks .ButtomB .p {
-        font-size: 15px;
+        font-size: 14px;
         margin: 2%;
     }
 
@@ -530,15 +538,16 @@
     .full_book .MBooks .TopB .topp h1 {
         font-size:14px;
 
+
     }
 
     .full_book .MBooks .ButtomB .p {
-        font-size: 18px;
+        font-size:14px;
     }
 
     .full_book .MBooks .TopB .topp p {
 
-        font-size: 18px;
+        font-size: 14px;
     }
 }
 
@@ -561,7 +570,6 @@
 @media screen and (max-height: 342px) and (max-width: 768px) {
     .full_book {
         height: 342px;
-       
     }  
 }
 
@@ -625,4 +633,5 @@
     .full_book {
         height: 600px;
     }
+
 }

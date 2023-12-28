@@ -251,7 +251,7 @@ const Books = ({ t }, props) => {
             <img src={imageb1} className="image1" />
           </div>
           <div className="topp">
-            <h1>{t("books1")}</h1>
+            <h1>{t("books1")} {grade_name}</h1>
             <p> {t("books2")}</p>
           </div>
           <div className="imgbm2">

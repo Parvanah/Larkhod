@@ -50,7 +50,7 @@ const Units = ({ t }) => {
         <div className="t-section">
           <div id="laptop-top">
             <h1 id="header-gradename">{grade_name}</h1>
-            <h1 id="p1">{t("units1")}</h1>
+            {/* <h1 id="p1">{t("units1")}</h1> */}
             <h2 className="h2">{t("units2")}</h2>
 
           </div>
@@ -99,6 +99,7 @@ const Units = ({ t }) => {
           />
           <div className="t-sectionM">
             <div className="laptop-top">
+            {/* <h1 id="header-gradename">{grade_name}</h1> */}
               <h1 id="p1">{t("units1")}</h1>
               <h2>{t("units2")}</h2>
             </div>
