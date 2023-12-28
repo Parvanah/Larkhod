@@ -4,7 +4,7 @@ import { FaUser } from "react-icons/fa";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import React, { useEffect } from "react";
-import { useState,useRef,useContext } from "react";
+import { useState, useRef, useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import { FiMenu } from "react-icons/fi";
 import topimag from "../../assets/logo_3.png";
@@ -15,7 +15,7 @@ import i18n from "../../../i18n";
 import logoSideBar from "../../assets/logo_5.png";
 import MobileArrowClose from "../../assets/Path 2777.png";
 import MobileArrowOpen from "../../assets/Path 2778.png";
-{/* <link rel="stylesheet" href="./Header.css" />; */}
+{/* <link rel="stylesheet" href="./Header.css" />; */ }
 // import img1 from "../../assets/logo.png";
 // import img from "../../assets/larg.png";
 // import imgg from "../../assets/smal.png";
@@ -27,7 +27,7 @@ import MobileArrowOpen from "../../assets/Path 2778.png";
 // import down_img from "../../assets/Path_39.png";
 
 
- 
+
 const Header = ({ t }, props) => {
   const navigate = useNavigate();
   const { Loggout, userInfo, isLoading } = useContext(AuthContext);
@@ -37,8 +37,8 @@ const Header = ({ t }, props) => {
   const [isOpenBookMenue, setIsOpenBookMenue] = useState(false);
   //const [isCloseBookMenue, setIsCloseBookMenue] = useState("flex");
   const options = [
-    { name: "دری", value: "dari" },
-    { name: "پښتو", value: "pashto" },
+    { name: "زبان دری", value: "dari" },
+    { name: "پښتو ژبه", value: "pashto" },
   ];
   const bookOptions = [t("header13"), t("header14")];
   const [selectedOption, setSelectedOption] = useState(
@@ -152,7 +152,7 @@ const Header = ({ t }, props) => {
 
   return (
     <div ref={dropdownRef} className="full_header">
-      <nav className="header">
+      <nav  className="header">
         <Link to="/home"></Link>
         <div className="nav_header">
           <ul className="ul_header">
@@ -173,14 +173,15 @@ const Header = ({ t }, props) => {
                 <div onClick={handleBookMenueToggle}>
                   {t("header5")}
                   <img
+                 
                     src={isOpenBookMenue ? arrowClose : arrowOpen}
                     alt="arrowIcon"
                   />
                 </div>
-                <div  className="bookMenue">
+                <div className="bookMenue">
                   {isOpenBookMenue && (
-                    <ul className="dropdown-menu">
-                      {bookOptions.map((i) => (
+                    <ul   ref={dropdownRef}  className="dropdown-menu">
+                      {bookOptions.map((i) => (    
                         <li
                           key={i}
                           onClick={() => {
@@ -215,29 +216,22 @@ const Header = ({ t }, props) => {
             </li>
             <hr className="vl_header" />
           </ul>
-             <div className="all_buttonss">
-              <button
-                className="button_singupp"
-                onClick={() => changeLanguage("dari")}
-              >
-                زبان دری
+          <div onClick={handleToggle} className="all_buttonss">
+            {options.map((option) => (
+              <button className="button_singupp" key={option} onClick={() => handleOptionClick(option)}>
+                {option.name}
               </button>
-              <button
-                className="button_singupp"
-                onClick={() => changeLanguage("pashto")}
-              >
-                پشتو ژبه
-              </button>
-            </div>
+            ))}
+          </div>
           <div className="icon_header">
             <FaUser onClick={() => setOpenProfile((prev) => !prev)} />
             <div className="insideProfile">
               {openProfile && (
                 <div className="flex flex-col dropDownProfile">
                   <ul className="flex flex-col gap-4">
-                    <Link to="/changeprofile">
+                    <Link  to="/changeprofile">
                       {" "}
-                      <li className="changefrofilr_button_header">
+                      <li  ref={dropdownRef}  className="changefrofilr_button_header">
                         {t("header9")}
                       </li>{" "}
                     </Link>
@@ -259,7 +253,7 @@ const Header = ({ t }, props) => {
           </div>
         </div>
       </nav>
-      <div className="mobile">
+      <div  className="mobile">
         <div className="top">
           <div className="leftTop">
             <img src={topimag} />
@@ -328,7 +322,7 @@ const Header = ({ t }, props) => {
           </div>
           <div className="menu" onClick={handleSideBar}>
             <FiMenu className="menuIcon" />
-            
+
           </div>
         </div>
         <div
@@ -408,12 +402,12 @@ const Header = ({ t }, props) => {
               </Link>
             </li>
             <li className="li_header"><Link
-                className="link_nav_header"
-                to="/home"
-                onClick={handleSideBar}
-              >
-                {t("header12")}
-              </Link></li>
+              className="link_nav_header"
+              to="/home"
+              onClick={handleSideBar}
+            >
+              {t("header12")}
+            </Link></li>
             <li className="li_header">
               <img src={logoSideBar} />
             </li>
