@@ -20,6 +20,7 @@ import Down1 from "../../assets/Group_408.png";
 import photo7 from "../../assets/Group_158_f.png";
 import { FiMenu } from "react-icons/fi";
 import { ImCross } from "react-icons/im";
+import lessonList from '../../assets/3Dots.png';
 const Lessons = ({ t }, props) => {
   const { userInfo, isLoading } = useContext(AuthContext);
 
@@ -59,6 +60,7 @@ const Lessons = ({ t }, props) => {
   const [lesson_path, setLessonPath] = useState(
     unitsPath ? { label: unit, paths: unitsPath } : lessons[0]
   );
+  const [tooltip, setTooltip] = useState("hidden");
   console.log(lesson_path);
   const handelPage = () => {
     setIsLoading(true);
@@ -325,8 +327,9 @@ const Lessons = ({ t }, props) => {
                 src={photo7}
                 onClick={() => navigation(-1)}
               />
-              <div className="menu-mob" onClick={handleSideBar}>
-                <FiMenu color="white" />
+              <div className="menu-mob" onClick={handleSideBar} onMouseOver={()=> setTooltip("visible")}>
+                <img src={lessonList}  width={5} height={20} ></img>
+                <span class="tooltip" style={{visibility: {tooltip}}} >Lessons</span>
               </div>
             </div>
             <img src={photo6} className="imgTop" alt="pic"></img>
