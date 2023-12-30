@@ -182,21 +182,44 @@ cursor: pointer;
 @media screen and (max-height: 614px) and (max-width: 864px){
 	
 	.full-all-grade-n .all-grade-N .second-section-grade .icon-grade {
-		height: 85%;
-		margin-right: 2%;
-		/* background-color: red; */
-
-		
+		height:100%;
+		margin-right: 2%;	
+	}
+	.full-all-grade-n .all-grade-N .second-section-grade .icon-grade img {
+		height:55%;
 	}
 	.pathimg-G-wrapper img {
 	display: none;
 	/* background-color: red; */
 	}
+	.full-all-grade-n .all-grade-N .second-section-grade .grades-section #class-container-n .all_grade_wrapper_h{
+		width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: start;
+			align-items: center;
+			overflow-y: scroll;
+			height: 10%;
+			flex: 1;
+			/* background-color: aqua; */
+			/* padding-top: 180px; */
+		}
 	.full-all-grade-n .all-grade-N .second-section-grade .grades-section {
 		height:90%;
+		
 		/* background-color: #0F53A1; */
 	}
- 
+	.full-all-grade-n .all-grade-N .flesh-image-grade-b {
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: end;
+		align-items: start;
+		width: 90%;
+		height:38%;
+	}
+	.flesh-image-grade-b img {
+		width: 22px;
+	}
 .full-all-grade-n .all-grade-N .second-section-grade .icon-grade img {	
 	width:60%;	
 }
@@ -234,8 +257,42 @@ cursor: pointer;
 	justify-content: center;
 	align-items: center;
 	width:80%;
-	height: 90%;
+	height:70%;
+	/* background-color: red; */
+}
+.full-all-grade-n .all-grade-N .second-section-grade .grades-section .grade-container .p-two-grade-n {
+	text-align: center;
+	color: rgba(255, 255, 255, 1);
+	font-family: "Bahij Helvetica";
+	font-size:18px;
+	margin-top:0%;
+}
 
+.full-all-grade-n .all-grade-N .second-section-grade .grades-section .grade-container .p-one-grade-n {
+	/* overflow: hidden; */
+	/* line-height: 79px; */
+	text-align: center;
+	font-family: "Bahij Helvetica";
+	font-style: normal;
+	font-weight: bold;
+	font-size:20px;
+	margin-top: 0%;
+	color: rgba(255, 255, 255, 1);
+	/* letter-spacing: -0.4px; */
+}
+.full-all-grade-n .all-grade-N .second-section-grade .grades-section #class-container-n .all_grade_wrapper_h .button-grade-N .link-grade-n {
+	display: flex;
+	width:90%;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background-color: rgba(212, 228, 232, 1);
+	color: #0F53A1;
+	font-family: "Bahij Helvetica";
+	border-radius: 30px;
+	height:30px;
+    margin:3px;
+    padding:3%;
 }
 .full-all-grade-n .all-grade-N .second-section-grade .grades-section #class-container-n .all_grade_wrapper_h{
 	width: 100%;
@@ -249,10 +306,13 @@ cursor: pointer;
 		/* padding-top: 180px; */
 
 	} 
+	.pathimg-G-wrapper img {
+		display: none;
+	}
 	.full-all-grade-n .all-grade-N .flesh-image-grade-b {
 		display: flex;
 		flex-direction: column;
-		justify-content: end;
+		justify-content: center;
 		align-items: start;
 		width:85%;
 		height:37%;
@@ -308,7 +368,6 @@ cursor: pointer;
  .icon-grade img {
 	height:100%;
 	width: 100%;
-
 	margin-right: 2%;
 }
 }
@@ -366,12 +425,20 @@ cursor: pointer;
 		height: 90%;
 		width: 100%;
 	}
+	.full-all-grade-n .all-grade-N .flesh-image-grade-b {
+		display: flex;
+		flex-direction: column;
+		justify-content: end;
+		align-items: start;
+		width:85%;
+		height:38%;
+	}
 	.full-all-grade-n .all-grade-N .second-section-grade {
 		display: flex;
 		flex-direction:column;
 		justify-content: space-between;
 		align-items: center;
-		height: 90%;
+		height:85%;
 		width: 100%;
 	}
 	
@@ -392,7 +459,6 @@ cursor: pointer;
 	height:100%;
 	width: 100%;
 	display: none;
-
 	margin-right: 2%;
 }
 }

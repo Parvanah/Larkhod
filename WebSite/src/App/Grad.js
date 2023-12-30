@@ -118,6 +118,7 @@ const Grads = ({ t }) => {
                             basePath +
                             data.secondary.base_path +
                             item.grade_path,
+                            grade_name: item.label
                         }}
                       >
                         <div className="sanaf-grade-n">
@@ -146,6 +147,7 @@ const Grads = ({ t }) => {
                             basePath +
                             data.high_school.base_path +
                             item.grade_path,
+                            grade_name: item.label
                         }}
                       >
                         <div className="sanaf-grade-n">
