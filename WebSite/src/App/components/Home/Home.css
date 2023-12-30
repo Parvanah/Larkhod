@@ -1,5 +1,5 @@
 .Home-wrapper {
-  height: 85vh;
+  height: 85%;
   width: 100%;
   background-image: linear-gradient(to right,
       rgb(45, 132, 167),
@@ -106,7 +106,7 @@
 /* mobile style */
 @media only screen and (max-width: 769px) {
   .Home-wrapper {
-    height: 95vh;
+    height: 90%;
     width: 100%;
     background-image: linear-gradient(to right,
         rgb(45, 132, 167),
@@ -115,7 +115,7 @@
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-    min-height: 600px;
+    min-height: 500px;
   }
 
   .all_home {
@@ -136,8 +136,8 @@
 
   .section_one_image_one_home {
     margin-top: 2vw;
-    width: 43vw;
-    height: 39vw;
+    width: 40vw;
+    height: 36vw;
   }
 
   .section_two_home {
@@ -204,7 +204,7 @@
 
 @media only screen and (max-width: 400px) {
   .Home-wrapper {
-    height: 80vh;
+    height: 82%;
     width: 100%;
     background-image: linear-gradient(to right,
         rgb(45, 132, 167),
@@ -277,13 +277,16 @@
   }
 
   .section_three_home {
-    justify-content: flex-end !important;
+    justify-content: flex-end;
     align-items: center;
     flex: 30%;
     width: 100%;
     display: flex;
     flex-direction: column;
     margin-bottom: -10px;
+    /* justify-content: center !important;
+    align-items: center !important;
+    text-align: center; */
   }
 
   .section_three_image_one_home {
@@ -292,7 +295,8 @@
   }
 
   .section_three_image_two_home {
-    position: absolute;
-    display: inline-table;
+    /* position: absolute; */
+    /* display: inline-table; */
+ margin-left: -3vw;
   }
 }
