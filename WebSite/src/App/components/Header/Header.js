@@ -15,16 +15,7 @@ import i18n from "../../../i18n";
 import logoSideBar from "../../assets/logo_5.png";
 import MobileArrowClose from "../../assets/Path 2777.png";
 import MobileArrowOpen from "../../assets/Path 2778.png";
-{/* <link rel="stylesheet" href="./Header.css" />; */ }
-// import img1 from "../../assets/logo.png";
-// import img from "../../assets/larg.png";
-// import imgg from "../../assets/smal.png";
-// import middleimg from "../../assets/logo_2.png";
-// import lessonList from "../../assets/Group-271.png";
-// import Home from "../Home/Home";
-// import butimg from "../../assets/Path_7";
-// import buttom_img from "../../assets/Path_7.png";
-// import down_img from "../../assets/Path_39.png";
+
 
 
 
@@ -35,15 +26,18 @@ const Header = ({ t }, props) => {
   const [isOpen, setIsOpen] = useState("none");
   const [isClose, setIsClose] = useState("flex");
   const [isOpenBookMenue, setIsOpenBookMenue] = useState(false);
+  const [isOpenProfileMenue, setIsOpenProfileMenue] = useState(false);
   //const [isCloseBookMenue, setIsCloseBookMenue] = useState("flex");
   const options = [
     { name: "زبان دری", value: "dari" },
     { name: "پښتو ژبه", value: "pashto" },
   ];
   const bookOptions = [t("header13"), t("header14")];
+  const profileOptions = [t("header9"), t("header10")];
   const [selectedOption, setSelectedOption] = useState(
     t("sectionlang") === "pashto" ? options[1].name : options[0].name
   );
+
   const {
     currentState,
     setCurrentState,
@@ -99,6 +93,13 @@ const Header = ({ t }, props) => {
       setIsOpenBookMenue(true);
     }
   };
+  const handleprofileMenueToggle = () => {
+    if (isOpenProfileMenue) {
+      setIsOpenProfileMenue(false);
+    } else {
+      setIsOpenProfileMenue(true);
+    }
+  };
   const handleBookOptionClick = (option) => {
     if (option === t("header13")) {
       navigate("/book");
@@ -106,6 +107,14 @@ const Header = ({ t }, props) => {
       navigate("/readingBook");
     }
     setIsOpenBookMenue(false);
+  };
+  const handleProfileOptionClick = (optionn) => {
+    if (optionn === t("header9")) {
+      navigate("/changeprofile");
+    } else if (optionn === t("header10")) {
+      return Loggout()
+    }
+    setIsOpenProfileMenue(false);
   };
   console.log(currentLesson);
   console.log(currentpart);
@@ -125,25 +134,20 @@ const Header = ({ t }, props) => {
       setOpenProfile(true);
     }
   };
+
   const handleProfileOption = () => {
     setOpenProfile(false);
   };
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-  };
-
   const dropdownRef = useRef(null);
-
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setIsOpen("none");
         setIsClose("flex");
-        setOpenProfile(false);
+        setIsOpenProfileMenue(false);
         setIsOpenBookMenue(false);
       }
     };
-
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
@@ -151,8 +155,8 @@ const Header = ({ t }, props) => {
   }, []);
 
   return (
-    <div ref={dropdownRef} className="full_header">
-      <nav  className="header">
+    <div className="full_header">
+      <nav className="header">
         <Link to="/home"></Link>
         <div className="nav_header">
           <ul className="ul_header">
@@ -173,15 +177,14 @@ const Header = ({ t }, props) => {
                 <div onClick={handleBookMenueToggle}>
                   {t("header5")}
                   <img
-                 
                     src={isOpenBookMenue ? arrowClose : arrowOpen}
                     alt="arrowIcon"
                   />
                 </div>
                 <div className="bookMenue">
                   {isOpenBookMenue && (
-                    <ul   ref={dropdownRef}  className="dropdown-menu">
-                      {bookOptions.map((i) => (    
+                    <ul className="dropdown-menu">
+                      {bookOptions.map((i) => (
                         <li
                           key={i}
                           onClick={() => {
@@ -218,47 +221,43 @@ const Header = ({ t }, props) => {
           </ul>
           <div onClick={handleToggle} className="all_buttonss">
             {options.map((option) => (
-              <button className="button_singupp" key={option} onClick={() => handleOptionClick(option)}>
+              <button className="button_singupp"
+                key={option} onClick={() =>
+                  handleOptionClick(option)}>
                 {option.name}
               </button>
             ))}
           </div>
-          <div className="icon_header">
-            <FaUser onClick={() => setOpenProfile((prev) => !prev)} />
-            <div className="insideProfile">
-              {openProfile && (
-                <div className="flex flex-col dropDownProfile">
-                  <ul className="flex flex-col gap-4">
-                    <Link  to="/changeprofile">
-                      {" "}
-                      <li  ref={dropdownRef}  className="changefrofilr_button_header">
-                        {t("header9")}
-                      </li>{" "}
-                    </Link>
-                    <li>
-                      {" "}
-                      <Link
-                        className="logout_button_header"
-                        to="/"
-                        onClick={() => Loggout()}
-                      >
-                        {t("header10")}
-                        <input type="button" />
-                      </Link>
+          <div className="profileMenue" ref={dropdownRef} onClick={handleprofileMenueToggle} >
+            <FaUser
+              className="icon_header"
+              src={isOpenProfileMenue ? arrowClose : arrowOpen}
+              alt="arrowIcon"
+            />
+            <div >
+              {isOpenProfileMenue && (
+                <ul className="dropdown-menu-profile">
+                  {profileOptions.map((i) => (
+                    <li
+                      key={i}
+                      onClick={() => {
+                        handleProfileOptionClick(i);
+                      }}
+                    >
+                      {i}
                     </li>
-                  </ul>
-                </div>
+                  ))}
+                </ul>
               )}
             </div>
           </div>
         </div>
       </nav>
-      <div  className="mobile">
+      <div className="mobile">
         <div className="top">
           <div className="leftTop">
             <img src={topimag} />
-            <h1>لارښود - Larkhod</h1>
-
+            <h1>لارښود - Larkhoad</h1>
           </div>
           <div className="lng">
             <div className="selctedoption">
@@ -282,47 +281,31 @@ const Header = ({ t }, props) => {
               )}
             </div>
           </div>
-          <div className="icon_header">
-            <FaUser onClick={handleProfileToggle} />
-            <div className="insideProfile">
-              {openProfile === true && (
-                <div
-                  className="flex flex-col dropDownProfile"
-                  style={{ display: openProfile ? "flex" : "none" }}
-                >
-                  <ul className="flex flex-col gap-4">
-                    <div
+            <div className="profileMenue" ref={dropdownRef} onClick={handleprofileMenueToggle} >
+            <FaUser
+              className="icon_header"
+              src={isOpenProfileMenue ? arrowClose : arrowOpen}
+              alt="arrowIcon"
+            />
+            <div >
+              {isOpenProfileMenue && (
+                <ul className="dropdown-menu-profile">
+                  {profileOptions.map((i) => (
+                    <li
+                      key={i}
                       onClick={() => {
-                        openProfile(false);
-                        navigate("/changeprofile");
+                        handleProfileOptionClick(i);
                       }}
                     >
-                      {" "}
-                      <li className="changefrofilr_button_header">
-                        {t("header9")}
-                      </li>{" "}
-                    </div>
-                    <li>
-                      {" "}
-                      <div
-                        className="logout_button_header"
-                        onClick={() => {
-                          Loggout();
-                          handleProfileOption();
-                        }}
-                      >
-                        {t("header10")}
-                        <input type="button" />
-                      </div>
+                      {i}
                     </li>
-                  </ul>
-                </div>
+                  ))}
+                </ul>
               )}
             </div>
           </div>
           <div className="menu" onClick={handleSideBar}>
             <FiMenu className="menuIcon" />
-
           </div>
         </div>
         <div
