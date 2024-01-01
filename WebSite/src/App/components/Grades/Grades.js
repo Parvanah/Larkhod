@@ -36,19 +36,21 @@ const Grads = ({ t },props) => {
   //     return <h1>Loading.....</h1>;
   //   } else if(userInfo !== null){
   return (
+    <div className="alll_darde">
     <div className="all-grade">
-      <div className="section-one-grades">
-        <img className="top-svg-gardes" src={im} />
-      </div>
-      <div className="section-two-grades">
-        <Link to="/section">
+<div className="section_one_garde">
+<img className="top-svg-gardes" src={im} />
+        <Link id="flesh-image-grade" to="/section">
           <img className="flesh-image-grade" src={image} />
-        </Link>
-      </div>
-      <div className="section-three-grades">
-        <div className="one-gardes">
+      </Link>
+</div>
+<div className="section_two_garde">
+<div className="section_two_one_garde" >
+<img id="svg-two-grade" className="svg-two-grade" src={kk} />
+</div>
+<div className="section_two_two_garde">
+<div className="one-gardes">
           <div className="one-one-grades">
-           
             <span className="p-one-grade">{ t("sectionlang")=== "dari"? `${t("grads1")} ${section_Name}`: `${section_Name} ${t("grads1")} ` }</span>
             <br />
             <span className="p-two-grade">{t("grads2")} </span>
@@ -72,13 +74,59 @@ const Grads = ({ t },props) => {
               })}
             </div>
           </div>
-          <img id="svg-one-grade" className="svg-one-grade" src={kk} />
         </div>
-        <div className="two-gardes">
-          <img id="svg-two-grade" className="svg-two-grade" src={kk} />
-          <img id="image-grade" className="image-grade" src={images} />
-        </div>
-      </div>
+</div>
+<div className="section_two_three_garde">
+<img id="image-grade" className="image-grade" src={images} />
+</div>
+</div>
+    </div>
+
+
+
+
+
+    <div className="all-grade-mobile">
+    <div className="section_one_garde-mobile">
+    <img className="top-svg-gardes-mobile" src={im} />
+        <Link id="flesh-image-grade-mobile" to="/section">
+          <img className="flesh-image-grade-mobile" src={image} />
+      </Link>
+</div>
+<div className="section_two_garde-mobile">
+<div className="one-gardes">
+          <div className="one-one-grades">
+            <span className="p-one-grade">{ t("sectionlang")=== "dari"? `${t("grads1")} ${section_Name}`: `${section_Name} ${t("grads1")} ` }</span>
+            <br />
+            <span className="p-two-grade">{t("grads2")} </span>
+            <div className="button-grade">
+              {grades.map((item) => {
+                return (
+                  <Link
+                    className="link-grade"
+                    to="/books"
+                    state={{
+                      subjects: item.subjects,
+                      grade_path: school_path + item.grade_path,
+                      grade_name: item.label 
+                      
+                    }}
+                  >
+                    <img className="sanaf-grade" src={sanaf} />
+                    <div className="li-grade">{item.label}</div>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+ </div>
+</div>
+<div className="section_three_garde-mobile">
+<img id="svg-two-grade-mobile" className="svg-two-grade-mobile" src={kk} />
+<img id="image-grade" className="image-grade-mobile" src={images} />
+
+</div>
+    </div>
     </div>
   );
 };
