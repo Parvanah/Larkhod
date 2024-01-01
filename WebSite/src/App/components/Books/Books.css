@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     background-color: #DAECF2;
-    height:88%;
+    height:90%;
 }
 
 .full_book #Books {
@@ -695,7 +695,7 @@
         align-items: center;
         color: white;
         font-family: "Bahij helvetica";
-        font-size:13px;
+        font-size:10px;
     }
 
 }
@@ -710,5 +710,29 @@
         color: white;
         font-family: "Bahij helvetica";
         font-size:13px;
+    }
+}
+@media screen and (max-width: 950px)and (min-width:769px){
+    .full_book {
+        height:620px;
+    }
+}
+@media screen and (max-width: 950px)and (min-width:700px){
+    .full_book {
+        height:620px;
+    }
+    .arroeBb {
+        margin-bottom:0%;
+        margin-left:0%;
+        cursor: pointer;
+        display: flex;
+        align-items:start;
+    }
+    .titlesm {
+        font-family: "Bahij helvetica";
+        text-align:center;
+        align-items: center;
+        font-size:10px;
+      width:100%;
     }
 }
