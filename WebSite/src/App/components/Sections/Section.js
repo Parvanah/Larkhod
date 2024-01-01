@@ -67,11 +67,12 @@ const Section = ({ t }, props) => {
                 },
               }}
             >
+             < div>
               <img src={image1} />
               <h1>{t("section3")}</h1>
               <p>{t("section4")}</p>
               <p>{t("section13")}</p>
-              <p>{t("section14")}</p>
+              </div>
             </Link>
           </li>
           <li>
@@ -90,11 +91,12 @@ const Section = ({ t }, props) => {
                 },
               }}
             >
+              <div>
               <img className="imag_sectin_l" src={image2} />
               <h1>{t("section5")} </h1>
               <p>{t("section6")}</p>
               <p>{t("section11")}</p>
-              <p>{t("section12")}</p>
+              </div>
             </Link>
           </li>
           <li>
@@ -113,12 +115,12 @@ const Section = ({ t }, props) => {
                 },
               }}
             >
+              <div>
               <img className="imag_sectin_l" src={image3} />
               <h1>{t("section7")} </h1>
               <p>{t("section8")}</p>
               <p>{t("section9")}</p>
-              <p>{t("section10")}</p>
-              <p></p>
+              </div>
             </Link>
           </li>
         </ul>

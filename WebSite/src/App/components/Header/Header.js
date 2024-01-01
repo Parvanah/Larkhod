@@ -155,7 +155,7 @@ const Header = ({ t }, props) => {
   }, []);
 
   return (
-    <div className="full_header">
+    <div ref={dropdownRef} className="full_header">
       <nav className="header">
         <Link to="/home"></Link>
         <div className="nav_header">
@@ -172,7 +172,7 @@ const Header = ({ t }, props) => {
               </Link>
             </li>
             <hr className="vl_header" />
-            <li className="li_header_book">
+            <li  className="li_header_book">
               <div className="selctedoption">
                 <div onClick={handleBookMenueToggle}>
                   {t("header5")}
@@ -182,8 +182,8 @@ const Header = ({ t }, props) => {
                   />
                 </div>
                 <div className="bookMenue">
-                  {isOpenBookMenue && (
-                    <ul className="dropdown-menu">
+                  {isOpenBookMenue  && (
+                    <ul  className="dropdown-menu">
                       {bookOptions.map((i) => (
                         <li
                           key={i}
@@ -228,13 +228,13 @@ const Header = ({ t }, props) => {
               </button>
             ))}
           </div>
-          <div className="profileMenue" ref={dropdownRef} onClick={handleprofileMenueToggle} >
+          <div className="profileMenue"  onClick={handleprofileMenueToggle} >
             <FaUser
               className="icon_header"
               src={isOpenProfileMenue ? arrowClose : arrowOpen}
               alt="arrowIcon"
             />
-            <div >
+            <div>
               {isOpenProfileMenue && (
                 <ul className="dropdown-menu-profile">
                   {profileOptions.map((i) => (
@@ -253,7 +253,7 @@ const Header = ({ t }, props) => {
           </div>
         </div>
       </nav>
-      <div className="mobile">
+      <div ref={dropdownRef} className="mobile">
         <div className="top">
           <div className="leftTop">
             <img src={topimag} />
@@ -281,7 +281,7 @@ const Header = ({ t }, props) => {
               )}
             </div>
           </div>
-            <div className="profileMenue" ref={dropdownRef} onClick={handleprofileMenueToggle} >
+            <div className="profileMenue" onClick={handleprofileMenueToggle} >
             <FaUser
               className="icon_header"
               src={isOpenProfileMenue ? arrowClose : arrowOpen}
