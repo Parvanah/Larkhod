@@ -171,10 +171,57 @@ cursor: pointer;
 
 @media screen and (min-height: 650px) and (min-width: 700px){
 	.full-all-grade-n .all-grade-N .second-section-grade .icon-grade {
-		height:80px;
+		height:50%;
 	}
 	.full-all-grade-n .all-grade-N .second-section-grade .grades-section {
-		height: 580px;
+		height:100%;
+	}
+	.full-all-grade-n .all-grade-N .second-section-grade {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		height:80%;
+		width: 100%;
+	}
+	.full-all-grade-n .all-grade-N .second-section-grade .grades-section {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width:50%;
+		height:100%;
+	}
+	
+	.full-all-grade-n .all-grade-N .second-section-grade .grades-section .grade-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height:40%;
+		/* background-color: gray; */
+	}
+	.full-all-grade-n .all-grade-N .second-section-grade .grades-section #class-container-n .all_grade_wrapper_h{
+		width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: start;
+			align-items: center;
+			overflow-y: scroll;
+			height: 10%;
+			/* background-color: aquamarine; */
+			flex: 1;
+			/* background-color: aqua; */
+			/* padding-top: 180px; */
+		}
+	.full-all-grade-n .all-grade-N .flesh-image-grade-b {
+		display: flex;
+		flex-direction: column;
+		justify-content: end;
+		align-items: start;
+		width: 90%;
+		height:10%;
 	}
 	
 
