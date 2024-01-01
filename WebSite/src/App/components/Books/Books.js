@@ -91,7 +91,6 @@ const Books = ({ t }, props) => {
               </svg>
               
             </div>
-            {/* <div className="left-svg"> */}
             <div className="laptop-svg">
               <img src={imageb1} className="image1" />
             </div>
@@ -213,30 +212,6 @@ const Books = ({ t }, props) => {
       <div className="MBooks">
         <div className="TopB">
           <div className="arrowSvg" onClick={() => navigate(-1)}>
-            {/* <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={36}
-              height={22}
-              data-name="Group 411"
-            >
-              <defs>
-                <clipPath id="a">
-                  <path
-                    fill="#707070"
-                    d="M0 0h36v22H0z"
-                    data-name="Rectangle 85"
-                  />
-                </clipPath>
-              </defs>
-              <g clipPath="url(#a)" data-name="Group 158">
-                <path
-                  fill="#707070"
-                  fillRule="evenodd"
-                  d="m7.3 13.483 5.574 5.156a2.225 2.225 0 0 1 0 3.178 2.3 2.3 0 0 1-3.219 0L1 13.618a3.294 3.294 0 0 1-1-2.382 3.332 3.332 0 0 1 1-2.382L9.651.659a2.3 2.3 0 0 1 3.223 0 2.229 2.229 0 0 1 0 3.178L7.3 8.988h26.413a2.25 2.25 0 0 1 0 4.5H7.3Z"
-                  data-name="Path 433"
-                />
-              </g>
-            </svg> */}
             <img src={arrowBb} alt="photo" className="arroeBb" />
                <div className=" Mbarrow" onClick={() => navigate(-1)}>
           </div>
@@ -306,6 +281,7 @@ const Books = ({ t }, props) => {
                     state={{
                       units: item.parts,
                       subject_path: grade_path + item.subject_path,
+                      grade_name: t("sectionlang") === "dari"? grade_name + ` کتاب ${item.label} ` : grade_name +` ${item.label} کتاب `
                     }}
                     id="linkM"
                   >
