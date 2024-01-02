@@ -305,7 +305,7 @@
         align-items: center;
         text-align: center;
         overflow-x: hidden;
-        cursor: pointer;
+        /* cursor: pointer; */
     }
     .arrow img {
         width:12px;
