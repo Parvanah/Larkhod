@@ -4,6 +4,8 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     /* justify-content:first baseline; */
     margin-top: 0%;
     padding-top: 0;
@@ -31,8 +33,8 @@
 } */
 .readingBookk .topOfbook .backslashR {
     display: flex;
-    align-items:center;
-    width:17%;
+   justify-content:end;
+    width:10%;
     align-items:center;
     height:25%;
     cursor: pointer;
@@ -41,7 +43,7 @@
     align-items: center;
     width:3vw;
     height:25%;
-    margin-left:40%;
+    /* margin-left:40%; */
 }
 .bottomOfBook {
     display: flex;
@@ -104,9 +106,9 @@
     }
     .readingBookk .topOfbook .backslashR img {
         align-items: center;
-        width:5vw;
-        height:30%;
-        margin-left:80%;
+        width:4vw;
+        height:40%;
+        /* margin-left:80%; */
     }
     .bottomOfBook {
         display: flex;
