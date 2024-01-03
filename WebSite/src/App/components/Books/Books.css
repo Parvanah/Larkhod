@@ -311,7 +311,7 @@
         width:12px;
     }
 
-    .full_book .MBooks .middlebook  #ul {
+    .full_book .MBooks .middlebook  #Mul {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -321,6 +321,7 @@
         overflow-x:scroll;
         margin-top: 0;
         margin-bottom: 0;
+        transition: all 2s;
         /* overflow-y: hidden; */
     }
 
@@ -343,11 +344,11 @@
         border-radius: 15px;
         border-radius:15px;
     }
-    .full_book .MBooks .middlebook #ul{
+    .full_book .MBooks .middlebook #Mul{
 
     }
 
-    .full_book .MBooks .middlebook #ul a .MBicon {
+    .full_book .MBooks .middlebook #Mul a .MBicon {
         width: 60px;
         height:60px;
         text-align:start;
