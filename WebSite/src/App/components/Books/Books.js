@@ -41,11 +41,11 @@ const Books = ({ t }, props) => {
 };
 const righScrollMobile = ()=>{
   const slider = document.getElementById("Mul");
-       slider.scrollLeft = slider.scrollLeft +80;
+       slider.scrollLeft = slider.scrollLeft +50;
 }
 const leftScrollMobile = ()=>{
   const slider = document.getElementById("Mul");
-       slider.scrollLeft = slider.scrollLeft - 80;
+       slider.scrollLeft = slider.scrollLeft -50;
 }
   const {
     currentBook,

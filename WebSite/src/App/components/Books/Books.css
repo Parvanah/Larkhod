@@ -231,7 +231,7 @@
         align-items: center;
         color: white;
         font-family: "Bahij helvetica";
-        font-size:13px;
+        font-size:10px;
     }
 
     .full_book .MBooks .TopB .imgbm2 {
@@ -318,7 +318,7 @@
         align-items: center;
         text-align: center;
         flex:3;
-        overflow-x:scroll;
+        overflow-x:hidden;
         margin-top: 0;
         margin-bottom: 0;
         transition: all 2s;
@@ -523,7 +523,7 @@
         align-items: center;
         color: white;
         font-family: "Bahij helvetica";
-        font-size:13px;
+        font-size:10px;
     }
 
 }
@@ -548,7 +548,7 @@
         align-items: center;
         color: white;
         font-family: "Bahij helvetica";
-        font-size:13px;
+        font-size:10px;
     }
 }
 
@@ -572,7 +572,7 @@
         align-items: center;
         color: white;
         font-family: "Bahij helvetica";
-        font-size:13px;
+        font-size:10px;
     }
 }
 
@@ -590,7 +590,7 @@
         align-items: center;
         color: white;
         font-family: "Bahij helvetica";
-        font-size:13px;
+        font-size:10px;
     }
     
 
@@ -610,7 +610,7 @@
         align-items: center;
         color: white;
         font-family: "Bahij helvetica";
-        font-size:13px;
+        font-size:10px;
     }
 }
 
@@ -647,7 +647,7 @@
         align-items: center;
         color: white;
         font-family: "Bahij helvetica";
-        font-size:13px;
+        font-size:10px;
     }
     
 }

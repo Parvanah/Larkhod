@@ -145,16 +145,8 @@
     }
 }
 @media screen and (max-width:769px){
-    .readingBookk{
-    height:90%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    /* justify-content:first baseline; */
-    margin-top: 0%;
-    padding-top: 0;
-    background-image: linear-gradient(to right, #0F53A1, #3C98BD);
-    /* margin-bottom: 10%; */
+    .readingBookk {
+    height:600px;
     
 }
 }
