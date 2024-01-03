@@ -93,6 +93,7 @@ const Lessons = ({ t }, props) => {
     setTitle(title);
     setLessonPath(lesson_path);
     console.log(lesson_path);
+    setSidebar("none");
     // if (!IsErrorOnImageLoad) {
     //   setIsLoading(false);
     // }
@@ -327,9 +328,8 @@ const Lessons = ({ t }, props) => {
                 src={photo7}
                 onClick={() => navigation(-1)}
               />
-              <div className="menu-mob" onClick={handleSideBar} onMouseOver={()=> setTooltip("visible")}>
-                <img src={lessonList}  width={5} height={20} ></img>
-                <span class="tooltip" style={{visibility: {tooltip}}} >Lessons</span>
+              <div className="menu-mob" onClick={handleSideBar}>
+                {t("lessons8")}
               </div>
             </div>
             <img src={photo6} className="imgTop" alt="pic"></img>

@@ -30,13 +30,23 @@ const Books = ({ t }, props) => {
   const grade_name = locationData.grade_name;
   const navigate = useNavigate();
   const leftScroll = () => {
-    const slider = document.getElementById("ul");
-    slider.scrollLeft = slider.scrollLeft -90;
+    
+      const slider = document.getElementById("ul");
+    slider.scrollLeft = slider.scrollLeft - 90;
   };
   const righScrool = () => {
-    const slider = document.getElementById("ul");
-    slider.scrollLeft = slider.scrollLeft +90;
-  };
+      alert("called")
+      const slider = document.getElementById("ul");
+       slider.scrollLeft = slider.scrollLeft +90;
+};
+const righScrollMobile = ()=>{
+  const slider = document.getElementById("Mul");
+       slider.scrollLeft = slider.scrollLeft +80;
+}
+const leftScrollMobile = ()=>{
+  const slider = document.getElementById("Mul");
+       slider.scrollLeft = slider.scrollLeft - 80;
+}
   const {
     currentBook,
     setCurrentBook,
@@ -238,10 +248,10 @@ const Books = ({ t }, props) => {
           </div>
         </div>
         <div className="middlebook" id="middlebook">
-          <div onClick={() => leftScroll()} className="arrow">
+          <div onClick={() => leftScrollMobile()} className="arrow">
             <img src={scrollm} alt="photo" className="scrollm" />
           </div>
-          <div className="MobileBooks" id="ul">
+          <div className="MobileBooks" id="Mul">
             {subjects.map((item) => {
               if (item.parts[0].lessons == undefined) {
                 return (
@@ -298,7 +308,7 @@ const Books = ({ t }, props) => {
               }
             })}
           </div>
-          <div onClick={() => righScrool()} className="arrow">
+          <div onClick={() => righScrollMobile()} className="arrow">
             <img src={scrolrm} alt="photo" />
           </div>
         </div>

@@ -396,10 +396,21 @@
     .Lesson_body .mobile .mobileTop .mobile-background .arrowLesson .menu-mob {
         cursor: pointer;
         position: relative;
-        /* display: inline-block; */
-        /* background-color: red; */
+        
+
     }
-    
+    .Lesson_body .mobile .mobileTop .mobile-background .arrowLesson .menu-mob {
+        color: #3c98bd;
+        font-size: 12px ;
+        background-color: #FFF;
+        padding: 5px;
+        border-radius: 5px;
+    }
+    .Lesson_body .mobile .mobileTop .mobile-background .arrowLesson .menu-mob:hover{
+        background-color: #3c98bd;
+        color: #FFF;
+        border: 1px solid #FFF;
+    }
       
       .tooltip {
         visibility: hidden;
