@@ -1,26 +1,29 @@
 .all_section_about{
     display: flex;
     flex-direction: column;
-    justify-content: center !important;
-    height: 83%;
-    /* min-height: 560px; */
+    /* justify-content: center !important; */
+    height: 85%;
+    flex: 100%;
+    width: 100%;
 }
 .section_one_about{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: center;
-   
+    flex: 10%;
+    
+}
+.section_one_one_about{
 
+}
+.selesh_phone_about{
+    display: none;
 }
 .image_phone_one_about{
     display: none;
 }
-.image_phone_three_about{
-    display: none;
-}
-.selesh_aboutt{
-    display: none;
+.section_one_two_about{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
 }
 .selesh_about{
     display: flex;
@@ -28,26 +31,32 @@
     margin-top: 150%;
     margin-left: 200%;
 }
+.image_phone_logo_about{
+    display: none;
+}
 .dot_about{
     margin-top: 1vw;
     margin-right: 6vw;
     display: flex;
-    width: 8vw;
-    
+    width: 8vw; 
 }
+
+
+
 .section_two_about{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 57vh;
+    /* height: 57vh; */
+    flex: 80%;
     
 }
 .logoooo_about{
     display: flex;
-    width: 35vw;
-    height:  25vw;
+    width: 30vw;
+    height:  20vw;
     margin-left: 10vw;
     margin-right: 2vw;
     align-items: center;
@@ -62,9 +71,13 @@
     font-family: "Bahij Helvetica";
     font-size: 1.5vw;
     font-style: normal;
-    line-height: 40px;
+    line-height: 2vw;
     margin-right: 10vw;
     margin-left: 2vw;
+    z-index: 1000;
+    /* height: 80%;
+    overflow-y: scroll;
+    justify-content: flex-start; */
 }
 .title_about{
 
@@ -74,10 +87,16 @@
     font-size: 3vw;
     margin-bottom: 10px;
 }
+.paragraph_about{
+    
+}
 .section_three_about{
+    flex: 10%;
+}
+.section_three_one_about{
     display: flex;
     justify-content: space-between;
-    text-align: center;
+    /* text-align: center; */
 }
 .dott-about{
     display: flex;
@@ -91,295 +110,135 @@
     display: none;
 }
 
-@media screen and (max-width: 1024px){
-    .all_section_about{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 100vh;
-        min-height: 560px;
-        /* background-size: 100%; */
-    }
-    .section_one_about{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-      text-align: center;
-      /* height: 100vh; */
-      /* min-height: 60px; */
-    }
-    .section_two_about{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        height: 80vh;
-        /* min-height: 400px; */
-    }
-    .section_three_about{
-        display: flex;
-        justify-content: space-between;
-        text-align: center;
-        /* height: 100vh; */
-        /* min-height: 60px; */
-    }
-}
-@media screen and (max-width: 768px){
+
+@media screen and (max-width: 769px){
     .all_section_about{
      display: flex;
      flex-direction: column;
-     height: unset;
-     min-height: unset;
-    
+     height: 85%;
+     width: 100%;
+     flex: 100%;  
+     min-height: 400px;
+         justify-content: space-between;
 }
-    .section-one-and-two-grades{
+    .section_one_about{
      background-image: url('../App/assets/mb-ba.jpg');
      background-size: cover; 
      background-repeat: no-repeat;
-     /* padding-bottom: 30px; */
-}
-    .section-zero{
+     flex: 20%;
      display: flex;
-     flex-direction: column;
-     height: 30%;
-     flex: 1;
-}
-    .image_phone_one_about{
-     display: flex;
-     flex: 1;
-     width: 20%;
-     justify-content: right;
-     align-items: flex-start;
-}
-    .selesh_aboutt{
-     display: flex;
-     margin-top: -10%;
-     margin-left: 10%;
-     width: 5vw;
-     height: 3vw;
-    
-}
-    .section_one_about{
-     justify-content: space-between;  
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-   /* height: 300px; */
-   flex: unset;
-  
-}
-    .selesh_about{
-     display: none;
-}
-    .image_phone_three_aboutt{
-     flex: 1;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     text-align: center;
-    
-}
-    .image_phone_three_about{
-     flex: 1;
-     display: flex;
-     width: 30%;
-     height: 30%;
-     justify-content: center;
-     align-items: center;
-     text-align: center;
-}
-    .dot_about{
-     display: none;
-}
-    .section_two_about{
-      /* display: flex;
-     flex-direction: row;
      justify-content: space-between;
-     flex: 1;
-     height: unset; */
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
-     flex: 1;
-     height: unset;
-}
-    .logoooo_about{
-     display: none;
-}
-    .about{
-     display: flex;
      flex-direction: column;
-     flex: 1;
-     text-align: right;
-     color:  rgba(60,152,189,1);
-     font-family: "Bahij Helvetica";
-     font-size: 3.5vw;
-     font-style: normal;
-     line-height: 40px;
-     margin-left: 15vw;
-     margin-right: 15vw;
-     margin-top: 30px;
-     margin-bottom: 90px;
+}
+.section_one_one_about{
+    display: flex;
+    flex-direction: row;
+    /* height: 30%; */
+    flex: 40%;
+}
+.image_phone_one_about{
+    display: flex;
+    width: 20%;
+    justify-content: start;
+    align-items: flex-start;
+    margin-left: -1%;
+}
+.selesh_phone_about{
+    display: flex;
+    margin-top: 170%;
+    margin-left: -170%;
+    width: 5vw;
+    height: 3vw;
+   
+}
+.section_one_two_about{
+    justify-content: center;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 60%;
+}
+.selesh_about{
+    display: none;
+}
+.image_phone_logo_about{
+    display: flex;
+    width: 30%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: -4vw;
+    padding-bottom: 4vw;
+    flex: 100%;
+} 
+.dot_about{
+   display: none;
+}
+.section_two_about{
+   display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* height: 57vh; */
+    flex: 60%;
+} 
+.logoooo_about{
+    display: none;
+   }
+.about{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    color:  rgb(3, 72, 99);
+    font-family: "Bahij Helvetica";
+    font-size: 3.5vw;
+    font-style: normal;
+    line-height: 5vw;
+    margin-left: 0vw;
+    margin-right: 0vw;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 78%;
 }
 .title_about{
     text-align: right !important;
-    color:  rgba(60,152,189,1);
+    color:  rgb(39, 186, 244);
     font-family: "Bahij Helvetica";
     font-size: 6.5vw;
+    margin-bottom: 3vw;
+    margin-top: 8vw;
+}
+.paragraph_about{
 
-    margin-bottom: 10px;
 }
-    .section_three_about{
-     flex: 1;
-     justify-content: flex-end;
+ .section_three_about{
+    flex: 20%;
+    margin-bottom: -7vw;
 }
-    .dott-about{
-     display: none;
-}
-    .phone_svg_two_about{
-     transform-origin: center;
-     display: flex;
-     flex: 1;
-     justify-content: flex-end;
-}
-    #phone_svg_two_about{
-     fill: rgba(0,0,0,0);
-     stroke: rgba(60,152,189,1);
-     stroke-width: 1px;
-     stroke-linejoin: miter;
-     stroke-linecap: butt;
-     stroke-dasharray: 4.026000022888184 4.026000022888184;
-     stroke-dashoffset: 0;
-     stroke-miterlimit: 10;
-     shape-rendering: auto;
-}
-}
-@media screen and (max-width: 414px){
-    .all_section_about{
-     display: flex;
-     flex-direction: column;
-     height: 100vh;
-     min-height:650px;
-     /* justify-content: space-between; */
-}
-   .section-one-and-two-grades{
-     background-image: url('../App/assets/mb-ba.jpg');
-     background-size: cover; 
-     background-repeat: no-repeat;
-     /* justify-content: space-between; */
-}
-    .section-zero{
-     display: flex;
-     flex-direction: column;
-     height: 30%;
-}
-
-    .image_phone_one_about{
-     display: flex;
-     flex: 1;
-     width: 20%;
-     justify-content: right;
-     align-items: flex-start;
-}
-    .selesh_aboutt{
-     display: flex;
-     margin-top: -10%;
-     margin-left: 10%;
-     width: 6vw;
-     height: 4vw;
-}
-    .section_one_about{
-     justify-content: space-between;  
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-}
-    .selesh_about{
-     display: none;
-}
-    .image_phone_three_aboutt{
-     flex: 1;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     text-align: center;
-}
-    .image_phone_three_about{
-     flex: 1;
-     display: flex;
-     width: 30%;
-     height: 30%;
-     justify-content: center;
-     align-items: center;
-     text-align: center;
-}
-    .dot_about{
-     display: none;
-}
-        
-    .section_two_about{
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
-     flex: 2;
-}
-    .logoooo_about{
-     display: none;
-}
-    .about{
-     display: flex;
-     flex-direction: column;
-     flex: 1;
-     text-align: right;
-     color:  rgba(60,152,189,1);
-     font-family: "Bahij Helvetica";
-     font-size: 3vw;
-     font-style: normal;
-     line-height: 30px;
-     margin-left: 15vw;
-     margin-right: 15vw;
-     margin-top: 20px;
-     margin-bottom: 30px;
-}
-.title_about{
-    text-align: right;
-    color:  rgba(60,152,189,1);
-    font-family: "Bahij Helvetica";
-    font-size: 7vw;
-    margin-bottom: 10px;
-}
-.gg{
-    /* height: 40vh; */
+.section_three_one_about{
     display: flex;
-    flex: 1;
+    align-items: flex-end !important;
     justify-content: flex-end;
-    text-align: flex-end;
-    align-items: flex-end;
-}
-    .section_three_about{
-     flex: 1;
-     min-height: 20px;
-     justify-content: end;
-}
-    .dott-about{
-     display: none;
-}
-    .phone_svg_two_about{
-     transform-origin: center;
-     display: flex;
-     flex: 1;         
-}
-    #phone_svg_two_about{
-     fill: rgba(0,0,0,0);
-     stroke: rgba(60,152,189,1);
-     stroke-width: 1px;
-     stroke-linejoin: miter;
-     stroke-linecap: butt;
-     stroke-dasharray: 4.026000022888184 4.026000022888184;
-     stroke-dashoffset: 0;
-     stroke-miterlimit: 10;
-     shape-rendering: auto;
-}
-}
+    text-align:end;
 
+}
+.dott-about{
+    display: none;
+ }
+ .phone_svg_two_about{
+    display: flex;
+}
+   #phone_svg_two_about{
+    fill: rgba(0,0,0,0);
+    stroke: rgba(60,152,189,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-dasharray: 4.026000022888184 4.026000022888184;
+    stroke-dashoffset: 0;
+    stroke-miterlimit: 10;
+    shape-rendering: auto;
+}
+}
