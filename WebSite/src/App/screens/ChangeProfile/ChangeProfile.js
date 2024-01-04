@@ -1,7 +1,8 @@
 import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
 import { withNamespaces } from "react-i18next";
-import ig from "../../assets/Group_158_jr@2x.png";
+import ig from "../../assets/Group_158_bu.png";
+import igg from "../../assets/Group_158_jr@2x.png";
 import "./ChangeProfile.css";
 import React, { useEffect } from "react";
 import { useState } from "react";
@@ -82,8 +83,11 @@ const ChangeProfile = ({ t }) => {
   return (
     <div className="Change_Profile">
       <div className="Top_ChangeProfile">
-        <Link to="/home">
+        <Link className="selesh_computer_profile" to="/home">
           <img src={ig} />
+        </Link>
+        <Link className="selesh_phone_profile" to="/home">
+          <img src={igg} />
         </Link>
         <div className="ProfHandler">
           <img src={TelegramIcon} className="TelegramIcon" />
