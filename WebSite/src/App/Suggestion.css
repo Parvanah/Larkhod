@@ -90,6 +90,7 @@
     font-family: "Bahij Helvetica";
     font-weight: bold;
     font-style: normal;
+    font-size: 1.3vw;
     height: 1px;
     margin-bottom: 6%;
 }
@@ -123,6 +124,7 @@
 }
 #er-email-message-suggestion{
     /* display: flex; */
+    font-size: 1.3vw;
     margin: 0;padding: 0;
     color: rgb(241, 26, 26);
     font-family: "Bahij Helvetica";
@@ -300,6 +302,7 @@
         color: rgb(241, 26, 26);
         font-family: "Bahij Helvetica";
         font-weight: bold;
+        font-size: 1.3vw;
         font-style: normal;
         height: 1px;
         margin-bottom: 6%;
@@ -340,6 +343,7 @@
         font-weight: bold;
         font-style: normal;
         height: 1px;
+        font-size: 1.3vw;
         margin-bottom: 3%;
     } 
     .eer-suggestion{
@@ -530,6 +534,7 @@
         color: rgb(241, 26, 26);
         font-family: "Bahij Helvetica";
         font-weight: bold;
+        font-size: 2vw;
         font-style: normal;
         height: 1px;
         margin-bottom: 4%;
@@ -573,6 +578,7 @@
         font-weight: bold;
         font-style: normal;
         height: 1px;
+        font-size: 2vw;
         margin-bottom: 1%;
     }
     .eer-suggestion{
