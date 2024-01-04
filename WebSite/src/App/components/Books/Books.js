@@ -35,7 +35,7 @@ const Books = ({ t }, props) => {
     slider.scrollLeft = slider.scrollLeft - 90;
   };
   const righScrool = () => {
-      alert("called")
+      // alert("called")
       const slider = document.getElementById("ul");
        slider.scrollLeft = slider.scrollLeft +90;
 };
