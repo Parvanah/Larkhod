@@ -38,135 +38,49 @@ const Units = ({ t }) => {
   //   } else if(userInfo !== null){
   return (
     <div className="full_unit">
-      <div className="units">
-      <div className="svgArrow">
-            <img
-              className="flesh-image-grade-U"
-              src={imageU}
-              onClick={() => navigate(-1)}
-            />
-            {/* <img src={unitm} className="unitm" onClick={() => navigate(-1)} /> */}
-          </div>
-        <div className="t-section">
-          <div id="laptop-top">
-            <h1 id="header-gradename">{grade_name}</h1>
-            {/* <h1 id="p1">{t("units1")}</h1> */}
-            <h2 className="h2">{t("units2")}</h2>
-
-          </div>
-        </div>
-        <div className="unitWrapper">
-          <div onClick={() => slidLeft()} className="arrow">
-            <img src={leftClick} alt="photo" />
-          </div>
-          <div className="m-section" id="m-section">
-            {/* <div id="ul"> */}
-            {units.map((item) => {
-              return (
-                //with units
-                <Link
-                  to="/lessons"
-                  state={{
-                    lessons: item.lessons,
-                    title: `${grade_name} , ${item.label}` ,
-                    unitPath: item.paths,
-                    subject_path: subject_path,
-                  }}
-                >
-                  <img src={sectionicon} />
-                  <h3>{item.label}</h3>
-                </Link>
-              );
-            })}
-          </div>
-          <div onClick={() => slidRight()} className="arrow">
-            <img src={rightClick} />
-          </div>
-        </div>
-        <div className="last">
-          <p>{t("units3")}</p>
-          <div className="svg_wrapper">
-            <img src={imagel} className="imagel" />
-          </div>
-        </div>
-      </div>
-      <div className="Munit">
-        <div className="svgArrowM">
+      <div className="section_one_unit">
+        <div className="flesh_unit">
           <img
             className="flesh-image-grade-U"
             src={imageU}
             onClick={() => navigate(-1)}
           />
-          <div className="t-sectionM">
-            <div className="laptop-top">
-            {/* <h1 id="header-gradename">{grade_name}</h1> */}
-              <h1 id="p1">{t("units1")}</h1>
-              <h2>{t("units2")}</h2>
-            </div>
-          </div>
-          {/* <img src={unitm}  className="unitm"  onClick={()=> navigate(-1)}  /> */}
         </div>
-
-        <div className="unitWrapper_M">
-          <div onClick={() => slidLeft()} className="arrowMU">
-            {" "}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={13.435}
-              height={28.158}
-              // {...props}
-            >
-              <path
-                fill="#fff"
-                d="M16.435 0 0 15.079l16.435 15.079v-8.293l-7.384-6.786 7.384-6.755Z"
-                data-name="Path 1006"
-              />
-            </svg>
-          </div>
-          <div className="m-section" id="m-section">
-            <div id="ul">
-              {units.map((item) => {
-                return (
-                  //with units
-                  <Link
-                    to="/lessons"
-                    state={{
-                      lessons: item.lessons,
-                      title: " فصل " + item.label ,
-                      unitPath: item.paths,
-                      subject_path: subject_path,
-                    }}
-                  >
-                    <img src={sectionicon} />
-                    <h3>{item.label}</h3>
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-          <div onClick={() => slidRight()} className="arrow">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={13.435}
-              height={27.158}
-              // {...props}
-            >
-              <path
-                fill="#fff"
-                d="m0 0 16.435 15.079L0 30.158v-8.29l7.384-6.786L0 8.327Z"
-                data-name="Path 1005"
-              />
-            </svg>
-          </div>
+        <div className="title_unit">
+          <h1 id="header-gradename">{grade_name}</h1>
+          <p className="h2">{t("units2")}</p>
         </div>
-        <div className="lastMU">
-          <div className="PMU">
-            {" "}
-            <p>{t("units3")}</p>
-          </div>
-          <div className="MUimage">
-            <img src={imagel} className="imagelMU" />
-          </div>
+      </div>
+      <div className="section_tow_unit">
+        <div onClick={() => slidLeft()} className="arrow_unit">
+          <img src={leftClick} alt="photo" />
+        </div>
+        <div className="m-section" id="m-section">
+          {units.map((item) => {
+            return (
+              <Link
+                to="/lessons"
+                state={{
+                  lessons: item.lessons,
+                  title: `${grade_name} , ${item.label}`,
+                  unitPath: item.paths,
+                  subject_path: subject_path,
+                }}
+              >
+                <img src={sectionicon} />
+                <h3>{item.label}</h3>
+              </Link>
+            );
+          })}
+        </div>
+        <div onClick={() => slidRight()} className="arrow_unite">
+          <img src={rightClick} />
+        </div>
+      </div>
+      <div className="section_three_unit">
+        <p className="p_unit">{t("units3")}</p>
+        <div className="imagel_unite">
+          <img src={imagel} className="imagel_unit" />
         </div>
       </div>
     </div>
