@@ -94,6 +94,15 @@
     align-items: center;
     list-style: none;
 }
+.section_three_ul li:hover img{
+    border-radius: 50%;
+    transform: scale(1.05); 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.section_three_ul li:hover{
+    text-shadow: 2px 2px 4px #626262;
+}
 
 .section_three_ul img {
     justify-content: center;
