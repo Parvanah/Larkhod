@@ -1,739 +1,631 @@
-.full_book {
+.full_books {
     display: flex;
     flex-direction: column;
-    background-color: #DAECF2;
-    height:90%;
+    background-color: #c8ebf7;
+    height:85%;
+    flex: 100%;
+    min-height: 450px;
 }
-
-.full_book #Books {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    flex: 1;
-    width: 98%;
+.section_one_books{
+display: flex;
+flex-direction: row;
+flex: 20%;
 }
+.imags_one_books{
+flex: 30%;
+display: flex;
+align-items: start;
+}
+.prevuse_books{
+margin-left: 5vw;
+margin-top: 4vw;
+width: 3vw;
+height: 2vw;
+cursor: pointer;
+margin-right: 2vw;
+}
+.prevuse_bookss{
+display: none;
+}
+.image1_books{
+    width: 4.5vw;
+    height: 4vw;
+    margin-top: 2vw;
+}
+.titils_books{
+flex: 50%;
+text-align: center;
+color: #1793c3;
+font-weight: bold;
+justify-content: end;
+display: flex;
+flex-direction: column;
+}
+.title_one_books{
+font-size: 2.8vw;
+margin-top: 2vw;
+}
+.title_two_books{
+font-size: 2vw;
+}
+.imags_two_books{
+    flex: 20%;
+}
+.photo_books{
+display: none;
+}
+.imageb2_books{
+width: 5vw;
+height: 5vw;
+margin-right: 5vw;
+margin-top: 2vw;
+}
+.section_one_books_phone{
+    display: none;
+}
+.titils_books_phone{
 
-.full_book #Books .top {
-    display: flex;
+}
+.title_one_books_phone{
+
+}
+.title_two_books_phone{
+
+}
+.section_two_books{
+   display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    font-family: "Bahij helvetica";
-    color: #3C98BD;
-    width: 90%;
-    /* flex: 1; */
-    height:40%;
-}
-
-.full_book #Books .top .first-svgs {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex:15%;
-    cursor: pointer;
-    
-    height: 60%;
-}
-.full_book #Books .top .first-svgs .arrowSvg{
-    height: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.full_book #Books .top .first-section {
-    flex: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    /* background-color: aqua; */
-    height: 60%;
-}
-
-.full_book #Books .top .first-section h1 {
-    font-family: "Bahij helvetica";
-    font-size: 4vw;
-    text-align: center;
-}
-
-.full_book #Books .top .first-section p {
-    font-family: "Bahij helvetica";
-    font-size: 3vw;
-    text-align: center;
-}
-
-.full_book #Books .top .third-section {
-    flex: 15%;
-    
-    height: 60%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.full_book #Books .middlebook {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     width: 100%;
-    /* flex: 1; */
-    height: 40%;
+    flex: 60%;
+    margin-top: 12px;
 }
-
-.titles {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    font-family: "Bahij helvetica";
-    font-size: 15px;
-}
-
-
-.full_book #Books .middlebook .arrrow {
+.full_books .section_two_books .arrrow_bookss {
     flex: 10%;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    justify-content: end;
+    margin-right: 1vw;
     align-items: center;
     width: 100%;
     cursor: pointer;
 }
-
-.full_book #Books .middlebook #ul {
+.full_books .section_two_books .arrrow_books {
+    flex: 10%;
+    display: flex;
+    justify-content: start;
+    margin-left: 1vw;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+}
+.full_books .section_two_books #ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     flex: 80%;
-    /* margin: 20px; */
     overflow-x: hidden;
-
 }
-
-.full_book #Books .middlebook #ul #link {
-    margin: 12px;
-    background-image: linear-gradient(#0F53A1, #3C98BD);
+.full_books .section_two_books #ul #link {
+    margin-right: 24px;
+    background-image: linear-gradient( #2a8fd2,#0d649e);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 5%;
-    flex: 1;
-    height: 270px;
-
-    /* height: 270px; */
-    border-radius: 30px;
+    padding: 18px;
+    margin-right: 20px;
+    width: 100%;
+    height: 210px;
+    border-radius: 18px;
 }
-
-.full_book #Books .middlebook #ul #link:hover {
-
-    width: 35%;
-    background-color: #3c98bd;
+.full_books .section_two_books #ul #link:hover {
+    background-image: linear-gradient( #2a8fd2dc,#2a8fd2);
+    padding: 20px;
+    height: 212px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
-.full_book #Books .middlebook #ul #link img {
-    height: 120px;
-    width: 120px;
-    /* height: 30%;
-    width: 40%; */
-    /* padding-bottom: 10px;
-    border-bottom: 2px solid lightgray; */
-    border-bottom: 2px solid lightgray;
+.full_books .section_two_books #ul #link img {
+    height: 90px;
+    width: 100px;
+   margin-bottom: 15px;
 }
-
-.full_book #Books .bottom {
+.line_books{
+ width: 100px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.677);
+}
+.titles_books{
+    margin-top: 8px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    /* flex: 1; */
-    height: 30%;
-    width: 90%;
-}
-
-.full_book #Books .bottom .p-section p {
-    font-size: 25px;
+    color: white;
     font-family: "Bahij helvetica";
-    color: #707070;
     text-align: center;
+    font-weight: bold;
 }
-
-.full_book .MBooks {
+.tj_books{
+font-size: 15px;
+}
+#h5{
+    font-size: 18px;
+}
+.tt_books{
+   
+}
+.section_three_books_phone{
     display: none;
 }
+.para_phone_books{
 
-@media screen and (max-width: 768px) {
-    .full_book #Books {
-        display: none;
-        flex: 0;
-    }
-
-    .full_book .MBooks {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        flex: 1;
-        height: 100vh;
-       
-    }
-    .arroeBb {
-        margin-bottom:5%;
-        margin-left:4%;
-        cursor: pointer;
-        display: flex;
-        align-items:start;
-    }
-    .second-sectino-book {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width:100%;
-        height:60%;
-    }
-    .image1 {
-        
-        display: none;
-    }
-    .full_book .MBooks .TopB {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        width:90%;
-        height:30%;
-    }
-
-    .topp h1 {
-        font-family: "Bahij helvetica";
-        color: #3C98BD;
-        font-size:3vw;
-        font-weight: bold;
-        align-items: center;
-    }
-
-    .topp p {
-        font-size:3vw;
-        font-family: "Bahij helvetica";
-        color: #3C98BD;
-         align-items: center;
-       
-    }
-
-    .titlesm {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: white;
-        font-family: "Bahij helvetica";
-        font-size:10px;
-    }
-
-    .full_book .MBooks .TopB .imgbm2 {
-        display: flex;
-        width:10%;
-       align-items: flex-start;
-    }
-    .imgbm12 {
-        height:30%;
-        align-items: end;
-        margin-left: 10%;
-        display:flex;
-    }
-
-    .full_book .MBooks .TopB .laptop-right {
-        display: none;
-        /* background-color: #707070; */
-        /* background-color: red; */
-    }
-
-    .full_book .MBooks .TopB .imagebm {
-        display: none;
-    }
-
-   .arrowSvg {
-        display: flex;
-        justify-content:start;
-        align-items: end;
-        height:40%; 
-        width:100%;
-    }
-    .arrowSvg img {
-        width: 20px;
-        /* height: 20px; */
-        cursor: pointer;
-    }
-    .full_book .MBooks .TopB .Mbarrow {
-        display: none;
-    }
-
-    .full_book .MBooks .TopB .topp {
-        font-size: 17px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        height:100%; 
-        width:100%;
-    }
-    .full_book .MBooks .middlebook {
-        display: flex;
-        flex-direction: row;
-        justify-content:center;
-        align-items: center;
-        text-align: center;
-        width:80%;
-    }
-.titlesm {
-    font-family: "Bahij helvetica";
-    text-align:center;
-    align-items: center;
-    font-size:2vw;
-  width:100%;
 }
-    .full_book .MBooks .middlebook .arrow {
-        flex: 1;
+.section_three_books{
+flex: 20%;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: start;
+}
+.imag_section_three_books{
+    display: none;
+}
+.imageb2{
+    width: 5vw;
+    height: 5vw;
+    margin-left: 5vw;
+    margin-bottom: 2vw;
+}
+.para_books{
+color: rgb(85, 86, 86);
+font-size: 2vw;
+font-weight: bold;
+margin-top: 7px;
+}
+.image4{
+    margin-right: 5vw;
+    margin-bottom: 2vw;
+    width: 4.5vw;
+    height: 4vw;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:769px){
+    .full_books {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        background-color: #c8ebf7;
+        height:90%;
+        flex: 100%;
+        min-height: 500px;
+    }
+    .section_one_books{
+    display: flex;
+    flex-direction: row;
+    flex: 10%;
+    justify-content: end;
+    margin-bottom: -5vw;
+    margin-top: 5vw;
+    }
+    .imags_one_books{
+    flex: 50%;
+    display: flex;
+    align-items: start;
+    }
+    .prevuse_books{
+        display: none;
+        }
+        .prevuse_bookss{
+            margin-left: 8vw;
+            margin-top: 3vw;
+            width: 4vw;
+            height: 3vw;
+            cursor: pointer;
+            margin-right: 2vw;
+            display: flex;
+        }
+    .image1_books{
+        width: 6.5vw;
+        height: 6vw;
+        margin-top: 0vw;
+    }
+    .titils_books{
+    display: none;
+    }
+    .photo_books{
+    display: flex;
+    width: 7vw;
+    height: 7vw;
+    margin-right: 5vw;
+    margin-top: 0vw;
+    }
+    .imageb2_books{
+        display: none;
+    }
+    .section_one_books_phone{
+        display: flex;
+        flex: 10%;
+    text-align: center;
+    color: #1793c3;
+    font-weight: bold;
+    justify-content: end;
+    display: flex;
+    flex-direction: column;
+    }
+    .titils_books_phone{
+        justify-content: end;
+font-weight: bold;
+    }
+    .title_one_books_phone{
+        font-size: 4vw;
+        margin-top: 2vw;
+    }
+    .title_two_books_phone{
+        font-size: 3vw;
+    }
+    .section_two_books{
+       display: flex;
+        flex-direction: row;
         align-items: center;
-        text-align: center;
+        width: 100%;
+        flex: 60%;
+        margin-top: 12px;
+    }
+    .full_books .section_two_books .arrrow_bookss {
+        flex: 10%;
+        display: flex;
+        justify-content: end;
+        margin-right: 1.5vw;
+        align-items: center;
+        width: 100%;
+        cursor: pointer;
+    }
+    .full_books .section_two_books .arrrow_books img{
+width: 2.5vw; 
+height: 4.5vw; 
+    }
+    .full_books .section_two_books .arrrow_bookss img{
+        width: 2.5vw; 
+        height: 4.5vw; 
+    }
+    .full_books .section_two_books .arrrow_books {
+        flex: 10%;
+        display: flex;
+        justify-content: start;
+        margin-left: 1.5vw;
+        align-items: center;
+        width: 100%;
+        cursor: pointer;
+    }
+    .full_books .section_two_books #ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex: 80%;
         overflow-x: hidden;
-        /* cursor: pointer; */
     }
-    .arrow img {
-        width:12px;
-    }
-
-    .full_book .MBooks .middlebook  #Mul {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        text-align: center;
-        flex:3;
-        overflow-x:hidden;
-        margin-top: 0;
-        margin-bottom: 0;
-        transition: all 2s;
-        /* overflow-y: hidden; */
-    }
-
-   
-
-    /* .full_book #Books .middlebook #ul #link img {
-                    height: 100px;
-                    width: 100px;
-                   
-                } */
-    #linkM {
-        margin: 2%;
-        background-image: linear-gradient(#0F53A1, #3C98BD);
+    .full_books .section_two_books #ul #link {
+        margin-right: 24px;
+        background-image: linear-gradient( #2a8fd2,#0d649e);
         display: flex;
         flex-direction: column;
-        align-items: end;
-        justify-content:center;
-        padding:10%;
-        height:140px;
-        border-radius: 15px;
-        border-radius:15px;
-    }
-    .full_book .MBooks .middlebook #Mul{
-
-    }
-
-    .full_book .MBooks .middlebook #Mul a .MBicon {
-        width: 60px;
-        height:60px;
-        text-align:start;
-        border-bottom:1px solid lightgray;
-    }
-
-    .full_book .MBooks .ButtomB {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
         align-items: center;
-        text-align: center;
-        width: 90%;
+        justify-content: center;
+        padding: 18px;
         flex: 1;
-    }
-
-    .full_book #Books .bottom .p-section p {
-        font-size: 25px;
-        font-family: "Bahij helvetica";
-        text-align: center;
-    }
-
-    .topp h1 {
-        font-family: "Bahij helvetica";
-        color: #3C98BD;
-    }
-
-    .p {
-        font-size: 20px;
-        font-family: "Bahij helvetica";
-        color: #707070;
-        text-align: center;
-    }
-
-    .full_book .MBooks .ButtomB .laptop-right {
-        display: none;
-    }
-
-    .full_book .MBooks .ButtomB .mobilebb3 {
-        display: flex;
-    }
-
-    .full_book .MBooks .ButtomB .last-svg {
-        display: none;
-    }
-
-    .full_book .MBooks .ButtomB .imagemb {
-        display: flex;
-    }
-    .full_book #Books .middlebook {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        margin-right: 20px;
         width: 100%;
-        /* flex: 1; */
-        height: 40%;
-        overflow-x:hidden;
-        /* background-color: red; */
+        height: 210px;
+        border-radius: 18px;
     }
-    /* .Mbarrow {
-        margin-bottom:30%;
-        margin-left:4%;
-        cursor: pointer;
-        background-color: black;
-    } */
-    /* .second-sectino-book {
-        background-color: black;
+    .full_books .section_two_books #ul #link:hover {
+        background-image: linear-gradient( #2a8fd2dc,#2a8fd2);
+        padding: 20px;
+        height: 212px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .full_books .section_two_books #ul #link img {
+        height: 90px;
+        width: 100px;
+       margin-bottom: 15px;
+    }
+    .line_books{
+     width: 100px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.677);
+    }
+    .titles_books{
+        margin-top: 8px;
         display: flex;
-        flex-direction: ;
-        width:100%;
-        height: 20%;
-    } */
-}
-
-@media screen and (max-width: 736px) {
-    .second-sectino-book {
-        display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        font-family: "Bahij helvetica";
+        text-align: center;
+        font-weight: bold;
     }
-    .full_book .MBooks .TopB .imgbm2 {
-        display: flex;
-        flex-direction: row;
+    .tj_books{
+    font-size: 15px;
     }
-
-    .full_book .MBooks .TopB .laptop-svg {
-        display: none;
-    }
-
-    .full_book .MBooks .TopB .laptop-right {
-        display: none;
-    }
-
-    .full_book .MBooks .TopB .imagebm {
-        display: flex;
-    }
-
-    .full_book .MBooks .TopB .arrowSvg {
-        display: flex;
-        width:100%;
-        align-items: end;
-        height:30%;
-        
-        /* margin-top:5%; */
-        /* margin-left:8%; */
-    }
-    .full_book .MBooks .TopB .arrowSvg img {
-        width: 20px;
-        /* height: 20px; */
-        cursor: pointer;
-    }
-
- .Mbarrow {
-        display: flex;
-        /* background-color:red; */
-    }
-
-    .full_book .MBooks .ButtomB .laptop-right {
-        display: none;
-    }
-
-    .full_book .MBooks .ButtomB .mobilebb3 {
-        display: flex;
-    }
-
-    .full_book .MBooks .ButtomB .last-svg {
-        display: none;
-    }
-
-    .full_book .MBooks .ButtomB .imagemb {
-        display: flex;
-    }
-
-    .full_book .MBooks .TopB .topp {
-        font-size: 15px;
-    }
-
-    .p {
+    #h5{
         font-size: 18px;
-        font-family: "Bahij helvetica";
-        color: #707070;
+    }
+    .tt_books{
+    }
+    .section_three_books_phone{
+        display: flex;
+        flex: 10%;
+        align-items: center;
         text-align: center;
+        justify-content: center;
     }
-    .full_book .MBooks .middlebook .MobileBooks{
-    /* background-color: red; */
-    height: 100%;
-    padding: 0;
+    .para_phone_books{
+        color: rgb(85, 86, 86);
+        font-size: 3vw;
+        font-weight: bold;
+        margin-top: 7px;
+        text-align: center;
+        align-items: center;
     }
-    /* .Mbarrow {
-        margin-bottom:10%;
-        margin-left:0%;
+    .section_three_books{
+    flex: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    }
+    .imag_section_three_books{
+        display: flex;
+        width: 7vw;
+        height: 7vw;
+        margin-left: 6vw;
+        margin-bottom: 3vw;
+    }
+    .imageb2{
+        display: none;
+     
+    }
+    .para_books{
+    display: none;
+    }
+    .image4{
+        margin-right: 6vw;
+        margin-bottom: 3vw;
+        width: 6.5vw;
+        height: 6vw;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:412px){
+    .full_books {
+        display: flex;
+        flex-direction: column;
+        background-color: #c8ebf7;
+        height:90%;
+        flex: 100%;
+        width: 100%;
+        justify-content: start;
+        min-height: 500px;
+    }
+    .section_one_books{
+    display: flex;
+    flex-direction: row;
+    flex: 5%;
+    justify-content: end;
+    margin-bottom: 0vw;
+    margin-top: 7vw;
+    }
+    .imags_one_books{
+    flex: 50%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    }
+    .prevuse_books{
+     
+        display: none;
+        }
+        .prevuse_bookss{
+            margin-left: 8vw;
+            margin-top: 0vw;
+            width: 5.5vw;
+            height: 4vw;
+            cursor: pointer;
+            margin-right: 2vw;
+            display: flex;
+        }
+    .image1_books{
+        width: 9.5vw;
+        height: 9vw;
+        margin-top: 3vw;
+        margin-left: 15vw;
+    }
+    .titils_books{
+    display: none;
+    }
+    .photo_books{
+    display: flex;
+    width: 7vw;
+    height: 7vw;
+    margin-right: 5vw;
+    margin-top: 0vw;
+    }
+    .imageb2_books{
+        display: none;
+    }
+    .section_one_books_phone{
+        display: flex;
+        flex: 15%;
+    text-align: center;
+    color: #1793c3;
+    font-weight: bold;
+    justify-content: end;
+    display: flex;
+    flex-direction: column;
+    /* margin-bottom: -12vw; */
+    }
+    .titils_books_phone{
+        justify-content: end;
+font-weight: bold;
+    }
+    .title_one_books_phone{
+       font-weight: bolder;
+        font-size: 6vw;
+        margin-top: 2vw;
+    }
+    .title_two_books_phone{
+        font-size: 4.5vw;
+        margin-left: 23vw;
+        margin-right: 23vw;
+    }
+    .section_two_books{
+       display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        flex: 40%;
+        margin-top: 0px;
+        justify-content: start;   
+    }
+    .full_books .section_two_books .arrrow_bookss {
+        flex: 15%;
+        display: flex;
+        justify-content: end;
+        margin-right: 2.5vw;
+        align-items: center;
+        width: 100%;
         cursor: pointer;
-        background-color: black;
-    } */
-    #linkM {
-        /* margin: 0% 2%; */
-        background-image: linear-gradient(#0F53A1, #3C98BD);
+    }
+    .full_books .section_two_books .arrrow_books img{
+width: 4.5vw; 
+height: 7.5vw; 
+    }
+    .full_books .section_two_books .arrrow_bookss img{
+        width: 4.5vw; 
+        height: 7.5vw;
+    }
+    .full_books .section_two_books .arrrow_books {
+        flex: 15%;
         display: flex;
-        flex-direction: column;
-        align-items: end;
-        justify-content:center;
-        padding:8%;
-        height:150px;
-        /* padding: 100%; */
-        border-radius: 10px;
-        border-radius:15px;
-    }
-    
-    .titlesm {
-        display: flex;
-        flex-direction: column;
+        justify-content: start;
+        margin-left: 2.5vw;
         align-items: center;
-        color: white;
-        font-family: "Bahij helvetica";
-        font-size:10px;
-    }
-
-}
-
-@media screen and (max-width: 438px) {
-    .full_book .MBooks .TopB .topp h1 {
-        font-size: 14px;
-    }
-
-    .full_book .MBooks .ButtomB .p {
-        font-size: 14px;
-        margin: 2%;
-    }
-
-    .full_book .MBooks .TopB .topp p {
-        font-size: 20px;
-        align-items: center;
-    }
-    .titlesm {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: white;
-        font-family: "Bahij helvetica";
-        font-size:10px;
-    }
-}
-
-@media screen and (max-width: 367px) {
-    .full_book .MBooks .TopB .topp h1 {
-        font-size:14px;
-    }
-
-    .full_book .MBooks .ButtomB .p {
-        font-size:14px;
-        
-    }
-
-    .full_book .MBooks .TopB .topp p {
-
-        font-size: 14px;
-    }
-    .titlesm {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: white;
-        font-family: "Bahij helvetica";
-        font-size:10px;
-    }
-}
-
-@media screen and (max-width: 298px) {
-    .full_book .MBooks .TopB .topp h1 {
-        font-size: 14px;
-    }
-    .full_book .MBooks .ButtomB .p {
-        font-size: 14px;
-        
-    }
-    .titlesm {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: white;
-        font-family: "Bahij helvetica";
-        font-size:10px;
-    }
-    
-
-    .full_book .MBooks .TopB .topp p {
-
-        font-size: 14px;
-    }
-}
-
-@media screen and (max-height: 342px) and (max-width: 768px) {
-    .full_book {
-        height: 342px;
-    } 
-    .titlesm {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: white;
-        font-family: "Bahij helvetica";
-        font-size:10px;
-    }
-}
-
-@media screen and (max-height: 520px) {
-    /* .full_book {
-        height: 600px;
-    } */
-    .full_book #Books .top .first-section h1 {
-        font-family: "Bahij helvetica";
-        font-size:25px;
-    }
-    
-    .full_book #Books .top .first-section p {
-        font-family: "Bahij helvetica";
-        font-size:20px;
-    }
-    .arroeBb {
-        margin-bottom:0%;
-        margin-left:4%;
+        width: 100%;
         cursor: pointer;
-        display: flex;
-        align-items:start;
     }
-    .second-sectino-book {
+    .full_books .section_two_books #ul {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        width:100%;
-        height:60%;
-    } 
-    .titlesm {
+        align-items: center;
+        flex: 70%;
+        overflow-x: hidden;
+    }
+    .full_books .section_two_books #ul #link {
+        margin-right: 24px;
+        background-image: linear-gradient( #2a8fd2,#0d649e);
         display: flex;
         flex-direction: column;
         align-items: center;
-        color: white;
-        font-family: "Bahij helvetica";
-        font-size:10px;
-    }
-    
-}
-@media screen and (max-height: 705px) {
-    .full_book #Books .top .first-svgs .laptop-svg .image1{
-        height: 80%;
-        width: 80%;
-    }
-    /* .full_book #Books .top .third-section{
-        background-color: #707070;
-        height: 80%;
-        
-    } */
-    .full_book #Books .top .third-section .laptop-right{
-        height: 80%;
-        width: 80%;
-    }
-    .full_book #Books .top .first-section h1{
-      font-size: 3vw;
-
-    }
-    .full_book #Books .top .first-section p{
-        font-size: 2vw;
-    }
-    .full_book #Books .bottom  .laptop-right{
-    
-    height: 60%;
-    }
-    .full_book #Books .bottom  .laptop-right .imageb2{
-        margin-top: 20%;
-        height: 80%;
-
-    }
-    .full_book #Books .bottom .last-svg{
-        
-        height: 60%;
-    } 
-    .full_book #Books .bottom .last-svg .image4{
-        height: 80%;
+        justify-content: center;
+        padding: 18px;
+        flex: 1;
+        margin-right: 18px;
         width: 100%;
-        margin-top: 20%;
+        height: 210px;
+        border-radius: 35px;
     }
-    .titlesm {
+    .full_books .section_two_books #ul #link:hover {
+        background-image: linear-gradient( #2a8fd2dc,#2a8fd2);
+        padding: 20px;
+        height: 212px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .full_books .section_two_books #ul #link img {
+        height: 90px;
+        width: 100px;
+       margin-bottom: 15px;
+    }
+    .line_books{
+     width: 100px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.677);
+    }
+    .titles_books{
+        margin-top: 8px;
         display: flex;
         flex-direction: column;
         align-items: center;
         color: white;
         font-family: "Bahij helvetica";
-        font-size:10px;
+        text-align: center;
+        font-weight: bold;
     }
-
-}
-@media screen and (max-height: 520px) and (min-width: 769px) {
-    .full_book {
-        height: 600px;
+    .tj_books{
+    font-size: 15px;
     }
-    .titlesm {
+    #h5{
+        font-size: 18px;
+    }
+    .tt_books{
+       
+    }
+    .section_three_books_phone{
         display: flex;
-        flex-direction: column;
+        flex: 10%;
         align-items: center;
-        color: white;
-        font-family: "Bahij helvetica";
-        font-size:13px;
+        text-align: center;
+        justify-content: center;
     }
-}
-@media screen and (max-width: 950px)and (min-width:769px){
-    .full_book {
-        height:620px;
+    .para_phone_books{
+        color: rgb(85, 86, 86);
+        font-size: 4vw;
+        font-weight: bold;
+        margin-top: 7px;
+        text-align: center;
+        align-items: center;
+        margin-left: 22vw;
+        margin-right: 22vw;
     }
-}
-@media screen and (max-width: 950px)and (min-width:700px){
-    .full_book {
-        height:620px;
+    .section_three_books{
+    flex: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
     }
-    .arroeBb {
-        margin-bottom:0%;
-        margin-left:0%;
-        cursor: pointer;
+    .imag_section_three_books{
         display: flex;
-        align-items:start;
+        width: 7vw;
+        height: 7vw;
+        margin-left: 6vw;
+        margin-bottom: 3vw;
     }
-    .titlesm {
-        font-family: "Bahij helvetica";
-        text-align:center;
-        align-items: center;
-        font-size:10px;
-      width:100%;
+    .imageb2{
+        display: none;
+     
+    }
+    .para_books{
+    display: none;
+    }
+    .image4{
+        margin-right: 6vw;
+        margin-bottom: 3vw;
+        width: 6.5vw;
+        height: 6vw;
     }
 }

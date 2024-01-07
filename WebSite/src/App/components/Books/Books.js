@@ -11,15 +11,16 @@ import imageB3 from "../../assets/B3.png";
 import imageb4 from "../../assets/B1.png";
 import imagebm from "../../assets/mobileb.png";
 import imgbm2 from "../../assets/mobileb2.png";
-// import MBarrow from "../../assets/MBarrow.png";
-import arrowB from "../../assets/arrowB.png";
+import image4 from "../../assets/Group_158_bu.png";
 import mobileb3 from "../../assets/mobileb3.png";
 import imgbm4 from "../../assets/imgbm2.png";
 import scrolrm from "../../assets/scrolrm.png";
 import scrollm from "../../assets/scrollm.png";
-// import back from "../../assets/SELESHHHH.png";
+import rightClick from "../../assets/scrolrm.png";
+import leftClick from "../../assets/scrollm.png";
 import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
+import ig from '../../assets/Group_158_jr@2x.png';
 const Books = ({ t }, props) => {
   const { userInfo, isLoading } = useContext(AuthContext);
   const location = useLocation();
@@ -30,23 +31,23 @@ const Books = ({ t }, props) => {
   const grade_name = locationData.grade_name;
   const navigate = useNavigate();
   const leftScroll = () => {
-    
-      const slider = document.getElementById("ul");
+
+    const slider = document.getElementById("ul");
     slider.scrollLeft = slider.scrollLeft - 90;
   };
   const righScrool = () => {
-      // alert("called")
-      const slider = document.getElementById("ul");
-       slider.scrollLeft = slider.scrollLeft +90;
-};
-const righScrollMobile = ()=>{
-  const slider = document.getElementById("Mul");
-       slider.scrollLeft = slider.scrollLeft +50;
-}
-const leftScrollMobile = ()=>{
-  const slider = document.getElementById("Mul");
-       slider.scrollLeft = slider.scrollLeft -50;
-}
+    // alert("called")
+    const slider = document.getElementById("ul");
+    slider.scrollLeft = slider.scrollLeft + 90;
+  };
+  // const righScrollMobile = ()=>{
+  //   const slider = document.getElementById("Mul");
+  //        slider.scrollLeft = slider.scrollLeft +50;
+  // }
+  // const leftScrollMobile = ()=>{
+  //   const slider = document.getElementById("Mul");
+  //        slider.scrollLeft = slider.scrollLeft -50;
+  // }
   const {
     currentBook,
     setCurrentBook,
@@ -70,68 +71,30 @@ const leftScrollMobile = ()=>{
   //     return <h1>Loading.....</h1>;
   //   } else if(userInfo !== null){
   return (
-    <div className="full_book">
-      <div className="Books" id="Books">
-        <div className="top">
-          <div className="first-svgs">
-            <div className="arrowSvg" onClick={() => navigate(-1)}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width={36}
-                height={22}
-                data-name="Group 411"
-              >
-                <defs>
-                  <clipPath id="a">
-                    <path
-                      fill="#707070"
-                      d="M0 0h36v22H0z"
-                      data-name="Rectangle 85"
-                    />
-                  </clipPath>
-                </defs>
-                <g clipPath="url(#a)" data-name="Group 158">
-                  <path
-                    fill="#707070"
-                    fillRule="evenodd"
-                    d="m7.3 13.483 5.574 5.156a2.225 2.225 0 0 1 0 3.178 2.3 2.3 0 0 1-3.219 0L1 13.618a3.294 3.294 0 0 1-1-2.382 3.332 3.332 0 0 1 1-2.382L9.651.659a2.3 2.3 0 0 1 3.223 0 2.229 2.229 0 0 1 0 3.178L7.3 8.988h26.413a2.25 2.25 0 0 1 0 4.5H7.3Z"
-                    data-name="Path 433"
-                  />
-                </g>
-              </svg>
-              
-            </div>
-            <div className="laptop-svg">
-              <img src={imageb1} className="image1" />
-            </div>
-
-            {/* </div> */}
-          </div>
-          <div className="first-section">
-            <h1>{t("books1")} {grade_name} </h1>
-            <p> {t("books2")}</p>
-          </div>
-          <div className="third-section">
-            <div className="laptop-right">
-              <img src={imageb2} className="imageb2" />
-            </div>
-          </div>
+    <div className="full_books">
+      <div className="section_one_books">
+        <div className="imags_one_books">
+        <img className="prevuse_books" onClick={() => navigate(-1)} src={image4} />
+        <img className="prevuse_bookss" onClick={() => navigate(-1)} src={ig} />
+        <img src={imageb1} className="image1_books" />
         </div>
-        <div className="middlebook" id="middlebook">
-          <div onClick={() => leftScroll()} className="arrrow">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={16.435}
-              height={60.158}
-              // {...props}
-            >
-              <path
-                fill="#707070"
-                d="M16.435 0 0 15.079l16.435 15.079v-8.293l-7.384-6.786 7.384-6.755Z"
-                data-name="Path 968"
-                className="laptoparrowl"
-              />
-            </svg>
+        <div className="titils_books">
+          <h1 className="title_one_books">{t("books1")} {grade_name} </h1>
+          <p className="title_two_books"> {t("books2")}</p>
+        </div>
+        <div className="imags_two_books"></div>
+        <img src={imagebm} alt="photo" className="photo_books" />
+        <img src={imageb2} className="imageb2_books" />
+      </div>
+      <div className="section_one_books_phone">
+      <div className="titils_books_phone">
+          <h1 className="title_one_books_phone">{t("books1")} {grade_name} </h1>
+          <p className="title_two_books_phone"> {t("books2")}</p>
+        </div>
+      </div>
+      <div className="section_two_books">
+          <div onClick={() => leftScroll()} className="arrrow_bookss">
+            <img src={leftClick} alt="photo" />
           </div>
           <div className="middle" id="ul">
             {subjects.map((item) => {
@@ -146,19 +109,20 @@ const leftScrollMobile = ()=>{
                     to="/lessons"
                     state={{
                       lessons: item.parts,
-                      title: t("sectionlang") === "dari" ? `${grade_name} , مضمون ${item.label} `: `${grade_name} , ${item.label} مضمون`,
-                      subject_path: grade_path + item.subject_path ,
-
+                      title: t("sectionlang") === "dari" ? `${grade_name} , مضمون ${item.label} ` : `${grade_name} , ${item.label} مضمون`,
+                      subject_path: grade_path + item.subject_path,
                     }}
                     id="link"
                   >
                     <img src={bookicon} />
-                    <div className="titles">
-                      <p>{t("books6")}</p>
+                    <button className="line_books"></button>
+                    <div className="titles_books">
+
+                      <p className="tj_books">{t("books6")}</p>
                       <p id="h5">
                         {t("books4")} {item.label}
                       </p>
-                      <p>{t("books5")}</p>
+                      <p className="tt_books">{t("books5")}</p>
                     </div>
                   </Link>
                 );
@@ -174,163 +138,36 @@ const leftScrollMobile = ()=>{
                     state={{
                       units: item.parts,
                       subject_path: grade_path + item.subject_path,
-                      grade_name: t("sectionlang") === "dari"? grade_name + ` کتاب ${item.label} ` : grade_name +` ${item.label} کتاب `
+                      grade_name: t("sectionlang") === "dari" ? grade_name + ` کتاب ${item.label} ` : grade_name + ` ${item.label} کتاب `
                     }}
                     id="link"
                   >
                     <img src={bookicon} />
-                    <div className="titles">
-                      <p>{t("books6")}</p>
+                    <button className="line_books"></button>
+                    <div className="titles_books">
+                      <p className="tj_books">{t("books6")}</p>
                       <p id="h5">
                         {t("books4")} {item.label}
                       </p>
-                      <p>{t("books5")}</p>
+                      <p className="tt_books">{t("books5")}</p>
                     </div>
                   </Link>
                 );
               }
             })}
           </div>
-          <div onClick={() => righScrool()} className="arrrow">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={16.435}
-              height={60.158}
-              // {...props}
-            >
-              <path
-                fill="#707070"
-                d="m0 0 16.435 15.079L0 30.158v-8.29l7.384-6.786L0 8.327Z"
-                data-name="Path 967"
-                className="laptoparrowr"
-              />
-            </svg>
-          </div>
-        </div>
-        <div className="bottom">
-          <div className="laptop-right">
-            <img src={imageB3} className="imageb2" />
-          </div>
-          <div className="p-section">
-            <p>{t("books3")}</p>
-          </div>
-          <div className="last-svg">
-            <img src={imageb4} className="image4" />
-          </div>
-        </div>
-      </div>
-      <div className="MBooks">
-        <div className="TopB">
-          <div className="arrowSvg" onClick={() => navigate(-1)}>
-            <img src={arrowBb} alt="photo" className="arroeBb" />
-               <div className=" Mbarrow" onClick={() => navigate(-1)}>
-          </div>
-          </div>
-       
-      <div className="second-sectino-book">
-            <div className="imgbm12">
-            <img src={imgbm2} alt="photo" />
-          </div>
-
-          <div className="laptop-svg">
-            <img src={imageb1} className="image1" />
-          </div>
-          <div className="topp">
-            <h1>{t("books1")} {grade_name}</h1>
-            <p> {t("books2")}</p>
-          </div>
-          <div className="imgbm2">
-            <img src={imagebm} alt="photo" />
+          <div onClick={() => righScrool()} className="arrrow_books">
+            <img src={rightClick} />
           </div>
       </div>
-          <div className="laptop-right">
-            <img src={imageb2} className="imageb2" />
-          </div>
-        </div>
-        <div className="middlebook" id="middlebook">
-          <div onClick={() => leftScrollMobile()} className="arrow">
-            <img src={scrollm} alt="photo" className="scrollm" />
-          </div>
-          <div className="MobileBooks" id="Mul">
-            {subjects.map((item) => {
-              if (item.parts[0].lessons == undefined) {
-                return (
-                  <Link
-                    onClick={() => {
-                      setCurrentLesson("lesson");
-                      setCurrentpart(item.parts);
-                      setCurrentBook(item.label);
-                    }}
-                    to="/lessons"
-                    state={{
-                      lessons: item.parts,
-                      title: " مضمون " + item.label,
-                      subject_path: grade_path + item.subject_path,
-                    }}
-                    id="linkM"
-                  >
-                    <img src={bookicon} className="MBicon" />
-                    <div className="titlesm">
-                      <p>{t("books6")}</p>
-                      <p id="h5">
-                        {t("books4")} {item.label}
-                      </p>
-                      <p>{t("books5")}</p>
-                    </div>
-                  </Link>
-                );
-              } else {
-                return (
-                  <Link
-                    onClick={() => {
-                      setCurrentLesson("unit");
-                      setCurrentpart(item.parts);
-                      setCurrentBook(item.label);
-                    }}
-                    to="/unit"
-                    state={{
-                      units: item.parts,
-                      subject_path: grade_path + item.subject_path,
-                      grade_name: t("sectionlang") === "dari"? grade_name + ` کتاب ${item.label} ` : grade_name +` ${item.label} کتاب `
-                    }}
-                    id="linkM"
-                  >
-                    <img src={bookicon} className="MBicon" />
-                    <div className="titlesm">
-                      <p>{t("books6")}</p>
-                      <p id="h5">
-                        {t("books4")} {item.label}
-                      </p>
-                      <p>{t("books5")}</p>
-                    </div>
-                  </Link>
-                );
-              }
-            })}
-          </div>
-          <div onClick={() => righScrollMobile()} className="arrow">
-            <img src={scrolrm} alt="photo" />
-          </div>
-        </div>
-        <div className=" ButtomB">
-          <div className="laptop-right">
-            <img src={imageB3} className="imageb2" />
-          </div>
-          <div className="mobilebb3">
-            <img src={mobileb3} alt="photo" />
-          </div>
-          <div className="p">
-            <p>{t("books3")}</p>{" "}
-          </div>
-          <div>
-            {" "}
-            <img className="imagemb" src={imgbm4} alt="photo" />
-          </div>
-          <div className="last-svg">
-            <img src={imageb4} className="image4" />
-          </div>
-          {/* <img src={imageb4} className="image4" /> */}
-        </div>
+      <div className="section_three_books_phone">
+      <p className="para_phone_books">{t("books3")}</p>
+      </div>
+      <div className="section_three_books">
+      <img className="imag_section_three_books" src={mobileb3} alt="photo" /> 
+        <img src={imageB3} className="imageb2" />
+        <p className="para_books">{t("books3")}</p>
+        <img src={imageb4} className="image4" />
       </div>
     </div>
   );
