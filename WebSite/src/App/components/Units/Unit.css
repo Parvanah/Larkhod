@@ -85,6 +85,12 @@
     width: 100%;
     overflow-x: scroll;
 }
+.full_unit .section_tow_unit .m-section a:hover {
+    background-color: rgba(255, 255, 255, 0.914);
+    width: 135px;
+    height: 155px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
 .full_unit .section_tow_unit .m-section a {
     background-color: rgba(255, 255, 255, 1);

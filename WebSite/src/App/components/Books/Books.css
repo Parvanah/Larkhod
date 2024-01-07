@@ -325,12 +325,6 @@ height: 4.5vw;
         height: 210px;
         border-radius: 18px;
     }
-    .full_books .section_two_books #ul #link:hover {
-        background-image: linear-gradient( #2a8fd2dc,#2a8fd2);
-        padding: 20px;
-        height: 212px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
     .full_books .section_two_books #ul #link img {
         height: 90px;
         width: 100px;
@@ -549,12 +543,6 @@ height: 7.5vw;
         width: 100%;
         height: 210px;
         border-radius: 35px;
-    }
-    .full_books .section_two_books #ul #link:hover {
-        background-image: linear-gradient( #2a8fd2dc,#2a8fd2);
-        padding: 20px;
-        height: 212px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
     .full_books .section_two_books #ul #link img {
         height: 90px;
