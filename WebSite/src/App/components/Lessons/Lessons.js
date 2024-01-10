@@ -234,7 +234,7 @@ const Lessons = ({ t }, props) => {
                       }
                 }
               >
-                {IsLoading ? <TailSpin width={"30px"} color=" #474646" height={"30px"}/> : t("lessons4")}
+                {IsLoading ? <TailSpin width={"20px"} color=" #474646" height={"20px"}/> : t("lessons4")}
               </button>
               <button
                 onClick={handlePageBack}
@@ -252,7 +252,7 @@ const Lessons = ({ t }, props) => {
                       }
                 }
               >
-                {IsLoading ? <TailSpin width={"25px"} color=" #474646" height={"20px"}/> : t("lessons5")}
+                {IsLoading ? <TailSpin width={"20px"} color=" #474646" height={"20px"}/> : t("lessons5")}
               </button>
             </div>
           </div>
@@ -334,7 +334,7 @@ const Lessons = ({ t }, props) => {
             </div>
             <img src={photo6} className="imgTop" alt="pic"></img>
             <div className="title-mob1">
-              {IsLoading ? <div><TailSpin width={"25px"} color=" #474646" height={"20px"}/></div> : <p>{`${unit}- ${title}`}</p>}
+              {IsLoading ? <div><TailSpin width={"20px"} color=" #474646" height={"20px"}/></div> : <p>{`${unit}- ${title}`}</p>}
             </div>
           </div>
         </div>
@@ -383,7 +383,7 @@ const Lessons = ({ t }, props) => {
                     }
               }
             >
-              {IsLoading ? <TailSpin width={"25px"} color=" #474646" height={"20px"}/> : t("lessons4")}
+              {IsLoading ? <TailSpin width={"20px"} color=" #474646" height={"20px"}/> : t("lessons4")}
             </button>
             <button
               onClick={handlePageBack}
