@@ -13,7 +13,7 @@ import img3 from "../../assets/logo_3.png";
 <link rel="stylesheet" href="LogIn.css" />;
 
 const LogIn = ({ t }, props) => {
-  const loggin = useGoogleLogin({
+  const LogIn = useGoogleLogin({
     onSuccess: async (respose) => {
       try {
         const res = await axios.get(
@@ -193,13 +193,13 @@ const LogIn = ({ t }, props) => {
         )}
           </form>
           <h4 className="p_login">{t("login7")} </h4>
-          <Link to="google.com" className="GoogleBtn">
-            <button className="google_button_singup">
+          <div className="GoogleBtn">
+            <button className="google_button_singup" onClick={LogIn}>
               {/* <FaGoogle className="google_icon_login" /> */}
               <img src={googlel} className="google"/>
               <div className="google_p_login">{t("login8")}</div>
             </button>
-          </Link>
+          </div>
         </div>
         <div className="mobilee">
           <form onSubmit={handleSubmit}>
