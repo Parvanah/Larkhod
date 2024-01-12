@@ -12,7 +12,7 @@ import { Link, useNavigate } from "react-router-dom";
 <link rel="stylesheet" href="./Suggestion.css" />;
 
 const Suggestion = ( { t }) => {
-  const { isLoading, register } = useContext(AuthContext);
+  const { isLoading, register , suggestion} = useContext(AuthContext);
 
     const initialValues = {name:"", message:"", city: "", email: "", phone: "", senf:""};
 	const [formValues, setFormValues] = useState(initialValues);
@@ -32,6 +32,7 @@ const Suggestion = ( { t }) => {
     console.log( formValues.name, formValues.senf,formValues.phone,formValues.city, formValues.email, formValues.massege);
     register( formValues.name, formValues.senf,formValues.phone,formValues.city, formValues.email, formValues.massege);
 	  setIsSubmit(true);
+    suggestion(formValues);
 	  
 	};
   

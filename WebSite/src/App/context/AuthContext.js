@@ -272,6 +272,16 @@ export const AuthProvider = ({ children }) => {
     isLoggedIn();
     setCurrentPath(window.location.pathname);
   }, []);
+  const suggestion = async (formValues) => {
+    try {
+      setIsLoading(true);
+      const res = await axios.post("/auth/suggestion", formValues);
+      console.log(res);
+      setIsLoading(false);
+    } catch (err) {
+      console.log(err);
+    }
+  }
   return (
     <AuthContext.Provider
       value={{
@@ -302,6 +312,7 @@ export const AuthProvider = ({ children }) => {
         setBackendError,
         currentPath,
         setCurrentPath,
+        suggestion,
       }}
     >
       {children}
