@@ -1,18 +1,18 @@
-import { AuthContext } from "./context/AuthContext";
+import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import i18n from "../i18n";
+import i18n from "../../../i18n";
 import { withNamespaces } from "react-i18next";
 import * as React from "react";
 import { useRef } from "react";
-import JSONFiles from "./Json Files/SchoolSubjects.json";
+import JSONFiles from "../../Json Files/SchoolSubjects.json";
 import { Link, useLocation } from "react-router-dom";
-import image5 from "./assets/Group_158_a@2x.png";
-import sanaf from "./assets/sanaf.png";
-import bookH from "./assets/Group 463.png";
-import pathimg from "./assets/Path 968.png";
-import line from "./assets/Line 117.png";
-import JsonFiles from "./Json Files/SchoolSubjects.json";
+import image5 from "../../assets/Group_158_a@2x.png";
+import sanaf from "../../assets/sanaf.png";
+import bookH from "../../assets/Group 463.png";
+import pathimg from "../../assets/Path 968.png";
+import line from "../../assets/Line 117.png";
+import JsonFiles from "../../Json Files/SchoolSubjects.json";
 
 import "./books.css";
 const base_path = "https://larkhoad.s3.ap-south-1.amazonaws.com";
