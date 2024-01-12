@@ -1,11 +1,11 @@
 import Spinner from "react-dom";
-import { AuthContext } from "../App/context/AuthContext";
+import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
-import i18n from '../i18n';
+import i18n from '../../../i18n';
 import { withNamespaces } from 'react-i18next';
 import { FaFacebookF, FaInstagram ,FaYoutube ,FaTwitter} from "react-icons/fa";
 import "./Suggestion.css"
-import ig from './assets/Group_158_jr@2x.png';
+import ig from '../../assets/Group_158_jr@2x.png';
 import React, { useEffect } from 'react'
 import { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";

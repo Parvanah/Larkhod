@@ -122,7 +122,7 @@
          justify-content: space-between;
 }
     .section_one_about{
-     background-image: url('../App/assets/mb-ba.jpg');
+     background-image: url('../../assets/mb-ba.jpg');
      background-size: cover; 
      background-repeat: no-repeat;
      flex: 20%;

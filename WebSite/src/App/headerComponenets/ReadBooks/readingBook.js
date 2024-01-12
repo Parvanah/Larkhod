@@ -2,8 +2,8 @@ import * as React from "react";
 import { withNamespaces } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
 import "./readingBook.css";
-import reading from "./App/assets/reading.png";
-import backr from "./App/assets/backr.png";
+import reading from "../../assets/reading.png";
+import backr from "../../assets/backr.png";
 const ReadingBook = ({ t }) => {
   return (
     <div className="readingBookk">

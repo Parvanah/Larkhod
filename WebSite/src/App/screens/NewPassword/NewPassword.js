@@ -30,7 +30,7 @@ const  NewPassword = ({ t }) => {
 	  setFormErrors(validate(formValues));
 	  console.log( formValues.password, formValues.confirmpassword);
 	  register(formValues.password, formValues.confirmpassword);
-	  navigate("/header");
+	  navigate("/home");
 	  setIsSubmit(true);
 	};
 	useEffect(() => {
