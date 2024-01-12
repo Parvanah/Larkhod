@@ -24,7 +24,7 @@ import Suggestion from "../src/App/headerComponenets/Suggestion/Suggestion.js";
 import ChangeProfile from "../src/App/headerComponenets/ChangeProfile/ChangeProfile";
 import Home from "./App/components/Home/Home.js";
 import "./App.css";
-import ReadingBook from "./App/headerComponenets/ReadBooks/readingBook.js";
+import ReadingBook from "../src/App/headerComponenets/ReadBooks/readingBook.js";
 import Loading from "./App/Loading/Loading.js";
 function App() {
   const [loading, setLoading] = useState(true);
