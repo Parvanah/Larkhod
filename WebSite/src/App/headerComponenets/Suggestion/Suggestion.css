@@ -470,7 +470,7 @@
     .sec-one-three-suggestion{
         display: flex;
         justify-content: center;
-        background-image: url('../App/assets/nnn.png');
+        background-image: url('../../assets/nnn.png');
         /* background-color: aqua; */
         background-size: cover; 
         background-repeat: no-repeat;
@@ -620,7 +620,7 @@
     .sec-one-three-suggestion{
         display: flex;
         justify-content: center;
-        background-image: url('../App/assets/ppp.png');
+        background-image: url('../../assets/ppp.png');
         background-size: cover; 
      background-repeat: no-repeat;
      height:100vh;
@@ -685,7 +685,7 @@
     .sec-one-three-suggestion{
         display: flex;
         justify-content: center;
-        background-image: url('../App/assets/ppp.png');
+        background-image: url('../../assets/ppp.png');
         background-size: cover; 
      background-repeat: no-repeat;
      height:100vh;

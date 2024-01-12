@@ -1,22 +1,15 @@
-import { AuthContext } from "./context/AuthContext";
+import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
-// import JsonFiles from "./Json Files/SchoolSubjects.json";
-import i18n from "../i18n";
+import i18n from "../../../i18n";
 import { withNamespaces } from "react-i18next";
 import * as React from "react";
 import "./downloading.css";
 import { HiDownload } from "react-icons/hi";
 import { Link, useLocation } from "react-router-dom";
-import image10 from "./assets/Group_158_a@2x.png";
-// import { useNavigate } from "react-router-dom";
+import image10 from "../../assets/Group_158_a@2x.png";
 import { useRef } from "react";
-// import FileSaver from "file-saver";
-// import * as React from "react";
-// import bookicon from "./assets/Group_360.png";
-import Dimage from "./assets/Dimage.png";
-// import Dimage2 from "./assets/Dimage.png";
-import pathimg from "./assets/Path 968.png";
-// import line from "./assets/Line 117.png";
+import Dimage from "../../assets/Dimage.png";
+import pathimg from "../../assets/Path 968.png";
 const Downloading = ({ t }, props) => {
   const { userInfo, isLoading } = useContext(AuthContext);
   const changeLanguage = (lng) => {

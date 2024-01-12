@@ -10,7 +10,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Profile from "../../assets/Group_168_@2x.png";
 import TelegramIcon from "../../assets/Group 413.png";
 import MobileBackGroundCP from "../../assets/ChangeProMobile.png";
-<link rel="stylesheet" href="ChangeProfile.css" />;
+<link rel="stylesheet" href="./ChangeProfile.css" />;
 
 const ChangeProfile = ({ t }) => {
   const { userInfo, isLoading, changeInfo } = useContext(AuthContext);

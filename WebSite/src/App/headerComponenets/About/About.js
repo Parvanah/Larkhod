@@ -1,14 +1,14 @@
-import { AuthContext } from "./context/AuthContext";
+import { AuthContext } from "../../context/AuthContext";
 import { useContext } from 'react';
-import i18n from '../i18n';
+import i18n from '../../../i18n';
 import { withNamespaces } from 'react-i18next';
-import logo from './assets/blueo.png';
-import dot from './assets/dot_one.png';
-import seleshfphon from "../App/assets/Group_158_a@2x.png";
-import selesh from './assets/Group_158_.png';
+import logo from '../../assets/blueo.png';
+import dot from '../../assets/dot_one.png';
+import seleshfphon from "../../assets/Group_158_a@2x.png";
+import selesh from '../../assets/Group_158_.png';
 import React from 'react'
-import img3 from '../App/assets/svg_phone.png';
-import img1 from '../App/assets/logo_1.png';
+import img3 from '../../assets/svg_phone.png';
+import img1 from '../../assets/logo_1.png';
 import "./About.css"
 import { Link, useNavigate } from "react-router-dom";
 <link rel="stylesheet" href="./About.css" />;

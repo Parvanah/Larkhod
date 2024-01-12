@@ -1,22 +1,18 @@
 import { useNavigate } from "react-router-dom";
 import * as React from "react";
 import { useRef } from "react";
-// import { useState } from "react";
-import i18n from "../i18n";
+import i18n from "../../../i18n";
 import { withNamespaces } from "react-i18next";
-import sanaf from "./assets/sanaf.png";
-// import images from "./assets/images.png";
-import image from "./assets/Group_158_a@2x.png";
-import line from "./assets/Line 117.png";
-import Gimgae from "./assets/Group 483.png";
-import pathimg from "./assets/Path 968.png";
+import sanaf from "../../assets/sanaf.png";
+import image from "../../assets/Group_158_a@2x.png";
+import line from "../../assets/Line 117.png";
+import Gimgae from "../../assets/Group 483.png";
+import pathimg from "../../assets/Path 968.png";
 import { Link, useLocation } from "react-router-dom";
-//import JsonFiles from "../App/Json Files/SchoolSubjects.json"
-import { AuthContext } from "../App/context/AuthContext";
+import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
-// import JsonFiles from "../Json Files/SchoolSubjects.json";
-import JsonFiles from "./Json Files/SchoolSubjects.json";
-import { basePath } from "./BasePath/BasePath";
+import JsonFiles from "../../Json Files/SchoolSubjects.json";
+import { basePath } from "../../BasePath/BasePath";
 
 import "./Grades.css";
 
