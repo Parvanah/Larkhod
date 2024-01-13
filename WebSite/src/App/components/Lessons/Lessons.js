@@ -182,17 +182,18 @@ const Lessons = ({ t }, props) => {
         <div className="showLesson">
           <div className="title">
             <div className="main_lesson_title">
-              {IsLoading ? (
+              {/* {IsLoading ? (
                 <div><TailSpin width={"30px"} color=" #474646" height={"30px"}/></div>
               ) 
               : (
-                <h1>{`${unit} _ ${title}`}</h1>
-              )}
+               
+              )} */}
+               <h1>{`${unit} _ ${title}`}</h1>
             </div>
             <img src={photo1}></img>
           </div>
           <div className="bottom">
-            <div className="img">
+          {IsLoading ? <div className="spinner"><TailSpin width={"80px"} color="#474646" height={"80px"} margin-left={"20%"} /></div> :   <div className="img">
               {!IsErrorOnImageLoad ? (
                 <img
                   src={
@@ -211,7 +212,8 @@ const Lessons = ({ t }, props) => {
               ) : (
                 <div className="ErrorOnLoading">{t("lessons7")}</div>
               )}
-            </div>
+            </div>}
+          
           </div>
           <div className="midlle">
             {/* <div className="pdf-Download-ls">
@@ -234,7 +236,8 @@ const Lessons = ({ t }, props) => {
                       }
                 }
               >
-                {IsLoading ? <TailSpin width={"20px"} color=" #474646" height={"20px"}/> : t("lessons4")}
+                {t("lessons4")}
+                {/* {IsLoading ? <TailSpin width={"20px"} color=" #474646" height={"20px"}/> : } */}
               </button>
               <button
                 onClick={handlePageBack}
@@ -252,7 +255,8 @@ const Lessons = ({ t }, props) => {
                       }
                 }
               >
-                {IsLoading ? <TailSpin width={"20px"} color=" #474646" height={"20px"}/> : t("lessons5")}
+                {t("lessons5")}
+                {/* {IsLoading ? <TailSpin width={"20px"} color=" #474646" height={"20px"}/> : } */}
               </button>
             </div>
           </div>
