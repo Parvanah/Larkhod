@@ -135,7 +135,6 @@
 
 .Lesson_body .sidebar .scrollArrow {
     flex: 5%;
-
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -151,7 +150,6 @@
 .Lesson_body .sidebar .scrollArrow img:hover {
     cursor: pointer;
 }
-
 .Lesson_body .showLesson {
     width: 70%;
     height: 100%;
@@ -195,16 +193,19 @@
     flex-direction: row-reverse;
     justify-content: start;
     align-items: center;
+    border: 4px dashed #3c98bd;
+    border-radius: 15px;
 }
-
 .Lesson_body .showLesson .bottom .img {
     width: 100%;
     height: 95%;
     overflow-y: scroll;
-    border: 4px dashed #3c98bd;
-    border-radius: 15px;
 }
-
+.Lesson_body .showLesson .bottom .spinner{
+    display: flex;
+    align-items: center;
+    margin-left: 50%;
+}
 .Lesson_body .showLesson .bottom .img img {
     width: 100%;
 }
