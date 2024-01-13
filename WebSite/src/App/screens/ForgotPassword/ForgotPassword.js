@@ -13,7 +13,7 @@ import React from 'react'
 <link rel="stylesheet" href="ForgotPassword.css" />;
 
 const ForgotPassword = ({ t }) => {
-	const { isLoading, register, userInfo } = useContext(AuthContext);
+	const { isLoading, register, userInfo, forgotPassword } = useContext(AuthContext);
 	// const { register } = useContext(AuthContext);
 	const initialValues = { email: "" };
 	const [formValues, setFormValues] = useState(initialValues);
@@ -32,6 +32,7 @@ const ForgotPassword = ({ t }) => {
 	  console.log( formValues.email);
 	  register( formValues.email);
 	  setIsSubmit(true);
+	  forgotPassword(formValues.email);
 	};
   
 	useEffect(() => {
