@@ -40,7 +40,7 @@
 }
 
 .Lesson_body .sidebar {
-    border-top: 2px solid white;
+    /* border-top: 2px solid white; */
     display: flex;
     height: 100%;
     width: 27%;
@@ -104,9 +104,12 @@
 }
 
 .Lesson_body .sidebar .text .sidebar-lessons .inside_sidebar-lessons {
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     flex: 100%;
     width: 100%;
+  overflow-y: auto;
+  transition: all 5s;
+
 
 }
 
@@ -598,7 +601,9 @@
         overflow-y: scroll;
         font-size: 12px;
     }
-
+    .Lesson_body .mobile .menu_bar .text-mob .sidebar-mobile-wrapper .scrollSideBar-mobile{
+       cursor: pointer;
+     }
     .Lesson_body .mobile .menu_bar .text-mob .sidebar-mobile-wrapper .sidebar-mobile .mob-item {
         display: flex;
         flex-direction: row;

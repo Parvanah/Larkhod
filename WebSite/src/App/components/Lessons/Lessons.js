@@ -21,6 +21,7 @@ import photo7 from "../../assets/Group_158_f.png";
 import { FiMenu } from "react-icons/fi";
 import { ImCross } from "react-icons/im";
 import lessonList from '../../assets/3Dots.png';
+import ScrollArrow from "../../assets/Path 1005.png";
 const Lessons = ({ t }, props) => {
   const { userInfo, isLoading } = useContext(AuthContext);
 
@@ -117,6 +118,20 @@ const Lessons = ({ t }, props) => {
       setSidebar("none");
     }
   };
+  const ScrollSideBarUp = ()=>{
+    const content = document.getElementById("sidebar-lessons");
+    const MobileContent = document.getElementById("sidebar-mobile");
+    content.scrollBy({
+      top: + 50,
+      behavior : "smooth"
+    })
+    MobileContent.scrollBy(
+      {
+        top: + 50,
+        behavior : "smooth"
+      }
+    )
+  }
   return (
     <body className="Lesson_body">
       <div className="lesson">
@@ -131,11 +146,12 @@ const Lessons = ({ t }, props) => {
             <h4 className="Lesson_title">
               { t("sectionlang") === "dari"? `${t("lessons1")} ${unit}`:`د ${unit}  ${t("lessons1")}`}
             </h4>
-            <div className="sidebar-lessons">
-              <div className="inside_sidebar-lessons">
+            <div className="sidebar-lessons" >
+              <div className="inside_sidebar-lessons" id="sidebar-lessons">
                 {unitsPath ? (
                   <div
                     className="lesson_item"
+
                     style={
                       title === t("lessons6")
                         ? { background: "#FFF", color: "#3C98BD" }
@@ -176,7 +192,8 @@ const Lessons = ({ t }, props) => {
             </div>
           </div>
           <div className="scrollArrow">
-            <img src={scrollArrow} />
+            <img src={scrollArrow} onClick={ScrollSideBarUp}/>
+
           </div>
         </div>
         <div className="showLesson">
@@ -278,7 +295,7 @@ const Lessons = ({ t }, props) => {
           <div className="text-mob">
             <h3 className="text-mob-title"> درس های {unit}</h3>
             <div className="sidebar-mobile-wrapper">
-              <div className="sidebar-mobile">
+              <div className="sidebar-mobile" id="sidebar-mobile">
                 {unitsPath ? (
                   <div
                     className="mob-item"
@@ -318,6 +335,9 @@ const Lessons = ({ t }, props) => {
                     </div>
                   );
                 })}
+              </div>
+              <div className="scrollSideBar-mobile">
+                <img src={ScrollArrow} onClick={ScrollSideBarUp}/>
               </div>
             </div>
           </div>
