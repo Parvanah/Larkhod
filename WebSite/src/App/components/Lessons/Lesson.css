@@ -174,9 +174,8 @@
     color: #3C98BD;
     font-weight: bold;
     text-align: right;
-
+    margin-top: -4vh;
 }
-
 .Lesson_body .showLesson .title .main_lesson_title {
     display: flex;
     flex-direction: row-reverse;
@@ -201,7 +200,7 @@
 }
 .Lesson_body .showLesson .bottom .img {
     width: 100%;
-    height: 95%;
+    height: 100%;
     overflow-y: scroll;
 }
 .Lesson_body .showLesson .bottom .spinner{
@@ -212,7 +211,6 @@
 .Lesson_body .showLesson .bottom .img img {
     width: 100%;
 }
-
 .Lesson_body .showLesson .midlle {
     height: 5%;
     display: flex;
@@ -221,7 +219,6 @@
     align-items: center;
     width: 75%;
 }
-
 .Lesson_body .showLesson .midlle .pdf-Download-ls {
     display: flex;
     flex-direction: row-reverse;
