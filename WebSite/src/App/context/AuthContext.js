@@ -1,14 +1,12 @@
-import { BASE_URL } from "../config";
-import { AsyncStorage } from "react";
+
+import { apiBasePath } from "../BasePath/BasePath";
 import axios from "axios";
 import React, {
-  setStatusCode,
-  Authorization,
   createContext,
   useEffect,
   useState,
 } from "react";
-axios.defaults.baseURL = "http://192.168.208.250:8000/api/v1";
+axios.defaults.baseURL = apiBasePath;
 axios.defaults.timeout = 3000;
 
 // import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -26,7 +24,7 @@ export const AuthProvider = ({ children }) => {
   const [currentState, setCurrentState] = useState();
   const [currentLesson, setCurrentLesson] = useState();
   const [currentpart, setCurrentpart] = useState();
-  const [backendError, setBackendError] = useState("not connected");
+  const [backendError, setBackendError] = useState();
   const [currentPath, setCurrentPath] = useState();
   const Authorization = async (status, token, errorMessage) => {
     try {
@@ -53,7 +51,7 @@ export const AuthProvider = ({ children }) => {
   const register = async (name, email, password) => {
     try {
       setIsLoading(true);
-      const response = await axios.post(`${BASE_URL}/auth/register`, {
+      const response = await axios.post(`/auth/register`, {
         email,
         password,
         name,
@@ -75,23 +73,12 @@ export const AuthProvider = ({ children }) => {
         email,
         password,
       });
-      // console.log(response.status);
-      // let userInformation = response.data;
-      // // setUserInfo(userInfo);
-      // // localStorage.setItem("userInfo", JSON.stringify(userInfo));
-      // setIsLoading(false);
-      // var accsess_token = userInformation.token;
       const statusCode = response?.status;
-      console.log(userInfo);
-      console.log("done");
-      setBackendError("");
       Authorization(statusCode, response?.data?.token, "Successfully");
       setIsLoading(false);
     } catch (error) {
-      console.log(error?.response?.data);
-      setBackendError(error.response.data.message);
+      setBackendError(error.response.data);
       setUserInfo(null);
-      console.log(error?.response?.status);
       setStatusCode(error?.response?.status);
 
       setIsLoading(false);
@@ -104,14 +91,10 @@ export const AuthProvider = ({ children }) => {
         email,
       });
       const statusCode = response?.status;
-      console.log(userInfo);
-      console.log("done");
       Authorization(statusCode, response?.data.token, "Successfully");
       setIsLoading(false);
     } catch (error) {
-      console.log(error?.response?.data);
       setUserInfo(null);
-      console.log(error?.response?.status);
       setStatusCode(error?.response?.status);
 
       setIsLoading(false);
@@ -125,14 +108,10 @@ export const AuthProvider = ({ children }) => {
         confirmPassword,
       });
       const statusCode = response?.status;
-      console.log(userInfo);
-      console.log("done");
       Authorization(statusCode, response.data.token, "Successfully");
       setIsLoading(false);
     } catch (error) {
-      console.log(error?.response?.data);
       setUserInfo(null);
-      console.log(error?.response?.status);
       setStatusCode(error?.response?.status);
 
       setIsLoading(false);
@@ -160,14 +139,10 @@ export const AuthProvider = ({ children }) => {
   const changeInfo = async (name) => {
     try {
       setIsLoading(true);
-
-      console.log(userInfo);
       const response = await axios.put(`/user/${userInfo.user._id}`, {
         name,
         email: userInfo.user.email,
       });
-      console.log("put");
-      console.log(response.data);
 
       localStorage.setItem(
         "userInfo",
@@ -176,7 +151,6 @@ export const AuthProvider = ({ children }) => {
       setUserInfo({ ...userInfo, user: response?.data });
       setIsLoading(false);
     } catch (error) {
-      console.log(error.response?.data);
       setIsLoading(false);
     }
   };
@@ -227,14 +201,10 @@ export const AuthProvider = ({ children }) => {
         email,
       });
       const statusCode = response.status;
-      console.log(userInfo);
-      console.log("done");
       Authorization(statusCode, response.data.token, "Successfully");
       setIsLoading(false);
     } catch (error) {
-      console.log(error?.response?.data);
       setUserInfo(null);
-      console.log(error?.response?.status);
       setStatusCode(error?.response?.status);
 
       setIsLoading(false);
@@ -254,7 +224,6 @@ export const AuthProvider = ({ children }) => {
       setSplashLoading(false);
     } catch (e) {
       setSplashLoading(false);
-      console.log(`isLogged in error ${e}`);
     }
   };
   const Loggout = () => {
@@ -265,7 +234,6 @@ export const AuthProvider = ({ children }) => {
       setUserInfo(null);
       setIsLoading(false);
     } catch (e) {
-      console.log(`loggout error${e}`);
     }
   };
   useEffect(() => {
@@ -276,10 +244,8 @@ export const AuthProvider = ({ children }) => {
     try {
       setIsLoading(true);
       const res = await axios.post("/auth/suggestion", formValues);
-      console.log(res);
       setIsLoading(false);
     } catch (err) {
-      console.log(err);
     }
   }
   return (

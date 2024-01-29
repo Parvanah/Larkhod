@@ -116,8 +116,6 @@ const Header = ({ t }, props) => {
     }
     setIsOpenProfileMenue(false);
   };
-  console.log(currentLesson);
-  console.log(currentpart);
   var nav;
   var status;
   if (currentLesson == "lesson") {
