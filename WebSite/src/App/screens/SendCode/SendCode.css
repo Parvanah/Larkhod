@@ -159,7 +159,7 @@
 
 
 /* mobile styles */
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) and (min-height:1px) {
 	.all-section-send-code {
 		display: flex;
 		flex-direction: column-reverse;
@@ -345,7 +345,7 @@
 	}
 }
 
-@media screen and (max-width: 414px) {
+@media only screen and (max-width: 414px) and (min-height:1px) {
 	.error_send-code {
 		font-size: 4vw;
 	}
@@ -398,7 +398,7 @@
 	}
 }
 
-@media screen and (min-height: 1180px) and (max-height:1500px) {
+@media screen and (min-height: 1138px) {
 	.all-section-send-code {
 		display: flex;
 		flex-direction: column-reverse;
