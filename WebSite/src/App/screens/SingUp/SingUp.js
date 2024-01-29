@@ -14,7 +14,6 @@ import React from "react";
 import { Link, useNavigate, useNavigation } from "react-router-dom";
 import LogIn from "../Login/LogIn";
 import { number } from "yup";
-
 <link rel="stylesheet" href="SingUp.css" />;
 
 // import React, { useState } from 'react';

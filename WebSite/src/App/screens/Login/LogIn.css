@@ -169,7 +169,7 @@
 
 
 /* Mobile*/
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) and (min-height:1px)  {
     .full_login .Log_In_form {
         display: none;
     }
@@ -337,7 +337,7 @@
     }
 }
 
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 600px)  and (min-height:1px) {
     .full_login .Log_In_form {
         display: none;
     }
@@ -508,7 +508,7 @@
     }
 }
 
-@media screen and (min-height: 1180px) and (max-height:1500px) {
+@media screen and (min-height: 1138px) {
     .full_login .Log_In_form {
         display: none;
     }

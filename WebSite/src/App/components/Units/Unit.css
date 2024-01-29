@@ -1,3 +1,7 @@
+/* computer styles */
+*{
+    user-select: none;
+}
 .full_unit {
     display: flex;
     flex-direction: column;
@@ -163,7 +167,7 @@
 
 
 /* phone style */
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 769px) and (min-height:1px) {
     .full_unit {
         display: flex;
         flex-direction: column;
@@ -328,7 +332,7 @@
 
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 482px)and (min-height:1px) {
     .full_unit {
         display: flex;
         flex-direction: column;
@@ -461,6 +465,179 @@
     .full_unit .section_tow_unit .m-section a img {
         width: 65px;
         height: 80px;
+    }
+
+    .section_three_unit {
+        display: flex;
+        flex-direction: column;
+        flex: 25%;
+    }
+
+    .p_unit {
+        display: flex;
+        text-align: center !important;
+        align-items: center;
+        justify-content: center;
+        flex: 1%;
+        font-size: 4vw;
+        color: rgba(255, 255, 255, 0.547);
+        margin-bottom: 2vw;
+    }
+
+    .imagel_unite {
+        display: flex;
+        align-items: end;
+        flex: 99%;
+        justify-content: end;
+    }
+
+    .imagel_unit {
+        width: 220px;
+        height: 200px;
+        margin-top: 0vw;
+    }
+
+}
+
+@media screen and (min-height: 960px)  {
+    .full_unit {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(60, 155, 200, 1);
+        height: 92%;
+        width: 100%;
+        flex: 100%;
+        min-height: 560px;
+    }
+
+    .section_one_unit {
+        display: flex;
+        flex-direction: column;
+        flex: 25%;
+    }
+
+    .flesh_unit {
+        cursor: pointer;
+        margin-top: 7vw;
+        margin-left: 9vw;
+    }
+
+    .flesh-image-grade-U {
+        position: unset;
+        width: 5vw;
+        height: 4vw;
+    }
+
+    .title_unit {
+        text-align: center;
+        margin-top: 5vw;
+    }
+
+    #header-gradename {
+        font-weight: bold;
+        font-size: 7vw;
+    }
+
+    .h2 {
+        margin-left: 12vw;
+        margin-right: 12vw;
+        font-size: 5vw;
+        margin-bottom: 1vw;
+    }
+
+    .section_tow_unit {
+        display: flex;
+        flex-direction: row;
+        flex: 50%;
+        width: 100%;
+        cursor: pointer;
+        margin-bottom: 3vw;
+    }
+
+    .arrow_unit {
+        flex: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: center;
+        margin-right: 1.5vw;
+    }
+
+    .arrow_unit img {
+        width: 3.5vw;
+        height: 5.9vw;
+    }
+
+    .arrow_unite {
+        flex: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        margin-left: 1.5vw;
+    }
+
+    .arrow_unite img {
+        width: 3.5vw;
+        height: 5.9vw;
+    }
+
+    .m-section {
+        flex: 70%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        overflow-x: hidden;
+    }
+
+    .full_unit .section_tow_unit .m-section #ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        overflow-x: scroll;
+    }
+
+    .full_unit .section_tow_unit .m-section a {
+        background-color: rgba(255, 255, 255, 1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 270px;
+        height: 290px;
+        margin-right: 14px;
+        border: none;
+        border-radius: 40px;
+        padding-top: 43px;
+    }
+    .full_unit .section_tow_unit .m-section a:hover {
+        background-color: rgba(255, 255, 255, 0.914);
+        width: 275px;
+        height: 295px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .full_unit .section_tow_unit .m-section a h3 {
+        color: rgba(60, 152, 189, 1);
+        margin-bottom: 7px;
+        font-family: "Bahij helvetica";
+        font-style: normal;
+        font-size: 30px;
+        width: 220px;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .full_unit .section_tow_unit .m-section a img {
+        width: 135px;
+        height: 150px;
     }
 
     .section_three_unit {

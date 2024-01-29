@@ -6,10 +6,10 @@ import { useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
 import "./LogIn.css";
 import { useState, useEffect } from "react";
-import img1 from "../../assets/mg.png";
+// import img1 from "../../assets/mg.png";
 import googlel from "../../assets/Google.png"
 import React from "react";
-import img3 from "../../assets/logo_3.png";
+// import img3 from "../../assets/logo_3.png";
 <link rel="stylesheet" href="LogIn.css" />;
 
 const LogIn = ({ t }, props) => {
