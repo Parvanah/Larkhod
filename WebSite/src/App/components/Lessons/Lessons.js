@@ -1,67 +1,37 @@
-import { AuthContext } from "../../context/AuthContext";
+
 import { TailSpin } from "react-loader-spinner";
-import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { withNamespaces } from "react-i18next";
-import { Link, useLocation } from "react-router-dom";
+import {  useLocation } from "react-router-dom";
 import * as React from "react";
 import "./Lesson.css";
 import photo1 from "../../assets/Group_406.png";
 import { useState } from "react";
-import photo2 from "../../assets/lesson_1.jpg";
-import photo3 from "../../assets/Group_408.png";
 import photo4 from "../../assets/Group_404.png";
 import photo5 from "../../assets/Group_158_a@2x.png";
 import photo6 from "../../assets/Group 407.png";
 import scrollArrow from "../../assets/Path_1005.png";
 import topHeader from "../../assets/Path 2.png";
-// import top1 from "../../assets/Path 2@2x.png";
-import Down1 from "../../assets/Group_408.png";
 import photo7 from "../../assets/Group_158_f.png";
-import { FiMenu } from "react-icons/fi";
 import { ImCross } from "react-icons/im";
-import lessonList from '../../assets/3Dots.png';
+import ScrollArrow from "../../assets/Path 1005.png";
 const Lessons = ({ t }, props) => {
-  const { userInfo, isLoading } = useContext(AuthContext);
-
-  var [num, setNum] = useState(1);
   const location = useLocation();
   const locationData = location.state;
   const lessons = locationData.lessons;
-  console.log(lessons);
   const unit = locationData.title;
   const unitsPath = locationData.unitPath;
-  var timeStamp = new Date().getTime();
-  console.log("unit Path:", unitsPath);
-  const DownloadPdf = (url, fileName) => {
-    const aTag = document.createElement("a");
-    aTag.href = url;
-    aTag.setAttribute("download", fileName);
-    document.body.appendChild(aTag);
-    aTag.target = "bank";
-    aTag.click();
-    aTag.remove();
-  };
   const [IsLoading, setIsLoading] = useState(true);
   const [IsErrorOnImageLoad, setIsErrorOnImageLoad] = useState(false);
-  const [FirstColor, setFirstColor] = useState("#3c98bd");
-  const [secondColor, setsecondColor] = useState("#0f53a1");
-  const [nextBtn, setNextbtn] = useState({
+  const backBtn= {
     FirstColor: "#3c98bd",
     secondColor: "#0f53a1",
-  });
-  const [backBtn, setBackbtn] = useState({
-    FirstColor: "#3c98bd",
-    secondColor: "#0f53a1",
-  });
-
+  };
   const [pageNum, setPageNum] = useState(0);
   const subject_path = locationData.subject_path;
   const [lesson_path, setLessonPath] = useState(
     unitsPath ? { label: unit, paths: unitsPath } : lessons[0]
   );
-  const [tooltip, setTooltip] = useState("hidden");
-  console.log(lesson_path);
   const handelPage = () => {
     setIsLoading(true);
     setIsErrorOnImageLoad(false);
@@ -70,9 +40,6 @@ const Lessons = ({ t }, props) => {
     } else {
       setPageNum(pageNum + 1);
     }
-    //  if (!IsErrorOnImageLoad) {
-    //    setIsLoading(false);
-    //  }
   };
   const handlePageBack = () => {
     setIsLoading(true);
@@ -82,9 +49,6 @@ const Lessons = ({ t }, props) => {
     } else {
       setPageNum(pageNum - 1);
     }
-    //  if (!IsErrorOnImageLoad) {
-    //    setIsLoading(false);
-    //  }
   };
   const handleClick = (title, lesson_path) => {
     setPageNum(0);
@@ -92,24 +56,14 @@ const Lessons = ({ t }, props) => {
     setIsErrorOnImageLoad(false);
     setTitle(title);
     setLessonPath(lesson_path);
-    console.log(lesson_path);
     setSidebar("none");
-    // if (!IsErrorOnImageLoad) {
-    //   setIsLoading(false);
-    // }
   };
   const [title, setTitle] = useState(
     unitsPath ? t("lessons6") : lessons[0].label
   );
 
   const navigation = useNavigate();
-  //   if (userInfo === null) {
-  //     return navigation("/");
-  //   } else if (isLoading) {
-  //     return <h1>Loading.....</h1>;
-  //   } else if(userInfo !== null){
   const [sidebar, setSidebar] = useState("none");
-  //const width = "100%";
   const handleSideBar = () => {
     if (sidebar === "none") {
       setSidebar("inline-block");
@@ -117,22 +71,36 @@ const Lessons = ({ t }, props) => {
       setSidebar("none");
     }
   };
+  const ScrollSideBarUp = () => {
+    const content = document.getElementById("sidebar-lessons");
+    const MobileContent = document.getElementById("sidebar-mobile");
+    content.scrollBy({
+      top: +50,
+      behavior: "smooth",
+    });
+    MobileContent.scrollBy({
+      top: +50,
+      behavior: "smooth",
+    });
+  };
   return (
     <body className="Lesson_body">
       <div className="lesson">
         <div className="sidebar">
           <div className="arrow" onClick={() => navigation(-1)}>
-            <img src={photo5} />
+            <img src={photo5} alt=""/>
           </div>
           <div className="header_lesson">
-            <img src={photo4} />
+            <img src={photo4} alt=""/>
           </div>
           <div className="text">
             <h4 className="Lesson_title">
-              { t("sectionlang") === "dari"? `${t("lessons1")} ${unit}`:`د ${unit}  ${t("lessons1")}`}
+              {t("sectionlang") === "dari"
+                ? `${t("lessons1")} ${unit}`
+                : `د ${unit}  ${t("lessons1")}`}
             </h4>
             <div className="sidebar-lessons">
-              <div className="inside_sidebar-lessons">
+              <div className="inside_sidebar-lessons" id="sidebar-lessons">
                 {unitsPath ? (
                   <div
                     className="lesson_item"
@@ -176,57 +144,58 @@ const Lessons = ({ t }, props) => {
             </div>
           </div>
           <div className="scrollArrow">
-            <img src={scrollArrow} />
+            <img src={scrollArrow} onClick={ScrollSideBarUp} alt=""/>
           </div>
         </div>
         <div className="showLesson">
           <div className="title">
             <div className="main_lesson_title">
-              {/* {IsLoading ? (
-                <div><TailSpin width={"30px"} color=" #474646" height={"30px"}/></div>
-              ) 
-              : (
-               
-              )} */}
-               <h1>{`${unit} _ ${title}`}</h1>
+              <h1>{`${unit} _ ${title}`}</h1>
             </div>
-            <img src={photo1}></img>
+            <img src={photo1} alt=""></img>
           </div>
           <div className="bottom">
-          {IsLoading ? <div className="spinner"><TailSpin width={"80px"} color="#474646" height={"80px"} margin-left={"20%"} /></div> :   <div className="img">
-              {!IsErrorOnImageLoad ? (
-                <img
-                  src={
-                    `${subject_path + lesson_path.paths[pageNum]}?t=` +
-                    timeStamp
-                  }
-                  style={IsLoading? { opacity: 0} : {opacity: 1} }
-                  onLoad={() => {
-                    setIsLoading(false);
-                  }}
-                  onError={() => {
-                    setIsLoading(false);
-                    setIsErrorOnImageLoad(true);
-                  }}
-                ></img>
-              ) : (
-                <div className="ErrorOnLoading">{t("lessons7")}</div>
-              )}
-            </div>}
-          
+            {IsLoading ? (
+              <div className="spinner">
+                <TailSpin
+                  width={"80px"}
+                  color="#474646"
+                  height={"80px"}
+                  margin-left={"20%"}
+                />
+              </div>
+            ) : (
+              <div className="img">
+                {!IsErrorOnImageLoad ? (
+                  <img
+                  alt=""
+                    src={
+                      `${subject_path + lesson_path.paths[pageNum]}?t=` +
+                      pageNum
+                    }
+                    style={IsLoading ? { opacity: 0 } : { opacity: 1 }}
+                    onLoad={() => {
+                      setIsLoading(false);
+                    }}
+                    onError={() => {
+                      setIsLoading(false);
+                      setIsErrorOnImageLoad(true);
+                    }}
+                  ></img>
+                ) : (
+                  <div className="ErrorOnLoading">{t("lessons7")}</div>
+                )}
+              </div>
+            )}
           </div>
           <div className="midlle">
-            {/* <div className="pdf-Download-ls">
-              <img src={photo3}></img>
-              <p> {t("lessons3")}</p>
-            </div> */}
             <div className="next-back-ls">
               <button
                 className="next-ls"
                 onClick={handelPage}
-                disabled={pageNum == lesson_path.paths.length - 1 || IsLoading}
+                disabled={pageNum === lesson_path.paths.length - 1 || IsLoading}
                 style={
-                  pageNum == lesson_path.paths.length - 1
+                  pageNum === lesson_path.paths.length - 1
                     ? {
                         backgroundImage: `linear-gradient(to left , rgb(192,192,192), #707070)`,
                       }
@@ -237,26 +206,23 @@ const Lessons = ({ t }, props) => {
                 }
               >
                 {t("lessons4")}
-                {/* {IsLoading ? <TailSpin width={"20px"} color=" #474646" height={"20px"}/> : } */}
               </button>
               <button
                 onClick={handlePageBack}
                 className="back-ls"
-                disabled={pageNum == 0 || IsLoading}
+                disabled={pageNum === 0 || IsLoading}
                 style={
-                  pageNum == 0
+                  pageNum === 0
                     ? {
                         backgroundImage: `linear-gradient(to left , rgb(192,192,192), #707070)`,
                       }
                     : {
                         backgroundImage: `linear-gradient(to left , ${backBtn.FirstColor},
     ${backBtn.secondColor})`,
-    
                       }
                 }
               >
                 {t("lessons5")}
-                {/* {IsLoading ? <TailSpin width={"20px"} color=" #474646" height={"20px"}/> : } */}
               </button>
             </div>
           </div>
@@ -276,9 +242,11 @@ const Lessons = ({ t }, props) => {
             <img src={photo4} alt="pic" />
           </div>
           <div className="text-mob">
-            <h3 className="text-mob-title"> درس های {unit}</h3>
+            <h4 className="text-mob-title">{t("sectionlang") === "dari"
+                ? `${t("lessons1")} ${unit}`
+                : `د ${unit}  ${t("lessons1")}`}</h4>
             <div className="sidebar-mobile-wrapper">
-              <div className="sidebar-mobile">
+              <div className="sidebar-mobile" id="sidebar-mobile">
                 {unitsPath ? (
                   <div
                     className="mob-item"
@@ -319,6 +287,9 @@ const Lessons = ({ t }, props) => {
                   );
                 })}
               </div>
+              <div className="scrollSideBar-mobile">
+                <img src={ScrollArrow} onClick={ScrollSideBarUp} alt=""/>
+              </div>
             </div>
           </div>
         </div>
@@ -338,46 +309,47 @@ const Lessons = ({ t }, props) => {
             </div>
             <img src={photo6} className="imgTop" alt="pic"></img>
             <div className="title-mob1">
-              {IsLoading ? <div><TailSpin width={"20px"} color=" #474646" height={"20px"}/></div> : <p>{`${unit}- ${title}`}</p>}
+              {IsLoading ? (
+                <div>
+                  <TailSpin width={"20px"} color=" #474646" height={"20px"} />
+                </div>
+              ) : (
+                <p>{`${unit}- ${title}`}</p>
+              )}
             </div>
           </div>
         </div>
         <div className="mobile-middle">
           <div className="img">
-            {console.log(subject_path + lesson_path.paths[pageNum])}
             {!IsErrorOnImageLoad ? (
-              <img
-                src={
-                  `${subject_path + lesson_path.paths[pageNum]}?t=` + timeStamp
-                }
-                style={IsLoading ? { opacity: 0 } : { opacity: 1 }}
-                onLoad={() => {
-                  setIsLoading(false);
-                }}
-                onError={() => {
-                  setIsLoading(false);
-                  setIsErrorOnImageLoad(true);
-                }}
-                alt="pic"
-              ></img>
-            ) : (
-              <div className="ErrorOnLoading">{t("lessons7")}</div>
-            )}
+                  <img
+                    src={
+                      `${subject_path + lesson_path.paths[pageNum]}?t=` +
+                      pageNum
+                    }
+                    style={IsLoading ? { opacity: 0 } : { opacity: 1 }}
+                    onLoad={() => {
+                      setIsLoading(false);
+                    }}
+                    onError={() => {
+                      setIsLoading(false);
+                      setIsErrorOnImageLoad(true);
+                    }}
+                    alt="pic"
+                  ></img>
+                ) : (
+                  <div className="ErrorOnLoading">{t("lessons7")}</div>
+                )}
           </div>
         </div>
         <div className="mobile-bottom">
-          {/* <div className="pdf-Download-ls">
-            <img src={Down1} />
-            <button />
-            <p className="mobile-bottom-p">دانلود فایل پی دی اف</p>
-          </div> */}
           <div className="next-back-ls">
             <button
               className="next-ls"
               onClick={handelPage}
-              disabled={pageNum == lesson_path.paths.length - 1 || IsLoading}
+              disabled={pageNum === lesson_path.paths.length - 1 || IsLoading}
               style={
-                pageNum == lesson_path.paths.length - 1
+                pageNum === lesson_path.paths.length - 1
                   ? {
                       backgroundImage: `linear-gradient(to left , rgb(192,192,192), #707070)`,
                     }
@@ -387,14 +359,14 @@ const Lessons = ({ t }, props) => {
                     }
               }
             >
-              {IsLoading ? <TailSpin width={"20px"} color=" #474646" height={"20px"}/> : t("lessons4")}
+              {t("lessons4")}
             </button>
             <button
               onClick={handlePageBack}
               className="back-ls"
-              disabled={pageNum == 0 || IsLoading}
+              disabled={pageNum === 0 || IsLoading}
               style={
-                pageNum == 0
+                pageNum === 0
                   ? {
                       backgroundImage: `linear-gradient(to left , rgb(192,192,192), #707070)`,
                     }
@@ -404,13 +376,12 @@ const Lessons = ({ t }, props) => {
                     }
               }
             >
-              {IsLoading ? <TailSpin width={"20px"} color="black" height={"20px"}/> : t("lessons5")}
+              {t("lessons5")}
             </button>
           </div>
         </div>
       </div>
     </body>
   );
-  // }
 };
 export default withNamespaces()(Lessons);

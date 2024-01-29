@@ -13,7 +13,14 @@ import React from "react";
 <link rel="stylesheet" href="LogIn.css" />;
 
 const LogIn = ({ t }, props) => {
-  const LogIn = useGoogleLogin({
+  const [type, setType] = useState('');
+  const updateType = () => {
+    setType("date");
+  };
+  // const [googleUseInfo] = useState(null);
+  // const {register} = useContext(AuthContext);
+  // const navigate = useNavigate();
+  const Log = useGoogleLogin({
     onSuccess: async (respose) => {
       try {
         const res = await axios.get(
@@ -24,9 +31,18 @@ const LogIn = ({ t }, props) => {
             },
           }
         );
+      //   const {email, given_name, family_name} = userInfoResponse.data;
+      //   setGoogleUserInfo({
+      //     firstname: given_name,
+      //     lastname: family_name,
+      //     email,
+      //   });
+      //   register(given_name, email, "", family_name, "", "", "");
+      //  navigate("/home");
         console.log(res.data);
       } catch (err) {
-        console.log(err);
+        console.log("error fetching google use information");
+
       }
     },
   });
@@ -81,21 +97,9 @@ const LogIn = ({ t }, props) => {
       errors.password = <>{t("login11")}</>;
     } else if (values.password.length < 8) {
       errors.password = <>{t("login12")}</>;
-    } else if (backendError !== "") {
-      if( backendError === "No User Found"){
-        errors.password = <>{t("No User Found")}</>;
-      } else if( backendError === "Incorrect email or password"){
-        errors.password = <>{t("Incorrect email or password")}</>;
-      } else if(backendError === "not connected"){
-        errors.password = <>{t("You are not connected with server")}</>
-      }
-      else{
-        errors.password = <>{backendError}</>
-
-      }
-      
+    } else{
+      errors.password = <>{backendError}</>
     }
-
     return errors;
   };
 
@@ -194,7 +198,7 @@ const LogIn = ({ t }, props) => {
           </form>
           <h4 className="p_login">{t("login7")} </h4>
           <div className="GoogleBtn">
-            <button className="google_button_singup" onClick={LogIn}>
+            <button className="google_button_singup" onClick={Log}>
               {/* <FaGoogle className="google_icon_login" /> */}
               <img src={googlel} className="google"/>
               <div className="google_p_login">{t("login8")}</div>
@@ -239,12 +243,12 @@ const LogIn = ({ t }, props) => {
         )}
           </form>
           <h4 className="p_login">{t("login7")} </h4>
-          <Link to="google.com" className="GoogleBtn">
-            <button className="google_button_login" onClick={login}>
+          <div to="google.com" className="GoogleBtn">
+            <button className="google_button_login" onClick={Log}>
               <img src={googlel} className="google"/>
               <div className="google_p_login">{t("login8")}</div>
             </button>
-          </Link>
+          </div>
         </div>
       </div>
     );

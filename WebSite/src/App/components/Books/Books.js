@@ -26,7 +26,6 @@ const Books = ({ t }, props) => {
   const location = useLocation();
   const locationData = location.state;
   const subjects = locationData.subjects;
-  console.log(subjects);
   const grade_path = locationData.grade_path;
   const grade_name = locationData.grade_name;
   const navigate = useNavigate();
