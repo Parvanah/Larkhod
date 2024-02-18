@@ -126,7 +126,7 @@ const Sections = (props) => {
         <View style={styles.top}>
           <View>
             <CustomText style={styles.userName}>
-              {userInfo.user.name}
+              {userInfo.name}
             </CustomText>
             <TouchableOpacity onPress={Loggout}>
               <CustomText style={styles.userName}>Log Out</CustomText>

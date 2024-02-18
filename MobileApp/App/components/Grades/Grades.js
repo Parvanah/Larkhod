@@ -190,7 +190,7 @@ const Grades = (props) => {
             </G>
           </Svg>
         </View>
-        <CustomText style={style.userName}>{userInfo.user.name}</CustomText>
+        <CustomText style={style.userName}>{userInfo.name}</CustomText>
         <TouchableOpacity style={style.imageWrapper} onPress={onSubmit}>
           <Image source={user} style={style.img} />
         </TouchableOpacity>
