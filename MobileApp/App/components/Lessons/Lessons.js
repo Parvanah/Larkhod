@@ -218,7 +218,7 @@ const Lessons = (props) => {
             }}
           >
             <CustomText style={style.unitbtnText}>00</CustomText>
-            <CustomText style={style.unitbtnText}>معرفی با فصل</CustomText>
+            <CustomText style={style.unitbtnText}>{t("Lesson.3")}</CustomText>
           </TouchableOpacity>
         </View>
       ) : (

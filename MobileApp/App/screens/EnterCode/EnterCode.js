@@ -26,8 +26,10 @@ import {
 } from "react-native-confirmation-code-field";
 import Svg, { Defs, LinearGradient, Stop, G, Path } from "react-native-svg";
 import CustomText from "../../CustomText";
+import { useTranslation } from "react-i18next";
 const CELL_COUNT = 6;
 const EnterCode = () => {
+  const { t, i18n } = useTranslation();
   const [value, setValue] = useState("");
   const ref = useBlurOnFulfill({ value, cellCount: CELL_COUNT });
   const [props, getCellOnLayoutHandler] = useClearByFocusCell({
@@ -77,11 +79,10 @@ const EnterCode = () => {
           </TouchableOpacity>
           <View style={styles.textView}>
             <CustomText style={styles.text}>
-              ما یک کد شش رقمی به ایمیل شما ارسال کردیم
+              {t("EnterCode.1")}
             </CustomText>
             <CustomText style={styles.text1}>
-              {" "}
-              لطفا کد را اینجا وارد نمایید{" "}
+            {t("EnterCode.2")}
             </CustomText>
           </View>
         </View>
@@ -111,7 +112,7 @@ const EnterCode = () => {
             style={styles.submitBtn}
             onPress={() => navigation.navigate("NewPassword")}
           >
-            <CustomText style={styles.submitText}> تایید کردن</CustomText>
+            <CustomText style={styles.submitText}>{t("EnterCode.3")}</CustomText>
           </TouchableOpacity>
           <Image source={Logo} style={styles.imgStyle} />
         </View>
@@ -141,7 +142,7 @@ const styles = StyleSheet.create({
   textView: {
     justifyContent: "flex-end",
     alignItems: "flex-end",
-    marginVertical: verticalScale(40),
+    marginVertical: verticalScale(20),
   },
   codeFieldRoot: {
     marginTop: verticalScale(50),
